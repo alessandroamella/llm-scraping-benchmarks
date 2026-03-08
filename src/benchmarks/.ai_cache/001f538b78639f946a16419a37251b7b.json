@@ -1,0 +1,36 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-05 03:00:00",
+      "endDate": "2025-02-06 02:00:00",
+      "locationType": "REGION",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 965,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-2.5-flash-lite",
+    "costUsd": {
+      "inputCost": 0.000753,
+      "outputCost": 0.0000536,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008066
+    },
+    "hash": "001f538b78639f946a16419a37251b7b",
+    "tokens": {
+      "input": 7530,
+      "output": 134,
+      "total": 7664
+    }
+  }
+}

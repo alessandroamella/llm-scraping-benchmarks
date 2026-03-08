@@ -1,0 +1,42 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-16 03:00:00",
+      "endDate": "2025-06-17 02:00:00",
+      "locationType": "PROVINCE",
+      "locationCodes": [
+        "MI",
+        "MB",
+        "CO",
+        "MB",
+        "BG",
+        "PV",
+        "LC"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 1296,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-2.5-flash-lite",
+    "costUsd": {
+      "inputCost": 0.0007565,
+      "outputCost": 0.000068,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008245
+    },
+    "hash": "33422a6282c65c6c6aab6018d347c857",
+    "tokens": {
+      "input": 7565,
+      "output": 170,
+      "total": 7735
+    }
+  }
+}

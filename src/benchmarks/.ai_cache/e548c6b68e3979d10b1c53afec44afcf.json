@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-26 09:00:00",
+      "endDate": "2025-02-26 13:00:00",
+      "locationType": "REGION",
+      "locationCodes": [
+        "03",
+        "02"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5050,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "deepseek-chat",
+    "costUsd": {
+      "inputCost": 0.00031942,
+      "outputCost": 0.00002968,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0003491
+    },
+    "hash": "e548c6b68e3979d10b1c53afec44afcf",
+    "tokens": {
+      "input": 11408,
+      "output": 106,
+      "total": 11514
+    }
+  }
+}

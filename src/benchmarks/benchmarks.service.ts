@@ -1,0 +1,979 @@
+import crypto from 'node:crypto';
+import fs from 'node:fs';
+import path, { basename } from 'node:path';
+import { performance } from 'node:perf_hooks';
+import { setTimeout as sleep } from 'node:timers/promises';
+import { Injectable, Logger, OnModuleInit } from '@nestjs/common';
+import chalk from 'chalk';
+import { format } from 'date-fns';
+import { round, union } from 'lodash-es';
+import pLimit from 'p-limit';
+import { PDFParse } from 'pdf-parse';
+import { EnvsService } from '@/envs/envs.service';
+import { type Company, groundTruth } from './data/ground-truth';
+import { PreProcessingStrategy } from './definitions/pre-processing-strategy.type';
+import {
+  IStrikeParser,
+  ParseOptions,
+  ParserMetadata,
+  ParserResponse,
+  SupportedModel,
+} from './definitions/strike-parser.interface';
+import { PreComputedFileParser } from './parsers/precomputed-file-parser';
+import { TrenordManualParser } from './parsers/trenord/trenord-manual.parser';
+import { BenchmarkStrike } from './schemas/benchmark-strike.schema';
+import { BenchmarkAiRunnerService } from './services/benchmark-ai-runner.service';
+import { compareStrikes } from './utils/comparator.util';
+import { messUpDom } from './utils/dom-chaos.util';
+
+class ConfigurableAiParser implements IStrikeParser {
+  name: string;
+  parserType = 'ai' as const;
+
+  constructor(
+    private readonly runner: BenchmarkAiRunnerService,
+    private readonly strategy: PreProcessingStrategy,
+    private readonly companyName: Company,
+    readonly model: SupportedModel,
+    private readonly useLenientSchema: boolean,
+  ) {
+    const schemaTag = useLenientSchema ? 'Lenient' : 'Strict';
+    this.name = `${model} [${strategy}] (${schemaTag})`;
+  }
+
+  async parse(content: string, options: ParseOptions): Promise<ParserResponse> {
+    let textToProcess = content;
+
+    // --- THE FIX
+    // If we are dealing with Trenitalia TPER, the 'content' is binary PDF data.
+    // We must extract the text first.
+    if (this.companyName === 'Trenitalia TPER') {
+      try {
+        const dataBuffer = Buffer.from(content, 'binary');
+        // const pdfData = await pdf(dataBuffer);
+
+        const parser = new PDFParse({ data: dataBuffer });
+        const { text } = await parser.getText();
+        parser.destroy(); // Clean up resources
+
+        textToProcess = text;
+
+        // Apply a small cleanup for common PDF garbage if needed
+        textToProcess = textToProcess.replace(/\n\s*\n/g, '\n').trim();
+      } catch (e) {
+        console.error('Failed to extract text from PDF for benchmark', e);
+        throw e;
+      }
+    }
+
+    return this.runner.parseWithAi(
+      textToProcess,
+      this.companyName,
+      this.strategy,
+      this.model,
+      options.metadata.fileName,
+      this.useLenientSchema,
+    );
+  }
+}
+
+// Define the shape of the saved report
+type BenchmarkResultDetail = ParserMetadata & {
+  file: string;
+  parser: string;
+  score: number;
+  isExactMatch: boolean;
+  differences: string[];
+  precision: number;
+  recall: number;
+  f1: number;
+};
+
+interface SummaryEntry {
+  totalScore: number;
+  count: number;
+  perfect: number;
+  avgPrecision: number;
+  avgRecall: number;
+  avgF1: number;
+  totalCostUsd?: number;
+  avgDuration: number;
+  costPerFile?: number;
+  errorRate: number;
+}
+
+interface SummaryStats {
+  totalScore: number;
+  count: number;
+  perfect: number;
+  totalPrecision: number;
+  totalRecall: number;
+  totalF1: number;
+  totalDuration: number;
+  errors: number;
+}
+
+interface BenchmarkReport {
+  timestamp: string;
+  summary: Record<string, SummaryEntry>;
+  details: BenchmarkResultDetail[];
+}
+
+@Injectable()
+export class BenchmarksService implements OnModuleInit {
+  private readonly logger = new Logger(BenchmarksService.name);
+
+  // Toggle this to run benchmarks
+  private readonly useLenientSchema = true;
+  private readonly includeManualInSuite = false;
+  private readonly generateChaosDatasetFlag = false;
+
+  private readonly customReportName = 'better_prompt_ALL';
+  private readonly disabledChecks: string[] = ['locationType', 'locationCodes'];
+  // private readonly disabledChecks: string[] = [];
+
+  // --- NEW FLAGS ---
+  private readonly syntheticDataCount = 0; // Number of synthetic files per company (0 to disable)
+  private readonly enableResilienceSuite = false; // Toggle Resilience Suite
+  // -----------------
+  private readonly baseDir = path.join(process.cwd(), 'src/benchmarks/data');
+  private readonly resultsDir = path.join(
+    process.cwd(),
+    'src/benchmarks/results',
+  );
+
+  // Adjust based on 💵💵 u wanna spend
+  private CONCURRENCY_LIMIT: number;
+
+  constructor(
+    private readonly trenordManual: TrenordManualParser,
+    private readonly aiRunner: BenchmarkAiRunnerService,
+    private readonly envsService: EnvsService,
+  ) {
+    this.CONCURRENCY_LIMIT = this.envsService.get(
+      'PARSER_QUEUE_MAX_CONCURRENT',
+    );
+    this.logger.debug(
+      `Concurrency limit set to ${this.CONCURRENCY_LIMIT} from environment variable`,
+    );
+  }
+
+  // Aggiungi path per la cartella "Messed"
+  private readonly trenordDir = path.join(this.baseDir, 'Trenord');
+  private readonly trenordMessedDir = path.join(this.baseDir, 'Trenord-Messed');
+
+  // private readonly trenordMineruDir = path.join(
+  //   this.baseDir,
+  //   'Trenord/mineru-html',
+  // );
+  // private readonly trenordJinaDir = path.join(
+  //   this.baseDir,
+  //   'Trenord/jina-reader',
+  // );
+  // private readonly trenitaliaMineruDir = path.join(
+  //   this.baseDir,
+  //   'Trenitalia/mineru-html',
+  // );
+
+  // private readonly jinaFileMap: Record<string, string> = {
+  //   'strike-detail-domenica-16-novembre-dalle-ore-10-alle-ore-18-scio.html':
+  //     'sciopero-16-novembre.md',
+  //   'strike-detail-gioved--14-dicembre-dalle-ore-9-alle-ore-17-sciope.html':
+  //     '14-dicembre-sciopero-dei-treni-regionali.md',
+  //   'strike-detail-gioved--18-luglio-dalle-9-alle-13-sciopero-del-per.html':
+  //     'giovedi-18-luglio-sciopero-del-personale-ferrovienord.md',
+  //   'strike-detail-luned--16-giugno-sciopero-dei-treni-regionali.html':
+  //     'sciopero-16-giugno.md',
+  //   'strike-detail-mercoled--19-marzo-dalle-ore-9-alle-ore-17-scioper.html':
+  //     'sciopero-nazionale-19-marzo.md',
+  //   'strike-detail-mercoled--5-febbraio-sciopero-dei-treni-regionali.html':
+  //     '5-febbraio-sciopero.md',
+  //   'strike-detail-mercoled--6-settembre--sciopero-dei-treni-regional.html':
+  //     '6-settembre-sciopero-dei-treni-regionali.md',
+  //   'strike-detail-sciopero-del-trasporto-ferroviario-luned--30-sette.html':
+  //     'sciopero-30-settembre.md',
+  //   'strike-detail-sciopero-nazionale-17-novembre-ore-9-13-personale-.html':
+  //     'sciopero-nazionale-17-novembre-ore-9-13-personale-trenord-non-coinvolto.md',
+  //   'strike-detail-sciopero-uiltrasporti-e-orsa-domenica-16-giugno--p.html':
+  //     'sciopero-uiltrasporti-e-orsa-domenica-16-giugno.md',
+  //   'strike-detail-venerd--12-dicembre-da-mezzanotte-alle-21-sciopero.html':
+  //     'sciopero-12-dicembre.md',
+  //   'strike-detail-venerd--29-novembre-dalle-9-alle-13-sciopero-gener.html':
+  //     'sciopero-29-novembre.md',
+  //   'strike-detail-venerd--29-novembre-revocato-sciopero-ferrovienord.html':
+  //     'revoca-sciopero-29-novembre.md',
+  //   'strike-detail-venerd--8-novembre-sciopero-del-personale-ferrovie.html':
+  //     'sciopero-8-novembre.md',
+  // };
+
+  async onModuleInit() {
+    if (!fs.existsSync(this.resultsDir)) {
+      fs.mkdirSync(this.resultsDir, { recursive: true });
+    }
+
+    if (this.syntheticDataCount > 0) {
+      throw new Error(
+        'Professor: "do not use synthetic data for the benchmark, you could manipulate it in your favor" => set syntheticDataCount to 0!!',
+      );
+    }
+
+    if (this.customReportName) {
+      this.logger.warn(
+        chalk.bold.yellowBright(
+          `Custom report name is set to "${this.customReportName}". Make sure this is intentional to avoid having a report that is NOT what you are looking for`,
+        ),
+      );
+    }
+
+    if (this.disabledChecks.length > 0) {
+      this.logger.warn(
+        chalk.yellow(
+          `The following checks are DISABLED in the benchmark: ${this.disabledChecks.join(
+            ', ',
+          )}. This may lead to inflated scores if the model hallucinates values in these fields but gets others right.`,
+        ),
+      );
+    }
+
+    // log concurrency limit
+    this.logger.log(
+      chalk.yellow(
+        `Concurrency Limit for AI Parsing: ${this.CONCURRENCY_LIMIT}`,
+      ),
+    );
+  }
+
+  async runAllBenchmarks() {
+    this.logger.log('Starting Multi-Model Benchmarks...');
+
+    // --- STEP 0: GENERATE CHAOS DATASET
+    // da fare una volta
+    if (this.generateChaosDatasetFlag) {
+      this.generateChaosDataset();
+    }
+
+    // --- LOAD SYNTHETIC DATA ---
+    const trenordSynthetic =
+      this.syntheticDataCount > 0 ? this.loadSyntheticData('Trenord') : {};
+    const trenitaliaSynthetic =
+      this.syntheticDataCount > 0 ? this.loadSyntheticData('Trenitalia') : {};
+    const atacSynthetic =
+      this.syntheticDataCount > 0 ? this.loadSyntheticData('ATAC') : {};
+    // ---------------------------
+
+    // Define the Matrix of Tests
+    const baseStrategies: PreProcessingStrategy[] = [
+      'html-to-markdown', // The likely winner
+      'basic-cleanup', // Simple cleanup, no structural changes
+      'dom-distillation',
+      'dom-distillation-markdown',
+      // 'raw-html', // The baseline
+    ];
+
+    const models = [
+      // 'gpt-5-mini',
+      'gpt-5-nano',
+      'meta-llama/llama-4-scout-17b-16e-instruct',
+      // 'gemini-2.5-flash',
+      'gemini-2.5-flash-lite',
+      'gemini-3-flash-preview',
+      'deepseek-chat',
+    ] satisfies SupportedModel[];
+
+    // Log which models we are testing
+    this.logger.log(
+      chalk.bold.blue(
+        `Testing the following model and strategy combinations:\n${models
+          .map((m) =>
+            baseStrategies.map((s) => `  - ${m} with ${s}`).join('\n'),
+          )
+          .join('\n')}`,
+      ),
+    );
+
+    // Preparazione parser Trenord
+    const trenordParsers: IStrikeParser[] = [];
+    if (this.includeManualInSuite) {
+      trenordParsers.push(this.trenordManual);
+    }
+    for (const model of models) {
+      for (const strategy of baseStrategies) {
+        trenordParsers.push(
+          new ConfigurableAiParser(
+            this.aiRunner,
+            strategy,
+            'Trenord',
+            model,
+            this.useLenientSchema,
+          ),
+        );
+      }
+
+      // Add MinerU (Identity mapping since you renamed them)
+      // trenordParsers.push(
+      //   new PreComputedFileParser(
+      //     this.aiRunner,
+      //     'mineru-html',
+      //     'Trenord',
+      //     model,
+      //     this.trenordMineruDir,
+      //     (f) => f,
+      //   ),
+      // );
+
+      // // Add Jina Reader (Manual mapping)
+      // trenordParsers.push(
+      //   new PreComputedFileParser(
+      //     this.aiRunner,
+      //     'jina-reader',
+      //     'Trenord',
+      //     model,
+      //     this.trenordJinaDir,
+      //     (f) => this.jinaFileMap[f],
+      //   ),
+      // );
+    }
+
+    // Preparazione parser Trenitalia TPER
+    const trenitaliaTperParsers: IStrikeParser[] = [];
+    for (const model of models) {
+      trenitaliaTperParsers.push(
+        new ConfigurableAiParser(
+          this.aiRunner,
+          'basic-cleanup',
+          'Trenitalia TPER',
+          model,
+          this.useLenientSchema,
+        ),
+      );
+    }
+
+    // Preparazione parser EAV (solo AI, non abbiamo manuale per questo dataset e non è detto che funzioni bene con strategie aggressive come html-to-markdown)
+    const eavParsers: IStrikeParser[] = [];
+    for (const model of models) {
+      for (const strategy of baseStrategies) {
+        eavParsers.push(
+          new ConfigurableAiParser(
+            this.aiRunner,
+            strategy,
+            'EAV',
+            model,
+            this.useLenientSchema,
+          ),
+        );
+      }
+    }
+
+    // Preparazione parser ATAC
+    const atacParsers: IStrikeParser[] = [];
+    for (const model of models) {
+      for (const strategy of baseStrategies) {
+        atacParsers.push(
+          new ConfigurableAiParser(
+            this.aiRunner,
+            strategy,
+            'ATAC',
+            model,
+            this.useLenientSchema,
+          ),
+        );
+      }
+    }
+
+    // Preparazione parser Trenitalia (ora solo ai, manuale non funziona su questo dataset)
+    const trenitaliaParsers: IStrikeParser[] = [];
+    for (const model of models) {
+      for (const strategy of baseStrategies) {
+        trenitaliaParsers.push(
+          new ConfigurableAiParser(
+            this.aiRunner,
+            strategy,
+            'Trenitalia',
+            model,
+            this.useLenientSchema,
+          ),
+        );
+      }
+
+      // Add MinerU
+      // trenitaliaParsers.push(
+      //   new PreComputedFileParser(
+      //     this.aiRunner,
+      //     'mineru-html',
+      //     'Trenitalia',
+      //     model,
+      //     this.trenitaliaMineruDir,
+      //     (f) => f,
+      //   ),
+      // );
+    }
+
+    // Definizione delle suite con filtri data
+
+    const allDetails: BenchmarkResultDetail[] = [];
+    const summaryStats: Record<string, SummaryStats> = {};
+
+    // Suite 1: Trenord (Standard)
+    const resultsTrenord = await this.runSuite(
+      'Trenord',
+      trenordParsers,
+      undefined,
+      undefined,
+      undefined,
+      trenordSynthetic,
+    );
+    this.mergeStats(summaryStats, resultsTrenord.stats, '');
+    allDetails.push(...resultsTrenord.details);
+
+    // Suite 2: Trenitalia TPER (Standard)
+    const resultsTrenitaliaTper = await this.runSuite(
+      'Trenitalia TPER',
+      trenitaliaTperParsers,
+    );
+    this.mergeStats(summaryStats, resultsTrenitaliaTper.stats, '');
+    allDetails.push(...resultsTrenitaliaTper.details);
+
+    // Suite 3: EAV
+    const resultsEav = await this.runSuite('EAV', eavParsers);
+    this.mergeStats(summaryStats, resultsEav.stats, '');
+    allDetails.push(...resultsEav.details);
+
+    // Suite 4: Trenitalia
+    const resultsTrenitalia = await this.runSuite(
+      'Trenitalia',
+      trenitaliaParsers,
+      undefined,
+      undefined,
+      undefined,
+      trenitaliaSynthetic,
+    );
+    this.mergeStats(summaryStats, resultsTrenitalia.stats, '');
+    allDetails.push(...resultsTrenitalia.details);
+
+    // Suite: ATAC
+    const resultsAtac = await this.runSuite(
+      'ATAC',
+      atacParsers,
+      undefined,
+      undefined,
+      undefined,
+      atacSynthetic,
+      ['guaranteedTimes'],
+    );
+    this.mergeStats(summaryStats, resultsAtac.stats, '');
+    allDetails.push(...resultsAtac.details);
+
+    if (this.enableResilienceSuite) {
+      // Suite 5: Resilienza (DOM Changes) (ora solo per Trenord)
+      this.logger.log(
+        chalk.bgRed.white.bold(
+          '\n--- Running Suite: Trenord RESILIENCE (Messed DOM) ---',
+        ),
+      );
+
+      // parser per questa suite:
+      // manuale (ci si aspetta che fallisca)
+      // AI (ci si aspetta che sopravviva) - Usiamo un modello veloce/economico come gemini-2.5-flash
+      const resilienceParsers: IStrikeParser[] = [
+        this.trenordManual,
+        new ConfigurableAiParser(
+          this.aiRunner,
+          'html-to-markdown',
+          'Trenord',
+          'gemini-3-flash-preview',
+          this.useLenientSchema,
+        ),
+        new ConfigurableAiParser(
+          this.aiRunner,
+          'basic-cleanup',
+          'Trenord',
+          'gpt-5-nano',
+          this.useLenientSchema,
+        ),
+        new ConfigurableAiParser(
+          this.aiRunner,
+          'html-to-markdown',
+          'Trenord',
+          'meta-llama/llama-4-scout-17b-16e-instruct',
+          this.useLenientSchema,
+        ),
+        new ConfigurableAiParser(
+          this.aiRunner,
+          'html-to-markdown',
+          'Trenord',
+          'deepseek-chat',
+          this.useLenientSchema,
+        ),
+      ];
+
+      // Nota: Passiamo 'Trenord-Messed' come nome della "company" per farlo cercare nella cartella giusta
+      // Ma dobbiamo "ingannare" il runSuite perché groundTruth ha le chiavi basate sui file originali.
+      // Il trucco è che i nomi dei file sono identici, cambia solo la cartella.
+
+      // Hack: Aggiorniamo runSuite per accettare una directory override
+      const resultsChaos = await this.runSuite(
+        'Trenord', // Usa ground truth di Trenord
+        resilienceParsers,
+        'Trenord Resilience (Chaos DOM)',
+        undefined, // nessun filtro data
+        this.trenordMessedDir,
+      );
+
+      this.mergeStats(summaryStats, resultsChaos.stats, ' [CHAOS]');
+      allDetails.push(
+        ...resultsChaos.details.map((d) => ({
+          ...d,
+          parser: `${d.parser} [CHAOS]`,
+        })),
+      );
+    }
+
+    // Save Final Report
+    this.saveReport(summaryStats, allDetails);
+  }
+
+  // --- NEW METHOD TO LOAD AI MOCK DATA ---
+  private loadSyntheticData(company: Company): Record<string, BenchmarkStrike> {
+    const aiDir = path.join(this.baseDir, company, 'ai_strikes');
+    if (!fs.existsSync(aiDir)) return {};
+
+    const syntheticData: Record<string, BenchmarkStrike> = {};
+    let count = 0;
+
+    // Get all batch directories (sorted for deterministic selection)
+    const batches = fs
+      .readdirSync(aiDir)
+      .filter((f) => fs.statSync(path.join(aiDir, f)).isDirectory())
+      .sort()
+      .reverse(); // Start with latest batch
+
+    for (const batch of batches) {
+      if (count >= this.syntheticDataCount) break;
+
+      const truthPath = path.join(aiDir, batch, 'ground-truth.json');
+      if (!fs.existsSync(truthPath)) continue;
+
+      try {
+        const batchTruth = JSON.parse(
+          fs.readFileSync(truthPath, 'utf-8'),
+        ) as Record<string, BenchmarkStrike>;
+
+        // Sort filenames for deterministic selection
+        const sortedFilenames = Object.keys(batchTruth).sort();
+        for (const filename of sortedFilenames) {
+          if (count >= this.syntheticDataCount) break;
+
+          const strikeData = batchTruth[filename];
+          // Skip undefined entries
+          if (!strikeData) continue;
+          // Key must be relative to company dir so fs.readFile works later
+          // e.g., "ai_strikes/batch_X/filename.html"
+          const relativePath = path.join('ai_strikes', batch, filename);
+          syntheticData[relativePath] = strikeData;
+          count++;
+        }
+      } catch (e) {
+        this.logger.warn(
+          `Failed to load synthetic data from ${batch} for ${company}`,
+          e,
+        );
+      }
+    }
+
+    this.logger.log(
+      chalk.blue(
+        `Loaded ${count} synthetic files for ${company} from ${batches.length} batches.`,
+      ),
+    );
+    return syntheticData;
+  }
+  // ---------------------------------------
+
+  // --- NUOVO METODO PER GENERARE DATASET
+  private generateChaosDataset() {
+    this.logger.log(
+      chalk.magenta('Generating Chaos Dataset (Trenord-Messed)...'),
+    );
+
+    if (!fs.existsSync(this.trenordMessedDir)) {
+      fs.mkdirSync(this.trenordMessedDir, { recursive: true });
+    }
+
+    const files = fs
+      .readdirSync(this.trenordDir)
+      .filter((f) => f.endsWith('.html'));
+
+    for (const file of files) {
+      const originalPath = path.join(this.trenordDir, file);
+      const messedPath = path.join(this.trenordMessedDir, file);
+
+      // Leggi originale
+      const content = fs.readFileSync(originalPath, 'utf-8');
+      // Applica distruzione
+      const messedContent = messUpDom(content);
+      // Salva
+      fs.writeFileSync(messedPath, messedContent, 'utf-8');
+    }
+    this.logger.log(
+      chalk.magenta(`✅ Generated ${files.length} messed up files.`),
+    );
+  }
+
+  private async runSuite(
+    company: Company,
+    parsers: IStrikeParser[],
+    customSuiteName?: string,
+    filterFn?: (file: string, expected: BenchmarkStrike) => boolean,
+    directoryOverride?: string,
+    extraGroundTruth?: Record<string, BenchmarkStrike>,
+    disabledChecksOverride?: string[],
+  ) {
+    const suiteLabel = customSuiteName || company;
+    this.logger.log(chalk.blue.bold(`--- Running Suite: ${suiteLabel} ---`));
+
+    // Merge class-level disabled checks with the override (if any)
+    const effectiveDisabledChecks = union(
+      this.disabledChecks,
+      disabledChecksOverride || [],
+    );
+
+    // Usa directoryOverride se presente, altrimenti la default
+    const companyDir = directoryOverride || path.join(this.baseDir, company);
+
+    // Merge static ground truth with synthetic data
+    const truthData = {
+      ...(groundTruth[company] || {}),
+      ...(extraGroundTruth || {}),
+    };
+
+    if (Object.keys(truthData).length === 0) {
+      this.logger.error(`No ground truth found for ${company}`);
+      return { stats: {}, details: [] };
+    }
+
+    // Get all HTML files in the directory
+    // Note: You might want to filter for .html files
+    const files = Object.keys(truthData);
+
+    // Print file number for this suite
+    this.logger.log(
+      `Found ${chalk.yellow(files.length.toString())} files to process for ${company}`,
+    );
+
+    const totalTasks = files.length * parsers.length; // Calculate total for this suite
+    let completedTasks = 0;
+
+    this.logger.log(
+      chalk.yellow.bold(`Total combinations to process: ${totalTasks}`),
+    );
+
+    const results: Record<string, SummaryStats> = {};
+
+    const details: BenchmarkResultDetail[] = [];
+
+    // Initialize stats
+    for (const parser of parsers) {
+      results[parser.name] = {
+        totalScore: 0,
+        count: 0,
+        perfect: 0,
+        totalPrecision: 0,
+        totalRecall: 0,
+        totalF1: 0,
+        totalDuration: 0,
+        errors: 0,
+      };
+    }
+
+    const limit = pLimit(this.CONCURRENCY_LIMIT);
+
+    const tasks = files.flatMap((file) => {
+      const expected = truthData[file as keyof typeof truthData];
+
+      // Applica il filtro se fornito
+      if (filterFn && !filterFn(file, expected)) {
+        return [];
+      }
+
+      const filePath = path.join(companyDir, file);
+
+      if (!fs.existsSync(filePath)) {
+        this.logger.warn(`File not found: ${file}`);
+        return [];
+      }
+
+      // Determine encoding based on file type
+      const isPdf = file.toLowerCase().endsWith('.pdf');
+      const fileContent = fs.readFileSync(filePath, isPdf ? 'binary' : 'utf-8');
+
+      return parsers.flatMap((parser) => {
+        // Skip PreComputed parsers for synthetic (AI) data files
+        // because we don't have pre-processed .md files for them.
+        if (
+          file.includes('ai_strikes') &&
+          parser instanceof PreComputedFileParser
+        ) {
+          return [];
+        }
+
+        return [
+          limit(async () => {
+            // Give the event loop 50ms to handle I/O (RabbitMQ heartbeats) before starting heavy CPU work
+            await sleep(10);
+
+            try {
+              const startTime = performance.now();
+              const response = await parser.parse(fileContent, {
+                metadata: { fileName: basename(filePath) },
+                useLenientSchema: this.useLenientSchema,
+                // Pass model info for better logging in AI runner
+                model: (parser as ConfigurableAiParser).model,
+              });
+              const realTimeDuration = performance.now() - startTime;
+
+              // Use cached duration if provided by the parser, otherwise use actual execution time
+              const duration =
+                response.metadata?.durationMs ?? realTimeDuration;
+
+              const comparison = compareStrikes(
+                response.data,
+                expected,
+                effectiveDisabledChecks,
+              );
+
+              // Update stats
+              const parserResult = results[parser.name];
+              if (parserResult) {
+                parserResult.count++;
+                parserResult.totalScore += comparison.score;
+                parserResult.totalPrecision += comparison.precision;
+                parserResult.totalRecall += comparison.recall;
+                parserResult.totalF1 += comparison.f1;
+                parserResult.totalDuration += duration;
+                if (comparison.isExactMatch) parserResult.perfect++;
+              }
+
+              // Record Detail
+              details.push({
+                file,
+                parser: parser.name,
+                score: Number(comparison.score.toFixed(2)),
+                isExactMatch: comparison.isExactMatch,
+                differences: comparison.differences,
+                precision: comparison.precision,
+                recall: comparison.recall,
+                f1: comparison.f1,
+                ...response.metadata,
+                durationMs: Math.round(duration),
+                parserType: parser.parserType,
+              });
+
+              // --- PROGRESS TRACKING LOGIC
+              completedTasks++;
+              const progressPercent = (
+                (completedTasks / totalTasks) *
+                100
+              ).toFixed(1);
+              const icon = comparison.isExactMatch ? '✅' : '⚠️';
+
+              // This line prints the progress bar style log
+              this.logger.log(
+                `${chalk.magenta(`[${completedTasks}/${totalTasks}]`)} ` +
+                  `${chalk.cyan(`(${progressPercent}%)`)} ` +
+                  `${icon} ${chalk.white(parser.name)} on ${chalk.gray(file)} (${
+                    // percentage
+                    (comparison.score * 100).toFixed(2)
+                  }%) - ${Math.round(duration)}ms`,
+              );
+            } catch (e) {
+              this.logger.error(`Parser ${parser.name} failed on ${file}`, e);
+              if (parser.name in results) {
+                // biome-ignore lint/style/noNonNullAssertion: literally just checked
+                results[parser.name]!.errors++;
+              }
+            }
+          }),
+        ];
+      });
+    });
+
+    await Promise.all(tasks);
+
+    return { stats: results, details };
+  }
+
+  private mergeStats(
+    target: Record<string, SummaryStats>,
+    source: Record<string, SummaryStats>,
+    suffix: string,
+  ) {
+    for (const [key, val] of Object.entries(source)) {
+      const newKey = key + suffix;
+      if (!target[newKey]) {
+        target[newKey] = { ...val };
+      } else {
+        target[newKey].totalScore += val.totalScore;
+        target[newKey].count += val.count;
+        target[newKey].perfect += val.perfect;
+        target[newKey].totalPrecision += val.totalPrecision;
+        target[newKey].totalRecall += val.totalRecall;
+        target[newKey].totalF1 += val.totalF1;
+        target[newKey].totalDuration += val.totalDuration;
+        target[newKey].errors += val.errors;
+      }
+    }
+  }
+
+  private saveReport(
+    stats: Record<string, SummaryStats>,
+    details: BenchmarkResultDetail[],
+  ) {
+    // Check if report is empty
+    if (Object.keys(stats).length === 0 || details.length === 0) {
+      this.logger.warn(
+        chalk.yellow(
+          '⚠️ Report is empty, no benchmarks were run or results collected. Skipping save ⚠️',
+        ),
+      );
+      return;
+    }
+
+    // Calculate averages for summary
+    const formattedSummary: Record<string, SummaryEntry> = {};
+    for (const [name, stat] of Object.entries(stats)) {
+      const parserDetails = details.filter((d) => d.parser === name);
+      const totalCost = parserDetails.reduce(
+        (sum, d) =>
+          sum + ('costUsd' in d && d.costUsd ? d.costUsd.totalCost : 0),
+        0,
+      );
+
+      formattedSummary[name] = {
+        totalScore: round(stat.totalScore, 2),
+        count: stat.count,
+        perfect: stat.perfect,
+        avgPrecision: round(stat.totalPrecision / stat.count, 4),
+        avgRecall: round(stat.totalRecall / stat.count, 4),
+        avgF1: round(stat.totalF1 / stat.count, 4),
+        // Time Stats
+        avgDuration: round(stat.totalDuration / stat.count, 2),
+
+        // Error Stats
+        errorRate: round(stat.errors / (stat.count + stat.errors), 4),
+
+        // Unit Economics (Cost Per File)
+        ...(totalCost > 0 && {
+          totalCostUsd: round(totalCost, 4),
+          costPerFile: round(totalCost / stat.count, 5),
+        }),
+      };
+    }
+
+    const report: BenchmarkReport = {
+      timestamp: new Date().toISOString(),
+      summary: formattedSummary,
+      details: details,
+    };
+
+    // Helper to extract only quality metrics (excluding performance/cost metrics)
+    const getQualitySignature = (
+      summary: Record<string, SummaryEntry>,
+      details: BenchmarkResultDetail[],
+    ) => {
+      const qualitySummary = Object.entries(summary).reduce(
+        (acc, [name, entry]) => {
+          acc[name] = {
+            count: entry.count,
+            perfect: entry.perfect,
+            avgPrecision: entry.avgPrecision,
+            avgRecall: entry.avgRecall,
+            avgF1: entry.avgF1,
+            errorRate: entry.errorRate,
+          };
+          return acc;
+        },
+        {} as Record<
+          string,
+          {
+            count: number;
+            perfect: number;
+            avgPrecision: number;
+            avgRecall: number;
+            avgF1: number;
+            errorRate: number;
+          }
+        >,
+      );
+
+      const qualityDetails = details.map((d) => ({
+        file: d.file,
+        parser: d.parser,
+        isExactMatch: d.isExactMatch,
+        precision: d.precision,
+        recall: d.recall,
+        f1: d.f1,
+      }));
+
+      return JSON.stringify({
+        summary: qualitySummary,
+        details: qualityDetails,
+      });
+    };
+
+    // Check if an identical report already exists (based on quality metrics only)
+    const reportHash = crypto
+      .createHash('sha256')
+      .update(getQualitySignature(formattedSummary, details))
+      .digest('hex');
+
+    const existingFiles = fs.readdirSync(this.resultsDir);
+    for (const file of existingFiles) {
+      if (!file.startsWith('benchmark_run_')) continue;
+
+      const filePath = path.join(this.resultsDir, file);
+      try {
+        const existingContent = fs.readFileSync(filePath, 'utf-8');
+        const existingReport = JSON.parse(existingContent) as BenchmarkReport;
+        const existingHash = crypto
+          .createHash('sha256')
+          .update(
+            getQualitySignature(existingReport.summary, existingReport.details),
+          )
+          .digest('hex');
+
+        if (reportHash === existingHash) {
+          this.logger.log(
+            chalk.bold.cyan(`📋 Identical report already exists: ${file}`),
+          );
+          return;
+        }
+      } catch (e) {
+        this.logger.warn(`Could not read existing report: ${file}`, e);
+      }
+    }
+
+    // Only save if it's different from existing reports
+    const timestamp = format(new Date(), 'yyyy-MM-dd_HH-mm-ss');
+
+    const namePart = this.customReportName ? `_${this.customReportName}` : '';
+    const filename = `benchmark_run${namePart}_${timestamp}.json`;
+
+    const outputPath = path.join(this.resultsDir, filename);
+
+    fs.writeFileSync(outputPath, JSON.stringify(report, null, 2));
+
+    this.logger.log(chalk.bold.magenta(`\n💾 Report saved to: ${outputPath}`));
+
+    // Print Console Summary Table
+    console.table(
+      Object.entries(formattedSummary).map(([name, s]) => ({
+        Parser: name,
+        'F1 Score': s.avgF1,
+        Precision: s.avgPrecision,
+        Recall: s.avgRecall,
+        'Perf. Matches': `${s.perfect}/${s.count}`,
+        Cost: s.totalCostUsd || 'N/A',
+      })),
+    );
+  }
+}

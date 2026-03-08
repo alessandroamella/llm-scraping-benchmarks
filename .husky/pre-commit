@@ -1,0 +1,61 @@
+#!/bin/bash
+echo "🔍 Checking for added/modified files..."
+
+# Get staged files that are added, copied, or modified
+STAGED_FILES=$(git diff --cached --name-only --diff-filter=ACM)
+
+if [ -z "$STAGED_FILES" ]; then
+  echo "🟡 No new or modified files staged (only deletions or nothing). Skipping checks."
+  exit 0
+fi
+
+echo "📁 Staged files:"
+echo "$STAGED_FILES"
+
+# Check for TODO/FIXME comments in staged files
+echo "🛑 Scanning for TODO/FIXME comments..."
+TODO_FOUND=0
+for FILE in $STAGED_FILES; do
+  # Only scan JS/TS/MD files (adjust extensions if needed)
+  if [[ $FILE =~ \.(js|ts|jsx|tsx|md|sh)$ ]]; then
+    # Use git show :$FILE for tracked files, or cat for new files
+    if git ls-files --error-unmatch "$FILE" >/dev/null 2>&1; then
+      CONTENT=$(git show ":$FILE")
+    else
+      CONTENT=$(cat "$FILE" 2>/dev/null || echo "")
+    fi
+    
+    if echo "$CONTENT" | grep -qE "(//|#)\s*(TODO|FIXME)"; then
+      echo "⚠️ TODO/FIXME found in $FILE:"
+      echo "$CONTENT" | grep -nE "(//|#)\s*(TODO|FIXME)"
+      TODO_FOUND=1
+    fi
+  fi
+done
+
+if [ $TODO_FOUND -eq 1 ]; then
+  echo "❌ Commit blocked due to TODO/FIXME comments."
+  exit 1
+fi
+
+echo "✅ Running pnpm check:staged..."
+set +e  # Don't exit immediately on error
+OUTPUT=$(pnpm check:staged 2>&1)
+EXIT_CODE=$?
+set -e
+
+# If no files were processed (common with .husky files, deletions, etc), allow commit
+if [ $EXIT_CODE -ne 0 ] && echo "$OUTPUT" | grep -q "No files were processed"; then
+  echo "ℹ️  No files processed by biome — likely only ignored files. Skipping."
+  exit 0
+fi
+
+# If biome succeeded, we're good
+if [ $EXIT_CODE -eq 0 ]; then
+  echo "✅ All checks passed!"
+  exit 0
+fi
+
+# Otherwise, show the error and fail
+echo "$OUTPUT"
+exit $EXIT_CODE

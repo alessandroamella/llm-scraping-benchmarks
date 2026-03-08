@@ -1,0 +1,33 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-12-02 00:00:00",
+      "endDate": "2022-12-02 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6280,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3-flash-preview",
+    "costUsd": {
+      "inputCost": 0.000384,
+      "outputCost": 0.000276,
+      "thinkingCost": 0.002571,
+      "cachedCost": 0,
+      "totalCost": 0.003231
+    },
+    "hash": "76c78967c71558053190aa4c8bd13bb5",
+    "tokens": {
+      "input": 768,
+      "output": 92,
+      "total": 1717
+    }
+  }
+}

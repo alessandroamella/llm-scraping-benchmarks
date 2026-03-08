@@ -1,0 +1,33 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-10-20 00:00:00",
+      "endDate": "2023-10-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "08:30-17:00",
+        "20:00-23:59"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 500,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "costUsd": {
+      "inputCost": 0.00014399,
+      "outputCost": 0.00003298,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00017697
+    },
+    "hash": "f91d6ea34bc22110fbfaf55f59a9ee08",
+    "tokens": {
+      "input": 1309,
+      "output": 97,
+      "total": 1406
+    }
+  }
+}

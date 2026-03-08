@@ -1,0 +1,36 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2020-01-01 00:00:00",
+      "endDate": "9999-12-31 23:59:59",
+      "locationType": "REGION",
+      "locationCodes": [
+        "20"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 1174,
+    "preProcessingStrategy": "mineru-html",
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "costUsd": {
+      "inputCost": 0.00079365,
+      "outputCost": 0.00003298,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00082663
+    },
+    "hash": "a7980a2fce8704383aa9e9744becd757",
+    "tokens": {
+      "input": 7215,
+      "output": 97,
+      "total": 7312
+    }
+  }
+}
