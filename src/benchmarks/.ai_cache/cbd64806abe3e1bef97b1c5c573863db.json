@@ -1,0 +1,36 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-16 10:00:00",
+      "endDate": "2025-11-16 18:00:00",
+      "locationType": "REGION",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "10:00-10:00",
+        "11:00-18:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 900,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "costUsd": {
+      "inputCost": 0.00109087,
+      "outputCost": 0.00003604,
+      "cachedCost": 0,
+      "thinkingCost": 0,
+      "totalCost": 0.00112691
+    },
+    "hash": "cbd64806abe3e1bef97b1c5c573863db",
+    "tokens": {
+      "input": 9917,
+      "output": 106,
+      "total": 10023
+    }
+  }
+}

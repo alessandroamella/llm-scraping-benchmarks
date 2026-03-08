@@ -1,0 +1,33 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-05-20 00:00:00",
+      "endDate": "2022-05-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "08:30-17:00",
+        "20:00-23:59"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 1324,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "costUsd": {
+      "inputCost": 0.00011517,
+      "outputCost": 0.0000323,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00014747
+    },
+    "hash": "68a8ccfb5ebecc42293d0df7eb5034df",
+    "tokens": {
+      "input": 1047,
+      "output": 95,
+      "total": 1142
+    }
+  }
+}

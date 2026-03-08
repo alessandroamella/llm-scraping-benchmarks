@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-01-01 06:00:00",
+      "endDate": "2023-12-31 23:59:59",
+      "locationType": "PROVINCE",
+      "locationCodes": [
+        "CA",
+        "OR",
+        "SS"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 1706,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-2.5-flash-lite",
+    "costUsd": {
+      "inputCost": 0.0006943,
+      "outputCost": 0.00006,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0007543
+    },
+    "hash": "863d893cedf58efe3361e3053e135e83",
+    "tokens": {
+      "input": 6943,
+      "output": 150,
+      "total": 7093
+    }
+  }
+}

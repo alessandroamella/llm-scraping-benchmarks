@@ -1,0 +1,36 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-12-14 09:00:00",
+      "endDate": "2023-12-14 17:00:00",
+      "locationType": "REGION",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "00:00-09:00",
+        "09:00-10:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 13168,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-mini",
+    "costUsd": {
+      "inputCost": 0.00177925,
+      "outputCost": 0.00281,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00458925
+    },
+    "hash": "43b9db72db1c56130db9fab3779f1522",
+    "tokens": {
+      "input": 7117,
+      "output": 1405,
+      "total": 8522
+    }
+  }
+}

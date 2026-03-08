@@ -1,0 +1,36 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-09-30 03:00:00",
+      "endDate": "2024-10-01 02:00:00",
+      "locationType": "REGION",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8272,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3-flash-preview",
+    "costUsd": {
+      "inputCost": 0.003795,
+      "outputCost": 0.000417,
+      "thinkingCost": 0.003174,
+      "cachedCost": 0,
+      "totalCost": 0.007386
+    },
+    "hash": "c6b0ef53f56ac183e4da18cc7e3bc0ad",
+    "tokens": {
+      "input": 7590,
+      "output": 139,
+      "total": 8787
+    }
+  }
+}

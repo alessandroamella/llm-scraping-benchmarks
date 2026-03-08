@@ -1,0 +1,36 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-09-06 03:00:00",
+      "endDate": "2023-09-07 02:00:00",
+      "locationType": "REGION",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4300,
+    "preProcessingStrategy": "jina-reader",
+    "model": "deepseek-chat",
+    "costUsd": {
+      "inputCost": 0.00023887,
+      "outputCost": 0.00002884,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00026771
+    },
+    "hash": "57cbc61f76556adf643707056f3370d5",
+    "tokens": {
+      "input": 8531,
+      "output": 103,
+      "total": 8634
+    }
+  }
+}
