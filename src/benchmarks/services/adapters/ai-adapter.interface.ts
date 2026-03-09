@@ -15,6 +15,7 @@ export interface TokenUsage {
 export interface AdapterGenerationResult<T> {
   rawOutput: T;
   usage: TokenUsage;
+  thoughts?: string;
 }
 
 export interface AiModelAdapterOptions {

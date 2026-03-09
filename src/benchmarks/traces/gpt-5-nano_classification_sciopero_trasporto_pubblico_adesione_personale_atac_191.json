@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-03-06T15:22:44.931Z",
+  "hash": "56011f8ddd9310fdf777742dd86a21be",
+  "model": "gpt-5-nano",
+  "step": "classification",
+  "strategy": "dom-distillation-markdown",
+  "fileName": "sciopero_trasporto_pubblico_adesione_personale_atac_191.html",
+  "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a strike from \"ATAC\".\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\nResponse should simply be a JSON object with the following format: { \"isStrike\": boolean }\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: Sciopero del trasporto pubblico, adesione personale Atac al 19,1% - Roma Servizi per la Mobilità\n\n* * *\n\n# Sciopero del trasporto pubblico, adesione personale Atac al 19,1%\n\nPubblicato il: 24/01/2024 - Aggiornato il: 24/01/2024\n\nstatus: 1 L’adesione del personale Atac allo sciopero del trasporto pubblico di oggi, rilevata in mattinata, è stata pari al 19,1%.",
+  "rawOutput": {
+    "isStrike": false
+  },
+  "metadata": {
+    "usage": {
+      "input": 328,
+      "output": 272,
+      "total": 600
+    },
+    "durationMs": 3377
+  }
+}

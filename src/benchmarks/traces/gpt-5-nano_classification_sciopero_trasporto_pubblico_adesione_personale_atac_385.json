@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-03-06T15:24:28.738Z",
+  "hash": "db29a3fe32c2f9024f11dc913caf61ba",
+  "model": "gpt-5-nano",
+  "step": "classification",
+  "strategy": "dom-distillation",
+  "fileName": "sciopero_trasporto_pubblico_adesione_personale_atac_385.html",
+  "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a strike from \"ATAC\".\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\nResponse should simply be a JSON object with the following format: { \"isStrike\": boolean }\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"><h3>Context Metadata</h3><ul><li>Page Title: Sciopero del trasporto pubblico, adesione personale Atac al 38,5% - Roma Servizi per la Mobilità</li></ul></div><hr/><div> <div> <div> <div> <div> <div> </div> </div> </div> <div> <div> <div> <div> <h1>Sciopero del trasporto pubblico, adesione personale Atac al 38,5%</h1> </div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div><p>Pubblicato il: 25/02/2022 - Aggiornato il: 11/04/2023</p></div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div> <span> </span> </div> </div> </div> <div> <div> <div></div> </div> </div> <div> <div> <p>L’adesione del personale Atac allo sciopero del trasporto pubblico, rilevata in mattinata, è stata pari al 38,5%</p> </div> </div> </div> </div> </div> </div>",
+  "rawOutput": {
+    "isStrike": false
+  },
+  "metadata": {
+    "usage": {
+      "input": 518,
+      "output": 338,
+      "total": 856
+    },
+    "durationMs": 5245
+  }
+}

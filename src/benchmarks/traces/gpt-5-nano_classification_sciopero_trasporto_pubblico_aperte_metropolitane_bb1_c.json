@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-03-06T15:24:23.590Z",
+  "hash": "71b1d0eb215e8a8580da87b848eb2ea5",
+  "model": "gpt-5-nano",
+  "step": "classification",
+  "strategy": "dom-distillation",
+  "fileName": "sciopero_trasporto_pubblico_aperte_metropolitane_bb1_c.html",
+  "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a strike from \"ATAC\".\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\nResponse should simply be a JSON object with the following format: { \"isStrike\": boolean }\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"><h3>Context Metadata</h3><ul><li>Page Title: Sciopero del trasporto pubblico, aperte le metropolitane A, B/B1 e C - Roma Servizi per la Mobilità</li></ul></div><hr/><div> <div> <div> <div> <div> <div> </div> </div> </div> <div> <div> <div> <div> <h1>Sciopero del trasporto pubblico, aperte le metropolitane A, B/B1 e C</h1> </div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div><p>Pubblicato il: 20/05/2022 - Aggiornato il: 25/01/2023</p></div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div> <span> </span> </div> </div> </div> <div> <div> <div></div> </div> </div> <div> <div> <p>*È in corso lo sciopero del trasporto pubblico di 24 ore. Ecco la situazione sulla rete romana* *Metro A: *regolare *(chiuse le stazioni Manzoni-Repubblica-Cornelia)* *Metro B/B1:* regolare *Metro C:* regolare *Ferrovia Roma-Lido:* regolare *Ferrovia Roma-Viterbo metropolitano:* prosegue servizio con riduzioni di corse *Ferrovia Roma-Viterbo regionale:* regolare *Termini-Centocelle:* prosegue servizio con riduzioni di corse *Servizio bus e tram:* possibili riduzioni di corse e/o sospensione di linee</p> </div> </div> </div> </div> </div> </div>",
+  "rawOutput": {
+    "isStrike": false
+  },
+  "metadata": {
+    "usage": {
+      "input": 633,
+      "output": 338,
+      "total": 971
+    },
+    "durationMs": 4545
+  }
+}

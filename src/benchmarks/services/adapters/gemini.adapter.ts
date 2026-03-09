@@ -1,4 +1,8 @@
-import { GoogleGenAI, ThinkingLevel } from '@google/genai';
+import {
+  GenerateContentResponse,
+  GoogleGenAI,
+  ThinkingLevel,
+} from '@google/genai';
 import { jsonrepair } from 'jsonrepair';
 import { GeminiModel } from '../../definitions/strike-parser.interface';
 import {
@@ -30,6 +34,25 @@ export class GeminiAdapter extends BaseAiAdapter {
     return result.totalTokens ?? 0;
   }
 
+  private getResponseWithThoughts(response: GenerateContentResponse): {
+    thoughts: string;
+    answer: string;
+  } {
+    let thoughts = '';
+    let answer = '';
+
+    for (const part of response?.candidates?.[0]?.content?.parts ?? []) {
+      if (!part.text) continue;
+      if (part.thought) {
+        thoughts += part.text;
+      } else {
+        answer += part.text;
+      }
+    }
+
+    return { thoughts, answer };
+  }
+
   async generate(
     prompt: string,
     options: AiModelAdapterOptions,
@@ -46,31 +69,40 @@ export class GeminiAdapter extends BaseAiAdapter {
         responseJsonSchema: targetSchema.toJSONSchema(),
         thinkingConfig: {
           thinkingLevel: ThinkingLevel.MEDIUM,
+          includeThoughts: true,
         },
       },
     });
 
-    const text = result.text || '{}';
-    const raw = JSON.parse(jsonrepair(text));
+    const { answer, thoughts } = this.getResponseWithThoughts(result);
+    const text = answer || '{}';
 
-    // Validate using our Zod schemas
-    const validated = targetSchema.parse(raw) as RawAiResponse;
+    try {
+      const raw = JSON.parse(jsonrepair(text));
+      const validated = targetSchema.parse(raw) as RawAiResponse;
 
-    const usage = result.usageMetadata || {
-      promptTokenCount: 0,
-      candidatesTokenCount: 0,
-      totalTokenCount: 0,
-    };
+      const usage = result.usageMetadata || {
+        promptTokenCount: 0,
+        candidatesTokenCount: 0,
+        totalTokenCount: 0,
+      };
 
-    return {
-      rawOutput: validated,
-      usage: {
-        input: usage.promptTokenCount ?? 0,
-        output: usage.candidatesTokenCount ?? 0,
-        cached: usage.cachedContentTokenCount ?? 0,
-        thinking: usage.thoughtsTokenCount ?? 0,
-        total: usage.totalTokenCount ?? 0,
-      },
-    };
+      return {
+        rawOutput: validated,
+        thoughts,
+        usage: {
+          input: usage.promptTokenCount ?? 0,
+          output: usage.candidatesTokenCount ?? 0,
+          cached: usage.cachedContentTokenCount ?? 0,
+          thinking: usage.thoughtsTokenCount ?? 0,
+          total: usage.totalTokenCount ?? 0,
+        },
+      };
+      // biome-ignore lint/suspicious/noExplicitAny: raw LLM outputs can be very flexible, and we want to capture them in the trace for debugging, even if they don't match our expected schema
+    } catch (error: any) {
+      // Attach raw string for tracing
+      error.rawText = text;
+      throw error;
+    }
   }
 }

@@ -1,0 +1,22 @@
+{
+  "timestamp": "2026-03-06T15:22:19.169Z",
+  "hash": "802ca579585936cd6f4873fec77c2ee6",
+  "model": "gemini-2.5-flash-lite",
+  "step": "classification",
+  "strategy": "dom-distillation-markdown",
+  "fileName": "sciopero_trasporto_pubblico_chiuse_metro_c_termini_centocelle_0.html",
+  "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a strike from \"ATAC\".\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\nResponse should simply be a JSON object with the following format: { \"isStrike\": boolean }\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: Sciopero del trasporto pubblico, chiuse metro C e Termini-Centocelle - Roma Servizi per la Mobilità\n\n* * *\n\n# Sciopero del trasporto pubblico, chiuse metro C e Termini-Centocelle\n\nPubblicato il: 07/07/2024 - Aggiornato il: 06/11/2024\n\nÈ in corso lo sciopero del trasporto pubblico che si concluderà alle 0,30.  \nEcco la situazione sulla rete.  \nMetro A: regolare  \nMetro B/B1: attiva  \nMetro C: chiusa  \nTermini-Centocelle: chiusa  \nServizio bus e tram: possibili riduzioni di corse e/o sospensione di linee.",
+  "rawOutput": {
+    "isStrike": false
+  },
+  "metadata": {
+    "usage": {
+      "input": 395,
+      "output": 10,
+      "cached": 0,
+      "thinking": 0,
+      "total": 405
+    },
+    "durationMs": 1605
+  }
+}

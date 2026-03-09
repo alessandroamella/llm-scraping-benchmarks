@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-03-06T15:21:44.436Z",
+  "hash": "e6a3f816812eb61fd8d5a2569bd08f41",
+  "model": "gpt-5-nano",
+  "step": "classification",
+  "strategy": "dom-distillation-markdown",
+  "fileName": "sciopero_generale_nazionale_adesione_personale_atac_al_26.html",
+  "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a strike from \"ATAC\".\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\nResponse should simply be a JSON object with the following format: { \"isStrike\": boolean }\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: Sciopero generale nazionale, adesione personale Atac al 26% - Roma Servizi per la Mobilità\n\n* * *\n\n# Sciopero generale nazionale, adesione personale Atac al 26%\n\nPubblicato il: 13/12/2024 - Aggiornato il: 23/12/2024\n\nL’adesione complessiva del personale Atac allo sciopero generale nazionale di oggi, rilevata in mattinata, è stata del 26 per cento.",
+  "rawOutput": {
+    "isStrike": false
+  },
+  "metadata": {
+    "usage": {
+      "input": 316,
+      "output": 338,
+      "total": 654
+    },
+    "durationMs": 3396
+  }
+}

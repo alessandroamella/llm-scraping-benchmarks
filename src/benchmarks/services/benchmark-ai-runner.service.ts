@@ -15,9 +15,11 @@ import { gfm } from 'turndown-plugin-gfm';
 import { EnvsService } from '@/envs/envs.service';
 import type { Company } from '../data/ground-truth';
 import { getPricing } from '../definitions/ai-pricing.const';
+import { AiTrace, isAiTraceError } from '../definitions/ai-trace.interface';
 import { PreProcessingStrategy } from '../definitions/pre-processing-strategy.type';
 import {
   AiCostUsdBreakdown,
+  AiParserMetadata,
   isDeepSeekModel,
   isGeminiModel,
   isGroqModel,
@@ -59,6 +61,10 @@ export class BenchmarkAiRunnerService implements OnModuleInit {
     process.cwd(),
     'src/benchmarks/.ai_cache',
   );
+  private readonly tracesDir = path.join(
+    process.cwd(),
+    'src/benchmarks/.traces',
+  );
   private readonly manualConfirmationEnabled: boolean;
 
   constructor(private readonly envsService: EnvsService) {
@@ -80,6 +86,9 @@ export class BenchmarkAiRunnerService implements OnModuleInit {
 
     if (!fs.existsSync(this.cacheDir)) {
       fs.mkdirSync(this.cacheDir, { recursive: true });
+    }
+    if (!fs.existsSync(this.tracesDir)) {
+      fs.mkdirSync(this.tracesDir, { recursive: true });
     }
 
     this.manualConfirmationEnabled = this.envsService.get(
@@ -109,6 +118,33 @@ export class BenchmarkAiRunnerService implements OnModuleInit {
           '\n⚠️  Manual confirmation DISABLED. AI will run automatically. ⚠️\n',
         ),
       );
+    }
+  }
+
+  // --- Add the saveTrace helper ---
+  private async saveTrace(trace: AiTrace) {
+    try {
+      const { model, strategy, fileName } = trace.request;
+
+      // Group traces nicely: .traces/gpt-4o-mini/html-to-markdown/
+      const safeModelName = model.replace(/\//g, '_');
+      const dir = path.join(this.tracesDir, safeModelName, strategy);
+
+      if (!fs.existsSync(dir)) {
+        fs.mkdirSync(dir, { recursive: true });
+      }
+
+      const safeFileName = fileName.replace(/[^a-zA-Z0-9.-]/g, '_');
+      const tracePath = path.join(dir, `${safeFileName}.trace.json`);
+
+      // Fire and forget write
+      fs.promises
+        .writeFile(tracePath, JSON.stringify(trace, null, 2))
+        .catch((e) => {
+          this.logger.error(`Failed to write trace: ${tracePath}`, e);
+        });
+    } catch (e) {
+      this.logger.error('Failed to setup trace directory', e);
     }
   }
 
@@ -195,6 +231,20 @@ Input Content (Pre-processing: ${preProcessingStrategy}):
     const hash = crypto.createHash('md5').update(hashData).digest('hex');
     const cachePath = path.join(this.cacheDir, `${hash}.json`);
 
+    // 1. Initialize the trace object
+    const trace: AiTrace = {
+      timestamp: new Date().toISOString(),
+      isCacheHit: false,
+      request: {
+        sourceName,
+        fileName: loggingFileName,
+        model,
+        strategy,
+        useLenientSchema,
+        prompt,
+      },
+    };
+
     // Cache Check
     if (fs.existsSync(cachePath)) {
       try {
@@ -204,6 +254,17 @@ Input Content (Pre-processing: ${preProcessingStrategy}):
         this.logger.log(
           `CACHE HIT [${hash.slice(0, 6)}] - Duration: ${cached.metadata.durationMs}ms`,
         );
+
+        // Save trace for cache hits too (useful to see the prompt)
+        trace.isCacheHit = true;
+        trace.response = {
+          parsedData: cached.data,
+          usage: (cached.metadata as AiParserMetadata).tokens,
+          costUsd: (cached.metadata as AiParserMetadata).costUsd,
+          durationMs: cached.metadata.durationMs ?? 0,
+        };
+        this.saveTrace(trace);
+
         return cached;
       } catch (e) {
         this.logger.warn('Cache corrupted, fetching fresh...', e);
@@ -279,12 +340,47 @@ Input Content (Pre-processing: ${preProcessingStrategy}):
 
       // Cache Write
       fs.writeFileSync(cachePath, JSON.stringify(responseEnvelope, null, 2));
+
+      // 2. Save Trace on Success
+      trace.response = {
+        rawOutput: result.rawOutput,
+        parsedData,
+        usage: result.usage,
+        costUsd: costBreakdown,
+        durationMs,
+        thoughts: result.thoughts,
+      };
+      this.saveTrace(trace);
+
       return responseEnvelope;
     } catch (error) {
       this.logger.error(
         `AI pipeline failed for ${sourceName} using model ${model} and adapter ${adapter.provider}`,
         error,
       );
+
+      if (!isAiTraceError(error)) {
+        // this is bad
+        this.logger.error(
+          'Unexpected error format, cannot capture details in trace',
+        );
+      }
+
+      // 3. Save Trace on Error
+      trace.error = isAiTraceError(error)
+        ? {
+            message: error.message,
+            stack: error.stack,
+            rawText: error.rawText,
+            details: error,
+          }
+        : {
+            message: 'Unknown error',
+            details: error,
+          };
+
+      this.saveTrace(trace);
+
       throw error;
     }
   }

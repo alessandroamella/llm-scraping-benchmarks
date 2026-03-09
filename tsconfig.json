@@ -32,5 +32,16 @@
     "noUnusedParameters": false,
     "preserveWatchOutput": true,
     "strict": true
-  }
+  },
+  "include": ["src/**/*.ts", "test/**/*.ts", "declarations.d.ts"],
+  "exclude": [
+    "node_modules",
+    "test",
+    "dist",
+    "**/*spec.ts",
+    "src/benchmarks/.ai_cache",
+    "src/benchmarks/.traces",
+    "src/benchmarks/data",
+    "src/benchmarks/results"
+  ]
 }

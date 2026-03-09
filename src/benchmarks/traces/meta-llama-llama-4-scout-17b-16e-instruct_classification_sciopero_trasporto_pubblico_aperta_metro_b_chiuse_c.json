@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-03-06T17:53:51.381Z",
+  "hash": "45cddd12fa19e66757eb59627f39db42",
+  "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+  "step": "classification",
+  "strategy": "dom-distillation",
+  "fileName": "sciopero_trasporto_pubblico_aperta_metro_b_chiuse_c.html",
+  "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a strike from \"ATAC\".\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\nResponse should simply be a JSON object with the following format: { \"isStrike\": boolean }\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"><h3>Context Metadata</h3><ul><li>Page Title: Sciopero del trasporto pubblico, aperta la metro B, chiuse A e C - Roma Servizi per la Mobilità</li></ul></div><hr/><div> <div> <div> <div> <div> <div> </div> </div> </div> <div> <div> <div> <div> <h1>Sciopero del trasporto pubblico, aperta la metro B, chiuse A e C</h1> </div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div><p>Pubblicato il: 15/12/2023 - Aggiornato il: 15/12/2023</p></div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div> <span> </span> </div> </div> </div> <div> <div> <div></div> </div> </div> <div> <div> <p>status: 1 È in corso lo sciopero nazionale del trasporto pubblico che si concluderà alle 13. Ecco la situazione sulla rete romana Metro A e C chiuse Metro B/B1 aperte Bus, tram, filobus e ferrovia Termini Centocelle: servizio attivo con possibili riduzioni di corse. Aggiornamenti in tempo reale su romamobilita.it</p> </div> </div> </div> </div> </div> </div>",
+  "rawOutput": {
+    "isStrike": false
+  },
+  "metadata": {
+    "usage": {
+      "input": 647,
+      "output": 10,
+      "total": 657
+    },
+    "durationMs": 432
+  }
+}

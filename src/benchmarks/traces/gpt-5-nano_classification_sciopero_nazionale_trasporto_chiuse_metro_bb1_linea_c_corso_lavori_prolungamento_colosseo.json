@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-03-06T15:22:13.558Z",
+  "hash": "8d5d2e1f47187a2033824c781e8dd2d3",
+  "model": "gpt-5-nano",
+  "step": "classification",
+  "strategy": "dom-distillation",
+  "fileName": "sciopero_nazionale_trasporto_chiuse_metro_bb1_linea_c_corso_lavori_prolungamento_colosseo.html",
+  "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a strike from \"ATAC\".\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\nResponse should simply be a JSON object with the following format: { \"isStrike\": boolean }\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"><h3>Context Metadata</h3><ul><li>Page Title: Sciopero nazionale del trasporto, chiuse metro A e B/B1. Linea C: in corso lavori per prolungamento a Colosseo - Roma Servizi per la Mobilità</li></ul></div><hr/><div> <div> <div> <div> <div> <div> </div> </div> </div> <div> <div> <div> <div> <h1>Sciopero nazionale del trasporto, chiuse metro A e B/B1. Linea C: in corso lavori per prolungamento a Colosseo</h1> </div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div><p>Pubblicato il: 05/10/2024 - Aggiornato il: 06/11/2024</p></div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div> <span> </span> </div> </div> </div> <div> <div> <div></div> </div> </div> <div> <div> <p><span>È in corso lo sciopero nazionale di 24 ore del trasporto pubblico. Ecco la situazione sulla rete romana</span><br><span>– metro A: chiusa</span><br><span>– metro B/B1: chiusa</span><br><span>– metro C: chiusa sino alle 5.30 di lunedì per lavori connessi al prolungamento a Colosseo. Attivo servizio bus sostitutivi</span><br><span>– ferrovia Termini-Centocelle: prosegue servizio;</span><br><span>– bus e tram possibili riduzioni di servizio.</span></p> </div> </div> </div> </div> </div> </div>",
+  "rawOutput": {
+    "isStrike": false
+  },
+  "metadata": {
+    "usage": {
+      "input": 649,
+      "output": 466,
+      "total": 1115
+    },
+    "durationMs": 4615
+  }
+}

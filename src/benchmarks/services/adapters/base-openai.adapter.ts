@@ -80,22 +80,29 @@ export abstract class BaseOpenAiAdapter extends BaseAiAdapter {
     });
 
     const content = completion.choices[0]?.message?.content || '{}';
-    const parsed = JSON.parse(jsonrepair(content));
 
-    // Fix the array wrap issue shared by both Groq and DeepSeek
-    if (parsed.strikeData && Array.isArray(parsed.strikeData)) {
-      parsed.strikeData = parsed.strikeData[0] || null;
+    try {
+      const parsed = JSON.parse(jsonrepair(content));
+
+      if (parsed.strikeData && Array.isArray(parsed.strikeData)) {
+        parsed.strikeData = parsed.strikeData[0] || null;
+      }
+
+      const validated = schema.parse(parsed) as RawAiResponse;
+
+      return {
+        rawOutput: validated,
+        usage: {
+          input: completion.usage?.prompt_tokens ?? 0,
+          output: completion.usage?.completion_tokens ?? 0,
+          total: completion.usage?.total_tokens ?? 0,
+        },
+      };
+      // biome-ignore lint/suspicious/noExplicitAny: raw LLM outputs can be very flexible, and we want to capture them in the trace for debugging, even if they don't match our expected schema
+    } catch (error: any) {
+      // Attach the raw string from the LLM so the tracer can save it
+      error.rawText = content;
+      throw error;
     }
-
-    const validated = schema.parse(parsed) as RawAiResponse;
-
-    return {
-      rawOutput: validated,
-      usage: {
-        input: completion.usage?.prompt_tokens ?? 0,
-        output: completion.usage?.completion_tokens ?? 0,
-        total: completion.usage?.total_tokens ?? 0,
-      },
-    };
   }
 }

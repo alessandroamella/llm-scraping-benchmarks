@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-03-06T15:23:12.072Z",
+  "hash": "7815fede1d97df6aff4a45cf84744214",
+  "model": "gpt-5-nano",
+  "step": "classification",
+  "strategy": "dom-distillation",
+  "fileName": "aggiornamento_sciopero_riaperta_stazione_ponte_lungo.html",
+  "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a strike from \"ATAC\".\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\nResponse should simply be a JSON object with the following format: { \"isStrike\": boolean }\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"><h3>Context Metadata</h3><ul><li>Page Title: Aggiornamento sciopero: riaperta stazione Ponte Lungo - Roma Servizi per la Mobilità</li></ul></div><hr/><div> <div> <div> <div> <div> <div> </div> </div> </div> <div> <div> <div> <div> <h1>Aggiornamento sciopero: riaperta stazione Ponte Lungo</h1> </div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div><p>Pubblicato il: 07/12/2023 - Aggiornato il: 08/12/2023</p></div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div> <span> </span> </div> </div> </div> <div> <div> <div></div> </div> </div> <div> <div> <p>status: 1 Sciopero del trasporto pubblico: riaperta stazione Ponte Lungo sulla metro A. L’aggiornamento in tempo reale della situazione si può consultare sui siti romamobilita.it e atac.roma.it</p> </div> </div> </div> </div> </div> </div>",
+  "rawOutput": {
+    "isStrike": false
+  },
+  "metadata": {
+    "usage": {
+      "input": 529,
+      "output": 338,
+      "total": 867
+    },
+    "durationMs": 4340
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-03-06T17:47:26.638Z",
+  "hash": "55ef5af3fb8cb6488665687faaed83e6",
+  "model": "gpt-5-nano",
+  "step": "classification",
+  "strategy": "dom-distillation",
+  "fileName": "strike-detail-venerd--29-novembre-revocato-sciopero-ferrovienord.html",
+  "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a strike from \"Trenord\".\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\nResponse should simply be a JSON object with the following format: { \"isStrike\": boolean }\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"><h3>Context Metadata</h3><ul><li>Page Title: Venerdì 29 novembre revocato sciopero FERROVIENORDUser-logged-no-picCloseSend-mail-OKAlert</li><li>Date News: giovedì 28/11/2024</li><li>Header: Venerdì 29 novembre revocato sciopero FERROVIENORD</li></ul></div><hr/><div> <div> <h1> <b> Venerdì 29 novembre revocato sciopero FERROVIENORD </b> </h1> <p> giovedì 28/11/2024 </p> </div> <div> <!-- start simpleTextMedia --> <div> <div> <div> <div> <p>È stato revocato lo sciopero previsto per venerdì 29 novembre dalle 9 alle 13, che interessava il personale del gestore dell'infrastruttura FERROVIENORD.&nbsp;</p> <p>La circolazione dei treni in Lombardia sarà pertanto regolare anche su rete FERROVIENORD.&nbsp;Dallo sciopero erano già escluse le linee su rete RFI.</p> </div> </div> </div> </div> <!-- end simpleTextMedia --> </div> </div>",
+  "rawOutput": {
+    "isStrike": false
+  },
+  "metadata": {
+    "usage": {
+      "input": 499,
+      "output": 210,
+      "total": 709
+    },
+    "durationMs": 6068
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "timestamp": "2026-03-06T15:30:20.823Z",
+  "hash": "f7b7577aebd680bc1050ad9d1e4c4431",
+  "model": "gemini-2.5-flash-lite",
+  "step": "classification",
+  "strategy": "dom-distillation",
+  "fileName": "sciopero_del_trasporto_pubblico_aperte_le_metropolitane_e_la_ferrovia_termini_centocelle.html",
+  "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a strike from \"ATAC\".\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\nResponse should simply be a JSON object with the following format: { \"isStrike\": boolean }\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"><h3>Context Metadata</h3><ul><li>Page Title: Sciopero del trasporto pubblico, aperte le metropolitane e la ferrovia Termini-Centocelle - Roma Servizi per la Mobilità</li></ul></div><hr/><div> <div> <div> <div> <div> <div> </div> </div> </div> <div> <div> <div> <div> <h1>Sciopero del trasporto pubblico, aperte le metropolitane e la ferrovia Termini-Centocelle</h1> </div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div><p>Pubblicato il: 10/01/2025 - Aggiornato il: 10/01/2025</p></div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div> <span> </span> </div> </div> </div> <div> <div> <div></div> </div> </div> <div> <div> <p>È in corso lo sciopero nazionale del trasporto pubblico che si concluderà alle 12,30. Ecco la situazione sulla rete romana.</p> <p>-Metro A: prosegue servizio<br>-Metro B/B1: prosegue servizio<br>-Metro C: prosegue servizio<br>-Ferrotramvia Termini-Centocelle: prosegue servizio<br>-Bus e tram: possibili riduzioni di servizio&nbsp;</p> </div> </div> </div> </div> </div> </div>",
+  "rawOutput": {
+    "isStrike": false
+  },
+  "metadata": {
+    "usage": {
+      "input": 542,
+      "output": 10,
+      "cached": 0,
+      "thinking": 0,
+      "total": 552
+    },
+    "durationMs": 9138
+  }
+}
