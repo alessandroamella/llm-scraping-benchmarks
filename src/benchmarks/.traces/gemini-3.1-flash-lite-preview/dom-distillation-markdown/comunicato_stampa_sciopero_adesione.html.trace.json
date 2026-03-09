@@ -1,36 +1,30 @@
 {
-  "timestamp": "2026-03-09T13:02:04.979Z",
-  "isCacheHit": false,
+  "timestamp": "2026-03-09T13:40:53.849Z",
+  "isCacheHit": true,
   "request": {
     "sourceName": "ATAC",
     "fileName": "comunicato_stampa_sciopero_adesione.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "dom-distillation-markdown",
     "useLenientSchema": true,
-    "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"ATAC\" (the public transport company of Rome, Lazio (12)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: Sciopero del trasporto pubblico, adesione personale Atac al 16,4% - Roma Servizi per la Mobilità\n\n* * *\n\n# Sciopero del trasporto pubblico, adesione personale Atac al 16,4%\n\nPubblicato il: 10/01/2025 - Aggiornato il: 10/01/2025\n\nL’adesione complessiva del personale Atac – rilevata nel corso della mattinata- allo sciopero nazionale di oggi è stata pari al 16,4%."
+    "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"ATAC\" (the public transport company of Rome, Lazio (12)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: Sciopero del trasporto pubblico, adesione personale Atac al 16,4% - Roma Servizi per la Mobilità\n\n* * *\n\n# Sciopero del trasporto pubblico, adesione personale Atac al 16,4%\n\nPubblicato il: 10/01/2025 - Aggiornato il: 10/01/2025\n\nL’adesione complessiva del personale Atac – rilevata nel corso della mattinata- allo sciopero nazionale di oggi è stata pari al 16,4%."
   },
   "response": {
-    "rawOutput": {
-      "isStrike": false
-    },
     "parsedData": {
       "isStrike": false
     },
     "usage": {
-      "input": 554,
+      "input": 591,
       "output": 10,
-      "cached": 0,
-      "thinking": 147,
-      "total": 711
+      "total": 679
     },
     "costUsd": {
-      "inputCost": 0.0001385,
+      "inputCost": 0.00014775,
       "outputCost": 0.000015,
-      "thinkingCost": 0.0002205,
+      "thinkingCost": 0.000117,
       "cachedCost": 0,
-      "totalCost": 0.000374
+      "totalCost": 0.00027975
     },
-    "durationMs": 4850,
-    "thoughts": "**Analyzing the Strike Document**\n\nOkay, let's break this down. The task at hand is to determine if this document is announcing a future strike. My initial content analysis focuses on the title and the key phrase \"adesione personale Atac al 16,4%.\"  The text itself then explicitly states the participation rate: \"L’adesione complessiva... allo sciopero nazionale di oggi è stata pari al 16,4%\".\n\nGiven this phrasing, particularly the use of \"è stata\" (was) in relation to the participation rate and the reference to \"oggi\" (today), it's clear this is a report of participation that has *already* occurred or is occurring *currently* and not a notice *prior* to a strike. The 16.4% figure indicates actual involvement, suggesting we're well past the announcement stage.\n\nTherefore, my conclusive judgment is that this isn't an announcement of a future strike. It's reporting on the participation level of an *existing* strike. Consequently, I will set `isStrike` to `false`.\n\n\n"
+    "durationMs": 3577
   }
 }

@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-10 00:00:00",
+      "endDate": "2025-10-10 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 27587,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0009317,
+      "outputCost": 0.0010308,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0019625
+    },
+    "hash": "8894ae129a9e1fc71822c4b622e7028b",
+    "thoughts": "**Analyzing regional strike details**\n\nIt looks like this message refers to a regional strike affecting only the Atac transport network in Rome, which falls under the ISTAT region code \"12\" for Lazio. So, the location codes should be [\"12\"] with the location type set to \"REGIONAL\". \n\nThe service will be regular until 8:30 and will pause from 17:00 to 20:00 for the strike. There are mentions of different durations for strikes, too, suggesting varying lengths.",
+    "tokens": {
+      "input": 18634,
+      "output": 2577,
+      "total": 21211
+    }
+  }
+}

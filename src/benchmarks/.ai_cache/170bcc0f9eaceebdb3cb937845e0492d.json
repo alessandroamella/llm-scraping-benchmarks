@@ -1,0 +1,33 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-09-04 08:30:00",
+      "endDate": "2025-09-04 12:30:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22353,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00047935,
+      "outputCost": 0.0006068,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00108615
+    },
+    "hash": "170bcc0f9eaceebdb3cb937845e0492d",
+    "thoughts": "**Determining strike details**\n\nI need to confirm if the document is announcing a new strike. It mentions a strike on Thursday, September 4, 2025, from 8:30 to 12:30, organized by the union Sul. The content clearly states that public transport will be affected. So, it's definitely an announcement about an upcoming strike. Now, I just have to extract the relevant data like start and end time, making sure the dates are properly formatted as \"yyyy-MM-dd HH:mm:ss\".",
+    "tokens": {
+      "input": 9587,
+      "output": 1517,
+      "total": 11104
+    }
+  }
+}

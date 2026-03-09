@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-14 00:00:00",
+      "endDate": "2025-11-14 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 31058,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00047845,
+      "outputCost": 0.000788,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00126645
+    },
+    "hash": "d8e62fb834ff857f22058c0f9a1b01c4",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to output JSON indicating whether there's a strike, showing true/false for \"isStrike\" and providing \"strikeData\" if true. The content I’m analyzing is in Italian and discusses a public transportation strike scheduled for Friday, November 14, 2025, mentioning it's a 24-hour strike declared by unions. The announcement states that the services will operate normally until 8:30 AM and from 5 PM to 8 PM, with private operators remaining active.",
+    "tokens": {
+      "input": 9569,
+      "output": 1970,
+      "total": 11539
+    }
+  }
+}

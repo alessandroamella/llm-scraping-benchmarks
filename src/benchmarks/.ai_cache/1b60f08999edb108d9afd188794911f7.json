@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-04 00:00:00",
+      "endDate": "2025-10-04 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9980,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00410275,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.0017685,
+      "cachedCost": 0,
+      "totalCost": 0.00606775
+    },
+    "hash": "1b60f08999edb108d9afd188794911f7",
+    "thoughts": "**Strike Analysis: ATAC (Rome) - National Strike Extraction**\n\nOkay, here's the breakdown of this ATAC strike information. My task is clear: I need to analyze this HTML content and extract specific strike details in strict JSON format, adhering to the provided schema. The goal is to determine if it's an upcoming strike and pull out the relevant details: the start and end dates, the location type, the location codes, and the guaranteed service times. The output *must* be valid JSON.\n\nLet's dive in. The headline, \"Sciopero generale nazionale, domani trasporto pubblico a rischio\" (General national strike, public transport at risk tomorrow), is the first clue.  The content itself is straightforward: the publication and update dates, the body text highlighting the risk to public transport, and details about Rome. The duration is stated as 24 hours.\n\nInitially, I noted that the update date is October 3, 2025, and \"domani\" (tomorrow) implies the strike is on October 4, 2025. Now, here's where it gets nuanced. The headline explicitly states \"Sciopero generale nazionale\" (National general strike). Although the article focuses on ATAC in Rome, it explicitly says \"national.\" This means the `locationType` is *NATIONAL*, and the `locationCodes` should be `null`.\n\nThe service details state: \"A Roma la protesta interesserà la rete Atac e i bus gestiti da operatori privati. Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" (In Rome, the protest will affect the Atac network and private buses. Service will be regular until 8:30 and from 17:00 to 20:00). So, service will be normal until 8:30 AM and from 5 PM (17:00) to 8 PM (20:00).\n\nNow let's translate everything into the JSON structure.\n\n*   `isStrike`: definitely `true` for an upcoming strike.\n*   `startDate`:  \"2025-10-04 00:00:00\".  Given a 24-hour strike and the typical operational start, I will apply 00:00.\n*   `endDate`: \"2025-10-04 23:59:59\".  24 hours = 00:00 -> 23:59:59.\n*   `locationType`: \"NATIONAL\". The headline explicitly says it's a \"Sciopero generale nazionale.\" Even though the details are from Rome.\n*   `locationCodes`: `null`.\n*   `guaranteedTimes`:  Based on the \"regolare fino alle...\" clause, it will be [\"00:00-08:30\", \"17:00-20:00\"].\n\nThe key here is understanding that although the *context* is ATAC in Rome, the *headline* declares a *national* strike.  That dictates the `locationType`. And now, a final review for schema compliance, to ensure no errors will occur in the output, and I'm good to go!\n\n\n",
+    "tokens": {
+      "input": 16411,
+      "output": 131,
+      "total": 17721
+    }
+  }
+}

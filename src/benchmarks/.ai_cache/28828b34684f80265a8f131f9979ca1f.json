@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-10 00:00:00",
+      "endDate": "2025-10-10 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8065,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.004083,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.0011505,
+      "cachedCost": 0,
+      "totalCost": 0.0054435
+    },
+    "hash": "28828b34684f80265a8f131f9979ca1f",
+    "thoughts": "**Strike Analysis & Data Extraction**\n\nOkay, let's break this down. My primary task is to determine if this document announces a strike and, if so, to extract the relevant details. The document's headline, \"Venerdì 10 sciopero del trasporto pubblico, rete Atac a rischio\" (Friday the 10th public transport strike, Atac network at risk) immediately suggests a strike is indeed occurring.\n\nThe content confirms this: \"Venerdì 10 ottobre trasporto pubblico a rischio per gli scioperi di 24 e 4 ore indetti dai sindacati Sul, Usb e Orsa\" (Friday October 10th public transport at risk for the 24 and 4-hour strikes called by the unions Sul, Usb and Orsa). It's a strike, and the Atac network is affected. I need to get the essential strike information, format it as JSON, and make sure it's clean with no comments or control chars.\n\nThe text indicates the strike is on Friday, October 10th, 2025 – a critical piece of data. My mental model is that I should work within this date as a framework.\n\nNext, I need to extract the strike's specific details. It's a regional issue, affecting the Atac network in Rome. \"Atac\" implies the local transport within Rome, which I know is coded as Region 12, Lazio. The text specifies service guarantees \"fino alle 8,30 e dalle 17 alle 20\" (until 08:30 and from 17:00 to 20:00). So, to be clear, the parts that *aren't* guaranteed are 08:30-17:00 and 20:00-23:59. It's crucial to correctly identify the guaranteed times, as the objective of my processing is to extract this information.\n\nNow, let's assemble the JSON data:\n\n*   `isStrike`: true (Confirmed).\n*   `startDate`: \"2025-10-10 00:00:00\" (I am assuming a 24h strike, so the beginning of the day).\n*   `endDate`: \"2025-10-10 23:59:59\" (The same day; also assuming a 24h strike).\n*   `locationType`: \"REGIONAL\" (Atac, Rome is local/regional transport).\n*   `locationCodes`: [\"12\"] (Lazio, Rome's region).\n*   `guaranteedTimes`: [\"00:00-08:30\", \"17:00-20:00\"] (Interpreting \"fino alle 08:30\" as before 08:30, and \"dalle 17:00\" as from 17:00, as the text states).\n\nI need to confirm all JSON fields are valid and properly formatted; no comments or control characters are to be included.\n\n\n",
+    "tokens": {
+      "input": 16332,
+      "output": 140,
+      "total": 17239
+    }
+  }
+}

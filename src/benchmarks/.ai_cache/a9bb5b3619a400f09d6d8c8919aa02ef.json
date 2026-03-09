@@ -1,0 +1,33 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-09-04 08:30:00",
+      "endDate": "2025-09-04 12:30:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22752,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00093965,
+      "outputCost": 0.0006988,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00163845
+    },
+    "hash": "a9bb5b3619a400f09d6d8c8919aa02ef",
+    "thoughts": "**Evaluating guaranteed times**\n\nThe article mentions a 4-hour strike from 8:30 to 12:30, but there are no guaranteed times indicated. I don't see anything marked as \"garantito,\" which usually specifies these times. The terms \"Possibili disagi\" and \"a rischio\" also don't provide that clarity. So, I might consider leaving the guaranteedTimes as null or opting to omit it altogether. The schema for guaranteedTimes allows for being null or omitted if not specified, which seems fitting here.",
+    "tokens": {
+      "input": 18793,
+      "output": 1747,
+      "total": 20540
+    }
+  }
+}

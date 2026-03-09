@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-09T11:35:47.682Z",
+  "timestamp": "2026-03-09T13:57:52.387Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "ATAC",
@@ -7,24 +7,37 @@
     "model": "gpt-5-nano",
     "strategy": "dom-distillation-markdown",
     "useLenientSchema": true,
-    "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a strike from \"ATAC\".\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), 2-letter for provinces (e.g., \"MI\" for Milan), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGION\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: Martedì 9 dicembre sciopero del trasporto pubblico. Possibili stop per 24 ore - Roma Servizi per la Mobilità\n\n* * *\n\n# Martedì 9 dicembre sciopero del trasporto pubblico. Possibili stop per 24 ore\n\nPubblicato il: 04/12/2025 - Aggiornato il: 04/12/2025\n\nMartedì 9 dicembre trasporto pubblico a rischio per lo sciopero di 24 ore indetto dal sindacato Sul. L’agitazione interesserà la sola rete Atac. Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20."
+    "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"ATAC\" (the public transport company of Rome, Lazio (12)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: Martedì 9 dicembre sciopero del trasporto pubblico. Possibili stop per 24 ore - Roma Servizi per la Mobilità\n\n* * *\n\n# Martedì 9 dicembre sciopero del trasporto pubblico. Possibili stop per 24 ore\n\nPubblicato il: 04/12/2025 - Aggiornato il: 04/12/2025\n\nMartedì 9 dicembre trasporto pubblico a rischio per lo sciopero di 24 ore indetto dal sindacato Sul. L’agitazione interesserà la sola rete Atac. Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20."
   },
   "response": {
     "parsedData": {
-      "isStrike": false
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2025-12-09 00:00:00",
+        "endDate": "2025-12-09 23:59:59",
+        "locationType": "REGIONAL",
+        "locationCodes": [
+          "12"
+        ],
+        "guaranteedTimes": [
+          "00:00-08:30",
+          "17:00-20:00"
+        ]
+      }
     },
     "usage": {
-      "input": 956,
-      "output": 2803,
-      "total": 3759
+      "input": 967,
+      "output": 1975,
+      "total": 2942
     },
     "costUsd": {
-      "inputCost": 0.0000478,
-      "outputCost": 0.0011212,
+      "inputCost": 0.00004835,
+      "outputCost": 0.00079,
       "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.001169
+      "totalCost": 0.00083835
     },
-    "durationMs": 16735
+    "durationMs": 28947,
+    "thoughts": "**Analyzing strike announcement**\n\nI'm evaluating whether the document is announcing a new strike or just providing information. The title indicates a public transport strike scheduled for December 9, and the content confirms it's a 24-hour strike organized by the union Sul. The Atac network will be affected, but services will operate normally until 8:30 AM and then again from 5 PM to 8 PM. It clearly states that the strike is upcoming and specific to that date."
   }
 }

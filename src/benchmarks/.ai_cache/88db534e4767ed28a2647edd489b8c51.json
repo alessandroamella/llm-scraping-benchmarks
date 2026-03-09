@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 31403,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00004925,
+      "outputCost": 0.00078,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00082925
+    },
+    "hash": "88db534e4767ed28a2647edd489b8c51",
+    "thoughts": "**Extracting strike data**\n\nI need to extract the strike data, including startDate and endDate in the 'yyyy-MM-dd HH:mm:ss' format. The guidelines mention including times, but the content only specifies service times without exact start times. The strike lasts 24 hours, which indicates it’s set for Friday, November 28, 2025. The start time could be 00:00, and the end time would be 23:59. Therefore, I should set startDate to 2025-11-28 00:00:00 and endDate to 2025-11-28 23:59:59.",
+    "tokens": {
+      "input": 985,
+      "output": 1950,
+      "total": 2935
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-09 00:00:00",
+      "endDate": "2025-12-09 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 28038,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0004765,
+      "outputCost": 0.0008296,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0013061
+    },
+    "hash": "aa9fb4a9410981cc87c30539e72fc7f8",
+    "thoughts": "**Analyzing potential strike data**\n\nI need to format the output as JSON following the strike_extraction schema, which includes an `isStrike` boolean and potentially `strikeData`. The user indicates the content relates to a public transportation strike mentioned in Italian, occurring on December 9, 2025, for 24 hours. Based on the details provided, I can say that `isStrike` should be true. I also need to extract the `startDate` in the proper format, which is \"yyyy-MM-dd HH:mm:ss.\"",
+    "tokens": {
+      "input": 9530,
+      "output": 2074,
+      "total": 11604
+    }
+  }
+}

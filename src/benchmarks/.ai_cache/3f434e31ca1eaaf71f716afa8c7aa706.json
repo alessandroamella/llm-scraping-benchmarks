@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-14 00:00:00",
+      "endDate": "2025-11-14 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 34456,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005025,
+      "outputCost": 0.0010996,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00114985
+    },
+    "hash": "3f434e31ca1eaaf71f716afa8c7aa706",
+    "thoughts": "**Extracting strike details**\n\nIt looks like there's an announcement for a 24-hour strike next Friday, November 14, by USB and ORSA, so I’ll set isStrike to true. I'll need to extract the strike details, including startDate, endDate, locationType, locationCodes, and guaranteedTimes. The strike lasts a full 24 hours but doesn't specify exact times. I'll likely assume it starts from midnight (00:00) to just before midnight the next day (23:59). Dates need to be formatted correctly too!",
+    "tokens": {
+      "input": 1005,
+      "output": 2749,
+      "total": 3754
+    }
+  }
+}

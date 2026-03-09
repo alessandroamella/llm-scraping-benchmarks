@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-03 00:00:00",
+      "endDate": "2025-10-03 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 28330,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0004769,
+      "outputCost": 0.0009552,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0014321
+    },
+    "hash": "4eca18bc4d07edcd1a252b680689b316",
+    "thoughts": "**Extracting strike dates**\n\nI see that the article mentions a national strike, which affects public transport. It appears \"domani\" means \"tomorrow,\" indicating the strike starts on October 3, 2025, relative to the publication date of October 2. \n\nSince the strike lasts 24 hours, the start date would be \"2025-10-03 00:00:00\". There's also a mention of regular service until 8:30 a.m. and then breaks until 5 p.m. This context helps me define the service hours surrounding the strike.",
+    "tokens": {
+      "input": 9538,
+      "output": 2388,
+      "total": 11926
+    }
+  }
+}

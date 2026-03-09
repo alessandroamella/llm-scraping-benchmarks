@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-14 00:00:00",
+      "endDate": "2025-11-14 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5555,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.004121,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.0005985,
+      "cachedCost": 0,
+      "totalCost": 0.0049295
+    },
+    "hash": "2308d8cd242e41fd17bc9548ec56f89e",
+    "thoughts": "**Strike Detection and Analysis - ATAC (Rome)**\n\nOkay, my initial task is to determine if this document announces a strike, and if so, to extract the relevant details. The target here is the ATAC public transport system in Rome, Lazio, with the location code \"12.\" The text clearly states \"sciopero di 24 ore\" – a 24-hour strike, indicating a positive `isStrike` result.\n\nThe date is explicitly given as Friday, November 14th. Given the publication date (\"Pubblicato il: 10/11/2025\"), I'm inferring the year is 2025. Therefore, I'm setting `startDate` to `2025-11-14 00:00:00` and `endDate` to `2025-11-14 23:59:59`, covering the full 24-hour period.\n\nThe location is definitively Rome, within the Lazio region, so `locationType` is definitely \"REGIONAL\", with the `locationCodes` being [\"12\"]. The text mentions \"regolare fino alle 8,30 e dalle 17 alle 20.\" The wording is ambiguous but it is likely the guaranteed windows around the strike. Therefore, I will include those provided, as the strike affects the other hours. I will set the `guaranteedTimes` as [\"00:00-08:30\", \"17:00-20:00\"]. The document provides all the necessary information, and that's that.\n\n\n",
+    "tokens": {
+      "input": 16484,
+      "output": 140,
+      "total": 17023
+    }
+  }
+}

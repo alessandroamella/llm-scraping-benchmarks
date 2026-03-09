@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7876,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00015925,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.0011475,
+      "cachedCost": 0,
+      "totalCost": 0.00150325
+    },
+    "hash": "e6bfa84303290989b593626a5ce31154",
+    "thoughts": "**Strike Analysis and JSON Output**\n\nOkay, let's break this down. My task is to analyze this text and determine if it's announcing a strike, then output the information as a JSON object adhering to a predefined schema. The input is a short text about a \"sciopero generale nazionale\" on Friday, November 28th. I see the page title confirms the strike, with the title \"Venerdì 28 novembre sciopero generale nazionale. Trasporto pubblico a rischio\". Given the publication and update metadata, I'm interpreting November 28th as 2025.\n\nThe text clearly indicates a \"sciopero nazionale generale di 24 ore.\" This is a national general strike lasting 24 hours. The phrasing is important, \"24 ore\", which I will interpret as starting at 00:00 on the 28th and ending at 23:59 on the same day. Guaranteed service times are mentioned, specifically \"servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20\", which translates to 00:00-08:30 and 17:00-20:00. This information is key. The prompt seems to need the strike start and end times to be specified. Given the guaranteed service times, and that this is a 24 hour strike, the start and end times are clear. The location is clearly national. There are no regional codes mentioned.\n\nTherefore, the output should be a JSON object where: `isStrike` is `true`; the `strikeData` object contains the extracted details; `startDate` is \"2025-11-28 00:00:00\"; `endDate` is \"2025-11-28 23:59:59\"; `locationType` is \"NATIONAL\"; `locationCodes` is `null`; and `guaranteedTimes` is `[\"00:00-08:30\", \"17:00-20:00\"]`. Now, time to format that into a valid JSON object.\n\n\n",
+    "tokens": {
+      "input": 637,
+      "output": 131,
+      "total": 1533
+    }
+  }
+}

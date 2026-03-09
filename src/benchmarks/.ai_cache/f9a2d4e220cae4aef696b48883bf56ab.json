@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-09 00:00:00",
+      "endDate": "2025-12-09 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7315,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0001545,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.000864,
+      "cachedCost": 0,
+      "totalCost": 0.0012285
+    },
+    "hash": "f9a2d4e220cae4aef696b48883bf56ab",
+    "thoughts": "**Analyzing the Rome Transport Strike Information**\n\nOkay, let's break this down. The headline indicates a public transport strike in Rome, specifically on Tuesday, December 9th, 2025. It's a 24-hour strike called by the Sul union, affecting only the Atac network, which is the public transport system for Rome and the Lazio region (region 12).\n\nThe key here is that it's a confirmed strike (`isStrike: true`). The strike starts at midnight on December 9th, 2025 and ends at 23:59:59 on the same day. While it's a 24-hour strike, some service is guaranteed. The document specifies \"regolare fino alle 8,30 e dalle 17 alle 20\" which translates to regular service until 8:30 am and from 5:00 pm to 8:00 pm. This translates to `guaranteedTimes`: [\"00:00-08:30\", \"17:00-20:00\"].\n\nSo, the information is regional and the location code is definitely [\"12\"]. My goal is to represent this information in a clear and usable format. I need to make sure the data is structured correctly, the datatypes are correct, and that there are no comments to clutter things up. The goal here is a clean, machine-readable output. I think I've got a solid understanding of the information now.\n\n\n",
+    "tokens": {
+      "input": 618,
+      "output": 140,
+      "total": 1334
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-03-21 00:00:00",
+      "endDate": "2025-03-21 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 25384,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0009384,
+      "outputCost": 0.0010348,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0019732
+    },
+    "hash": "514ce99a7c5eb3002d2940b4a41ff995",
+    "thoughts": "**Extracting strike information**\n\nI need to output JSON according to specifications. This document is about an upcoming strike, specifically, a national strike on March 21 for 24 hours. The announcement mentions several unions involved and indicates that public transport will be affected but will operate regularly before and after certain times. Therefore, I need to set the `isStrike` to true and extract key data such as start and end dates, location type, and guaranteed times, formatting the dates accordingly.",
+    "tokens": {
+      "input": 18768,
+      "output": 2587,
+      "total": 21355
+    }
+  }
+}

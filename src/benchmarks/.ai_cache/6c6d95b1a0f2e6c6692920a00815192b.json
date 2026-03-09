@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-03-21 00:00:00",
+      "endDate": "2025-03-21 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 30762,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00047885,
+      "outputCost": 0.0008596,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00133845
+    },
+    "hash": "6c6d95b1a0f2e6c6692920a00815192b",
+    "thoughts": "**Determining location type**\n\nI’m figuring out the appropriate settings for a national strike based on guidance. It seems like I should use \"locationType: NATIONAL,\" following the schema. For national strikes, the description indicates that the locationCodes may be omitted, so I shouldn’t include that field. The spec is indicating that locationType could either be “REGIONAL” or “NATIONAL,” and for a national setting, I think it should be set to “NATIONAL” with locationCodes as null.",
+    "tokens": {
+      "input": 9577,
+      "output": 2149,
+      "total": 11726
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8645,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.004115,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.001014,
+      "cachedCost": 0,
+      "totalCost": 0.0053255
+    },
+    "hash": "9cd6b3e852e40c2a714c8f0aec47fd1d",
+    "thoughts": "**Strike Detection and Data Extraction**\n\nOkay, let's break this down. My task is to determine if this document announces a strike and, if so, to extract specific strike-related information, adhering to a predefined JSON schema. The input is a web page about an Atac strike in Rome, and the content is in Italian.\n\nFirst, I need to look for key indicators. The headline immediately catches my attention: \"Venerdì 28 novembre sciopero generale nazionale. Trasporto pubblico a rischio,\" which translates to \"Friday, November 28, national general strike. Public transport at risk.\" That's a strong signal. The body confirms this, mentioning a 24-hour national strike. So, `isStrike` is definitely `true`.\n\nNow, for the data extraction. The provided information is enough to determine all data points.\n\n*   `startDate`: The text says \"Venerdì 28 novembre,\" which, combined with the context that this information is regarding the year 2025 (confirmed by the publication date 21/11/2025, and updated date 24/11/2025), I can deduce is Friday, November 28, 2025. A 24-hour strike means the start time is 00:00:00. This gives me `2025-11-28 00:00:00`.\n*   `endDate`: Since it's a 24-hour strike, the end date is the same day at the end of the day. This is `2025-11-28 23:59:59`.\n*   `locationType`: The text explicitly says \"nazionale,\" which translates to \"national\". So, `locationType` is \"NATIONAL\".\n*   `locationCodes`: Per the schema, `locationCodes` should be `null` if the `locationType` is \"NATIONAL.\"\n*   `guaranteedTimes`: The text mentions \"il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" That is, service will be normal until 8:30 and resume from 17:00 to 20:00. These are the guaranteed service times. It fits the pattern I know for Italian public transport strikes. Thus, `guaranteedTimes` becomes `[\"00:00-08:30\", \"17:00-20:00\"]`.\n\nFinally, I do a quick check to make sure the extracted dates align with the context, which they do. Therefore, I can confidently formulate the JSON object based on the given schema, incorporating the data extracted above.\n\n\n",
+    "tokens": {
+      "input": 16460,
+      "output": 131,
+      "total": 17267
+    }
+  }
+}

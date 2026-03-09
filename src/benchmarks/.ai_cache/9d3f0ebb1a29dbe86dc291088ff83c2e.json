@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-09-22 00:00:00",
+      "endDate": "2025-09-22 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6074,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0041235,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.000768,
+      "cachedCost": 0,
+      "totalCost": 0.0051015
+    },
+    "hash": "9d3f0ebb1a29dbe86dc291088ff83c2e",
+    "thoughts": "**Strike Announcement Analysis**\n\nOkay, let's break this down. My primary objective is to determine if this HTML content from \"Roma Servizi per la Mobilità\" constitutes a strike announcement and, if so, to extract the relevant data. The context here is a strike slated for Monday, September 22nd. Given the publication and update dates (16/09/2025 and 17/09/2025, respectively), the year is definitively 2025.\n\nFirst, I need to identify the key data points:\n\n*   **Date:** Monday, September 22nd, 2025 – so, `2025-09-22`.\n*   **Duration:** It's a 24-hour strike.\n*   **Location:** The text specifies \"A Roma l’agitazione interesserà la rete Atac...\", so Rome is the primary area affected. The region code for Lazio, from previous data, is \"12\".\n*   **Guaranteed Times:** The text mentions service will be \"regolare fino alle 8,30 e dalle 17 alle 20.\" That translates to guaranteed service from 00:00 to 08:30 and again from 17:00 to 20:00.\n\nNow, let's confirm the strike details:\n\n*   Is it a strike announcement? Yes, the language clearly indicates a planned work stoppage.\n*   Is it upcoming? Yes, the publication/update dates precede the strike date.\n\nBased on this information, I can formulate the key data points:\n\n*   `startDate`: `2025-09-22 00:00:00` (A 24-hour strike typically begins at the start of the day).\n*   `endDate`: `2025-09-22 23:59:59` (This covers the entire 24-hour period).\n*   `locationType`: It's REGIONAL, as it specifically targets Rome (Atac) and Lazio.\n*   `locationCodes`: `[\"12\"]` (Lazio).\n*   `guaranteedTimes`: The guaranteed service windows are `[\"00:00-08:30\", \"17:00-20:00\"]`.\n\n\n",
+    "tokens": {
+      "input": 16494,
+      "output": 140,
+      "total": 17146
+    }
+  }
+}

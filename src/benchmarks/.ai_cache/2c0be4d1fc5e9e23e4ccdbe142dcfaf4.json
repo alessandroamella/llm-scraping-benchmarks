@@ -1,0 +1,25 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 34920,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000495,
+      "outputCost": 0.0012192,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0012687
+    },
+    "hash": "2c0be4d1fc5e9e23e4ccdbe142dcfaf4",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to format the output as JSON based on the strike extraction details. The document clearly announces a four-hour strike planned for the evening of tomorrow, affecting the buses at the Magliana depot. Since this is a future event, we'll set isStrike to true. I should also specify the start and end dates in the required format. Alright, let's ensure the details are accurate before finalizing the JSON structure!",
+    "tokens": {
+      "input": 990,
+      "output": 3048,
+      "total": 4038
+    }
+  }
+}

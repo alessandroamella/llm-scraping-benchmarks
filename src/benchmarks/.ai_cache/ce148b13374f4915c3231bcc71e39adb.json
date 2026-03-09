@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-24 00:00:00",
+      "endDate": "2025-02-25 00:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 32505,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000525,
+      "outputCost": 0.001054,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0011065
+    },
+    "hash": "ce148b13374f4915c3231bcc71e39adb",
+    "thoughts": "**Analyzing transport strike announcement**\n\nI need to output a JSON indicating if there’s a strike and include the relevant data if true. The content mentions a national transport strike on “Lunedì 24 febbraio,” which translates to Monday, February 24. It warns of potential disruptions to public transport for a full day and specifies that services will run regularly until 8:30 and again from 17:00 to 20:00. This indicates a 24-hour strike, likely starting at midnight.",
+    "tokens": {
+      "input": 1050,
+      "output": 2635,
+      "total": 3685
+    }
+  }
+}

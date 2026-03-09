@@ -826,7 +826,14 @@ if error_counts and total_valid_evaluations > 0:
     plt.figure(figsize=(14, 8))
 
     # Usiamo una palette tendente al rosso/arancione
-    ax = sns.barplot(data=df_errors, x="Error Rate (%)", y="Campo", palette="Reds_r")
+    ax = sns.barplot(
+        data=df_errors,
+        x="Error Rate (%)",
+        y="Campo",
+        hue="Campo",
+        palette="Reds_r",
+        legend=False,
+    )
 
     plt.title(
         "Tasso di errore per campo (frequenza di estrazione errata)",

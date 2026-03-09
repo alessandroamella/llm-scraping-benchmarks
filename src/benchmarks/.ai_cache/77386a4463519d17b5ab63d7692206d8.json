@@ -1,0 +1,25 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 13455,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000489,
+      "outputCost": 0.000134,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0001829
+    },
+    "hash": "77386a4463519d17b5ab63d7692206d8",
+    "thoughts": "**Deciding on JSON output**\n\nI need to output JSON based on the provided instructions. The document is announcing an ongoing public transport strike with real-time updates. The title indicates it's about transport services, and the content clarifies that the strike is in progress, not upcoming. So, I conclude that `isStrike` should be set to false. The final output will be: `{\"isStrike\": false}`. I'll ensure it follows the required JSON format.",
+    "tokens": {
+      "input": 978,
+      "output": 335,
+      "total": 1313
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-09-04 08:30:00",
+      "endDate": "2025-09-04 12:30:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5581,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.004131,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.0006555,
+      "cachedCost": 0,
+      "totalCost": 0.004935
+    },
+    "hash": "586535ff802613684defe4f1d380f784",
+    "thoughts": "**My Analysis of the Atac Strike in Rome**\n\nOkay, let me break this down methodically. My source is the \"Roma Servizi per la Mobilità\" website – so, official information. The key piece of information is this: \"Rete Atac, giovedì 4 settembre sciopero dalle 8,30 alle 12,30. Possibili disagi.\" Translated, it means there's a strike on the Atac network, which is the public transport system for Rome, on Thursday, September 4th.\n\nSince I'm seeing this information now, and given the context of the website, I'm inferring the year is 2025. It's a strike, running from 8:30 AM to 12:30 PM. I can classify this as an upcoming strike and it is regional, specifically concerning transport in Rome (Lazio region, code 12).\n\nHere's how I would represent this data:\n\n*   `isStrike`: true\n*   `startDate`: 2025-09-04 08:30:00\n*   `endDate`: 2025-09-04 12:30:00\n*   `locationType`: REGIONAL\n*   `locationCodes`: [\"12\"]\n\nThe additional details confirm the start and end times, and confirm that the strike is specific to the Atac network, and Rome/Lazio. Based on my experience with these kinds of announcements, there's no mention of \"guaranteed service hours,\" which is common. I will omit it, as it is not specified.\n\n\n",
+    "tokens": {
+      "input": 16524,
+      "output": 99,
+      "total": 17060
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-09-04 08:30:00",
+      "endDate": "2025-09-04 12:30:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21765,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005115,
+      "outputCost": 0.0005068,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00055795
+    },
+    "hash": "8fd02b64c76c8c3d4b95fcb7848a1b2c",
+    "thoughts": "**Processing strike announcement**\n\nI need to format a JSON output for a strike announcement. The document specifies an upcoming strike by Rete Atac on September 4, 2025, indicating it's scheduled from 8:30 to 12:30. So, isStrike is true. \n\nI'll extract the startDate as \"2025-09-04 08:30:00\" and endDate as \"2025-09-04 12:30:00\". The strike impacts the \"rete Atac,\" which is Rome's public transport network, placing it in the regional category.",
+    "tokens": {
+      "input": 1023,
+      "output": 1267,
+      "total": 2290
+    }
+  }
+}

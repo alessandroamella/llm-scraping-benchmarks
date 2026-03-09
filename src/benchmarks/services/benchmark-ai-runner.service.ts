@@ -376,7 +376,8 @@ Input Content (Pre-processing: ${preProcessingStrategy}):
           model,
           costUsd: costBreakdown,
           hash,
-          thoughts: result.thoughts, // Save thoughts to the cache envelope
+          sourceFile: loggingFileName,
+          thoughts: result.thoughts,
           tokens: {
             input: result.usage.input,
             output: result.usage.output,

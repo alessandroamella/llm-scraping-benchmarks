@@ -1,0 +1,33 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-09-04 08:30:00",
+      "endDate": "2025-09-04 12:30:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8306,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00017175,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.0005565,
+      "cachedCost": 0,
+      "totalCost": 0.00087675
+    },
+    "hash": "ea1eeddfb9094251b79bf09a0f7354e3",
+    "thoughts": "**Strike Alert: Roman Public Transport (Atac Network)**\n\nOkay, here's the breakdown. I've got a notice: \"Rete Atac, giovedì 4 settembre sciopero dalle 8,30 alle 12,30.\" Right away, I see \"sciopero\" which means strike. This is on September 4th, 2025, from 8:30 AM to 12:30 PM. It's affecting the \"trasporto pubblico romano,\" specifically the Atac network. Good to know it’s contained to that specific part of the system, though it means a specific and significant impact for Rome.\n\nI've got the date, time, and specific location, that's crucial. I need to make sure this is properly encoded. The publication date is 2025-08-29, meaning it's an *upcoming* strike. I can represent this as JSON:\n\n```json\n{\n  \"isStrike\": true,\n  \"startDate\": \"2025-09-04 08:30:00\",\n  \"endDate\": \"2025-09-04 12:30:00\",\n  \"locationType\": \"REGIONAL\",\n  \"locationCodes\": [\"12\"],\n  \"guaranteedTimes\": null\n}\n```\n\nSince the provided text mentions \"trasporto pubblico romano\", that narrows down the location to the Lazio region, represented by the code \"12\". The strike's scope is regional; no specific cities are stated, and I don't see any mention of guaranteed services which is important for messaging and user expectations. I'll represent that as `null` since the text doesn't specify any guaranteed times. The dates and times are formatted according to the `yyyy-MM-dd HH:mm:ss` standard. Right, I think I have all the pieces for this one. Now, I have the data, which is ready to process.\n\n\n",
+    "tokens": {
+      "input": 687,
+      "output": 99,
+      "total": 1157
+    }
+  }
+}

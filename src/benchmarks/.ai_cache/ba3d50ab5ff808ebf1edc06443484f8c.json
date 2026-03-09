@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-04 00:00:00",
+      "endDate": "2025-10-04 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7882,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0026355,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.0011415,
+      "cachedCost": 0,
+      "totalCost": 0.0039735
+    },
+    "hash": "ba3d50ab5ff808ebf1edc06443484f8c",
+    "thoughts": "**Strike Analysis - My Thought Process**\n\nAlright, let's break this down. My task is clear: I need to analyze this text to determine if it describes a strike and, if so, extract the relevant strike information. If it's not a strike, I just need to return `isStrike: false`.\n\nFirst, I see the phrase \"Sciopero generale nazionale, domani trasporto pubblico a rischio\" (General national strike, public transport at risk tomorrow). \"Sciopero\" is the key word here, signaling a strike. So, my initial assessment leans towards `isStrike: true`.\n\nNow, I'm diving into the content analysis. The published date is 02/10/2025 and the updated date is 03/10/2025. The important clue is \"domani\" (tomorrow). Since it was updated on the 3rd and mentions tomorrow, the strike will occur on 04/10/2025.\n\nThe scope is \"Sciopero generale nazionale\" – a *national* general strike. So `locationType` is definitely \"NATIONAL\". Now, I need to get the guaranteed times, which is important for understanding the impact. The text says \"regolare fino alle 8,30 e dalle 17 alle 20\" (regular until 8:30 and from 17:00 to 20:00). Italian transport strikes often guarantee start-of-day service. Therefore, the guaranteed times will be [\"00:00-08:30\", \"17:00-20:00\"].\n\nThe strike is for 24 hours. The strike dates are 2025-10-04, meaning that the full timeframe is between 2025-10-04 00:00:00 to 2025-10-04 23:59:59.\n\nBased on all this, here is the JSON output I can generate:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-10-04 00:00:00\",\n    \"endDate\": \"2025-10-04 23:59:59\",\n    \"locationType\": \"NATIONAL\",\n    \"locationCodes\": null,\n    \"guaranteedTimes\": [\"00:00-08:30\", \"17:00-20:00\"]\n  }\n}\n```\n\nIt *is* an announcement, based on \"domani trasporto pubblico a rischio\" (tomorrow, public transport at risk). The strike is for 24 hours and the format looks correct. I am confident with the strike data extracted.\n\n\n",
+    "tokens": {
+      "input": 10542,
+      "output": 131,
+      "total": 11434
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-10 00:00:00",
+      "endDate": "2025-10-10 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20723,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00047675,
+      "outputCost": 0.000766,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00124275
+    },
+    "hash": "5e9cc48eafc0e36ccdfcf98779b7d82d",
+    "thoughts": "**Extracting strike information**\n\nI need to output JSON according to the specified `strike_extraction` schema. The content is in Italian, announcing a public transport strike on Friday, October 10, 2025. It mentions that the service will be regular until 8:30 AM and after 5 PM. Since the article is confirming an upcoming strike, I’ll set `isStrike` to true based on the given instructions. It seems clear that this is indeed an announcement.",
+    "tokens": {
+      "input": 9535,
+      "output": 1915,
+      "total": 11450
+    }
+  }
+}

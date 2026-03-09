@@ -104,6 +104,7 @@ export interface AiParserMetadata extends BaseParserMetadata {
   preProcessingStrategy?: PreProcessingStrategy;
   model?: SupportedModel;
   hash?: string;
+  sourceFile?: string;
   tokens?: {
     input?: number;
     output?: number;

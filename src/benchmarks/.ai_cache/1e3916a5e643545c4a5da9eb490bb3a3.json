@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-14 00:00:00",
+      "endDate": "2025-11-14 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7524,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00264675,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.00087,
+      "cachedCost": 0,
+      "totalCost": 0.00372675
+    },
+    "hash": "1e3916a5e643545c4a5da9eb490bb3a3",
+    "thoughts": "**Strike Analysis: Rome Public Transport**\n\nOkay, let's break this down. My task is to determine if this content announces an upcoming strike and, if so, extract the key details. The title, \"Trasporto pubblico, venerdì prossimo sciopero di 24 ore. Servizio a rischio,\" immediately suggests a strike, and the text confirms it. The phrase \"venerdì prossimo\" along with \"14 novembre\" and the publication date (Nov 10th, 2025) clearly pinpoint the strike date: Friday, November 14th, 2025. It's a 24-hour strike.\n\nThe crucial bit, of course, is the guaranteed service windows. The text specifies \"fino alle 8,30\" (meaning the service is normal until 08:30) and \"dalle 17 alle 20\" (from 17:00 to 20:00). My experience tells me that Italian transport strike guaranteed bands are usually 05:30-08:30 and 17:00-20:00. In this case, \"fino alle 8,30\" seems to be indicating that the service will be regular from the start of the service until 08:30. \"00:00-08:30\" is an accurate representation of that, which I consider within the range of acceptable.\n\nThe location is Rome, specifically affecting the ATAC network, which indicates it's a regional level strike (city/municipal). Therefore, I'm classifying this as a regional strike with location code \"12\" for the Lazio region. The data I've derived is: the strike *is* happening (isStrike: true), with a start date of 2025-11-14 00:00:00 and an end date of 2025-11-14 23:59:59. The type is \"REGIONAL\" and the location codes are [\"12\"]. The guaranteed times are as mentioned: [\"00:00-08:30\", \"17:00-20:00\"]. I'm confident in this analysis.\n\n\n",
+    "tokens": {
+      "input": 10587,
+      "output": 140,
+      "total": 11307
+    }
+  }
+}

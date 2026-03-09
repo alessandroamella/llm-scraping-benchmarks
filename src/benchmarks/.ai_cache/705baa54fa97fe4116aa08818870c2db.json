@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-14 00:00:00",
+      "endDate": "2025-11-14 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 34722,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00093795,
+      "outputCost": 0.0008652,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00180315
+    },
+    "hash": "705baa54fa97fe4116aa08818870c2db",
+    "thoughts": "**Determining strike announcement**\n\nI need to output JSON according to a specific schema. The document is in Italian and discusses a 24-hour strike scheduled for next Friday, which will impact public transport in Rome. The title translates to \"Public transport, next Friday 24-hour strike. Service at risk - Rome Mobility Services.\" Since the date context indicates that this strike is indeed occurring on November 14, 2025, I can confidently conclude that the announcement of the strike is valid, and so, isStrike will be true.",
+    "tokens": {
+      "input": 18759,
+      "output": 2163,
+      "total": 20922
+    }
+  }
+}
