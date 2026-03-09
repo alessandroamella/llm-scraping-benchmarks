@@ -129,10 +129,10 @@ export class BenchmarksService implements OnModuleInit {
 
   // Toggle this to run benchmarks
   private readonly useLenientSchema = true;
-  private readonly includeManualInSuite = false;
+  private readonly includeManualInSuite = true;
   private readonly generateChaosDatasetFlag = false;
 
-  private readonly customReportName = 'ai_suite_full';
+  private readonly customReportName = 'with_trenord_manual';
   // private readonly disabledChecks: string[] = ['locationType', 'locationCodes'];
   private readonly disabledChecks: string[] = [];
 
