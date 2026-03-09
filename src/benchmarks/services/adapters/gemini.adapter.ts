@@ -1,4 +1,4 @@
-import { GoogleGenAI } from '@google/genai';
+import { GoogleGenAI, ThinkingLevel } from '@google/genai';
 import { jsonrepair } from 'jsonrepair';
 import { GeminiModel } from '../../definitions/strike-parser.interface';
 import {
@@ -44,6 +44,9 @@ export class GeminiAdapter extends BaseAiAdapter {
       config: {
         responseMimeType: 'application/json',
         responseJsonSchema: targetSchema.toJSONSchema(),
+        thinkingConfig: {
+          thinkingLevel: ThinkingLevel.MEDIUM,
+        },
       },
     });
 
