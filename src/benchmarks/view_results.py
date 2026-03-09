@@ -780,3 +780,93 @@ else:
     print(
         "⚠️ Nessun dettaglio valido trovato nel JSON per generare il grafico per Source."
     )
+
+
+# --- GRAFICO 9: TASSO DI ERRORE PER CAMPO (%) ---
+error_counts = {}
+total_valid_evaluations = 0
+
+# Estraiamo i campi sbagliati dalla lista "differences"
+for d in data.get("details", []):
+    parser_name = d.get("parser", "")
+
+    # Ignoriamo test manuali o CHAOS per avere una statistica pulita sui modelli base
+    if "Manual" in parser_name or "CHAOS" in parser_name:
+        continue
+
+    # Ogni dettaglio valido rappresenta un tentativo del modello di estrarre TUTTI i campi
+    total_valid_evaluations += 1
+
+    differences = d.get("differences", [])
+
+    for diff in differences:
+        # Esempio di diff: "locationType: Expected REGION, got NATIONAL"
+        if ":" in diff:
+            # Estraiamo il nome del campo (tutto ciò che c'è prima del primo ':')
+            field_name = diff.split(":")[0].strip()
+
+            # Contiamo le occorrenze
+            if field_name not in error_counts:
+                error_counts[field_name] = 0
+            error_counts[field_name] += 1
+
+if error_counts and total_valid_evaluations > 0:
+    # Calcoliamo la percentuale di errore per ogni campo
+    error_rates = []
+    for field, count in error_counts.items():
+        error_rate = (count / total_valid_evaluations) * 100
+        error_rates.append(
+            {"Campo": field, "Error Rate (%)": error_rate, "Errori Assoluti": count}
+        )
+
+    # Creiamo un DataFrame e ordiniamo in modo decrescente
+    df_errors = pd.DataFrame(error_rates)
+    df_errors = df_errors.sort_values(by="Error Rate (%)", ascending=False)
+
+    plt.figure(figsize=(14, 8))
+
+    # Usiamo una palette tendente al rosso/arancione
+    ax = sns.barplot(data=df_errors, x="Error Rate (%)", y="Campo", palette="Reds_r")
+
+    plt.title(
+        "Tasso di errore per campo (frequenza di estrazione errata)",
+        fontsize=16,
+        fontweight="bold",
+    )
+    plt.xlabel(
+        f"% di Errore (su {total_valid_evaluations} estrazioni totali)", fontsize=12
+    )
+    plt.ylabel("Campo JSON", fontsize=12)
+
+    # Estendiamo leggermente l'asse X per non tagliare il testo
+    plt.xlim(0, max(df_errors["Error Rate (%)"]) * 1.15)
+
+    # Aggiunta dei valori di fianco alle barre: "XX.X% (Y)"
+    for p, count in zip(ax.patches, df_errors["Errori Assoluti"]):
+        width = p.get_width()
+        if width > 0:
+            ax.annotate(
+                f"{width:.1f}% ({int(count)})",
+                (width, p.get_y() + p.get_height() / 2.0),
+                ha="left",
+                va="center",
+                xytext=(5, 0),
+                textcoords="offset points",
+                fontsize=10,
+                fontweight="bold",
+            )
+
+    # Aggiungiamo una griglia verticale per facilitare la lettura
+    ax.xaxis.grid(True, linestyle="--", alpha=0.7)
+    ax.yaxis.grid(False)
+
+    plt.tight_layout()
+    if args.save:
+        plt.savefig("09_error_rate_per_campo.png", dpi=300)
+        print("Generato: 09_error_rate_per_campo.png")
+    if args.view:
+        plt.show()
+else:
+    print(
+        "⚠️ Nessuna differenza/errore trovato nel JSON per generare il grafico degli errori per campo."
+    )
