@@ -1,27 +1,15 @@
 {
-  "timestamp": "2026-03-09T14:40:15.731Z",
-  "isCacheHit": false,
+  "timestamp": "2026-03-09T15:54:15.264Z",
+  "isCacheHit": true,
   "request": {
     "sourceName": "EAV",
     "fileName": "linee_vesuviane_avviso_di_sciopero_di_2_ore_mercoledi_23_luglio_2025.html",
     "model": "meta-llama/llama-4-scout-17b-16e-instruct",
     "strategy": "dom-distillation-markdown",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"EAV\" (the public transport company of Campania (15)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: Linee Vesuviane: Avviso di sciopero di 2 ore mercoledì 23 luglio 2025 - EAV srl\n\n* * *\n\n## Linee Vesuviane: Avviso di sciopero di 2 ore mercoledì 23 luglio 2025\n\nData:  \n**22 Luglio 2025**\n\nSi comunica che, ai sensi dell’art. 2 comma 7 della L.146/90 (fattispecie: gravi eventi lesivi dell’incolumità e della sicurezza dei lavoratori) e delle integrazioni alla stessa della L.83/2000 e successive modifiche, per il giorno mercoledì **23 luglio 2025** la O.S. Faisa Confail ha proclamato uno sciopero aziendale di 2 ore, dalle ore 09:00 alle ore 11:00, avente le seguenti motivazioni: sicurezza sul posto di lavoro per il personale front-line di EAV S.r.l. ( autisti, macchinisti, capitreno, gestori, capistazione, Pl e biglietterie)\n\nDurante l’ultima proclamazione di sciopero delle citata O.S., la percentuale di adesione è stata del 2,32% (sciopero del 10/01/2025)\n\nDi seguito vengono elencate le ultime e le prime partenze garantite in relazione alle fasce di garanzia.\n\nDurante l’orario di sciopero, l’effettuazione delle corse è subordinata al numero di lavoratori aderenti allo sciopero.\n\n**Ultime partenze garantite prima dello sciopero**\n\n**da Napoli per**\n\n-   Sorrento                           08:41\n-   Torre Annunziata           08:57\n-   Poggiomarino                 08:50\n-   Sarno                                08:46\n\n**per Napoli da**\n\n-   Sorrento                            08:50\n-   Torre Annunziata           08:44\n-   Poggiomarino                  08:18\n-   Sarno                                 08:26\n\n**Prime partenze garantite dopo lo sciopero**\n\n**da Napoli per**\n\n-   Sorrento                           11:05\n-   Torre Annunziata           11:13\n-   Poggiomarino                 11:50\n-   Sarno                                11:10\n\n**per Napoli da**\n\n-   Sorrento                           11:14\n-   Torre Annunziata           11:33\n-   Poggiomarino                 11:18\n-   Sarno                                11:26\n\n**Categoria:** [Trasporto pubblico](https://www.eavsrl.it/categoria-disservizio/trasporto-pubblico/)\n\n**Area:** [Linee Vesuviane](https://www.eavsrl.it/area/linee-vesuviane/)"
   },
   "response": {
-    "rawOutput": {
-      "isStrike": true,
-      "strikeData": {
-        "startDate": "2025-07-23 09:00:00",
-        "endDate": "2025-07-23 11:00:00",
-        "locationType": "REGIONAL",
-        "locationCodes": [
-          "15"
-        ],
-        "guaranteedTimes": []
-      }
-    },
     "parsedData": {
       "isStrike": true,
       "strikeData": {
@@ -31,21 +19,26 @@
         "locationCodes": [
           "15"
         ],
-        "guaranteedTimes": []
+        "guaranteedTimes": [
+          "08:18-08:50",
+          "08:44-08:57",
+          "11:05-11:50",
+          "11:10-11:33"
+        ]
       }
     },
     "usage": {
-      "input": 1592,
-      "output": 81,
-      "total": 1673
+      "input": 1591,
+      "output": 123,
+      "total": 1714
     },
     "costUsd": {
-      "inputCost": 0.00017512,
-      "outputCost": 0.00002754,
+      "inputCost": 0.00017501,
+      "outputCost": 0.00004182,
       "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.00020266
+      "totalCost": 0.00021683
     },
-    "durationMs": 665
+    "durationMs": 1212
   }
 }

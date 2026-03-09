@@ -129,7 +129,7 @@ export class BenchmarksService implements OnModuleInit {
 
   // Toggle this to run benchmarks
   private readonly useLenientSchema = true;
-  private readonly includeManualInSuite = true;
+  private readonly includeManualInSuite = false;
   private readonly generateChaosDatasetFlag = false;
 
   private readonly customReportName = 'ai_suite_full';

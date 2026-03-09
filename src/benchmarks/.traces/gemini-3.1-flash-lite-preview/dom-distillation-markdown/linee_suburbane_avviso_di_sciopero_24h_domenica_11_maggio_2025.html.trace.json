@@ -1,26 +1,15 @@
 {
-  "timestamp": "2026-03-09T14:39:04.729Z",
-  "isCacheHit": false,
+  "timestamp": "2026-03-09T15:54:13.784Z",
+  "isCacheHit": true,
   "request": {
     "sourceName": "EAV",
     "fileName": "linee_suburbane_avviso_di_sciopero_24h_domenica_11_maggio_2025.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "dom-distillation-markdown",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"EAV\" (the public transport company of Campania (15)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: Linee Suburbane: avviso di sciopero 24h domenica 11 maggio 2025 - EAV srl\n\n* * *\n\n## Linee Suburbane: avviso di sciopero 24h domenica 11 maggio 2025\n\nData:  \n**6 Maggio 2025**\n\nPer il giorno 11 maggio 2025 la O.S. Or.S.A. ha proclamato azione di sciopero aziendale di 24 ore avente le seguenti motivazioni: problematiche organizzazione aziendale.\n\nDurante l’ultima proclamazione di sciopero della O.S. Or.S.A., la percentuale di adesione è stata del 40,31% (sciopero aziendale di 4 ore del 22 marzo 2025)\n\nSulla linea NAPOLI-PIEDIMONTE MATESE sarà garantito il servizio automobilistico sostitutivo come da programma domenicale e festivo.\n\nSulla linea NAPOLI-BENEVENTO non sarà effettuato servizio sostitutivo in quanto giornata festiva.\n\n**Categoria:** [Trasporto pubblico](https://www.eavsrl.it/categoria-disservizio/trasporto-pubblico/)\n\n**Area:** [Linee Suburbane](https://www.eavsrl.it/area/linee-suburbane/)"
   },
   "response": {
-    "rawOutput": {
-      "isStrike": true,
-      "strikeData": {
-        "startDate": "2025-05-11 00:00:00",
-        "endDate": "2025-05-11 23:59:59",
-        "locationType": "REGIONAL",
-        "locationCodes": [
-          "15"
-        ]
-      }
-    },
     "parsedData": {
       "isStrike": true,
       "strikeData": {
@@ -35,18 +24,15 @@
     "usage": {
       "input": 777,
       "output": 99,
-      "cached": 0,
-      "thinking": 770,
-      "total": 1646
+      "total": 1244
     },
     "costUsd": {
       "inputCost": 0.00019425,
       "outputCost": 0.0001485,
-      "thinkingCost": 0.001155,
+      "thinkingCost": 0.000552,
       "cachedCost": 0,
-      "totalCost": 0.00149775
+      "totalCost": 0.00089475
     },
-    "durationMs": 12437,
-    "thoughts": "**Strike Announcement Analysis: EAV (Campania)**\n\nOkay, here's the breakdown. My task is to analyze this text snippet and determine if it describes a strike, and if so, extract the relevant information. The company in question is EAV (Campania - code 15), and the input is \"Linee Suburbane: avviso di sciopero 24h domenica 11 maggio 2025\".\n\nFirst, I need to confirm if it is a strike. The text explicitly states \"avviso di sciopero\" (strike announcement) and confirms it is, and then I need to extract the relevant details. The phrase \"24h domenica 11 maggio 2025\" and the statement \"la O.S. Or.S.A. ha proclamato azione di sciopero aziendale di 24 ore\" confirm the strike is planned for May 11, 2025.\n\nThe \"24 ore\" indicates a full day strike, so I'll interpret that as starting at 00:00 and ending at 23:59 (or similar). Therefore, the `startDate` is \"2025-05-11 00:00:00\" and the `endDate` is \"2025-05-11 23:59:59\". The scope is clearly regional, given EAV's Campania context, so `locationType` will be \"REGIONAL\". The location code \"15\" (Campania) ties directly into `locationCodes`.\n\nThe text doesn't provide any information about guaranteed service times. The schema says that 'guaranteedTimes' is optional, therefore I will simply omit it (or return an empty array) since it is not explicitly mentioned.\n\nI need to confirm all the required fields are present and the extracted data forms valid JSON, which is a key part of my job. `startDate`, `endDate`, and `locationType` are all present.  The inclusion of the `locationCodes` is validated against the enumeration of allowed values, and \"15\" is definitely valid.\n\nSo, here's what I've got:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-05-11 00:00:00\",\n    \"endDate\": \"2025-05-11 23:59:59\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"15\"]\n  }\n}\n```\n\nThat looks clean and accurate.\n\n\n"
+    "durationMs": 4709
   }
 }

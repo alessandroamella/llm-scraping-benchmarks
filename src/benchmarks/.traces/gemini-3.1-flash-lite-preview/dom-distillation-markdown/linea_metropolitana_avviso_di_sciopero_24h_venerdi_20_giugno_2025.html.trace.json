@@ -1,27 +1,15 @@
 {
-  "timestamp": "2026-03-09T14:39:28.223Z",
-  "isCacheHit": false,
+  "timestamp": "2026-03-09T15:54:14.247Z",
+  "isCacheHit": true,
   "request": {
     "sourceName": "EAV",
     "fileName": "linea_metropolitana_avviso_di_sciopero_24h_venerdi_20_giugno_2025.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "dom-distillation-markdown",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"EAV\" (the public transport company of Campania (15)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: Linea Metropolitana: Avviso di sciopero 24h venerdì 20 giugno 2025 - EAV srl\n\n* * *\n\n## Linea Metropolitana: Avviso di sciopero 24h venerdì 20 giugno 2025\n\nData:  \n**15 Giugno 2025**\n\nPer il giorno 20 giugno 2025 la O.S. USB ha proclamato azione di sciopero per adesione a sciopero nazionale di 24 ore avente le seguenti motivazioni: per una maggiore sicurezza dei lavoratori e del servizio ed un incremento delle retribuzioni mensili.\n\nDurante l’ultima proclamazione di sciopero della O.S. USB, la percentuale di adesione è stata del 7,02% (sciopero generale nazionale di 24 ore del 24 febbraio 2025)\n\nDi seguito vengono elencate le ultime e le prime partenze garantite in relazione alle fasce di garanzia. Durante l’orario di sciopero l’effettuazione delle corse è subordinata al numero di lavoratori aderenti allo sciopero.\n\n**_Servizio garantito dalle ore 05:30 alle ore 8:30 e dalle ore 16:30 alle ore 19:30_**\n\n**ULTIME PARTENZE GARANTITE PRIMA DELLO SCIOPERO**\n\nda Aversa per Piscinola     08.15\n\nda Piscinola per Aversa     08.15\n\n**PRIME PARTENZE GARANTITE DOPO LO SCIOPERO**\n\n_(fascia operatività servizio dalle 16.30 alle 19.30)_\n\nda Aversa per  Piscinola      16.30\n\nda Piscinola per Aversa       16.45\n\n**ULTIME PARTENZE GARANTITE PRIMA DELLO SCIOPERO**\n\nda Aversa per Piscinola     19.00\n\nda Piscinola per Aversa     19.15\n\n**Categoria:** [Trasporto pubblico](https://www.eavsrl.it/categoria-disservizio/trasporto-pubblico/)\n\n**Area:** [M1 - Piscinola-Giugliano-Aversa-Napoli](https://www.eavsrl.it/area/m1-piscinola-giugliano-aversa-napoli/)"
   },
   "response": {
-    "rawOutput": {
-      "isStrike": true,
-      "strikeData": {
-        "startDate": "2025-06-20 00:00:00",
-        "endDate": "2025-06-20 23:59:59",
-        "locationType": "NATIONAL",
-        "guaranteedTimes": [
-          "05:30-08:30",
-          "16:30-19:30"
-        ]
-      }
-    },
     "parsedData": {
       "isStrike": true,
       "strikeData": {
@@ -36,19 +24,16 @@
     },
     "usage": {
       "input": 1062,
-      "output": 123,
-      "cached": 0,
-      "thinking": 730,
-      "total": 1915
+      "output": 131,
+      "total": 1783
     },
     "costUsd": {
       "inputCost": 0.0002655,
-      "outputCost": 0.0001845,
-      "thinkingCost": 0.001095,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.000885,
       "cachedCost": 0,
-      "totalCost": 0.001545
+      "totalCost": 0.001347
     },
-    "durationMs": 10301,
-    "thoughts": "**Strike Analysis: EAV Campania - June 20, 2025**\n\nOkay, let's break this down. My input is an announcement regarding a 24-hour strike by the USB union, affecting the EAV lines in Campania, slated for June 20, 2025. My primary objective here is to extract the relevant strike details, ensuring it's an *upcoming* strike, and then format this information correctly into a JSON structure, adhering strictly to the predefined schema. I need to be precise, as always. The key fields are `startDate`, `endDate`, `locationType`, and `guaranteedTimes`.\n\nThe announcement clearly states a 24-hour strike on June 20, 2025. It's national in scope (\"sciopero nazionale\"), meaning it's a strike that’s not limited to a specific region. The guaranteed service times are \"05:30 alle ore 8:30\" and \"16:30 alle ore 19:30.\" And the strike is upcoming as it was published June 15, 2025, for June 20, 2025.\n\nSo, here's my interpretation in a JSON format:\n\n*   The strike is indeed occurring: `isStrike`: `true`.\n*   The strike information should be within a field `strikeData`.\n*   The `startDate` is set to \"2025-06-20 00:00:00\" representing the start of the service day.\n*   The `endDate` is set to \"2025-06-20 23:59:59,\" signifying the end of the 24-hour strike.\n*   `locationType`: \"NATIONAL\" because the text indicates \"adesione a sciopero nazionale.\" Since it's national, and according to the rules, I MUST NOT include `locationCodes`. This is important, a detail I almost missed. I must be precise.\n*   `guaranteedTimes`: I need to format these as strings. Therefore, I will convert the guaranteed times to [\"05:30-08:30\", \"16:30-19:30\"].\n\nSo the final output will be:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-06-20 00:00:00\",\n    \"endDate\": \"2025-06-20 23:59:59\",\n    \"locationType\": \"NATIONAL\",\n    \"guaranteedTimes\": [\n      \"05:30-08:30\",\n      \"16:30-19:30\"\n    ]\n  }\n}\n```\n\nThis adheres to the schema and includes all the necessary information, correctly formatted, while omitting `locationCodes` since the strike is national. Ready to move on to the next data point.\n\n\n"
+    "durationMs": 6053
   }
 }

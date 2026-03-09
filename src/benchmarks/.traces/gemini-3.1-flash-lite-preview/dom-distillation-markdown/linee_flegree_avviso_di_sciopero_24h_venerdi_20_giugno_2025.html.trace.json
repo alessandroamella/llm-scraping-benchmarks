@@ -1,30 +1,15 @@
 {
-  "timestamp": "2026-03-09T14:39:33.253Z",
-  "isCacheHit": false,
+  "timestamp": "2026-03-09T15:54:14.399Z",
+  "isCacheHit": true,
   "request": {
     "sourceName": "EAV",
     "fileName": "linee_flegree_avviso_di_sciopero_24h_venerdi_20_giugno_2025.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "dom-distillation-markdown",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"EAV\" (the public transport company of Campania (15)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: Linee Flegree: Avviso di sciopero 24h venerdì 20 giugno 2025 - EAV srl\n\n* * *\n\n## Linee Flegree: Avviso di sciopero 24h venerdì 20 giugno 2025\n\nData:  \n**15 Giugno 2025**\n\nPer il giorno 20 giugno 2025 la O.S. USB ha proclamato azione di sciopero per adesione a sciopero nazionale di 24 ore avente le seguenti motivazioni: per una maggiore sicurezza dei lavoratori e del servizio ed un incremento delle retribuzioni mensili.\n\nDurante l’ultima proclamazione di sciopero della O.S. USB, la percentuale di adesione è stata del 7,02% (sciopero generale nazionale di 24 ore del 24 febbraio 2025)\n\nDi seguito vengono elencate le ultime e le prime partenze garantite in relazione alle fasce di garanzia. Durante l’orario di sciopero l’effettuazione delle corse è subordinata al numero di lavoratori aderenti allo sciopero.\n\n**Servizio garantito dalle ore 05:30 alle ore 8:30 e dalle ore 16:30 alle ore 19:30**\n\n**PRIME PARTENZE GARANTITE DOPO LO SCIOPERO- operatività servizio dalle 5.30 alle 8.30**\n\n<table><tbody><tr><td>da <strong>Montesanto</strong> per Torregaveta&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 05:45</td><td>da Fuorigrotta per<strong> Montesanto</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 05:30</td></tr><tr><td>da <strong>Fuorigrotta</strong> per Bagnoli&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;05:38</td><td>da Torregaveta per <strong>Montesanto&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong>05:38</td></tr><tr><td>da <strong>Montesanto</strong> per Pianura&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;05:36</td><td>da Pianura&nbsp; per<strong> Montesanto</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 06:22</td></tr></tbody></table>\n\n**ULTIME PARTENZE GARANTITE PRIMA DELLO SCIOPERO – operatività servizio dalle 5.30 alle 8.30**\n\n<table><tbody><tr><td colspan=\"2\"><strong>da Montesanto per</strong></td><td colspan=\"2\"></td></tr><tr><td>Torregaveta<p></p><p>Bagnoli</p></td><td>08:15<p></p><p>08:30</p></td><td></td><td></td></tr><tr><td>Pianura</td><td>08:24</td><td></td><td></td></tr></tbody></table>\n\n**per Montesanto da**\n\nTorregaveta  08:08\n\nPianura        08:46\n\n**PRIME PARTENZE GARANTITE DOPO LO SCIOPERO – operatività servizio dalle 16.30 alle 19.30**\n\n<table><tbody><tr><td colspan=\"2\"><strong>da Montesanto per</strong></td><td colspan=\"2\"><strong>per Montesanto da</strong></td></tr><tr><td>Torregaveta<p></p><p>Bagnoli</p></td><td>16:45<p></p><p>16:30</p></td><td>Torregaveta<p></p><p>Bagnoli</p></td><td>16:38<p></p><p>16:47</p></td></tr><tr><td>Pianura</td><td>16:48</td><td>Pianura</td><td>17:10</td></tr><tr><td></td><td></td><td></td><td></td></tr></tbody></table>\n\n**ULTIME PARTENZE GARANTITE PRIMA DELLO SCIOPERO – operatività servizio dalle 16.30 alle 19.30**\n\n<table><tbody><tr><td colspan=\"2\"><strong>da Montesanto per</strong></td><td colspan=\"2\"><strong>per Montesanto da</strong></td></tr><tr><td>Torregaveta<p></p><p>Bagnoli</p></td><td>19:15<p></p><p>19:30</p></td><td>Torregaveta<p></p><p>Bagnoli</p></td><td>19:08<p></p><p>19:17</p></td></tr><tr><td>Pianura</td><td>19:12</td><td>Pianura</td><td>19:34</td></tr></tbody></table>\n\nI servizi bus sostitutivi a cura della ditta D’Agostino sulla tratta Pianura – Licola e viceversa si svolgeranno regolarmente.\n\n**Categoria:** [Trasporto pubblico](https://www.eavsrl.it/categoria-disservizio/trasporto-pubblico/)\n\n**Area:** [Linee Flegree](https://www.eavsrl.it/area/linee-flegree/)"
   },
   "response": {
-    "rawOutput": {
-      "isStrike": true,
-      "strikeData": {
-        "startDate": "2025-06-20 00:00:00",
-        "endDate": "2025-06-20 23:59:59",
-        "locationType": "REGIONAL",
-        "locationCodes": [
-          "15"
-        ],
-        "guaranteedTimes": [
-          "05:30-08:30",
-          "16:30-19:30"
-        ]
-      }
-    },
     "parsedData": {
       "isStrike": true,
       "strikeData": {
@@ -43,18 +28,15 @@
     "usage": {
       "input": 1709,
       "output": 140,
-      "cached": 0,
-      "thinking": 489,
-      "total": 2338
+      "total": 2522
     },
     "costUsd": {
       "inputCost": 0.00042725,
       "outputCost": 0.00021,
-      "thinkingCost": 0.0007335,
+      "thinkingCost": 0.0010095,
       "cachedCost": 0,
-      "totalCost": 0.00137075
+      "totalCost": 0.00164675
     },
-    "durationMs": 8450,
-    "thoughts": "**Strike Announcement Analysis: EAV (Campania)**\n\nOkay, here's the breakdown. My task is to analyze this text and extract information about a strike, specifically a 24-hour strike announced by EAV in Campania, region code \"15\". The announcement states a strike will occur on June 20, 2025. My primary goal is to structure this data into a JSON format that conforms to the given schema.\n\nThe criteria are straightforward: `isStrike` should be `true` because it is an announced future strike. Date and time formats are critical; I need to ensure the data adheres to `yyyy-MM-dd HH:mm:ss` for general times and `HH:mm-HH:mm` for guaranteed intervals. \"Linee Flegree: Avviso di sciopero 24h venerdì 20 giugno 2025\" confirms the strike details: June 20, 2025, lasting a full 24 hours, with guaranteed service intervals from 05:30 to 08:30 and again from 16:30 to 19:30. The region is Campania, represented by code \"15\", which is valid according to my known data.\n\nSo, the derived `strikeData` would include:\n\n*   `startDate`: \"2025-06-20 00:00:00\" - A 24-hour strike logically begins at midnight.\n*   `endDate`: \"2025-06-20 23:59:59\" - The strike terminates just before midnight.\n*   `locationType`: \"REGIONAL\" - Confirmed by the schema.\n*   `locationCodes`: \\[\"15\"] - Region code \"15\" is appropriate.\n*   `guaranteedTimes`: \\[\"05:30-08:30\", \"16:30-19:30\"] - This matches the text data.\n\nI've validated that the data formats are correct, the location code is permissible, and the `locationType` aligns with the schema. I'm satisfied that I have extracted the necessary data elements and structured them as required. Now, I can render this into the specified JSON format.\n\n\n"
+    "durationMs": 6692
   }
 }

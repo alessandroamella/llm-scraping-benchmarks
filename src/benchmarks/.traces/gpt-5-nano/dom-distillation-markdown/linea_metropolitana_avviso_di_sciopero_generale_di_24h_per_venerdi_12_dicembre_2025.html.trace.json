@@ -1,27 +1,15 @@
 {
-  "timestamp": "2026-03-09T14:42:01.405Z",
-  "isCacheHit": false,
+  "timestamp": "2026-03-09T15:54:17.652Z",
+  "isCacheHit": true,
   "request": {
     "sourceName": "EAV",
     "fileName": "linea_metropolitana_avviso_di_sciopero_generale_di_24h_per_venerdi_12_dicembre_2025.html",
     "model": "gpt-5-nano",
     "strategy": "dom-distillation-markdown",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"EAV\" (the public transport company of Campania (15)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: Linea Metropolitana: Avviso di sciopero generale di 24h per venerdì 12 dicembre 2025 - EAV srl\n\n* * *\n\n## Linea Metropolitana: Avviso di sciopero generale di 24h per venerdì 12 dicembre 2025\n\nData:  \n**7 Dicembre 2025**\n\nPer il giorno 12 dicembre 2025 la O.S. CGIL ha proclamato azione di sciopero generale nazionale di tutte le categorie pubbliche e private avente le seguenti motivazioni: contro la manovra finanziaria del Governo. Lo sciopero, che interesserà sia i servizi ferroviari che su gomma, prevede comunque il rispetto delle fasce di garanzia\n\nDurante l’ultima proclamazione di sciopero della O.S. CGIL la percentuale di adesione è stata del 14,50% (sciopero del 3 ottobre 2025)\n\nDi seguito vengono elencate le ultime e le prime partenze garantite in relazione alle fasce di garanzia.  \nDurante l’orario di sciopero l’effettuazione delle corse è subordinata al numero di lavoratori aderenti allo sciopero.\n\n**_Servizio garantito dalle ore 05:30 alle ore 8:30 e dalle ore 16:30 alle ore 19:30_**\n\n**Ultime partenze garantite prima dello sciopero**\n\n-   da Aversa per Piscinola       08.30\n-   da Piscinola per Aversa       08.30\n\n **Prime partenze garantite dopo lo sciopero –** _(fascia operatività servizio dalle 16.30 alle 19.30)_\n\n-    da Aversa per Piscinola    16.30\n-   da Piscinola per Aversa   16.45\n\n**Ultime partenze garantite prima dello sciopero**\n\n-    da Aversa per Piscinola        19.30\n-   da Piscinola per Aversa        19.30"
   },
   "response": {
-    "rawOutput": {
-      "isStrike": true,
-      "strikeData": {
-        "startDate": "2025-12-12 00:00:00",
-        "endDate": "2025-12-12 23:59:59",
-        "locationType": "NATIONAL",
-        "guaranteedTimes": [
-          "05:30-08:30",
-          "16:30-19:30"
-        ]
-      }
-    },
     "parsedData": {
       "isStrike": true,
       "strikeData": {
@@ -35,18 +23,17 @@
       }
     },
     "usage": {
-      "input": 1354,
-      "output": 1215,
-      "total": 2569
+      "input": 1268,
+      "output": 1244,
+      "total": 2512
     },
     "costUsd": {
-      "inputCost": 0.0000677,
-      "outputCost": 0.000486,
+      "inputCost": 0.0000634,
+      "outputCost": 0.0004976,
       "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.0005537
+      "totalCost": 0.000561
     },
-    "durationMs": 21561,
-    "thoughts": "**Analyzing strike announcement**\n\nI need to format a JSON response according to the specified schema for a strike extraction. The content is in Italian and announces a 24-hour general strike for December 12, 2025, by O.S. CGIL. The guaranteed service windows are between 05:30-08:30 and 16:30-19:30. It seems clear this is about an upcoming strike, with the start time set for December 12, 2025, from 00:00 to 24:00. So, I’ll set \"isStrike\" to true."
+    "durationMs": 15924
   }
 }

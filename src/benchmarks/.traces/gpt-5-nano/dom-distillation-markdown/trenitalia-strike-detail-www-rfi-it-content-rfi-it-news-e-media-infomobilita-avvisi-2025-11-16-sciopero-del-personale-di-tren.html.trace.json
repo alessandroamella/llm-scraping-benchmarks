@@ -1,30 +1,15 @@
 {
-  "timestamp": "2026-03-09T14:42:41.166Z",
-  "isCacheHit": false,
+  "timestamp": "2026-03-09T15:54:18.147Z",
+  "isCacheHit": true,
   "request": {
     "sourceName": "Trenitalia",
     "fileName": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-11-16-sciopero-del-personale-di-tren.html",
     "model": "gpt-5-nano",
     "strategy": "dom-distillation-markdown",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"Trenitalia\" (Italy's national railway operator).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: SCIOPERO DEL PERSONALE DI TRENORD\n\n* * *\n\n# SCIOPERO DEL PERSONALE DI TRENORD\n\nIn vigore: 16 NOVEMBRE 2025\n\nServizio: **Lunga percorrenza, Regionale**\n\nCausa Modifica: **Sciopero**\n\nRegione: **Emilia Romagna, LIGURIA, LOMBARDIA, PIEMONTE, VENETO**\n\nImpresa: **Trenitalia, Trenord**\n\n**Dalle ore 10:00 alle ore 17:59 di domenica 16 novembre 2025** è stato indetto uno sciopero del personale di Trenord.\n\nLo sciopero può comportare modifiche al servizio, anche prima dell’inizio e dopo la sua conclusione. **Possibili cancellazioni o variazioni in Lombardia e nelle regioni limitrofe.**\n\nI treni Regionali, Suburbani, Lunga Percorrenza di Trenord e i collegamenti aeroportuali **Milano - Malpensa Aeroporto e Malpensa Aeroporto - Bellinzona** possono subire variazioni.\n\nLo sciopero ricade in una fascia oraria senza treni garantiti.\n\nPer garantire il collegamento con l’aeroporto, in caso di cancellazione dei treni, sarà istituito un servizio bus senza fermate intermedie tra Milano Cadorna (via Paleocapa,1) e Malpensa Aeroporto, e tra Stabio e Malpensa Aeroporto.\n\nAnche **i treni del Regionale di Trenitalia della relazione Milano - Domodossola possono subire variazioni.**\n\nMaggiori informazioni sui canali digitali di Trenord o presso il personale di assistenza clienti e le biglietterie."
   },
   "response": {
-    "rawOutput": {
-      "isStrike": true,
-      "strikeData": {
-        "startDate": "2025-11-16 10:00:00",
-        "endDate": "2025-11-16 17:59:00",
-        "locationType": "REGIONAL",
-        "locationCodes": [
-          "01",
-          "03",
-          "05",
-          "07",
-          "08"
-        ]
-      }
-    },
     "parsedData": {
       "isStrike": true,
       "strikeData": {
@@ -32,27 +17,26 @@
         "endDate": "2025-11-16 17:59:00",
         "locationType": "REGIONAL",
         "locationCodes": [
-          "01",
-          "03",
-          "05",
+          "08",
           "07",
-          "08"
+          "03",
+          "01",
+          "05"
         ]
       }
     },
     "usage": {
-      "input": 1282,
-      "output": 1997,
-      "total": 3279
+      "input": 1196,
+      "output": 1982,
+      "total": 3178
     },
     "costUsd": {
-      "inputCost": 0.0000641,
-      "outputCost": 0.0007988,
+      "inputCost": 0.0000598,
+      "outputCost": 0.0007928,
       "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.0008629
+      "totalCost": 0.0008526
     },
-    "durationMs": 30926,
-    "thoughts": "**Extracting strike data**\n\nI need to output JSON based on strike extraction. The document is announcing a strike for Trenord on November 16, 2025. It states the strike is scheduled from 10:00 to 17:59 that day. Since it’s future relative to today, it definitely seems like an upcoming strike announcement. Therefore, I’ll set `isStrike` to true. I’ll also extract the strike data with start and end date formatted correctly as “2025-11-16 10:00:00” and the end as “2025-11-16 17:59:00”."
+    "durationMs": 20183
   }
 }

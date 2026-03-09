@@ -1,27 +1,15 @@
 {
-  "timestamp": "2026-03-09T14:41:05.212Z",
-  "isCacheHit": false,
+  "timestamp": "2026-03-09T15:54:16.325Z",
+  "isCacheHit": true,
   "request": {
     "sourceName": "EAV",
     "fileName": "linee_suburbane_avviso_di_sciopero_generale_nazionale_di_24_ore_venerdi_03_ottobre_2025.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "dom-distillation-markdown",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"EAV\" (the public transport company of Campania (15)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: Linee Suburbane: Avviso di sciopero generale nazionale di 24 ore venerdì 03 ottobre 2025 - EAV srl\n\n* * *\n\n## Linee Suburbane: Avviso di sciopero generale nazionale di 24 ore venerdì 03 ottobre 2025\n\nData:  \n**2 Ottobre 2025**\n\nCome riferito ieri dagli organi di stampa , per il giorno 03 ottobre 2025 è stato proclamato uno sciopero generale nazionale di 24 ore da parte delle OO.SS. CGIL e USB per le note vicende legate alla guerra a Gaza.\n\nLo sciopero, che interesserà sia i servizi ferroviari che su gomma, prevede comunque il rispetto delle fasce di garanzia. Sul sito www.eavsrl.it è possibile consultare gli orari delle corse garantite per le diverse linee ferroviarie.\n\nDi seguito vengono elencate le ultime e le prime partenze garantite in relazione alle fasce di garanzia.  \nDurante l’orario di sciopero l’effettuazione delle corse è subordinata al numero di lavoratori aderenti allo sciopero.\n\n**Servizio garantito dalle ore 05:30 alle ore 8:30 e dalle ore 16:30 alle ore 19:30**\n\n**Corse garantite**\n\n-   Treno Da S.Angelo in Formis per Piedimonte Matese         06:39\n-   Treno Da S.Angelo in Formis per Piedimonte Matese          08:50\n-   Treno Da Napoli Centrale per Piedimonte Matese                17:17\n-   Treno Da Napoli Centrale per Piedimonte Matese                20:20\n\n**Per S.Angelo in Formis da**\n\n-   Piedimonte        05:10\n-   Piedimonte         06:21\n-   Piedimonte       13:13\n\n**Da Piedimonte per Napoli Centrale**     17:21\n\nIl servizio sostitutivo sulle tratte Napoli – S. Angelo in Formis sarà garantito.\n\nSulla Linea NAPOLI- BENEVENTO sarà garantito il servizio automobilistico sostitutivo come da programma feriale."
   },
   "response": {
-    "rawOutput": {
-      "isStrike": true,
-      "strikeData": {
-        "startDate": "2025-10-03 00:00:00",
-        "endDate": "2025-10-03 23:59:59",
-        "locationType": "NATIONAL",
-        "guaranteedTimes": [
-          "05:30-08:30",
-          "16:30-19:30"
-        ]
-      }
-    },
     "parsedData": {
       "isStrike": true,
       "strikeData": {
@@ -36,19 +24,16 @@
     },
     "usage": {
       "input": 1105,
-      "output": 123,
-      "cached": 0,
-      "thinking": 557,
-      "total": 1785
+      "output": 131,
+      "total": 1841
     },
     "costUsd": {
       "inputCost": 0.00027625,
-      "outputCost": 0.0001845,
-      "thinkingCost": 0.0008355,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.0009075,
       "cachedCost": 0,
-      "totalCost": 0.00129625
+      "totalCost": 0.00138025
     },
-    "durationMs": 6276,
-    "thoughts": "**Analyzing and Extracting Strike Information**\n\nAlright, let's break this down. My task is crystal clear: I need to extract strike information from the text and represent it as a JSON object. The desired output format is either `{\"isStrike\": false}` or `{\"isStrike\": true, \"strikeData\": {...}}` following a specific schema, depending on whether a strike is announced. The input text is \"Linee Suburbane: Avviso di sciopero generale nazionale di 24 ore venerdì 03 ottobre 2025 - EAV srl.\"\n\nFirst, I need to confirm whether it is a strike. The text \"Avviso di sciopero generale nazionale di 24 ore venerdì 03 ottobre 2025\" clearly states \"sciopero\" which means \"strike\", so I'll set `isStrike` to `true`.\n\nNow, I'll extract the strike details. I identify the strike type as \"National strike\". The date is October 3, 2025, and the duration is 24 hours. Given this, and following best practice, I need to translate the dates into the 'yyyy-MM-dd HH:mm:ss' format. The strike appears to start at the beginning of the day and end at the end of the day.\n\nTherefore, the `startDate` is \"2025-10-03 00:00:00\" and the `endDate` is \"2025-10-03 23:59:59\". The strike's `locationType` is \"NATIONAL\". It's a national strike, so according to the instructions, there is no need to add location codes.\n\nThe text also provides guaranteed times: 05:30-08:30 and 16:30-19:30. These are already in the correct format, so I will store these as is in an array as `guaranteedTimes`: [\"05:30-08:30\", \"16:30-19:30\"].\n\nSo the final JSON object to be returned is:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-10-03 00:00:00\",\n    \"endDate\": \"2025-10-03 23:59:59\",\n    \"locationType\": \"NATIONAL\",\n    \"guaranteedTimes\": [\"05:30-08:30\", \"16:30-19:30\"]\n  }\n}\n```\n\n\n"
+    "durationMs": 5677
   }
 }
