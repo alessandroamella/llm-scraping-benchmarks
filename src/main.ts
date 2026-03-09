@@ -8,15 +8,13 @@ import { AppLogger } from './logger/logger.service';
 config();
 
 async function bootstrap() {
+  const appLogger = new AppLogger();
+
   // Crea il contesto dell'applicazione senza avviare server HTTP
   const app = await NestFactory.createApplicationContext(AppModule, {
     // logger: ['log', 'error', 'warn', 'debug', 'verbose'],
-    logger: false, // usa custom logger
+    logger: appLogger,
   });
-
-  // Use logger as the application logger
-  const logger = app.get(AppLogger);
-  app.useLogger(logger);
 
   const benchmarksService = app.get(BenchmarksService);
 

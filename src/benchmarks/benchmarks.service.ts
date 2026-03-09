@@ -129,7 +129,7 @@ export class BenchmarksService implements OnModuleInit {
   private readonly includeManualInSuite = false;
   private readonly generateChaosDatasetFlag = false;
 
-  private readonly customReportName = 'base_all_models_strategies';
+  private readonly customReportName = 'remove_PROVINCE_type';
   // private readonly disabledChecks: string[] = ['locationType', 'locationCodes'];
   private readonly disabledChecks: string[] = [];
 
