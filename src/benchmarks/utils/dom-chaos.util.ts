@@ -3,14 +3,21 @@ import * as cheerio from 'cheerio';
 export function messUpDom(html: string): string {
   const $ = cheerio.load(html);
 
-  // OBFUSCATION: Rinomina le classi chiave usate dallo scraper manuale Trenord
-  // Lo scraper cerca: .uppercase, .date-news, .frame-type-trenordtheme_simpletextmedia
+  // OBFUSCATION: Rinomina le classi chiave usate dagli scraper manuali
   const targetClasses = [
+    // Trenord
     'uppercase',
     'date-news',
     'frame-type-trenordtheme_simpletextmedia',
     'date',
     'news',
+
+    // ATAC
+    'elementor-widget-container',
+    'elementor',
+    'titolo-sezione',
+    'entry-content',
+    'contenuto',
   ];
 
   targetClasses.forEach((cls) => {
@@ -24,7 +31,20 @@ export function messUpDom(html: string): string {
 
   // SEMANTIC DESTRUCTION: Cambia tag specifici in generici
   // Lo scraper cerca: b, strong, h4, p, li
-  const tagsToNuke = ['b', 'strong', 'h4', 'h3', 'p', 'li', 'ul'];
+  const tagsToNuke = [
+    'h1',
+    'h2',
+    'b',
+    'strong',
+    'h4',
+    'h3',
+    'p',
+    'li',
+    'ul',
+    'main',
+    'article',
+    'section',
+  ];
 
   tagsToNuke.forEach((tagName) => {
     $(tagName).each((_, el) => {

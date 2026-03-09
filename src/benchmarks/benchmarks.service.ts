@@ -22,6 +22,7 @@ import {
   ParserResponse,
   SupportedModel,
 } from './definitions/strike-parser.interface';
+import { ATACManualParser } from './parsers/atac/atac-manual.parser';
 import { TrenordManualParser } from './parsers/trenord/trenord-manual.parser';
 import { BenchmarkStrike } from './schemas/benchmark-strike.schema';
 import { BenchmarkAiRunnerService } from './services/benchmark-ai-runner.service';
@@ -127,11 +128,11 @@ export class BenchmarksService implements OnModuleInit {
   private readonly logger = new Logger(BenchmarksService.name);
 
   // Toggle this to run benchmarks
-  private readonly useLenientSchema = true;
+  private readonly useLenientSchema = false;
   private readonly includeManualInSuite = false;
   private readonly generateChaosDatasetFlag = false;
 
-  private readonly customReportName = 'remove_PROVINCE_and_better_ATAC_prompt';
+  private readonly customReportName = 'use_STRICT_schema';
   // private readonly disabledChecks: string[] = ['locationType', 'locationCodes'];
   private readonly disabledChecks: string[] = [];
 
@@ -149,6 +150,7 @@ export class BenchmarksService implements OnModuleInit {
 
   constructor(
     private readonly trenordManual: TrenordManualParser,
+    private readonly atacManual: ATACManualParser,
     private readonly aiRunner: BenchmarkAiRunnerService,
     private readonly envsService: EnvsService,
   ) {
@@ -163,6 +165,9 @@ export class BenchmarksService implements OnModuleInit {
   // Aggiungi path per la cartella "Messed"
   private readonly trenordDir = path.join(this.baseDir, 'Trenord');
   private readonly trenordMessedDir = path.join(this.baseDir, 'Trenord-Messed');
+
+  private readonly atacDir = path.join(this.baseDir, 'ATAC');
+  private readonly atacMessedDir = path.join(this.baseDir, 'ATAC-Messed');
 
   // private readonly trenordMineruDir = path.join(
   //   this.baseDir,
@@ -439,6 +444,42 @@ export class BenchmarksService implements OnModuleInit {
     allDetails.push(...resultsAtac.details);
 
     if (this.enableResilienceSuite) {
+      this.logger.log(
+        chalk.bgRed.white.bold(
+          '\n--- Running RESILIENCE Suite (Chaos DOM) ---',
+        ),
+      );
+
+      // Parser per ATAC
+      const atacResilienceParsers: IStrikeParser[] = [
+        this.atacManual,
+        new ConfigurableAiParser(
+          this.aiRunner,
+          'html-to-markdown',
+          'ATAC',
+          'deepseek-chat',
+          this.useLenientSchema,
+        ),
+      ];
+
+      // Esegui la suite per ATAC
+      const resultsAtacChaos = await this.runSuite(
+        'ATAC',
+        atacResilienceParsers,
+        {
+          customSuiteName: 'ATAC Resilience (Chaos DOM)',
+          directoryOverride: this.atacMessedDir,
+        },
+      );
+
+      this.mergeStats(summaryStats, resultsAtacChaos.stats, ' [CHAOS]');
+      allDetails.push(
+        ...resultsAtacChaos.details.map((d) => ({
+          ...d,
+          parser: `${d.parser} [CHAOS]`,
+        })),
+      );
+
       // Suite 5: Resilienza (DOM Changes) (ora solo per Trenord)
       this.logger.log(
         chalk.bgRed.white.bold(
@@ -512,30 +553,29 @@ export class BenchmarksService implements OnModuleInit {
   // --- NUOVO METODO PER GENERARE DATASET
   private generateChaosDataset() {
     this.logger.log(
-      chalk.magenta('Generating Chaos Dataset (Trenord-Messed)...'),
+      chalk.magenta('Generating Chaos Dataset (Trenord & ATAC)...'),
     );
 
-    if (!fs.existsSync(this.trenordMessedDir)) {
-      fs.mkdirSync(this.trenordMessedDir, { recursive: true });
-    }
+    const pairs = [
+      { src: this.trenordDir, dest: this.trenordMessedDir },
+      { src: this.atacDir, dest: this.atacMessedDir },
+    ];
 
-    const files = fs
-      .readdirSync(this.trenordDir)
-      .filter((f) => f.endsWith('.html'));
-
-    for (const file of files) {
-      const originalPath = path.join(this.trenordDir, file);
-      const messedPath = path.join(this.trenordMessedDir, file);
-
-      // Leggi originale
-      const content = fs.readFileSync(originalPath, 'utf-8');
-      // Applica distruzione
-      const messedContent = messUpDom(content);
-      // Salva
-      fs.writeFileSync(messedPath, messedContent, 'utf-8');
+    for (const pair of pairs) {
+      if (!fs.existsSync(pair.dest))
+        fs.mkdirSync(pair.dest, { recursive: true });
+      const files = fs.readdirSync(pair.src).filter((f) => f.endsWith('.html'));
+      for (const file of files) {
+        const content = fs.readFileSync(path.join(pair.src, file), 'utf-8');
+        fs.writeFileSync(
+          path.join(pair.dest, file),
+          messUpDom(content),
+          'utf-8',
+        );
+      }
     }
     this.logger.log(
-      chalk.magenta(`✅ Generated ${files.length} messed up files.`),
+      chalk.magenta('✅ Generated chaos dataset for Trenord and ATAC.'),
     );
   }
 
