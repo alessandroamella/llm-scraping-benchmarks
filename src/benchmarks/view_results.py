@@ -581,3 +581,121 @@ if resilience_data:
         plt.show()
 else:
     print("⚠️ Nessun dato [CHAOS] trovato nel JSON. Salto il grafico resilienza.")
+
+# --- GRAFICO 7: CONSUMO TOKEN IN INPUT E COSTO PER STRATEGIA ---
+token_rows = []
+for detail in data.get("details", []):
+    parser_name = detail.get("parser", "")
+
+    # Ignoriamo i parser manuali e i test CHAOS
+    if "Manual" in parser_name or "CHAOS" in parser_name:
+        continue
+
+    # Estraiamo la strategia dal nome del parser
+    try:
+        strategy_part = normalize_strategy_name(
+            parser_name.split("[")[-1].replace("]", "")
+        )
+    except IndexError:
+        continue
+
+    # Estraiamo i token e i costi
+    tokens = detail.get("tokens", {})
+    input_tokens = tokens.get("input", 0)
+
+    cost_data = detail.get("costUsd", {})
+    total_cost = cost_data.get("totalCost", 0)
+
+    if input_tokens > 0:
+        token_rows.append(
+            {
+                "Strategia": strategy_part,
+                "Input Tokens": input_tokens,
+                "Costo": total_cost,
+            }
+        )
+
+if token_rows:
+    df_tokens = pd.DataFrame(token_rows)
+
+    # Calcoliamo la media del costo per ogni strategia per poterla stampare
+    cost_means = df_tokens.groupby("Strategia")["Costo"].mean().to_dict()
+
+    plt.figure(figsize=(12, 7))
+    ax = sns.barplot(
+        data=df_tokens,
+        x="Strategia",
+        y="Input Tokens",
+        hue="Strategia",
+        palette="crest",
+        capsize=0.1,
+        legend=False,
+    )
+
+    # Aggiungiamo margine in alto per non tagliare il testo del costo
+    ax.margins(y=0.2)
+
+    # Stile delle error bars (linee di deviazione standard)
+    for line in ax.lines:
+        line.set_color("red")
+        line.set_linewidth(2.5)
+
+    plt.title(
+        # "e costo"
+        "Consumo medio di token in input per strategia",
+        fontsize=16,
+        fontweight="bold",
+    )
+    plt.ylabel("Numero medio di token (input)", fontsize=12)
+    plt.xlabel("Strategia di pre-processing", fontsize=12)
+    plt.xticks(rotation=15, ha="right")
+
+    # Mappatura delle label sull'asse X per associare il costo corretto alla barra corretta
+    xtick_labels = [t.get_text() for t in ax.get_xticklabels()]
+
+    # Aggiunta dei valori esatti sopra le barre
+    for i, p in enumerate(ax.patches):
+        height = p.get_height()
+        if height > 0:
+            strategy_name = xtick_labels[i]
+            avg_cost = cost_means.get(strategy_name, 0)
+
+            # 1. Annotazione Token (Nera/Default, vicina alla barra)
+            ax.annotate(
+                f"{int(height):,}",  # Formatta con separatore delle migliaia
+                (p.get_x() + p.get_width() / 2.0, height),
+                ha="center",
+                va="bottom",
+                xytext=(0, 4),
+                textcoords="offset points",
+                fontsize=10,
+                fontweight="bold",
+            )
+
+            # 2. Annotazione Costo (Grigia, in corsivo, sopra i token)
+            # if avg_cost > 0:
+            #     ax.annotate(
+            #         f"Costo medio/file: ${avg_cost:.4f}",  # Formatta il costo a 4 decimali
+            #         (p.get_x() + p.get_width() / 2.0, height),
+            #         ha="center",
+            #         va="bottom",
+            #         xytext=(
+            #             0,
+            #             18,
+            #         ),  # Spostato più in alto rispetto ai token (18 invece di 4)
+            #         textcoords="offset points",
+            #         fontsize=9,
+            #         color="dimgray",
+            #         fontstyle="italic",
+            #     )
+
+    plt.tight_layout()
+    if args.save:
+        plt.savefig("07_consumo_token_strategie.png", dpi=300)
+        print("Generato: 07_consumo_token_strategie.png")
+    if args.view:
+        plt.show()
+else:
+    print(
+        "⚠️ Nessun dato sui token trovato nel JSON. Salto il grafico del consumo token."
+    )
