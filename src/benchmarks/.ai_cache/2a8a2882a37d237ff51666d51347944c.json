@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 11144,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0002615,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.00048,
+      "cachedCost": 0,
+      "totalCost": 0.000926
+    },
+    "hash": "2a8a2882a37d237ff51666d51347944c",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-12-12-sciopero-nazionale-personale-a.html",
+    "thoughts": "**Strike Information Extraction - My Thought Process**\n\nAlright, let's break this down. My task is to pull out strike information from this text. First, I need to determine if this is indeed a strike announcement. It's a future event, so I'll extract relevant details if it's confirmed as a strike. The source text is: \"Il giorno venerdì 12 dicembre 2025... sciopero di 24 ore...\" (which translates to \"On Friday, December 12, 2025... 24-hour strike...\").\n\nOkay, that's clear – it's a strike announcement! Let's get the particulars. I see:\n\n*   **Date:** Friday, December 12, 2025.\n*   **Duration:** 24 hours.\n*   **Scope:** The text refers to a \"sciopero generale,\" which means a general or national strike.\n*   **Guaranteed bands:** 06:00-09:00 and 18:00-21:00. These are the times when service is guaranteed, no matter what.\n\nAlright, so `isStrike` is definitely `true`. Now to structure the data.\n\n*   `startDate` is straightforward: 2025-12-12 00:00:00.\n*   `endDate`, given it's a 24-hour strike, I'll set as 2025-12-12 23:59:59, end of the day.\n*   `locationType` is \"NATIONAL,\" because of the \"sciopero generale.\"\n*   `locationCodes` aren't necessary for this type of national strike.\n*   Finally, the `guaranteedTimes` are [\"06:00-09:00\", \"18:00-21:00\"]. And there we have it, complete data.\n\n\n",
+    "tokens": {
+      "input": 1046,
+      "output": 123,
+      "total": 1489
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-06-16 03:00:00",
+      "endDate": "2024-06-17 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21250,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003809,
+      "outputCost": 0.0005636,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0009445
+    },
+    "hash": "b372cf9171dd5f204d701312d8fd30e8",
+    "sourceFile": "strike-detail-sciopero-uiltrasporti-e-orsa-domenica-16-giugno--p.html",
+    "thoughts": "**Determining strike details**\n\nI need to output JSON according to the strike_extraction schema. First, I have to decide if this document is announcing a new or upcoming strike. The Italian content indicates a strike on Sunday, June 16. There’s a press release on the Trenord site about it, confirming the strike from 3 a.m. Sunday until 2 a.m. Monday. This makes it clear that it’s indeed an upcoming strike announcement, so I'll set isStrike to true and extract the necessary strike data.",
+    "tokens": {
+      "input": 7618,
+      "output": 1409,
+      "total": 9027
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-06-16 03:00:00",
+      "endDate": "2024-06-17 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20586,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007755,
+      "outputCost": 0.0007352,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00081275
+    },
+    "hash": "b640dc404de498cb58c0a7885865a6a5",
+    "sourceFile": "strike-detail-sciopero-uiltrasporti-e-orsa-domenica-16-giugno--p.html",
+    "thoughts": "**Identifying upcoming strike announcement**\n\nI need to output JSON based on the schema for strike extraction. The document, which is in Italian, indeed announces a strike. It states that the strike will occur on Sunday, June 16, and will last from 3 AM to 2 AM the following day. It mentions disruptions to various train services, including regional and airport connections, and highlights possible variations and cancellations. So, this confirms it's an announcement about an upcoming strike event.",
+    "tokens": {
+      "input": 1551,
+      "output": 1838,
+      "total": 3389
+    }
+  }
+}

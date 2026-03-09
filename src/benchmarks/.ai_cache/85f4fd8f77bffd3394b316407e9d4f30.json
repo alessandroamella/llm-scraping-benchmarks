@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7591,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000624,
+      "outputCost": 0.00011,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0001724
+    },
+    "hash": "85f4fd8f77bffd3394b316407e9d4f30",
+    "sourceFile": "strike-detail-venerd--29-novembre-revocato-sciopero-ferrovienord.html",
+    "thoughts": "**Structuring the response**\n\nI need to format the response as JSON according to the strike_extraction format. The user's query regarding Trenord Lombardia tells me there’s a cancellation of a strike on November 29. The translation clearly indicates that the strike has been revoked, so I’ll set `isStrike` to false. \n\nI should simply output the relevant JSON with no extra text. The final output will be `{\"isStrike\": false}` to keep it clean and straightforward!",
+    "tokens": {
+      "input": 1248,
+      "output": 275,
+      "total": 1523
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-05 03:00:00",
+      "endDate": "2025-02-06 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6132,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00196225,
+      "outputCost": 0.000189,
+      "thinkingCost": 0.0005295,
+      "cachedCost": 0.00018263,
+      "totalCost": 0.00286338
+    },
+    "hash": "5e45e8086a2ff84c3a6b8dd011ef9245",
+    "sourceFile": "strike-detail-mercoled--5-febbraio-sciopero-dei-treni-regionali.html",
+    "thoughts": "**Strike Announcement Analysis**\n\nOkay, let's break this down. My primary task is clear: determine if this text announces a strike. The text explicitly states \"Mercoledì 5 febbraio sciopero dei treni regionali\" – Wednesday, February 5th, regional train strike. Bingo, we have a confirmed strike. Now, to extract the critical data.\n\nFirst, I need to pinpoint the start and end times. \"Dalle ore 3 di mercoledì 5 febbraio\" translates to a start time of 03:00 on February 5th, 2025. \"Alle ore 2 di giovedì 6 febbraio\" means the strike ends at 02:00 on February 6th, 2025.\n\nNext, the specifics: \"treni regionali\" indicates this is a regional strike, specifically related to the Trenord service in Lombardy. Lombardy's region code is \"03\". This gives us the location details.\n\nFinally, the guaranteed service times are listed as \"06:00-09:00\" and \"18:00-21:00\", so commuters know what trains might be running. The overall result confirms the data, and so will be returned in strict JSON formatting.\n\n\n",
+    "tokens": {
+      "input": 7849,
+      "output": 126,
+      "total": 8328
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-09-06 03:00:00",
+      "endDate": "2023-09-07 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6322,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0020185,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.000855,
+      "cachedCost": 0.00018318,
+      "totalCost": 0.00326667
+    },
+    "hash": "13e015ff1d8916be2ee9afda806761c9",
+    "sourceFile": "strike-detail-mercoled--6-settembre--sciopero-dei-treni-regional.html",
+    "thoughts": "**Strike Information Extraction - My Thought Process**\n\nOkay, here's the deal. I need to pull out strike information from this Trenord announcement, and I have specific rules to follow. The first thing I'm seeing is a strike notice for \"6 settembre\" - September 6th. So, `isStrike` is definitely `true` for this one.\n\nNow I need to construct the `strikeData` object. I need the start and end dates/times, location, and guaranteed times. The title \"6 settembre, sciopero dei treni regionali\" confirms my initial assessment. The content itself states \"dalle ore 3 del 6 alle ore 2 del 7 settembre,\" which translates to start at 03:00 on the 6th and ending at 02:00 on the 7th. The announcement includes the day: \"lunedì 04/09/2023\", meaning the year is 2023. So, my start date is \"2023-09-06 03:00:00\" and the end date is \"2023-09-07 02:00:00\".\n\nThe scope is \"treni regionali\", which immediately tells me this is `REGIONAL`. I know Trenord operates primarily in Lombardy, represented by the location code \"03\". So, `locationType` is \"REGIONAL\" and `locationCodes` is [\"03\"].\n\nFinally, the guaranteed times. Reading the text, I see these are \"06:00-09:00\", \"18:00-21:00\". So, my `guaranteedTimes` array will contain those.\n\nI've got a complete `strikeData` object, I've got a `isStrike` value of true. Now, I need to make sure this all comes out as valid JSON. I also need to ensure there are no extraneous comments in it, and that the format is accurate, so I'll check ISTAT 03 for Lombardy specifically. Looks like I've got everything I need and I am ready to output the information!\n\n\n",
+    "tokens": {
+      "input": 8074,
+      "output": 140,
+      "total": 8784
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-11-29 09:00:00",
+      "endDate": "2024-11-29 13:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7948,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.002044,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.000882,
+      "cachedCost": 0.0001834,
+      "totalCost": 0.0032579
+    },
+    "hash": "c302016fe1099128463e15fae9daafa2",
+    "sourceFile": "strike-detail-venerd--29-novembre-dalle-9-alle-13-sciopero-gener.html",
+    "thoughts": "**Strike Analysis: Lombardia Regional Rail - November 29, 2024**\n\nOkay, let's break this down. I've got a press release from the Trenord website regarding a strike, and my primary focus is to pull out the key facts according to the defined parameters. The headline states a strike will occur on Friday, November 29th, 2024, from 09:00 to 13:00. The text specifically mentions \"Ferrovienord\" infrastructure, which I know affects regional and suburban lines within Lombardia (coded as \"03\" by ISTAT), so this is a regional disruption, not a blanket Trenord personnel strike.\n\nI need to confirm this information against my criteria. Yes, this is an upcoming strike, so `isStrike` is `true`. The `startDate` is 2024-11-29 09:00:00, and the `endDate` is 2024-11-29 13:00:00. This information aligns perfectly with the textual information and both dates match the accepted regex pattern. Because the text explicitly notes trains running before 09:00, I won't specify \"guaranteed times\" since the text doesn't provide a direct, guaranteed time range in the usual format. The location type is clearly \"REGIONAL\", and the relevant location code is indeed \"03\" (Lombardia).\n\nTherefore, my resulting data is simple: `isStrike: true` and a `strikeData` object holding the following: `startDate` \"2024-11-29 09:00:00\", `endDate` \"2024-11-29 13:00:00\", `locationType` \"REGIONAL\", and `locationCodes`: [\"03\"]. I'm confident in this data extraction.\n\n\n",
+    "tokens": {
+      "input": 8176,
+      "output": 99,
+      "total": 8863
+    }
+  }
+}

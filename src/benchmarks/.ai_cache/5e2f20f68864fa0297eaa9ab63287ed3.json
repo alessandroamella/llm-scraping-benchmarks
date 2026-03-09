@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-11-29 09:00:00",
+      "endDate": "2024-11-29 13:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24392,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00009375,
+      "outputCost": 0.000698,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00079175
+    },
+    "hash": "5e2f20f68864fa0297eaa9ab63287ed3",
+    "sourceFile": "strike-detail-venerd--29-novembre-dalle-9-alle-13-sciopero-gener.html",
+    "thoughts": "**Analyzing upcoming strike details**\n\nThere's an announcement about a general strike scheduled for November 29, from 9 AM to 1 PM. I need to determine if the strike is valid; it should be marked as true. \n\nHowever, the year isn't specified in the article, which is a bit confusing. I should use my best guess for the date format in 'yyyy-MM-dd HH:mm:ss'. Since the strike involves FERROVIENORD, it's likely a regional strike, especially given the locations mentioned. I'll classify the location type as REGIONAL and include the ISTAT code for Lombardia, which is \"03\".",
+    "tokens": {
+      "input": 1875,
+      "output": 1745,
+      "total": 3620
+    }
+  }
+}

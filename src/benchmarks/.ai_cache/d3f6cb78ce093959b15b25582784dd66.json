@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-16 03:00:00",
+      "endDate": "2025-06-17 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20021,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003724,
+      "outputCost": 0.000786,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0011584
+    },
+    "hash": "d3f6cb78ce093959b15b25582784dd66",
+    "sourceFile": "strike-detail-luned--16-giugno-sciopero-dei-treni-regionali.html",
+    "thoughts": "**Extracting strike data**\n\nI need to process the document to output JSON according to the defined strike_extraction schema. It contains Italian content indicating a regional train strike from 3:00 AM on Monday, June 16, to 2:00 AM on Tuesday, June 17, 2025, organized by ORSA. This is clearly an upcoming strike, so isStrike should be true. I'll format the start date according to the required specifications while considering the potential local time zone nuances.",
+    "tokens": {
+      "input": 7448,
+      "output": 1965,
+      "total": 9413
+    }
+  }
+}

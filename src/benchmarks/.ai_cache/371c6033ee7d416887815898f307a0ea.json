@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6590,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0018845,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0002445,
+      "cachedCost": 0.0001818,
+      "totalCost": 0.0023258
+    },
+    "hash": "371c6033ee7d416887815898f307a0ea",
+    "sourceFile": "strike-detail-venerd--29-novembre-revocato-sciopero-ferrovienord.html",
+    "thoughts": "**Analyzing the FERROVIENORD Strike Announcement**\n\nOkay, so I've received some Italian text: \"Venerdì 29 novembre revocato sciopero FERROVIENORD... È stato revocato lo sciopero previsto per venerdì 29 novembre dalle 9 alle 13.\" My task is to figure out if this describes a strike *or* a cancellation. The goal, of course, is to set the `isStrike` flag correctly. My constraint is that if it's a cancellation, `isStrike` *must* be `false`.\n\nThe key phrase here is \"revocato sciopero.\" \"Revocato\" means revoked or cancelled, and \"sciopero\" is strike. Literally, it says, \"strike revoked.\" Bingo! The document *explicitly* states that the strike has been cancelled. Given that, the rules are very clear. If it's cancelled, then the `isStrike` flag must be false. Therefore, `isStrike` is unequivocally `false`. The output should be the JSON object `{\"isStrike\": false}`. No ambiguity here. This is a straightforward cancellation.\n\n\n",
+    "tokens": {
+      "input": 7538,
+      "output": 10,
+      "total": 7711
+    }
+  }
+}

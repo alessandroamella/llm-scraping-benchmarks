@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19768,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000073,
+      "outputCost": 0.00074,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.000813
+    },
+    "hash": "8ad4189e83c42846856ec2e9644a8b90",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-12-12-sciopero-nazionale-personale-a.html",
+    "thoughts": "**Determining upcoming strike announcement**\n\nI need to format my output in JSON according to the strike extraction schema. The document content is in Italian, announcing a national strike for the autoferrotranvieri personnel on December 12, 2025. It uses the past tense \"è stato indetto,\" which means \"has been announced,\" but this still points to an upcoming event. The document clearly states it's for 24 hours, specifically tied to a general strike. So yes, it is indeed an upcoming strike announcement.",
+    "tokens": {
+      "input": 1460,
+      "output": 1850,
+      "total": 3310
+    }
+  }
+}

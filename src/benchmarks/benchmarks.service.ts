@@ -12,6 +12,7 @@ import pLimit from 'p-limit';
 import { PDFParse } from 'pdf-parse';
 import { EnvsService } from '@/envs/envs.service';
 import { type Company, groundTruth } from './data/ground-truth';
+import { jinaFileMap } from './data/jina-files.map';
 import { PreProcessingStrategy } from './definitions/pre-processing-strategy.type';
 import {
   AiParserMetadata,
@@ -23,6 +24,7 @@ import {
   SupportedModel,
 } from './definitions/strike-parser.interface';
 import { ATACManualParser } from './parsers/atac/atac-manual.parser';
+import { PreComputedFileParser } from './parsers/precomputed-file-parser';
 import { TrenordManualParser } from './parsers/trenord/trenord-manual.parser';
 import { BenchmarkStrike } from './schemas/benchmark-strike.schema';
 import { BenchmarkAiRunnerService } from './services/benchmark-ai-runner.service';
@@ -132,13 +134,14 @@ export class BenchmarksService implements OnModuleInit {
   private readonly includeManualInSuite = false;
   private readonly generateChaosDatasetFlag = false;
 
-  private readonly customReportName = 'full_strict_benchmark';
+  private readonly customReportName = 'slm_models';
   // private readonly disabledChecks: string[] = ['locationType', 'locationCodes'];
   private readonly disabledChecks: string[] = [];
 
   // --- NEW FLAGS ---
   private readonly enableResilienceSuite = false; // Toggle Resilience Suite
-  private readonly enableAiSuites = true; // Toggle AI Suites
+  private readonly enableAiSuites = false; // Toggle AI Suites
+  private readonly enableSlmSuites = true; // Toggle SLM Suites (MinerU and Jina)
   // -----------------
   private readonly baseDir = path.join(process.cwd(), 'src/benchmarks/data');
   private readonly resultsDir = path.join(
@@ -170,18 +173,20 @@ export class BenchmarksService implements OnModuleInit {
   private readonly atacDir = path.join(this.baseDir, 'ATAC');
   private readonly atacMessedDir = path.join(this.baseDir, 'ATAC-Messed');
 
-  // private readonly trenordMineruDir = path.join(
-  //   this.baseDir,
-  //   'Trenord/mineru-html',
-  // );
-  // private readonly trenordJinaDir = path.join(
-  //   this.baseDir,
-  //   'Trenord/jina-reader',
-  // );
-  // private readonly trenitaliaMineruDir = path.join(
-  //   this.baseDir,
-  //   'Trenitalia/mineru-html',
-  // );
+  private readonly trenordMineruDir = path.join(
+    this.baseDir,
+    'Trenord/mineru-html',
+  );
+  private readonly trenordJinaDir = path.join(
+    this.baseDir,
+    'Trenord/jina-reader',
+  );
+  private readonly trenitaliaMineruDir = path.join(
+    this.baseDir,
+    'Trenitalia/mineru-html',
+  );
+  private readonly atacMineruDir = path.join(this.baseDir, 'ATAC/mineru-html');
+  private readonly atacJinaDir = path.join(this.baseDir, 'ATAC/jina-reader');
 
   async onModuleInit() {
     if (!fs.existsSync(this.resultsDir)) {
@@ -263,11 +268,11 @@ export class BenchmarksService implements OnModuleInit {
 
     // Define the Matrix of Tests
     const baseStrategies: PreProcessingStrategy[] = [
-      'html-to-markdown', // The likely winner
-      'basic-cleanup', // Simple cleanup, no structural changes
+      'html-to-markdown',
+      // 'basic-cleanup',
       // 'dom-distillation',
-      'dom-distillation-markdown',
-      // 'raw-html', // The baseline
+      // 'dom-distillation-markdown',
+      // 'raw-html', // molto costoso, non abilitare
     ];
 
     const models = [
@@ -294,84 +299,122 @@ export class BenchmarksService implements OnModuleInit {
       trenordParsers.push(this.trenordManual);
     }
     for (const model of models) {
-      for (const strategy of baseStrategies) {
+      if (this.enableAiSuites) {
+        for (const strategy of baseStrategies) {
+          trenordParsers.push(
+            new ConfigurableAiParser(
+              this.aiRunner,
+              strategy,
+              'Trenord',
+              model,
+              this.useLenientSchema,
+            ),
+          );
+        }
+      }
+
+      // Add SLM parsers if enabled
+      if (this.enableSlmSuites) {
+        // Add MinerU (Identity mapping since you renamed them)
         trenordParsers.push(
-          new ConfigurableAiParser(
+          new PreComputedFileParser(
             this.aiRunner,
-            strategy,
+            'mineru-html',
             'Trenord',
             model,
-            this.useLenientSchema,
+            this.trenordMineruDir,
+            (f) => f,
+          ),
+        );
+
+        // Add Jina Reader (Manual mapping)
+        trenordParsers.push(
+          new PreComputedFileParser(
+            this.aiRunner,
+            'jina-reader',
+            'Trenord',
+            model,
+            this.trenordJinaDir,
+            (f) => jinaFileMap.Trenord?.[f],
           ),
         );
       }
-
-      // Add MinerU (Identity mapping since you renamed them)
-      // trenordParsers.push(
-      //   new PreComputedFileParser(
-      //     this.aiRunner,
-      //     'mineru-html',
-      //     'Trenord',
-      //     model,
-      //     this.trenordMineruDir,
-      //     (f) => f,
-      //   ),
-      // );
-
-      // // Add Jina Reader (Manual mapping)
-      // trenordParsers.push(
-      //   new PreComputedFileParser(
-      //     this.aiRunner,
-      //     'jina-reader',
-      //     'Trenord',
-      //     model,
-      //     this.trenordJinaDir,
-      //     (f) => jinaFileMap[f],
-      //   ),
-      // );
     }
 
     // Preparazione parser Trenitalia TPER
     const trenitaliaTperParsers: IStrikeParser[] = [];
     for (const model of models) {
-      trenitaliaTperParsers.push(
-        new ConfigurableAiParser(
-          this.aiRunner,
-          'basic-cleanup',
-          'Trenitalia TPER',
-          model,
-          this.useLenientSchema,
-        ),
-      );
+      if (this.enableAiSuites) {
+        trenitaliaTperParsers.push(
+          new ConfigurableAiParser(
+            this.aiRunner,
+            'basic-cleanup',
+            'Trenitalia TPER',
+            model,
+            this.useLenientSchema,
+          ),
+        );
+      }
     }
 
     // Preparazione parser EAV (solo AI, non abbiamo manuale per questo dataset e non è detto che funzioni bene con strategie aggressive come html-to-markdown)
     const eavParsers: IStrikeParser[] = [];
     for (const model of models) {
-      for (const strategy of baseStrategies) {
-        eavParsers.push(
-          new ConfigurableAiParser(
-            this.aiRunner,
-            strategy,
-            'EAV',
-            model,
-            this.useLenientSchema,
-          ),
-        );
+      if (this.enableAiSuites) {
+        for (const strategy of baseStrategies) {
+          eavParsers.push(
+            new ConfigurableAiParser(
+              this.aiRunner,
+              strategy,
+              'EAV',
+              model,
+              this.useLenientSchema,
+            ),
+          );
+        }
       }
     }
 
     // Preparazione parser ATAC
     const atacParsers: IStrikeParser[] = [];
     for (const model of models) {
-      for (const strategy of baseStrategies) {
+      if (this.enableAiSuites) {
+        for (const strategy of baseStrategies) {
+          atacParsers.push(
+            new ConfigurableAiParser(
+              this.aiRunner,
+              strategy,
+              'ATAC',
+              model,
+              this.useLenientSchema,
+            ),
+          );
+        }
+      }
+
+      // Add SLM parsers if enabled
+      if (this.enableSlmSuites) {
+        // Add MinerU
         atacParsers.push(
-          new ConfigurableAiParser(
+          new PreComputedFileParser(
             this.aiRunner,
-            strategy,
+            'mineru-html',
             'ATAC',
             model,
-            this.useLenientSchema,
+            this.atacMineruDir,
+            (f) => f,
+          ),
+        );
+
+        // Add Jina Reader
+        atacParsers.push(
+          new PreComputedFileParser(
+            this.aiRunner,
+            'jina-reader',
+            'ATAC',
+            model,
+            this.atacJinaDir,
+            (f) => jinaFileMap.ATAC?.[f],
           ),
         );
       }
@@ -380,29 +423,34 @@ export class BenchmarksService implements OnModuleInit {
     // Preparazione parser Trenitalia (ora solo ai, manuale non funziona su questo dataset)
     const trenitaliaParsers: IStrikeParser[] = [];
     for (const model of models) {
-      for (const strategy of baseStrategies) {
+      if (this.enableAiSuites) {
+        for (const strategy of baseStrategies) {
+          trenitaliaParsers.push(
+            new ConfigurableAiParser(
+              this.aiRunner,
+              strategy,
+              'Trenitalia',
+              model,
+              this.useLenientSchema,
+            ),
+          );
+        }
+      }
+
+      // Add SLM parsers if enabled
+      if (this.enableSlmSuites) {
+        // Add MinerU
         trenitaliaParsers.push(
-          new ConfigurableAiParser(
+          new PreComputedFileParser(
             this.aiRunner,
-            strategy,
+            'mineru-html',
             'Trenitalia',
             model,
-            this.useLenientSchema,
+            this.trenitaliaMineruDir,
+            (f) => f,
           ),
         );
       }
-
-      // Add MinerU
-      // trenitaliaParsers.push(
-      //   new PreComputedFileParser(
-      //     this.aiRunner,
-      //     'mineru-html',
-      //     'Trenitalia',
-      //     model,
-      //     this.trenitaliaMineruDir,
-      //     (f) => f,
-      //   ),
-      // );
     }
 
     // Definizione delle suite con filtri data
@@ -410,40 +458,50 @@ export class BenchmarksService implements OnModuleInit {
     const allDetails: BenchmarkResultDetail[] = [];
     const summaryStats: Record<string, SummaryStats> = {};
 
-    if (this.enableAiSuites) {
+    if (this.enableAiSuites || this.enableSlmSuites) {
       // Suite 1: Trenord (Standard)
-      const resultsTrenord = await this.runSuite('Trenord', trenordParsers);
-      this.mergeStats(summaryStats, resultsTrenord.stats, '');
-      allDetails.push(...resultsTrenord.details);
+      if (trenordParsers.length > 0) {
+        const resultsTrenord = await this.runSuite('Trenord', trenordParsers);
+        this.mergeStats(summaryStats, resultsTrenord.stats, '');
+        allDetails.push(...resultsTrenord.details);
+      }
 
       // Suite 2: Trenitalia TPER (Standard)
-      const resultsTrenitaliaTper = await this.runSuite(
-        'Trenitalia TPER',
-        trenitaliaTperParsers,
-      );
-      this.mergeStats(summaryStats, resultsTrenitaliaTper.stats, '');
-      allDetails.push(...resultsTrenitaliaTper.details);
+      if (trenitaliaTperParsers.length > 0) {
+        const resultsTrenitaliaTper = await this.runSuite(
+          'Trenitalia TPER',
+          trenitaliaTperParsers,
+        );
+        this.mergeStats(summaryStats, resultsTrenitaliaTper.stats, '');
+        allDetails.push(...resultsTrenitaliaTper.details);
+      }
 
       // Suite 3: EAV
-      const resultsEav = await this.runSuite('EAV', eavParsers);
-      this.mergeStats(summaryStats, resultsEav.stats, '');
-      allDetails.push(...resultsEav.details);
+      if (eavParsers.length > 0) {
+        const resultsEav = await this.runSuite('EAV', eavParsers);
+        this.mergeStats(summaryStats, resultsEav.stats, '');
+        allDetails.push(...resultsEav.details);
+      }
 
       // Suite 4: Trenitalia
-      const resultsTrenitalia = await this.runSuite(
-        'Trenitalia',
-        trenitaliaParsers,
-      );
-      this.mergeStats(summaryStats, resultsTrenitalia.stats, '');
-      allDetails.push(...resultsTrenitalia.details);
+      if (trenitaliaParsers.length > 0) {
+        const resultsTrenitalia = await this.runSuite(
+          'Trenitalia',
+          trenitaliaParsers,
+        );
+        this.mergeStats(summaryStats, resultsTrenitalia.stats, '');
+        allDetails.push(...resultsTrenitalia.details);
+      }
 
       // Suite: ATAC
-      const resultsAtac = await this.runSuite('ATAC', atacParsers, {
-        // customSuiteName: 'ATAC (No location checks)',
-        // disabledChecksOverride: ['guaranteedTimes'],
-      });
-      this.mergeStats(summaryStats, resultsAtac.stats, '');
-      allDetails.push(...resultsAtac.details);
+      if (atacParsers.length > 0) {
+        const resultsAtac = await this.runSuite('ATAC', atacParsers, {
+          // customSuiteName: 'ATAC (No location checks)',
+          // disabledChecksOverride: ['guaranteedTimes'],
+        });
+        this.mergeStats(summaryStats, resultsAtac.stats, '');
+        allDetails.push(...resultsAtac.details);
+      }
     }
 
     if (this.enableResilienceSuite) {

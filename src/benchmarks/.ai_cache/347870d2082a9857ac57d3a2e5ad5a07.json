@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-01-12 03:00:00",
+      "endDate": "2026-01-13 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 23773,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006925,
+      "outputCost": 0.000564,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00063325
+    },
+    "hash": "347870d2082a9857ac57d3a2e5ad5a07",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2026-1-12-sciopero-del-personale-di-treno.html",
+    "thoughts": "**Parsing regional dates and codes**\n\nI need to parse dates in the format of 2026-01-12 03:00:00 and 2026-01-13 02:00:00, ensuring they use 24-hour time, including seconds. I see that we should categorize this as \"REGIONAL,\" focusing on Lombardia. The note mentions other regions, but since \"SCIOPERO REGIONALE DEL TRASPORTO FERROVIARIO\" specifically refers to Lombardia, I think the locationCodes should only include the ISTAT code for Lombardia, which is \"03.\" So, locationCodes would be just [\"03\"].",
+    "tokens": {
+      "input": 1385,
+      "output": 1410,
+      "total": 2795
+    }
+  }
+}

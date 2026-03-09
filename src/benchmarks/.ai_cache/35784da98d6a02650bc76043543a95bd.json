@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-11-29 09:00:00",
+      "endDate": "2024-11-29 13:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9581,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00035825,
+      "outputCost": 0.0001395,
+      "thinkingCost": 0.0007065,
+      "cachedCost": 0,
+      "totalCost": 0.00120425
+    },
+    "hash": "35784da98d6a02650bc76043543a95bd",
+    "sourceFile": "strike-detail-venerd--29-novembre-dalle-9-alle-13-sciopero-gener.html",
+    "thoughts": "**Strike Announcement Analysis: Trenord - Lombardia Region**\n\nOkay, let's process this information about the Trenord strike. My initial thought is: *Another one?* Anyway, this is a clear announcement for a strike on the FERROVIENORD network within the Lombardia region (code 03).\n\nThe key details are: it's scheduled for Friday, November 29th. Since there's no year specified, I'm going to default to the current year, which is 2024, given we're probably planning for a future event, making the strike date 2024-11-29. The time window is from 09:00 to 13:00. This is definitely a future event and not a cancellation or real-time update.\n\nThe text specifies that trains departing from their origin stations *before* 09:00 will run as scheduled. While there's no explicitly defined \"guaranteed time slots\" (\"fasce di garanzia\") mentioned here in the usual regulatory sense, this implies that service *is* guaranteed before the strike begins, so I'll exclude a guaranteed window entry as there is not a specific one.\n\nSo, in summary, I'll need to flag this as a definite strike (`isStrike: true`) with these details: the strike's data, containing the start date/time (\"2024-11-29 09:00:00\"), the end date/time (\"2024-11-29 13:00:00\"), the location type as \"REGIONAL\", and the location code as \"03\".\n\n\n",
+    "tokens": {
+      "input": 1433,
+      "output": 93,
+      "total": 1997
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:01:00",
+      "endDate": "2025-12-12 21:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 11007,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00022075,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.000543,
+      "cachedCost": 0,
+      "totalCost": 0.00088675
+    },
+    "hash": "774395f7a4fa1dae404f725f0138d798",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-12-12-sciopero-nazionale-del-traspor.html",
+    "thoughts": "**Analyzing the Train Strike Announcement**\n\nOkay, let's break this down. The task at hand is to analyze this HTML input – which, if I understand correctly, is essentially a text announcement – for information regarding a potential train strike. My primary goal here is to accurately determine whether this is, in fact, a strike announcement (`isStrike: true`) or not (`isStrike: false`). If it *is* a strike, I need to extract the relevant details: the start and end dates, the location type, the specific location codes (if applicable), and any mention of guaranteed services.\n\nRight, so the input is a text about a national railway strike. Scanning the details, I see the headline \"SCIOPERO NAZIONALE DEL TRASPORTO FERROVIARIO,\" which translates to \"National strike of railway transport.\" That's a strong indicator right off the bat. The content then states, \"Dalle ore 00:01 alle ore 21:00 di venerdì 12 dicembre 2025 è stato indetto uno sciopero...\" which translates to \"From 00:01 to 21:00 on Friday, December 12, 2025, a strike has been called...\" – the key information here is the date, time, and that it's a strike. Furthermore, it mentions that the companies involved are Gruppo FS Italiane, Italo, and Trenord. The scope is clearly defined as \"NAZIONALE,\" or \"National.\"\n\nBased on this, it's pretty clear: this *is* an upcoming strike, specifically on December 12th, 2025. Therefore, `isStrike` is definitely `true`. Now, for the specifics: the start date is 2025-12-12 00:01:00, and the end date is 2025-12-12 21:00:00. The location type is \"NATIONAL,\" and I know that, for national strikes, we omit the `locationCodes`. Finally, there's no mention of any guaranteed times in the provided text, so that field also remains omitted.\n\n\n",
+    "tokens": {
+      "input": 883,
+      "output": 82,
+      "total": 1327
+    }
+  }
+}

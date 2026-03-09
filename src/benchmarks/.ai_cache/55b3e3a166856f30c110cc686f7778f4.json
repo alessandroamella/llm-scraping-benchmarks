@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 21:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 29646,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00009025,
+      "outputCost": 0.0008812,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00097145
+    },
+    "hash": "55b3e3a166856f30c110cc686f7778f4",
+    "sourceFile": "strike-detail-venerd--12-dicembre-da-mezzanotte-alle-21-sciopero.html",
+    "thoughts": "**Deciding date details**\n\nI'm looking at the article that mentions \"Venerdì 12 dicembre\" but doesn't provide a year. It could be 2024, but I need to follow the extraction rules which say dates must be in a specific format. I’m debating whether to deduce the year from context, possibly considering 2023 or 2024 since the content is related to Trenord news. \n\nRegarding the location type, it’s a national strike, so it should be classified as \"NATIONAL,\" but I’m unsure. I need to make the best guess!",
+    "tokens": {
+      "input": 1805,
+      "output": 2203,
+      "total": 4008
+    }
+  }
+}

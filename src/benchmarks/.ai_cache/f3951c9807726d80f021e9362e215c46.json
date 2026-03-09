@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-01-09 21:00:00",
+      "endDate": "2026-01-10 21:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 10494,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000222,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.000411,
+      "cachedCost": 0,
+      "totalCost": 0.000756
+    },
+    "hash": "f3951c9807726d80f021e9362e215c46",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2026-1-9-sciopero-nazionale-del-trasporto.html",
+    "thoughts": "**Analyzing Strike Information for JSON Extraction**\n\nOkay, let's break this down. My objective is clear: I need to process this strike announcement and distill the relevant information into a specific JSON format. The core condition I need to adhere to is that `isStrike` should only be true when it's an announcement for an *upcoming* strike, and based on the provided announcement, I believe this criteria has been met. This is a strike announcement for Gruppo FS Italiane, Italo, and Trenord.\n\nThe critical data points are laid out. The strike's timeframe is \"Dalle ore 21:00 di venerdì 9 gennaio alle ore 21:00 di sabato 10 gennaio 2026,\" which needs to be parsed into a `startDate` and `endDate`. Using my expertise in parsing datetime strings, I’ll format this into \"2026-01-09 21:00:00\" for the start and \"2026-01-10 21:00:00\" for the end.\n\nThe announcement indicates the scope of the strike is \"SCIOPERO NAZIONALE\" (National). This will be represented as `locationType`: \"NATIONAL\". The `locationCodes` field is not relevant here and I'll omit it.\n\nFinally, the text mentions \"Maggiori informazioni sui servizi garantiti... sono disponibili sui canali digitali\". Since specific guaranteed times aren't explicitly provided within the text, I'll omit the `guaranteedTimes` field entirely from the resulting JSON.\n\nTherefore, my final JSON output will contain the following:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2026-01-09 21:00:00\",\n    \"endDate\": \"2026-01-10 21:00:00\",\n    \"locationType\": \"NATIONAL\"\n  }\n}\n```\n\n\n",
+    "tokens": {
+      "input": 888,
+      "output": 82,
+      "total": 1244
+    }
+  }
+}

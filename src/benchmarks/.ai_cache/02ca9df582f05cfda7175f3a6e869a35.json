@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-16 09:00:00",
+      "endDate": "2025-11-16 18:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 12100,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00195475,
+      "outputCost": 0.0001395,
+      "thinkingCost": 0.0007245,
+      "cachedCost": 0,
+      "totalCost": 0.00281875
+    },
+    "hash": "02ca9df582f05cfda7175f3a6e869a35",
+    "sourceFile": "strike-detail-domenica-16-novembre-dalle-ore-10-alle-ore-18-scio.html",
+    "thoughts": "**Strike Analysis: Lombardia Regional Trains, November 16, 2025**\n\nOkay, let's break this down. The task is clear: determine if this text is an announcement of an upcoming strike and, if so, format the relevant details into a JSON output. The input is in Italian, but the critical information jumps out pretty quickly.\n\nFirst, I see the title: \"Domenica 16 novembre dalle ore 10 alle ore 18 sciopero dei treni regionali in Lombardia.\"  That screams \"strike\" to me immediately, especially with \"sciopero\" (strike) front and center. The body confirms this; \"Dalle ore 9 alle ore 18 di domenica 16 novembre l’organizzazione sindacale ORSA ha indetto uno sciopero...\" The key elements are there: date, time, and location.\n\nI've got the date – Sunday, November 16th. Let's confirm the year. The text references the year 2025. Time is a bit tricky. The title says 10 AM to 6 PM, but the body specifies 9 AM to 6 PM. I'll defer to the more specific text, and go with 9 AM to 6 PM. Location is Lombardia. I can look up the ISTAT code quickly; it's 03.\n\nNow, to extract and structure the information for the JSON. `isStrike` is definitely true. The `startDate` is \"2025-11-16 09:00:00\" and `endDate` is \"2025-11-16 18:00:00\". The `locationType` is \"REGIONAL\". And, I've got the `locationCodes` as [\"03\"].\n\nOne thing to note - the text mentions that trains with scheduled departure times prior to 10 AM will still be running as scheduled. This *isn't* a formally guaranteed commuter window. I'm going to omit the `guaranteedTimes` field because no explicit commuter guarantee slots are present.\n\nFinally, just a quick sanity check: dates are in `yyyy-MM-dd HH:mm:ss` format, `locationType` is \"REGIONAL\", `locationCodes` is [\"03\"], and making sure I haven't missed anything. I'm ready to output the JSON.\n\n\n",
+    "tokens": {
+      "input": 7819,
+      "output": 93,
+      "total": 8395
+    }
+  }
+}

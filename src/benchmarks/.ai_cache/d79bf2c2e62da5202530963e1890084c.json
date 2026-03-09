@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-24 10:00:00",
+      "endDate": "2025-11-24 14:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 11055,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0001965,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.000882,
+      "cachedCost": 0,
+      "totalCost": 0.0012015
+    },
+    "hash": "d79bf2c2e62da5202530963e1890084c",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-11-24-sciopero-24-novembre-personale.html",
+    "thoughts": "**Analyzing Strike Information from HTML**\n\nOkay, let's break this down. My task is to process this strike information extracted from HTML, determine if it represents an upcoming strike, and if so, extract specific details. The target format is JSON, with a date format of `yyyy-MM-dd HH:mm:ss`.\n\nThe specific input is about a strike, the headline is: \"SCIOPERO 24 NOVEMBRE PERSONALE DELLE SOCIETÀ DI MANOVRA FERROVIARIA\". The content says, \"Dalle ore 10:00 alle ore 14:00 di lunedì 24 Novembre è stato indetto uno sciopero del personale delle società di manovra ferroviaria.\"\n\nSo, yes, it's definitely an upcoming strike. Now to extract the details. The date is November 24th, and the text mentions the date, Monday, November 24th. The prompt doesn't explicitly state the year, but given the nature of these types of prompts, I'll assume it's for the current/next year. Let's assume the upcoming date, 2025-11-24.\n\nTherefore:\n\n*   `startDate` is \"2025-11-24 10:00:00\"\n*   `endDate` is \"2025-11-24 14:00:00\"\n\nFor the `locationType`, the text mentions \"personale delle società di manovra ferroviaria.\" This indicates a national scope since these entities are involved in shunting operations that are national. So, it's `NATIONAL`.\n\n`locationCodes` are omitted as per instruction.\n\n`guaranteedTimes` are not mentioned so that will be omitted as well.\n\nNow, to format this into JSON adhering to schema:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-11-24 10:00:00\",\n    \"endDate\": \"2025-11-24 14:00:00\",\n    \"locationType\": \"NATIONAL\"\n  }\n}\n```\n\n\n",
+    "tokens": {
+      "input": 786,
+      "output": 82,
+      "total": 1456
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-11-17 09:00:00",
+      "endDate": "2024-11-17 13:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 13262,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00027425,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.0011145,
+      "cachedCost": 0,
+      "totalCost": 0.00151175
+    },
+    "hash": "abba8f34ba83b57a59c8e4456796e44d",
+    "sourceFile": "strike-detail-sciopero-nazionale-17-novembre-ore-9-13-personale-.html",
+    "thoughts": "**Strike Information Extraction - My Thought Process**\n\nOkay, here's what I'm thinking. The task is to pull strike information from this HTML content. The critical condition is `isStrike` should be `true` only if it's an announcement of an *upcoming* strike. The input is a page titled \"Sciopero Nazionale 17 novembre ore 9-13 personale Trenord non coinvolto\" which translates to \"National Strike Nov 17 9am-1pm, Trenord staff not involved.\"\n\nFirst, I need to confirm whether this is, in fact, an announcement of an upcoming strike. The text explicitly states, \"sciopero nazionale indetto per venerdì 17 novembre tra le ore 9 e le ore 13\" which confirms the strike is happening. The title and the text both indicate that this *is* an announcement of an *upcoming* national strike on November 17th. Therefore, `isStrike` should be `true`.\n\nNow, I'll extract the strike details.  The text clearly indicates the date as \"17 novembre\" and the time frame as \"ore 9 e le ore 13,\" meaning 9 AM to 1 PM. I can infer the year will be this year, or the next if it has already occurred. Since it's a generic task, I should extract it as 2024-11-17 09:00:00 to 2024-11-17 13:00:00 based on the date provided in the text. I need to remember these as the `startDate` and `endDate`.\n\nThe text indicates a \"sciopero nazionale,\" therefore the `locationType` should be \"NATIONAL\". Since the `locationType` is \"NATIONAL,\" I need to omit `locationCodes`, per the specification.\n\nFinally, regarding guaranteed times, the text states \"saranno garantiti i treni con orario di partenza entro le ore 9 e arrivo alla destinazione finale entro le ore 10.\" The important thing is that these are *not* the typical \"guaranteed times\" described in the definition of `guaranteedTimes` which are time ranges during which service is guaranteed. Instead it's talking about trains already en route, so I'll omit that field for now. This approach is better to stick with the given definitions.\n\nSo, I have the extracted data ready to be structured.\n\n*   `isStrike`: true\n*   `strikeData`:\n    *   `startDate`: \"2024-11-17 09:00:00\"\n    *   `endDate`: \"2024-11-17 13:00:00\"\n    *   `locationType`: \"NATIONAL\"\n\nBefore submitting, a quick check: Is this an announcement of an upcoming strike? Yes. Is `isStrike` a boolean? Yes. Is the `startDate` pattern `yyyy-MM-dd HH:mm:ss`? Yes. Is `locationType` a valid enum? Yes (\"NATIONAL\"). Is `locationCodes` omitted for the national scenario? Yes. Does it conform to a valid JSON structure? Yes. Looks good!\n\n\n",
+    "tokens": {
+      "input": 1097,
+      "output": 82,
+      "total": 1922
+    }
+  }
+}

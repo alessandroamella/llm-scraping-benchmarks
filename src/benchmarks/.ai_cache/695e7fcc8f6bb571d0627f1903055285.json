@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-16 03:00:00",
+      "endDate": "2025-06-17 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5999,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00033225,
+      "outputCost": 0.000189,
+      "thinkingCost": 0.0008295,
+      "cachedCost": 0,
+      "totalCost": 0.00135075
+    },
+    "hash": "695e7fcc8f6bb571d0627f1903055285",
+    "sourceFile": "strike-detail-luned--16-giugno-sciopero-dei-treni-regionali.html",
+    "thoughts": "**Analyzing the Trenord Strike Announcement**\n\nOkay, let's break this down systematically. My task is to determine if this HTML content describes an upcoming strike and, if so, to extract the relevant data into a JSON object. The text, thankfully, is quite explicit. We're dealing with a Trenord strike. The HTML strongly suggests a strike announcement, given the headline \"Lunedì 16 giugno sciopero dei treni regionali\" (Monday, June 16, strike of regional trains).\n\nThe key is to construct a JSON object according to the specifications provided. We need `isStrike`, `strikeData` (if `isStrike` is true), and then fields within `strikeData`. The text specifies a strike, so `isStrike` will be `true`.\n\nNow, let's extract the strike data. The headline and body indicate a strike on June 16th. The HTML's implicit year context is 2025, which, as an expert, I'm noting is important to confirm. The body states, \"Dalle ore 3 di lunedì 16 alle ore 2 di martedì 17 giugno\" (From 03:00 Monday 16th to 02:00 Tuesday 17th June), giving us the start and end times. With that I can extract:\n\n*   `startDate`: \"2025-06-16 03:00:00\"\n*   `endDate`: \"2025-06-17 02:00:00\"\n\nSince this specifically mentions regional trains (\"treni regionali\"), the `locationType` will be \"REGIONAL\". Trenord operates primarily in Lombardia, so the `locationCodes` is \"03\". Finally, the guaranteed services are specified, \"06:00-09:00\", \"18:00-21:00\", which gives us:\n\n*   `guaranteedTimes`: [\"06:00-09:00\", \"18:00-21:00\"]\n\nTherefore, the full `strikeData` object looks like this:\n\n*   `strikeData`:\n    *   `startDate`: \"2025-06-16 03:00:00\"\n    *   `endDate`: \"2025-06-17 02:00:00\"\n    *   `locationType`: \"REGIONAL\"\n    *   `locationCodes`: [\"03\"]\n    *   `guaranteedTimes`: [\"06:00-09:00\", \"18:00-21:00\"]\n\nSo, the resulting JSON output would reflect all this information.\n\n\n",
+    "tokens": {
+      "input": 1329,
+      "output": 126,
+      "total": 2008
+    }
+  }
+}

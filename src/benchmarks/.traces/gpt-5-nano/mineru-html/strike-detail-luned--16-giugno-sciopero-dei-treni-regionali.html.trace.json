@@ -1,0 +1,58 @@
+{
+  "timestamp": "2026-03-09T17:18:22.727Z",
+  "isCacheHit": false,
+  "request": {
+    "sourceName": "Trenord",
+    "fileName": "strike-detail-luned--16-giugno-sciopero-dei-treni-regionali.html",
+    "model": "gpt-5-nano",
+    "strategy": "mineru-html",
+    "useLenientSchema": false,
+    "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"Trenord\" (the public transport company of Lombardia (03)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: mineru-html):\n<html class=\"no-js\" dir=\"ltr\" lang=\"it\"><body> <div id=\"main\"> <div class=\"container-fluid grid-margin container-foglia-news\"> <div class=\"container\"> <div class=\"container-fluid containers\"> <div class=\"container-sticky stickem-container\"> <div class=\"content\"> <div class=\"container-content grid-margin\"> <div class=\"col-l\"> <div class=\"text align-middle\"> <h1 class=\"uppercase\" _item_id=\"101\"> <b> Lunedì 16 giugno sciopero dei treni regionali </b> </h1> </div> <div class=\"frame frame-default frame-type-trenordtheme_simpletextmedia frame-layout-0\" id=\"c17971\"> <div class=\"container-fluid container-text-image\"> <div class=\"row grid-margin\"> <div class=\"container-content col-l\"> <div class=\"text align-middle\"> <h4 _item_id=\"103\"><strong>Per l’agitazione indetta da ORSA previste ripercussioni sul servizio regionale, suburbano, aeroportuale</strong></h4> <h4 _item_id=\"104\"><strong>Negli orari 6-9 e 18-21 viaggeranno i treni indicati nella lista dei servizi garantiti; informazioni disponibili su trenord.it e App</strong></h4> <p _item_id=\"105\">Dalle ore 3 di lunedì 16 alle ore 2 di martedì 17 giugno l’organizzazione sindacale ORSA ha indetto uno sciopero che, per l’intera giornata di lunedì, avrà ripercussioni sulla circolazione dei treni regionali, suburbani e dei collegamenti aeroportuali Malpensa Express e S50 Malpensa Aeroporto-Bellinzona. Le corse potranno subire variazioni e cancellazioni.</p> <p _item_id=\"106\">Negli orari 6-9 e 18-21 circoleranno i treni indicati nella lista delle corse garantite, disponibile su trenord.it. Si invitano i passeggeri a consultare l’elenco, con particolare attenzione alle corse serali per il rientro.</p> <p _item_id=\"107\">In particolare, la mattina viaggeranno i convogli con orario di partenza dalla stazione di origine dopo le 6 e arrivo alla destinazione finale entro le 9. Nella fascia serale, circoleranno quelli con partenza prevista dopo le 18 e con arrivo entro le 21; le corse con orario di arrivo a destinazione dopo le ore 21 non saranno garantite.</p> <p _item_id=\"108\">Saranno previsti autobus sostitutivi, senza fermate intermedie, per le corse del servizio aeroportuale non effettuate tra Milano Cadorna (da via Paleocapa, 1) e Malpensa Aeroporto e tra Stabio e Malpensa Aeroporto.</p> <p _item_id=\"109\">Le informazioni sulla circolazione saranno disponibili sulle pagine di ogni linea della App e del sito Trenord.</p> <p _item_id=\"110\">Si invitano i passeggeri a prestare attenzione ad annunci sonori e monitor di stazione.</p> <p _item_id=\"111\"><a href=\"/fileadmin/contenuti/TRENORD/3-News/Trenord_Informa/Comunicati_stampa/2025/Trenord_250613_CS_Sciopero_16_giugno.pdf\" target=\"_blank\" title=\"Apri comunicato in una nuova scheda\">Comunicato stampa sciopero 16 giugno 2025</a></p> </div> </div> </div> </div> </div> </div> </div> </div> </div> </div> </div> </div> </div> </body></html>"
+  },
+  "response": {
+    "rawOutput": {
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2025-06-16 03:00:00",
+        "endDate": "2025-06-17 02:00:00",
+        "locationType": "REGIONAL",
+        "locationCodes": [
+          "03"
+        ],
+        "guaranteedTimes": [
+          "06:00-09:00",
+          "18:00-21:00"
+        ]
+      }
+    },
+    "parsedData": {
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2025-06-16 03:00:00",
+        "endDate": "2025-06-17 02:00:00",
+        "locationType": "REGIONAL",
+        "locationCodes": [
+          "03"
+        ],
+        "guaranteedTimes": [
+          "06:00-09:00",
+          "18:00-21:00"
+        ]
+      }
+    },
+    "usage": {
+      "input": 1739,
+      "output": 1670,
+      "total": 3409
+    },
+    "costUsd": {
+      "inputCost": 0.00008695,
+      "outputCost": 0.000668,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00075495
+    },
+    "durationMs": 22802,
+    "thoughts": "**Determining strike announcement**\n\nI need to output JSON based on the schema regarding a potential strike announcement. The article indicates a strike happening on Monday, June 16. It mentions specific times and details about the union's involvement, confirming it's an upcoming strike. I noticed references to 2025, which is important, and the location is Lombardia, mentioning places like Milano Cadorna. Since this is clearly an announcement about an upcoming strike, I'll set `isStrike` to true in the output."
+  }
+}

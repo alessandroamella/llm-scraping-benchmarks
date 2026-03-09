@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-27 21:00:00",
+      "endDate": "2025-11-28 21:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 13886,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00022275,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.0006735,
+      "cachedCost": 0,
+      "totalCost": 0.00101925
+    },
+    "hash": "b9752143799d6072bc875dd2ef544502",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-11-27-sciopero-nazionale-del-traspor.html",
+    "thoughts": "**Strike Analysis Summary**\n\nOkay, let's break this down. My task is to determine if the provided HTML text from Trenitalia, Italo, and Trenord announces a strike and, if so, extract the relevant data in the specified JSON format. The constraints are pretty clear: `isStrike`, a `strikeData` object if true, and specific fields within that object – `startDate`, `endDate`, `locationType`, `locationCodes`, and `guaranteedTimes`. The output has to be a single, parseable JSON object. No extra text allowed, got it.\n\nI see the headline: \"SCIOPERO NAZIONALE DEL TRASPORTO FERROVIARIO\" – that's a pretty strong indicator of a strike. The content confirms it: \"Dalle ore 21:00 di giovedì 27 novembre alle ore 21:00 di venerdì 28 novembre 2025...\" Aha, the year is 2025. That gives us a clear start date of 2025-11-27 21:00:00 and an end date of 2025-11-28 21:00:00. The text explicitly mentions \"NAZIONALE\" (National), so the `locationType` will be \"NATIONAL\". There's no mention of specific guaranteed times in the provided text. Therefore, I will omit the `guaranteedTimes` field as per the specified schema.\n\nHere's the JSON object that I will return:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-11-27 21:00:00\",\n    \"endDate\": \"2025-11-28 21:00:00\",\n    \"locationType\": \"NATIONAL\"\n  }\n}\n```\n\n\n",
+    "tokens": {
+      "input": 891,
+      "output": 82,
+      "total": 1422
+    }
+  }
+}

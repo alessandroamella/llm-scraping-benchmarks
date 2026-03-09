@@ -573,8 +573,6 @@ Input Content (Pre-processing: ${preProcessingStrategy}):
         return content;
       case 'basic-cleanup':
         return $.html().replace(/\s+/g, ' ').trim();
-      case 'cheerio-text-only':
-        return $('body').text().replace(/\s+/g, ' ').trim();
       case 'html-to-markdown': {
         const turndownService = new TurndownService({
           headingStyle: 'atx',

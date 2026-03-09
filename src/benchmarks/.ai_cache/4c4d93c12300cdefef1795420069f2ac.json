@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-16 03:00:00",
+      "endDate": "2025-06-17 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22802,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008695,
+      "outputCost": 0.000668,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00075495
+    },
+    "hash": "4c4d93c12300cdefef1795420069f2ac",
+    "sourceFile": "strike-detail-luned--16-giugno-sciopero-dei-treni-regionali.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to output JSON based on the schema regarding a potential strike announcement. The article indicates a strike happening on Monday, June 16. It mentions specific times and details about the union's involvement, confirming it's an upcoming strike. I noticed references to 2025, which is important, and the location is Lombardia, mentioning places like Milano Cadorna. Since this is clearly an announcement about an upcoming strike, I'll set `isStrike` to true in the output.",
+    "tokens": {
+      "input": 1739,
+      "output": 1670,
+      "total": 3409
+    }
+  }
+}

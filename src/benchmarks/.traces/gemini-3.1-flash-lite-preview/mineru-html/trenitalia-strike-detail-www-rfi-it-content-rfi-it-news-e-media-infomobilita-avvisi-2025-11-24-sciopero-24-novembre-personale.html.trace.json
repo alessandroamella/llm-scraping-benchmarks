@@ -1,0 +1,46 @@
+{
+  "timestamp": "2026-03-09T17:19:04.261Z",
+  "isCacheHit": false,
+  "request": {
+    "sourceName": "Trenitalia",
+    "fileName": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-11-24-sciopero-24-novembre-personale.html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "strategy": "mineru-html",
+    "useLenientSchema": false,
+    "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"Trenitalia\" (Italy's national railway operator).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: mineru-html):\n<html lang=\"it\"><body data-language=\"it\">\n<div class=\"section-container section-container--fixed\">\n<div class=\"article\">\n<div>\n<h1 class=\"article--heading\" _item_id=\"2\">SCIOPERO 24 NOVEMBRE PERSONALE DELLE SOCIETÀ DI MANOVRA FERROVIARIA</h1>\n<div class=\"tabular-data-view--snapshot--notes\">\n<div class=\"note\" id=\"service-adjust\" _item_id=\"4\">\n       Servizio: \n       <strong>Alta Velocità, Lunga percorrenza, Regionale</strong>\n</div>\n<div class=\"note\" id=\"change-adjust\" _item_id=\"5\">\n       Causa Modifica: \n       <strong>Sciopero</strong>\n</div>\n</div>\n</div>\n</div>\n</div>\n<div class=\"section-container section-container--fixed\">\n<div class=\"article\">\n<div class=\"text section\">\n<div class=\"article--text\">\n<p _item_id=\"6\"><b>Dalle ore 10:00 alle ore 14:00 di lunedì 24 Novembre</b> è stato indetto uno sciopero del personale delle <b>società di manovra ferroviaria.</b></p>\n<p _item_id=\"7\">Lo sciopero può comportare modifiche al servizio, <b>anche prima dell'inizio e dopo la sua conclusione.</b></p>\n</div>\n</div>\n</div>\n</div>\n</body></html>"
+  },
+  "response": {
+    "rawOutput": {
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2025-11-24 10:00:00",
+        "endDate": "2025-11-24 14:00:00",
+        "locationType": "NATIONAL"
+      }
+    },
+    "parsedData": {
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2025-11-24 10:00:00",
+        "endDate": "2025-11-24 14:00:00",
+        "locationType": "NATIONAL"
+      }
+    },
+    "usage": {
+      "input": 786,
+      "output": 82,
+      "cached": 0,
+      "thinking": 588,
+      "total": 1456
+    },
+    "costUsd": {
+      "inputCost": 0.0001965,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.000882,
+      "cachedCost": 0,
+      "totalCost": 0.0012015
+    },
+    "durationMs": 11055,
+    "thoughts": "**Analyzing Strike Information from HTML**\n\nOkay, let's break this down. My task is to process this strike information extracted from HTML, determine if it represents an upcoming strike, and if so, extract specific details. The target format is JSON, with a date format of `yyyy-MM-dd HH:mm:ss`.\n\nThe specific input is about a strike, the headline is: \"SCIOPERO 24 NOVEMBRE PERSONALE DELLE SOCIETÀ DI MANOVRA FERROVIARIA\". The content says, \"Dalle ore 10:00 alle ore 14:00 di lunedì 24 Novembre è stato indetto uno sciopero del personale delle società di manovra ferroviaria.\"\n\nSo, yes, it's definitely an upcoming strike. Now to extract the details. The date is November 24th, and the text mentions the date, Monday, November 24th. The prompt doesn't explicitly state the year, but given the nature of these types of prompts, I'll assume it's for the current/next year. Let's assume the upcoming date, 2025-11-24.\n\nTherefore:\n\n*   `startDate` is \"2025-11-24 10:00:00\"\n*   `endDate` is \"2025-11-24 14:00:00\"\n\nFor the `locationType`, the text mentions \"personale delle società di manovra ferroviaria.\" This indicates a national scope since these entities are involved in shunting operations that are national. So, it's `NATIONAL`.\n\n`locationCodes` are omitted as per instruction.\n\n`guaranteedTimes` are not mentioned so that will be omitted as well.\n\nNow, to format this into JSON adhering to schema:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-11-24 10:00:00\",\n    \"endDate\": \"2025-11-24 14:00:00\",\n    \"locationType\": \"NATIONAL\"\n  }\n}\n```\n\n\n"
+  }
+}

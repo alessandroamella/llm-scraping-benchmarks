@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-07-18 09:00:00",
+      "endDate": "2024-07-18 13:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 26619,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003955,
+      "outputCost": 0.000558,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0009535
+    },
+    "hash": "71b20551ec6a42567a9f00079b8b355a",
+    "sourceFile": "strike-detail-gioved--18-luglio-dalle-9-alle-13-sciopero-del-per.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to output JSON in the specified format based on the content. It looks like the text is Italian and discusses a strike by FERROVIENORD personnel on Thursday, July 18, from 9 AM to 1 PM. Clearly, it's announcing an upcoming strike, which may lead to service cancellations. So, I’ll set isStrike to true and extract the necessary strikeData fields like startDate, endDate, and location details. Dates should be formatted as 'yyyy-MM-dd HH:mm:ss'.",
+    "tokens": {
+      "input": 7910,
+      "output": 1395,
+      "total": 9305
+    }
+  }
+}

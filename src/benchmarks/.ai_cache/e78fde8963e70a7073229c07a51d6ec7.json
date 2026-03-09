@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 15231,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007145,
+      "outputCost": 0.0005352,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00060665
+    },
+    "hash": "e78fde8963e70a7073229c07a51d6ec7",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2026-1-13-sciopero-nazionale-del-trasport.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to decide if the document fits the striker extraction spec. The Italian content states that a national strike is declared for January 13, 2026, but it uses the past tense, saying it \"has been declared.\" So, even though it's an announcement, it's referring to a strike that has already been made in the past. I’m uncertain if the instruction about setting `isStrike` to true applies here since it’s not regarding an upcoming strike.",
+    "tokens": {
+      "input": 1429,
+      "output": 1338,
+      "total": 2767
+    }
+  }
+}

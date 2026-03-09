@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "04",
+        "05"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 35032,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008895,
+      "outputCost": 0.0008712,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00096015
+    },
+    "hash": "76c790725c28c0301c8d653220ab4cb5",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-11-28-sciopero-del-personale-di-sad-.html",
+    "thoughts": "**Determining location and format**\n\nI need to format timestamps as 'yyyy-MM-dd HH:mm:ss' and ensure they reflect the local timezone. For the dates, I’ll convert to 2025-11-28 00:00:00 as the start and 2025-11-28 23:59:00 for the end.\n\nNow, looking at locationType, it should be either \"NATIONAL\" or \"REGIONAL.\" Since it says \"REGIONAL,\" I'll use the two-digit ISTAT codes for \"Trentino Alto Adige\" (04) and \"VENETO\" (05) as indicated in the notes.",
+    "tokens": {
+      "input": 1779,
+      "output": 2178,
+      "total": 3957
+    }
+  }
+}

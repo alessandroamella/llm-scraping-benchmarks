@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-09-06 03:00:00",
+      "endDate": "2023-09-07 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 23506,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00037855,
+      "outputCost": 0.0004292,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00080775
+    },
+    "hash": "690398f2116813eda99cf5884aa63fb2",
+    "sourceFile": "strike-detail-mercoled--6-settembre--sciopero-dei-treni-regional.html",
+    "thoughts": "**Extracting strike data**\n\nI need to format a JSON output for an upcoming strike announcement. The document indicates a strike for regional trains in Italy, set to happen from September 6 at 3:00 AM till September 7 at 2:00 AM. Since it's announced, I’ll set isStrike = true. The start date is 2023-09-06 03:00:00 and the end date is 2023-09-07 02:00:00. The location type will be \"REGIONAL\" as mentioned in the content.",
+    "tokens": {
+      "input": 7571,
+      "output": 1073,
+      "total": 8644
+    }
+  }
+}

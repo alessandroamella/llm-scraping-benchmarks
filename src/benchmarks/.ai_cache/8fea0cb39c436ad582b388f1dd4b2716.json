@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-16 10:00:00",
+      "endDate": "2025-11-16 18:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22779,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00036705,
+      "outputCost": 0.0008644,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00123145
+    },
+    "hash": "8fea0cb39c436ad582b388f1dd4b2716",
+    "sourceFile": "strike-detail-domenica-16-novembre-dalle-ore-10-alle-ore-18-scio.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to output JSON with a true/false value for isStrike and strikeData if true. The content is in Italian and announces a planned train strike in Lombardy on Sunday, November 16, from 10:00 to 18:00, due to actions by ORSA. However, there's a discrepancy in the times; the content mentions 9:00 to 18:00 later on, conflicting with the earlier 10:00 to 18:00 mention. It also notes potential variations and cancellations to train schedules.",
+    "tokens": {
+      "input": 7341,
+      "output": 2161,
+      "total": 9502
+    }
+  }
+}

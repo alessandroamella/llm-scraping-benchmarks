@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-01-13 00:00:00",
+      "endDate": "2026-01-13 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9251,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00025225,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.0008325,
+      "cachedCost": 0,
+      "totalCost": 0.00126925
+    },
+    "hash": "a54e710e5e242b65365866e6f2f49dc4",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2026-1-13-sciopero-nazionale-del-trasport.html",
+    "thoughts": "**Strike Analysis Summary**\n\nOkay, let's break this down. My task is to analyze this text and confirm if it's an announcement of an *upcoming* strike, not a cancellation, update, or post-strike report. The input specifically mentions a 24-hour strike set for \"martedì 13 gennaio 2026,\" which translates to Tuesday, January 13, 2026.\n\nBased on the criteria I have, this looks like a go. It's *definitely* an *upcoming* strike. The criteria require `isStrike` to be true for announcements of *upcoming* strikes only, which this clearly is.\n\nNow for the details. Because it's a 24-hour strike, I'll need to calculate the start and end times. A 24-hour strike, effectively starts at 00:00:00 and ends at 23:59:59 on the given date, so the start date is 2026-01-13 00:00:00 and the end date is 2026-01-13 23:59:59.\n\nThe scope of this strike is specified as \"SCIOPERO NAZIONALE,\" which translates to \"NATIONAL.\" Therefore, the `locationType` should be \"NATIONAL.\"\n\nI can see guaranteed service times are listed as \"dalle ore 6.00 alle ore 9.00 e dalle ore 18.00 alle ore 21.00.\" I'll need to parse those into the format specified. That translates to guaranteed times of \"06:00-09:00\" and \"18:00-21:00.\"\n\nPutting it all together, I can generate a `strikeData` object with `startDate` of \"2026-01-13 00:00:00\", an `endDate` of \"2026-01-13 23:59:59,\" a `locationType` of \"NATIONAL,\" and `guaranteedTimes` as [\"06:00-09:00\", \"18:00-21:00\"].\n\nI've confirmed this structure. Dates and times match the expected formats. This is a clean, structured data point. The `locationCodes` are properly omitted, since this is a NATIONAL strike. This all looks good and ready to go.\n\n\n",
+    "tokens": {
+      "input": 1009,
+      "output": 123,
+      "total": 1687
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-11-17 09:00:00",
+      "endDate": "2023-11-17 13:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "09:00-10:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 41911,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007635,
+      "outputCost": 0.0013624,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00143875
+    },
+    "hash": "ef1154e0b9124388ad31d0f62802894d",
+    "sourceFile": "strike-detail-sciopero-nazionale-17-novembre-ore-9-13-personale-.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to output JSON based on the strike extraction schema. The content discusses a national strike on November 17 from 9 to 13, indicating Trenord personnel are not involved. However, there may be adherence from other workers, potentially leading to train limitations and cancellations. The message confirms this is an announcement of an upcoming strike, so I should set isStrike to true, as the instructions specify it's only true if it's about an upcoming strike.",
+    "tokens": {
+      "input": 1527,
+      "output": 3406,
+      "total": 4933
+    }
+  }
+}

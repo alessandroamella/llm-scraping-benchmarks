@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-03-19 09:00:00",
+      "endDate": "2025-03-19 17:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7887,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0019775,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.0008685,
+      "cachedCost": 0,
+      "totalCost": 0.002969
+    },
+    "hash": "8f12435e2bad13579da58115968a36ff",
+    "sourceFile": "strike-detail-mercoled--19-marzo-dalle-ore-9-alle-ore-17-scioper.html",
+    "thoughts": "**My Analysis of the Strike Information**\n\nAlright, let's break this down. The task is clear: I need to extract strike information, specifically focusing on Trenord in the Lombardy region (code 03), from this text. The key here is to determine if a strike is actually happening. In this case, the text clearly indicates a \"Sciopero nazionale del trasporto ferroviario\" – a national railway strike, so `isStrike` will be `true`.\n\nNow, for the data extraction. The announcement gives us a date: Wednesday, March 19th, 2025. This is confirmed by the meta-data indicating Monday the 17th of March of 2025, from which I can infer the day of the week as Wednesday. The strike is described as \"dalle ore 9 alle ore 17\" – from 9:00 to 17:00. This translates directly to a `startDate` of \"2025-03-19 09:00:00\" and an `endDate` of \"2025-03-19 17:00:00\".\n\nThe location of the strike is clearly \"nazionale\" – national. So, the `locationType` is `NATIONAL`.\n\nRegarding \"guaranteed services,\" the text states that trains departing from their origin station *before* 9:00 and arriving *before* 10:00 will run. The schema I'm working with expects the guaranteed times as an array of HH:mm-HH:mm formatted strings. However, the text only indicates a specific *condition* about departure and arrival times, rather than a range in the typical format. Given the schema's requirements, I'll omit this `guaranteedTimes` field as it's not a specified time range, to ensure the output adheres strictly to the schema's specifications. Thus, I won't create a `guaranteedTimes` field.\n\n\n",
+    "tokens": {
+      "input": 7910,
+      "output": 82,
+      "total": 8571
+    }
+  }
+}

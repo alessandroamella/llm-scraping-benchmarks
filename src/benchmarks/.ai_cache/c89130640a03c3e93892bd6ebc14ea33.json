@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-01-09 21:00:00",
+      "endDate": "2026-01-10 21:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21802,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000659,
+      "outputCost": 0.0005628,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0006287
+    },
+    "hash": "c89130640a03c3e93892bd6ebc14ea33",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2026-1-9-sciopero-nazionale-del-trasporto.html",
+    "thoughts": "**Processing strike data for JSON**\n\nI need to output JSON according to the specified schema, determining if this is a strike announcement. The text I have is in Italian and outlines a national strike of railway transport. The dates provided indicate that the strike starts from 21:00 on Friday, January 9, 2026, and ends at 21:00 on Saturday, January 10, 2026. Since this is a scheduled future strike, I conclude that isStrike should be true. Now, I just need to extract the start and end dates in the correct format.",
+    "tokens": {
+      "input": 1318,
+      "output": 1407,
+      "total": 2725
+    }
+  }
+}

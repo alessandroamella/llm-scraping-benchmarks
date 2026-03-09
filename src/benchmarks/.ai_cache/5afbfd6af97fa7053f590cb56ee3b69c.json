@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-12-14 09:00:00",
+      "endDate": "2023-12-14 17:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6410,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00199125,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.001017,
+      "cachedCost": 0,
+      "totalCost": 0.00315675
+    },
+    "hash": "5afbfd6af97fa7053f590cb56ee3b69c",
+    "sourceFile": "strike-detail-gioved--14-dicembre-dalle-ore-9-alle-ore-17-sciope.html",
+    "thoughts": "**Strike Analysis: Trenord - December 14th, 2023**\n\nAlright, let's break this down. My task is clear: Is this text announcing a strike? If so, I need to extract specific details and format them as JSON. The target is Trenord, specifically their Lombardy (03) operations.\n\nThe text is a press release about a strike. Good. Now, let's get the data.\n\nThe title states \"Giovedì 14 dicembre dalle ore 9 alle ore 17 sciopero dei treni regionali\" – Thursday, December 14th, from 9 AM to 5 PM. The document date, \"martedì 12/12/2023\", confirms the strike's date. The key times are: start time is 09:00, and end time is 17:00. Location is Trenord, and the text specifies \"treni regionali, suburbani, sui servizi di Lunga Percorrenza di Trenord e sui collegamenti aeroportuali Malpensa Express e S50 Malpensa Aeroporto-Bellinzona\", operating in Lombardy (03).\n\nRegarding guaranteed times, the text states, \"La mattina viaggeranno i treni con orario di partenza dalla stazione di origine corsa prima delle ore 9 e arrivo a destinazione finale entro le ore 10.\" Since the text does not contain explicitly defined time ranges (e.g. 06:00-09:00), I'll omit this `guaranteedTimes` field.\n\nTherefore, the JSON should look like this:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2023-12-14 09:00:00\",\n    \"endDate\": \"2023-12-14 17:00:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\n      \"03\"\n    ]\n  }\n}\n```\n\nFormat is correct, `locationCodes` is correct. No extra comments. Done.\n\n\n",
+    "tokens": {
+      "input": 7965,
+      "output": 99,
+      "total": 8742
+    }
+  }
+}

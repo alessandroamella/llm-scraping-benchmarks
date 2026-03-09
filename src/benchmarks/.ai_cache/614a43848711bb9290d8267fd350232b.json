@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-01-09 21:00:00",
+      "endDate": "2026-01-10 23:59:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "04",
+        "05"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8179,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0003245,
+      "outputCost": 0.0001575,
+      "thinkingCost": 0.0013095,
+      "cachedCost": 0,
+      "totalCost": 0.0017915
+    },
+    "hash": "614a43848711bb9290d8267fd350232b",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2026-1-9-sciopero-del-personale-di-sad---.html",
+    "thoughts": "**Strike Information Extraction - My Thought Process**\n\nAlright, let's break this down. My task is to extract strike information from this HTML content, and I need to output a clean JSON object following a specific schema. The core of this is the `isStrike` boolean; it's `true` in this case because we're explicitly given an announcement about an upcoming strike.\n\nThe content mentions strikes for both SAD and Trentino Trasporti. I need to consolidate this into a single strike representation given the prompt structure, despite multiple entities being mentioned. The SAD strike starts on 2026-01-09 at 21:00 and ends on 2026-01-10 at 20:59, while the Trentino Trasporti one starts on 2026-01-10 at 00:01 and ends on 2026-01-10 at 23:59. Since I'm creating a unified representation, I need to encompass both strike periods. Therefore, the strike period to represent covers from 2026-01-09 21:00 until 2026-01-10 23:59.\n\nThe location is described as \"Trentino Alto Adige, VENETO,\" indicating a regional scope. So, `locationType` will be \"REGIONAL.\"  Now, about `locationCodes`. I need the ISTAT region codes, and I have them: \"04\" for Trentino-Alto Adige and \"05\" for Veneto. Since the prompt states that I MUST return an array of 2-digit ISTAT region codes when locationType is REGIONAL, this is straightforward.\n\nFinally, the output should be valid JSON, strictly adhering to the schema. No comments, no control characters. The guaranteed times weren't mentioned, so I can safely omit that.\n\nHere's the JSON I'll generate:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2026-01-09 21:00:00\",\n    \"endDate\": \"2026-01-10 23:59:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"04\", \"05\"]\n  }\n}\n```\n\nThat should be exactly what's needed.\n\n\n",
+    "tokens": {
+      "input": 1298,
+      "output": 105,
+      "total": 2276
+    }
+  }
+}

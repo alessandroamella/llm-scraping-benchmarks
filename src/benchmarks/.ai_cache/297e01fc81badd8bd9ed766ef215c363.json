@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-03-19 09:00:00",
+      "endDate": "2025-03-19 17:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22366,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000371,
+      "outputCost": 0.0005244,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008954
+    },
+    "hash": "297e01fc81badd8bd9ed766ef215c363",
+    "sourceFile": "strike-detail-mercoled--19-marzo-dalle-ore-9-alle-ore-17-scioper.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to output the information in the specified JSON-like structure for strike extraction. The content indicates an upcoming national strike on March 19 from 9 AM to 5 PM, as stated in the repeated Italian text. The article is dated Monday, March 17, 2025, and confirms the strike date of Wednesday, March 19. I'll have to format the date correctly as yyyy-MM-dd HH:mm:ss for clarity. This helps ensure that the extracted details are accurate and ready for use.",
+    "tokens": {
+      "input": 7420,
+      "output": 1311,
+      "total": 8731
+    }
+  }
+}

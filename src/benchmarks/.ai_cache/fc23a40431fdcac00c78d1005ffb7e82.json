@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-09-06 03:00:00",
+      "endDate": "2023-09-07 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 23337,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000835,
+      "outputCost": 0.0006888,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0007723
+    },
+    "hash": "fc23a40431fdcac00c78d1005ffb7e82",
+    "sourceFile": "strike-detail-mercoled--6-settembre--sciopero-dei-treni-regional.html",
+    "thoughts": "**Determining date parameters**\n\nI'm looking at content that mentions \"6 settembre\" and times. I realize I need a specific date and time structure, but the current year isn't given. It might be 2024, considering our knowledge cutoff is mid-2024, or it could even refer to 2023. Since the example uses a date in 2024, I think the safest approach is to infer it's for 2024. The event occurs from September 6 at 3:00 to September 7 at 2:00.",
+    "tokens": {
+      "input": 1670,
+      "output": 1722,
+      "total": 3392
+    }
+  }
+}

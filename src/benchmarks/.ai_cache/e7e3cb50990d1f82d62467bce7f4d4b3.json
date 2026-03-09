@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4925,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0002035,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000252,
+      "cachedCost": 0,
+      "totalCost": 0.0004705
+    },
+    "hash": "e7e3cb50990d1f82d62467bce7f4d4b3",
+    "sourceFile": "strike-detail-venerd--29-novembre-revocato-sciopero-ferrovienord.html",
+    "thoughts": "**Analyzing the FERROVIENORD Strike Announcement**\n\nOkay, so I've received some input: an announcement about FERROVIENORD. My immediate task is to figure out if this is a strike announcement, and if so, when it's happening. The key here is the date, \"venerdì 29 novembre\".\n\nThe critical piece of information is the word \"revocato\".  My mental rule kicks in: if the announcement mentions a *revocation* or *cancellation*, then `isStrike` is definitely `false`.\n\nI'm processing a few specific phrases:  \"Venerdì 29 novembre revocato sciopero FERROVIENORD\" and \"È stato revocato lo sciopero previsto per venerdì 29 novembre...\". Both clearly indicate a revocation of a strike. Therefore, I can confidently set `isStrike` to `false`. This means there *isn't* a strike planned, or at least, not anymore. Good to know.\n\n\n",
+    "tokens": {
+      "input": 814,
+      "output": 10,
+      "total": 992
+    }
+  }
+}

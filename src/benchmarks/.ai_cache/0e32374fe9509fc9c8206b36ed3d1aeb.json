@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-11-17 09:00:00",
+      "endDate": "2023-11-17 13:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "09:00-10:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21229,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003911,
+      "outputCost": 0.0007128,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0011039
+    },
+    "hash": "0e32374fe9509fc9c8206b36ed3d1aeb",
+    "sourceFile": "strike-detail-sciopero-nazionale-17-novembre-ore-9-13-personale-.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to produce JSON according to the strike_extraction schema. The document's content is in Italian, mentioning a national strike on November 17 from 9 to 13 where Trenord personnel are not involved. However, it notes that workers from infrastructure managers like FERROVIENORD and RFI may participate, potentially impacting Trenord services. It outlines risks like limitations and cancellations for regional trains during that time. So yes, this seems like a strike announcement.",
+    "tokens": {
+      "input": 7822,
+      "output": 1782,
+      "total": 9604
+    }
+  }
+}

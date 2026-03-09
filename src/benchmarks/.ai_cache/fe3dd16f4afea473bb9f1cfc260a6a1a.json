@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-09-30 03:00:00",
+      "endDate": "2024-10-01 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21406,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000848,
+      "outputCost": 0.0006872,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.000772
+    },
+    "hash": "fe3dd16f4afea473bb9f1cfc260a6a1a",
+    "sourceFile": "strike-detail-sciopero-del-trasporto-ferroviario-luned--30-sette.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to determine if a document announces an upcoming strike based on the provided Italian content. It states there’s a strike starting at 3:00 AM on September 30, lasting until 2:00 AM on October 1. It appears to be nationwide, impacting various transport services like regional and suburban trains. The location type is ambiguous, but since it mentions a general timeline without being region-specific, I’m considering it as potentially national.",
+    "tokens": {
+      "input": 1696,
+      "output": 1718,
+      "total": 3414
+    }
+  }
+}

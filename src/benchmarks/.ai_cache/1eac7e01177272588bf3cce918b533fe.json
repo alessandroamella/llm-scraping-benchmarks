@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 21:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4666,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.001997,
+      "outputCost": 0.0001725,
+      "thinkingCost": 0.000498,
+      "cachedCost": 0,
+      "totalCost": 0.0026675
+    },
+    "hash": "1eac7e01177272588bf3cce918b533fe",
+    "sourceFile": "strike-detail-venerd--12-dicembre-da-mezzanotte-alle-21-sciopero.html",
+    "thoughts": "**Analyzing the Trenord Strike Announcement**\n\nOkay, so I'm processing this Trenord strike announcement. The source material is a webpage, and the core information jumps out: it's a national strike, which, based on the document's publication date context, will occur on **Friday, December 12th, 2025**. The text explicitly says \"Venerdì 12 dicembre da mezzanotte alle 21\", which translates to Friday, December 12th from midnight to 9 PM.\n\nLet me break down the critical details:\n\n*   **Strike Date/Time:** December 12th, 2025, from 00:00:00 to 21:00:00. No ambiguity there.\n*   **Guaranteed Services:** The announcement specifies guaranteed service periods from 06:00-09:00 and 18:00-21:00. This is crucial for planning.\n*   **Location:** The phrase \"sciopero nazionale\" clarifies this as a national strike.\n*   **Data Structure:** The parsed data is structured clearly with `isStrike: true`, indicating a strike is confirmed. The `strikeData` object provides everything needed:\n\n    *   `startDate`: \"2025-12-12 00:00:00\"\n    *   `endDate`: \"2025-12-12 21:00:00\"\n    *   `locationType`: \"NATIONAL\"\n    *   `locationCodes`: It's `NATIONAL`, so no need for further location codes.\n    *   `guaranteedTimes`: Contains the relevant guarantees: \\[\"06:00-09:00\", \"18:00-21:00\"].\n\nThis is all pretty straightforward; the information is complete and well-defined, and the parsing to a structured `strikeData` object is ideal for further processing. I've successfully extracted the essential parameters for this particular strike.\n\n\n",
+    "tokens": {
+      "input": 7988,
+      "output": 115,
+      "total": 8435
+    }
+  }
+}

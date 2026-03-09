@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-07-18 09:00:00",
+      "endDate": "2024-07-18 13:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 27728,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00009135,
+      "outputCost": 0.0008884,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00097975
+    },
+    "hash": "f28262ab151a471dfd6ac97f8df6de68",
+    "sourceFile": "strike-detail-gioved--18-luglio-dalle-9-alle-13-sciopero-del-per.html",
+    "thoughts": "**Extracting strike data**\n\nI need to check if the document is announcing a new or upcoming strike. The content is in Italian and mentions an upcoming strike on Thursday, July 18 from 9 to 13 for FERROVIENORD personnel. It notes potential disruptions but specifies the strike doesn't involve Trenord. This definitely seems to be an announcement of an upcoming strike. I need to extract the start and end dates in 'yyyy-MM-dd HH:mm:ss' format, but the provided content doesn't include a specific year.",
+    "tokens": {
+      "input": 1827,
+      "output": 2221,
+      "total": 4048
+    }
+  }
+}

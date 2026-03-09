@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-06-16 03:00:00",
+      "endDate": "2024-06-17 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7171,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00201575,
+      "outputCost": 0.0001395,
+      "thinkingCost": 0.000561,
+      "cachedCost": 0.00018315,
+      "totalCost": 0.0028994
+    },
+    "hash": "4731c4a9dea32f5c393b2858b4681c96",
+    "sourceFile": "strike-detail-sciopero-uiltrasporti-e-orsa-domenica-16-giugno--p.html",
+    "thoughts": "**Analyzing the Trenord Strike Announcement**\n\nOkay, let's break this down. My objective is clear: determine if this Trenord text announces an upcoming strike. The input is a web page from Trenord concerning a June 16, 2024 strike, and the constraint is to return valid JSON with either `{\"isStrike\": false}` or complete strike details.\n\nFirst, I need to confirm whether it *is* actually a strike announcement. Scanning the text, yes, it's a press release clearly detailing a strike scheduled for June 16, 2024. Now, for the critical data extraction.\n\nI'll parse out the details: the strike's *startDate* is June 16, 2024, starting at 03:00, confirmed by \"Dalle ore 3 di domenica 16 giugno.\" The *endDate* is June 17, 2024, concluding at 02:00, or \"alle ore 2 di lunedì 17 giugno.\" Since it's Trenord, the *locationType* is REGIONAL, specifically targeting Lombardia, and I can reasonably assume the *locationCodes* are [\"03\"]. Interestingly, the text explicitly mentions \"non sono attuabili fasce di garanzia,\" meaning there are no guaranteed service times.\n\nWith this in hand, I've got enough information to confidently set `isStrike` to true. Now, let's construct the `strikeData` structure. I'll format the `startDate` and `endDate` as \"YYYY-MM-DD HH:MM:SS\" strings and fill in the *locationType* and *locationCodes* data.\n\nThe resulting `strikeData` object looks good. I must verify if it matches my schema and generates valid JSON, which is a key requirement. With all the required data now confirmed, I can guarantee a valid JSON result, and, critically, there are no control tokens to worry about. I'm ready to output the relevant information.\n\n\n",
+    "tokens": {
+      "input": 8063,
+      "output": 93,
+      "total": 8530
+    }
+  }
+}

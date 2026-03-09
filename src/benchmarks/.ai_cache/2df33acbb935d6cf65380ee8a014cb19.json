@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-07-18 09:00:00",
+      "endDate": "2024-07-18 13:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5933,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00210275,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.000717,
+      "cachedCost": 0,
+      "totalCost": 0.00296825
+    },
+    "hash": "2df33acbb935d6cf65380ee8a014cb19",
+    "sourceFile": "strike-detail-gioved--18-luglio-dalle-9-alle-13-sciopero-del-per.html",
+    "thoughts": "**Strike Analysis: FERROVIENORD - July 18th, 2024**\n\nOkay, let's break this down. My primary task is to confirm if the given text is a strike announcement, and if so, extract the crucial details in the prescribed format. The text \"Giovedì 18 luglio dalle 9 alle 13 sciopero del personale FERROVIENORD\" immediately suggests a labor action. I can see the date is July 18th, 2024, given the context of the article.\n\nMy analysis confirms this is indeed an upcoming strike. I need to now extract and structure the specific details. The provided text clearly states the strike period: from 9:00 AM to 1:00 PM on Thursday, July 18th. Let's translate this into the required `YYYY-MM-DD HH:MM:SS` format: `2024-07-18 09:00:00` to `2024-07-18 13:00:00`. That's straightforward.\n\nThe company involved is FERROVIENORD. I know that FERROVIENORD operates within the Lombardia region, so I must assign the correct regional code, which is \"03\". This tells me the `locationType` should be \"REGIONAL\" and the `locationCodes` should contain just [\"03\"].\n\nI also need to check for any guaranteed service times, \"fasce di garanzia\". The text says \"Non coinvolte le fasce di garanzia\". Based on this, there are no protected time windows. This is fine, since my schema allows omissions in such cases.\n\nTherefore, the final output would be:\n\n`isStrike`: true\n`strikeData`:\n    `startDate`: \"2024-07-18 09:00:00\"\n    `endDate`: \"2024-07-18 13:00:00\"\n    `locationType`: \"REGIONAL\"\n    `locationCodes`: [\"03\"]\n\nThe analysis is complete, and the data is formatted according to the specifications. I am ready to move on.\n\n\n",
+    "tokens": {
+      "input": 8411,
+      "output": 99,
+      "total": 8988
+    }
+  }
+}

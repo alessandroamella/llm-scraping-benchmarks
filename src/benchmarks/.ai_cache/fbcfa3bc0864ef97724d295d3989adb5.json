@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-09-30 03:00:00",
+      "endDate": "2024-10-01 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19494,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00037185,
+      "outputCost": 0.0005048,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00087665
+    },
+    "hash": "fbcfa3bc0864ef97724d295d3989adb5",
+    "sourceFile": "strike-detail-sciopero-del-trasporto-ferroviario-luned--30-sette.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to confirm if the document is announcing an upcoming strike. The title \"Sciopero 30 settembre\" clearly indicates a strike on September 30, 2024, and the details mention it starts at 3:00 AM on that date and ends at 2:00 AM on October 1. Since this is indeed announcing an upcoming strike, I'll set isStrike to true. Now I just need to extract the specific strike data from the text provided.",
+    "tokens": {
+      "input": 7437,
+      "output": 1262,
+      "total": 8699
+    }
+  }
+}

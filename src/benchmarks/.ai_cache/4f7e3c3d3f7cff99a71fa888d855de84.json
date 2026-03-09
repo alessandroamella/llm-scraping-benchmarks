@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-24 10:00:00",
+      "endDate": "2025-11-24 14:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "10:00-14:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 26909,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006075,
+      "outputCost": 0.0007904,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00085115
+    },
+    "hash": "4f7e3c3d3f7cff99a71fa888d855de84",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-11-24-sciopero-24-novembre-personale.html",
+    "thoughts": "**Extracting strike information**\n\nI need to output JSON in the strike extraction format. There's an announcement of a strike in Italian scheduled for Monday, November 24, from 10:00 to 14:00. The content clearly indicates a new/upcoming strike, so I confirm that isStrike is true. I need to extract the start and end date in the 'yyyy-MM-dd HH:mm:ss' format, but since the year isn’t provided, I’ll have to make an educated guess about it.",
+    "tokens": {
+      "input": 1215,
+      "output": 1976,
+      "total": 3191
+    }
+  }
+}

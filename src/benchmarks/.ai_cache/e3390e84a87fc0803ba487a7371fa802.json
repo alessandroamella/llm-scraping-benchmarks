@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 21:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21518,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003776,
+      "outputCost": 0.000548,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0009256
+    },
+    "hash": "e3390e84a87fc0803ba487a7371fa802",
+    "sourceFile": "strike-detail-venerd--12-dicembre-da-mezzanotte-alle-21-sciopero.html",
+    "thoughts": "**Identifying strike details**\n\nI need to structure my output as JSON. The content is from a Trenord page about an upcoming national strike on \"Friday, December 12, from midnight to 9 PM.\" The notice explains there will be service disruptions. Specifically, there will be trains running between 6-9 and 6-9 PM as per the guaranteed service list. The date mentioned in the article is likely December 11, 2025, since it's referencing the strike on December 12.",
+    "tokens": {
+      "input": 7552,
+      "output": 1370,
+      "total": 8922
+    }
+  }
+}

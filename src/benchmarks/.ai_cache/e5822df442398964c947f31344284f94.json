@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-07-18 09:00:00",
+      "endDate": "2024-07-18 13:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6667,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00034825,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.0011535,
+      "cachedCost": 0,
+      "totalCost": 0.00165025
+    },
+    "hash": "e5822df442398964c947f31344284f94",
+    "sourceFile": "strike-detail-gioved--18-luglio-dalle-9-alle-13-sciopero-del-per.html",
+    "thoughts": "**Strike Analysis for FERROVIENORD - July 18th**\n\nOkay, let's break this down. It looks like we have a confirmed strike announcement. The input clearly indicates a strike involving FERROVIENORD staff, the infrastructure manager, and it's scheduled for July 18th, 2024, from 09:00 to 13:00. Importantly, this is *not* a Trenord personnel strike, although it *will* impact rail services, potentially causing cancellations and variations.\n\nThe key detail is the phrase \"Non coinvolte le fasce di garanzia.\" This strongly suggests the strike is intentionally scheduled *outside* the protected service windows. We have to assume the strike is designed to minimize disruption during the peak morning and evening commute times. Since the text doesn't *explicitly* state these guaranteed time ranges, I won't represent them as such in the data. The schema demands explicit ranges, and I don't have them.\n\nTherefore, my summary, for this piece of information, is that this is a defined regional strike with start/end times and location codes.\n\nHere's my final data object for the strike:\n\n```json\n{\n  \"isStrike\": true,\n  \"startDate\": \"2024-07-18 09:00:00\",\n  \"endDate\": \"2024-07-18 13:00:00\",\n  \"locationType\": \"REGIONAL\",\n  \"locationCodes\": [\"03\"]\n}\n```\n\n\n",
+    "tokens": {
+      "input": 1393,
+      "output": 99,
+      "total": 2261
+    }
+  }
+}

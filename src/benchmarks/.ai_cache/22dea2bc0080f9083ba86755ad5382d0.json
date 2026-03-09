@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8736,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00026225,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.0007605,
+      "cachedCost": 0,
+      "totalCost": 0.00120725
+    },
+    "hash": "22dea2bc0080f9083ba86755ad5382d0",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-11-28-sciopero-nazionale-personale-a.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, here's the deal. My primary task is to determine if this input text is an announcement of an upcoming strike and, if so, to extract the relevant details. I need to be precise; `isStrike` should be `true` ONLY for announcements of strikes that haven't happened yet. Cancellations, summaries, and updates are all out.\n\nThe text is about a strike scheduled for Friday, November 28, 2025. That looks promising. Let's dig in. I need to extract these details: date, duration, scope, and any guaranteed service times.\n\nI've identified the following:\n\n*   **Date:** Friday, November 28, 2025.\n*   **Duration:** 24 hours.\n*   **Scope:** \"Sciopero nazionale\" - clearly, a national strike.\n*   **Guaranteed Times:** \"dalle ore 6.00 alle ore 9.00 e dalle ore 18.00 alle ore 21.00\" - those are the periods where services *should* be running.\n\nSo, this looks like an upcoming strike announcement. That means `isStrike` is `true`. Now, for the data. I'm going to set `startDate` as `2025-11-28 00:00:00` and `endDate` as `2025-11-28 23:59:59` to cover the full day. The scope translates to `locationType` of \"NATIONAL\", and I'll populate the `guaranteedTimes` with the observed periods: `[\"06:00-09:00\", \"18:00-21:00\"]`.\n\nFinally, before I declare this done, I need to double-check my work against the data constraints. I am looking for the following:\n\n*   `locationType`: \"NATIONAL\". That's a match.\n*   `locationCodes`: Omitted (Required if REGIONAL, omitted if NATIONAL). Correct, I'm good there.\n*   Date formats: yyyy-MM-dd HH:mm:ss. Seems fine.\n\nAlright, seems clean. I have successfully analyzed the text, determined it *is* an upcoming strike announcement, and extracted the data into the requested format, which satisfies all the criteria. I'm ready to move on.\n\n\n",
+    "tokens": {
+      "input": 1049,
+      "output": 123,
+      "total": 1679
+    }
+  }
+}

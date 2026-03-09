@@ -1,0 +1,39 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:01:00",
+      "endDate": "2025-12-12 23:59:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "04",
+        "05"
+      ],
+      "guaranteedTimes": [
+        "00:01-21:00",
+        "00:01-23:59"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 31963,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000809,
+      "outputCost": 0.0011748,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0012557
+    },
+    "hash": "d4d4a6f8cb2d34af6b333fd7684171e7",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-12-12-sciopero-del-personale-di-sad-.html",
+    "thoughts": "**Extracting strike details**\n\nI need to output a structured format according to the \"strike_extraction\" schema. The document mentions a strike in both Italian and German, indicating it starts from 00:01 to 21:00 on December 12, 2025. The phrase \"è stato indetto\" means \"has been announced,\" confirming the strike's announcement for SAD and Trentino Trasporti. Though it doesn't specify today's date, the mention of \"2025\" clearly indicates it's a future event.",
+    "tokens": {
+      "input": 1618,
+      "output": 2937,
+      "total": 4555
+    }
+  }
+}

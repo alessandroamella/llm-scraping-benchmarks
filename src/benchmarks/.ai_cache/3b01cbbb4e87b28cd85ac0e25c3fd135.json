@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-12-14 09:00:00",
+      "endDate": "2023-12-14 17:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "00:00-10:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 53876,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000787,
+      "outputCost": 0.0015324,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0016111
+    },
+    "hash": "3b01cbbb4e87b28cd85ac0e25c3fd135",
+    "sourceFile": "strike-detail-gioved--14-dicembre-dalle-ore-9-alle-ore-17-sciope.html",
+    "thoughts": "**Extracting strike information**\n\nI need to format the information into JSON using the `strike_extraction` schema, with `isStrike` set to true because there’s a clearly stated strike on December 14 from 9 AM to 5 PM for regional trains. The announcement mentions updates on circulation through their website and app. I should include the start date and time in the output, but since the year isn't mentioned, I’m deciding to use 2023, as the content is presumably from this year.",
+    "tokens": {
+      "input": 1574,
+      "output": 3831,
+      "total": 5405
+    }
+  }
+}

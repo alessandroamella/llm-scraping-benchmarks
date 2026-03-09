@@ -1,0 +1,51 @@
+{
+  "timestamp": "2026-03-09T17:19:15.027Z",
+  "isCacheHit": false,
+  "request": {
+    "sourceName": "Trenitalia",
+    "fileName": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2026-1-13-sciopero-nazionale-del-trasport.html",
+    "model": "deepseek-chat",
+    "strategy": "mineru-html",
+    "useLenientSchema": false,
+    "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"Trenitalia\" (Italy's national railway operator).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: mineru-html):\n<html lang=\"it\"><body data-language=\"it\">\n<div class=\"section-container section-container--fixed\">\n<div class=\"article\">\n<div>\n<h1 class=\"article--heading\" _item_id=\"2\">SCIOPERO NAZIONALE PERSONALE AUTOFERROTRANVIERI</h1>\n<div class=\"tabular-data-view--snapshot--notes\">\n<div class=\"note\" id=\"service-adjust\" _item_id=\"4\">\n       Servizio: \n       <strong>Bus</strong>\n</div>\n<div class=\"note\" id=\"change-adjust\" _item_id=\"5\">\n       Causa Modifica: \n       <strong>Sciopero</strong>\n</div>\n<div class=\"note\" id=\"company-adjust\" _item_id=\"6\">\n       Impresa: \n       <strong>Trenitalia</strong>\n</div>\n</div>\n</div>\n</div>\n</div>\n<div class=\"section-container section-container--fixed\">\n<div class=\"article\">\n<div class=\"text section\">\n<div class=\"article--text\">\n<p _item_id=\"7\"><b>Il giorno martedì 13 gennaio 2026</b> è stato indetto uno sciopero di 24 ore del personale delle imprese cui si applica il Contratto Collettivo Nazionale di Lavoro degli Autoferrotranvieri.</p>\n<p _item_id=\"8\"><b>I servizi bus programmati in orario possono subire variazioni o cancellazioni.</b></p>\n<p _item_id=\"9\">Per i servizi in orario Trenitalia sono garantiti i servizi essenziali previsti in caso di sciopero nei giorni feriali dalle ore 6.00 alle ore 9.00 e dalle ore 18.00 alle ore 21.00 (come da Orario ufficiale Trenitalia e www.trenitalia.com).</p>\n<p _item_id=\"10\"><b>Nel rispetto delle fasce di garanzia, ci possono essere variazioni in base ai programmi locali.</b></p>\n<p _item_id=\"11\">Lo sciopero può comportare modifiche al servizio anche prima dell’inizio e dopo la sua conclusione.</p>\n<p _item_id=\"12\">Maggiori informazioni sui servizi minimi garantiti in caso di sciopero sono disponibili sui canali digitali di Trenitalia o rivolgendosi al personale di assistenza clienti e presso le biglietterie.</p>\n</div>\n</div>\n</div>\n</div>\n</body></html>"
+  },
+  "response": {
+    "rawOutput": {
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2026-01-13 00:00:00",
+        "endDate": "2026-01-13 23:59:59",
+        "locationType": "NATIONAL",
+        "guaranteedTimes": [
+          "06:00-09:00",
+          "18:00-21:00"
+        ]
+      }
+    },
+    "parsedData": {
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2026-01-13 00:00:00",
+        "endDate": "2026-01-13 23:59:59",
+        "locationType": "NATIONAL",
+        "guaranteedTimes": [
+          "06:00-09:00",
+          "18:00-21:00"
+        ]
+      }
+    },
+    "usage": {
+      "input": 1561,
+      "output": 94,
+      "total": 1655
+    },
+    "costUsd": {
+      "inputCost": 0.00004371,
+      "outputCost": 0.00002632,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00007003
+    },
+    "durationMs": 5206
+  }
+}

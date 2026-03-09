@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-16 03:00:00",
+      "endDate": "2025-06-17 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4978,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.001971,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.0005115,
+      "cachedCost": 0,
+      "totalCost": 0.0026925
+    },
+    "hash": "7ae81b6ff085df1af9d224022365652d",
+    "sourceFile": "strike-detail-luned--16-giugno-sciopero-dei-treni-regionali.html",
+    "thoughts": "**Analyzing the Trenord Strike Announcement**\n\nOkay, let's break this down. I've got a heads-up from Trenord regarding a regional train strike in the Lombardia region. The source is clear: \"Lunedì 16 giugno sciopero dei treni regionali\" – so, *yes*, this is definitely a strike situation. My initial parsing confirms `isStrike`: true.\n\nThe strike is scheduled to run from 3 AM on Monday, June 16th, to 2 AM on Tuesday, June 17th, as confirmed by \"Dalle ore 3 di lunedì 16 alle ore 2 di martedì 17 giugno\". Based on the context \"Lunedì 16 giugno\" in relation to the document date 13/06/2025 (in the metadata, which is key for this type of forecasting), I'm confident in assigning `strikeData.startDate`: \"2025-06-16 03:00:00\" and `strikeData.endDate`: \"2025-06-17 02:00:00\".\n\nThis is explicitly regional, so `strikeData.locationType`: \"REGIONAL\" is accurate, and the code for the Lombardia region is \"03\", thus `strikeData.locationCodes`: [\"03\"].\n\nThe critical piece for contingency planning is the guaranteed service. The announcement specifies trains will run during the 6-9 AM and 6-9 PM windows. Therefore, `strikeData.guaranteedTimes`: [\"06:00-09:00\", \"18:00-21:00\"]. I need to make note of that, so I can ensure the relevant models are updated with this crucial information.\n\n\n",
+    "tokens": {
+      "input": 7884,
+      "output": 140,
+      "total": 8365
+    }
+  }
+}

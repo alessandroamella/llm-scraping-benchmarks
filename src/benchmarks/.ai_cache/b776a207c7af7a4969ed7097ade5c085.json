@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-03-19 09:00:00",
+      "endDate": "2025-03-19 17:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "09:00-10:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 26400,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008115,
+      "outputCost": 0.0008316,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00091275
+    },
+    "hash": "b776a207c7af7a4969ed7097ade5c085",
+    "sourceFile": "strike-detail-mercoled--19-marzo-dalle-ore-9-alle-ore-17-scioper.html",
+    "thoughts": "**Extracting strike details**\n\nI’m focusing on outputting data in JSON format according to the strike_extraction schema. The document’s content is announcing a national transport strike on March 19, from 9 to 17. It's confirmed as an upcoming event with potential disruptions to services. The specified date is indeed in 2025, so I’m confirming that isStrike is true. I’ll extract the relevant strike data, including the start and end dates formatted as 'yyyy-MM-dd HH:mm:ss'.",
+    "tokens": {
+      "input": 1623,
+      "output": 2079,
+      "total": 3702
+    }
+  }
+}

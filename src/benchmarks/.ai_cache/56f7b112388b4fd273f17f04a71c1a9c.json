@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-12 00:00:00",
+      "endDate": "2024-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8964,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00034575,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.0010605,
+      "cachedCost": 0,
+      "totalCost": 0.00159075
+    },
+    "hash": "56f7b112388b4fd273f17f04a71c1a9c",
+    "sourceFile": "strike-detail-venerd--12-dicembre-da-mezzanotte-alle-21-sciopero.html",
+    "thoughts": "**Analyzing the Trenord Strike Announcement**\n\nOkay, so I'm looking at this announcement from Trenord regarding a strike. It's for \"Venerdì 12 dicembre,\" and since it's implied this is an upcoming date and no year is specified but the instruction asks for yyyy-MM-dd HH:mm:ss, I'm going to assume it's December 12th of this year, 2024. The text specifies it's a \"sciopero nazionale,\" a national strike, so that's key.\n\nThe strike runs \"da mezzanotte alle 21,\" that's from midnight to 9 PM, but it also mentions \"ulteriori impatti su rete FERROVIENORD... dalle 21 a mezzanotte,\" so there might be further disruption from 9 PM to midnight on the FERROVIENORD network specifically. Therefore I must consider the entire period for the strike is midnight to the end of the day.\n\nTherefore, the `strikeData` should be:\n*   `startDate`: \"2024-12-12 00:00:00\"\n*   `endDate`: \"2024-12-12 23:59:59\"\n\nThe `locationType` is definitely \"NATIONAL,\" based on the \"sciopero nazionale\" phrasing. Since it's a national strike, I don't need to specify any `locationCodes` since this is applicable nationwide.\n\nGuaranteed times are also provided; 06:00-09:00 and 18:00-21:00 (6 AM to 9 AM, and 6 PM to 9 PM). I'll include these in the `guaranteedTimes` array. So, the `strikeData` structure seems accurate and I am confident that my assessment is correct, ready to be integrated into the system.\n\n\n",
+    "tokens": {
+      "input": 1383,
+      "output": 123,
+      "total": 2213
+    }
+  }
+}

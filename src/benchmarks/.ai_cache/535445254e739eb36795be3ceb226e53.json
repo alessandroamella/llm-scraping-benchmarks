@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-16 10:00:00",
+      "endDate": "2025-11-16 17:59:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "08",
+        "07",
+        "03",
+        "01",
+        "05"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21250,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007675,
+      "outputCost": 0.0006776,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00075435
+    },
+    "hash": "535445254e739eb36795be3ceb226e53",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-11-16-sciopero-del-personale-di-tren.html",
+    "thoughts": "**Processing strike announcement**\n\nI need to output a JSON following the strike_extraction format. The content in Italian announces a strike for Trenord on November 16, 2025, from 10:00 to 17:59. Since it's an announcement of a future strike, I conclude that isStrike should be true. For the strikeData, I’ll set the startDate to \"2025-11-16 10:00:00\" and the endDate to \"2025-11-16 17:59:00\". I think I've got everything I need for this!",
+    "tokens": {
+      "input": 1535,
+      "output": 1694,
+      "total": 3229
+    }
+  }
+}

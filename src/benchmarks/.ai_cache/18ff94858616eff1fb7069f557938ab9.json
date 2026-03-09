@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-01-09 21:00:00",
+      "endDate": "2026-01-10 23:59:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "04",
+        "05"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 42733,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000849,
+      "outputCost": 0.0013956,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0014805
+    },
+    "hash": "18ff94858616eff1fb7069f557938ab9",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2026-1-9-sciopero-del-personale-di-sad---.html",
+    "thoughts": "**Analyzing strike data**\n\nI need to format a JSON output with an `isStrike` boolean and `strikeData` if true. The content is an Italian article about strikes by SAD and Trentino Trasporti personnel. It indicates specific strike times and dates: Jan 9, 2026, at 21:00 to Jan 10, 2026, at 20:59 for SAD, and Jan 10, 2026, from 00:01 to 23:59 for Trentino Trasporti. Since the strikes are explicitly announced, `isStrike` should be true, and I’ll extract the `strikeData` accordingly.",
+    "tokens": {
+      "input": 1698,
+      "output": 3489,
+      "total": 5187
+    }
+  }
+}

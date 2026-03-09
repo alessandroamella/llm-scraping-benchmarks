@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-11-29 09:00:00",
+      "endDate": "2024-11-29 13:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 31256,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003861,
+      "outputCost": 0.0008644,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0012505
+    },
+    "hash": "18d3766c27d88d8c30b893320d4193c4",
+    "sourceFile": "strike-detail-venerd--29-novembre-dalle-9-alle-13-sciopero-gener.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to analyze content regarding a potential strike from Trenord. The Italian text indicates a general strike on \"Friday November 29 from 9 to 13,\" which suggests it's announcing something significant. The document mentions impacts on Ferrovienord, along with specific lines like S3 and S4, but it states that Trenord staff won't be directly involved. Overall, it confirms this is an announcement for an upcoming strike, so I’ll mark isStrike as true.",
+    "tokens": {
+      "input": 7722,
+      "output": 2161,
+      "total": 9883
+    }
+  }
+}

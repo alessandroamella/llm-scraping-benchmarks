@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:01:00",
+      "endDate": "2025-12-12 23:59:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "04",
+        "05"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 10509,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00030575,
+      "outputCost": 0.000159,
+      "thinkingCost": 0.0008895,
+      "cachedCost": 0,
+      "totalCost": 0.00135425
+    },
+    "hash": "e9823a4b40c1b935eaf845f143069353",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-12-12-sciopero-del-personale-di-sad-.html",
+    "thoughts": "**Strike Data Processing**\n\nOkay, let me break this down. I've got an announcement here about a strike, SAD and Trentino Trasporti are going to be walking out. The crucial bit is the date: December 12th, 2025. SAD is striking from 00:01 to 21:00, and Trentino Trasporti from 00:01 to 23:59. Since we need to capture the *entire* impact, the window I'll define is from the earliest start, 00:01, to the latest end, 23:59, all on December 12th, 2025.\n\nRegionally, this affects Trentino-Alto Adige (code 04) and Veneto (code 05). My task is to format this information as a JSON object, specifically using the schema provided. The schema expects an object with `isStrike`, and `strikeData`, so this is a strike.\n\nNow, let's build the data. I have:\n\n*   `startDate`: \"2025-12-12 00:01:00\"\n*   `endDate`: \"2025-12-12 23:59:00\"\n*   `locationType`: \"REGIONAL\" (given the two regions)\n*   `locationCodes`: [\"04\", \"05\"]\n*   `guaranteedTimes`: None mentioned, so this field will be null or omitted depending on the schema requirements\n\nBased on the prompt, it would be logical to provide these in a single JSON array, but the schema requires an object containing `isStrike` or `strikeData`. So, I'll wrap the JSON object within an array if needed per the explicit request.\n\nHere's the data structure I need to generate:\n\n*   `isStrike`: true\n*   `strikeData`:\n    *   `startDate`: \"2025-12-12 00:01:00\"\n    *   `endDate`: \"2025-12-12 23:59:00\"\n    *   `locationType`: \"REGIONAL\"\n    *   `locationCodes`: [\"04\", \"05\"]\n\nThe location codes \"04\" and \"05\" are valid, and the date formats are correct.\n\n\n",
+    "tokens": {
+      "input": 1223,
+      "output": 106,
+      "total": 1922
+    }
+  }
+}

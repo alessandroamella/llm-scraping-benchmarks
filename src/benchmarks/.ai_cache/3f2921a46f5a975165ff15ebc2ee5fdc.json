@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-05 03:00:00",
+      "endDate": "2025-02-06 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 13150,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003725,
+      "outputCost": 0.0005024,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008749
+    },
+    "hash": "3f2921a46f5a975165ff15ebc2ee5fdc",
+    "sourceFile": "strike-detail-mercoled--5-febbraio-sciopero-dei-treni-regionali.html",
+    "thoughts": "**Preparing final answer**\n\nI’m focusing on the instructions regarding time ranges with guaranteed service. I see that I need to use \"null\" if nothing is specified, and the format should be in HH:mm-HH:mm. So, I'll make sure to apply that correctly in the final answer. It seems straightforward, but I want to double-check everything to ensure accuracy before I finalize it. Let’s wrap this up nicely!",
+    "tokens": {
+      "input": 7450,
+      "output": 1256,
+      "total": 8706
+    }
+  }
+}

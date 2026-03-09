@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-12-14 09:00:00",
+      "endDate": "2023-12-14 17:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8142,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00029025,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.001071,
+      "cachedCost": 0,
+      "totalCost": 0.00150975
+    },
+    "hash": "6c8c8c645dc6122817b315e451abfc11",
+    "sourceFile": "strike-detail-gioved--14-dicembre-dalle-ore-9-alle-ore-17-sciope.html",
+    "thoughts": "**Analyzing the Trenord Strike Announcement**\n\nOkay, so I've got this Trenord announcement to process. My task is to determine if it's a strike, extract the relevant details, and represent it as JSON. The content is pretty straightforward: it's announcing a strike of regional trains, specifically Trenord in the Lombardia region. The date and time are clearly stated: \"Giovedì 14 dicembre dalle ore 9 alle ore 17\" – Thursday, December 14th, from 9 AM to 5 PM.\n\nFirst, I need to confirm this is indeed a strike, which is easy enough, it states \"sciopero dei treni regionali\". Alright, confirmed – `isStrike` is `true`. Now, to build the `strikeData` object. I can extract the `startDate` as \"2023-12-14 09:00:00\" and `endDate` as \"2023-12-14 17:00:00\". The location is definitely regional, targeting Trenord operations within the Lombardia region, so `locationType` will be \"REGIONAL\". I'll use \"03\" for the regional code, since it represents Lombardia.\n\nNow, the trickier part, `guaranteedTimes`. The text mentions something about trains running in the morning \"La mattina viaggeranno i treni con orario di partenza dalla stazione di origine corsa prima delle ore 9 e arrivo a destinazione finale entro le ore 10.\" The text indicates trains are running *before* 9 AM. I'm going to omit the `guaranteedTimes` key since the instruction asks specifically for time ranges during which service is guaranteed and the text doesn't provide a precise \"06:00-09:00\" type window. It just talks about trains arriving before 10 AM. Better to err on the side of caution and not provide a guaranteed window since it is not explicitly defined. It's safe to omit it to be conservative.\n\nSo, here's my JSON structure:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2023-12-14 09:00:00\",\n    \"endDate\": \"2023-12-14 17:00:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"03\"]\n  }\n}\n```\n\n\n",
+    "tokens": {
+      "input": 1161,
+      "output": 99,
+      "total": 1974
+    }
+  }
+}

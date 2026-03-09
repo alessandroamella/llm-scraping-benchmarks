@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-09-30 03:00:00",
+      "endDate": "2024-10-01 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6632,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000318,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.0006315,
+      "cachedCost": 0,
+      "totalCost": 0.0011595
+    },
+    "hash": "e288d29335d515c92d5b85eb1d103d63",
+    "sourceFile": "strike-detail-sciopero-del-trasporto-ferroviario-luned--30-sette.html",
+    "thoughts": "**Analyzing the Trenord Strike Announcement**\n\nOkay, so I've been given an HTML snippet from Trenord, and the task is to extract information about any upcoming strikes. Right, let's see what we've got.\n\nFirst, I see the announcement text: \"Sciopero del trasporto ferroviario lunedì 30 settembre\" - a railway strike is scheduled for Monday, September 30th. Bingo, we've got a strike!\n\nThe details are pretty straightforward. The strike's duration is \"dalle ore 3 del 30 settembre alle ore 2 del 1° ottobre\" – from 3 AM on September 30th to 2 AM on October 1st. I'll translate that directly to `startDate`: \"2024-09-30 03:00:00\" and `endDate`: \"2024-10-01 02:00:00\", assuming the current year is 2024 since it's not specified but that's what seems logical.\n\nCrucially, there are guaranteed service times: \"6-9 e 18-21\", which means service will be maintained between 6 AM and 9 AM and again between 6 PM and 9 PM. That becomes `guaranteedTimes`: [\"06:00-09:00\", \"18:00-21:00\"].\n\nThe location is Trenord, and the context clearly indicates it's within Lombardia (region code 03).  This seems to suggest a `locationType` of \"REGIONAL\", with `locationCodes`: [\"03\"].\n\nSo, to summarize everything, I'm confident that this represents an *upcoming* strike. The data is parsed and formatted correctly with the correct date formats and guaranteed times format, and the location data seems valid.  The critical information has been successfully extracted and structured for use in whatever system requires this kind of information.\n\n\n",
+    "tokens": {
+      "input": 1272,
+      "output": 140,
+      "total": 1833
+    }
+  }
+}

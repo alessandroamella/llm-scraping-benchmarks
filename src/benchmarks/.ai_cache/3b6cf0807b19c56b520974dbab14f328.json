@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9957,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00035525,
+      "outputCost": 0.000126,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00048125
+    },
+    "hash": "3b6cf0807b19c56b520974dbab14f328",
+    "sourceFile": "strike-detail-venerd--29-novembre-revocato-sciopero-ferrovienord.html",
+    "thoughts": "**Determining strike status**\n\nI need to figure out how to output the JSON for strike extraction, focusing on whether it's about a new or upcoming strike. The Italian text I’m analyzing mentions a revoked strike scheduled for November 29, which means it's actually a cancellation, not an ongoing strike. Based on the instruction to set isStrike to false for cancellations, I'll return {\"isStrike\": false}. Since it's confirming the revocation, I won't include strikeData.",
+    "tokens": {
+      "input": 7105,
+      "output": 315,
+      "total": 7420
+    }
+  }
+}

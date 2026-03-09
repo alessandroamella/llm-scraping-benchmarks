@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20924,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007305,
+      "outputCost": 0.0006104,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00068345
+    },
+    "hash": "7a46d92fd480d40ce5216651d9663bd7",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-11-28-sciopero-nazionale-personale-a.html",
+    "thoughts": "**Analyzing strike notice**\n\nI see that the document mentions scheduled bus services possibly being affected due to a strike. It seems to relate to a public service notice about an upcoming strike on Friday, November 28, 2025. This isn't about a past event; instead, it's clearly about a future occurrence, so I should set isStrike to true. It looks like I need to extract specific strike data, including start and end dates, location type, location codes, and guaranteed times.",
+    "tokens": {
+      "input": 1461,
+      "output": 1526,
+      "total": 2987
+    }
+  }
+}
