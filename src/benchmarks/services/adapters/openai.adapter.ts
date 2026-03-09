@@ -49,7 +49,23 @@ export class OpenAiAdapter extends BaseOpenAiAdapter {
     let rawOutput: RawAiResponse;
     try {
       const parsed = JSON.parse(messageContent.text);
-      rawOutput = schema.parse(parsed) as RawAiResponse;
+      const openAiValidated = schema.parse(parsed);
+
+      // FIX PER STRICT MODE: Convertiamo i null di OpenAI in undefined
+      // per combaciare perfettamente con il BenchmarkStrikeSchema / Ground Truth
+      if (
+        !options.useLenientSchema &&
+        openAiValidated.isStrike &&
+        openAiValidated.strikeData
+      ) {
+        for (const key of Object.keys(openAiValidated.strikeData)) {
+          if (openAiValidated.strikeData[key] === null) {
+            delete openAiValidated.strikeData[key];
+          }
+        }
+      }
+
+      rawOutput = openAiValidated as RawAiResponse;
     } catch (error) {
       throw new Error(
         `Failed to parse OpenAI response: ${error instanceof Error ? error.message : String(error)}`,

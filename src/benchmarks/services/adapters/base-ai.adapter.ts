@@ -1,23 +1,8 @@
-import chalk from 'chalk';
-import { uniq } from 'lodash-es';
-import {
-  isValidLocationCode,
-  LocationCode,
-} from '@/shared/constants/location-codes';
-import {
-  getRegionCodeForProvince,
-  isProvinceCode,
-} from '@/shared/constants/provinces';
-import { regionsArr } from '@/shared/constants/regions';
-import { LocationType } from '@/shared/enums';
 import { SupportedModel } from '../../definitions/strike-parser.interface';
 import {
-  BenchmarkLenientStrike,
   BenchmarkStrike,
-  BenchmarkStrikeSchema,
   normalizeLenientResponse,
   RawAiResponse,
-  timeRangeRegex,
 } from '../../schemas/benchmark-strike.schema';
 import {
   AdapterGenerationResult,
@@ -25,14 +10,6 @@ import {
   AiModelAdapterOptions,
   ProviderName,
 } from './ai-adapter.interface';
-
-// Shared utility
-const cleanDate = (d: string | null | undefined) => {
-  if (!d) return '';
-  let cleaned = d.replace('T', ' ').replace('Z', '');
-  if (cleaned.split(':').length === 2) cleaned += ':00';
-  return (cleaned.split('.')[0] ?? '').trim();
-};
 
 export abstract class BaseAiAdapter implements AiModelAdapter<RawAiResponse> {
   abstract readonly provider: ProviderName;
@@ -53,135 +30,15 @@ export abstract class BaseAiAdapter implements AiModelAdapter<RawAiResponse> {
     rawOutput: RawAiResponse,
     options: AiModelAdapterOptions,
   ): BenchmarkStrike {
+    // Se è Lenient, applichiamo tutta la magia di pulizia
     if (options.useLenientSchema) {
       return normalizeLenientResponse(rawOutput);
     }
 
-    const { isStrike, strikeData } = rawOutput as BenchmarkLenientStrike;
-    if (!isStrike || !strikeData) return { isStrike: false };
-
-    // Fix Location Type (Il problema di Groq/Llama)
-    let finalLocationType: LocationType = LocationType.REGIONAL;
-
-    if (strikeData.locationType) {
-      // Default super sicuro
-      const rawType = strikeData.locationType.toUpperCase().trim();
-
-      if (rawType.includes('NATION') || rawType.includes('GENERA')) {
-        finalLocationType = LocationType.NATIONAL;
-      } else {
-        // Tutto il resto diventa REGIONAL
-        finalLocationType = LocationType.REGIONAL;
-      }
-    }
-
-    const startDate = cleanDate(strikeData.startDate);
-    const endDate = cleanDate(strikeData.endDate);
-
-    // Se mancano le date, non possiamo farci molto, lasciamo che Zod finale esploda o gestiamo errore
-    if (!startDate || !endDate) {
-      // Fallback brutale o errore? Per il benchmark meglio lanciare errore e segnarlo come fail
-      console.warn(
-        chalk.yellow(
-          `⚠️  Missing or unparseable dates in response. startDate: "${strikeData.startDate}", endDate: "${strikeData.endDate}"`,
-        ),
-      );
-      // print full response
-      console.log(
-        chalk.yellow(
-          `Full response: ${JSON.stringify(strikeData)}, file name: ${options?.fileName ?? 'unknown'}`,
-        ),
-      );
-
-      // Instead of throwing, fallback to isStrike: false
-      console.warn(chalk.red('⚠️  Marking as NO STRIKE due to missing dates'));
-      return { isStrike: false };
-    }
-
-    // Fix Location Codes
-    const cleanLocationCodes = new Set<LocationCode>();
-    if (
-      finalLocationType !== LocationType.NATIONAL &&
-      strikeData.locationCodes
-    ) {
-      strikeData.locationCodes.forEach((l) => {
-        const cleanL = l.trim();
-
-        // È già un codice valido?
-        if (isValidLocationCode(cleanL)) {
-          cleanLocationCodes.add(cleanL);
-          return;
-        }
-
-        // Se ha settato REGIONAL, forziamo il mapping a numero (e.g. 03) anche se il modello ha sputato "Lombardia"
-        if (finalLocationType === LocationType.REGIONAL) {
-          const foundRegion = regionsArr.find(
-            ([code, name]) =>
-              name.toLowerCase() === cleanL.toLowerCase() || code === cleanL,
-          );
-          if (foundRegion) {
-            cleanLocationCodes.add(foundRegion[0]);
-            return;
-          }
-        }
-
-        // Fallback finale: controlla se ha messo una provincia
-        if (isProvinceCode(cleanL)) {
-          cleanLocationCodes.add(getRegionCodeForProvince(cleanL));
-          return;
-        }
-      });
-    }
-
-    // Fix Guaranteed Times (validate HH:mm-HH:mm format)
-    let cleanGuaranteedTimes: string[] | undefined = strikeData.guaranteedTimes
-      ? strikeData.guaranteedTimes
-          .map((t) => {
-            const trimmed = t.trim().replaceAll('?', '');
-            if (!timeRangeRegex.test(trimmed)) {
-              console.log(
-                chalk.yellow(`⚠️  Invalid guaranteed time format: "${trimmed}"`),
-              );
-              return null;
-            }
-            return trimmed;
-          })
-          .filter((t): t is string => t !== null).length > 0
-        ? strikeData.guaranteedTimes
-            .map((t) => t.trim())
-            .filter((t) => timeRangeRegex.test(t))
-        : undefined
-      : undefined;
-
-    if (cleanGuaranteedTimes) {
-      cleanGuaranteedTimes = uniq(cleanGuaranteedTimes);
-    }
-
-    // Caso estremo: se nessun locationCodes, ipotizziamo NATIONAL, altrimenti REGIONAL
-    if (!finalLocationType) {
-      finalLocationType =
-        cleanLocationCodes.size === 0
-          ? LocationType.NATIONAL
-          : LocationType.REGIONAL;
-    }
-
-    // Costruiamo l'oggetto finale che deve passare la validazione Zod STRETTA interna
-    const data: BenchmarkStrike = {
-      isStrike: true,
-      strikeData: {
-        startDate,
-        endDate,
-        locationType: finalLocationType,
-        // Se NATIONAL, locationCodes deve essere undefined nello schema finale strict
-        locationCodes:
-          finalLocationType === LocationType.NATIONAL
-            ? undefined
-            : Array.from(cleanLocationCodes),
-        guaranteedTimes: cleanGuaranteedTimes,
-      },
-    };
-
-    // Validazione finale (se fallisce qui, è colpa della nostra normalizzazione che non è bastata)
-    return BenchmarkStrikeSchema.parse(data);
+    // STRICT MODE PURO:
+    // L'output è GIA' stato validato dallo Zod schema (BenchmarkStrikeSchema)
+    // all'interno dei metodi generate() dei singoli adapter.
+    // Nessun salvataggio manuale. Passa o muore.
+    return rawOutput as BenchmarkStrike;
   }
 }
