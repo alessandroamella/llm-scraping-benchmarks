@@ -14,8 +14,8 @@ const RATE_LIMITER_STATE: RateLimiterState = {
   windowStartTime: Date.now(),
 };
 
-const REQUESTS_PER_MINUTE = 1000;
-const TOKENS_PER_MINUTE = 300_000;
+const REQUESTS_PER_MINUTE = 9000;
+const TOKENS_PER_MINUTE = 280_000;
 const MINUTE_MS = 60_000;
 
 // Utility to delay execution

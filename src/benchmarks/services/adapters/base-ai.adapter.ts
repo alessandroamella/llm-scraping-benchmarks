@@ -157,6 +157,14 @@ export abstract class BaseAiAdapter implements AiModelAdapter<RawAiResponse> {
       cleanGuaranteedTimes = uniq(cleanGuaranteedTimes);
     }
 
+    // Caso estremo: se nessun locationCodes, ipotizziamo NATIONAL, altrimenti REGIONAL
+    if (!finalLocationType) {
+      finalLocationType =
+        cleanLocationCodes.size === 0
+          ? LocationType.NATIONAL
+          : LocationType.REGIONAL;
+    }
+
     // Costruiamo l'oggetto finale che deve passare la validazione Zod STRETTA interna
     const data: BenchmarkStrike = {
       isStrike: true,
