@@ -3,37 +3,24 @@ import { jsonrepair } from 'jsonrepair';
 import { GeminiModel } from '../../definitions/strike-parser.interface';
 import {
   BenchmarkLenientSchema,
-  BenchmarkLenientStrike,
-  BenchmarkStrike,
   BenchmarkStrikeSchema,
-  normalizeLenientResponse,
   RawAiResponse,
 } from '../../schemas/benchmark-strike.schema';
 import {
   AdapterGenerationResult,
-  AiModelAdapter,
   AiModelAdapterOptions,
 } from './ai-adapter.interface';
+import { BaseAiAdapter } from './base-ai.adapter';
 
-// Define what Google returns for either schema
-interface GeminiRawOutput {
-  isStrike: boolean;
-  strikeData?: {
-    startDate?: string;
-    endDate?: string;
-    locationType?: string;
-    locationCodes?: string[] | null;
-    guaranteedTimes?: string[] | null;
-  };
-}
-
-export class GeminiAdapter implements AiModelAdapter<RawAiResponse> {
+export class GeminiAdapter extends BaseAiAdapter {
   readonly provider = 'google';
 
   constructor(
     private client: GoogleGenAI,
     readonly model: GeminiModel,
-  ) {}
+  ) {
+    super();
+  }
 
   async estimateInputTokens(prompt: string): Promise<number> {
     const result = await this.client.models.countTokens({
@@ -56,18 +43,15 @@ export class GeminiAdapter implements AiModelAdapter<RawAiResponse> {
       contents: [{ role: 'user', parts: [{ text: prompt }] }],
       config: {
         responseMimeType: 'application/json',
-        responseSchema: targetSchema.toJSONSchema(),
+        responseJsonSchema: targetSchema.toJSONSchema(),
       },
     });
 
     const text = result.text || '{}';
-    const raw = JSON.parse(jsonrepair(text)) as GeminiRawOutput;
+    const raw = JSON.parse(jsonrepair(text));
 
-    // Validate using our Zod schemas to ensure it matches RawAiResponse
-    const zodSchema = options.useLenientSchema
-      ? BenchmarkLenientSchema
-      : BenchmarkStrikeSchema;
-    const validated = zodSchema.parse(raw) as RawAiResponse;
+    // Validate using our Zod schemas
+    const validated = targetSchema.parse(raw) as RawAiResponse;
 
     const usage = result.usageMetadata || {
       promptTokenCount: 0,
@@ -85,15 +69,5 @@ export class GeminiAdapter implements AiModelAdapter<RawAiResponse> {
         total: usage.totalTokenCount ?? 0,
       },
     };
-  }
-
-  normalizeResponse(
-    rawOutput: RawAiResponse,
-    options: AiModelAdapterOptions,
-  ): BenchmarkStrike {
-    if (options.useLenientSchema) {
-      return normalizeLenientResponse(rawOutput as BenchmarkLenientStrike);
-    }
-    return rawOutput as BenchmarkStrike;
   }
 }

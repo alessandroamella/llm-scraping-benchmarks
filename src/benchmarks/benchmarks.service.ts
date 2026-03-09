@@ -718,8 +718,8 @@ export class BenchmarksService implements OnModuleInit {
 
         return [
           limit(async () => {
-            // Give the event loop 50ms to handle I/O (RabbitMQ heartbeats) before starting heavy CPU work
-            await sleep(10);
+            // Give the event loop 5ms to breathe
+            await sleep(5);
 
             try {
               const startTime = performance.now();

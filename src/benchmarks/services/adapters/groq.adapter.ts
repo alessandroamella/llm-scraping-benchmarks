@@ -1,21 +1,5 @@
-import { jsonrepair } from 'jsonrepair';
-import { omit } from 'lodash-es';
-import { OpenAI } from 'openai';
-import {
-  BenchmarkLenientSchema,
-  BenchmarkLenientStrike,
-  BenchmarkStrike,
-  BenchmarkStrikeSchema,
-  normalizeLenientResponse,
-  RawAiResponse,
-} from '@/benchmarks/schemas/benchmark-strike.schema';
-import { GroqModel } from '../../definitions/strike-parser.interface';
-import {
-  AdapterGenerationResult,
-  AiModelAdapter,
-  AiModelAdapterOptions,
-} from './ai-adapter.interface';
-import { OpenAiAdapter } from './openai.adapter';
+import { AiModelAdapterOptions } from './ai-adapter.interface';
+import { BaseOpenAiAdapter } from './base-openai.adapter';
 
 // Global rate limiter state
 interface RateLimiterState {
@@ -81,82 +65,11 @@ const checkAndUpdateRateLimit = async (prompt: string): Promise<void> => {
   }
 };
 
-// Extends OpenAI adapter to reuse normalization logic
-export class GroqAdapter
-  extends OpenAiAdapter
-  implements AiModelAdapter<RawAiResponse>
-{
-  override readonly provider = 'groq';
+export class GroqAdapter extends BaseOpenAiAdapter {
+  readonly provider = 'groq';
 
-  constructor(
-    client: OpenAI,
-    override readonly model: GroqModel,
-  ) {
-    super(client, model);
-  }
-
-  // Override estimation if needed, otherwise uses parent tiktoken fallback
-  override async estimateInputTokens(
-    prompt: string,
-    options: AiModelAdapterOptions,
-  ): Promise<number> {
-    // Groq/Llama tokenizers are different, but GPT-4o tokenizer is a "good enough" proxy for cost est.
-    return super.estimateInputTokens(prompt, { ...options });
-  }
-
-  // Override generate because Groq doesn't support SDK .responses.parse()
-  override async generate(
-    prompt: string,
-    options: AiModelAdapterOptions,
-  ): Promise<AdapterGenerationResult<RawAiResponse>> {
-    // Check rate limits, waiting if necessary
+  async generate(prompt: string, options: AiModelAdapterOptions) {
     await checkAndUpdateRateLimit(prompt);
-
-    const schema = options.useLenientSchema
-      ? BenchmarkLenientSchema
-      : BenchmarkStrikeSchema;
-
-    // Inject schema into prompt for Groq/Llama
-    const schemaString = JSON.stringify(
-      omit(schema.toJSONSchema(), ['$schema']),
-    );
-    const enrichedPrompt = `${prompt}\n\nReturn a JSON object matching this schema: ${schemaString}`;
-
-    const completion = await this.client.chat.completions.create({
-      model: this.model,
-      messages: [{ role: 'user', content: enrichedPrompt }],
-      response_format: { type: 'json_object' },
-    });
-
-    const content = completion.choices[0]?.message?.content || '{}';
-    const parsed = JSON.parse(jsonrepair(content));
-
-    // Unwrap strikeData if it's an array (model sometimes wraps it incorrectly)
-    if (parsed.strikeData && Array.isArray(parsed.strikeData)) {
-      parsed.strikeData = parsed.strikeData[0] || null;
-    }
-
-    const validated = schema.parse(parsed) as RawAiResponse;
-
-    return {
-      rawOutput: validated,
-      usage: {
-        input: completion.usage?.prompt_tokens ?? 0,
-        output: completion.usage?.completion_tokens ?? 0,
-        total: completion.usage?.total_tokens ?? 0,
-      },
-    };
-  }
-
-  // Override normalizeResponse to handle both strict and lenient schemas
-  override normalizeResponse(
-    rawOutput: unknown,
-    options: AiModelAdapterOptions,
-  ): BenchmarkStrike {
-    if (options.useLenientSchema) {
-      return normalizeLenientResponse(rawOutput as BenchmarkLenientStrike);
-    }
-    // Fall back to parent implementation for strict schema normalization
-    return super.normalizeResponse(rawOutput, options);
+    return this.generateViaJsonMode(prompt, options);
   }
 }
