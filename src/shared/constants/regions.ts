@@ -36,3 +36,13 @@ export const getRegionName = (code: string): string | null => {
   const region = regions.find((r) => r.code === code);
   return region ? region.name : null;
 };
+
+export const findRegionCodeByNameOrCode = (
+  input: string,
+): RegionCode | null => {
+  const cleaned = input.trim().toUpperCase();
+  const found = regionsArr.find(
+    ([code, name]) => code === cleaned || name.toUpperCase() === cleaned,
+  );
+  return found ? found[0] : null;
+};

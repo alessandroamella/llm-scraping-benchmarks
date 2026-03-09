@@ -1,9 +1,13 @@
 import chalk from 'chalk';
+import { uniq } from 'lodash-es';
 import {
   isValidLocationCode,
   LocationCode,
 } from '@/shared/constants/location-codes';
-import { provincesArr } from '@/shared/constants/provinces';
+import {
+  getRegionCodeForProvince,
+  isProvinceCode,
+} from '@/shared/constants/provinces';
 import { regionsArr } from '@/shared/constants/regions';
 import { LocationType } from '@/shared/enums';
 import { SupportedModel } from '../../definitions/strike-parser.interface';
@@ -57,18 +61,17 @@ export abstract class BaseAiAdapter implements AiModelAdapter<RawAiResponse> {
     if (!isStrike || !strikeData) return { isStrike: false };
 
     // Fix Location Type (Il problema di Groq/Llama)
-    let finalLocationType: LocationType = LocationType.REGION; // Default sicuro
+    let finalLocationType: LocationType = LocationType.REGIONAL;
 
     if (strikeData.locationType) {
+      // Default super sicuro
       const rawType = strikeData.locationType.toUpperCase().trim();
 
       if (rawType.includes('NATION') || rawType.includes('GENERA')) {
         finalLocationType = LocationType.NATIONAL;
-      } else if (rawType.includes('PROVINC')) {
-        finalLocationType = LocationType.PROVINCE;
-      } else if (rawType.includes('REGIO')) {
-        // Cattura "REGION", "REGIONAL", "REGIONALE"
-        finalLocationType = LocationType.REGION;
+      } else {
+        // Tutto il resto diventa REGIONAL
+        finalLocationType = LocationType.REGIONAL;
       }
     }
 
@@ -96,7 +99,7 @@ export abstract class BaseAiAdapter implements AiModelAdapter<RawAiResponse> {
     }
 
     // Fix Location Codes
-    const cleanLocationCodes: LocationCode[] = [];
+    const cleanLocationCodes = new Set<LocationCode>();
     if (
       finalLocationType !== LocationType.NATIONAL &&
       strikeData.locationCodes
@@ -106,52 +109,53 @@ export abstract class BaseAiAdapter implements AiModelAdapter<RawAiResponse> {
 
         // È già un codice valido?
         if (isValidLocationCode(cleanL)) {
-          cleanLocationCodes.push(cleanL);
+          cleanLocationCodes.add(cleanL);
           return;
         }
 
-        // È un nome di regione? (Lombardia -> 03)
-        const foundRegion = regionsArr.find(
-          ([_, name]) => name.toLowerCase() === cleanL.toLowerCase(),
-        );
-        if (foundRegion) {
-          cleanLocationCodes.push(foundRegion[0]);
-          return;
+        // Se ha settato REGIONAL, forziamo il mapping a numero (e.g. 03) anche se il modello ha sputato "Lombardia"
+        if (finalLocationType === LocationType.REGIONAL) {
+          const foundRegion = regionsArr.find(
+            ([code, name]) =>
+              name.toLowerCase() === cleanL.toLowerCase() || code === cleanL,
+          );
+          if (foundRegion) {
+            cleanLocationCodes.add(foundRegion[0]);
+            return;
+          }
         }
 
-        // È un nome di provincia? (Milano -> MI)
-        const foundProv = provincesArr.find(
-          ([name, _, __]) => name.toLowerCase() === cleanL.toLowerCase(),
-        );
-        if (foundProv) {
-          cleanLocationCodes.push(foundProv[1]);
+        // Fallback finale: controlla se ha messo una provincia
+        if (isProvinceCode(cleanL)) {
+          cleanLocationCodes.add(getRegionCodeForProvince(cleanL));
           return;
         }
       });
     }
 
     // Fix Guaranteed Times (validate HH:mm-HH:mm format)
-    const cleanGuaranteedTimes: string[] | undefined =
-      strikeData.guaranteedTimes
+    let cleanGuaranteedTimes: string[] | undefined = strikeData.guaranteedTimes
+      ? strikeData.guaranteedTimes
+          .map((t) => {
+            const trimmed = t.trim().replaceAll('?', '');
+            if (!timeRangeRegex.test(trimmed)) {
+              console.log(
+                chalk.yellow(`⚠️  Invalid guaranteed time format: "${trimmed}"`),
+              );
+              return null;
+            }
+            return trimmed;
+          })
+          .filter((t): t is string => t !== null).length > 0
         ? strikeData.guaranteedTimes
-            .map((t) => {
-              const trimmed = t.trim().replaceAll('?', '');
-              if (!timeRangeRegex.test(trimmed)) {
-                console.log(
-                  chalk.yellow(
-                    `⚠️  Invalid guaranteed time format: "${trimmed}"`,
-                  ),
-                );
-                return null;
-              }
-              return trimmed;
-            })
-            .filter((t): t is string => t !== null).length > 0
-          ? strikeData.guaranteedTimes
-              .map((t) => t.trim())
-              .filter((t) => timeRangeRegex.test(t))
-          : undefined
-        : undefined;
+            .map((t) => t.trim())
+            .filter((t) => timeRangeRegex.test(t))
+        : undefined
+      : undefined;
+
+    if (cleanGuaranteedTimes) {
+      cleanGuaranteedTimes = uniq(cleanGuaranteedTimes);
+    }
 
     // Costruiamo l'oggetto finale che deve passare la validazione Zod STRETTA interna
     const data: BenchmarkStrike = {
@@ -164,7 +168,7 @@ export abstract class BaseAiAdapter implements AiModelAdapter<RawAiResponse> {
         locationCodes:
           finalLocationType === LocationType.NATIONAL
             ? undefined
-            : cleanLocationCodes,
+            : Array.from(cleanLocationCodes),
         guaranteedTimes: cleanGuaranteedTimes,
       },
     };

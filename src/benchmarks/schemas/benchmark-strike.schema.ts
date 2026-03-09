@@ -1,11 +1,7 @@
 import { z } from 'zod';
 import { locationCodes } from '@/shared/constants/location-codes';
-import { isProvinceCode, provincesArr } from '@/shared/constants/provinces';
-import {
-  isRegionCode,
-  RegionCode,
-  regionsArr,
-} from '@/shared/constants/regions';
+import { isRegionCode, regionsArr } from '@/shared/constants/regions';
+import { LocationType } from '@/shared/enums';
 
 const dateTimeSchema = z
   .string()
@@ -22,13 +18,9 @@ const timeRangeSchema = z.string().regex(timeRangeRegex, {
 });
 
 export const locationCodesDesc =
-  'If the locationType is REGION, locationCodes should be an array of region codes (ISTAT 2-digit strings).\n' +
-  'If the locationType is PROVINCE, locationCodes should be an array of province codes (2-letter strings).\n' +
-  'If the locationType is NATIONAL, locationCodes should be omitted!\n' +
-  `Regions:\n${regionsArr.map(([code, name]) => `${code}: ${name}`).join('\n')}\n` +
-  `Provinces:\n${provincesArr
-    .map(([name, code, region]) => `${code}: ${name} - region ${region}`)
-    .join('\n')}`;
+  'If locationType is REGIONAL, you MUST return an array of 2-digit ISTAT region codes.\n' +
+  'If locationType is NATIONAL, locationCodes MUST BE OMITTED completely.\n' +
+  `Available Regions:\n${regionsArr.map(([code, name]) => `${code}: ${name}`).join('\n')}`;
 
 // STRICT SCHEMA
 export const StrikeDataSchema = z
@@ -36,7 +28,7 @@ export const StrikeDataSchema = z
     startDate: dateTimeSchema,
     endDate: dateTimeSchema,
     locationType: z
-      .enum(['PROVINCE', 'REGION', 'NATIONAL'])
+      .enum(['NATIONAL', 'REGIONAL'])
       .describe('Scope of the strike'),
     locationCodes: z
       .array(z.enum(locationCodes))
@@ -96,13 +88,13 @@ export const LenientStrikeDataSchema = z.object({
     ),
   locationType: z
     .string()
-    .describe('Scope of the strike: either PROVINCE, REGION or NATIONAL'),
+    .describe('Scope of the strike: either REGIONAL or NATIONAL'),
   locationCodes: z
     .array(
       z
         .string()
         .describe(
-          `Location code (province 2-letter code (e.g. RM for Rome, MI for Milano) or region 2-digit code (${formatter.format(
+          `Location code (region 2-digit code (${formatter.format(
             regionsArr.map(([code, name]) => `${code} for ${name}`),
           )})`,
         ),
@@ -156,13 +148,20 @@ export function transformToValidStrikeData(
   if (!lenient.locationType) {
     throw new Error('locationType is required');
   }
-  let locationType = lenient.locationType.toUpperCase()?.trim();
-  if (locationType.includes('REGION')) locationType = 'REGION';
-  else if (locationType.includes('PROVINC')) locationType = 'PROVINCE';
-  else if (locationType.includes('NATION') || locationType.includes('GENERA'))
-    locationType = 'NATIONAL';
-  else if (!['PROVINCE', 'REGION', 'NATIONAL'].includes(locationType)) {
-    throw new Error(`Invalid locationType: ${lenient.locationType}`);
+  let locationType: LocationType = lenient.locationType
+    .toUpperCase()
+    ?.trim() as LocationType;
+  if (['REGION', 'PROVINC'].some((e) => locationType.includes(e)))
+    locationType = LocationType.REGIONAL;
+  else if (['NATION', 'GENERA', 'NAZION'].some((e) => locationType.includes(e)))
+    locationType = LocationType.NATIONAL;
+  else if (!Object.values(LocationType).includes(locationType)) {
+    // throw new Error(`Invalid locationType: ${lenient.locationType}`);
+
+    console.warn(
+      `⚠️ Unexpected locationType: ${lenient.locationType}, defaulting to REGIONAL`,
+    );
+    locationType = LocationType.REGIONAL;
   }
 
   // Transform locationCodes
@@ -193,7 +192,7 @@ export function transformToValidStrikeData(
   return StrikeDataSchema.parse({
     startDate,
     endDate,
-    locationType: locationType as 'PROVINCE' | 'REGION' | 'NATIONAL',
+    locationType: locationType as 'NATIONAL' | 'REGIONAL',
     ...(locationCodes ? { locationCodes } : {}),
     ...(guaranteedTimes ? { guaranteedTimes } : {}),
   });
@@ -210,7 +209,7 @@ function normalizeDateString(dateStr: string): string {
 
 function transformLocationCode(
   input: string | number,
-  locationType: string,
+  locationType: LocationType,
 ): string | null {
   let cleaned: string;
   if (typeof input === 'number') {
@@ -218,31 +217,11 @@ function transformLocationCode(
   } else {
     cleaned = input?.trim().toUpperCase();
   }
-  if (locationType === 'REGION') {
+  if (locationType === 'REGIONAL') {
     if (isRegionCode(cleaned)) return cleaned;
     for (const [code, name] of regionsArr) {
       if (name.toUpperCase().includes(cleaned)) return code;
     }
-  }
-  if (locationType === 'PROVINCE') {
-    if (isProvinceCode(cleaned)) return cleaned;
-    for (const [name, code] of provincesArr) {
-      if (name.toUpperCase().includes(cleaned)) return code;
-    }
-    if (cleaned.includes('EMILIA') && cleaned.includes('ROMAGNA'))
-      return '08' satisfies RegionCode;
-    if (
-      cleaned.includes('FRIULI') ||
-      (cleaned.includes('VENEZIA') && cleaned.includes('GIULIA'))
-    )
-      return '06' satisfies RegionCode;
-    if (
-      cleaned.includes('TIROL') ||
-      cleaned.includes('TRENTINO') ||
-      (cleaned.includes('ALTO') && cleaned.includes('ADIGE'))
-    )
-      return '04' satisfies RegionCode;
-    if (cleaned.includes('AOSTA')) return '02' satisfies RegionCode;
   }
   return null;
 }

@@ -6,6 +6,7 @@ import * as cheerio from 'cheerio';
 import { addDays, addYears, format, isBefore, set } from 'date-fns';
 import { LocationCode } from '@/shared/constants/location-codes';
 import { regionsArr } from '@/shared/constants/regions';
+import { LocationType } from '@/shared/enums';
 import {
   IStrikeParser,
   ParseOptions,
@@ -107,7 +108,7 @@ export class TrenordManualParser implements IStrikeParser {
     this.logger.debug(`Extracted timeInfo: ${JSON.stringify(timeInfo)}`);
 
     // Extract Location
-    let locationType: 'NATIONAL' | 'REGION' | 'PROVINCE' = 'REGION';
+    let locationType: LocationType = LocationType.REGIONAL; // Default for Trenord updates is usually regional (Lombardia) unless specified otherwise
     let locationCodes: LocationCode[] | undefined = ['03']; // Default: Lombardia
 
     const lowerFullText = fullText.toLowerCase();
@@ -122,7 +123,7 @@ export class TrenordManualParser implements IStrikeParser {
       lowerFullText.includes('sciopero generale') ||
       titleText.toLowerCase().includes('nazionale')
     ) {
-      locationType = 'NATIONAL';
+      locationType = LocationType.NATIONAL;
       locationCodes = undefined;
     } else {
       // B. Check Regions
@@ -147,7 +148,7 @@ export class TrenordManualParser implements IStrikeParser {
             .join(', ')}`,
         );
 
-        locationType = 'REGION';
+        locationType = LocationType.REGIONAL;
         locationCodes = foundRegions.map(([code]) => code as LocationCode);
 
         // Fix: If both 'Lombardia' (default) and another region are found, trust the finder.

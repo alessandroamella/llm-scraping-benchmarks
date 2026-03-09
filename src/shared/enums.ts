@@ -1,6 +1,5 @@
 export enum LocationType {
-  REGION = 'REGION',
-  PROVINCE = 'PROVINCE',
+  REGIONAL = 'REGIONAL',
   NATIONAL = 'NATIONAL',
 }
 

@@ -3,8 +3,7 @@ import { regionsArr } from '@/shared/constants/regions';
 
 const openAiLocationCodesDesc =
   '⚠️ REQUIRED: This field MUST always be present. ' +
-  `If locationType is REGION: array of region codes (ISTAT 2-digit strings: ${regionsArr.map(([code, name]) => `${code}: ${name}`).join('\n')}). ` +
-  'If locationType is PROVINCE: array of province codes (2-letter strings). ' +
+  `If locationType is REGIONAL: array of region codes (ISTAT 2-digit strings: ${regionsArr.map(([code, name]) => `${code}: ${name}`).join('\n')}). ` +
   'If locationType is NATIONAL: MUST be null (not omitted, explicitly null).';
 
 // Simplified datetime - using ISO 8601 format which OpenAI supports natively
@@ -32,7 +31,7 @@ export const BenchmarkAiOpenAISchema = z.object({
           locationType: z
             .union([z.string(), z.null()])
             .describe(
-              'Scope: "NATIONAL", "REGION", or "PROVINCE". If uncertain, best guess.',
+              'Scope: "NATIONAL" or "REGIONAL". If uncertain, best guess.',
             ),
           locationCodes: z
             .union([z.array(z.string()), z.null()])
@@ -58,7 +57,7 @@ export type BenchmarkAiOpenAI = z.infer<typeof BenchmarkAiOpenAISchema>;
 // --- LENIENT SCHEMA FOR OPENAI ---
 // Uses unions with null instead of optional fields, matching OpenAI preferences
 
-const openAiLenientLocationCodesDesc = `Location code (province 2-letter code (e.g. RM for Rome, MI for Milano) or region 2-digit code (e.g. ${regionsArr
+const openAiLenientLocationCodesDesc = `Location code (2-digit region code (e.g. ${regionsArr
   .map(([code, name]) => `${code} for ${name}`)
   .join(', ')}))`;
 
@@ -76,7 +75,7 @@ export const BenchmarkAiOpenAILenientStrikeDataSchema = z.object({
   locationType: z
     .union([z.string(), z.null()])
     .describe(
-      'Scope of the strike: either PROVINCE, REGION or NATIONAL. Use null if not specified.',
+      'Scope of the strike: either REGIONAL or NATIONAL. Use null if not specified.',
     ),
   locationCodes: z
     .union([

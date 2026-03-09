@@ -180,7 +180,7 @@ IMPORTANT INSTRUCTIONS:
 2. If isStrike is true, extract the strike details:
    - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.
    - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).
-   - Location codes should be: 2-digit ISTAT for regions (e.g., "03" for Lombardia), 2-letter for provinces (e.g., "MI" for Milan), or omitted for national strikes.
+   - Location codes should be: 2-digit ISTAT for regions (e.g., "03" for Lombardia), or omitted for national strikes.
 
 Example Output if NOT a strike:
 {
@@ -193,7 +193,7 @@ Example Output if IS a strike:
   "strikeData": {
     "startDate": "2024-12-31 08:30:00",
     "endDate": "2024-12-31 12:30:00",
-    "locationType": "REGION",
+    "locationType": "REGIONAL",
     "locationCodes": ["12"],
     "guaranteedTimes": ["06:00-09:00", "18:00-21:00"]
   }

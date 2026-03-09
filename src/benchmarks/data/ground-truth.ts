@@ -32,7 +32,7 @@ export const groundTruth = {
       strikeData: {
         startDate: '2024-06-16 03:00:00',
         endDate: '2024-06-17 02:00:00',
-        locationType: 'REGION',
+        locationType: 'REGIONAL',
         locationCodes: ['03'],
       },
     },
@@ -49,7 +49,7 @@ export const groundTruth = {
       strikeData: {
         startDate: '2024-09-30 03:00:00',
         endDate: '2024-10-01 02:00:00',
-        locationType: 'REGION',
+        locationType: 'REGIONAL',
         locationCodes: ['03'],
         guaranteedTimes: ['06:00-09:00', '18:00-21:00'],
       },
@@ -67,7 +67,7 @@ export const groundTruth = {
       strikeData: {
         startDate: '2023-09-06 03:00:00',
         endDate: '2023-09-07 02:00:00',
-        locationType: 'REGION',
+        locationType: 'REGIONAL',
         locationCodes: ['03'],
         guaranteedTimes: ['06:00-09:00', '18:00-21:00'],
       },
@@ -77,7 +77,7 @@ export const groundTruth = {
       strikeData: {
         startDate: '2025-02-05 03:00:00',
         endDate: '2025-02-06 02:00:00',
-        locationType: 'REGION',
+        locationType: 'REGIONAL',
         locationCodes: ['03'],
         guaranteedTimes: ['06:00-09:00', '18:00-21:00'],
       },
@@ -87,7 +87,7 @@ export const groundTruth = {
       strikeData: {
         startDate: '2024-07-18 09:00:00',
         endDate: '2024-07-18 13:00:00',
-        locationType: 'REGION',
+        locationType: 'REGIONAL',
         locationCodes: ['03'],
       },
     },
@@ -96,7 +96,7 @@ export const groundTruth = {
       strikeData: {
         startDate: '2023-12-14 09:00:00',
         endDate: '2023-12-14 17:00:00',
-        locationType: 'REGION',
+        locationType: 'REGIONAL',
         locationCodes: ['03'],
       },
     },
@@ -114,7 +114,7 @@ export const groundTruth = {
       strikeData: {
         startDate: '2025-06-16 03:00:00',
         endDate: '2025-06-17 02:00:00',
-        locationType: 'REGION',
+        locationType: 'REGIONAL',
         locationCodes: ['03'],
         guaranteedTimes: ['06:00-09:00', '18:00-21:00'],
       },
@@ -124,7 +124,7 @@ export const groundTruth = {
       strikeData: {
         startDate: '2025-11-16 09:00:00',
         endDate: '2025-11-16 18:00:00',
-        locationType: 'REGION',
+        locationType: 'REGIONAL',
         locationCodes: ['03'],
       },
     },
@@ -144,7 +144,7 @@ export const groundTruth = {
       strikeData: {
         startDate: '2026-01-07 09:01:00',
         endDate: '2026-01-07 17:00:00',
-        locationType: 'REGION',
+        locationType: 'REGIONAL',
         locationCodes: ['08'],
       },
     },
@@ -180,7 +180,7 @@ export const groundTruth = {
       strikeData: {
         startDate: '2026-01-30 09:01:00',
         endDate: '2026-01-30 16:59:00',
-        locationType: 'REGION',
+        locationType: 'REGIONAL',
         locationCodes: ['08'],
       },
     },
@@ -216,7 +216,7 @@ export const groundTruth = {
       strikeData: {
         startDate: '2026-01-07 09:01:00',
         endDate: '2026-01-07 17:00:00',
-        locationType: 'REGION',
+        locationType: 'REGIONAL',
         locationCodes: ['08'],
         guaranteedTimes: ['06:00-09:00', '18:00-21:00'],
       },
@@ -226,7 +226,7 @@ export const groundTruth = {
       strikeData: {
         startDate: '2026-01-30 09:01:00',
         endDate: '2026-01-30 16:59:00',
-        locationType: 'REGION',
+        locationType: 'REGIONAL',
         locationCodes: ['08'],
       },
     },
@@ -250,8 +250,8 @@ export const groundTruth = {
         strikeData: {
           startDate: '2024-12-13 00:00:00',
           endDate: '2024-12-13 23:59:59',
-          locationType: 'PROVINCE',
-          locationCodes: ['NA'],
+          locationType: 'REGIONAL',
+          locationCodes: ['15'],
           guaranteedTimes: ['05:30-08:30', '16:30-19:30'],
         },
       },
@@ -261,8 +261,8 @@ export const groundTruth = {
         strikeData: {
           startDate: '2024-12-13 00:00:00',
           endDate: '2024-12-13 23:59:59',
-          locationType: 'PROVINCE',
-          locationCodes: ['NA'],
+          locationType: 'REGIONAL',
+          locationCodes: ['15'],
           guaranteedTimes: ['05:30-08:30', '16:30-19:30'],
         },
       },
@@ -282,8 +282,8 @@ export const groundTruth = {
         strikeData: {
           startDate: '2024-12-13 00:00:00',
           endDate: '2024-12-13 23:59:59',
-          locationType: 'PROVINCE',
-          locationCodes: ['NA', 'BN', 'CE'],
+          locationType: 'REGIONAL',
+          locationCodes: ['15'],
           guaranteedTimes: ['05:30-08:30', '16:30-19:30'],
         },
       },
@@ -293,8 +293,8 @@ export const groundTruth = {
         strikeData: {
           startDate: '2024-12-13 00:00:00',
           endDate: '2024-12-13 23:59:59',
-          locationType: 'PROVINCE',
-          locationCodes: ['NA', 'CE'],
+          locationType: 'REGIONAL',
+          locationCodes: ['15'],
           guaranteedTimes: ['05:30-08:30', '16:30-19:30'],
         },
       },
@@ -314,7 +314,7 @@ export const groundTruth = {
         strikeData: {
           startDate: '2024-12-13 00:00:00',
           endDate: '2024-12-13 23:59:59',
-          locationType: 'REGION',
+          locationType: 'REGIONAL',
           locationCodes: ['15'],
           guaranteedTimes: ['05:30-08:30', '16:30-19:30'],
         },
@@ -399,7 +399,7 @@ export const groundTruth = {
       strikeData: {
         startDate: '2025-01-28 00:00:00',
         endDate: '2025-01-28 23:59:59',
-        locationType: 'REGION',
+        locationType: 'REGIONAL',
         locationCodes: ['15'],
       },
     },
@@ -408,8 +408,8 @@ export const groundTruth = {
       strikeData: {
         startDate: '2025-01-28 08:20:00',
         endDate: '2025-01-28 12:20:00',
-        locationType: 'PROVINCE',
-        locationCodes: ['NA'],
+        locationType: 'REGIONAL',
+        locationCodes: ['15'],
       },
     },
     'servizio_autolinee_avviso_di_sciopero_di_4_ore_martedi_28_gennaio_2025.html':
@@ -418,7 +418,7 @@ export const groundTruth = {
         strikeData: {
           startDate: '2025-01-28 08:20:00',
           endDate: '2025-01-28 12:20:00',
-          locationType: 'REGION',
+          locationType: 'REGIONAL',
           locationCodes: ['15'],
         },
       },
@@ -428,8 +428,8 @@ export const groundTruth = {
         strikeData: {
           startDate: '2025-01-28 08:20:00',
           endDate: '2025-01-28 12:20:00',
-          locationType: 'PROVINCE',
-          locationCodes: ['NA', 'CE'],
+          locationType: 'REGIONAL',
+          locationCodes: ['15'],
         },
       },
     'linee_suburbane_avviso_di_sciopero_di_4_ore_martedi_28_gennaio_2025.html':
@@ -438,7 +438,7 @@ export const groundTruth = {
         strikeData: {
           startDate: '2025-01-28 08:20:00',
           endDate: '2025-01-28 12:20:00',
-          locationType: 'REGION',
+          locationType: 'REGIONAL',
           locationCodes: ['15'],
         },
       },
@@ -448,7 +448,7 @@ export const groundTruth = {
         strikeData: {
           startDate: '2025-01-28 08:20:00',
           endDate: '2025-01-28 12:20:00',
-          locationType: 'REGION',
+          locationType: 'REGIONAL',
           locationCodes: ['15'],
         },
       },
@@ -466,8 +466,8 @@ export const groundTruth = {
       strikeData: {
         startDate: '2025-02-24 00:00:00',
         endDate: '2025-02-24 23:59:59',
-        locationType: 'PROVINCE',
-        locationCodes: ['NA'],
+        locationType: 'REGIONAL',
+        locationCodes: ['15'],
         guaranteedTimes: ['05:30-08:30', '16:30-19:30'],
       },
     },
@@ -502,7 +502,7 @@ export const groundTruth = {
       strikeData: {
         startDate: '2025-03-22 19:40:00',
         endDate: '2025-03-22 23:40:00',
-        locationType: 'REGION',
+        locationType: 'REGIONAL',
         locationCodes: ['15'],
       },
     },
@@ -511,8 +511,8 @@ export const groundTruth = {
       strikeData: {
         startDate: '2025-03-22 19:40:00',
         endDate: '2025-03-22 23:40:00',
-        locationType: 'PROVINCE',
-        locationCodes: ['NA', 'CE'],
+        locationType: 'REGIONAL',
+        locationCodes: ['15'],
       },
     },
     'autolinee_sciopero_del_22_marzo_2025.html': {
@@ -520,7 +520,7 @@ export const groundTruth = {
       strikeData: {
         startDate: '2025-03-22 19:40:00',
         endDate: '2025-03-22 23:40:00',
-        locationType: 'REGION',
+        locationType: 'REGIONAL',
         locationCodes: ['15'],
       },
     },
@@ -529,8 +529,8 @@ export const groundTruth = {
       strikeData: {
         startDate: '2025-03-22 19:40:00',
         endDate: '2025-03-22 23:40:00',
-        locationType: 'PROVINCE',
-        locationCodes: ['NA'],
+        locationType: 'REGIONAL',
+        locationCodes: ['15'],
       },
     },
     'suburbane_sciopero_del_22_marzo_2025.html': {
@@ -538,8 +538,8 @@ export const groundTruth = {
       strikeData: {
         startDate: '2025-03-22 19:40:00',
         endDate: '2025-03-22 23:40:00',
-        locationType: 'PROVINCE',
-        locationCodes: ['NA', 'CE', 'BN'],
+        locationType: 'REGIONAL',
+        locationCodes: ['15'],
       },
     },
     'linee_suburbane_avviso_di_sciopero_24h_domenica_11_maggio_2025.html': {
@@ -547,7 +547,7 @@ export const groundTruth = {
       strikeData: {
         startDate: '2025-05-11 00:00:00',
         endDate: '2025-05-11 23:59:59',
-        locationType: 'REGION',
+        locationType: 'REGIONAL',
         locationCodes: ['15'],
       },
     },
@@ -556,8 +556,8 @@ export const groundTruth = {
       strikeData: {
         startDate: '2025-05-11 00:00:00',
         endDate: '2025-05-11 23:59:59',
-        locationType: 'PROVINCE',
-        locationCodes: ['NA', 'CE'],
+        locationType: 'REGIONAL',
+        locationCodes: ['15'],
         guaranteedTimes: ['05:30-08:30', '16:30-19:30'],
       },
     },
@@ -566,8 +566,8 @@ export const groundTruth = {
       strikeData: {
         startDate: '2025-05-11 00:00:00',
         endDate: '2025-05-11 23:59:59',
-        locationType: 'PROVINCE',
-        locationCodes: ['NA'],
+        locationType: 'REGIONAL',
+        locationCodes: ['15'],
         guaranteedTimes: ['05:30-08:30', '16:30-19:30'],
       },
     },
@@ -576,8 +576,8 @@ export const groundTruth = {
       strikeData: {
         startDate: '2025-05-11 00:00:00',
         endDate: '2025-05-11 23:59:59',
-        locationType: 'PROVINCE',
-        locationCodes: ['NA', 'SA', 'AV'],
+        locationType: 'REGIONAL',
+        locationCodes: ['15'],
         guaranteedTimes: ['05:30-08:30', '16:30-19:30'],
       },
     },
@@ -629,7 +629,7 @@ export const groundTruth = {
         strikeData: {
           startDate: '2025-06-20 00:00:00',
           endDate: '2025-06-20 23:59:59',
-          locationType: 'REGION',
+          locationType: 'REGIONAL',
           locationCodes: ['15'],
           guaranteedTimes: ['05:30-08:30', '16:30-19:30'],
         },
@@ -640,7 +640,7 @@ export const groundTruth = {
         strikeData: {
           startDate: '2025-07-23 09:00:00',
           endDate: '2025-07-23 11:00:00',
-          locationType: 'REGION',
+          locationType: 'REGIONAL',
           locationCodes: ['15'],
         },
       },
@@ -650,7 +650,7 @@ export const groundTruth = {
         strikeData: {
           startDate: '2025-07-23 09:00:00',
           endDate: '2025-07-23 11:00:00',
-          locationType: 'REGION',
+          locationType: 'REGIONAL',
           locationCodes: ['15'],
         },
       },
@@ -660,8 +660,8 @@ export const groundTruth = {
         strikeData: {
           startDate: '2025-07-23 09:00:00',
           endDate: '2025-07-23 11:00:00',
-          locationType: 'PROVINCE',
-          locationCodes: ['NA', 'CE'],
+          locationType: 'REGIONAL',
+          locationCodes: ['15'],
         },
       },
     'linee_flegree_avviso_di_sciopero_di_2_ore_giorno_23_luglio_2025.html': {
@@ -678,8 +678,8 @@ export const groundTruth = {
         strikeData: {
           startDate: '2025-07-23 09:00:00',
           endDate: '2025-07-23 11:00:00',
-          locationType: 'PROVINCE',
-          locationCodes: ['NA', 'SA'],
+          locationType: 'REGIONAL',
+          locationCodes: ['15'],
         },
       },
     'linee_suburbane_avviso_di_sciopero_generale_nazionale_lunedi_22_settembre_2025.html':
@@ -798,8 +798,8 @@ export const groundTruth = {
       strikeData: {
         startDate: '2025-10-13 08:30:00',
         endDate: '2025-10-13 12:30:00',
-        locationType: 'PROVINCE',
-        locationCodes: ['NA', 'SA'],
+        locationType: 'REGIONAL',
+        locationCodes: ['15'],
       },
     },
     'linee_vesuviane_avviso_di_sciopero_aziendale_di_24_h_di_mercoledi_12_11_2025.html':
@@ -808,8 +808,8 @@ export const groundTruth = {
         strikeData: {
           startDate: '2025-11-12 00:00:00',
           endDate: '2025-11-12 23:59:59',
-          locationType: 'PROVINCE',
-          locationCodes: ['NA'],
+          locationType: 'REGIONAL',
+          locationCodes: ['15'],
           guaranteedTimes: ['05:30-08:30', '16:30-19:30'],
         },
       },
@@ -919,7 +919,7 @@ export const groundTruth = {
         strikeData: {
           startDate: '2026-01-19 00:00:00',
           endDate: '2026-01-19 23:59:59',
-          locationType: 'REGION',
+          locationType: 'REGIONAL',
           locationCodes: ['15'],
           guaranteedTimes: ['05:30-08:30', '16:30-19:30'],
         },
@@ -932,7 +932,7 @@ export const groundTruth = {
         strikeData: {
           startDate: '2025-01-26 21:00:00',
           endDate: '2025-01-26 21:00:00',
-          locationType: 'REGION',
+          locationType: 'REGIONAL',
           guaranteedTimes: ['06:00-09:00', '18:00-21:00'],
           locationCodes: ['20'],
         },
@@ -943,7 +943,7 @@ export const groundTruth = {
         strikeData: {
           startDate: '2025-11-16 10:00:00',
           endDate: '2025-11-16 17:59:00',
-          locationType: 'REGION',
+          locationType: 'REGIONAL',
           locationCodes: ['08', '07', '03', '01', '05'],
         },
       },
@@ -971,7 +971,7 @@ export const groundTruth = {
         strikeData: {
           startDate: '2025-11-28 00:00:00',
           endDate: '2025-11-28 23:59:00',
-          locationType: 'REGION',
+          locationType: 'REGIONAL',
           locationCodes: ['04', '05'],
         },
       },
@@ -991,7 +991,7 @@ export const groundTruth = {
         strikeData: {
           startDate: '2025-12-12 00:01:00',
           endDate: '2025-12-12 23:59:00',
-          locationType: 'REGION',
+          locationType: 'REGIONAL',
           locationCodes: ['04', '05'],
         },
       },
@@ -1020,7 +1020,7 @@ export const groundTruth = {
         strikeData: {
           startDate: '2026-01-12 03:00:00',
           endDate: '2026-01-13 02:00:00',
-          locationType: 'REGION',
+          locationType: 'REGIONAL',
           locationCodes: ['01', '03', '05', '07', '08'],
         },
       },
@@ -1040,7 +1040,7 @@ export const groundTruth = {
         strikeData: {
           startDate: '2026-01-08 09:01:00',
           endDate: '2026-01-08 17:00:00',
-          locationType: 'REGION',
+          locationType: 'REGIONAL',
           locationCodes: ['07'],
         },
       },
@@ -1050,7 +1050,7 @@ export const groundTruth = {
         strikeData: {
           startDate: '2026-01-09 21:00:00',
           endDate: '2026-01-10 23:59:00',
-          locationType: 'REGION',
+          locationType: 'REGIONAL',
           locationCodes: ['04', '05'],
         },
       },
@@ -1283,8 +1283,8 @@ export const groundTruth = {
       strikeData: {
         startDate: '2022-01-14 00:00:00',
         endDate: '2022-01-14 12:30:00',
-        locationType: 'PROVINCE',
-        locationCodes: ['RM'],
+        locationType: 'REGIONAL',
+        locationCodes: ['12'],
       },
     },
     'venerdi_14_gennaio_sciopero_nazionale_4_ore_trasporto_pubblico_rischio.html':
@@ -1327,8 +1327,8 @@ export const groundTruth = {
         strikeData: {
           startDate: '2022-03-08 00:00:00',
           endDate: '2022-03-08 23:59:59',
-          locationType: 'PROVINCE',
-          locationCodes: ['RM'],
+          locationType: 'REGIONAL',
+          locationCodes: ['12'],
           guaranteedTimes: ['00:00-08:30', '17:00-20:00'],
         },
       },
@@ -1337,8 +1337,8 @@ export const groundTruth = {
       strikeData: {
         startDate: '2022-03-29 00:00:00',
         endDate: '2022-03-30 00:00:00',
-        locationType: 'PROVINCE',
-        locationCodes: ['RM'],
+        locationType: 'REGIONAL',
+        locationCodes: ['12'],
       },
     },
     'martedi_29_marzo_sciopera_24_ore_trasporto_pubblico_servizio_rischio.html':
@@ -1347,8 +1347,8 @@ export const groundTruth = {
         strikeData: {
           startDate: '2022-03-29 00:00:00',
           endDate: '2022-03-29 23:59:59',
-          locationType: 'PROVINCE',
-          locationCodes: ['RM'],
+          locationType: 'REGIONAL',
+          locationCodes: ['12'],
           guaranteedTimes: ['00:00-08:30', '17:00-20:00'],
         },
       },
@@ -1374,8 +1374,8 @@ export const groundTruth = {
       strikeData: {
         startDate: '2022-06-17 08:30:00',
         endDate: '2022-06-17 12:30:00',
-        locationType: 'PROVINCE',
-        locationCodes: ['RM'],
+        locationType: 'REGIONAL',
+        locationCodes: ['12'],
       },
     },
     'venerd_16_settembre_sciopero_nazionale_8_ore_trasporto_pubblico_romano_rischio.html':
@@ -1392,8 +1392,8 @@ export const groundTruth = {
       strikeData: {
         startDate: '2022-10-21 08:30:00',
         endDate: '2022-10-21 12:30:00',
-        locationType: 'PROVINCE',
-        locationCodes: ['RM'],
+        locationType: 'REGIONAL',
+        locationCodes: ['12'],
       },
     },
     'sciopero_trasporto_pubblico_chiuse_metro_c_attiva_b.html': {
@@ -1401,8 +1401,8 @@ export const groundTruth = {
       strikeData: {
         startDate: '2022-11-11 08:30:00',
         endDate: '2022-11-11 12:30:00',
-        locationType: 'PROVINCE',
-        locationCodes: ['RM'],
+        locationType: 'REGIONAL',
+        locationCodes: ['12'],
       },
     },
     'venerd_2_dicembre_sciopero_generale_nazionale_24_ore_rischio_trasporto_pubblico_romano.html':
@@ -1421,7 +1421,7 @@ export const groundTruth = {
         strikeData: {
           startDate: '2022-12-16 20:00:00',
           endDate: '2022-12-16 23:59:59',
-          locationType: 'REGION',
+          locationType: 'REGIONAL',
           locationCodes: ['12'],
         },
       },
@@ -1430,8 +1430,8 @@ export const groundTruth = {
       strikeData: {
         startDate: '2023-01-16 08:30:00',
         endDate: '2023-01-16 12:30:00',
-        locationType: 'PROVINCE',
-        locationCodes: ['RM'],
+        locationType: 'REGIONAL',
+        locationCodes: ['12'],
       },
     },
     'venerd_17_febbraio_sciopero_nazionale_usb_24_ore_trasporto_pubblico_rischio.html':
@@ -1450,8 +1450,8 @@ export const groundTruth = {
         strikeData: {
           startDate: '2023-02-17 00:00:00',
           endDate: '2023-02-18 00:00:00',
-          locationType: 'PROVINCE',
-          locationCodes: ['RM'],
+          locationType: 'REGIONAL',
+          locationCodes: ['12'],
         },
       },
     'mercoled_8_marzo_sciopero_nazionale_cub_trasporto_pubblico_rischio_24_ore.html':
@@ -1470,8 +1470,8 @@ export const groundTruth = {
         strikeData: {
           startDate: '2023-05-02 00:00:00',
           endDate: '2023-05-02 12:30:00',
-          locationType: 'PROVINCE',
-          locationCodes: ['RM'],
+          locationType: 'REGIONAL',
+          locationCodes: ['12'],
         },
       },
     'martedi_2_maggio_sciopero_nazionale_4_ore_trasporto_pubblico_romano_rischio.html':
@@ -1570,7 +1570,7 @@ export const groundTruth = {
       strikeData: {
         startDate: '2023-12-07 09:00:00',
         endDate: '2023-12-07 13:00:00',
-        locationType: 'REGION',
+        locationType: 'REGIONAL',
         locationCodes: ['12'],
       },
     },
@@ -1623,8 +1623,8 @@ export const groundTruth = {
       strikeData: {
         startDate: '2024-04-26 00:00:00',
         endDate: '2024-04-26 12:30:00',
-        locationType: 'PROVINCE',
-        locationCodes: ['RM'],
+        locationType: 'REGIONAL',
+        locationCodes: ['12'],
       },
     },
     'venerd_26_aprile_sciopero_nazionale_tpl_roma_possibili_disagi_830_1230.html':
@@ -1641,8 +1641,8 @@ export const groundTruth = {
       strikeData: {
         startDate: '2024-07-04 00:00:00',
         endDate: '2024-07-04 16:30:00',
-        locationType: 'PROVINCE',
-        locationCodes: ['RM'],
+        locationType: 'REGIONAL',
+        locationCodes: ['12'],
       },
     },
     'trasporto_pubblico_domani_sciopero_8_ore_sulla_rete_atac.html': {
@@ -1650,8 +1650,8 @@ export const groundTruth = {
       strikeData: {
         startDate: '2024-07-04 08:30:00',
         endDate: '2024-07-04 16:30:00',
-        locationType: 'PROVINCE',
-        locationCodes: ['RM'],
+        locationType: 'REGIONAL',
+        locationCodes: ['12'],
       },
     },
     'trasporto_pubblico_domenica_7_luglio_sciopero_serale_4_ore.html': {
@@ -1685,8 +1685,8 @@ export const groundTruth = {
         strikeData: {
           startDate: '2024-09-09 08:30:00',
           endDate: '2024-09-09 16:30:00',
-          locationType: 'PROVINCE',
-          locationCodes: ['RM'],
+          locationType: 'REGIONAL',
+          locationCodes: ['12'],
         },
       },
     'venerd_20_settembre_sciopero_nazionale_24_ore_trasporto_pubblico_servizio_rischio.html':
@@ -1714,8 +1714,8 @@ export const groundTruth = {
       strikeData: {
         startDate: '2024-10-24 00:00:00',
         endDate: '2024-10-24 23:59:59',
-        locationType: 'PROVINCE',
-        locationCodes: ['RM'],
+        locationType: 'REGIONAL',
+        locationCodes: ['12'],
       },
     },
     'trasporto_pubblico_28_ottobre_sciopero_sulla_rete_atac.html': {
@@ -1723,8 +1723,8 @@ export const groundTruth = {
       strikeData: {
         startDate: '2024-10-28 00:00:00',
         endDate: '2024-10-28 23:59:59',
-        locationType: 'PROVINCE',
-        locationCodes: ['RM'],
+        locationType: 'REGIONAL',
+        locationCodes: ['12'],
         guaranteedTimes: ['00:00-08:30', '17:00-20:00'],
       },
     },
@@ -1796,8 +1796,8 @@ export const groundTruth = {
         strikeData: {
           startDate: '2025-01-16 00:00:00',
           endDate: '2025-01-17 23:59:59',
-          locationType: 'PROVINCE',
-          locationCodes: ['RM'],
+          locationType: 'REGIONAL',
+          locationCodes: ['12'],
         },
       },
     'sportello_al_pubblico_e_contact_center_di_rsm_servizi_non_attivi_causa_sciopero.html':
@@ -1806,8 +1806,8 @@ export const groundTruth = {
         strikeData: {
           startDate: '2025-01-16 00:00:00',
           endDate: '2025-01-17 23:59:59',
-          locationType: 'PROVINCE',
-          locationCodes: ['RM'],
+          locationType: 'REGIONAL',
+          locationCodes: ['12'],
         },
       },
     'lunedi_24_febbraio_sciopero_nazionale_del_trasporto_pubblico_possibili_disagi.html':
@@ -1845,8 +1845,8 @@ export const groundTruth = {
         strikeData: {
           startDate: '2025-09-04 00:00:00',
           endDate: '2025-09-04 12:30:00',
-          locationType: 'PROVINCE',
-          locationCodes: ['RM'],
+          locationType: 'REGIONAL',
+          locationCodes: ['12'],
         },
       },
     'rete_atac_giovedi_4_settembre_sciopero_dalle_830_alle_1230_possibili_disagi.html':
@@ -1855,8 +1855,8 @@ export const groundTruth = {
         strikeData: {
           startDate: '2025-09-04 08:30:00',
           endDate: '2025-09-04 12:30:00',
-          locationType: 'PROVINCE',
-          locationCodes: ['RM'],
+          locationType: 'REGIONAL',
+          locationCodes: ['12'],
         },
       },
     'lunedi_22_settembre_sciopero_nazionale_di_24_ore_trasporto_pubblico_a_rischio.html':
@@ -1883,8 +1883,8 @@ export const groundTruth = {
       strikeData: {
         startDate: '2025-10-10 00:00:00',
         endDate: '2025-10-10 23:59:59',
-        locationType: 'PROVINCE',
-        locationCodes: ['RM'],
+        locationType: 'REGIONAL',
+        locationCodes: ['12'],
         guaranteedTimes: ['00:00-08:30', '17:00-20:00'],
       },
     },
@@ -1894,8 +1894,8 @@ export const groundTruth = {
         strikeData: {
           startDate: '2025-10-29 20:00:00',
           endDate: '2025-10-29 23:59:59',
-          locationType: 'PROVINCE',
-          locationCodes: ['RM'],
+          locationType: 'REGIONAL',
+          locationCodes: ['12'],
         },
       },
     'trasporto_pubblico_venerdi_prossimo_sciopero_di_24_ore_servizio_a_rischio.html':
@@ -1904,8 +1904,8 @@ export const groundTruth = {
         strikeData: {
           startDate: '2025-11-14 00:00:00',
           endDate: '2025-11-14 23:59:59',
-          locationType: 'PROVINCE',
-          locationCodes: ['RM'],
+          locationType: 'REGIONAL',
+          locationCodes: ['12'],
           guaranteedTimes: ['00:00-08:30', '17:00-20:00'],
         },
       },
@@ -1925,8 +1925,8 @@ export const groundTruth = {
         strikeData: {
           startDate: '2025-12-09 00:00:00',
           endDate: '2025-12-09 23:59:59',
-          locationType: 'PROVINCE',
-          locationCodes: ['RM'],
+          locationType: 'REGIONAL',
+          locationCodes: ['12'],
           guaranteedTimes: ['00:00-08:30', '17:00-20:00'],
         },
       },

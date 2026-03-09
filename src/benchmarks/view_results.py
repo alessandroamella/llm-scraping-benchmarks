@@ -800,7 +800,7 @@ for d in data.get("details", []):
     differences = d.get("differences", [])
 
     for diff in differences:
-        # Esempio di diff: "locationType: Expected REGION, got NATIONAL"
+        # Esempio di diff: "locationType: Expected REGIONAL, got NATIONAL"
         if ":" in diff:
             # Estraiamo il nome del campo (tutto ciò che c'è prima del primo ':')
             field_name = diff.split(":")[0].strip()
