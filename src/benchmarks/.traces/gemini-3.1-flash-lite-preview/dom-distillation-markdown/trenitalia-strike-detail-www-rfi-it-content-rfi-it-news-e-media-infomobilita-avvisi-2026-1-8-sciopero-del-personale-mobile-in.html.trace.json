@@ -1,38 +1,52 @@
 {
-  "timestamp": "2026-03-09T11:35:09.242Z",
-  "isCacheHit": true,
+  "timestamp": "2026-03-09T13:00:30.141Z",
+  "isCacheHit": false,
   "request": {
     "sourceName": "Trenitalia",
     "fileName": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2026-1-8-sciopero-del-personale-mobile-in.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "dom-distillation-markdown",
     "useLenientSchema": true,
-    "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a strike from \"Trenitalia\".\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), 2-letter for provinces (e.g., \"MI\" for Milan), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGION\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: SCIOPERO DEL PERSONALE MOBILE INTERCITY DI GENOVA DI TRENITALIA\n\n* * *\n\n# SCIOPERO DEL PERSONALE MOBILE INTERCITY DI GENOVA DI TRENITALIA\n\nIn vigore: 8 GENNAIO 2026\n\nServizio: **Lunga percorrenza**\n\nCausa Modifica: **Sciopero**\n\nRegione: **LIGURIA**\n\nImpresa: **Trenitalia**\n\n**Dalle ore 9:01 alle ore 17:00 di giovedì 8 gennaio 2026** è stato indetto uno sciopero del personale mobile di **Trenitalia della Direzione Operation Intercity di Genova.**  \n\nLo sciopero può comportare modifiche al servizio, anche prima dell’inizio e dopo la sua conclusione.\n\nMaggiori informazioni sui servizi garantiti in caso di sciopero sono disponibili sui canali digitali delle Imprese ferroviarie o presso il personale di assistenza clienti e le biglietterie."
+    "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"Trenitalia\" (Italy's national railway operator).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: SCIOPERO DEL PERSONALE MOBILE INTERCITY DI GENOVA DI TRENITALIA\n\n* * *\n\n# SCIOPERO DEL PERSONALE MOBILE INTERCITY DI GENOVA DI TRENITALIA\n\nIn vigore: 8 GENNAIO 2026\n\nServizio: **Lunga percorrenza**\n\nCausa Modifica: **Sciopero**\n\nRegione: **LIGURIA**\n\nImpresa: **Trenitalia**\n\n**Dalle ore 9:01 alle ore 17:00 di giovedì 8 gennaio 2026** è stato indetto uno sciopero del personale mobile di **Trenitalia della Direzione Operation Intercity di Genova.**  \n\nLo sciopero può comportare modifiche al servizio, anche prima dell’inizio e dopo la sua conclusione.\n\nMaggiori informazioni sui servizi garantiti in caso di sciopero sono disponibili sui canali digitali delle Imprese ferroviarie o presso il personale di assistenza clienti e le biglietterie."
   },
   "response": {
+    "rawOutput": {
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2026-01-08 09:01:00",
+        "endDate": "2026-01-08 17:00:00",
+        "locationType": "REGIONAL",
+        "locationCodes": [
+          "07"
+        ]
+      }
+    },
     "parsedData": {
       "isStrike": true,
       "strikeData": {
         "startDate": "2026-01-08 09:01:00",
         "endDate": "2026-01-08 17:00:00",
-        "locationType": "REGION",
+        "locationType": "REGIONAL",
         "locationCodes": [
           "07"
         ]
       }
     },
     "usage": {
-      "input": 655,
-      "output": 98,
-      "total": 1016
+      "input": 648,
+      "output": 99,
+      "cached": 0,
+      "thinking": 473,
+      "total": 1220
     },
     "costUsd": {
-      "inputCost": 0.00016375,
-      "outputCost": 0.000147,
-      "thinkingCost": 0.0003945,
+      "inputCost": 0.000162,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.0007095,
       "cachedCost": 0,
-      "totalCost": 0.00070525
+      "totalCost": 0.00102
     },
-    "durationMs": 3531
+    "durationMs": 6155,
+    "thoughts": "**Analyzing the Genoa Intercity Strike Announcement**\n\nOkay, let's break this down. My initial impression is that this is a straightforward announcement regarding a strike. The title clearly indicates a \"Strike of the Intercity mobile staff of Genoa of Trenitalia.\"\n\nThe key details are:\n\n*   **Date and Time:** This is scheduled for January 8, 2026, starting at 09:01 and concluding at 17:00. These are the crucial temporal parameters I'll need to work with.\n*   **Affected Personnel:** The strike specifically impacts the \"personale mobile di Trenitalia della Direzione Operation Intercity di Genova,\" which I interpret to mean the mobile staff (likely train conductors, drivers, etc.) working on Intercity routes originating from or operating in Genoa.\n*   **Region:** The geographic scope is Liguria, specifically encoded as region \"07.\" This means the disruption will be regional in nature, not national or local to a specific station.\n*   **Strike Confirmation:** My analysis concludes this is definitely a confirmed strike, with `isStrike: true`.\n\nI'll structure the data as follows:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2026-01-08 09:01:00\",\n    \"endDate\": \"2026-01-08 17:00:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"07\"],\n    \"guaranteedTimes\": null // Or omitted, if that's the preferred schema behavior; not specified in the text.\n  }\n}\n```\n\nMy checks confirms the time and the regional scope. The duration of the strike is 8 hours, and its affect is in Liguria. There are no mentions of guaranteed service times, so that will be null (or omitted) in my representation.\n\n\n"
   }
 }

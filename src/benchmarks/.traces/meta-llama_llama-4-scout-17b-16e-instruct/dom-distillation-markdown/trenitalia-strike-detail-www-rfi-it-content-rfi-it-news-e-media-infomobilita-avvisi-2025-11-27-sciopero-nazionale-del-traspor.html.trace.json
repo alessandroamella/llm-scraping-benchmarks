@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-09T11:35:08.401Z",
+  "timestamp": "2026-03-09T13:02:26.934Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "Trenitalia",
@@ -7,7 +7,7 @@
     "model": "meta-llama/llama-4-scout-17b-16e-instruct",
     "strategy": "dom-distillation-markdown",
     "useLenientSchema": true,
-    "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a strike from \"Trenitalia\".\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), 2-letter for provinces (e.g., \"MI\" for Milan), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGION\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: SCIOPERO NAZIONALE DEL TRASPORTO FERROVIARIO\n\n* * *\n\n# SCIOPERO NAZIONALE DEL TRASPORTO FERROVIARIO\n\nIn vigore: 27 NOVEMBRE 2025 - 28 NOVEMBRE 2025\n\nServizio: **Alta Velocità, Lunga percorrenza, Regionale**\n\nCausa Modifica: **Sciopero**\n\nImpresa: **Gruppo FS Italiane, Italo Nuovo Trasporto Viaggiatori, Trenord**\n\n**Dalle ore 21:00 di giovedì 27 novembre alle ore 21:00 di venerdì 28 novembre 2025** è stato indetto uno sciopero del personale del **Gruppo FS Italiane, Italo e Trenord.**\n\nLo sciopero può comportare modifiche al servizio, **anche prima dell’inizio e dopo la sua conclusione.**\n\nMaggiori informazioni sui servizi garantiti in caso di sciopero sono disponibili sui canali digitali delle Imprese ferroviarie o presso il personale di assistenza clienti e le biglietterie."
+    "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"Trenitalia\" (Italy's national railway operator).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: SCIOPERO NAZIONALE DEL TRASPORTO FERROVIARIO\n\n* * *\n\n# SCIOPERO NAZIONALE DEL TRASPORTO FERROVIARIO\n\nIn vigore: 27 NOVEMBRE 2025 - 28 NOVEMBRE 2025\n\nServizio: **Alta Velocità, Lunga percorrenza, Regionale**\n\nCausa Modifica: **Sciopero**\n\nImpresa: **Gruppo FS Italiane, Italo Nuovo Trasporto Viaggiatori, Trenord**\n\n**Dalle ore 21:00 di giovedì 27 novembre alle ore 21:00 di venerdì 28 novembre 2025** è stato indetto uno sciopero del personale del **Gruppo FS Italiane, Italo e Trenord.**\n\nLo sciopero può comportare modifiche al servizio, **anche prima dell’inizio e dopo la sua conclusione.**\n\nMaggiori informazioni sui servizi garantiti in caso di sciopero sono disponibili sui canali digitali delle Imprese ferroviarie o presso il personale di assistenza clienti e le biglietterie."
   },
   "response": {
     "parsedData": {
@@ -19,17 +19,17 @@
       }
     },
     "usage": {
-      "input": 1174,
+      "input": 1149,
       "output": 81,
-      "total": 1255
+      "total": 1230
     },
     "costUsd": {
-      "inputCost": 0.00012914,
+      "inputCost": 0.00012639,
       "outputCost": 0.00002754,
       "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.00015668
+      "totalCost": 0.00015393
     },
-    "durationMs": 590
+    "durationMs": 533
   }
 }

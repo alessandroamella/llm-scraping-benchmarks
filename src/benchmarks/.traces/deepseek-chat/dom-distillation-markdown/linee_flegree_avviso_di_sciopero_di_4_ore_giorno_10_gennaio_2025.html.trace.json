@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-09T11:35:01.675Z",
+  "timestamp": "2026-03-09T13:02:20.109Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "EAV",
@@ -7,7 +7,7 @@
     "model": "deepseek-chat",
     "strategy": "dom-distillation-markdown",
     "useLenientSchema": true,
-    "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a strike from \"EAV\".\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), 2-letter for provinces (e.g., \"MI\" for Milan), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGION\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: Linee Flegree: Avviso di sciopero di 4 ore, venerdì 10 gennaio 2025 - EAV srl\n\n* * *\n\n## Linee Flegree: Avviso di sciopero di 4 ore, venerdì 10 gennaio 2025\n\nData:  \n**5 Gennaio 2025**\n\nSi comunica che per il giorno 10 Gennaio 2025 la O.S. CONF.A.I.L. ha proclamato uno sciopero nazionale di 4 ore, dalle ore 19:32 alle ore 23:32, avente la seguente motivazione: “_Problematiche relative al Trasporto Pubblico Locale_”\n\nDurante l’ultima proclamazione di sciopero delle citate OO.SS., la percentuale di adesione è stata del 15,5 % (sciopero di 4 ore del giorno 23 ottobre 2024)\n\nDi seguito vengono elencate le ultime e le prime partenze garantite in relazione alle fasce di garanzia.\n\nDurante l’orario di sciopero, l’effettuazione delle corse è subordinata al numero di lavoratori aderenti allo sciopero\n\nULTIME PARTENZE GARANTITE PRIMA DELLO SCIOPERO:\n\nda Montesanto per Bagnoli          19:21\n\nda Montesanto per Licola             19:12\n\nda Bagnoli per Montesanto          19:20\n\nda Licola per Montesanto             19:08\n\n**Categoria:** [Trasporto pubblico](https://www.eavsrl.it/categoria-disservizio/trasporto-pubblico/)\n\n**Area:** [Campania](https://www.eavsrl.it/area/campania/)"
+    "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"EAV\" (the public transport company of Campania (15)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: Linee Flegree: Avviso di sciopero di 4 ore, venerdì 10 gennaio 2025 - EAV srl\n\n* * *\n\n## Linee Flegree: Avviso di sciopero di 4 ore, venerdì 10 gennaio 2025\n\nData:  \n**5 Gennaio 2025**\n\nSi comunica che per il giorno 10 Gennaio 2025 la O.S. CONF.A.I.L. ha proclamato uno sciopero nazionale di 4 ore, dalle ore 19:32 alle ore 23:32, avente la seguente motivazione: “_Problematiche relative al Trasporto Pubblico Locale_”\n\nDurante l’ultima proclamazione di sciopero delle citate OO.SS., la percentuale di adesione è stata del 15,5 % (sciopero di 4 ore del giorno 23 ottobre 2024)\n\nDi seguito vengono elencate le ultime e le prime partenze garantite in relazione alle fasce di garanzia.\n\nDurante l’orario di sciopero, l’effettuazione delle corse è subordinata al numero di lavoratori aderenti allo sciopero\n\nULTIME PARTENZE GARANTITE PRIMA DELLO SCIOPERO:\n\nda Montesanto per Bagnoli          19:21\n\nda Montesanto per Licola             19:12\n\nda Bagnoli per Montesanto          19:20\n\nda Licola per Montesanto             19:08\n\n**Categoria:** [Trasporto pubblico](https://www.eavsrl.it/categoria-disservizio/trasporto-pubblico/)\n\n**Area:** [Campania](https://www.eavsrl.it/area/campania/)"
   },
   "response": {
     "parsedData": {
@@ -22,17 +22,17 @@
       }
     },
     "usage": {
-      "input": 1409,
+      "input": 1373,
       "output": 92,
-      "total": 1501
+      "total": 1465
     },
     "costUsd": {
-      "inputCost": 0.00003945,
+      "inputCost": 0.00003844,
       "outputCost": 0.00002576,
       "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.00006521
+      "totalCost": 0.0000642
     },
-    "durationMs": 5195
+    "durationMs": 5364
   }
 }
