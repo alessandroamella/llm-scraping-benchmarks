@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-09 00:00:00",
+      "endDate": "2025-12-09 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6226,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00035175,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.001167,
+      "cachedCost": 0,
+      "totalCost": 0.00172875
+    },
+    "hash": "c363f3759258e718044f71ef47c47cac",
+    "sourceFile": "martedi_9_dicembre_sciopero_del_trasporto_pubblico_possibili_stop_per_24_ore.html",
+    "thoughts": "**Strike Analysis: Italian Public Transport**\n\nOkay, let's break this down. The source text indicates a public transport strike in Italy, specifically for the ATAC network. The key is \"Martedì 9 dicembre sciopero del trasporto pubblico. Possibili stop per 24 ore.\" That's December 9th, and a 24-hour strike. The text explicitly says it's limited to the ATAC network, which I'm taking to mean Rome, in the Lazio region, which corresponds to region code \"12.\"\n\nMy initial thought is to confirm: Is this an upcoming strike? Yes.\n\nNow, let's assemble the `strikeData`. We have the date, December 9th. Although the year is not present, for the purpose of the application I will assume the next occurrence, which means the date is \"2025-12-09.\" A standard 24-hour strike typically starts at the beginning of a service day, and runs until the end. The text indicates guaranteed service until 8:30 and from 17:00 to 20:00. These are key data points.\n\nSo, the start date is \"2025-12-09 00:00:00\" and the end date is \"2025-12-09 23:59:59\". The strike is \"REGIONAL\" since it's only in the \"12\" region. Now, let's put guaranteed times in the proper notation: guaranteed times are \"00:00-08:30\" and \"17:00-20:00.\"\n\nFinally, `isStrike` is confirmed as `true`. So, double checking:\n*   `startDate`: \"2025-12-09 00:00:00\"\n*   `endDate`: \"2025-12-09 23:59:59\"\n*   `locationType`: \"REGIONAL\"\n*   `locationCodes`: [\"12\"]\n*   `guaranteedTimes`: [\"00:00-08:30\", \"17:00-20:00\"]\n\nLooks good. The strike data is now properly formatted and analyzed.\n\n\n",
+    "tokens": {
+      "input": 1407,
+      "output": 140,
+      "total": 2325
+    }
+  }
+}

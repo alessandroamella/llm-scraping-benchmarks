@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-07-04 08:30:00",
+      "endDate": "2024-07-04 16:30:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 26334,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006701,
+      "outputCost": 0.0008188,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0014889
+    },
+    "hash": "060afe61882b7b21f391add54124642d",
+    "sourceFile": "trasporto_pubblico_domani_sciopero_8_ore_sulla_rete_atac.html",
+    "thoughts": "**Extracting strike details**\n\nIt looks like there’s an upcoming strike, so isStrike should be true. I need to fill in strikeData with the start and end dates formatted as 'yyyy-MM-dd HH:mm:ss'. The article says the strike is tomorrow, July 4, 2024, from 8:30 to 16:30. I’ll adjust the times to 08:30-16:30 since the original has decimal commas. The location is Atac (Rome), which indicates it should be labeled as REGIONAL.",
+    "tokens": {
+      "input": 13402,
+      "output": 2047,
+      "total": 15449
+    }
+  }
+}

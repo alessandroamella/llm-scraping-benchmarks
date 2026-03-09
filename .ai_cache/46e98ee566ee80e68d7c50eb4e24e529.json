@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 11257,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006741,
+      "outputCost": 0.00012,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0007941
+    },
+    "hash": "46e98ee566ee80e68d7c50eb4e24e529",
+    "sourceFile": "sciopero_trasporto_pubblico_aperte_metropolitane_situazione_sulla_rete_15.html",
+    "thoughts": "**Determining strike status**\n\nI need to extract information based on the strike_extraction schema. The article I'm looking at is titled \"Sciopero del trasporto pubblico,\" and it discusses an ongoing strike rather than an upcoming one. It clearly states, \"È in corso lo sciopero del trasporto pubblico di 24 ore,\" which confirms it's currently happening. Since my instructions indicate that \"isStrike\" should only be true for upcoming strikes, I must set \"isStrike\" to false and prepare my output accordingly: { \"isStrike\": false }.",
+    "tokens": {
+      "input": 13482,
+      "output": 300,
+      "total": 13782
+    }
+  }
+}

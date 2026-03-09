@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6193,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000788,
+      "outputCost": 0.000136,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002148
+    },
+    "hash": "9b4e340b5cdbcd70bd582ebbde915277",
+    "sourceFile": "sciopero_trasporto_pubblico_chiusa_metro.html",
+    "thoughts": "**Preparing JSON output**\n\nI need to output the JSON to indicate that there is no strike happening. The instruction states that since it's ongoing, I should set \"isStrike\" to false. So, I’ll finalize it as:\n\n{\"isStrike\": false}\n\nI should ensure that the formatting is precise as JSON. It's important to follow the \"strike_extraction\" format in the designated channel. Alright, I'm ready with that final output!",
+    "tokens": {
+      "input": 1576,
+      "output": 340,
+      "total": 1916
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7267,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000788,
+      "outputCost": 0.0001476,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002264
+    },
+    "hash": "f3640653a14887dc23c90fdbd744bf94",
+    "sourceFile": "venerdi_trasporto_pubblico_regolarmente_servizio_sciopero_nazionale_usb_rinviato_9_ottobre.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to determine if this document is announcing a new or upcoming strike based on the provided Italian content. It mentions that the public transport will operate regularly on Friday, September 29, and that a national strike by the USB has been postponed to October 9. This indicates it's not a new strike but a revision. Therefore, I should set isStrike to false since the strike has been canceled or postponed.",
+    "tokens": {
+      "input": 1576,
+      "output": 369,
+      "total": 1945
+    }
+  }
+}

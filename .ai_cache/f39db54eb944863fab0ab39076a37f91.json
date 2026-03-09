@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 11059,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006696,
+      "outputCost": 0.000244,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0009136
+    },
+    "hash": "f39db54eb944863fab0ab39076a37f91",
+    "sourceFile": "news_media_comunicati_sciopero_adesione_personale_atac.html",
+    "thoughts": "**Analyzing strike content**\n\nWe need to generate JSON for strike extraction based on the specified schema. The source is an Italian page discussing public transport strikes with a participation rate of 24.9%. It’s mentioning the participation (adesione) for a strike in the morning, implying it's about attendance for a strike that's occurring today. Since it’s not announcing a new strike, but rather reporting on participation, the isStrike flag should be set to false. That makes sense!",
+    "tokens": {
+      "input": 13392,
+      "output": 610,
+      "total": 14002
+    }
+  }
+}

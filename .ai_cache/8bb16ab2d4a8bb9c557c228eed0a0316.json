@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-05-20 00:00:00",
+      "endDate": "2022-05-21 00:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 37075,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006742,
+      "outputCost": 0.0012224,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0018966
+    },
+    "hash": "8bb16ab2d4a8bb9c557c228eed0a0316",
+    "sourceFile": "venerd_20_maggio_sciopero_24_ore_trasporto_pubblico_rischio.html",
+    "thoughts": "**Analyzing strike announcement**\n\nIt seems there's a 24-hour strike announcement for Friday, May 20, with details about service availability being at risk. We need to extract that there's an ongoing strike, setting isStrike to true and capturing the strikeData, including startDate, endDate, and location.\n\nThe start date would be 2022-05-20 00:00 and end at 2022-05-21 00:00. They mention \"guaranteed times\" for service, which suggests it operates \"regularly until 8:30\" and \"from 17 to 20.\"",
+    "tokens": {
+      "input": 13484,
+      "output": 3056,
+      "total": 16540
+    }
+  }
+}

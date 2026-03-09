@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-03-08 00:00:00",
+      "endDate": "2023-03-08 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 37998,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006785,
+      "outputCost": 0.0011844,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0018629
+    },
+    "hash": "9362b4c089a78c8ebd879d13fff8b440",
+    "sourceFile": "mercoled_8_marzo_sciopero_nazionale_cub_trasporto_pubblico_rischio_24_ore.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to output JSON with details about a strike, looking specifically for \"isStrike\" and possibly \"strikeData.\" The content indicates a national strike by a federal union (Cub) happening on Wednesday, March 8, with public transport at risk for 24 hours. It appears to be an announcement from 2023. It impacts ATAC and Roma Tpl, but service will be regular until certain times, indicating this is indeed an announcement about an upcoming strike.",
+    "tokens": {
+      "input": 13570,
+      "output": 2961,
+      "total": 16531
+    }
+  }
+}

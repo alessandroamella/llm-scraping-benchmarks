@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 11466,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008045,
+      "outputCost": 0.000214,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00029445
+    },
+    "hash": "09c77036f1bdc0e14bdc348d73ac188f",
+    "sourceFile": "sciopero_del_trasporto_pubblico_aperte_le_metropolitane_e_la_termini_centocelle.html",
+    "thoughts": "**Analyzing strike status**\n\nI'm examining the network situation regarding a service that's currently ongoing. According to the instructions, I should only mark isStrike as true for upcoming strikes. Since this is an ongoing one, isStrike should be false. Therefore, I need to provide the output as {\"isStrike\": false}. I'm making sure to keep the formatting straightforward and avoid any unnecessary explanations, just delivering the JSON as specified.",
+    "tokens": {
+      "input": 1609,
+      "output": 535,
+      "total": 2144
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "timestamp": "2026-03-09T18:52:11.044Z",
+  "isCacheHit": false,
+  "request": {
+    "sourceName": "ATAC",
+    "fileName": "sciopero_trasporto_pubblico_attive_metropolitane_termini_centocelle.html",
+    "model": "deepseek-chat",
+    "strategy": "mineru-html",
+    "useLenientSchema": false,
+    "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"ATAC\" (the public transport company of Rome, Lazio (12)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: mineru-html):\n<html lang=\"it-IT\" prefix=\"og: https://ogp.me/ns#\"><body class=\"wp-singular comunicato-template-default single single-comunicato postid-10937 wp-embed-responsive wp-theme-hello-elementor wp-child-theme-hello-elementor-child hello-elementor-default elementor-default elementor-kit-12678 elementor-page-15972\">\n<div class=\"elementor elementor-15972 elementor-location-single post-10937 comunicato type-comunicato status-publish hentry\" data-elementor-id=\"15972\" data-elementor-post-type=\"elementor_library\" data-elementor-type=\"single-page\">\n<div class=\"elementor-element elementor-element-6ee3468 e-flex e-con-boxed e-con e-parent\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"6ee3468\" data-settings='{\"background_background\":\"classic\"}'>\n<div class=\"e-con-inner\">\n<div class=\"elementor-element elementor-element-6945d4c e-con-full e-flex e-con e-child\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"6945d4c\">\n<div class=\"elementor-element elementor-element-da182fa e-con-full e-flex e-con e-child\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"da182fa\">\n<div class=\"elementor-element elementor-element-aff84d2 elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading\" data-e-type=\"widget\" data-element_type=\"widget\" data-id=\"aff84d2\" data-widget_type=\"theme-post-title.default\">\n<div class=\"elementor-widget-container\">\n<h1 class=\"elementor-heading-title elementor-size-default\" _item_id=\"1\">Sciopero del trasporto pubblico, attive le metropolitane e la Termini-Centocelle</h1> </div>\n</div>\n</div>\n</div>\n</div>\n</div>\n<div class=\"elementor-element elementor-element-32c51eb e-flex e-con-boxed e-con e-parent\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"32c51eb\">\n<div class=\"e-con-inner\">\n<div class=\"elementor-element elementor-element-7a3d033 e-con-full e-flex e-con e-child\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"7a3d033\" id=\"main-content\">\n<div class=\"elementor-element elementor-element-723d484 elementor-widget elementor-widget-theme-post-content\" data-e-type=\"widget\" data-element_type=\"widget\" data-id=\"723d484\" data-widget_type=\"theme-post-content.default\">\n<div class=\"elementor-widget-container\">\n<p _item_id=\"3\">È in corso lo sciopero del trasporto pubblico che si concluderà alle 12,30. Ecco la situazione sulla rete Atac</p>\n<p _item_id=\"4\">-Metro A-B/B1-C-Termini-Centocelle: proseguono servizio<br>-Rete di superficie: possibili riduzioni di corse.</p>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</body></html>"
+  },
+  "response": {
+    "rawOutput": {
+      "isStrike": false
+    },
+    "parsedData": {
+      "isStrike": false
+    },
+    "usage": {
+      "input": 1725,
+      "output": 14,
+      "total": 1739
+    },
+    "costUsd": {
+      "inputCost": 0.0000483,
+      "outputCost": 0.00000392,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00005222
+    },
+    "durationMs": 2229
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-07-24 08:30:00",
+      "endDate": "2023-07-24 12:30:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "08:30-12:30",
+        "08:30-12:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21270,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006754,
+      "outputCost": 0.0007884,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0014638
+    },
+    "hash": "6fdf776d16dcec7d540862236299228a",
+    "sourceFile": "luned_24_luglio_sciopero_nazionale_tpl_roma_servizio_rischio_830_1230.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to create JSON based on the provided schema for strike extraction. The input clearly states an upcoming strike on \"Lunedì 24 luglio,\" indicating a national public transport strike. The details specify service disruption in Rome from 8:30 to 12:30. The status note shows it's published and updated on the same day. So, this definitely qualifies as an announcement of an upcoming strike, specifically for Monday, July 24, 2023. Let's format this properly!",
+    "tokens": {
+      "input": 13508,
+      "output": 1971,
+      "total": 15479
+    }
+  }
+}

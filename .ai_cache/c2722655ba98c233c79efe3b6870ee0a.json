@@ -1,0 +1,32 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 17571,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000926,
+      "outputCost": 0.0006212,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0007138
+    },
+    "hash": "c2722655ba98c233c79efe3b6870ee0a",
+    "sourceFile": "roma_servizi_mobilit_domani_attivit_rischio_sciopero.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to output JSON following the given schema. The document indicates an upcoming strike due to the USB union, specifically stating tomorrow's potential disruptions. The title reflects “domani attività a rischio per sciopero,” which translates to “activities at risk tomorrow due to the strike.” There's no mention of specific times or location codes in the article. So, I’ll mark `isStrike` as true, while noting the absence of detailed timing or codes for the `strikeData`.",
+    "tokens": {
+      "input": 1852,
+      "output": 1553,
+      "total": 3405
+    }
+  }
+}

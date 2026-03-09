@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4505,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00369325,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000555,
+      "cachedCost": 0,
+      "totalCost": 0.00426325
+    },
+    "hash": "70634426508044f763317fe0d6518f1b",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_302.html",
+    "thoughts": "**Analyzing the Atac Strike Report**\n\nOkay, here's what I'm thinking as I process this information. I've received some webpage content from `romamobilita.it` regarding an Atac strike. My goal is to determine if this is an *upcoming* strike, and if so, to extract the pertinent details. The rules are pretty straightforward: if it's an announcement about an *upcoming* strike, `isStrike` is true. Otherwise – if it's a revocation, post-event stats, or real-time info – then `isStrike` is false. The output needs to be a JSON object, or an array containing such.\n\nThe title is: \"Sciopero del trasporto pubblico, adesione personale Atac al 30,2% - Roma Servizi per la Mobilità\" (Public transport strike, 30.2% turnout of Atac staff). And the content reads, \"L’adesione del personale Atac allo sciopero del trasporto pubblico, rilevata in mattinata, è stata pari al 30,2%\" (The adherence of Atac staff to the public transport strike, measured in the morning, was equal to 30.2%). The publication/update dates are also listed.\n\nBased on this content, it’s clear that this isn't an *announcement* of a future strike. The phrasing \"adesione ... è stata pari al 30,2%\" (\"adherence ... was equal to 30.2%\") and \"rilevata in mattinata\" (measured in the morning) strongly suggests a *past* event, and we're seeing the participation statistics. This is a post-event report, a summary of how many workers participated in a strike that has already occurred.\n\nTherefore, because this is *not* an announcement of a future strike, I'll set `isStrike` to `false`. My JSON output will be:\n\n`{\"isStrike\": false}`.\n\n\n",
+    "tokens": {
+      "input": 14773,
+      "output": 10,
+      "total": 15153
+    }
+  }
+}

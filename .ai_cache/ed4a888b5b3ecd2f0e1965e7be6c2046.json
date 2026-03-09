@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 11849,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007885,
+      "outputCost": 0.000132,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00021085
+    },
+    "hash": "ed4a888b5b3ecd2f0e1965e7be6c2046",
+    "sourceFile": "sciopero_generale_adesione_personale_atac_al_259.html",
+    "thoughts": "**Deciding on strike info output**\n\nI need to determine if this document is announcing an upcoming strike. The title translates to \"General strike, Atac staff participation at 25.9%,\" and the body mentions that 25.9% of Atac staff participated in the national general strike. Since it reports participation without giving dates or times, it indicates that this is not a new strike. Therefore, I should set `isStrike` to false and output: `{ \"isStrike\": false }`.",
+    "tokens": {
+      "input": 1577,
+      "output": 330,
+      "total": 1907
+    }
+  }
+}

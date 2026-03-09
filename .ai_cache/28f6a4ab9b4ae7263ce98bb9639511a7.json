@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-01-24 00:00:00",
+      "endDate": "2024-01-24 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8540,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00371425,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.0013965,
+      "cachedCost": 0,
+      "totalCost": 0.00529525
+    },
+    "hash": "28f6a4ab9b4ae7263ce98bb9639511a7",
+    "sourceFile": "sciopero_nazionale_24_gennaio_trasporto_pubblico_rischio.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, here's the deal. I've got this document from \"Roma Servizi per la Mobilità,\" and my task is to figure out if it announces a strike. The input is specifically about a strike on January 24th.\n\nFirst things first, I need to confirm whether it's a strike at all. The context clues are pretty clear: phrases like \"Sciopero nazionale: il 24 gennaio trasporto pubblico a rischio\" and \"sciopero nazionale di 24 ore\" are dead giveaways. Yep, definitely a strike. So, `isStrike` is `true`.\n\nNow, I need the details. It's a 24-hour strike, so the start is midnight on the 24th and ends at 11:59:59 PM.  That gives me the `startDate` of \"2024-01-24 00:00:00\" and `endDate` of \"2024-01-24 23:59:59\".\n\nNext, location. It says \"sciopero nazionale\", even though the text highlights Rome. The schema's pretty clear: if it's *national*, I *omit* `locationCodes`. So, I'm setting `locationType` to \"NATIONAL\" and leaving `locationCodes` out.\n\nNow, the guaranteed times. This is the part I need to be precise on. The text says \"fino alle 8,30\" (meaning service *until* 8:30) and \"dalle 17 alle 20\".  I need to format these correctly.  \"fino alle 8,30\" translates to a guarantee from \"00:00-08:30\", and \"dalle 17 alle 20\" is straight-forward as \"17:00-20:00\". So, `guaranteedTimes` will be [\"00:00-08:30\", \"17:00-20:00\"].\n\nJust to be absolutely sure about the \"NATIONAL\" vs. \"REGIONAL\" bit, I'm re-emphasizing that even though the focus is Rome (and implicitly ATAC), the *strike* itself is \"nazionale\" – national. So, national it is.\n\nLet's double-check the dates: Yep, January 24th, confirmed. Guaranteed times are correctly formatted: confirmed.\n\nSo, here's the data structure I'm building:\n\n*   `isStrike`: `true`\n*   `strikeData`:\n    *   `startDate`: \"2024-01-24 00:00:00\"\n    *   `endDate`: \"2024-01-24 23:59:59\"\n    *   `locationType`: \"NATIONAL\"\n    *   `guaranteedTimes`: [\"00:00-08:30\", \"17:00-20:00\"]\n\nI need to validate this as JSON now. This looks correct and consistent. The JSON is good. I am happy with this extraction.\n\n\n",
+    "tokens": {
+      "input": 14857,
+      "output": 123,
+      "total": 15911
+    }
+  }
+}

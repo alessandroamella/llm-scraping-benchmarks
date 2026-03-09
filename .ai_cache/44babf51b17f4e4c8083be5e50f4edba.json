@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3712,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00368725,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0003405,
+      "cachedCost": 0,
+      "totalCost": 0.00404275
+    },
+    "hash": "44babf51b17f4e4c8083be5e50f4edba",
+    "sourceFile": "sciopero_generale_nazionale_adesione_personale_atac_23.html",
+    "thoughts": "**Analyzing the Atac Strike Report**\n\nOkay, let's break this down. The input content originates from \"Roma Servizi per la Mobilità\" and concerns a strike, specifically a national general strike. The title gives it away: \"Sciopero generale nazionale, adesione personale Atac al 23% - Roma Servizi per la Mobilità\". Right away, I see the critical word: \"adesione\" – participation.\n\nThe core information is the reported 23% participation of Atac personnel. The key here, and where the analysis needs to focus, is the *timing* of this information. The text clearly states that the participation was \"rilevata in mattinata,\" meaning \"measured in the morning.\" This signifies that the data is *post-event*. It's a report on what *happened* earlier, not an announcement about what *will* happen. The publication date of 02/12/2022 confirms the historical nature of the data.\n\nMy task is to determine whether this document is an announcement of a *new* strike. Given that it's reporting on participation *after* the fact, the answer is no. This document is a post-mortem, a summary of how a strike played out, not a heads-up. The instruction \"If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false\" clearly aligns with this interpretation.\n\nTherefore, `isStrike` is unequivocally `false`. The task is complete.\n\n\n",
+    "tokens": {
+      "input": 14749,
+      "output": 10,
+      "total": 14986
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 26032,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000933,
+      "outputCost": 0.0011032,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0011965
+    },
+    "hash": "4aa0ddb49bc5fa39a5fdb87f00df9416",
+    "sourceFile": "trasporto_pubblico_sabato_5_ottobre_sciopero_nazionale_24_ore_servizio_rischio.html",
+    "thoughts": "**Clarifying strike details**\n\nThe instruction indicates that this announcement is for a 24-hour national strike on Saturday, October 5. It mentions specific service windows being regular until 8:30 and from 17:00 to 20:00, suggesting guaranteed service times during those hours. For the format, I need to set \"locationType\" to \"NATIONAL\" and keep \"locationCodes\" null. The strike is expected to run from 00:00 to 23:59 on the day. I'll mark \"isStrike\" as true and finalize the date details accordingly.",
+    "tokens": {
+      "input": 1866,
+      "output": 2758,
+      "total": 4624
+    }
+  }
+}

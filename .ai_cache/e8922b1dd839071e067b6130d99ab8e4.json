@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3035,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00369375,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0002985,
+      "cachedCost": 0,
+      "totalCost": 0.00400725
+    },
+    "hash": "e8922b1dd839071e067b6130d99ab8e4",
+    "sourceFile": "sciopero_trasporto_pubblico_aperte_metropolitane.html",
+    "thoughts": "**Analyzing Archival Strike Information from romamobilita.it**\n\nOkay, here's what I've got. The input is a webpage from `romamobilita.it`, specifically titled \"Sciopero del trasporto pubblico, aperte le metropolitane.\" The crucial piece is the date information: \"Pubblicato il: 29/03/2022 - Aggiornato il: 25/01/2023.\" So, right away, my expertise tells me this is *old* content, likely an archived page detailing a past event.\n\nThe text itself then goes on to describe a 24-hour strike that *already occurred* (\"È in corso lo sciopero...\"). The instructions I've been given are crystal clear: `isStrike` should only be set to `true` for announcements of *upcoming* strikes. This is explicitly *not* an announcement; it's a report on the participation in a past strike. Given that this is a historical event, and the dates confirm it, I'm confident I should set `isStrike` to `false`. My analysis is complete.\n\n\n",
+    "tokens": {
+      "input": 14775,
+      "output": 10,
+      "total": 14984
+    }
+  }
+}

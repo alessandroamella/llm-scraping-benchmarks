@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-12-15 00:00:00",
+      "endDate": "2023-12-15 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21533,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00067085,
+      "outputCost": 0.0007576,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00142845
+    },
+    "hash": "0247923e92ba63485dd12f083bcd9be2",
+    "sourceFile": "trasporto_pubblico_sciopero_nazionale_differito_15_dicembre.html",
+    "thoughts": "**Determining strike announcement details**\n\nI need to create a JSON following the strike_extraction schema. The content I'm examining states that a national public transport strike has been postponed to December 15. Since this date is in the future relative to March 2026, it definitely qualifies as an announcement of an upcoming strike. The page confirms this with the status indicating the strike is moved to December 15. So, it’s clear that it is indeed announcing an upcoming strike on that date.",
+    "tokens": {
+      "input": 13417,
+      "output": 1894,
+      "total": 15311
+    }
+  }
+}

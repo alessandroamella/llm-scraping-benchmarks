@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3253,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00034325,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0003195,
+      "cachedCost": 0,
+      "totalCost": 0.00067775
+    },
+    "hash": "cf767d66bba97f27bf77d666773077d1",
+    "sourceFile": "sciopero_generale_nazionale_adesione_personale_atac_23.html",
+    "thoughts": "**Analyzing Strike Announcements**\n\nOkay, let me break this down. My task is to determine if this input indicates a *new* or *upcoming* strike. I'm given content from a web page, specifically about worker participation – \"adesione\" – in a strike, and I've got a schema to adhere to.\n\nThe key here is whether this refers to past participation or a future event. From the looks of it, this is a report on *existing* participation.\n\nLet's look at the specifics. The title is: \"Sciopero generale nazionale, adesione personale Atac al 23%\" (General national strike, Atac staff participation at 23%). The content confirms this; it states, \"L’adesione del personale Atac allo sciopero generale nazionale, rilevata in mattinata, è stata pari al 23%\" (The participation of Atac personnel in the general national strike, detected in the morning, was 23%). The use of phrases like \"detected in the morning\" and the reference to an *existing* percentage indicate this is a report on the participation rate, not a pre-strike announcement.\n\nTherefore, `isStrike` should be set to `false`. This doesn't represent an upcoming work stoppage. This aligns with the schema, which is the primary objective here.\n\n\n",
+    "tokens": {
+      "input": 1373,
+      "output": 10,
+      "total": 1596
+    }
+  }
+}

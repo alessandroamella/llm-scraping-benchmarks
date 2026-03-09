@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-10-21 08:30:00",
+      "endDate": "2022-10-21 12:30:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "08:30-12:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 26410,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006789,
+      "outputCost": 0.0009488,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0016277
+    },
+    "hash": "e17f4c05ca7f40b3c069344362cd13ba",
+    "sourceFile": "venerd_prossimo_bus_della_roma_tpl_rischio_830_1230_sciopero_usb.html",
+    "thoughts": "**Analyzing strike announcement**\n\nThe phrase \"Venerdì prossimo\" refers to next Friday, indicating an upcoming strike related to the article. I see that this is about ATAC, the public transport company in Rome, but the provider is listed as Roma Servizi per la Mobilità. The mention of \"sciopero Usb\" indicates it's a strike that could disrupt service between 8:30 and 12:30. The phrase \"a rischio\" suggests services might be affected. So, I conclude this is a planned strike announcement, and I need to set isStrike to true with appropriate date formatting.",
+    "tokens": {
+      "input": 13578,
+      "output": 2372,
+      "total": 15950
+    }
+  }
+}

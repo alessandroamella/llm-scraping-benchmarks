@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-02 00:00:00",
+      "endDate": "2024-12-02 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5767,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00034475,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.0012945,
+      "cachedCost": 0,
+      "totalCost": 0.00182375
+    },
+    "hash": "1318591ae485e05daab6c19e8b83fe77",
+    "sourceFile": "venerd_2_dicembre_sciopero_generale_nazionale_24_ore_rischio_trasporto_pubblico_romano.html",
+    "thoughts": "**Analyzing the Strike Information**\n\nOkay, let's break this down systematically. The text indicates a significant event: a \"sciopero generale nazionale\" – a national general strike – set to occur on December 2nd. The text clearly states this will disrupt Rome's public transport (\"la rete Atac e i bus periferici della Roma Tpl\"). Since I'm working with a date format requirement, and I don't have explicit context, I'll confidently assume the relevant December 2nd is in the very near future, so I'll be specifying the date for December 2, 2024.\n\nTherefore, my main concern is to accurately represent the strike's parameters, starting with the timeline. It's a 24-hour strike, beginning at midnight on December 2nd and running through until the end of the day.\n\nSo, the key strike information is:\n\n*   `isStrike`: true - This is undoubtedly a strike.\n*   `strikeData`:\n    *   `startDate`: \"2024-12-02 00:00:00\" - Starting at midnight, December 2, 2024.\n    *   `endDate`: \"2024-12-02 23:59:59\" - Ending just before midnight on December 2, 2024.\n    *   `locationType`: \"NATIONAL\" - It is a national strike. No specific location codes are needed with this.\n    *   `guaranteedTimes`: [\"00:00-08:30\", \"17:00-20:00\"] - Crucially, certain periods of service are *guaranteed* until 8:30 AM and from 5 PM to 8 PM. These are not just 'regular' service times, it means the transport services are guaranteed.\n\nThe date format checks out: `yyyy-MM-dd HH:mm:ss`. And I verified the guaranteed times are the ones provided. I can proceed to implement this information accurately.\n\n\n",
+    "tokens": {
+      "input": 1379,
+      "output": 123,
+      "total": 2365
+    }
+  }
+}

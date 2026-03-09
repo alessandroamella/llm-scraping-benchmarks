@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 10636,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008035,
+      "outputCost": 0.0001952,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00027555
+    },
+    "hash": "d6c100149a371adee52bb94c42be8c23",
+    "sourceFile": "sciopero_trasporto_pubblico_attive_linee_della_metropolitana.html",
+    "thoughts": "**Evaluating strike announcement details**\n\nI need to output data in the JSON format following the strike_extraction format. First, I have to ascertain if this is indeed a strike announcement. The content is in Italian, titled \"Sciopero del trasporto pubblico: attive le linee della metropolitana,\" which translates to \"Public transport strike: metro lines active.\" The body states that a 24-hour public transport strike is ongoing, but metro services continue without route limitations, with potential reductions on Line A and normal service on Lines B and C.",
+    "tokens": {
+      "input": 1607,
+      "output": 488,
+      "total": 2095
+    }
+  }
+}

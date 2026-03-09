@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3772,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.003745,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0003555,
+      "cachedCost": 0,
+      "totalCost": 0.0041155
+    },
+    "hash": "d5a63c4ac5affa4eab28cd4976aeebbb",
+    "sourceFile": "sciopero_del_trasporto_pubblico_attive_le_metropolitane_e_la_termini_centocelle.html",
+    "thoughts": "**Analyzing the \"Roma Servizi per la Mobilità\" Web Page**\n\nOkay, so the task is to figure out if this text is announcing an *upcoming* strike. My criteria are clear: if it's about a future strike, then `isStrike` is true. If it’s about a cancellation, a past strike, providing real-time information *during* a strike, or just general service updates, then `isStrike` is false.\n\nI have a web page from \"Roma Servizi per la Mobilità\" titled \"Sciopero del trasporto pubblico: attive le metropolitane e la Termini-Centocelle\" as my input. Right, let's break down the content.\n\nThe page opens by stating, \"È in corso lo sciopero del trasporto pubblico che interessa la rete Atac.\" (The strike is currently ongoing). Then, it goes on to provide updates: \"Ecco la situazione... prosegue servizio...\" (Here's the situation... service continues...). The publication or update date is 10/10/2025.\n\nBased on the information, this is *clearly* a report on an *ongoing* strike. It's providing real-time updates and status information. There is no mention of a future strike. It's happening right now, or at least happened in the past. Therefore, this doesn't fit the criteria for an *upcoming* strike. I'm going to set `isStrike` to false.\n\n\n",
+    "tokens": {
+      "input": 14980,
+      "output": 10,
+      "total": 15227
+    }
+  }
+}

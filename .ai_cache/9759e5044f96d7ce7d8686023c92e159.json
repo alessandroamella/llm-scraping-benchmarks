@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-07-24 08:30:00",
+      "endDate": "2023-07-24 12:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7036,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0003595,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.0012435,
+      "cachedCost": 0,
+      "totalCost": 0.001726
+    },
+    "hash": "9759e5044f96d7ce7d8686023c92e159",
+    "sourceFile": "luned_24_luglio_sciopero_nazionale_tpl_roma_servizio_rischio_830_1230.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, here's the deal. I've got this HTML content about an ATAC strike in Rome (\"12,\" which I know refers to Lazio). My goal is to figure out if it's a new strike announcement and, if so, extract the relevant data into a JSON format based on the defined schema.\n\nFirst, I see the headline: \"Lunedì 24 luglio sciopero nazionale del Tpl. A Roma servizio a rischio dalle 8,30 alle 12,30.\" Pretty clear. It's a national transport strike on Monday, July 24th, with potential disruption in Rome from 8:30 to 12:30. The content confirms this: \"Lunedì 24 luglio trasporto pubblico a rischio per lo sciopero nazionale di 4 ore, dalle 8,30 alle 12,30, proclamato dal sindacato Usb.\"\n\nNow, date parsing. The specific date format is there, but the year isn't explicitly mentioned. I need to make a judgment call here, as the target output requires a `yyyy-mm-dd` format. Since it's a strike announced for a specific date, and the context refers to a past/future event format, I will assume the current year, 2023. I'll need to remember to confirm how this is handled if there are other date formats.\n\nLet's start populating the JSON. Definitely a strike: `isStrike: true`. The start date is \"2023-07-24 08:30:00\" and the end date is \"2023-07-24 12:30:00\".\n\nHere's where it gets a little tricky. The text says \"sciopero nazionale\" (national strike), but the context references Rome (\"12\"), Lazio. The instructions state \"If locationType is NATIONAL, locationCodes MUST BE OMITTED completely.\" I also need to map location codes to 2-digit ISTAT. However, the schema mandates that if `locationType` is `NATIONAL`, `locationCodes` must be omitted. So even though the announcement is for Rome, the strike is nationwide, so it has to be marked as `NATIONAL`.\n\nTherefore, the final output would be:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2023-07-24 08:30:00\",\n    \"endDate\": \"2023-07-24 12:30:00\",\n    \"locationType\": \"NATIONAL\"\n  }\n}\n```\n\nOkay, so I will mark it as NATIONAL and omit the codes as per the strict instruction. I'm going with what the schema specifies, even if it requires a bit of parsing on the implications. Done.\n\n\n",
+    "tokens": {
+      "input": 1438,
+      "output": 82,
+      "total": 2349
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-06-17 08:30:00",
+      "endDate": "2022-06-17 12:30:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5302,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00376575,
+      "outputCost": 0.0001395,
+      "thinkingCost": 0.000741,
+      "cachedCost": 0,
+      "totalCost": 0.00464625
+    },
+    "hash": "a28af6eb57bd18f6cd47bda139dc2470",
+    "sourceFile": "venerd_17_giugno_sciopero_4_ore_rete_atac_rischio_830_1230.html",
+    "thoughts": "**Strike Analysis: Italian Public Transport**\n\nOkay, let's break this down. My task is clear: determine if the provided text indicates a strike, and if so, extract the relevant data in JSON format. The text presents a clear-cut case. I have a title: \"Venerdì 17 giugno sciopero di 4 ore. Rete Atac a rischio dalle 8,30 alle 12,30,\" which translates to \"Friday, June 17th, 4-hour strike. Atac network at risk from 8:30 to 12:30.\" The article itself explicitly states: \"Venerdì 17 giugno trasporto pubblico romano a rischio per lo sciopero di 4 ore, dalle 8,30 alle 12,30, indetto tra i lavoratori Atac dai sindacati Usb e Orsa Tpl,\" or \"Friday, June 17th, Roman public transport at risk due to a 4-hour strike, from 8:30 to 12:30, called among Atac workers by the Usb and Orsa Tpl unions.\"\n\nThe publication date is June 10, 2022, and the strike is scheduled for June 17, 2022. I can deduce this is an *announcement* of a *future* strike. The strike affects the Atac network, which is local/regional. The key time window is 08:30 to 12:30.\n\nBased on these facts, I will construct a JSON object. I'll flag `isStrike` as `true`. I'll also add the `strikeData` object. I have the start and end date, derived from the article. The location type will be regional/local (specifically, Atac network). The location code for Lazio is '12', the regional ISTAT code. The guaranteed times are not available in the given text, and so I am excluding it. Thus, no guaranteed times are included as they are not explicitly mentioned in the text.\n\nHere is what I've concluded:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2022-06-17 08:30:00\",\n    \"endDate\": \"2022-06-17 12:30:00\",\n    \"locationType\": \"regional\",\n    \"locationCodes\": [\"12\"]\n  }\n}\n```\n\n\n",
+    "tokens": {
+      "input": 15063,
+      "output": 93,
+      "total": 15650
+    }
+  }
+}

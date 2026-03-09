@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-03-08 00:00:00",
+      "endDate": "2026-03-08 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 32604,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008015,
+      "outputCost": 0.001314,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00139415
+    },
+    "hash": "f0a65ee4aa1b0cb1e6527791a0d2bd29",
+    "sourceFile": "martedi_8_marzo_sciopero_generale_24_ore_rischio_trasporto_pubblico.html",
+    "thoughts": "**Extracting strike details**\n\nI see that this is an announcement for a strike on Tuesday, March 8, so I can set isStrike to true. My next step is to extract the strike dates, which should be in the 'yyyy-MM-dd HH:mm:ss' format. However, the article only mentions \"Martedi 8 marzo\" without a year or specific times. I might set the start date as \"2026-03-08 00:00:00\" and the end date as \"2026-03-08 23:59:59” for clarity.",
+    "tokens": {
+      "input": 1603,
+      "output": 3285,
+      "total": 4888
+    }
+  }
+}

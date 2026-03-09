@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8746,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00066885,
+      "outputCost": 0.0001912,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00086005
+    },
+    "hash": "5e4d4413b3f510137e9a70f99f696e9f",
+    "sourceFile": "sciopero_nazionale_trasporto_pubblico_adesione_personale_atac_al_274.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to produce a JSON output that includes isStrike and maybe strikeData. The content title is about a national public transport strike in Rome, with a reported participation rate of 27.4%. \n\nThe published time appears to be in March 2026, but the document indicates participation from a prior strike, noting percentages after the event. Since it references past participation on a date in 2025, this doesn't announce an upcoming strike; it reflects previously collected data.",
+    "tokens": {
+      "input": 13377,
+      "output": 478,
+      "total": 13855
+    }
+  }
+}

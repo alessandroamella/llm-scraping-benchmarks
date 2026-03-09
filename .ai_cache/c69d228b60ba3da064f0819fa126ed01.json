@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-03-29 00:00:00",
+      "endDate": "2025-03-29 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6933,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00036225,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.001266,
+      "cachedCost": 0,
+      "totalCost": 0.00183825
+    },
+    "hash": "c69d228b60ba3da064f0819fa126ed01",
+    "sourceFile": "martedi_29_marzo_sciopera_24_ore_trasporto_pubblico_servizio_rischio.html",
+    "thoughts": "**Strike Information Extraction: A Mental Run-Through**\n\nOkay, so I've got this webpage announcing a public transport strike in Rome, specifically \"Martedì 29 marzo,\" that's the key. My task is to translate this into a structured JSON format based on the given schema, so let's break it down.\n\nFirst, the headline \"Martedì 29 marzo sciopera 24 ore il trasporto pubblico\" is a dead giveaway – it's a strike, no doubt. The company is Atac, Rome, ISTAT code \"12\" – got it. The date is \"Martedì 29 marzo.\" No explicit year, but for a current or near-future strike, let's default to \"2025-03-29\" and consider that for the `yyyy-MM-dd HH:mm:ss` format. Okay, so that's the *target* date. And it's a 24-hour strike.\n\nNow, the tricky part: guaranteed times. The webpage says, \"Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" This translates to \"service will be regular until 8:30\" and \"from 17:00 to 20:00.\" This means, as with most strikes, service *outside* those times is likely disrupted. Standard strikes are from 00:00 to 24:00. Looking at the schema, it uses \"06:00-09:00\" as an example. Okay, let's infer start and end times, so, \"2025-03-29 00:00:00\" for the `startDate` and \"2025-03-29 23:59:59\" for the `endDate`. The `guaranteedTimes` will be an array, but with the specific times: [\"00:00-08:30\", \"17:00-20:00\"].\n\nSo, putting it all together, I can construct my strike data. `isStrike` is clearly true. The `strikeData` object will contain:\n\n*   `startDate`: \"2025-03-29 00:00:00\"\n*   `endDate`: \"2025-03-29 23:59:59\"\n*   `locationType`: \"REGIONAL\" (Rome is a regional entity, so this seems right).\n*   `locationCodes`: \\[\"12\"] (the ISTAT code).\n*   `guaranteedTimes`: \\[\"00:00-08:30\", \"17:00-20:00\"].\n\nI think that should cover all the bases, now I'm ready to render it.\n\n\n",
+    "tokens": {
+      "input": 1449,
+      "output": 140,
+      "total": 2433
+    }
+  }
+}

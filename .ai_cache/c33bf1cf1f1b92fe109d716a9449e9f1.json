@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-09-29 00:00:00",
+      "endDate": "2023-09-29 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7407,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.003733,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.0011865,
+      "cachedCost": 0,
+      "totalCost": 0.005104
+    },
+    "hash": "c33bf1cf1f1b92fe109d716a9449e9f1",
+    "sourceFile": "venerd_29_settembre_sciopero_nazionale_trasporto_pubblico_possibili_disagi.html",
+    "thoughts": "**Strike Analysis: September 25, 2023**\n\nAlright, let's break this down. My task is to determine if this text constitutes an announcement of a strike. It looks like it is aimed at the ATAC system, but the scope is listed as \"national\", so there won't be any specific location codes. The only output is strict JSON, based on the schema, and only the `isStrike` field will allow for the program to continue.\n\nThe text reads, \"Venerdì 29 settembre sciopero nazionale del trasporto pubblico... Pubblicato il: 25/09/2023 - Aggiornato il: 26/09/2023... il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" That clearly states a \"national strike\" set for September 29th, 2023, announced on September 25th, 2023. No ambiguity here. It also indicates guaranteed service during specific time slots: \"fino alle 8,30\" (up to 8:30 AM) and \"dalle 17 alle 20\" (from 5 PM to 8 PM).\n\nThe dates are straightforward: announcement on 2023-09-25, and the event (the strike) on 2023-09-29. Given that it's a 24-hour strike, the period is from 2023-09-29 00:00:00 to 2023-09-29 23:59:59. The scope is \"nazionale\" so national is the appropriate `locationType`. We will omit location codes.\n\nTherefore, `isStrike` must be `true`.\n\nNow to construct the JSON. Based on the analysis, I have:\n\n*   `isStrike`: `true`\n*   `strikeData`:\n    *   `startDate`: \"2023-09-29 00:00:00\"\n    *   `endDate`: \"2023-09-29 23:59:59\"\n    *   `locationType`: \"NATIONAL\"\n    *   `locationCodes`: *OMITTED*\n    *   `guaranteedTimes`: [\"00:00-08:30\", \"17:00-20:00\"]\n\nI need to confirm all fields and values match the schema. `isStrike` is a boolean, and this is true. `strikeData` contains an object and all the following are present and match the pattern: `startDate` matches the date format, `endDate` matches the date format, `locationType` is in the enum, `locationCodes` is omitted and is correct, and the `guaranteedTimes` are in the proper format. Seems perfect.\n\n\n",
+    "tokens": {
+      "input": 14932,
+      "output": 123,
+      "total": 15846
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-20 00:00:00",
+      "endDate": "2025-06-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4750,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0038025,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.000687,
+      "cachedCost": 0,
+      "totalCost": 0.004674
+    },
+    "hash": "a586f2f85f6612e592bc5ed9536abb5e",
+    "sourceFile": "venerdi_20_giugno_sciopero_generale_nazionale_di_usb_cub_e_sgb_a_roma_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Strike Information Analysis**\n\nOkay, let's break this down. My task is to extract the key strike details from this text, and structure it properly. First, I see the core information: a general national strike (\"sciopero generale nazionale\") is scheduled for Friday, June 20th, 2025. The publication date is a week prior, on June 13th, 2025. It's a 24-hour strike, as implied by \"sciopero generale nazionale di 24 ore\". The involved unions are Usb, Cub, and Sgb.\n\nThe important bit is the guaranteed service times. The text explicitly states that service will be guaranteed *until* 8:30 am and *from* 5:00 pm to 8:00 pm.  Standard practice for guaranteed hours is that the first band will start at the beginning of the day.\n\nTherefore, `isStrike` is definitely `true`.\n\nNow to structure the strike data in the appropriate JSON format.\n\n*   `startDate` is \"2025-06-20 00:00:00\".\n*   `endDate` is \"2025-06-20 23:59:59\" (a full 24 hours).\n*   `locationType` is \"NATIONAL\", which means the strike is nationwide.\n*   The `guaranteedTimes` are [\"00:00-08:30\", \"17:00-20:00\"].\n\nFinally, because the location type is \"NATIONAL\", the `locationCodes` field needs to be omitted, as per the standard. This is all standard procedure.\n\n\n",
+    "tokens": {
+      "input": 15210,
+      "output": 123,
+      "total": 15791
+    }
+  }
+}

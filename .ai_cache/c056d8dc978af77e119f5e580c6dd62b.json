@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6261,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000079,
+      "outputCost": 0.0001232,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002022
+    },
+    "hash": "c056d8dc978af77e119f5e580c6dd62b",
+    "sourceFile": "sciopero_attive_metro_b_chiusa_c.html",
+    "thoughts": "**Determining strike status**\n\nI need to format the output in JSON according to the strike_extraction schema. The title indicates it's regarding a strike, specifically in Italian, saying \"Strike, Metro A and B active, C closed.\" The content mentions an ongoing national strike ending at 13. Since our guidelines specify that \"isStrike\" should be true only for upcoming strikes, it should be false for this ongoing situation. Therefore, the output will be: {\"isStrike\": false}.",
+    "tokens": {
+      "input": 1580,
+      "output": 308,
+      "total": 1888
+    }
+  }
+}

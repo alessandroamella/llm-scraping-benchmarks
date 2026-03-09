@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9651,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00066725,
+      "outputCost": 0.0001664,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00083365
+    },
+    "hash": "5878a32d5345ff70960231451b85fcbd",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_361.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to output JSON according to the spec using \"isStrike\" boolean and \"strikeData\" if applicable. It looks like the content is in Italian and talks about a public transport strike in Rome. However, it seems to be reporting on participation from a past strike rather than announcing an upcoming one. So, I'll set \"isStrike\" to false since it's about attendance rather than a new strike.",
+    "tokens": {
+      "input": 13345,
+      "output": 416,
+      "total": 13761
+    }
+  }
+}

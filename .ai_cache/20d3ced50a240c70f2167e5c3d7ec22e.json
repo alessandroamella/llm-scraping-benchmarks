@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-12-15 00:00:00",
+      "endDate": "2023-12-15 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6415,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00034275,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.000891,
+      "cachedCost": 0,
+      "totalCost": 0.00141825
+    },
+    "hash": "20d3ced50a240c70f2167e5c3d7ec22e",
+    "sourceFile": "venerd_sciopero_nazionale_trasporto_pubblico_servizio_rischio.html",
+    "thoughts": "**Analyzing the Italian Public Transport Strike Announcement**\n\nOkay, let's break this down. I've got an announcement for a national public transport strike in Italy. The key is \"Venerdì 15 dicembre,\" which clearly indicates an upcoming event. My task is to process this as if it's an upcoming strike and extract the relevant information into a structured JSON format. I need to make a few assumptions, as always when dealing with real-world data.\n\nFirst, the core of it: it's a 24-hour national strike. The announcement mentions Rome specifically, likely due to the context of the Atac network, but the scope is national (\"sciopero nazionale\"). The date is Friday, December 15th – and I will go with the assumption that this refers to 2023. This is an important detail, since the text gives no definitive year. That gives me my `isStrike: true` and the dates.\n\nNow, the specifics. The strike duration is 24 hours, meaning my `startDate` will be \"2023-12-15 00:00:00\" and my `endDate` will be \"2023-12-15 23:59:59\". The `locationType` is definitely \"NATIONAL\" because the text explicitly states \"sciopero nazionale\". The prompt says to omit `locationCodes` for national strikes; done.\n\nThe critical part is the guaranteed service times. The announcement states \"servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" That translates to service being guaranteed until 8:30 in the morning and from 5 PM to 8 PM in the evening. Therefore, my `guaranteedTimes` will be [\"00:00-08:30\", \"17:00-20:00\"].\n\nSo, to recap, I have:\n*   `isStrike`: true\n*   `startDate`: \"2023-12-15 00:00:00\"\n*   `endDate`: \"2023-12-15 23:59:59\"\n*   `locationType`: \"NATIONAL\"\n*   `guaranteedTimes`: [\"00:00-08:30\", \"17:00-20:00\"]\n\nI can now construct the JSON payload.\n\n\n",
+    "tokens": {
+      "input": 1371,
+      "output": 123,
+      "total": 2088
+    }
+  }
+}

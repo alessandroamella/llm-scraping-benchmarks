@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 11169,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00068155,
+      "outputCost": 0.0002036,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00088515
+    },
+    "hash": "af59977807de1c69be7a5dac0a1ddf3c",
+    "sourceFile": "sciopero_trasporto_pubblico_chiuse_metro_b1_c_aperte_linea_b_ferrovia_termini_centocelle.html",
+    "thoughts": "**Formatting output correctly**\n\nI need to make sure I output the correct JSON format, which is {\"isStrike\": false}. The title might suggest a strike, but the instructions clarify that it’s ongoing and should not be marked as a strike unless it’s an announcement of one, so it’s definitely false. I’ll keep my output straightforward and just focus on that key detail without adding unnecessary data. I’ll follow the format precisely, including a newline as needed.",
+    "tokens": {
+      "input": 13631,
+      "output": 509,
+      "total": 14140
+    }
+  }
+}

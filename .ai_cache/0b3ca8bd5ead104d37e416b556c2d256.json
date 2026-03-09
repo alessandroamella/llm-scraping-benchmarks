@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6369,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0003275,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000318,
+      "cachedCost": 0,
+      "totalCost": 0.0006605
+    },
+    "hash": "0b3ca8bd5ead104d37e416b556c2d256",
+    "sourceFile": "sciopero_trasporto_pubblico_mattinata_ha_aderito_222_personale_atac.html",
+    "thoughts": "**Analyzing Strike Participation Data**\n\nOkay, let's break this down. The input content I'm given, specifically \"Sciopero del trasporto pubblico, in mattinata ha aderito il 22,2% del personale Atac\" and \"L’adesione complessiva del personale Atac allo sciopero del trasporto pubblico, rilevata in mattinata, è stata pari al 22,2%,\" immediately flags that we're dealing with a past event. The presence of phrases like \"ha aderito\" (joined/participated) and \"è stata pari a\" (was equal to) indicates that the strike, or at least the participation data, has already happened. The task requires me to determine if this is an announcement *for* an upcoming strike, but the syntax suggests otherwise. Therefore, based on this analysis, I will set `isStrike` to `false`. The information is about *participation* in a past event, not a future one. It’s a report of the strike's impact, not a warning about an impending disruption.\n\n\n",
+    "tokens": {
+      "input": 1310,
+      "output": 10,
+      "total": 1532
+    }
+  }
+}

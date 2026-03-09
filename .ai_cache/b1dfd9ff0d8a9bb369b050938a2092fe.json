@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3853,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0036925,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0004335,
+      "cachedCost": 0,
+      "totalCost": 0.004141
+    },
+    "hash": "b1dfd9ff0d8a9bb369b050938a2092fe",
+    "sourceFile": "sciopero_tpl_mattinata_adesione_personale_atac_233.html",
+    "thoughts": "**Analyzing the Content for a Strike Announcement**\n\nOkay, let's break this down. My task is to determine whether this text is announcing an *upcoming* strike. I need to return a JSON object with `isStrike` as a boolean and potentially `strikeData`. The key is to distinguish between an announcement and a report on a past or ongoing event. Cancellation, reporting on past participation, or real-time updates are definitely *not* announcements.\n\nI see a few things right away. The title, \"Sciopero del Tpl, in mattinata adesione personale Atac al 23,3% - Roma Servizi per la Mobilità,\" immediately hints at a past or current event. \"Adesione\" (participation/adhesion) is the key term here. The body confirms this: \"L’adesione del personale Atac allo sciopero del trasporto pubblico, rilevata a metà mattinata, è stata del 23,3%\" clearly states participation *in* a strike, tracked mid-morning. The date, 06/05/2024, adds to this, indicating this is a report of some kind.\n\nGiven the language and the timing, it’s clear this is not an announcement. It's a report on the participation in an event that is either past or currently underway. The text describes an existing strike event, providing data on its ongoing status. Thus, `isStrike` is definitely false. So, I will set `isStrike = false`.\n\n\n",
+    "tokens": {
+      "input": 14770,
+      "output": 10,
+      "total": 15069
+    }
+  }
+}

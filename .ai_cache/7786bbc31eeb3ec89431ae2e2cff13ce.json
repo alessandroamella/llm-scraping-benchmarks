@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3406,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00373175,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0003645,
+      "cachedCost": 0,
+      "totalCost": 0.00411125
+    },
+    "hash": "7786bbc31eeb3ec89431ae2e2cff13ce",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_322.html",
+    "thoughts": "**My Analysis of the Strike Information**\n\nOkay, my primary goal is to determine if the text describes an upcoming strike, and I need to return a valid JSON object. The crucial constraint here is that the `isStrike` key must be set to `true` *only* if this is an announcement about a future strike. Let's dig in.\n\nThe title reads \"Public transport strike, 32.2% Atac staff participation - Rome Mobility Services\". The content confirms that this is about *today's* strike participation. The phrase \"L’adesione del personale Atac allo sciopero di oggi\" (Participation...of today's strike) makes it abundantly clear. This is a report *after* the event, not a notification of a future event.\n\nTherefore, the `isStrike` key must definitely be set to `false`. My output should be a straightforward JSON object: `{ \"isStrike\": false }`. That's the only logical and correct response based on the text.\n\n\n",
+    "tokens": {
+      "input": 14927,
+      "output": 10,
+      "total": 15180
+    }
+  }
+}

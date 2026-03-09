@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-12-07 09:00:00",
+      "endDate": "2023-12-07 13:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "09:00-13:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 17148,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00066985,
+      "outputCost": 0.0005444,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00121425
+    },
+    "hash": "51e9cad67d96dc1ec0a1c947c43b4aec",
+    "sourceFile": "gioved_sciopero_regionale_4_ore_trasporto_pubblico_rischio.html",
+    "thoughts": "**Analyzing strike announcement**\n\nIt looks like I'm dealing with an announcement for an upcoming strike. So I need to set isStrike to true. I have to populate strikeData with the right start and end dates, but I notice the date is given as \"Giovedì 7 dicembre,\" and the page indicates it's December 5, 2023. So I’ll set startDate as 2023-12-07 09:00:00 and endDate as 2023-12-07 13:00:00.\n\nGiven that it's a regional strike, I'll label locationType as \"REGIONAL.\" The article mentions the Lazio region, so the ISTAT code for that should be 09.",
+    "tokens": {
+      "input": 13397,
+      "output": 1361,
+      "total": 14758
+    }
+  }
+}

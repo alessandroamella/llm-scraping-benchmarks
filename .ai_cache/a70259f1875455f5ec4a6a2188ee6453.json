@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4058,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0036995,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000501,
+      "cachedCost": 0,
+      "totalCost": 0.0042155
+    },
+    "hash": "a70259f1875455f5ec4a6a2188ee6453",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_385.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, let's break this down. My task is clear: determine if this content announces an *upcoming* strike. I need to be precise, as the distinction is critical.\n\nFirst, I established the criteria. If the information concerns a cancellation, a past strike's participation, an ongoing strike (real-time updates), or even service updates during a strike, then I'm setting `isStrike` to `false`. Conversely, `isStrike` should be `true` *only* if this is a heads-up about an upcoming disruption. Simple enough.\n\nNow, let's analyze the content itself. The title, \"Sciopero del trasporto pubblico, adesione personale Atac al 38,5% - Roma Servizi per la Mobilità,\" immediately hints at participation rather than an announcement. The body confirms this. The statement \"L’adesione del personale Atac allo sciopero del trasporto pubblico, rilevata in mattinata, è stata pari al 38,5%\" clearly states the *observed* adherence. That \"è stata\" (\"was\") is past tense and is key. It's reporting a *past event*.\n\nThe date information is also useful, although not a primary driver of the determination. The date indicates that the information was published on 25/02/2022 and updated on 11/04/2023. These dates are relevant to determining if the information could relate to a future action.\n\nTherefore, because this content describes the participation in an *already-executed* strike, this is not an announcement of an *upcoming* one. Therefore, I'm setting `isStrike` to `false`. The task is complete.\n\n\n",
+    "tokens": {
+      "input": 14798,
+      "output": 10,
+      "total": 15142
+    }
+  }
+}

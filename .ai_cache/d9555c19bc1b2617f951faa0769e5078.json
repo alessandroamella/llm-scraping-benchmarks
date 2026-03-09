@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6954,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00067455,
+      "outputCost": 0.0001688,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00084335
+    },
+    "hash": "d9555c19bc1b2617f951faa0769e5078",
+    "sourceFile": "sciopero_del_trasporto_pubblico_adesione_personale_atac_al_121.html",
+    "thoughts": "**Setting strike status**\n\nI see from the instructions that if the strike has already occurred, I need to set isStrike to false. So, that's what I’ll do.\n\nI’m checking for any upcoming strikes, but there doesn't seem to be any; it's just about adhesion numbers. The details refer to \"Questo sciopero,\" confirming that isStrike is indeed false. I’ll create the final JSON response, ensuring it’s minimal and formatted correctly, including only the necessary field. Here’s the output: \n\n{\n  \"isStrike\": false\n}",
+    "tokens": {
+      "input": 13491,
+      "output": 422,
+      "total": 13913
+    }
+  }
+}

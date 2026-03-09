@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-10-05 00:00:00",
+      "endDate": "2024-10-05 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6977,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00043125,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.0014025,
+      "cachedCost": 0,
+      "totalCost": 0.00201825
+    },
+    "hash": "63aafedca0a7ac2e4ec2dd91df071e0c",
+    "sourceFile": "trasporto_pubblico_sabato_5_ottobre_sciopero_nazionale_24_ore_servizio_rischio.html",
+    "thoughts": "**Strike Information Extraction - My Approach**\n\nOkay, so the task is to pull strike information from this text, seems straightforward enough. It's a news announcement about a 24-hour national transport strike with ATAC in Rome (that's irrelevant, but a nice piece of context). I've got \"sciopero nazionale di 24 ore\" for the strike duration and scope, and the date is \"sabato 5 ottobre.\" I'm inferring the current year, or the next if it is late in the year, as 2024 since that makes the date Saturday, the correct day of the week, but the instructions require `yyyy-MM-dd` date format. I'm noting the implied year and the need to output in that format.\n\nThe text specifies \"regolare fino alle 8,30 e dalle 17 alle 20\" for the guaranteed services. That translates to \"00:00-08:30\" and \"17:00-20:00\". The prompt says to include `isStrike: true`.\n\nRight, let's break this down into the required JSON structure. `isStrike` is a boolean, and the rest is under `strikeData`. I need `startDate`, `endDate` (yyyy-MM-dd HH:mm:ss format for both), `locationType`, and `guaranteedTimes` which is an array of strings. `locationCodes` is omitted for \"NATIONAL\" strikes. Okay, I've got `startDate` as \"2024-10-05 00:00:00\", `endDate` as \"2024-10-05 23:59:59\", and `locationType` set to \"NATIONAL\".\n\nI'm double-checking the dates. Saturday, October 5th, is the correct day. The strike duration implies the entire day. Now, let's nail down these guaranteed times. The text reads \"fino alle 8:30\" and \"dalle 17 alle 20\", meaning the guaranteed times are \"00:00-08:30\" and \"17:00-20:00.\"\n\nFinally, the JSON:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-10-05 00:00:00\",\n    \"endDate\": \"2024-10-05 23:59:59\",\n    \"locationType\": \"NATIONAL\",\n    \"guaranteedTimes\": [\"00:00-08:30\", \"17:00-20:00\"]\n  }\n}\n```\n\nThat should be accurate, and adheres to the specified schema, I am confident.\n\n\n",
+    "tokens": {
+      "input": 1725,
+      "output": 123,
+      "total": 2783
+    }
+  }
+}

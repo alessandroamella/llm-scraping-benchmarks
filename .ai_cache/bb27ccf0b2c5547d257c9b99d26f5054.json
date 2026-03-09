@@ -1,0 +1,33 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 30333,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000808,
+      "outputCost": 0.0009588,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0010396
+    },
+    "hash": "bb27ccf0b2c5547d257c9b99d26f5054",
+    "sourceFile": "venerd_2_dicembre_sciopero_generale_nazionale_24_ore_rischio_trasporto_pubblico_romano.html",
+    "thoughts": "**Determining strike details**\n\nI'm analyzing a service announcement that notes it'll be regular until 8:30 and from 17 to 20. However, it mentions an upcoming national strike, affecting the Atac and Rome Tpl networks, which means I should set isStrike to true. I need to gather strike data like the start date and end date, but the year isn't stated. The date is December 2, and it’s likely upcoming in 2023 since today is March 9, 2026.",
+    "tokens": {
+      "input": 1616,
+      "output": 2397,
+      "total": 4013
+    }
+  }
+}

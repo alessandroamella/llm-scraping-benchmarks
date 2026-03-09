@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-01-24 00:00:00",
+      "endDate": "2024-01-25 00:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 36520,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000815,
+      "outputCost": 0.001182,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0012635
+    },
+    "hash": "0c8a7d547a8c9d0a95de9b9fa7a3b4cb",
+    "sourceFile": "sciopero_nazionale_24_gennaio_trasporto_pubblico_rischio.html",
+    "thoughts": "**Determining strike announcement details**\n\nI need to output JSON based on the strike_extraction format. This Italian article indicates an upcoming national strike, detailing that on January 24, public transport will be at risk for 24 hours. It mentions that services in Rome will be regular until 8:30 AM and again from 5 to 8 PM, but it seems to imply the strike officially starts at 00:01. This appears to be a clear strike announcement based on the content.",
+    "tokens": {
+      "input": 1630,
+      "output": 2955,
+      "total": 4585
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 12347,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00066705,
+      "outputCost": 0.0001892,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00085625
+    },
+    "hash": "7ea65b79d11386a2fddcbc71ed0ca349",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_212.html",
+    "thoughts": "**Evaluating strike status**\n\nI'm analyzing if the status is a strike or not. Since the content mentions participation in a previous strike, \"Sciopero del trasporto pubblico, adesione personale Atac al 21,2%,\" I determine isStrike should be false. The document indicates a percentage of participation rather than announcing a future strike. So, I’m concluding with: {\"isStrike\": false}. It's important to format this correctly as a JSON object without any extra explanations. I'll keep it simple and precise.",
+    "tokens": {
+      "input": 13341,
+      "output": 473,
+      "total": 13814
+    }
+  }
+}

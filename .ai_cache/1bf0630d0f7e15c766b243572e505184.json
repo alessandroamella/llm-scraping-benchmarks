@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "08:30-12:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19605,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008165,
+      "outputCost": 0.0010208,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00110245
+    },
+    "hash": "1bf0630d0f7e15c766b243572e505184",
+    "sourceFile": "rete_atac_giovedi_4_settembre_sciopero_dalle_830_alle_1230_possibili_disagi.html",
+    "thoughts": "**Determining strike announcement details**\n\nI need to structure a JSON output based on the schema to indicate if there's an upcoming strike. The Italian content mentions a strike by the Sul union on Thursday, September 4, from 8:30 to 12:30. It’s clear that this is an announcement for a four-hour strike. However, I notice the year isn’t specified in the content; should I assume it’s the current year, which is likely 2024? The date formatting rules require attention too.",
+    "tokens": {
+      "input": 1633,
+      "output": 2552,
+      "total": 4185
+    }
+  }
+}

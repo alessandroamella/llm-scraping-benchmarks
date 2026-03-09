@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3549,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.003702,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000363,
+      "cachedCost": 0,
+      "totalCost": 0.00408
+    },
+    "hash": "b8429c67be3fddf1b432874e61d82a2e",
+    "sourceFile": "sciopero_del_trasporto_pubblico_aperte_le_metropolitane.html",
+    "thoughts": "**Analyzing the Strike Information**\n\nOkay, here's the deal. I'm looking at this text, and it's describing an *ongoing* transportation strike – \"È in corso lo sciopero del trasporto pubblico\" confirms that. It's not *announcing* a strike; it's providing live updates about its impact. Details like \"Metro A prosegue servizio con riduzione di corse\" are crucial. This isn't just a heads-up; it's a real-time report.\n\nNow, my rules kick in. I've got two clear rules to assess this situation. Rule 1 says: \"If it is providing real-time updates about an ongoing strike... set isStrike to false.\" And further, \"If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\"\n\nTherefore, based on the real-time nature of this data and the provided service updates, `isStrike` *must* be `false`. I'm confident in that assessment. I need to make sure this is encoded properly, of course.\n\nThe final output has to be a valid, parseable JSON object – no extras, just the JSON. I'll make sure it's perfect, nothing outside the JSON string itself. Here's what I'll generate:\n\n```json\n{\n  \"isStrike\": false\n}\n```\n\n\n",
+    "tokens": {
+      "input": 14808,
+      "output": 10,
+      "total": 15060
+    }
+  }
+}

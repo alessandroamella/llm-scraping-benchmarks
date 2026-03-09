@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7314,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006657,
+      "outputCost": 0.0001396,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008053
+    },
+    "hash": "0d4ba25b1f223f895327445824c8b273",
+    "sourceFile": "sciopero_del_trasporto_pubblico_la_situazione_sulla_rete.html",
+    "thoughts": "**Determining strike status**\n\nI need to check if the document is announcing an upcoming strike or if it's discussing an ongoing one. The content indicates there's an ongoing strike as of September 22, 2025, and it's about public transport in Rome. Since the instructions specify that \"isStrike\" should be true only for upcoming strikes, I’ll conclude that \"isStrike\" should be false here. Therefore, the output should simply be: {\"isStrike\": false}.",
+    "tokens": {
+      "input": 13314,
+      "output": 349,
+      "total": 13663
+    }
+  }
+}

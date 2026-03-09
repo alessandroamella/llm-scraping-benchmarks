@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-03-21 00:00:00",
+      "endDate": "2025-03-21 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4718,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00035175,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.0009855,
+      "cachedCost": 0,
+      "totalCost": 0.00152175
+    },
+    "hash": "cdc958f3eff33326766aa2329143c968",
+    "sourceFile": "venerdi_21_marzo_sciopero_nazionale_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Analyzing the Upcoming ATAC Strike**\n\nOkay, so I'm looking at this information about the ATAC strike set for Friday, March 21st, 2025. It's a national, 24-hour strike, which means it's going to run from 00:00:00 to 23:59:59. While it's a national event, this specific strike will affect ATAC, the transport company operating in Rome (Lazio). The good news is that service will be guaranteed during certain times. Specifically, things should be running as usual until 8:30 in the morning, and again from 5 PM to 8 PM. Since the strike is national, I need to make sure to set the `locationType` to \"NATIONAL\" and omit the location codes. Double-checking, \"Venerdì 21 marzo\" confirms the date – March 21st, 2025 – as a Friday. Looks like I have all the critical information now.\n\n\n",
+    "tokens": {
+      "input": 1407,
+      "output": 123,
+      "total": 2187
+    }
+  }
+}

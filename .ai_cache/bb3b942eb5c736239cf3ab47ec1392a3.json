@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-04-11 20:00:00",
+      "endDate": "2024-04-11 23:59:59",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5536,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0003405,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.001038,
+      "cachedCost": 0,
+      "totalCost": 0.0015015
+    },
+    "hash": "bb3b942eb5c736239cf3ab47ec1392a3",
+    "sourceFile": "gioved_11_aprile_sciopero_nazionale_trasporto_pubblico_rischio_20_24.html",
+    "thoughts": "**Strike Announcement Analysis**\n\nOkay, let's break this down. My task is to determine if this HTML snippet describes a strike announcement and, if so, to extract the relevant data in the requested format. First, I need to look at the content. The text clearly states \"Giovedì 11 aprile sciopero nazionale. Trasporto pubblico a rischio dalle 20 alle 24\" which translates to a national strike on Thursday, April 11th, with public transport at risk from 8 PM to midnight. The second string also confirms a 4-hour strike: \"Giovedì 11 aprile trasporto pubblico a rischio per lo sciopero di 4 ore, dalle 20 alle 24... A Roma l’agitazione interesserà le reti Atac...\". It's a strike, no doubt. The key terms are there.\n\nNow, let's extract the key elements. The date is April 11th. Since no year is explicitly given, I'll default to 2024, or use current context, though a real system would likely infer it based on context. The start time is 20:00 (8 PM) and the end time is 24:00 (midnight, which I will interpret as 23:59:59). The location is clearly \"NATIONAL\" based on \"sciopero nazionale\". The prompt says to omit guaranteed times if not specified. Since this text doesn't specify those, they won't be included. Furthermore, it says to omit location codes for national strikes.\n\nWith these data, I can construct the JSON object. The `isStrike` flag will be set to `true`. The `strikeData` object will contain `startDate` as \"2024-04-11 20:00:00\", `endDate` as \"2024-04-11 23:59:59\", and `locationType` set to \"NATIONAL\".\n\nI see \"A Roma\" mentioned, but the *national* scope takes precedence so `locationType` is `NATIONAL` and `locationCodes` is omitted. I'll make sure the date format is 'yyyy-MM-dd HH:mm:ss', which it is. Guaranteed times are omitted as requested. Location type is correctly handled. Finally, `locationCodes` is absent for the national strike. All format requirements are met, and I'm ready to output the refined JSON structure.\n\n\n",
+    "tokens": {
+      "input": 1362,
+      "output": 82,
+      "total": 2136
+    }
+  }
+}

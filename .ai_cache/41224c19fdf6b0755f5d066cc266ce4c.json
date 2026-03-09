@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-03-29 00:00:00",
+      "endDate": "2022-03-29 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "06:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6725,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0037555,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.0012555,
+      "cachedCost": 0,
+      "totalCost": 0.005221
+    },
+    "hash": "41224c19fdf6b0755f5d066cc266ce4c",
+    "sourceFile": "martedi_29_marzo_sciopera_24_ore_trasporto_pubblico_servizio_rischio.html",
+    "thoughts": "**Strike Announcement Analysis**\n\nOkay, let's break this down. My task is to determine if the provided text indicates an upcoming strike and, if so, to extract the relevant details in a JSON format. The core of this analysis is understanding the text as a strike announcement, despite the historical publication date.\n\nFirst, I need to look at the content. The title, \"Martedì 29 marzo sciopera 24 ore il trasporto pubblico,\" clearly states a 24-hour strike in public transportation. The text confirms this, mentioning \"sciopero di 24 ore indetto tra i lavoratori dell’Atac\" – Atac being the relevant entity. Given that this content is being processed, I'll take this as an announcement and set `isStrike` to `true`.\n\nNow, let's extract the strike data. The strike date is stated as \"Martedì 29 marzo.\" Since the publication date is 2022-03-24, I can infer the strike date as March 29th, 2022. The 24-hour strike translates to a `startDate` of \"2022-03-29 00:00:00\" and an `endDate` of \"2022-03-29 23:59:59\".\n\nThe location is described as affecting \"lavoratori dell’Atac,\" and since Atac operates in Rome, I'll code the location as \"REGIONAL\" based on ISTAT code 12 (Lazio). Rome, Lazio.\n\nFinally, the text mentions guaranteed service hours: \"fino alle 8,30 e dalle 17 alle 20\". This means guaranteed times are 06:00-08:30 and 17:00-20:00.\n\nBefore I finalize, I need to check against the schema to make sure the data matches the accepted format. I'll make sure the `startDate` and `endDate` are in the yyyy-MM-dd HH:mm:ss format, which they are. The `locationType` should be \"REGIONAL,\" and `locationCodes` should contain the relevant ISTAT code. The times are in the appropriate HH:mm-HH:mm format. Perfect, looks like everything is in order.\n\nThe final output is ready:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2022-03-29 00:00:00\",\n    \"endDate\": \"2022-03-29 23:59:59\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-08:30\", \"17:00-20:00\"]\n  }\n}\n```\n\n\n",
+    "tokens": {
+      "input": 15022,
+      "output": 140,
+      "total": 15999
+    }
+  }
+}

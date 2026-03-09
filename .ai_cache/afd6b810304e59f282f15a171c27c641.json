@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-09-22 00:00:00",
+      "endDate": "2025-09-22 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4930,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00034,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.0006915,
+      "cachedCost": 0,
+      "totalCost": 0.001216
+    },
+    "hash": "afd6b810304e59f282f15a171c27c641",
+    "sourceFile": "lunedi_22_settembre_sciopero_nazionale_di_24_ore_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Strike Detection Analysis**\n\nOkay, let's break this down. My primary objective is to ascertain whether the provided content constitutes an announcement of a strike. The input clearly states a \"24-hour national strike\" set for Monday, September 22nd. Given the lack of a specified year, I'm defaulting to 2025 as a reasonable assumption for the near future. While I can check the actual current year for context, for now I'll stick with 2025.\n\nSo, here's what I've extracted:\n\n*   **Strike Confirmation:** The content unequivocally indicates a strike, therefore `isStrike` is `true`.\n*   **Date & Time:** The strike begins on September 22nd, 2025 (I'm using this as the default), and lasts for 24 hours. The formal start time is \"2025-09-22 00:00:00\" and the end time \"2025-09-22 23:59:59\".\n*   **Location:** The strike is national in scope, so I'm logging `locationType` as \"NATIONAL\".\n*   **Guaranteed Periods:** The text specifies guaranteed times, which I'll translate to `guaranteedTimes`. The Italian phrases \"fino alle 8,30\" (until 08:30) and \"dalle 17 alle 20\" (from 17:00 to 20:00) tell me that these segments of time are guaranteed. Thus, the guaranteed intervals are \"00:00-08:30\" and \"17:00-20:00\".\n\nFinally, I'll store all this in the `strikeData` object, mapping the strike's vital information. This will include the `startDate`, `endDate`, `locationType`, and `guaranteedTimes`. This information can then be used to perform further processing and analysis to determine impact, send notifications, or make further relevant decisions.\n\n\n",
+    "tokens": {
+      "input": 1360,
+      "output": 123,
+      "total": 1944
+    }
+  }
+}

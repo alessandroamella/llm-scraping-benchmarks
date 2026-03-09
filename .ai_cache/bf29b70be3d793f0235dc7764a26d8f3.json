@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 25684,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006739,
+      "outputCost": 0.0007888,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0014627
+    },
+    "hash": "bf29b70be3d793f0235dc7764a26d8f3",
+    "sourceFile": "venerdi_28_novembre_sciopero_generale_nazionale_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Extracting strike information**\n\nI need to determine if the document announces a new or upcoming strike. The content mentions a general national strike on Friday, November 28. It looks like this is an old article from 2025 since it was published on November 21, 2025. The information indicates there will be disruptions to public transport in Rome due to a 24-hour nationwide strike by various unions, with regular service until 8:30 AM and again from 5 PM to 8 PM.",
+    "tokens": {
+      "input": 13478,
+      "output": 1972,
+      "total": 15450
+    }
+  }
+}

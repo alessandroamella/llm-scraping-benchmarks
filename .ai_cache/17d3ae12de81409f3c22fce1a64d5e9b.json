@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9479,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00066705,
+      "outputCost": 0.0001584,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00082545
+    },
+    "hash": "17d3ae12de81409f3c22fce1a64d5e9b",
+    "sourceFile": "sciopero_generale_nazionale_adesione_del_personale_atac_al_182.html",
+    "thoughts": "**Evaluating strike details**\n\nI need to output JSON based on the strike extraction spec. The content discusses \"Sciopero generale nazionale\" with Atac personnel's participation at 18.2%. The publication date is 29/11/2024, and it was updated on 03/12/2024. This indicates the strike has already occurred, as the article states that participation was reported this morning. Thus, it’s not an upcoming event, and I should set \"isStrike\" to false since it pertains to past participation.",
+    "tokens": {
+      "input": 13341,
+      "output": 396,
+      "total": 13737
+    }
+  }
+}

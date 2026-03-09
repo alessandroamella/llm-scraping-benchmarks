@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3642,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00370725,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0004695,
+      "cachedCost": 0,
+      "totalCost": 0.00419175
+    },
+    "hash": "389c456f265fd6e29c7b140a1abbb78a",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_144.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, let's break this down. The task at hand is to determine if this input, \"Sciopero del trasporto pubblico, adesione personale Atac al 14,4% - Roma Servizi per la Mobilità\" published on April 26th, 2024, constitutes an announcement of a *future* strike. I'm seeing a report on the participation rate of a strike: \"L'adesione del personale Atac allo sciopero del trasporto pubblico di oggi, rilevata a metà mattinata, è stata pari al 14,4%\". The key phrase \"di oggi\" (of today) and the reporting of a participation rate \"rilevata a metà mattinata\" (assessed mid-morning) strongly suggests this is a *post-facto* or *ongoing* report, not a heads-up about an *upcoming* event. My constraints dictate that `isStrike` should only be true for announcements. Therefore, given the language and the context of the publication date, this clearly isn't an *announcement* of a strike. It's a statement about an existing strike's participation. So, the final decision is that `isStrike` is false.\n\n\n",
+    "tokens": {
+      "input": 14829,
+      "output": 10,
+      "total": 15152
+    }
+  }
+}

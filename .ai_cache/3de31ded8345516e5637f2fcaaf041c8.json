@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8098,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00066245,
+      "outputCost": 0.0001532,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00081565
+    },
+    "hash": "3de31ded8345516e5637f2fcaaf041c8",
+    "sourceFile": "sciopero_21_marzo_metropolitane.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to check if the content indicates an upcoming strike. The provided details show it's about a public transport strike in Rome that's already happening, not an upcoming one. The specific date is March 21, 2025, so it’s already past. Since the instruction specifies to mark \"isStrike\" as true only for upcoming strikes, I should set it to false here. Essentially, this content serves as an informational update about an ongoing strike rather than a future announcement.",
+    "tokens": {
+      "input": 13249,
+      "output": 383,
+      "total": 13632
+    }
+  }
+}

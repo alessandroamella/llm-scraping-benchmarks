@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7742,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000821,
+      "outputCost": 0.0001576,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002397
+    },
+    "hash": "25758286c266271d59f197ac3d2e3a81",
+    "sourceFile": "sciopero_del_trasporto_pubblico_metro_aperte_chiusa_la_termini_centocelle.html",
+    "thoughts": "**Finalizing strike status**\n\nI need to set isStrike to false since we're dealing with real-time updates about an ongoing strike. So, my output should just be: {\"isStrike\": false}. It's important to ensure there are no extra fields; the format must be precise for this situation. They mentioned a \"national strike of 24,\" which seems to refer to the 24th, but since it's ongoing, it’s still not considered a strike. Alright, returning: {\"isStrike\": false}.",
+    "tokens": {
+      "input": 1642,
+      "output": 394,
+      "total": 2036
+    }
+  }
+}

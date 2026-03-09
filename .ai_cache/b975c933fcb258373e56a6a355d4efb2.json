@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-16 00:00:00",
+      "endDate": "2025-01-17 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4652,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00381025,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.0006525,
+      "cachedCost": 0,
+      "totalCost": 0.00461125
+    },
+    "hash": "b975c933fcb258373e56a6a355d4efb2",
+    "sourceFile": "sportello_al_pubblico_e_contact_center_di_rsm_giovedi_e_venerdi_possibili_disagi_per_uno_sciopero.html",
+    "thoughts": "**Strike Analysis: Roma Servizi per la Mobilità**\n\nOkay, let's break this down. My task is to determine if this text announces a strike and, if so, extract the relevant data. The target is \"Roma Servizi per la Mobilità\" (RSM), which, although not *directly* ATAC, clearly provides related transport services, so this is worth investigating.\n\nAnalyzing the text, it's pretty clear: \"Sportello al Pubblico e contact center di Rsm, giovedì e venerdì possibili disagi per uno sciopero\" and a more detailed sentence, both point to disruption. Specifically, \"Giovedì 16 e venerdì 17 gennaio, possibili disagi per le attività erogate dallo Sportello al Pubblico di Roma Servizi per la Mobilità... e per il contact center... a causa dello sciopero proclamato...\" This is a confirmation of a strike announcement.\n\nThe critical details are: Thursday, January 16th, and Friday, January 17th, 2025. The strike affects Roma Servizi per la Mobilità's public counters and contact center, and it's for the \"intero turno,\" which implies a full shift disruption. No guaranteed service times are mentioned, so I can omit that from the output.\n\nNow, let's map this to the required JSON schema. `isStrike` is definitely `true`.  I'll need to construct the `strikeData` object.  The start date is \"2025-01-16 00:00:00\", and the end date is \"2025-01-17 23:59:59\". The location is Roma, which is in the Lazio region, represented by the code \"12\". Since the scope is regional, I'll use `locationType`: \"REGIONAL\", and `locationCodes`: [\"12\"].  No specific timing is indicated so I'll omit that from the JSON. Done.\n\n\n",
+    "tokens": {
+      "input": 15241,
+      "output": 99,
+      "total": 15775
+    }
+  }
+}

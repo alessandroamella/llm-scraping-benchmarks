@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8555,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00066625,
+      "outputCost": 0.0001436,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00080985
+    },
+    "hash": "af4e0deeae3585b00a592f1b2ac998d6",
+    "sourceFile": "sciopero_tpl_mattinata_adesione_personale_atac_233.html",
+    "thoughts": "**Analyzing strike information**\n\nI'm determining if the document is announcing a new or upcoming strike. The content is in Italian and mentions a strike with a personal adhesion of 23.3% for Atac. It's dated 06/05/2024, indicating participation earlier that morning. Since it reports on the participation rather than an upcoming strike, I conclude that isStrike should be set to false. Therefore, I'll output the JSON as:  \n{\"isStrike\": false}  \nThere won't be any strikeData to include.",
+    "tokens": {
+      "input": 13325,
+      "output": 359,
+      "total": 13684
+    }
+  }
+}

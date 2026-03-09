@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-04-11 20:00:00",
+      "endDate": "2024-04-12 00:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6308,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00375925,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.001005,
+      "cachedCost": 0,
+      "totalCost": 0.00488725
+    },
+    "hash": "e9b3f0a34d9fdbadceff603e61969554",
+    "sourceFile": "gioved_11_aprile_sciopero_nazionale_trasporto_pubblico_rischio_20_24.html",
+    "thoughts": "**Strike Analysis: Roma Servizi per la Mobilità Announcement**\n\nOkay, let's break this down. My task is to analyze this press release from \"Roma Servizi per la Mobilità\" and identify the key strike details. The title immediately flags it: \"Giovedì 11 aprile sciopero nazionale. Trasporto pubblico a rischio dalle 20 alle 24.\" Right, so it's a strike announcement. `isStrike` is definitely `true`.\n\nThe date is April 11th. Based on the \"Pubblicato il: 05/04/2024\" metadata, I can confidently assume this refers to April 11th, 2024. So, `startDate` is \"2024-04-11 20:00:00\". The strike duration is from 20:00 to 24:00, which means `endDate` is \"2024-04-12 00:00:00\".  That's 8 PM on the 11th to midnight on the 12th. I need to make sure I use the proper date format.\n\nThe announcement explicitly states \"sciopero nazionale\", indicating a national strike.  Therefore, `locationType` is \"NATIONAL\". Now, according to the instructions, if the `locationType` is \"NATIONAL,\" I must *omit* `locationCodes` entirely. The text mentions Rome specifically, but that's just a regional impact example; the *scope* is national. Also, since there are no guaranteed times specified, `guaranteedTimes` should also be omitted.\n\nAlright, putting it all together, I have the following strike data: `startDate` is \"2024-04-11 20:00:00\", `endDate` is \"2024-04-12 00:00:00\", and `locationType` is \"NATIONAL\".  The `isStrike` is `true`. I'll need to double-check that this aligns perfectly with the JSON schema requirements, particularly the date/time formats and the conditional omission of `locationCodes` when `locationType` is \"NATIONAL\". I'll format the end date to match the schema, which is yyyy-MM-dd HH:mm:ss. I've got this.\n\n\n",
+    "tokens": {
+      "input": 15037,
+      "output": 82,
+      "total": 15789
+    }
+  }
+}

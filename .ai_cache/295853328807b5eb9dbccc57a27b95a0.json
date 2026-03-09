@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-11-08 00:00:00",
+      "endDate": "2024-11-08 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 32234,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00068515,
+      "outputCost": 0.0010212,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00170635
+    },
+    "hash": "295853328807b5eb9dbccc57a27b95a0",
+    "sourceFile": "venerdi_8_novembre_sciopero_nazionale_del_trasporto_pubblico_servizio_a_rischio_per_24_ore.html",
+    "thoughts": "**Extracting strike information**\n\nI need to output JSON based on the strike_extraction schema regarding the national public transport strike announced for November 8. The article mentions that services will be at risk for 24 hours starting from 8:30 AM and between 5 PM to 8 PM. It affects the Atac network and private operators, confirming it’s a national strike, not just local. So, I'll set isStrike to true and work on extracting the strike data accordingly. The start date will be formatted as 'yyyy-MM-dd HH:mm:ss'.",
+    "tokens": {
+      "input": 13703,
+      "output": 2553,
+      "total": 16256
+    }
+  }
+}

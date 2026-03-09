@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-07-24 08:30:00",
+      "endDate": "2023-07-24 12:30:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "08:30-12:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 17098,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008225,
+      "outputCost": 0.0005408,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00062305
+    },
+    "hash": "49dc41aab4ca137d2d65c2218a1ef3a4",
+    "sourceFile": "luned_24_luglio_sciopero_nazionale_tpl_roma_servizio_rischio_830_1230.html",
+    "thoughts": "**Extracting strike information**\n\nI need to output some JSON based on a strike extraction schema. The document talks about an upcoming national strike in Italy on July 24, specifically affecting public transport in Rome from 8:30 to 12:30. Since this is an announcement of a future strike, I’ll set isStrike to true. Then, I’ll extract the required details like startDate, endDate, locationType, locationCodes, and guaranteedTimes to complete the structure properly.",
+    "tokens": {
+      "input": 1645,
+      "output": 1352,
+      "total": 2997
+    }
+  }
+}

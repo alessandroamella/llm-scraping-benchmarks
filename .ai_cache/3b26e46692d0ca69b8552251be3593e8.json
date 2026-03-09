@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8076,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006667,
+      "outputCost": 0.000148,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008147
+    },
+    "hash": "3b26e46692d0ca69b8552251be3593e8",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_195.html",
+    "thoughts": "**Formatting JSON output**\n\nThe page shows a date indicating the event occurred earlier today, so it’s confirmed as not upcoming. According to the instructions, since it's not a cancellation or ongoing situation, the output should be set to false. I'm making sure to format this correctly as a JSON object. The required schema for this output is “strike_extraction” type, so my final answer will simply be: {\"isStrike\": false}. Alright, let's finalize that!",
+    "tokens": {
+      "input": 13334,
+      "output": 370,
+      "total": 13704
+    }
+  }
+}

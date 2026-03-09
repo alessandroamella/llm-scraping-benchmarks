@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 2332,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000325,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000177,
+      "cachedCost": 0,
+      "totalCost": 0.000517
+    },
+    "hash": "bb76d505cc51be417b8d447ffeb838cd",
+    "sourceFile": "sciopero_trasporto_pubblico_ha_aderito_246_personale_atac.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, here's the situation. The input clearly indicates this is a post-event announcement about a public transport strike. Specifically, it's reporting the participation rate, the *adesione* of the personnel – 24.6% – at the ATAC company. It's looking backward at a strike that *already occurred*. The instructions are clear: if the content *only* reports on participation after the fact, we need to flag `isStrike` as false. Given this is purely a post-strike assessment of participation, I'm setting `isStrike` to `false`. Simple as that.\n\n\n",
+    "tokens": {
+      "input": 1300,
+      "output": 10,
+      "total": 1428
+    }
+  }
+}

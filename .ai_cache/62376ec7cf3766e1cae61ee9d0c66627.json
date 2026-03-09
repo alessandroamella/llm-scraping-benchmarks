@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-10 08:30:00",
+      "endDate": "2025-01-10 12:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6029,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0037565,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.0008115,
+      "cachedCost": 0,
+      "totalCost": 0.004691
+    },
+    "hash": "62376ec7cf3766e1cae61ee9d0c66627",
+    "sourceFile": "trasporto_pubblico_venerdi_10_gennaio_sciopero_nazionale_di_4_ore.html",
+    "thoughts": "**Strike Information Extraction - My Thought Process**\n\nOkay, here's the task: I need to pull out strike information from this text and return it as a clean JSON object. The rules are pretty straightforward: I'm looking for a boolean `isStrike` to indicate whether a strike is announced. If it *is* a strike, I need a nested `strikeData` object with the start and end dates/times, location type, and potentially location codes if they are available. The date format is specified: 'yyyy-MM-dd HH:mm:ss', which is good – no ambiguity there. Crucially, `isStrike` should only be true if the text is announcing an *upcoming* strike.\n\nNow, let's dive into the provided text: \"Trasporto pubblico, venerdì 10 gennaio sciopero nazionale di 4 ore.\" Okay, that immediately suggests a strike. The content confirms it: \"Venerdì 10 gennaio trasporto pubblico a rischio per lo sciopero nazionale di 4 ore, dalle 8.30 alle 12.30, proclamato dal sindacato Faisa Confail. A Roma l’agitazione interesserà la rete Atac e le linee periferiche gestite da operatori privati.\"  It's a national strike, lasting four hours, from 8:30 to 12:30.\n\nThe date information is a bit implicit, but I can work with that. The text says \"Venerdì 10 gennaio\" but also includes \"Pubblicato il: 05/01/2025\" and the title mentions the date. So I know this is an announcement about January 10th, 2025. That gives me everything I need.\n\nTherefore:\n\n*   `isStrike`: definitely `true`. It's clearly an announcement of a strike. The publication date (05/01/2025) is before the strike date (10/01/2025), so it is upcoming.\n*   `strikeData`:\n    *   `startDate`:  Based on \"Venerdì 10 gennaio\" and the published date, that's 2025-01-10 08:30:00.\n    *   `endDate`: That's 2025-01-10 12:30:00.\n    *   `locationType`: \"NATIONAL\". The text specifically says \"nazionale\".\n    *   `locationCodes`: I won't include this, as it's a national strike.\n    *   `guaranteedTimes`: Not specified, so I'll leave it out.\n\nThe prompt requires I extract the data. The content is explicitly about a national strike on Jan 10, 2025, from 8:30-12:30. I'm confident in my analysis. I have everything I need to construct the JSON.\n\n\n",
+    "tokens": {
+      "input": 15026,
+      "output": 82,
+      "total": 15649
+    }
+  }
+}

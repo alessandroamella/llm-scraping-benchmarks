@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-09-20 00:00:00",
+      "endDate": "2024-09-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4667,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00036325,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.0007395,
+      "cachedCost": 0,
+      "totalCost": 0.00128725
+    },
+    "hash": "598b2976dfb6c85958902687a2f59339",
+    "sourceFile": "venerd_20_settembre_sciopero_nazionale_24_ore_trasporto_pubblico_servizio_rischio.html",
+    "thoughts": "**Analyzing the ATAC Strike Information**\n\nOkay, so I'm looking at this text about the ATAC strike in Rome. First, I see \"Venerdì 20 settembre sciopero nazionale di 24 ore del trasporto pubblico.\" That's the core. It says there's a national 24-hour strike on September 20th. I need to nail down the date, so I'll assume it's the current year or the next, which is 2024.\n\nThen, there's the part about guaranteed service: \"Servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" That’s from 00:00 to 08:30 and 17:00 to 20:00. This is pretty standard for strikes.\n\nWait, there’s a second one: \"sempre venerdì 20 settembre, uno sciopero di 4 ore, dalle 8,30 alle 12,30, proclamato da Usb e Orsa, interesserà la sola rete Atac.\" Alright, another strike on the same day, this time from 08:30 to 12:30.\n\nThe prompt wants *a* strike. Usually, if there are multiple options, I'd pick the most comprehensive or clarify, but this schema only allows one, so I will focus on the longer, national strike.\n\nRegarding the national strike, based on \"nazionale di 24 ore\", the start date is 2024-09-20 00:00:00, and the end date is 2024-09-20 23:59:59. Since it is a national strike, I will omit the location codes.\n\n\n",
+    "tokens": {
+      "input": 1453,
+      "output": 123,
+      "total": 2069
+    }
+  }
+}

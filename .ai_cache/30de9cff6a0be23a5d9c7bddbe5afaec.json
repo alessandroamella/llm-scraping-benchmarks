@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-03-08 00:00:00",
+      "endDate": "2022-03-08 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 36090,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006751,
+      "outputCost": 0.0011036,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0017787
+    },
+    "hash": "30de9cff6a0be23a5d9c7bddbe5afaec",
+    "sourceFile": "martedi_8_marzo_sciopero_generale_24_ore_rischio_trasporto_pubblico.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to check if the document is about an upcoming strike announcement. The content includes a title about a general strike on March 8, 2026, indicating a 24-hour disruption. It mentions potential risks to public transport due to participation by unions. The markdown details clarify that train and bus services might be affected during specific hours. Overall, it appears to be a general notice about the planned strike, so I’ll format this into a JSON structure accordingly.",
+    "tokens": {
+      "input": 13502,
+      "output": 2759,
+      "total": 16261
+    }
+  }
+}

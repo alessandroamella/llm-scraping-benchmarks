@@ -1,0 +1,33 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 30557,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007955,
+      "outputCost": 0.0010296,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00110915
+    },
+    "hash": "84099a568ce5b50dd56ab7d361434c80",
+    "sourceFile": "sciopero_generale_nazionale_domani_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Extracting strike details**\n\nI need to format the document details in JSON according to the specifications. The Italian text indicates there is an upcoming national strike, specifically mentioning public transport risks for tomorrow due to a 24-hour strike. Service is normal before 8:30 and again from 17:00 to 20:00. So, I conclude that \"isStrike\" should be set to true. I need to pull out relevant strike details such as start date, end date, location type, and guaranteed times.",
+    "tokens": {
+      "input": 1591,
+      "output": 2574,
+      "total": 4165
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-15 00:00:00",
+      "endDate": "2024-12-15 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 31606,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000811,
+      "outputCost": 0.0012368,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0013179
+    },
+    "hash": "b60be6af3dc8d1cff0b3f11b3d66a4b7",
+    "sourceFile": "trasporto_pubblico_sciopero_nazionale_differito_15_dicembre.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to output JSON that includes information about whether it’s a strike and details if necessary. I’m working with an Italian news snippet. The title translates to \"National strike postponed to December 15,\" which indicates it’s an announcement about a strike. \n\nThe content mentions details about the postponement, the involved unions, and the schedule for public transportation in Rome. It clearly confirms this is about an upcoming strike that has been deferred.",
+    "tokens": {
+      "input": 1622,
+      "output": 3092,
+      "total": 4714
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-09-16 08:30:00",
+      "endDate": "2022-09-16 16:30:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "08:30-16:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 28218,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008405,
+      "outputCost": 0.0008664,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00095045
+    },
+    "hash": "3744bb5078025e401351803c41fa0ebc",
+    "sourceFile": "venerd_16_settembre_sciopero_nazionale_8_ore_trasporto_pubblico_romano_rischio.html",
+    "thoughts": "**Evaluating a strike announcement**\n\nI need to output JSON based on the strike_extraction schema. The document indicates an upcoming strike on Friday, September 16, detailing an eight-hour national strike that impacts Roman public transport. The precise time is given as 8:30 to 16:30. This is clearly an announcement for a national strike, suggesting that isStrike should be true. The mention of “status: 1” indicates it might be new or upcoming, as it provides real-time updates related to the strike.",
+    "tokens": {
+      "input": 1681,
+      "output": 2166,
+      "total": 3847
+    }
+  }
+}

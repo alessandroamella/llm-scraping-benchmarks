@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9952,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00066995,
+      "outputCost": 0.0002164,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00088635
+    },
+    "hash": "faf1c988db0cfc997db467c1cdc6e7b3",
+    "sourceFile": "sciopero_trasporto_pubblico_aperte_metropolitane_ferrovie_concesse.html",
+    "thoughts": "**Analyzing strike data**\n\nI need to output JSON with `isStrike` and possibly `strikeData` if `isStrike` is true. The content is from a page titled \"Sciopero del trasporto pubblico, aperte le metropolitane e le ferrovie concesse,\" published on March 9, 2026. It states there’s an ongoing public transport strike ending at 12:30. Additionally, it mentions that metro lines are functioning normally, but there could be cancellations for bus services operated by Atac and Roma Tpl. I'll proceed accordingly!",
+    "tokens": {
+      "input": 13399,
+      "output": 541,
+      "total": 13940
+    }
+  }
+}

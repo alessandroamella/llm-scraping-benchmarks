@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4249,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.003688,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0005265,
+      "cachedCost": 0,
+      "totalCost": 0.0042295
+    },
+    "hash": "e87f7f44afd1f5309297864db914120b",
+    "sourceFile": "sciopero_nazionale_adesione_personale_atac_al_237.html",
+    "thoughts": "**Analyzing Strike Information: A Retrospective Report**\n\nOkay, let's break this down. My task is to analyze this content for strike information, specifically if it announces an *upcoming* strike. The goal is clear: determine if this is a heads-up, or just a post-event report. The instructions are straightforward: if it's *not* an announcement of a future strike, then `isStrike` is `false`. If it *is* an announcement, I need to extract the `startDate`, `endDate`, `locationType`, `locationCodes`, and `guaranteedTimes` for the JSON output.\n\nAlright, the title is \"Sciopero nazionale, adesione personale Atac al 23,7% - Roma Servizi per la Mobilità\" (National strike, Atac staff participation at 23.7%). And the date published is 22/09/2025. The body states, \"L’adesione complessiva del personale Atac allo sciopero nazionale di oggi, rilevata in mattinata, è stata del 23,7%\" (The overall participation of Atac staff in today's national strike, detected in the morning, was 23.7%).\n\nThe \"di oggi\" (of today) language and the description of *participation* rather than *announcement* jumps out. It's a retrospective report about a strike that *has already happened*. It's reporting the level of \"adesione\" (participation). Therefore, according to my initial instruction, as this is simply providing information about a completed strike, I'll set `isStrike` to `false`. That's it, case closed.\n\n\n",
+    "tokens": {
+      "input": 14752,
+      "output": 10,
+      "total": 15113
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5237,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00375675,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0008955,
+      "cachedCost": 0,
+      "totalCost": 0.00466725
+    },
+    "hash": "cddfe3376e125bab4f040407bc0159fb",
+    "sourceFile": "venerd_16_dicembre_sciopero_generale_regionale_trasporto_pubblico_rischio_20_24.html",
+    "thoughts": "**Strike Information Extraction - Analysis**\n\nOkay, let's break this down. My primary task is to extract strike information and return it as valid JSON. Crucially, `isStrike` should only be true for *upcoming* strikes. I'm given the text: \"Venerdì 16 dicembre sciopero generale regionale. Trasporto pubblico a rischio dalle 20 alle 24\" and the publication date 09/12/2022. The event date is Friday, December 16th.\n\nFirst, I identify the strike details: \"Venerdì 16 dicembre\" (Friday, December 16th) which is a regional strike (\"sciopero generale regionale\") affecting public transport (\"Trasporto pubblico\"). The strike duration is from \"dalle 20 alle 24\" – 20:00 to 24:00. This translates to a location of Rome/Lazio (Region Code 12).\n\nNow, the core question: is this an *upcoming* strike? I need to analyze the date information. The publication date is 09/12/2022, and the strike date is 16/12/2022. Since it is already in the past, based on my understanding of the instructions, this is *not* an upcoming strike, though it was an upcoming strike at the time of publication. The instructions state: \"ONLY set isStrike to true if it is an announcement of an upcoming strike.\" Therefore, even though the content describes a strike, I must set `isStrike` to `false` based on the given constraint of this document being a historical document.\n\nTherefore, the strike data extraction should be:\n\n*   `isStrike`: `false`\n\nThe date is in the past. If the document was in the future, then the strike information would be formatted as:\n\n*   `startDate`: \"2022-12-16 20:00:00\"\n*   `endDate`: \"2022-12-16 23:59:59\"\n*   `locationType`: \"REGIONAL\"\n*   `locationCodes`: [\"12\"]\n*   `guaranteedTimes`: *Not mentioned in the text.*\n\nBut, since the provided text describes a strike that happened in the past, `isStrike` must be `false`.\n\n\n",
+    "tokens": {
+      "input": 15027,
+      "output": 10,
+      "total": 15634
+    }
+  }
+}

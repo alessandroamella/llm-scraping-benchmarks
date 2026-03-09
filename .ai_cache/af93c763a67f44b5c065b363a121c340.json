@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00",
+        " ",
+        "description"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 41709,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000834,
+      "outputCost": 0.0013544,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0014378
+    },
+    "hash": "af93c763a67f44b5c065b363a121c340",
+    "sourceFile": "venerd_20_maggio_sciopero_24_ore_trasporto_pubblico_rischio.html",
+    "thoughts": "**Extracting strike information**\n\nI need to output JSON based on the strike extraction specification. This Italian article states there's an upcoming 24-hour strike on Friday, May 20. It mentions participation from various unions, which impacts public transport in Rome. Services will run normally until 8:30 and then from 17:00 to 20:00. Overall, the article clearly announces the strike and its potential effects on transportation. Let’s get that JSON formatted correctly!",
+    "tokens": {
+      "input": 1668,
+      "output": 3386,
+      "total": 5054
+    }
+  }
+}

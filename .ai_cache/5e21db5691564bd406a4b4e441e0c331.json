@@ -1,0 +1,33 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 34154,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000829,
+      "outputCost": 0.0011368,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0012197
+    },
+    "hash": "5e21db5691564bd406a4b4e441e0c331",
+    "sourceFile": "venerd_7_luglio_trasporto_pubblico_rischio_sciopero_nazionale_24_ore_della_faisa_confail.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to output JSON according to the specs. The content indicates an announcement about an upcoming strike: \"Friday, July 7 public transport at risk. National 24-hour strike by Faisa Confail.\" It confirms that the strike is imminent. That means isStrike should be true, and I must create strikeData including startDate and endDate in the 'yyyy-MM-dd HH:mm:ss' format. Since it's a 24-hour strike on July 7, I need to figure out exact timing for the format.",
+    "tokens": {
+      "input": 1658,
+      "output": 2842,
+      "total": 4500
+    }
+  }
+}

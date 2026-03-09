@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-10-09 00:00:00",
+      "endDate": "2023-10-09 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5757,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0003425,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.0006705,
+      "cachedCost": 0,
+      "totalCost": 0.0011975
+    },
+    "hash": "ea69f47148518988627023214d44f76e",
+    "sourceFile": "luned_9_ottobre_sciopero_nazionale_trasporto_pubblico_possibili_disagi_24_ore.html",
+    "thoughts": "**Strike Announcement Analysis**\n\nOkay, let's break this down. My primary goal here is to ascertain if this text constitutes an upcoming strike announcement. The content certainly looks like it. I see phrases like \"sciopero nazionale\" (national strike), \"disagi per 24 ore\" (24-hour disruption), and \"proclamato dal sindacato Usb\" (proclaimed by the Usb union). Definitely smells like a strike announcement.\n\nNow, let's get into the specifics. I need to extract the key parameters. First, `isStrike` is definitely `true`. Next, the date. The text states \"Lunedì 9 ottobre\".  I need a specific date, and since the year isn't explicitly provided, I will infer the current year (or the following year, if it is already past October 9th) and assume it refers to 2023-10-09, as this is within a reasonable timeframe for a prompt like this. The text is \"Lunedì 9 ottobre\" so I can assume this is the format. Let's make sure that's represented in the format the schema requires (YYYY-MM-DD HH:mm:ss). I will format it as 2023-10-09 00:00:00 (for the start) and end the period at 2023-10-09 23:59:59.\n\nNext up, the duration. The text specifies \"24 ore,\" so that indicates the strike duration.\n\nThe location is described as \"sciopero nazionale\" which translates to national, so `Location type` is definitely `NATIONAL`.\n\nFinally, the guaranteed service times, or the times when services will be regular. The text says \"fino alle 8,30\" (up to 8:30) and \"dalle 17 alle 20\" (from 17:00 to 20:00). So, I'll take this to mean services will run as normal from 00:00 to 08:30 and 17:00 to 20:00. This is the crux of the details that matter here. The times can be inferred from the text. I am confident I've captured everything I need.\n\n\n",
+    "tokens": {
+      "input": 1370,
+      "output": 123,
+      "total": 1940
+    }
+  }
+}

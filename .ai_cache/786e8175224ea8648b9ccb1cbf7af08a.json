@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-11-27 00:00:00",
+      "endDate": "2023-11-27 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6444,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00034275,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.000993,
+      "cachedCost": 0,
+      "totalCost": 0.00152025
+    },
+    "hash": "786e8175224ea8648b9ccb1cbf7af08a",
+    "sourceFile": "luned_27_novembre_sciopero_nazionale_trasporto_pubblico_possibili_disagi.html",
+    "thoughts": "**Analyzing the Public Transport Strike Announcement**\n\nOkay, so I've got an announcement for a national public transport strike. \"Lunedì 27 novembre,\" which I'm taking as November 27th, 2023, is the key date. The announcement explicitly states a 24-hour strike, which simplifies the start and end dates. The key piece is that it's *national*, so location codes are irrelevant per the schema, meaning `locationCodes` MUST BE OMITTED.\n\nNow, let's nail down those guaranteed times. It says service will be \"regolare fino alle 8,30 e dalle 17 alle 20.\" That translates to regular service until 8:30 AM and then from 5:00 PM to 8:00 PM. So, I need to represent that as two guaranteed time slots: 00:00-08:30 and 17:00-20:00. This is the part that is key to get right, so it's worth reviewing the instructions. Okay, the instructions are clear: if `locationType` is `NATIONAL`, `locationCodes` MUST BE OMITTED.\n\nNow, building the JSON structure, it's pretty straightforward. I'm setting `isStrike` to `true`. The `strikeData` object needs the `startDate` at \"2023-11-27 00:00:00\" and `endDate` at \"2023-11-27 23:59:59\". The `locationType` is `NATIONAL`, and the `guaranteedTimes` will be an array containing \"00:00-08:30\" and \"17:00-20:00\". That should be it!\n\n\n",
+    "tokens": {
+      "input": 1371,
+      "output": 123,
+      "total": 2156
+    }
+  }
+}

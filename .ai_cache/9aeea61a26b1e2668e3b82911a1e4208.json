@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-11-08 00:00:00",
+      "endDate": "2024-11-09 00:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 37758,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008625,
+      "outputCost": 0.0012028,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00128905
+    },
+    "hash": "9aeea61a26b1e2668e3b82911a1e4208",
+    "sourceFile": "venerdi_8_novembre_sciopero_nazionale_del_trasporto_pubblico_servizio_a_rischio_per_24_ore.html",
+    "thoughts": "**Extracting strike announcement details**\n\nI need to output JSON according to the strike_extraction schema. The document is about an upcoming strike announcement in Italian, stating: \"Venerdì 8 novembre sciopero nazionale del trasporto pubblico,\" which means a national public transport strike on Friday, November 8, with services at risk for 24 hours. It mentions essential services will be available at specific times. So, yes, this is indeed confirming an upcoming strike announcement for that date.",
+    "tokens": {
+      "input": 1725,
+      "output": 3007,
+      "total": 4732
+    }
+  }
+}

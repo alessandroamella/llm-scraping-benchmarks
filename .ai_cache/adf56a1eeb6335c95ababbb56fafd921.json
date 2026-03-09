@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-29 20:00:00",
+      "endDate": "2025-10-30 00:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6598,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0037585,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.0011085,
+      "cachedCost": 0,
+      "totalCost": 0.0050155
+    },
+    "hash": "adf56a1eeb6335c95ababbb56fafd921",
+    "sourceFile": "domani_sciopero_serale_di_4_ore_a_rischio_i_bus_del_deposito_magliana.html",
+    "thoughts": "**Strike Analysis of ATAC News Release**\n\nOkay, let's break this down. My task is to determine if this text announces an upcoming strike for ATAC in Rome and then structure the information as requested. The input is a news release from \"Roma Servizi per la Mobilità\" with the title \"Domani sciopero serale di 4 ore. A rischio i bus del deposito Magliana.\"\n\nThe constraints are clear: return valid JSON, and the structure is critical: `isStrike` must be `true` if a strike is indicated, along with `strikeData`. Dates need to be in 'yyyy-MM-dd HH:mm:ss' format, and the location is Rome (Lazio), ISTAT code \"12.\" No extraneous text, got it.\n\nThe title itself screams strike, but let's confirm. The published date is 28/10/2025. The content says \"Domani sera rischio stop... sciopero di quattro ore, dalle 20 alle 24\". \"Domani\" means the next day, the 29th of October, 2025. \"Dalle 20 alle 24\" indicates a strike from 20:00 to 24:00 (midnight). The strike is confirmed, so `isStrike` is definitely `true`.\n\nNow, for `strikeData`. The start date is tomorrow, October 29th, 2025, at 20:00:00. The end date is October 30th, 2025 at 00:00:00. The location is Rome, with ISTAT code \"12\". Since the announcement mentions specific lines and a depot, this is regional in nature and I'll classify the location as \"REGIONAL\". No guaranteed times are mentioned in the text.\n\nTherefore, the structure is:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-10-29 20:00:00\",\n    \"endDate\": \"2025-10-30 00:00:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\n      \"12\"\n    ],\n    \"guaranteedTimes\": []\n  }\n}\n```\n\n\n",
+    "tokens": {
+      "input": 15034,
+      "output": 99,
+      "total": 15872
+    }
+  }
+}

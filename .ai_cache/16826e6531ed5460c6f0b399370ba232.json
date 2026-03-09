@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5150,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0037975,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0006405,
+      "cachedCost": 0,
+      "totalCost": 0.004453
+    },
+    "hash": "16826e6531ed5460c6f0b399370ba232",
+    "sourceFile": "trasporto_pubblico_gioved_sciopero_nazionale_830_1230_servizio_rischio.html",
+    "thoughts": "**Strike Announcement Analysis**\n\nOkay, let's break this down. My task is to determine if this content signals an *upcoming* strike, and I need to output a clean JSON object, no comments, following the provided schema. The decision logic is pretty clear: `isStrike` is only true for *future* strike announcements. Past events, revocations, real-time updates, or general info? All `false`.\n\nFirst, I see the title: \"Trasporto pubblico, giovedì sciopero nazionale dalle 8,30 alle 12,30...\" Sounds like a strike, but let's not jump to conclusions. The published time is March 9, 2026, which feels a little strange. Then, I see \"Giovedì 18 luglio trasporto pubblico a rischio per lo sciopero nazionale...\" Ah, the date is July 18th. Hold on, something isn't right. The *body* text contains a date \"18 luglio\" (July 18), but the publish date is March 9, 2026. Very suspicious.\n\nLet me reread the body carefully. Ah, there's another clue at the bottom: \"Pubblicato il: 12/07/2024 - Aggiornato il: 06/11/2024.\" So, the actual content dates from 2024. And it does mention \"giovedì 18 luglio\". Given that this is from 2024 and it's being \"published\" (or, accessed) in 2026, it is clearly an old announcement.\n\nThe crucial point is that I'm looking for an *upcoming* strike. Since this clearly refers to an event from 2024, it's a past event, not a future one.\n\nTherefore, `isStrike`: false.\n\n\n",
+    "tokens": {
+      "input": 15190,
+      "output": 10,
+      "total": 15627
+    }
+  }
+}

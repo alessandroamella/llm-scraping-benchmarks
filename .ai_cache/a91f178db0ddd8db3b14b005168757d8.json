@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9188,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006798,
+      "outputCost": 0.0002324,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0009122
+    },
+    "hash": "a91f178db0ddd8db3b14b005168757d8",
+    "sourceFile": "venerd_2_dicembre_sciopero_generale_nazionale_24_ore_rischio_trasporto_pubblico_romano.html",
+    "thoughts": "**Ensuring precise output**\n\nI’m working on whether to provide an output saying that \"isStrike\" is false. The instruction is clear: if isStrike is false, I only need to include that in my response without any extra data. I’m considering if there’s outdated content about a strike, but it seems I need to stick to the JSON format specified. So, I’ll ensure the final answer strictly follows the schema and outputs just: { \"isStrike\": false }.",
+    "tokens": {
+      "input": 13596,
+      "output": 581,
+      "total": 14177
+    }
+  }
+}

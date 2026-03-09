@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "20:00-24:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24905,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007905,
+      "outputCost": 0.0008016,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00088065
+    },
+    "hash": "04df7b206cfdb665e265772efa3b175f",
+    "sourceFile": "venerd_16_dicembre_sciopero_generale_regionale_trasporto_pubblico_rischio_20_24.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to output a JSON object indicating if there's a strike and possibly include strikeData. The title suggests that there's a regional general strike on Friday, December 16, which affects public transport from 8 PM to midnight. The body confirms that the transport system will be at risk during those hours. So, I determine that isStrike should be true. Now I need to extract the start and end dates in the specified format, but the year isn't clear. I'll have to make an educated guess.",
+    "tokens": {
+      "input": 1581,
+      "output": 2004,
+      "total": 3585
+    }
+  }
+}

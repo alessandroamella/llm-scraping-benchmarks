@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 09:00:00",
+      "endDate": "2024-12-13 13:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5606,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000387,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.000789,
+      "cachedCost": 0,
+      "totalCost": 0.001299
+    },
+    "hash": "ea8d45befc6b3e74513f60a387443611",
+    "sourceFile": "news_media_comunicati_sciopero_generale_13_dicembre.html",
+    "thoughts": "**Analyzing the ATAC Strike Announcement**\n\nOkay, let's see. I've got a webpage announcing a strike – a \"Sciopero generale\" – related to ATAC, which I know is the public transportation company in Rome, code 12. The text clearly states it's for Friday, December 13th. The time frame given is from 9:00 AM to 1:00 PM.\n\nThe tricky part is figuring out the scope. It says \"sciopero generale nazionale,\" which indicates a national strike. Even though it specifically mentions ATAC in Rome, the \"nazionale\" descriptor takes precedence. We don't have enough data to determine if this impacts other regions as well, so I'll go with NATIONAL for the location.\n\nNow, let's nail down the specifics. The date is easily derived – \"Venerdì 13 dicembre\" points to Friday, December 13th, and assuming this is for the current year (which, given the context, I will assume is 2024), that checks out. The start time is 09:00, and the end time is 13:00. No problem there.\n\nAs for guaranteed times, it doesn't *explicitly* mention \"guaranteed times\" in the traditional sense, so I will omit this in the output. The snippet does say the strike is reduced to 4 hours. Normally, transport strikes have specific guaranteed slots, but the text isn't explicit here, so I won't infer something that's not directly stated.\n\nSo, here's my interpretation in JSON format:\n\n*   `isStrike`: true\n*   `strikeData`:\n    *   `startDate`: \"2024-12-13 09:00:00\"\n    *   `endDate`: \"2024-12-13 13:00:00\"\n    *   `locationType`: \"NATIONAL\"\n\n\n",
+    "tokens": {
+      "input": 1548,
+      "output": 82,
+      "total": 2156
+    }
+  }
+}

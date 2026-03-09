@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8773,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000796,
+      "outputCost": 0.0001436,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002232
+    },
+    "hash": "d304f2447e064930381fb4604f93adbe",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_302.html",
+    "thoughts": "**Deciding on strike status**\n\nI need to output JSON based on a strike extraction schema. First, I must determine if the document indicates a new or upcoming strike. The Italian article mentions staff participation in a public transport strike at 30.2%. This means it's reporting on a strike that occurred earlier that morning, so I conclude it’s not announcing a future strike. Therefore, I’ll state that isStrike = false and output: { \"isStrike\": false }. No strikeData here.",
+    "tokens": {
+      "input": 1592,
+      "output": 359,
+      "total": 1951
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-10-20 00:00:00",
+      "endDate": "2023-10-20 23:59:59",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 32125,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007975,
+      "outputCost": 0.0011672,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00124695
+    },
+    "hash": "7e42b130e584f54512fddace559b0344",
+    "sourceFile": "venerd_20_ottobre_sciopero_generale_nazionale_trasporto_pubblico_rischio.html",
+    "thoughts": "**Interpreting strike announcements**\n\nI need to determine if a provided announcement pertains to a strike. If it's about a past strike, isStrike should be false. If it's ongoing or service-related, it should also be false. I conclude that this is indeed an announcement for an upcoming strike on Friday, October 20, so isStrike should be true. Then, I need to extract the details, but the year is not specified—perhaps it's 2024 based on context? I'll make my best guess.",
+    "tokens": {
+      "input": 1595,
+      "output": 2918,
+      "total": 4513
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-09 00:00:00",
+      "endDate": "2025-12-09 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00],",
+        "description\":\"Sciopero del trasporto pubblico di 24 ore indetto per martedì 9 dicembre; riguarda la sola rete Atac (Roma) in Lazio. Il servizio sarà regolare fino alle 08:30 e dalle 17:00 alle 20:00.\"}} } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } }} } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } }} } } }}} } } } }}}} } } }}}} }}}} }}}} }}}} }}}} }}}} }}}} }}}} }}}} }}}} }}}} }}}} }}}} }}}} }}}} }}}} ..."
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 53446,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00067505,
+      "outputCost": 0.0015868,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00226185
+    },
+    "hash": "e383d56a05596d1b5badd684ae5dd228",
+    "sourceFile": "martedi_9_dicembre_sciopero_del_trasporto_pubblico_possibili_stop_per_24_ore.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to check if the document is announcing an upcoming strike based on the provided Italian text. It mentions a public transport strike on Tuesday, December 9, which affects the Atac network for 24 hours. The text states that regular service will be available until 8:30 and from 17:00 to 20:00. Since December 9 is in the future relative to the reported date of December 4, 2025, I conclude that this is indeed an upcoming strike, so isStrike is true.",
+    "tokens": {
+      "input": 13501,
+      "output": 3967,
+      "total": 17468
+    }
+  }
+}

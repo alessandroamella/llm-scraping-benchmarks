@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-16 20:00:00",
+      "endDate": "2024-12-17 00:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4624,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0003355,
+      "outputCost": 0.00015,
+      "thinkingCost": 0.000795,
+      "cachedCost": 0,
+      "totalCost": 0.0012805
+    },
+    "hash": "2467c46aa3db87c17e7acf463c46224a",
+    "sourceFile": "venerd_16_dicembre_sciopero_generale_regionale_trasporto_pubblico_rischio_20_24.html",
+    "thoughts": "**Strike Analysis for ATAC (Rome/Lazio)**\n\nOkay, here's what I've got. I need to figure out if there's a strike announcement in this text and if so, extract the relevant data. The text mentions \"Venerdì 16 dicembre sciopero generale regionale. Trasporto pubblico a rischio dalle 20 alle 24\" and \"Venerdì 16 dicembre trasporto pubblico romano a rischio per lo sciopero generale regionale di 4 ore, dalle 20 alle 24.\" So, yes, there is an upcoming strike.\n\nNow, for the details. The date is Friday, December 16th. Since a specific year isn't given, and I am assuming a current context for the task, I will default to 2024. The start time is 20:00:00, and the end time is 24:00:00, which is the same as 00:00:00 on the following day (December 17th, 2024). The location is regional, meaning Lazio (code 12). There's no mention of guaranteed service times in the text.\n\nSo, here's the structured data I've derived:\n\n*   `isStrike`: `true`\n*   `strikeData`:\n    *   `startDate`: \"2024-12-16 20:00:00\"\n    *   `endDate`: \"2024-12-17 00:00:00\"\n    *   `locationType`: \"REGIONAL\"\n    *   `locationCodes`: \\[\"12\"]\n\nThat should be it. I've taken the date from the text, checked for an end time, and identified Lazio as the region based on the text \"sciopero generale regionale\". I have correctly formatted the start and end times to adhere to the schema.\n\n\n",
+    "tokens": {
+      "input": 1342,
+      "output": 100,
+      "total": 1972
+    }
+  }
+}

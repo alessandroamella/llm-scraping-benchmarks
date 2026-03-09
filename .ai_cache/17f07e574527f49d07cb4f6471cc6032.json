@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 12356,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000773,
+      "outputCost": 0.0001876,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002649
+    },
+    "hash": "17f07e574527f49d07cb4f6471cc6032",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_195.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to output JSON based on the strike_extraction schema. The document contains Italian text about a public transport strike, mentioning Atac staff participation at 19.5%. It translates to a report on participation rather than announcing a new or upcoming strike. So, I’m interpreting the content as reporting the ongoing or already occurred strike status. The \"status: 1\" might indicate some sort of status, but it's unclear what that means exactly.",
+    "tokens": {
+      "input": 1546,
+      "output": 469,
+      "total": 2015
+    }
+  }
+}

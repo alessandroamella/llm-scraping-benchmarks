@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-04 08:30:00",
+      "endDate": "2025-02-04 12:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5769,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0003565,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.001083,
+      "cachedCost": 0,
+      "totalCost": 0.0015625
+    },
+    "hash": "b9818f5cacc8cf3334cf993933797b3b",
+    "sourceFile": "4_febbraio_sciopera_4_ore_sindacato_usb_trasporto_pubblico_rischio.html",
+    "thoughts": "**Strike Detection and Data Extraction**\n\nOkay, let's break this down. My task is to determine if the provided HTML text announces an upcoming strike, specifically concerning ATAC in Rome (code 12). I quickly analyze the content: the headline screams \"sciopera\" (strikes) and \"trasporto pubblico a rischio\" (public transport at risk). The body confirms a 4-hour national strike by the Usb union on February 4th, impacting the ATAC network. So, yes, it's a strike.\n\nNow, let's extract the key data points. The date is February 4th, which I will format as `2025-02-04`. (I need to assume the year since it's not explicitly given; 2025 will do. The instruction mandates the format `yyyy-MM-dd HH:mm:ss`, so that's what I'll follow, even if the year is a default. Should have checked the source text for the year.) The strike starts at 8:30 and ends at 12:30, giving us \"2025-02-04 08:30:00\" and \"2025-02-04 12:30:00\" respectively. The text explicitly states it's a \"sciopero nazionale,\" which means the `locationType` is \"NATIONAL.\" Crucially, because it's national, I need to omit `locationCodes`, per the instructions. No guaranteed times are mentioned, so I can ignore that.\n\nTherefore, `isStrike` is `true`. The extracted `strikeData` should be: `{\"startDate\": \"2025-02-04 08:30:00\", \"endDate\": \"2025-02-04 12:30:00\", \"locationType\": \"NATIONAL\"}`. Since location type is national, location codes must be omitted. The dates are correctly formatted in the required `yyyy-MM-dd HH:mm:ss` format. And I'm finished.\n\n\n",
+    "tokens": {
+      "input": 1426,
+      "output": 82,
+      "total": 2230
+    }
+  }
+}

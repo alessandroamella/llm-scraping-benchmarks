@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-04-28 08:30:00",
+      "endDate": "2024-04-28 12:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5978,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00034025,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.0008925,
+      "cachedCost": 0,
+      "totalCost": 0.00135575
+    },
+    "hash": "1e2f543769c5779829012f46dc3dbcc7",
+    "sourceFile": "sciopero_trasporto_pubblico_gioved_28_servizio_rischio_830_1230.html",
+    "thoughts": "**Analyzing the ATAC Strike Information**\n\nOkay, let's break this down. I've got HTML content about a public transport strike in Rome (\"ATAC\"). My primary goal here is to determine if it's an upcoming strike and, if so, extract key data points: date, duration, location, and guaranteed times, if any.\n\nFirst, I need to look at the specifics. The title reads \"Sciopero del trasporto pubblico, giovedì 28 servizio a rischio dalle 8,30 alle 12,30,\" meaning \"Strike of public transport, Thursday 28 service at risk from 8:30 to 12:30.\" The text confirms this: \"Giovedì 28 aprile trasporto pubblico romano a rischio per lo sciopero nazionale di 4 ore, dalle 8,30 alle 12,30...\" or \"Thursday April 28 public transport in Rome at risk due to national strike of 4 hours, from 8:30 to 12:30...\". The text explicitly states it's a *national* strike affecting \"trasporto pubblico romano,\" which is Rome (region 12). Since it's national, I need to check the schema, which is important. It states that if the location type is NATIONAL, \"locationCodes MUST BE OMITTED completely.\" Got it.\n\nIs it an upcoming strike? Absolutely, based on the text. The date is Thursday, April 28th. The year isn't explicitly mentioned, but considering the context, I'll assume a standard year like 2024 (or a valid yyyy format for the requested output). I need to make sure I format the date appropriately, though: yyyy-MM-dd. The start time is 08:30:00 and the end time is 12:30:00.\n\nThe location is \"nazionale,\" which translates to \"National.\" The text doesn't specify any guaranteed times, so I won't infer or guess. Although typical strike windows often have guaranteed service periods, I should trust the text, which says the strike affects service from 8:30 to 12:30.\n\nSo, here's what I've got: `isStrike: true`. And the `strikeData`: `startDate: \"2024-04-28 08:30:00\"`, `endDate: \"2024-04-28 12:30:00\"`, `locationType: \"NATIONAL\"`, and `locationCodes: (Omit as per instructions)`. There are no guaranteed times specified, so `guaranteedTimes` should also be omitted.\n\nAnd finally, yes, it's a strike, and the location is definitely NATIONAL.\n\n\n",
+    "tokens": {
+      "input": 1361,
+      "output": 82,
+      "total": 2038
+    }
+  }
+}

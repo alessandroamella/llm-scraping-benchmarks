@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3098,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000329,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000318,
+      "cachedCost": 0,
+      "totalCost": 0.000662
+    },
+    "hash": "434a330f85c5f3b0805d45d6a6c03375",
+    "sourceFile": "sciopero_generale_nazionale_adesione_personale_atac_al_26.html",
+    "thoughts": "**Analyzing the ATAC Strike Announcement**\n\nOkay, let's break this down. My input is an announcement from ATAC: \"Sciopero generale nazionale, adesione personale Atac al 26%.\" That's the headline. The description clarifies that this morning's participation in the national general strike by ATAC staff was 26%. My immediate goal is to figure out if this is an *upcoming* strike announcement or a report on a strike that's already taken place.\n\nThe instructions are clear: if this is about *past* participation, `isStrike` should be `false`. Now, looking at the Italian text, specifically \"di oggi\" (today), it's pretty unambiguous. They're reporting on the participation *of* a strike that *happened* today. It's not a warning, a notice, or anything forecasting an event. It's retrospective. Therefore, `isStrike` is definitively `false`. Case closed.\n\n\n",
+    "tokens": {
+      "input": 1316,
+      "output": 10,
+      "total": 1538
+    }
+  }
+}

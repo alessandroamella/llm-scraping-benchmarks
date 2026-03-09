@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6186,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007685,
+      "outputCost": 0.0001684,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00024525
+    },
+    "hash": "a41e0e9d595126c20f0954dd62bc1645",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_132.html",
+    "thoughts": "**Deciding on strike extraction**\n\nI need to output JSON for the strike extraction, including an `isStrike` boolean and possibly some `strikeData` fields. The document is in Italian and discusses the public transport strike with a participation rate of 13.2%. It indicates that a strike occurred earlier that morning, not one that's upcoming. Based on the instructions, since this is about participation in a strike that already happened, I’ll set `isStrike` to false.",
+    "tokens": {
+      "input": 1537,
+      "output": 421,
+      "total": 1958
+    }
+  }
+}

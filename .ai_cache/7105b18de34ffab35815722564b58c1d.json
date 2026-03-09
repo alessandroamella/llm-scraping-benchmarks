@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5955,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000828,
+      "outputCost": 0.0001432,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.000226
+    },
+    "hash": "7105b18de34ffab35815722564b58c1d",
+    "sourceFile": "sciopero_del_trasporto_pubblico_attive_le_metropolitane_e_la_termini_centocelle.html",
+    "thoughts": "**Deciding on strike announcement**\n\nI need to output JSON according to the strike_extraction schema. The document is in Italian and talks about the current public transport strike affecting the Atac network. The title translates to \"Public transport strike: subways active and Termini-Centocelle.\" The body indicates the strike is ongoing, and services like metro lines A, B/B1, and C are still active. Since it states the strike is currently happening, I won't set isStrike to true.",
+    "tokens": {
+      "input": 1656,
+      "output": 358,
+      "total": 2014
+    }
+  }
+}

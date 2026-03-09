@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 2875,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0037105,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0001275,
+      "cachedCost": 0,
+      "totalCost": 0.003853
+    },
+    "hash": "9efc3d0b891f42369d1d3cd57070e618",
+    "sourceFile": "sciopero_trasporto_pubblico_attive_metropolitane_termini_centocelle.html",
+    "thoughts": "**Analyzing the Strike Information**\n\nOkay, here's the deal. The input clearly states, \"È in corso lo sciopero del trasporto pubblico che si concluderà alle 12,30\" – the public transport strike is ongoing and will end at 12:30. The instructions specifically say that if we're getting real-time information about an *ongoing* strike, we need to set the `isStrike` flag to `false`. That's a classic nuance in these systems, right? It's not *currently* a strike in the sense of a boolean state, it's an event in progress. So, based on that, and considering the instruction is very clear, the correct logical conclusion, in this scenario, is to set the `isStrike` variable to `false`. So, it's `isStrike: false`.\n\n\n",
+    "tokens": {
+      "input": 14842,
+      "output": 10,
+      "total": 14937
+    }
+  }
+}

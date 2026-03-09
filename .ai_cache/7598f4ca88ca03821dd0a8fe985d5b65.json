@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 2963,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00032375,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0002925,
+      "cachedCost": 0,
+      "totalCost": 0.00063125
+    },
+    "hash": "7598f4ca88ca03821dd0a8fe985d5b65",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_154.html",
+    "thoughts": "**Analyzing Strike Announcements in HTML**\n\nOkay, so I've been given this HTML content and need to determine if it announces an *upcoming* strike. Let's see... the text says \"Sciopero del trasporto pubblico, adesione personale Atac al 15,4%\" and then \"L’adesione del personale Atac allo sciopero del trasporto pubblico è stata pari al 15,4%.\" Right away, I see \"adesione\" which refers to participation, and the phrase \"è stata pari al\" indicates something that *was* – a past event.\n\nMy conclusion is that this content is *reporting* on the participation rate of a strike that has *already happened*. The wording strongly suggests a post-event analysis.\n\nBased on that, I need to check my rule: If the content *only* gives information on participation (\"adesione\") of a strike that has already taken place, then `isStrike` should be false. This is a straightforward application of the rule.\n\nTherefore, `isStrike` is set to false. No upcoming strike is being announced here, just a report of the past one. The final result is: `isStrike = false`.\n\n\n",
+    "tokens": {
+      "input": 1295,
+      "output": 10,
+      "total": 1500
+    }
+  }
+}

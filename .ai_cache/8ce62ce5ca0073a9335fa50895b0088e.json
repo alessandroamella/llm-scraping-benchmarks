@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3203,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.003721,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0003555,
+      "cachedCost": 0,
+      "totalCost": 0.0040915
+    },
+    "hash": "8ce62ce5ca0073a9335fa50895b0088e",
+    "sourceFile": "sciopero_del_trasporto_pubblico_adesione_personale_atac_al_218.html",
+    "thoughts": "**Analyzing the Atac Strike Report**\n\nOkay, so I've got this web page in front of me about an Atac public transport strike in Rome. My primary goal here is to figure out whether this is a heads-up about an *upcoming* strike, or just historical data. It's crucial for my analysis.\n\nThe title reads, \"Public transport strike, Atac staff participation at 21.8% - Roma Servizi per la Mobilità.\" Hmm, already a clue, the mention of \"participation.\" Diving into the text, it reinforces that with, \"Total participation of Atac staff in the public transport strike, detected in the morning, was 21.8%.\" \"Detected in the morning\" sounds like it already happened.\n\nBased on the content analysis, it's clear this article is reporting on the participation *rate* in a strike that has already taken place. This isn't a pre-strike announcement; it's a post-event report. This implies the `isStrike` flag needs to be set to `false`. Got it.\n\n\n",
+    "tokens": {
+      "input": 14884,
+      "output": 10,
+      "total": 15131
+    }
+  }
+}

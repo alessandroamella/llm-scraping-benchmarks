@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6933,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008025,
+      "outputCost": 0.0001716,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00025185
+    },
+    "hash": "06d2f2cdb65dc186600e280282d11b8b",
+    "sourceFile": "sciopero_trasporto_pubblico_aggiornamento_riapertura_stazione_repubblica.html",
+    "thoughts": "**Analyzing strike document**\n\nI need to output JSON with an `isStrike` boolean and possibly some `strikeData`. The content I have is in Italian and it seems to update about a public transport strike. The title mentions it's an ongoing strike, and it provides real-time updates about closures and services. \n\nSince it confirms the strike is currently happening and concluding at 13:00, I'll determine `isStrike` as false because it's not announcing a new or upcoming strike.",
+    "tokens": {
+      "input": 1605,
+      "output": 429,
+      "total": 2034
+    }
+  }
+}

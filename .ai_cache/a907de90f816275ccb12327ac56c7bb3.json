@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3255,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00032625,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0002505,
+      "cachedCost": 0,
+      "totalCost": 0.00059175
+    },
+    "hash": "a907de90f816275ccb12327ac56c7bb3",
+    "sourceFile": "sciopero_tpl_mattinata_adesione_personale_atac_233.html",
+    "thoughts": "**Analyzing for an Upcoming Strike Announcement**\n\nOkay, let's break this down. My objective here is to determine if this text is announcing a *future* strike. The content itself seems to be related to transportation (\"Tpl\" likely refers to \"Trasporto Pubblico Locale,\" or local public transport in Italian) and a strike involving Atac personnel.\n\nMy initial content analysis reveals key phrases: \"Sciopero del Tpl\" (strike of the Tpl), and information about \"adesione personale Atac\" (Atac personnel participation). There's a percentage, \"23.3%\", which is crucial. The text also states that it is describing the participation \"rilevata a metà mattinata\" (measured mid-morning).\n\nNow, the instructions are clear: if this text merely describes *participation* in a strike that *already happened*, then `isStrike` should be `false`. This isn't about *announcing* a strike; it's providing an update. The phrase \"rilevata a metà mattinata\" strongly suggests this is an observation *during* or *after* an ongoing event. The percentages reported is adhesion of personnel to the strike, which, as I read it, is a measure of the ongoing strike.\n\nTherefore, after carefully considering these clues, I'm setting `isStrike` to `false`. The text isn't announcing an upcoming strike, but providing real-time data about an existing one.\n\n\n",
+    "tokens": {
+      "input": 1305,
+      "output": 10,
+      "total": 1482
+    }
+  }
+}

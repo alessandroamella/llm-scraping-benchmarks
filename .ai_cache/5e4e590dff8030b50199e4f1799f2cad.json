@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 15542,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006657,
+      "outputCost": 0.0002044,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008701
+    },
+    "hash": "5e4e590dff8030b50199e4f1799f2cad",
+    "sourceFile": "sciopero_generale_adesione_personale_atac_179.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to output JSON based on the strike_extraction schema and determine if the document signals an upcoming strike. The content is from a webpage titled \"Sciopero generale, adesione personale Atac al 17,9% - Roma Servizi per la Mobilità,\" dated October 20, 2023. It mentions a participation rate of 17.9%, indicating it's about an ongoing or completed strike. Since the user specified that isStrike should be false for updates on past strikes, I'll mark it accordingly.",
+    "tokens": {
+      "input": 13314,
+      "output": 511,
+      "total": 13825
+    }
+  }
+}

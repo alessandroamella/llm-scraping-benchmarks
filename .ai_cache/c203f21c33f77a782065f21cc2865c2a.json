@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-04-26 08:30:00",
+      "endDate": "2024-04-26 12:30:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "08:30-12:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20034,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008045,
+      "outputCost": 0.0005444,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00062485
+    },
+    "hash": "c203f21c33f77a782065f21cc2865c2a",
+    "sourceFile": "venerd_26_aprile_sciopero_nazionale_tpl_roma_possibili_disagi_830_1230.html",
+    "thoughts": "**Extracting strike details**\n\nI’m working on outputting JSON in the specified strike_extraction format. The document is announcing an upcoming national strike in Italy on Friday, April 26, with public transport expected to be disrupted from 8:30 to 12:30. It indicates that this upcoming strike is confirmed. I’ll set isStrike to true and need to extract details like startDate, endDate, locationType, locationCodes, and guaranteedTimes for the JSON output.",
+    "tokens": {
+      "input": 1609,
+      "output": 1361,
+      "total": 2970
+    }
+  }
+}

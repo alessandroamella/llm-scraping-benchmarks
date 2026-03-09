@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2014-11-14 00:00:00",
+      "endDate": "2014-11-14 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 50836,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000795,
+      "outputCost": 0.0015024,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0015819
+    },
+    "hash": "7c20bd68c71c13a8345b13d06bc24cd5",
+    "sourceFile": "trasporto_pubblico_venerdi_prossimo_sciopero_di_24_ore_servizio_a_rischio.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to produce JSON for a potential strike from ATAC in Rome based on an Italian article. It mentions a 24-hour public transport strike on Friday, November 14, called by the Usb and Orsa unions. Since the article includes \"sciopero di 24 ore proclamato,\" it confirms it's a strike announcement. The phrasing \"venerdì prossimo\" suggests it's for the upcoming Friday. So, it looks like this is indeed an announcement of a strike, making isStrike true.",
+    "tokens": {
+      "input": 1590,
+      "output": 3756,
+      "total": 5346
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "timestamp": "2026-03-09T18:43:53.030Z",
+  "isCacheHit": true,
+  "request": {
+    "sourceName": "Trenord",
+    "fileName": "strike-detail-domenica-16-novembre-dalle-ore-10-alle-ore-18-scio.html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "strategy": "mineru-html",
+    "useLenientSchema": false,
+    "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"Trenord\" (the public transport company of Lombardia (03)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: mineru-html):\n<html class=\"no-js\" dir=\"ltr\" lang=\"it\"><body> <div id=\"main\"> <div class=\"container-fluid grid-margin container-foglia-news\"> <div class=\"container\"> <div class=\"container-fluid containers\"> <div class=\"container-sticky stickem-container\"> <div class=\"content\"> <div class=\"container-content grid-margin\"> <div class=\"col-l\"> <div class=\"text align-middle\"> <h1 class=\"uppercase\" _item_id=\"101\"> <b> Domenica 16 novembre dalle ore 10 alle ore 18 sciopero dei treni regionali in Lombardia </b> </h1> </div> <div class=\"frame frame-default frame-type-trenordtheme_simpletextmedia frame-layout-0\" id=\"c18599\"> <div class=\"container-fluid container-text-image\"> <div class=\"row grid-margin\"> <div class=\"container-content col-l\"> <div class=\"text align-middle\"> <h4 _item_id=\"103\"><strong>Per l’agitazione indetta da ORSA previste ripercussioni sul servizio regionale, suburbano, aeroportuale</strong></h4> <p _item_id=\"104\">Dalle ore 9 alle ore 18 di domenica 16 novembre l’organizzazione sindacale ORSA ha indetto uno sciopero che potrà avere ripercussioni sulla circolazione dei treni regionali, suburbani, a lunga percorrenza e dei collegamenti aeroportuali e S50 Malpensa Aeroporto-Bellinzona. Le corse potranno subire variazioni e cancellazioni.</p> <p _item_id=\"105\">La mattina viaggeranno i treni con orario di partenza dalla stazione di origine corsa prima delle ore 10 e arrivo a destinazione entro le ore 11.</p> <p _item_id=\"106\">Saranno previsti autobus sostitutivi, senza fermate intermedie, per le corse del servizio aeroportuale non effettuate tra Milano Cadorna (da via Paleocapa, 1) e Malpensa Aeroporto e tra Stabio e Malpensa Aeroporto.</p> <p _item_id=\"107\">Le informazioni sulla circolazione saranno disponibili sul sito Trenord e tramite gli aggiornamenti in “real-time” sull’App.</p> <p _item_id=\"108\">Si invitano i passeggeri a prestare attenzione agli annunci sonori e ai monitor di stazione.</p> </div> </div> </div> </div> </div> </div> </div> </div> </div> </div> </div> </div> </div> </body></html>"
+  },
+  "response": {
+    "parsedData": {
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2025-11-16 09:00:00",
+        "endDate": "2025-11-16 18:00:00",
+        "locationType": "REGIONAL",
+        "locationCodes": [
+          "03"
+        ]
+      }
+    },
+    "usage": {
+      "input": 1052,
+      "output": 99,
+      "total": 1902
+    },
+    "costUsd": {
+      "inputCost": 0.000263,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.0011265,
+      "cachedCost": 0,
+      "totalCost": 0.001538
+    },
+    "durationMs": 7356,
+    "thoughts": "**Strike Analysis: Trenord (Lombardia)**\n\nOkay, here's the breakdown. My task is to analyze this input and determine if it announces a strike affecting Trenord in the Lombardia region (\"03\"), and if so, to extract the relevant details into a JSON object. The target format requires a specific structure, including `startDate`, `endDate`, `locationType`, and `locationCodes`, and potentially `guaranteedTimes` if applicable.\n\nFirst, the headline states a strike from 10:00 to 18:00 on Sunday, November 16th, and the body says from 09:00 to 18:00. Given the level of detail, I will use the start time from the body text which says, \"Dalle ore 9 alle ore 18 di domenica 16 novembre l’organizzazione sindacale ORSA ha indetto uno sciopero\". Given the date provided, and the general way dates are formatted, I will use 2025 as the year.\n\nThe text clearly indicates a strike; therefore, `isStrike` will be set to `true`. This is an announcement. Now for the details: the strike's start time is 2025-11-16 09:00:00, and the end time is 2025-11-16 18:00:00. The location type is \"REGIONAL\" since it's affecting regional trains within Lombardia, and the location code is \"03\". While the text mentions trains departing *before* 10:00, I won't include those because it doesn't fit the `HH:mm-HH:mm` format. I will therefore omit the 'guaranteedTimes'.\n\nBased on this analysis, I've constructed a JSON output. I've double-checked that the date/time format adheres to the specified `yyyy-MM-dd HH:mm:ss` standard, and the location code is correctly represented as a string array. The overall JSON is valid and meets all the specified conditions.\n\n\n"
+  }
+}

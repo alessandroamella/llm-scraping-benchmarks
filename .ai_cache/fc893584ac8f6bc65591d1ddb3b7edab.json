@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-10-28 00:00:00",
+      "endDate": "2024-10-28 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5697,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00372525,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.0010635,
+      "cachedCost": 0,
+      "totalCost": 0.00499875
+    },
+    "hash": "fc893584ac8f6bc65591d1ddb3b7edab",
+    "sourceFile": "trasporto_pubblico_28_ottobre_sciopero_sulla_rete_atac.html",
+    "thoughts": "**Strike Analysis: Atac Network - October 28th**\n\nOkay, let's break this down. I've got a news item reporting a 24-hour strike on the Atac public transport network in Rome, Italy, specifically in the Lazio region, which I know is code \"12\". The strike is scheduled for October 28th. The article is dated 2024, so I'm processing it as if it's current.\n\nThe key takeaway is this: the service *is* affected. I'm tagging `isStrike` as `true`.\n\nNow, for the structured data: I need to pin down the details. The strike *starts* at midnight on October 28th and goes through the entire day.  So `startDate` is \"2024-10-28 00:00:00\" and `endDate` is \"2024-10-28 23:59:59\". The strike is regional, so the `locationType` is \"REGIONAL\", and the relevant `locationCodes` is [\"12\"].\n\nThe article mentions guaranteed service times. It says service is \"regolare fino alle 8,30\" (until 08:30) and \"dalle 17 alle 20\" (from 17:00 to 20:00). So, those are the periods when service *will* be running. Therefore, `guaranteedTimes` should be \"00:00-08:30\" and \"17:00-20:00\".\n\nI just want to verify that the time format used is correct according to the schema. \"00:00-08:30\" should be correct, based on the validation rule. The location code for Lazio (12) is correct. I think I've got everything.\n\n\n",
+    "tokens": {
+      "input": 14901,
+      "output": 140,
+      "total": 15750
+    }
+  }
+}

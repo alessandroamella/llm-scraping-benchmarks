@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-10-20 00:00:00",
+      "endDate": "2023-10-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6659,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000339,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.0010995,
+      "cachedCost": 0,
+      "totalCost": 0.001623
+    },
+    "hash": "ff0fa3d5561c7d870a2270385bc34391",
+    "sourceFile": "venerd_20_ottobre_sciopero_generale_nazionale_trasporto_pubblico_rischio.html",
+    "thoughts": "**Strike Analysis - Atac Strike in Rome**\n\nOkay, let's break this down. My input is HTML content about a potential Atac strike in Rome, and my task is to determine if a strike is happening and extract its details, all neatly packaged in a JSON object adhering to the specified schema.  The key fields are `isStrike`, `strikeData` (if there's a strike), `startDate`, `endDate`, `locationType`, `locationCodes`, and `guaranteedTimes`. The text says \"Venerdì 20 ottobre sciopero generale nazionale.\"\n\nFirst, I need to interpret this date.  The prompt explicitly wants \"yyyy-MM-dd HH:mm:ss\" format.  The text only says \"20 ottobre.\" There's no year.  Given the context and the prompt, let's assume the current year, and, based on what I'm seeing, 2023 seems logical. So, the date is 2023-10-20.\n\nThe text also says \"sciopero generale nazionale,\" which indicates a *national* strike. Therefore, `locationType` should be \"NATIONAL\". No need for ISTAT codes. Duration is \"24 ore\", which means it goes from 2023-10-20 00:00:00 to 2023-10-20 23:59:59.\n\nNow, the tricky part – the guaranteed service times. The text says \"Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" That translates to guaranteed service from 00:00 to 08:30 and 17:00 to 20:00, which means the \"guaranteedTimes\" array will contain these two intervals.\n\nTherefore:\n\n*   `isStrike`: True\n*   `startDate`: \"2023-10-20 00:00:00\"\n*   `endDate`: \"2023-10-20 23:59:59\"\n*   `locationType`: \"NATIONAL\"\n*   `guaranteedTimes`: [\"00:00-08:30\", \"17:00-20:00\"]\n\nI am ready to output the JSON object.\n\n\n",
+    "tokens": {
+      "input": 1356,
+      "output": 123,
+      "total": 2212
+    }
+  }
+}

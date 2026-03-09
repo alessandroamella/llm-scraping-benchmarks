@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3876,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00032575,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000126,
+      "cachedCost": 0,
+      "totalCost": 0.00046675
+    },
+    "hash": "7f2cac78ca23ffd89d4f77d3a5261823",
+    "sourceFile": "sciopero_del_trasporto_pubblico_ha_aderito_il_195_del_personale_atac.html",
+    "thoughts": "**Analyzing the ATAC Strike Information**\n\nOkay, so I'm looking at this text, and it's focusing on the adhesion rate of an ATAC strike that *already* happened, today. The key here is the timing. The instructions explicitly state that if the content is just about the participation in a strike that's *already* taken place, we need to set the `isStrike` flag to false. They are being very specific. The goal is to differentiate information on a completed strike from an announcement of a future event.\n\nTherefore, because this is a retrospective analysis of an \"odierno\" (\"today's\") sciopero, and not a notice, the conclusion is clear: this isn't an announcement. We're dealing with data about a past event. Hence, the `isStrike` flag is definitely set to `false`. That is the correct setting.\n\n\n",
+    "tokens": {
+      "input": 1303,
+      "output": 10,
+      "total": 1397
+    }
+  }
+}

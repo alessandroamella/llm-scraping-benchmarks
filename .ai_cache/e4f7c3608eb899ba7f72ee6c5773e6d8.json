@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-10 00:00:00",
+      "endDate": "2025-10-10 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 37047,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00067185,
+      "outputCost": 0.0011548,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00182665
+    },
+    "hash": "e4f7c3608eb899ba7f72ee6c5773e6d8",
+    "sourceFile": "venerdi_10_sciopero_del_trasporto_pubblico_rete_atac_a_rischio.html",
+    "thoughts": "**Interpreting strike details**\n\nI'm examining the details of a strike happening on October 10th, which is a Friday. It's noted to be a 24-hour and a 4-hour strike, but the start time isn't specified. Service will be normal until 8:30 AM and then again from 5:00 PM to 8:00 PM, indicating disruption during those hours. For setting fields, I think I should use a start date of \"2025-10-10 00:00:00\" and identify the strike's location as REGIONAL with a location code of \"12\" for Lazio.",
+    "tokens": {
+      "input": 13437,
+      "output": 2887,
+      "total": 16324
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3656,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00370075,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000345,
+      "cachedCost": 0,
+      "totalCost": 0.00406075
+    },
+    "hash": "ee8cce219b478d4b495fd5c6890a8849",
+    "sourceFile": "sciopero_generale_adesione_personale_atac_179.html",
+    "thoughts": "**Analyzing Strike Information**\n\nOkay, the task is to pull out strike details and present them as valid JSON. My main constraint is that `isStrike` should only be true if the text describes an *upcoming* strike – not a past one. Let's dig in.\n\nThe title reads \"Sciopero generale, adesione personale Atac al 17,9% - Roma Servizi per la Mobilità,\" and the text confirms this is about the overall participation in a strike, it is reported that the overall participation was 17.9%. Importantly, the text says \"di oggi,\" which means \"today,\" and it also says this participation was \"rilevata in mattinata,\" which means in the morning. Looking at the date, it's 20/10/2023.\n\nSo, I'm analyzing a report on participation in a strike that has already happened, not a notice about a future strike. I have been instructed to set `isStrike` to false if it's just about participation in a past event.\n\nTherefore, `isStrike`: `false`.\n\n\n",
+    "tokens": {
+      "input": 14803,
+      "output": 10,
+      "total": 15043
+    }
+  }
+}

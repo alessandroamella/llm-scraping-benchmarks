@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-24 00:00:00",
+      "endDate": "2025-02-24 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 29194,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00067855,
+      "outputCost": 0.0007876,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00146615
+    },
+    "hash": "a3abedf0a3a86f36b33458a2fa150928",
+    "sourceFile": "lunedi_24_febbraio_sciopero_nazionale_del_trasporto_pubblico_possibili_disagi.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI see that I need to output JSON based on the schema for strike extraction, focusing on a page about a national public transport strike on February 24. The document clearly announces a strike by ATAC, the public transport company in Rome. It indicates that while service will operate normally until specific times, disruptions are expected later due to the 24-hour strike. The information points to a definite upcoming strike, and I’ll compile the relevant details accordingly.",
+    "tokens": {
+      "input": 13571,
+      "output": 1969,
+      "total": 15540
+    }
+  }
+}

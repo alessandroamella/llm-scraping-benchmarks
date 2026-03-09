@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3088,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0003255,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0003495,
+      "cachedCost": 0,
+      "totalCost": 0.00069
+    },
+    "hash": "9bfeea74ab520cd89101494aed1e6d80",
+    "sourceFile": "sciopero_nazionale_trasporto_pubblico_ha_aderito_101_personale_atac.html",
+    "thoughts": "**Analyzing Atac Strike Participation Data**\n\nOkay, let's break this down. I've got HTML content here, specifically an Atac announcement. The title, \"Sciopero nazionale del trasporto pubblico, ha aderito il 10,1% del personale Atac,\" is immediately relevant. My task is to determine whether this is an *announcement* of a future strike or a report on *participation* in a strike that has already occurred. The key phrase here is \"ha aderito,\" implying past tense participation.\n\nThe body confirms this suspicion: \"L’adesione del personale Atac allo sciopero nazionale del trasporto pubblico di questa mattina è stata pari al 10,1%.\" The explicit mention of \"this morning\" coupled with \"participation\" confirms that this concerns a strike that has already taken place. This is *not* an upcoming strike announcement. Therefore, my `isStrike` flag needs to be set to `false`. Simple deduction, based on temporal context and the nuance of the Italian phrasing.\n\n\n",
+    "tokens": {
+      "input": 1302,
+      "output": 10,
+      "total": 1545
+    }
+  }
+}

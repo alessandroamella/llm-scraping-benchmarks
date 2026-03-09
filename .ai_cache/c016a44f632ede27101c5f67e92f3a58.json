@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-09-09 08:30:00",
+      "endDate": "2024-09-09 16:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21282,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00067485,
+      "outputCost": 0.0006996,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00137445
+    },
+    "hash": "c016a44f632ede27101c5f67e92f3a58",
+    "sourceFile": "luned_9_settembre_sciopero_nazionale_trasporto_pubblico_servizio_rischio.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to format the output in JSON per the strike extraction guidelines. The document mentions a national strike in public transportation on September 9, which shows it's an official announcement from Roma Servizi per la Mobilità. It includes specific details about the strike timing and the areas affected. The phrase \"Aggiornamenti in tempo reale\" indicates there will be live updates available. So, I can confidently state that this document qualifies as a strike announcement, meaning isStrike = true.",
+    "tokens": {
+      "input": 13497,
+      "output": 1749,
+      "total": 15246
+    }
+  }
+}

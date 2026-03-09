@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 2778,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000327,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0001545,
+      "cachedCost": 0,
+      "totalCost": 0.0004965
+    },
+    "hash": "720e31cf87f5499195d1c1b7411386a1",
+    "sourceFile": "sospeso_sciopero_atac_16_gennaio_servizio_sar_regolare.html",
+    "thoughts": "**Analyzing Strike Information from HTML**\n\nOkay, so I've been given a task – to pull strike information from this HTML content. Pretty straightforward, but I need to be precise. The core of it all is figuring out if a strike is *actually* happening. My condition is simple: if the text indicates a cancellation, I need to flag it as such. No strike equals `isStrike: false`.\n\nLet's look at the input. We've got \"Sospeso lo sciopero Atac del 16 gennaio. Il servizio sarà regolare\" (The Atac strike of January 16th is suspended. Service will be regular). Right away, \"Sospeso\" – suspended – jumps out at me. And \"Il servizio sarà regolare\" - \"Service will be regular\" is another good indicator. Putting it all together, I conclude the strike has been cancelled or at the very least, suspended and service is expected to be regular.\n\nTherefore, the output I generate, the conclusive answer, is a clear `isStrike: false`. Simple as that.\n\n\n",
+    "tokens": {
+      "input": 1308,
+      "output": 10,
+      "total": 1421
+    }
+  }
+}

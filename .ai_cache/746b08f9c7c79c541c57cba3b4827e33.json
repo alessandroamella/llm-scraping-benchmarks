@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7783,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006691,
+      "outputCost": 0.0002388,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0009079
+    },
+    "hash": "746b08f9c7c79c541c57cba3b4827e33",
+    "sourceFile": "sciopero_trasporto_pubblico_aperta_metro_b_chiuse_c.html",
+    "thoughts": "**Clarifying strike status**\n\nI see that the page says there's an ongoing strike of public transport, but the guidelines indicate I should only set `isStrike` to true for an upcoming strike announcement. So, this means `isStrike` should be false instead. I'll stick to the JSON format specified. It should look like this: `{\"isStrike\": false}`. No extra explanations are needed here, just the straightforward JSON output! Let's go with that.",
+    "tokens": {
+      "input": 13382,
+      "output": 597,
+      "total": 13979
+    }
+  }
+}

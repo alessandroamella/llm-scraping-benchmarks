@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-05-02 08:30:00",
+      "endDate": "2024-05-02 12:30:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "08:30-12:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 27409,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000796,
+      "outputCost": 0.0006648,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0007444
+    },
+    "hash": "df286139ea6b2c9808a756806a45d61e",
+    "sourceFile": "martedi_2_maggio_sciopero_nazionale_4_ore_trasporto_pubblico_romano_rischio.html",
+    "thoughts": "**Evaluating date extraction**\n\nI see that the header indicates May 2, and there's a note about needing to extract dates in the 'yyyy-MM-dd HH:mm:ss' format. Without a specified year, I have to infer one. The content seems to allude to a potential strike, possibly in 2024 or 2025, and my current system date is from 2026.\n\nGiven May 1 is Labour Day in Italy, May 2 could be significant, suggesting a possible national strike in Italy on May 2, 2024. I'll need to determine the start and end dates accordingly.",
+    "tokens": {
+      "input": 1592,
+      "output": 1662,
+      "total": 3254
+    }
+  }
+}

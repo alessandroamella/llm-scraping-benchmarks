@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 11585,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00066715,
+      "outputCost": 0.0002152,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00088235
+    },
+    "hash": "0a3a688b814cbbc2ab3abeb81950e9f2",
+    "sourceFile": "sospeso_sciopero_atac_16_gennaio_servizio_sar_regolare.html",
+    "thoughts": "**Formatting output correctly**\n\nI need to produce a JSON object that indicates whether there's a strike. Since `isStrike` is false and there's no `strikeData` field needed, I just have to format it as `{\"isStrike\": false}`. The output should be clean and in ASCII. It's pretty straightforward, just sticking to the requirements! Alright, let's go ahead and deliver that!",
+    "tokens": {
+      "input": 13343,
+      "output": 538,
+      "total": 13881
+    }
+  }
+}

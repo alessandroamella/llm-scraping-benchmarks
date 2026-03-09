@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2019-10-28 00:00:00",
+      "endDate": "2019-10-28 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24013,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00010115,
+      "outputCost": 0.0009332,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00103435
+    },
+    "hash": "7b46a71593be072acb62419ed2481770",
+    "sourceFile": "trasporto_pubblico_28_ottobre_sciopero_sulla_rete_atac.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to output JSON according to the specifications. The document seems to be announcing an upcoming strike in Italy on October 28 for 24 hours, specifically affecting the Atac transport network. The message indicates that service will operate regularly until 8:30 AM and again from 5 PM to 8 PM during the strike period. I should set the isStrike field to true only if it's confirmed as an upcoming strike announcement.",
+    "tokens": {
+      "input": 2023,
+      "output": 2333,
+      "total": 4356
+    }
+  }
+}

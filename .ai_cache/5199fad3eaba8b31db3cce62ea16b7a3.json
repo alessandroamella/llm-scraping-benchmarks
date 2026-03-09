@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-05-02 08:30:00",
+      "endDate": "2023-05-02 12:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7283,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0003385,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.0013155,
+      "cachedCost": 0,
+      "totalCost": 0.001777
+    },
+    "hash": "5199fad3eaba8b31db3cce62ea16b7a3",
+    "sourceFile": "martedi_2_maggio_sciopero_nazionale_4_ore_trasporto_pubblico_romano_rischio.html",
+    "thoughts": "**Strike Analysis: Rome (Atac)**\n\nOkay, let's analyze this HTML content. The goal is to determine if there's an upcoming strike related to Atac in Rome and extract the details. Scanning the text, the title immediately flags a \"national strike\" on \"Tuesday, May 2\" – \"Martedì 2 maggio sciopero nazionale\". That's promising! The body confirms it: \"trasporto pubblico a rischio per lo sciopero nazionale\".\n\nLet's drill down:  The strike is definitely upcoming. The details are: it's a 4-hour \"national strike\", from 08:30 to 12:30, proclaimed by the Faisa Confail union. It affects the Atac network and peripheral buses managed by Roma Tpl. The date is May 2nd. *Hold on*... no year is explicitly mentioned. The prompt requires `yyyy-MM-dd HH:mm:ss` format. I'll make a standard assumption and use 2023 for that date, as May 2, 2023 was a Tuesday, matching the text's description.\n\nSo, `isStrike` is `true`. The `startDate` is \"2023-05-02 08:30:00\" and `endDate` is \"2023-05-02 12:30:00\". The `locationType` is \"NATIONAL\". It's a national strike, so *crucially*, the instructions state that `locationCodes` MUST be omitted entirely. Okay, making sure the year is correct - since it doesn't specify one, I am inferring 2023, and it seems reasonable.\n\nEverything seems correct, and I've verified that all requirements are met: valid JSON structure, no comments, no extra text, and no control tokens.  It's a single object, and the patterns and formats are correct, which is critical. The location codes are omitted as requested. Ready to go.\n\n\n",
+    "tokens": {
+      "input": 1354,
+      "output": 82,
+      "total": 2313
+    }
+  }
+}

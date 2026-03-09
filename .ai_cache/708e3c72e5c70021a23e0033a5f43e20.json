@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-02-17 00:00:00",
+      "endDate": "2023-02-17 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6006,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.003754,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.0007875,
+      "cachedCost": 0,
+      "totalCost": 0.004726
+    },
+    "hash": "708e3c72e5c70021a23e0033a5f43e20",
+    "sourceFile": "venerd_17_febbraio_sciopero_nazionale_usb_24_ore_trasporto_pubblico_rischio.html",
+    "thoughts": "**Strike Information Extraction - My Thought Process**\n\nOkay, here's the deal. I've got a news announcement from Roma Servizi per la Mobilità about a strike organized by \"Usb\" on \"Venerdì 17 febbraio\". My job is to translate that into a specific JSON format, only including the essential strike details, and using the `yyyy-MM-dd HH:mm:ss` date format. I need to focus on upcoming strikes, ignoring anything that's already happened or isn't strike-related. Guaranteed times need to be formatted as `HH:mm-HH:mm`. Regional codes are important if it's regional, but omitted if it's national.\n\nFirst, I see the phrase \"Venerdì 17 febbraio sciopero nazionale Usb di 24 ore.\" That's the core information. Since it says \"nazionale,\" I know it's a national strike. The publication date is 2023-02-10, so \"Venerdì 17 febbraio\" clearly refers to a future date in 2023. This is important for determining the correct date.\n\nNext, I need to figure out the exact date and time. It's a 24-hour strike, so I'm assuming it starts at the beginning of the day and ends at the end of the day on that date. The text provides specific guaranteed times: \"Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" From that, I should infer regular service is available from 00:00 to 08:30 and 17:00 to 20:00. This is pretty standard for Italian strikes, covering the morning and evening commute periods.\n\nSo, here's what I'm calculating:\n\n*   `isStrike`: definitely `true`.\n*   `startDate`: 2023-02-17 00:00:00\n*   `endDate`: 2023-02-17 23:59:59\n*   `locationType`: It's a \"sciopero nazionale,\" so it's `NATIONAL`.\n*   `guaranteedTimes`: I need to extract the times. \"Regolare fino alle 8,30\" means service is normal up until 08:30. \"Dalle 17 alle 20\" is straightforward; it's from 17:00 to 20:00. So I'll go with `[\"00:00-08:30\", \"17:00-20:00\"]`.\n*   `locationCodes`: I need to omit this since it's a national strike.\n\n\n",
+    "tokens": {
+      "input": 15016,
+      "output": 123,
+      "total": 15664
+    }
+  }
+}

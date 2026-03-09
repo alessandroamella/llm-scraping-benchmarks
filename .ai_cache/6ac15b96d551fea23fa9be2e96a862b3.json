@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-03-08 00:00:00",
+      "endDate": "2023-03-08 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6607,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0003385,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.000885,
+      "cachedCost": 0,
+      "totalCost": 0.0014335
+    },
+    "hash": "6ac15b96d551fea23fa9be2e96a862b3",
+    "sourceFile": "mercoled_8_marzo_sciopero_nazionale_cub_trasporto_pubblico_rischio_24_ore.html",
+    "thoughts": "**Strike Announcement Analysis: March 8th, 2023 - Rome Public Transport**\n\nOkay, let's break this down. It looks like we have a strike announcement to analyze. The key information is:\n\n*   **Topic:** This concerns a national strike, with the specific involvement of Cub Transport.\n*   **Target:** The strike will impact public transport in Rome, specifically ATAC and Roma Tpl.\n*   **Date:** It's set for \"Mercoledì 8 marzo\". The date format is ambiguous, but the day of the week corresponds to 2023. I'll represent it as `2023-03-08`. Since no year is explicitly given and this is a future looking action, it would be odd to use an out of context date.\n*   **Duration:** The strike is planned for a full 24 hours.\n*   **Guaranteed Service:** There will be guaranteed service windows from 00:00 to 08:30 and again from 17:00 to 20:00. This is crucial for planning purposes. The original text confirms this explicitly.\n*   **Location:** The strike is concentrated in Rome, which is in Lazio (code 12).\n*   **Confirmation:** Yes, this is an official strike announcement.\n\nBased on this, I need to represent the information in a structured format. I'm going to create a data object to represent this strike:\n\n*   `isStrike`: `true`\n*   `strikeData`:\n    *   `startDate`: `\"2023-03-08 00:00:00\"` (Formatted as `yyyy-MM-dd HH:mm:ss`)\n    *   `endDate`: `\"2023-03-08 23:59:59\"` (Formatted as `yyyy-MM-dd HH:mm:ss`)\n    *   `locationType`: `\"REGIONAL\"` (Based on it being in Rome)\n    *   `locationCodes`: `[\"12\"]` (Lazio region code)\n    *   `guaranteedTimes`: `[\"00:00-08:30\", \"17:00-20:00\"]`\n\nI've ensured that my data formatting adheres to the specified requirements. Now, let's move on to the next step.\n\n\n",
+    "tokens": {
+      "input": 1354,
+      "output": 140,
+      "total": 2084
+    }
+  }
+}

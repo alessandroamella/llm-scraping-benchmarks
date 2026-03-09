@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-04-28 08:30:00",
+      "endDate": "2022-04-28 12:30:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "08:30-12:30], ",
+        "description"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 26259,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000799,
+      "outputCost": 0.000876,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0009559
+    },
+    "hash": "5af57d50ed163be804cee169bbb9128f",
+    "sourceFile": "sciopero_trasporto_pubblico_gioved_28_servizio_rischio_830_1230.html",
+    "thoughts": "**Evaluating location type details**\n\nI’m figuring out that if the locationType is \"NATIONAL\", then locationCodes should be set to null, as the schema clearly states it must be explicitly null. The structure requires this for all strike data, and locationCodes is always necessary for regional types. I'm also looking at guaranteedTimes with the format \"HH:mm-HH:mm,\" so \"08:30-12:30\" fits perfectly with the 24-hour standard. It's interesting how the comma in Italian can confuse the time representation!",
+    "tokens": {
+      "input": 1598,
+      "output": 2190,
+      "total": 3788
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4501,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0037005,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000333,
+      "cachedCost": 0,
+      "totalCost": 0.0040485
+    },
+    "hash": "061339df7c44792e04778348dae6a18e",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_195.html",
+    "thoughts": "**Analyzing Strike-Related Information**\n\nOkay, let's break this down. My task is to determine if this content announces an *upcoming* strike. The title gives me a head start: \"Sciopero del trasporto pubblico, adesione personale Atac al 19,5%...\" – public transport strike, but it also mentions \"adesione,\" or participation. That's a key indicator.\n\nNow, into the body. \"L’adesione del personale Atac allo sciopero... è stata pari al 19,5%.\" The key phrase here is \"è stata,\" or \"was.\" This phrasing firmly places the event in the past or present, giving participation statistics in real time. It describes a participation percentage. The context clearly establishes this as *reporting* on a strike that is already underway, or that has occurred. The text gives percentage of the participation in said strike.\n\nSo, the instruction specifies, if the information is *solely* about participation *after* the fact, or ongoing, *isStrike* should be `false`. Given that all of this is retrospective data, I'll go with `isStrike = false`.\n\n\n",
+    "tokens": {
+      "input": 14802,
+      "output": 10,
+      "total": 15034
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9496,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000794,
+      "outputCost": 0.000154,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002334
+    },
+    "hash": "a5538dea47780a80697e395acdfe2d1e",
+    "sourceFile": "sciopero_generale_nazionale_adesione_personale_atac_23.html",
+    "thoughts": "**Assessing strike announcement**\n\nI need to output JSON according to the strike extraction schema. I've got a document about an Italian strike, specifically titled \"National general strike, Atac staff adhesion at 23%.\" It indicates a participation rate of 23%, meaning it provides details about a strike that has already occurred, rather than announcing a new one. Since it's about an earlier event, not an upcoming strike, I’ll determine that isStrike = false.",
+    "tokens": {
+      "input": 1588,
+      "output": 385,
+      "total": 1973
+    }
+  }
+}

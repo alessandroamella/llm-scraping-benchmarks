@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-11-27 00:00:00",
+      "endDate": "2023-11-27 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6929,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.003737,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.000954,
+      "cachedCost": 0.00019253,
+      "totalCost": 0.00506802
+    },
+    "hash": "7e2a90eefd1aca23b3f8625ad618635d",
+    "sourceFile": "luned_27_novembre_sciopero_nazionale_trasporto_pubblico_possibili_disagi.html",
+    "thoughts": "**Strike Information Extraction - My Thought Process**\n\nOkay, let's break this down. My task is to extract strike information from this text and return it as clean JSON, adhering strictly to the predefined schema. No extraneous words, just the data. The schema is clear: `isStrike` (boolean) and, if it's a strike, a `strikeData` object with `startDate`, `endDate`, `locationType`, `locationCodes`, and `guaranteedTimes`.\n\nThe content presents \"Lunedì 27 novembre sciopero nazionale del trasporto pubblico, possibili disagi\" (Monday, November 27th, national public transport strike, possible disruption). The body confirms the strike: \"Lunedì 27 novembre trasporto pubblico a rischio per lo sciopero nazionale di 24 ore...\" (Monday, November 27th, public transport at risk due to a 24-hour national strike...). That's a clear indicator.\n\nThe date is explicitly stated as \"Lunedì 27 novembre\" (Monday, November 27th). However, the year is not present in the content. Checking the source meta indicates \"Pubblicato il: 21/11/2023\" (Published on: 21/11/2023), so I can infer the year to be 2023. This is essential for accurate date formatting.\n\nThe text specifies a 24-hour duration (\"24 ore\"). The scope is \"sciopero nazionale\" (national strike). I'll mark the `locationType` accordingly. Crucially, the text says \"Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" (Service will still be regular until 8:30 and from 17:00 to 20:00). So, I must capture these as guaranteed times, which is in the desired format.\n\nNow, let's assemble the data.\n\n*   `isStrike`: definitely true.\n\n*   `strikeData`:\n    *   `startDate`:  Since it's a 24-hour strike and no specific start time is mentioned, I can reasonably assume it begins at midnight: \"2023-11-27 00:00:00\".\n    *   `endDate`: \"2023-11-27 23:59:59\" (24 hours later).\n    *   `locationType`: \"NATIONAL\" (from \"sciopero nazionale\").\n    *   `guaranteedTimes`: \"00:00-08:30\" and \"17:00-20:00\". This comes directly from the text and has to be in the requested format.\n    *   `locationCodes`: should be omitted if `locationType` is `NATIONAL`, as per the documentation.\n\nTherefore, I'm ready to output the valid JSON.\n\n\n",
+    "tokens": {
+      "input": 14948,
+      "output": 123,
+      "total": 15707
+    }
+  }
+}

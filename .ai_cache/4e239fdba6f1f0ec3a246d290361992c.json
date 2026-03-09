@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-09-04 08:30:00",
+      "endDate": "2025-09-04 12:30:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4575,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00035075,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.0006255,
+      "cachedCost": 0,
+      "totalCost": 0.00112475
+    },
+    "hash": "4e239fdba6f1f0ec3a246d290361992c",
+    "sourceFile": "rete_atac_giovedi_4_settembre_sciopero_dalle_830_alle_1230_possibili_disagi.html",
+    "thoughts": "**Strike Analysis for Rome (Atac)**\n\nOkay, let's break this down. My input is an announcement about a 4-hour strike in Rome's Atac network scheduled for \"giovedì 4 settembre.\" My primary task is to confirm that this constitutes a strike and then extract the relevant data – date, location, and times – adhering strictly to a JSON format and a predefined schema. I need to be precise and avoid any extraneous text.\n\nFirst, this is definitely a strike, so `isStrike` is `true`. Now, for the date. The announcement only specifies \"4 settembre,\" but no year is provided, which is important. Since no explicit year is present, and contextually these often relate to an upcoming event, I'll default to the upcoming year, 2025, unless I have a good reason to do otherwise, which, in this scenario, I don't. That makes the start date \"2025-09-04 08:30:00\" and the end date \"2025-09-04 12:30:00.\"\n\nLocation-wise, the text states \"L’agitazione interesserà solamente la rete Atac,\" so, it's explicitly limited to the Atac network in Rome, which is in Lazio region, which I know codes with \"12\". Therefore, the `locationType` will be \"REGIONAL,\" and `locationCodes` will be `[\"12\"]`.\n\nThere is no mention of guaranteed service times in the text.\n\nFinally, I need to make sure I format this information correctly as a JSON object, and I need to ensure that it has all the required fields and strictly adheres to the schema. No extra text, just the data.\n\n\n",
+    "tokens": {
+      "input": 1403,
+      "output": 99,
+      "total": 1919
+    }
+  }
+}

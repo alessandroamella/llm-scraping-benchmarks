@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3847,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00371975,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0004245,
+      "cachedCost": 0,
+      "totalCost": 0.00415925
+    },
+    "hash": "ae572c281c2d8e7bb17521400605eeb1",
+    "sourceFile": "sciopero_generale_nazionale_adesione_del_personale_atac_al_182.html",
+    "thoughts": "**Analyzing Atac Strike Information**\n\nOkay, let's see what we've got. The input is a news piece from \"Roma Servizi per la Mobilità\" titled \"Sciopero generale nazionale, adesione del personale Atac al 18,2%.\" My immediate goal is to figure out if this is a heads-up about a *new* strike, or if it's a report on something that already happened. If it's the latter, `isStrike` needs to be set to false; otherwise, I have to extract the relevant details.\n\nLet's break down the content. The title, \"National general strike, Atac staff participation at 18.2%,\" looks promising initially. However, the body, specifically the phrase \"allo sciopero generale nazionale *di questa mattina*,\" - emphasizes this morning, tells the whole story. The date details are also important, published on November 29th and updated December 3rd, this strongly indicates a post-strike report. No upcoming strike here. The text provides participation numbers *after* the fact.\n\nSo, taking all that into account, it's clear: this isn't an announcement for an *upcoming* strike. It's a post-event report. I'll set `isStrike` to false. Following the specified schema, the output is `{\"isStrike\": false}`.\n\n\n",
+    "tokens": {
+      "input": 14879,
+      "output": 10,
+      "total": 15172
+    }
+  }
+}

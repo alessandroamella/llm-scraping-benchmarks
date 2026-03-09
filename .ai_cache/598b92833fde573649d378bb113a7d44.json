@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4962,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008475,
+      "outputCost": 0.000098,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00018275
+    },
+    "hash": "598b92833fde573649d378bb113a7d44",
+    "sourceFile": "sciopero_del_trasporto_pubblico_chiuse_le_metropolitane_e_la_ferrovia_termini_centocelle_2.html",
+    "thoughts": "**Determining strike status**\n\nI need to confirm whether the document indicates a new or ongoing strike. It mentions: \"Sciopero nazionale del trasporto pubblico…\". This translates to, \"The national strike of public transport is underway,\" confirming it's an ongoing situation, not an upcoming one. Since it's providing real-time updates during the strike, I will set `isStrike` to false and produce the required JSON output. That means I'll output:  \n{ \"isStrike\": false }  \nNo extra information needed.",
+    "tokens": {
+      "input": 1695,
+      "output": 245,
+      "total": 1940
+    }
+  }
+}

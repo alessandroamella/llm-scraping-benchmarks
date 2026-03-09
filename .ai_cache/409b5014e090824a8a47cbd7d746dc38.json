@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6706,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000674,
+      "outputCost": 0.0001484,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008224
+    },
+    "hash": "409b5014e090824a8a47cbd7d746dc38",
+    "sourceFile": "sciopero_trasporto_pubblico_chiusa_metro_c_aperte_linee_bb1.html",
+    "thoughts": "**Evaluating strike announcement details**\n\nI need to determine if the document describes an announcement for an upcoming strike based on given content. The phrase indicates an ongoing strike rather than a future one since it references current conditions and status updates. The date confirms it's about something that began before February 4, 2022, and will end at 12:30. Therefore, I conclude that \"isStrike\" should be set to false since this isn’t an upcoming strike announcement.",
+    "tokens": {
+      "input": 13480,
+      "output": 371,
+      "total": 13851
+    }
+  }
+}

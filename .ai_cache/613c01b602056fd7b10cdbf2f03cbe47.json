@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 11817,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006739,
+      "outputCost": 0.0002176,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008915
+    },
+    "hash": "613c01b602056fd7b10cdbf2f03cbe47",
+    "sourceFile": "sciopero_trasporto_pubblico_chiusa_roma_lido_funzione_resto_della_rete.html",
+    "thoughts": "**Evaluating strike details**\n\nI need to format the information into JSON according to the \"strike_extraction\" schema. The document I have is a lengthy Italian web page about a strike, specifically detailing a public transport strike that affects the Roma-Lido railway. The relevant text indicates it's an ongoing strike set to conclude at 12:30. Since it's not new or upcoming but rather about an event from 2022, I have to keep that in mind for my output.",
+    "tokens": {
+      "input": 13478,
+      "output": 544,
+      "total": 14022
+    }
+  }
+}

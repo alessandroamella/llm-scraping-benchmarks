@@ -1,0 +1,36 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 27745,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000809,
+      "outputCost": 0.0008808,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0009617
+    },
+    "hash": "4bcda392a5f6da9ec57cb3c127908ce9",
+    "sourceFile": "martedi_9_dicembre_sciopero_del_trasporto_pubblico_possibili_stop_per_24_ore.html",
+    "thoughts": "**Analyzing upcoming strike details**\n\nI need to format the information in JSON according to the strike_extraction format. The document content notes an upcoming strike on Tuesday, December 9, specifically indicating that public transport will be affected for 24 hours due to the Sul union's action. It mentions that only the Atac network will be impacted and that service is expected to be normal before 8:30 AM and after 5 PM, but this isn’t a guarantee.",
+    "tokens": {
+      "input": 1618,
+      "output": 2202,
+      "total": 3820
+    }
+  }
+}

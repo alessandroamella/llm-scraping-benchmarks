@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3345,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00034325,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0003315,
+      "cachedCost": 0,
+      "totalCost": 0.00068975
+    },
+    "hash": "0d839b5adf55da8586b13f1e54017d53",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_209.html",
+    "thoughts": "**Analyzing the ATAC Strike Content**\n\nOkay, let me break this down. My input is a web page discussing an ATAC strike, specifically titled \"Sciopero del trasporto pubblico, adesione personale Atac al 20,9%.\" The body of the text states that the personnel participation in the public transport strike, *rilevata in mattinata* (observed this morning), was 20.9%. My instructions are clear: determine if this is an *announcement* of a *future* strike or simply a report on *participation* in a strike that *has already occurred*.\n\nThe key phrase here is \"*rilevata in mattinata*\". The verb tense strongly suggests that the observation *already happened*. The phrase \"è stata pari\" (was equal to) confirms that a past event is being described. Therefore, this isn't a *pre-strike announcement*. It's a report. Based on my analysis, I confidently set `isStrike` to `false`. The text describes the aftermath or during the event, not a warning of an impending disruption.\n\n\n",
+    "tokens": {
+      "input": 1373,
+      "output": 10,
+      "total": 1604
+    }
+  }
+}

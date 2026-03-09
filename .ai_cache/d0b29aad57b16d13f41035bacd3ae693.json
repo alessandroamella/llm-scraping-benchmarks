@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-10 08:30:00",
+      "endDate": "2025-01-10 12:30:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "08:30-12:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21563,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006753,
+      "outputCost": 0.000576,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0012513
+    },
+    "hash": "d0b29aad57b16d13f41035bacd3ae693",
+    "sourceFile": "trasporto_pubblico_venerdi_10_gennaio_sciopero_nazionale_di_4_ore.html",
+    "thoughts": "**Formatting date for strike data**\n\nI need to ensure I'm using the correct date formatting in the required data. The dates must be set as \"startDate\": \"2025-01-10 08:30:00\" and \"endDate\": \"2025-01-10 12:30:00\" with the format 'yyyy-MM-dd HH:mm:ss'. I'll also confirm that \"locationType\" is \"NATIONAL,\" as it's mentioned in the content. The guaranteed times will reflect the full period from 08:30 to 12:30. I must double-check that everything aligns with the instructions!",
+    "tokens": {
+      "input": 13506,
+      "output": 1440,
+      "total": 14946
+    }
+  }
+}

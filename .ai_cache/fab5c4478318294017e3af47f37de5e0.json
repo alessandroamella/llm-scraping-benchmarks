@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 2751,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00032325,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0002445,
+      "cachedCost": 0,
+      "totalCost": 0.00058275
+    },
+    "hash": "fab5c4478318294017e3af47f37de5e0",
+    "sourceFile": "sciopero_adesione_personale_atac_185.html",
+    "thoughts": "**Analyzing the Atac Strike Data**\n\nOkay, let's break this down. My initial thought upon seeing \"Sciopero, adesione personale Atac al 18,5%\" is to figure out if this is a heads-up about an *upcoming* strike. That's the critical question here, since I need to assess the potential impact. Now, the key is the phrase, \"L’adesione complessiva del personale Atac allo sciopero di oggi è stata\". That \"è stata\" – \"was\" – is the giveaway. It's referring to *today's* strike and provides statistics about how many people participated. The input explicitly focuses on the *participation* in the strike, which already happened or is happening. Therefore, this isn't an announcement of a future event. So, I can safely set `isStrike` to false. Simple enough.\n\n\n",
+    "tokens": {
+      "input": 1293,
+      "output": 10,
+      "total": 1466
+    }
+  }
+}

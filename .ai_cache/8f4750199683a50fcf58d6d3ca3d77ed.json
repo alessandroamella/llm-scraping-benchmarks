@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-09-22 00:00:00",
+      "endDate": "2025-09-22 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6697,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0037715,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.001101,
+      "cachedCost": 0,
+      "totalCost": 0.005057
+    },
+    "hash": "8f4750199683a50fcf58d6d3ca3d77ed",
+    "sourceFile": "lunedi_22_settembre_sciopero_nazionale_di_24_ore_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Strike Analysis: September 22nd**\n\nOkay, let's break this down. My source is an announcement from \"Roma Servizi per la Mobilità\" regarding a national strike. The text clearly states \"Lunedì 22 settembre sciopero nazionale di 24 ore,\" which immediately flags a strike for September 22nd. Since no year is specified in the text, and given the published date of September 2025, I'm going to assume the context year is 2025.\n\nThis is a *national* strike – key information. It's explicitly a 24-hour event. Thinking about the implications, that means it runs from the start of the day until the very end, from 00:00:00 to 23:59:59 on September 22nd, 2025. It affects Rome's public transport (Atac), based on the source.\n\nNow, critically, the text provides details on guaranteed services. \"Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" That translates to service being unaffected until 8:30 AM and then again between 5:00 PM and 8:00 PM. This is common in Italian strike announcements, indicating service is guaranteed during the morning and evening rush hours. So, let's log this: the guaranteed times are \"00:00-08:30\" and \"17:00-20:00\".\n\nGiven that this is a *national* strike, I'll flag that I need to be careful with my data structure. I'll need to remember that when `locationType` is set to \"NATIONAL\", the `locationCodes` field needs to be omitted to ensure consistency with my data model. So, in summary, I'm setting `isStrike` to true, the `startDate` to \"2025-09-22 00:00:00\", the `endDate` to \"2025-09-22 23:59:59\", `locationType` to \"NATIONAL\" and, the `guaranteedTimes` to  [\"00:00-08:30\", \"17:00-20:00\"].\n\n\n",
+    "tokens": {
+      "input": 15086,
+      "output": 123,
+      "total": 15943
+    }
+  }
+}

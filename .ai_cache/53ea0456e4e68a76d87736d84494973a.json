@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9011,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008005,
+      "outputCost": 0.000152,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00023205
+    },
+    "hash": "53ea0456e4e68a76d87736d84494973a",
+    "sourceFile": "sciopero_trasporto_pubblico_chiuse_metro_c_attiva_b.html",
+    "thoughts": "**Determining strike status**\n\nI need to output a JSON based on the strike_extraction schema. The content is in Italian, announcing a public transport strike. The title indicates a strike, and the body mentions that it's currently ongoing and will end at 12:30. The information discusses the status of different metro lines and possible service reductions for buses and trams. This means I can confirm that it is indeed an announcement about an ongoing strike.",
+    "tokens": {
+      "input": 1601,
+      "output": 380,
+      "total": 1981
+    }
+  }
+}

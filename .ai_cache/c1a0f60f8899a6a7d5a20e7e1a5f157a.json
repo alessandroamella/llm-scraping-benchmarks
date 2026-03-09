@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-03-21 00:00:00",
+      "endDate": "2025-03-21 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5702,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00374075,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.0010755,
+      "cachedCost": 0,
+      "totalCost": 0.00500075
+    },
+    "hash": "c1a0f60f8899a6a7d5a20e7e1a5f157a",
+    "sourceFile": "venerdi_21_marzo_sciopero_nazionale_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Strike Information Extraction: Analysis**\n\nOkay, let's break this down. The objective is to pull strike data for \"ATAC\" (that's public transport in Rome, specifically \"12\") from this text. I need to adhere to the given schema: `isStrike`, `strikeData` with `startDate`, `endDate`, `locationType`, `locationCodes`, and `guaranteedTimes`.\n\nThe title immediately flags a potential strike: \"Venerdì 21 marzo sciopero nazionale. Trasporto pubblico a rischio\". The content confirms it: \"Venerdì 21 marzo trasporto pubblico a rischio per lo sciopero nazionale di 24 ore...\" So, `isStrike` is definitely `true`.\n\nThe publication date is March 16, 2025, and the strike is on March 21, 2025. That gives us the `startDate`: `2025-03-21 00:00:00`. It's a 24-hour strike, which, in the Italian context, generally runs from 00:00 to 23:59.  So, the `endDate` is `2025-03-21 23:59:59`. That gives a full 24h.\n\nThe text clearly states \"sciopero nazionale,\" which means a national strike.  Therefore, `locationType` is \"NATIONAL\".  And, because it's a national strike, according to the schema rules, I *omit* `locationCodes` entirely.\n\nNow, for the guaranteed times.  The text says, \"...Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" That translates to \"until 8:30\" (inclusive) and \"from 17 to 20\" (inclusive) meaning the guaranteed times are \"00:00-08:30\", \"17:00-20:00\".\n\nAll the pieces are there. I'm ready to output the structured strike data.\n\n\n",
+    "tokens": {
+      "input": 14963,
+      "output": 123,
+      "total": 15803
+    }
+  }
+}

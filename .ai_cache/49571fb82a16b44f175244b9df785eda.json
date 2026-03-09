@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4068,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00369925,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.00051,
+      "cachedCost": 0,
+      "totalCost": 0.00422425
+    },
+    "hash": "49571fb82a16b44f175244b9df785eda",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_209.html",
+    "thoughts": "**Analyzing the Strike Data**\n\nOkay, let's break this down. My task is crystal clear: I need to determine if this text announces an *upcoming* strike. If it's anything else – cancellation, a post-strike report, a real-time update during a strike, or just general information – I need to flag it as *not* an upcoming strike. The output *must* be in JSON format. I also have to generate strikeData if the strike is confirmed.\n\nRight, the title says \"Sciopero del trasporto pubblico, adesione personale Atac al 20,9% - Roma Servizi per la Mobilità,\" which translates roughly to \"Public transport strike, 20.9% personnel participation - Rome Mobility Services.\" That phrase \"participation rate\" is a key indicator. The text is reporting a 20.9% participation rate of Atac personnel in a public transport strike.\n\nLooking closer at the content, the key phrase is \"L’adesione del personale Atac allo sciopero del trasporto pubblico, rilevata in mattinata, è stata pari al 20,9%\" - this *confirms* the participation rate. This gives me a big clue: it is in past tense, not future tense.\n\nAnd here's the clincher: the publication date is March 29, 2022, and it was *updated* January 25, 2023. These dates cement the deal - this is clearly a report *after* a strike occurred, not a warning of an impending one.\n\nTherefore, `isStrike: false`.\n\n\n",
+    "tokens": {
+      "input": 14797,
+      "output": 10,
+      "total": 15147
+    }
+  }
+}

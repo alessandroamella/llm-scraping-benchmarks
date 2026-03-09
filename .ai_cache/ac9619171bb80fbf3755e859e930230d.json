@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6307,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007715,
+      "outputCost": 0.0001364,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00021355
+    },
+    "hash": "ac9619171bb80fbf3755e859e930230d",
+    "sourceFile": "sciopero_trasporto_pubblico_ha_aderito_135_personale_atac.html",
+    "thoughts": "**Ensuring correct output format**\n\nI need to make sure that if `isStrike` is false, the output remains simple with just `{\"isStrike\": false}`. It’s important to avoid any extra fields to meet the exact requirements. The details in the content mention \"si sciopero... questa mattina,\" but there are no specific dates, so I want to confirm the final output: a clean JSON format with `isStrike: false`. Let’s go ahead and produce that!",
+    "tokens": {
+      "input": 1543,
+      "output": 341,
+      "total": 1884
+    }
+  }
+}

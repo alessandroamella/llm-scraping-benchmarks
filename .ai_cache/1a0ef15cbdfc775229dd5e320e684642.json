@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 09:00:00",
+      "endDate": "2024-12-13 13:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6521,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0037175,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.001152,
+      "cachedCost": 0,
+      "totalCost": 0.005018
+    },
+    "hash": "1a0ef15cbdfc775229dd5e320e684642",
+    "sourceFile": "news_media_comunicati_sciopero_generale_13_dicembre.html",
+    "thoughts": "**Strike Information Extraction: A Breakdown**\n\nOkay, let's see. My task is to pull strike information from this text and present it as a clean JSON object. The constraints are pretty straightforward: a valid JSON, specific schema, and no extraneous text. The core logic hinges on identifying whether it's a strike (`isStrike: true` or `false`) and extracting details like start and end dates/times, location type, location codes (if regional), and guaranteed service times (if provided).\n\nThe text describes a strike on Friday, December 13th, 2024. That date is inferred from the context of a 12/12/2024 publication date. The strike is reduced to 4 hours: from 09:00 to 13:00. This affects the ATAC network in Rome (Regional code \"12\" corresponding to Lazio).\n\nNow, to extract the data. I've got `isStrike` as `true` (it's clearly an announcement of a strike). Then I need to build the `strikeData` object.\n\nThe `startDate` is \"2024-12-13 09:00:00\", and the `endDate` is \"2024-12-13 13:00:00\". The `locationType` is where it gets interesting. The text refers to a \"national general strike\" (\"sciopero generale nazionale\") BUT the provided context directs me to focus on details for the strike affecting ATAC (Rome). The instruction says to include 2 digit ISTAT region codes when the location type is REGIONAL, meaning I should select REGIONAL, with code \"12\" (Lazio). There are no guaranteed service windows mentioned, so I will omit the `guaranteedTimes` key.\n\nMy initial thought was that a national strike wouldn't have a regional code, but since the instructions focus on Atac, this regional specification is more suitable.\n\nFinally, let's assemble the JSON and check for validation:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-13 09:00:00\",\n    \"endDate\": \"2024-12-13 13:00:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"]\n  }\n}\n```\n\nIs it valid JSON? Yes, syntactically correct. No comments, no extraneous text, the dates are correct and in the right format. The regional code represents Lazio (Region \"12\"). This is an acceptable, complete response to the task!\n\n\n",
+    "tokens": {
+      "input": 14870,
+      "output": 99,
+      "total": 15737
+    }
+  }
+}

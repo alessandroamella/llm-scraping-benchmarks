@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-07-07 00:00:00",
+      "endDate": "2023-07-07 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7994,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.003784,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.001632,
+      "cachedCost": 0,
+      "totalCost": 0.0056005
+    },
+    "hash": "a1b3e88628a73b30bf53284f4f9cc223",
+    "sourceFile": "venerd_7_luglio_trasporto_pubblico_rischio_sciopero_nazionale_24_ore_della_faisa_confail.html",
+    "thoughts": "**Strike Announcement Analysis for ATAC (Rome)**\n\nOkay, let's break this down. My task is to analyze this content and determine if it's a strike announcement, and if so, extract the relevant details for ATAC in Rome (Lazio, code 12). I need to determine `isStrike` and then populate the strike data. Since the text says \"Venerdì 7 luglio,\" I'm assuming it's an announcement for a *future* strike, so `isStrike` will be true.\n\nThe content states: \"Venerdì 7 luglio trasporto pubblico a rischio. Sciopero nazionale di 24 ore della Faisa Confail...\". Right, it's a 24-hour national strike called by Faisa Confail. The text explicitly mentions Rome and ATAC is affected, but it's *national*. The data model says that if the `locationType` is NATIONAL, then the `locationCodes` should be *omitted*. Good, I'll keep that in mind.\n\nThe dates are a little trickier. The announcement is for \"Venerdì 7 luglio.\" Given the prompt, and the publication date being June 30th 2023, I'm going to assume it's July 7th, 2023. I'll need to format the dates as `yyyy-MM-dd HH:mm:ss`. Okay, so `startDate` is \"2023-07-07 00:00:00\" and `endDate` is \"2023-07-07 23:59:59\". Standard for a 24-hour strike.\n\nNow, the guaranteed service times. The text says, \"Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" This means regular service until 8:30 and from 17:00 to 20:00. These are the guaranteed periods. So the `guaranteedTimes` should be [\"00:00-08:30\", \"17:00-20:00\"]. I see in the text that \"Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20\" corresponds to the guarantee bands. I will use what is in the text.\n\nSo, let's assemble the JSON:\n\n*   `isStrike`: true\n*   `strikeData`:\n    *   `startDate`: \"2023-07-07 00:00:00\"\n    *   `endDate`: \"2023-07-07 23:59:59\"\n    *   `locationType`: \"NATIONAL\"\n    *   `guaranteedTimes`: [\"00:00-08:30\", \"17:00-20:00\"]\n    *   `locationCodes`: *Omitted because it's NATIONAL*\n\nLooks solid. It's a national strike, so Rome (ATAC) is definitely affected, but I *must* omit the location code based on the instructions. The times are based on the text provided. Got it.\n\n\n",
+    "tokens": {
+      "input": 15136,
+      "output": 123,
+      "total": 16347
+    }
+  }
+}

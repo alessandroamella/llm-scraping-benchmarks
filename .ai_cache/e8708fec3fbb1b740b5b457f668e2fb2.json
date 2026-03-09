@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3427,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0003255,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000246,
+      "cachedCost": 0,
+      "totalCost": 0.0005865
+    },
+    "hash": "e8708fec3fbb1b740b5b457f668e2fb2",
+    "sourceFile": "sciopero_del_trasporto_pubblico_adesione_personale_atac_al_218.html",
+    "thoughts": "**Analyzing the Atac Strike Participation**\n\nOkay, so I've got this piece of text: \"Sciopero del trasporto pubblico, adesione personale Atac al 21,8%\". Immediately, I want to figure out what it's telling me. My first thought is to check if this is an *upcoming* strike announcement, which is critical for my operational awareness.\n\nThe text itself, \"L’adesione complessiva del personale Atac allo sciopero del trasporto pubblico, rilevata in mattinata, è stata pari al 21,8%,\" is pretty straightforward. It says that 21.8% of Atac staff participated in the strike. But the phrase \"rilevata in mattinata\" (measured this morning) is the key! It clearly indicates that the strike is *ongoing or already happened*. This isn't a *preemptive* notice.\n\nSo, according to my internal rules, based on the context that this is reporting *participation*, I can confidently set `isStrike` to `false`. It's not an alert, it's a report. Simple as that.\n\n\n",
+    "tokens": {
+      "input": 1302,
+      "output": 10,
+      "total": 1476
+    }
+  }
+}

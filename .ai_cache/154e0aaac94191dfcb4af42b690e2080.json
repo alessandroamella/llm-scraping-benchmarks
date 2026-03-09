@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 10729,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000833,
+      "outputCost": 0.000136,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002193
+    },
+    "hash": "154e0aaac94191dfcb4af42b690e2080",
+    "sourceFile": "sciopero_del_trasporto_pubblico_aperta_la_metro_b_chiuse_linee_a_c_e_termini_centocelle.html",
+    "thoughts": "**Extracting strike information**\n\nI need to output the information based on the strike extraction format. I found content in Italian stating that there is currently an ongoing public transport strike. The specifics indicate service changes in the Roma network. Since the instruction says we only mark it as a strike if it’s upcoming, I’ll set isStrike to false. Therefore, I’ll generate the JSON output as {\"isStrike\": false}, ensuring it reflects the situation.",
+    "tokens": {
+      "input": 1666,
+      "output": 340,
+      "total": 2006
+    }
+  }
+}

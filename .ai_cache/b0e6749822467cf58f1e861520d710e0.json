@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3604,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00367375,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000288,
+      "cachedCost": 0,
+      "totalCost": 0.00397675
+    },
+    "hash": "b0e6749822467cf58f1e861520d710e0",
+    "sourceFile": "sciopero_adesione_personale_atac_185.html",
+    "thoughts": "**Analyzing the ATAC Strike Announcement**\n\nOkay, let's break this down. The input's from \"Roma Servizi per la Mobilità,\" specifically regarding an \"ATAC\" strike. The title is \"Sciopero, adesione personale Atac al 18,5%\" which, loosely translated, means \"Strike, ATAC staff participation at 18.5%\". The content is concise: \"L’adesione complessiva del personale Atac allo sciopero di oggi è stata pari al 18,5%\" which translates to \"The overall participation of Atac staff in today's strike was 18.5%\".\n\nMy immediate goal here is to determine whether this text is an *announcement* of an upcoming strike. The instruction's very clear: only set `isStrike` to `true` if it *is* an announcement of a future strike. Otherwise, it defaults to false.\n\nAnalyzing the language is key. The phrase \"dello sciopero di oggi\" (of the strike today) is a tell. \"Oggi\" (today) indicates that the strike has *already* happened. This is a report on its participation *after* the fact. It's not a pre-emptive announcement. It describes an event in the past relative to the publication of the document.\n\nTherefore, because this is a post-strike participation report, `isStrike` is definitively set to `false`. No upcoming strike is being announced here, it's a statement about a completed one.\n\n\n",
+    "tokens": {
+      "input": 14695,
+      "output": 10,
+      "total": 14897
+    }
+  }
+}

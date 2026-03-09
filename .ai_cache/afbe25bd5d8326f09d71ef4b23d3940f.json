@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-20 00:00:00",
+      "endDate": "2025-06-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 27794,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008275,
+      "outputCost": 0.0009836,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00106635
+    },
+    "hash": "afbe25bd5d8326f09d71ef4b23d3940f",
+    "sourceFile": "venerdi_20_giugno_sciopero_generale_nazionale_di_usb_cub_e_sgb_a_roma_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Extracting strike data**\n\nThe text mentions service will be guaranteed until 8:30 and from 17 to 20, indicating an upcoming strike. So, I need to set isStrike to true. I have to extract strike dates in the 'yyyy-MM-dd HH:mm:ss' format, but the year isn't specified. It refers to \"Venerdì 20 giugno,\" and based on today's date of March 9, 2026, I should probably use a plausible year. The strike is a 24-hour national strike starting June 20 at 00:00.",
+    "tokens": {
+      "input": 1655,
+      "output": 2459,
+      "total": 4114
+    }
+  }
+}

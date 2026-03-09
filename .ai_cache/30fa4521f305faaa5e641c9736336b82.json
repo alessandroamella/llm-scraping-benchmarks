@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 12559,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006665,
+      "outputCost": 0.0002188,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008853
+    },
+    "hash": "30fa4521f305faaa5e641c9736336b82",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_186.html",
+    "thoughts": "**Evaluating strike announcement content**\n\nI need to produce JSON to check if the document indicates a new upcoming strike. The title states it's about a public transport strike with a participation rate from ATAC at 18.6%. It has dates from 2022 and 2023, so that indicates the information is not about an upcoming strike. Instead, it seems to be reporting on a past event, rather than announcing something new. I should confirm this in my output.",
+    "tokens": {
+      "input": 13330,
+      "output": 547,
+      "total": 13877
+    }
+  }
+}

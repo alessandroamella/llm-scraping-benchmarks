@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "08:30-16:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 17358,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008765,
+      "outputCost": 0.0005736,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00066125
+    },
+    "hash": "c3a2da00b2fbce29770f0dd714429a84",
+    "sourceFile": "trasporto_pubblico_domani_sciopero_8_ore_sulla_rete_atac.html",
+    "thoughts": "**Extracting strike information**\n\nI need to format the output as JSON according to the strike_extraction schema, and I'm confirming this is about an upcoming strike. The Italian article indicates an 8-hour strike on the ATAC network tomorrow from 8:30 to 16:30, so I can set isStrike to true. However, I need to extract the start date in the 'yyyy-MM-dd HH:mm:ss' format. The article says \"domani\" (tomorrow), but without knowing today's date, that makes it tricky! I need to infer the date somehow.",
+    "tokens": {
+      "input": 1753,
+      "output": 1434,
+      "total": 3187
+    }
+  }
+}

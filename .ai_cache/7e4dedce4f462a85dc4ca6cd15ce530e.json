@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-09-20 00:00:00",
+      "endDate": "2024-09-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 31459,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006796,
+      "outputCost": 0.001114,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0017936
+    },
+    "hash": "7e4dedce4f462a85dc4ca6cd15ce530e",
+    "sourceFile": "venerd_20_settembre_sciopero_nazionale_24_ore_trasporto_pubblico_servizio_rischio.html",
+    "thoughts": "**Extracting strike information**\n\nI need to output JSON according to the specified schema for the national 24-hour public transport strike in Rome happening on Friday, September 20. The article, published on September 13, 2024, mentions that services will be regular until 8:30 AM and then resume after a four-hour strike from 8:30 to 12:30 PM. Since this is indeed an announcement of an upcoming strike, I’ll set isStrike to true, but I’ll need to determine the exact start time for the JSON output.",
+    "tokens": {
+      "input": 13592,
+      "output": 2785,
+      "total": 16377
+    }
+  }
+}

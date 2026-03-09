@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-20 00:00:00",
+      "endDate": "2025-06-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5529,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00036175,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.000942,
+      "cachedCost": 0,
+      "totalCost": 0.00148825
+    },
+    "hash": "1493be24659acaf06e3d6a7af270f2dc",
+    "sourceFile": "venerdi_20_giugno_sciopero_generale_nazionale_di_usb_cub_e_sgb_a_roma_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Analyzing the Strike Information**\n\nOkay, here's what I've got. I'm processing some HTML content related to a strike – specifically, a \"Sciopero generale nazionale di 24 ore,\" a national general strike. The date is given as \"Venerdì 20 giugno.\"  Since no year is explicitly mentioned, I need to make an assumption. Based on the context and standard procedure, and the fact that I'm supposed to generate a valid date, I'll assume the year is the current one (2025 or current logic). Checking for any more clues, to avoid confusion. OK, I'm sticking with 2025.\n\nThis is a national strike (\"sciopero generale nazionale\"), but Roma (Lazio code \"12\") is mentioned, so I can classify it as NATIONAL. The strike's duration is 24 hours. The guaranteed service times are listed as \"fino alle 8,30 e dalle 17 alle 20.\" That translates to service guaranteed until 08:30 (meaning from the start of the day) and then again from 17:00 to 20:00. This is the critical information I need to work with.\n\nNow, let's put it all together into the strike data structure:\n\n*   `isStrike: true`\n*   `strikeData:`\n    *   `startDate: \"2025-06-20 00:00:00\"`\n    *   `endDate: \"2025-06-20 23:59:59\"`\n    *   `locationType: \"NATIONAL\"`\n    *   `guaranteedTimes: [\"00:00-08:30\", \"17:00-20:00\"]`\n\nI need to confirm the guaranteed times. If the wording is \"fino alle 08:30,\" then I can safely deduce that guaranteed service is in place from the start of the day until 08:30. The second guaranteed window \"dalle 17 alle 20\" means from 17:00 until 20:00.\n\nSo, I'm confident in setting the guaranteed times as [\"00:00-08:30\", \"17:00-20:00\"] for the JSON generation, keeping the date consistent.\n\n\n",
+    "tokens": {
+      "input": 1447,
+      "output": 123,
+      "total": 2198
+    }
+  }
+}

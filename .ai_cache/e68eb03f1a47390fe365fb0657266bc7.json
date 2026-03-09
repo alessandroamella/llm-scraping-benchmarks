@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-07-18 08:30:00",
+      "endDate": "2024-07-18 12:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5656,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0004635,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.0007575,
+      "cachedCost": 0,
+      "totalCost": 0.001344
+    },
+    "hash": "e68eb03f1a47390fe365fb0657266bc7",
+    "sourceFile": "trasporto_pubblico_gioved_sciopero_nazionale_830_1230_servizio_rischio.html",
+    "thoughts": "**Analyzing Strike Information Extraction**\n\nOkay, let's break this down. My objective is crystal clear: I need to pull out strike information from this HTML and package it in a structured format. The end result needs to tell me if there's a strike and, if so, the details. Specifically, I need to output `isStrike`, and a `strikeData` object if a strike is indicated.\n\nThe instructions define the structure of the data I need to extract. I'm focusing on boolean `isStrike` with values: `true`, indicating an *upcoming* strike, and the potential inclusion of the `strikeData` which will be present if `isStrike` is `true`. Within `strikeData`, there are several fields I need to populate: `startDate`, `endDate`, `locationType`, `locationCodes`, and `guaranteedTimes`. The location and time information is essential. `locationCodes` is an array of ISTAT codes, which is only present if the strike is `REGIONAL`.\n\nNow, looking at the provided input:\n\nI see a headline: \"Trasporto pubblico, giovedì sciopero nazionale dalle 8,30 alle 12,30.\" and accompanying text about a national strike on Thursday, July 18th from 08:30 to 12:30. This screams \"strike\" so `isStrike` is definitely `true`.\n\nThe year isn't explicitly stated, but the current year is 2024 and I can easily determine the day of the week for July 18th, 2024.\n\nSince it's a \"nazionale\" strike, the `locationType` should be \"NATIONAL\". That means I'm omitting `locationCodes`, as per the logic. The date and time are straightforward: July 18th from 08:30 to 12:30 in the current year. I'll convert those into the required date-time format: \"2024-07-18 08:30:00\" and \"2024-07-18 12:30:00\". Crucially, the input doesn't mention guaranteed times, so `guaranteedTimes` should not be included.\n\nTherefore, my final output will be:\n\n*   `isStrike`: `true`\n*   `strikeData`:\n    *   `startDate`: \"2024-07-18 08:30:00\"\n    *   `endDate`: \"2024-07-18 12:30:00\"\n    *   `locationType`: \"NATIONAL\"\n    *   (Omit `locationCodes`)\n\n\n",
+    "tokens": {
+      "input": 1854,
+      "output": 82,
+      "total": 2441
+    }
+  }
+}

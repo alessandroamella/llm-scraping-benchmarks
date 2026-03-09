@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5958,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0037215,
+      "outputCost": 0.0001725,
+      "thinkingCost": 0.0013725,
+      "cachedCost": 0,
+      "totalCost": 0.0052665
+    },
+    "hash": "a7ee98540f8646cdb273931d21e031ca",
+    "sourceFile": "news_media_comunicati_sciopero_generale_13_dicembre_240re.html",
+    "thoughts": "**Strike Analysis: Roma Mobilità Announcement**\n\nOkay, let's break this down. My task is to determine if this Roma Mobilità page announces a strike. The text explicitly states, \"Domani trasporto pubblico a rischio per lo sciopero generale nazionale di 24 ore.\" Yep, that's a strike announcement.\n\nNow for the details. The page was published on 12/12/2024. \"Domani\" means tomorrow, so the strike is on 13/12/2024. It's a full 24-hour strike, which typically runs from midnight to midnight. Looking at the guaranteed service times, the text says \"Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" That translates to regular service from 00:00-08:30 and 17:00-20:00. Note the specific wording *fino alle* and *dalle*. So that is *guaranteed*. It's a *national* strike - \"sciopero generale nazionale\". No location codes are needed for NATIONAL.\n\nTherefore, `isStrike` is true. `strikeData` includes a `startDate` of \"2024-12-13 00:00:00\", an `endDate` of \"2024-12-13 23:59:59\", a `locationType` of \"NATIONAL,\" and `guaranteedTimes` of [\"00:00-08:30\", \"17:00-20:00\"]. That should pass the schema.\n\n\n",
+    "tokens": {
+      "input": 14886,
+      "output": 115,
+      "total": 15916
+    }
+  }
+}

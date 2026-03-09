@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3956,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0036945,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000372,
+      "cachedCost": 0,
+      "totalCost": 0.0040815
+    },
+    "hash": "e84a4145e8fc1998474e2214f7c893c3",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_22.html",
+    "thoughts": "**Analyzing the Atac Strike Article**\n\nOkay, so I've got this article. The input text is all about an Atac public transport strike, but the publication date is March 9, 2026, and the content itself seems to be from February 17, 2023. Hmm, interesting. The task is to figure out whether this is an announcement about a *future* strike, or just a report on the *participation* of a strike that already happened. Let's see...\n\nThe headline itself – \"Sciopero del trasporto pubblico, adesione personale Atac al 22% - Roma Servizi per la Mobilità\" – and the sentence \"L’adesione del personale Atac allo sciopero del trasporto pubblico, rilevata in mattinata, è stata pari al 22%\" both point towards the latter. The mention of participation (\"adesione\") and phrases like \"rilevata in mattinata\" (detected this morning) strongly suggest this is a report on an event that's already underway or has concluded, not an announcement. The prompt specifically says to mark it as false if it's not a strike announcement but rather information on participation. Therefore, the most logical conclusion is that this is a report about past strike participation rates. `isStrike` should be set to `false`.\n\n\n",
+    "tokens": {
+      "input": 14778,
+      "output": 10,
+      "total": 15036
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-07-07 20:30:00",
+      "endDate": "2024-07-08 00:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5198,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0003355,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.0006825,
+      "cachedCost": 0,
+      "totalCost": 0.001141
+    },
+    "hash": "9be704bcee659723ebde6f2d2d6cf3a0",
+    "sourceFile": "trasporto_pubblico_domenica_7_luglio_sciopero_serale_4_ore.html",
+    "thoughts": "**Strike Analysis: July 7th**\n\nOkay, let's break this down. My input is an announcement about a potential disruption – a strike, specifically. The text indicates a 4-hour evening strike on Sunday, July 7th. I need to nail down the specifics: time, scope, and the relevant company/region.\n\nThe announcement states the strike will run from 20:30 to 00:30 the following day. That immediately tells me I'm dealing with a strike spanning two calendar dates: July 7th and July 8th. The announcement is \"Domenica 7 luglio trasporto pubblico a rischio per lo sciopero serale di 4 ore, dalle 20,30 alle 0,30, indetto a livello nazionale\". Given the prompt context, I'll interpret this to be the current year, 2024. Therefore, I can confidently extract the *startDate* as \"2024-07-07 20:30:00\" and the *endDate* as \"2024-07-08 00:30:00\".\n\nThe scope is \"a livello nazionale,\" which translates to \"national\" – I need to flag that as the *locationType*. While the announcement specifically names ATAC and RomaTpl in Rome, and the region Lazio, the announcement still indicates this is a national event. I'll need to figure out how to represent that nuance. I won't include any *locationCodes* for now as the location type indicates that this is a wide, national strike.\n\nSo, in summary: I'm classifying this as a strike (`isStrike`: true), and building a `strikeData` object. The `startDate` is \"2024-07-07 20:30:00\", the `endDate` is \"2024-07-08 00:30:00\", the `locationType` is \"NATIONAL,\" and I'm omitting any specific location codes.\n\n\n",
+    "tokens": {
+      "input": 1342,
+      "output": 82,
+      "total": 1879
+    }
+  }
+}

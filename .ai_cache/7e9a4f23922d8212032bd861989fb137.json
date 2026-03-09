@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-07-18 08:30:00",
+      "endDate": "2024-07-18 12:30:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "08:30-12:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20339,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00009775,
+      "outputCost": 0.0005936,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00069135
+    },
+    "hash": "7e9a4f23922d8212032bd861989fb137",
+    "sourceFile": "trasporto_pubblico_gioved_sciopero_nazionale_830_1230_servizio_rischio.html",
+    "thoughts": "**Determining date format**\n\nI need to follow the instruction of having dates in the 'yyyy-MM-dd HH:mm:ss' format. But the year isn’t specified; I'm guessing it could be 2024 based on context. The example provided suggests using 2024, especially since July 18, 2024, is a Thursday. Since the topic indicates a national strike, it's reasonable to set the date as 2024-07-18 08:30:00 to 2024-07-18 12:30:00. It looks plausible!",
+    "tokens": {
+      "input": 1955,
+      "output": 1484,
+      "total": 3439
+    }
+  }
+}

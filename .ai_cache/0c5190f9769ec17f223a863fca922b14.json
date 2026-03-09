@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 2910,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0037185,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000228,
+      "cachedCost": 0,
+      "totalCost": 0.0039615
+    },
+    "hash": "0c5190f9769ec17f223a863fca922b14",
+    "sourceFile": "sciopero_nazionale_trasporto_pubblico_adesione_personale_atac_al_274.html",
+    "thoughts": "**Analyzing Strike Participation Data**\n\nOkay, so I've got this source, \"Sciopero nazionale trasporto pubblico, adesione personale Atac al 27,4% - Roma Servizi per la Mobilità.\" Right off the bat, it's indicating a *participation percentage* – 27.4% – from ATAC personnel. The key here is that it's talking about a strike that *already happened*. The focus is on the *adesione*, the participation, not the announcement of an impending walkout.\n\nTherefore, the instructions are pretty clear. If it was an *upcoming* strike, I'd flag it as such. But this is post-event data. This means \"isStrike\" *must* be false. The content is definitively about the reported figures from a past event. No need to overthink it; the data clearly reports on the *result* of a strike, not the intention. I am setting `isStrike = false`.\n\n\n",
+    "tokens": {
+      "input": 14874,
+      "output": 10,
+      "total": 15036
+    }
+  }
+}

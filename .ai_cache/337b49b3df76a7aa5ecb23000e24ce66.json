@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-05-02 08:30:00",
+      "endDate": "2023-05-02 12:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4525,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00374175,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.000249,
+      "cachedCost": 0.00019253,
+      "totalCost": 0.00430627
+    },
+    "hash": "337b49b3df76a7aa5ecb23000e24ce66",
+    "sourceFile": "martedi_2_maggio_sciopero_nazionale_4_ore_trasporto_pubblico_romano_rischio.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, let's break this down. My task is crystal clear: determine if this text announces an upcoming strike. The provided snippet, \"Martedì 2 maggio sciopero nazionale di 4 ore. Trasporto pubblico romano a rischio,\" is the key. Right off the bat, \"sciopero\" (strike) is a dead giveaway, but let's confirm.\n\nThe publication date is 26/04/2023, which is important for temporal context. Then I'll meticulously parse the strike details: it's set for Tuesday, May 2nd, and it's a 4-hour strike, from 08:30 to 12:30. The scope is stated as \"nazionale\" (national), but with a clear focus on the public transport sector in Rome, specifically affecting Atac and Roma Tpl.\n\nNow, the decisive criteria: is this *announcing* the strike? If yes, `isStrike: true`. If it's something else - a cancellation, a post-event report, anything *other* than an advance notice – then `isStrike: false`. Given the phrasing and the implied risk, this appears to be the lead-up to the event, a notification. My conclusion should be clear.\n\n\n",
+    "tokens": {
+      "input": 14967,
+      "output": 82,
+      "total": 15215
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4223,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0037015,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0003915,
+      "cachedCost": 0,
+      "totalCost": 0.004108
+    },
+    "hash": "4e329d419abd28725e984c0ea7f5b37f",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_212.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, here's the deal. My task is to figure out if this text is announcing an *upcoming* strike. I need to be precise. The input is a web page from \"Roma Servizi per la Mobilità,\" and the title is \"Sciopero del trasporto pubblico, adesione personale Atac al 21,2%\". Right away, I see that phrase \"adesione personale Atac.\" That screams \"participation rate,\" not \"future action.\"\n\nMy criteria are clear: if the text mentions cancellation or revocation of a strike, past participation rates (like this one!), real-time status updates *during* a strike, or just general informational content, then it's *not* announcing a new strike. It's `isStrike = false`. Conversely, a true announcement must be for a *new* or *upcoming* event, and only then would `isStrike = true`.\n\nI'm digging into the content now. The title says \"adesione personale Atac al 21,2%\". Then the content itself states, \"L’adesione complessiva del personale Atac allo sciopero del trasporto pubblico, rilevata a metà mattinata, è stata pari al 21,2%.\" Boom. It's stating the participation percentage, and it even specifies it was \"rilevata a metà mattinata,\" meaning it's a *past* data point. It's reporting *after* the event.\n\nTherefore, this isn't an *upcoming* strike. It’s a report. Simple as that. I'm confident in my assessment, and my output will be a JSON object with `isStrike: false`.\n\n\n",
+    "tokens": {
+      "input": 14806,
+      "output": 10,
+      "total": 15077
+    }
+  }
+}

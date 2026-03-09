@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3385,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0003735,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0003435,
+      "cachedCost": 0,
+      "totalCost": 0.000732
+    },
+    "hash": "3116a8ec353ec8f28a7d9f04752068e4",
+    "sourceFile": "news_media_comunicati_sciopero_adesione_personale_atac.html",
+    "thoughts": "**Analyzing ATAC Strike Information**\n\nOkay, let's break this down. My source is an HTML snippet, probably pulled from a news site or official announcement concerning ATAC, Rome's public transport company. My objective is to determine whether this content signals a *future* strike, or is just reporting on a *past* one. The title, \"Sciopero del trasporto pubblico, adesione personale Atac al 24,9%\" – \"Public transport strike, Atac staff participation at 24.9%\" – is the starting point. Right away, the phrase \"adesione personale\" (staff participation) and the percentage look like they're measuring something that's already *happened*.\n\nDigging into the body, \"L’adesione del personale Atac all’odierno sciopero nazionale del trasporto pubblico, rilevata in mattinata, è stata pari al 24,9%\" (\"The participation of Atac staff in today's national public transport strike, measured this morning, was 24.9%\"), confirms my initial hunch. \"Odierno,\" meaning \"today's,\" combined with \"rilevata in mattinata\" (measured this morning) makes it unequivocally clear that this describes a strike that *has already occurred*. The constraint is helpful here. Given the provided text and the context of \"adesione,\" the `isStrike` flag should definitely be set to `false`. This isn't an announcement; it's a post-mortem, a report on participation.\n\n\n",
+    "tokens": {
+      "input": 1494,
+      "output": 10,
+      "total": 1733
+    }
+  }
+}

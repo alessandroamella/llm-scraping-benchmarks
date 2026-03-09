@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3916,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0003245,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0004185,
+      "cachedCost": 0,
+      "totalCost": 0.000758
+    },
+    "hash": "5b9b7c75c551c4d9296cc66ad2ea0e8e",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_22.html",
+    "thoughts": "**Analyzing the Italian Public Transport Strike Announcement**\n\nOkay, let's break this down. My input is some HTML content, specifically about a \"Sciopero del trasporto pubblico, adesione personale Atac al 22%\". My immediate task is to determine if this describes a *new or upcoming* strike, because that's the only scenario I need to flag. I've got a set of constraints to help: if it's a cancellation, a report on participation *after* a strike, or a real-time status update during a strike, then `isStrike` should be `false`. `isStrike` should only be `true` for announcements *before* a strike.\n\nI've got the title: \"Public transport strike, Atac staff participation at 22%\". And the content expands on this, stating \"The adherence of Atac staff to the public transport strike, measured in the morning, was 22%\".\n\nNow, the crucial part. The phrase \"adesione... rilevata in mattinata\" (participation... measured in the morning) is key. The reporting is *after the fact*, on the level of staff participation in a strike that already occurred, not a call for one. It's not an announcement, it's a report.\n\nTherefore, applying my rules, this clearly falls under constraint #2 and #3's point on \"Participation/adesione (post-strike)\". My final decision is `isStrike = false`. It's a report, not an announcement.\n\n\n",
+    "tokens": {
+      "input": 1298,
+      "output": 10,
+      "total": 1587
+    }
+  }
+}

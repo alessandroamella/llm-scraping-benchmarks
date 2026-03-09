@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-03-08 00:00:00",
+      "endDate": "2023-03-08 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 28907,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007975,
+      "outputCost": 0.0009864,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00106615
+    },
+    "hash": "9cc66e25e243b59e441fb14fbf181f07",
+    "sourceFile": "mercoled_8_marzo_sciopero_nazionale_cub_trasporto_pubblico_rischio_24_ore.html",
+    "thoughts": "**Extracting strike data**\n\nI need to extract the startDate and endDate for the strike in the right format: 'yyyy-MM-dd HH:mm:ss.' The text mentions the strike lasts for 24 hours on Wednesday, March 8, but it doesn't specify start and end times. So, I have to fill those in explicitly. The strike is described as \"sciopero nazionale,\" indicating it's a national strike in Rome. Thus, the locationType should be \"NATIONAL,\" and locationCodes must be null or omitted. That’s clear!",
+    "tokens": {
+      "input": 1595,
+      "output": 2466,
+      "total": 4061
+    }
+  }
+}

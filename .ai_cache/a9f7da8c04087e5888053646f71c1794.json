@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9524,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000672,
+      "outputCost": 0.000264,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.000936
+    },
+    "hash": "a9f7da8c04087e5888053646f71c1794",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_322.html",
+    "thoughts": "**Finalizing response for strike status**\n\nOkay, I need to confirm that the title regarding a public transport strike does not actually indicate an upcoming strike. The instruction specifies we should only mark it as a strike if there is a clear announcement. Since it's not upcoming, my output will be: \n\n{\n  \"isStrike\": false\n}\n\nI’ll make sure to follow the JSON format required by the system and keep it simple without any extra fields. Let’s finalize and send this!",
+    "tokens": {
+      "input": 13440,
+      "output": 660,
+      "total": 14100
+    }
+  }
+}

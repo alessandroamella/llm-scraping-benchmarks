@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-10-09 00:00:00",
+      "endDate": "2023-10-09 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5478,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00375075,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.000882,
+      "cachedCost": 0,
+      "totalCost": 0.00481725
+    },
+    "hash": "c7b9a835aeac30b6e5e28f98cadd672b",
+    "sourceFile": "luned_9_ottobre_sciopero_nazionale_trasporto_pubblico_possibili_disagi_24_ore.html",
+    "thoughts": "**Strike Analysis: October 9th, 2023**\n\nAlright, let's break this down. The text clearly announces an upcoming strike. The key phrases are \"sciopero nazionale\" (national strike) and \"24 ore\" (24 hours). My task is to determine the relevant information, such as the date, duration, location and any service guarantees.\n\nFirst, the date: the text explicitly states \"Lunedì 9 ottobre\" and, given the publication date of \"04/10/2023\", it's safe to deduce the year is 2023. The strike is for 24 hours. The standard for this would be midnight to midnight on the day specified: October 9th, 2023. So, the start is \"2023-10-09 00:00:00\" and the end is \"2023-10-09 23:59:59\".\n\nThe location is national, as indicated by \"sciopero nazionale\". Therefore the `locationType` will be \"NATIONAL\" and, as this is a national event, there's no need for any `locationCodes`.\n\nNow, the service guarantees. The text says service will be \"regolare fino alle 8,30 e dalle 17 alle 20\". This means there's guaranteed service from the start of the day until 08:30 and then from 17:00 to 20:00. These are the time ranges to note down.\n\nSo, here's my interpretation: `isStrike`: true, and the strike data would be:\n\n*   `startDate`: \"2023-10-09 00:00:00\"\n*   `endDate`: \"2023-10-09 23:59:59\"\n*   `locationType`: \"NATIONAL\"\n*   `guaranteedTimes`: [\"00:00-08:30\", \"17:00-20:00\"]\n\n\n",
+    "tokens": {
+      "input": 15003,
+      "output": 123,
+      "total": 15714
+    }
+  }
+}

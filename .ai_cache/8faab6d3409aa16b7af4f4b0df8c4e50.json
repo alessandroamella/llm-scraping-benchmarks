@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-09-20 00:00:00",
+      "endDate": "2024-09-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 32650,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008405,
+      "outputCost": 0.0013184,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00140245
+    },
+    "hash": "8faab6d3409aa16b7af4f4b0df8c4e50",
+    "sourceFile": "venerd_20_settembre_sciopero_nazionale_24_ore_trasporto_pubblico_servizio_rischio.html",
+    "thoughts": "**Analyzing guaranteed service times**\n\nI'm trying to figure out how to properly encode guaranteed times. The service will be regular until 8:30 AM and again from 5 PM to 8 PM. This implies that outside these hours, there's potential disruption due to strikes. So, I think I could define guaranteed times as 12 AM to 8:30 AM and 5 PM to 8 PM. But it's a bit confusing; the phrasing suggests some service might still happen outside those time slots.",
+    "tokens": {
+      "input": 1681,
+      "output": 3296,
+      "total": 4977
+    }
+  }
+}

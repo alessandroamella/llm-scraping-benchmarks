@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6760,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0001009,
+      "outputCost": 0.0001424,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002433
+    },
+    "hash": "d267869d99b17cea80851987d4013f80",
+    "sourceFile": "sciopero_nazionale_tpl_chiuse_metro_ferrovia_termini_centocelle.html",
+    "thoughts": "**Considering strike announcement**\n\nI'm working through the instruction to set \"isStrike\" to true only for upcoming strikes, but since this is an ongoing situation, it should be false. I need to make sure that there’s no strike data included. Alright, I’ll produce the final JSON: {\"isStrike\": false}. I wonder if the terms like \"Sciopero nazionale del Tpl\" indicate anything about partial strikes. However, according to the directive, this isn’t classified as a strike, so I’ll respond accordingly.",
+    "tokens": {
+      "input": 2018,
+      "output": 356,
+      "total": 2374
+    }
+  }
+}

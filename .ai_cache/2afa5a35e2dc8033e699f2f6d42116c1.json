@@ -1,0 +1,32 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "09:00-13:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20893,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000947,
+      "outputCost": 0.0005236,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0006183
+    },
+    "hash": "2afa5a35e2dc8033e699f2f6d42116c1",
+    "sourceFile": "sciopero_generale_nazionale.html",
+    "thoughts": "**Creating JSON for strike announcement**\n\nI’m working on outputting JSON according to the schema. The content is in Italian and translates to a general national strike happening tomorrow, affecting public transport with a specific time frame of 9 to 13. Since it’s an upcoming strike, I've established that isStrike should be true. Now, the decision is whether to classify the location as REGIONAL or NATIONAL. Since it’s national, I should set locationType to null.",
+    "tokens": {
+      "input": 1894,
+      "output": 1309,
+      "total": 3203
+    }
+  }
+}

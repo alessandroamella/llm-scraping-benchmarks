@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9798,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000846,
+      "outputCost": 0.0001496,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002342
+    },
+    "hash": "b6e28568d5f82af38f59861aebbe436e",
+    "sourceFile": "comunicato_stampa_sciopero_adesione.html",
+    "thoughts": "**Analyzing strike participation data**\n\nI need to create a JSON output based on the strike extraction schema. The Italian article discusses a public transport strike with Atac staff participation at 16.4%. This report confirms today's participation, not an upcoming strike. The instructions specify that I should only set \"isStrike\" to true if it’s about an upcoming strike, so here, it’s false. I’ll conclude that there’s no strike data field to include. So the output will be:  \n{\"isStrike\": false}",
+    "tokens": {
+      "input": 1692,
+      "output": 374,
+      "total": 2066
+    }
+  }
+}

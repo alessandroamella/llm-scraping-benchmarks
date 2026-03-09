@@ -36,16 +36,16 @@ const strategies: PreProcessingStrategy[] = [
   'jina-reader',
 ];
 
-const baseDir = path.join(process.cwd(), 'src/benchmarks/data');
+const baseDir = path.join(process.cwd(), 'data');
 
 async function calculateCompression() {
   const stats: Record<
     string,
-    { originalChars: number; processedChars: number; fileCount: number }
+    { originalBytes: number; processedBytes: number; fileCount: number }
   > = {};
 
   for (const strategy of strategies) {
-    stats[strategy] = { originalChars: 0, processedChars: 0, fileCount: 0 };
+    stats[strategy] = { originalBytes: 0, processedBytes: 0, fileCount: 0 };
   }
 
   // 3. Loop through Ground Truth
@@ -63,7 +63,7 @@ async function calculateCompression() {
       if (file.toLowerCase().endsWith('.pdf')) continue;
 
       const content = fs.readFileSync(filePath, 'utf-8');
-      const originalLen = content.length;
+      const originalLen = fs.statSync(filePath).size; // More accurate for original file size on disk
 
       for (const strategy of strategies) {
         let processedLen = 0;
@@ -77,12 +77,12 @@ async function calculateCompression() {
         if (strategy === 'mineru-html') {
           const p = path.join(companyDir, 'mineru-html', file);
           if (fs.existsSync(p)) {
-            processedLen = fs.readFileSync(p, 'utf-8').length;
+            processedLen = fs.statSync(p).size; // More accurate for processed file size on disk
             success = true;
           }
         } else if (strategy === 'jina-reader') {
           // Fallback gracefully in case you didn't add the new ATAC files to the jinaFileMap yet
-          const mapped = (jinaFileMap as any)[company]?.[file];
+          const mapped = jinaFileMap[company]?.[file];
 
           if (!mapped) {
             console.warn(
@@ -103,7 +103,7 @@ async function calculateCompression() {
 
           for (const p of possiblePaths) {
             if (fs.existsSync(p)) {
-              processedLen = fs.readFileSync(p, 'utf-8').length;
+              processedLen = fs.statSync(p).size; // More accurate for processed file size on disk
               success = true;
               break;
             }
@@ -120,7 +120,7 @@ async function calculateCompression() {
               file,
             );
             if (processed) {
-              processedLen = processed.length;
+              processedLen = Buffer.byteLength(processed, 'utf-8'); // here we have to estimate the size based on string length since it's generated in-memory
               success = true;
             }
           } catch (e) {
@@ -130,12 +130,12 @@ async function calculateCompression() {
 
         // 6. Aggregate
         if (success) {
-          stats[strategy]!.originalChars += originalLen;
-          stats[strategy]!.processedChars += processedLen;
+          stats[strategy]!.originalBytes += originalLen;
+          stats[strategy]!.processedBytes += processedLen;
           stats[strategy]!.fileCount++;
 
           console.log(
-            `✅ ${strategy} - Original: ${originalLen} chars, Processed: ${processedLen} chars`,
+            `✅ ${strategy} - Original: ${originalLen} bytes, Processed: ${processedLen} bytes`,
           );
         }
       }
@@ -145,21 +145,21 @@ async function calculateCompression() {
   // 7. Format Table
   const tableData = Object.entries(stats).map(([strategy, data]) => {
     const compressionPct =
-      data.originalChars > 0
-        ? ((1 - data.processedChars / data.originalChars) * 100).toFixed(2) +
+      data.originalBytes > 0
+        ? ((1 - data.processedBytes / data.originalBytes) * 100).toFixed(2) +
           '%'
         : 'N/A';
 
     const avgOriginal =
-      data.fileCount > 0 ? Math.round(data.originalChars / data.fileCount) : 0;
+      data.fileCount > 0 ? Math.round(data.originalBytes / data.fileCount) : 0;
     const avgProcessed =
-      data.fileCount > 0 ? Math.round(data.processedChars / data.fileCount) : 0;
+      data.fileCount > 0 ? Math.round(data.processedBytes / data.fileCount) : 0;
 
     return {
       Strategy: strategy,
       'Success Rate': `${data.fileCount} files`,
-      'Avg Original Size': avgOriginal.toLocaleString() + ' chars',
-      'Avg Processed Size': avgProcessed.toLocaleString() + ' chars',
+      'Avg Original Size': (avgOriginal / 1024).toFixed(2) + ' KB',
+      'Avg Processed Size': (avgProcessed / 1024).toFixed(2) + ' KB',
       'Saved Space (%)': compressionPct,
     };
   });

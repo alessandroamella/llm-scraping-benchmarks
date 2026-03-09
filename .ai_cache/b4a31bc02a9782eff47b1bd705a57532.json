@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8411,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007795,
+      "outputCost": 0.0001092,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00018715
+    },
+    "hash": "b4a31bc02a9782eff47b1bd705a57532",
+    "sourceFile": "sciopero_generale_nazionale_adesione_personale_atac_al_26.html",
+    "thoughts": "**Analyzing strike content**\n\nI need to output JSON according to the schema. The task is to analyze some content about a possible strike from ATAC. The content in Italian states there's a general national strike with a participation rate of 26%. This isn't announcing a new strike; it's about participation in a strike that already happened today. Following the given instructions, since it’s not an upcoming strike, I'll set isStrike to false and our output will be: {\"isStrike\": false}.",
+    "tokens": {
+      "input": 1559,
+      "output": 273,
+      "total": 1832
+    }
+  }
+}

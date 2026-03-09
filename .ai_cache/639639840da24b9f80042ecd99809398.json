@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-11-29 09:00:00",
+      "endDate": "2024-11-29 13:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5628,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0036835,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.0009345,
+      "cachedCost": 0,
+      "totalCost": 0.004741
+    },
+    "hash": "639639840da24b9f80042ecd99809398",
+    "sourceFile": "sciopero_generale_nazionale.html",
+    "thoughts": "**Strike Analysis from Roma Servizi per la Mobilità**\n\nOkay, let's break this down. My task is to determine if this content from \"Roma Servizi per la Mobilità\" announces a strike and, if so, extract the relevant information. The key phrases I'm looking for are \"sciopero\" (strike) and details about its timing and scope.\n\nAlright, I see it immediately: \"Domani sciopero generale nazionale.\" That's a national strike tomorrow. And the transport specific details: \"Per i trasporti stop dalle 9 alle 13\". Good, that gives me a time window of 9:00 to 13:00. The publication date is 28/11/2024, so \"domani\" (tomorrow) means the strike is on 29/11/2024. And it says Atac, the Rome network, is involved, but the strike is *national*, so that's helpful context, but doesn't change the scope.\n\nNow to the validation. I need a JSON output that adheres to a specific schema. It must include `startDate`, `endDate`, `locationType`, `locationCodes` (if regional) and `guaranteedTimes`, if any.\n\nFirst, I confirm `isStrike` is true. Then I populate the data. `startDate` is \"2024-11-29 09:00:00\" and `endDate` is \"2024-11-29 13:00:00\". \"Domani\" and published date do the date. `locationType` is *definitely* \"NATIONAL\" because the text explicitly states \"sciopero generale nazionale.\" Since this is a national strike, `locationCodes` shouldn't be included. Guaranteed times are not specified.\n\nSo, the JSON object I'm constructing is: `{\"startDate\": \"2024-11-29 09:00:00\", \"endDate\": \"2024-11-29 13:00:00\", \"locationType\": \"NATIONAL\"}`.\n\nNow, I check the output. Is this a valid JSON? Yes. Are there any comments or control tokens? Nope. Does it follow the schema? Absolutely. And finally, if `locationType` is `NATIONAL`, `locationCodes` *must* be omitted, which is correct in my output. All checks pass. We have a national strike, from 9 AM to 1 PM on November 29th, 2024.\n\n\n",
+    "tokens": {
+      "input": 14734,
+      "output": 82,
+      "total": 15439
+    }
+  }
+}

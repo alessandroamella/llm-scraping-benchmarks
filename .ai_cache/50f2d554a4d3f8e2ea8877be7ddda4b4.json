@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-11-27 00:00:00",
+      "endDate": "2023-11-27 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 29476,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008045,
+      "outputCost": 0.0013252,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00140565
+    },
+    "hash": "50f2d554a4d3f8e2ea8877be7ddda4b4",
+    "sourceFile": "luned_27_novembre_sciopero_nazionale_trasporto_pubblico_possibili_disagi.html",
+    "thoughts": "**Formatting strike announcement**\n\nI need to output JSON based on the strike extraction format. The Italian article announces a national public transport strike on Monday, November 27, stating it will last for 24 hours. It indicates that public transport is at risk due to this strike declared by several unions. There’s a mention that service will run normally until 8:30 AM and from 5 PM to 8 PM. I’ll make sure I format this information correctly.",
+    "tokens": {
+      "input": 1609,
+      "output": 3313,
+      "total": 4922
+    }
+  }
+}

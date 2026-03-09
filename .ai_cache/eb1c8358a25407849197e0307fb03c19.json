@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3979,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00375525,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000192,
+      "cachedCost": 0,
+      "totalCost": 0.00396225
+    },
+    "hash": "eb1c8358a25407849197e0307fb03c19",
+    "sourceFile": "sciopero_generale_adesione_personale_atac_al_259.html",
+    "thoughts": "**Analyzing the Strike Participation Data**\n\nOkay, so I'm processing this article, \"Sciopero generale, adesione personale Atac al 25,9%.\" Right away, the focus is on the *participation percentage* of ATAC employees in a general strike. The key piece of information here is that the strike *has already happened*; the text uses the past tense (\"L’adesione... è stata\").\n\nGiven the instructions, which explicitly state that if the content is *just* providing information about participation in a *past* strike, then I need to set `isStrike` to `false`. So, based solely on this input, and adhering strictly to the provided parameters, the appropriate action is clear. The value of the `isStrike` variable needs to be set to `false`. Simple as that.\n\n\n",
+    "tokens": {
+      "input": 15021,
+      "output": 10,
+      "total": 15159
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 33005,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000824,
+      "outputCost": 0.001012,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0010944
+    },
+    "hash": "60b91aa3424a6f5bb2929232c75441ca",
+    "sourceFile": "sportello_al_pubblico_e_contact_center_di_rsm_giovedi_e_venerdi_possibili_disagi_per_uno_sciopero.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to output JSON according to the strike_extraction specs. The content is in Italian and talks about possible disruptions due to a strike on Thursday and Friday. The title indicates it’s an announcement, which means it’s relevant. The text specifies activities affected in Rome and mentions the union USB declaring the strike for the entire shifts. Now, I'm wondering if there’s a specific start and end time for this strike.",
+    "tokens": {
+      "input": 1648,
+      "output": 2530,
+      "total": 4178
+    }
+  }
+}

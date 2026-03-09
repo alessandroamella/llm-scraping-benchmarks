@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9882,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000774,
+      "outputCost": 0.0001484,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002258
+    },
+    "hash": "eed5b53dd14f60f8d5d2c24d8d2e25cf",
+    "sourceFile": "sciopero_tpl_mattinata_adesione_personale_atac_233.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to output JSON following the strike_extraction schema. The document mentions a current strike in Italy and includes the participation percentage of Atac staff, actually translating to 23.3%. It notes this is not an announcement of an upcoming strike, but rather it reports on an event that has occurred. Since the content is providing information about past participation, I'll set isStrike to false, resulting in {\"isStrike\": false}.",
+    "tokens": {
+      "input": 1548,
+      "output": 371,
+      "total": 1919
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4472,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0036995,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000474,
+      "cachedCost": 0,
+      "totalCost": 0.0041885
+    },
+    "hash": "13a9d7961448ccab48c52942c6710850",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_186.html",
+    "thoughts": "**Analyzing the ATAC Strike Report**\n\nOkay, let's break down this ATAC strike report. My task is crystal clear: determine if this content announces a *future* strike. This isn't about general transport information; it's specifically about anticipating an *upcoming* disruption. The input is a web page, and I have specific rules to follow. Essentially, `isStrike` should be true *only* if it's an announcement of a future strike. Otherwise, if it's about cancellations, participation stats, or real-time updates, the flag is false. The required output is a clean JSON object; no fluff, just the answer.\n\nThe title, \"Sciopero del trasporto pubblico, adesione personale Atac al 18,6% - Roma Servizi per la Mobilità,\" immediately hints at a past event. The phrase \"adesione... è stata pari al 18,6%\"—the participation *was* 18.6%—puts it squarely in the past. It's a summary of participation in a strike that has already happened.\n\nNow, the published date... hmm. The content says \"08/03/2022 (Updated 2023).\" But the prompt says \"Mon, 09 Mar 2026.\" That's a clear discrepancy. The provided text is talking about a past event. This confirms my initial assessment.\n\nTherefore, `isStrike` is definitely false. The final output, in the requested JSON format, is simply:\n\n`{ \"isStrike\": false }`\n\n\n",
+    "tokens": {
+      "input": 14798,
+      "output": 10,
+      "total": 15124
+    }
+  }
+}

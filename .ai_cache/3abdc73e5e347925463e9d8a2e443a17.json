@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6078,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007815,
+      "outputCost": 0.0001244,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00020255
+    },
+    "hash": "3abdc73e5e347925463e9d8a2e443a17",
+    "sourceFile": "sciopero_del_trasporto_pubblico_adesione_personale_atac_al_532.html",
+    "thoughts": "**Deciding on strike status**\n\nI need to determine if this document is announcing a new strike or not. The Italian article mentions a public transport strike with Atac staff participation at 53.2%, indicating this refers to participation in a strike that already occurred in the morning. Therefore, it’s not an upcoming strike, so isStrike should be false. I’ll format the output as {\"isStrike\": false} without any extra commentary.",
+    "tokens": {
+      "input": 1563,
+      "output": 311,
+      "total": 1874
+    }
+  }
+}

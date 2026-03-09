@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-24 00:00:00",
+      "endDate": "2025-02-24 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5749,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00376525,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.0007785,
+      "cachedCost": 0,
+      "totalCost": 0.00472825
+    },
+    "hash": "6bd51cf697c3484d4c1ae28ec6950daf",
+    "sourceFile": "lunedi_24_febbraio_sciopero_nazionale_del_trasporto_pubblico_possibili_disagi.html",
+    "thoughts": "**Analyzing the Public Transport Strike Information**\n\nOkay, so I've got this information about a public transport strike. Let me break it down systematically, making sure to adhere to my internal standards. The primary source is \"Lunedì 24 febbraio sciopero nazionale del trasporto pubblico. Possibili disagi\" - a national public transport strike is planned for Monday, February 24th, and based on the context, I'm assuming it's for 2025. It's a full 24-hour strike, as no specific end time is mentioned. The key here is to accurately represent the strike data in the required JSON format.\n\nFirst, I need to confirm it's a strike. Yep, the source explicitly says \"sciopero\". Now, let's assemble the key strike attributes. The start date is February 24th, 2025, precisely at midnight. The strike appears to last until the end of the day, so the end date is also February 24th, 2025, at 11:59:59 PM. Since the text explicitly states \"sciopero nazionale\", the `locationType` will be \"NATIONAL\". Because it's a *national* strike, `locationCodes` need to be omitted; that's important to keep in mind, and that follows schema validation.\n\nNow, for the guaranteed hours. The text says service will be regular \"fino alle 8,30 e dalle 17 alle 20\". Interpreting \"fino alle 8,30\" as the time the service is guaranteed to run, that means 06:00-08:30 in the morning and 17:00-20:00 in the evening, as instructed by the prompt. I think that's all I need for this input to get accurate JSON output. Let's make sure I'm following the format precisely.\n\n```json\n{\n  \"isStrike\": true,\n  \"startDate\": \"2025-02-24 00:00:00\",\n  \"endDate\": \"2025-02-24 23:59:59\",\n  \"locationType\": \"NATIONAL\",\n  \"guaranteedTimes\": [\"06:00-08:30\", \"17:00-20:00\"]\n}\n```\n\n\n",
+    "tokens": {
+      "input": 15061,
+      "output": 123,
+      "total": 15703
+    }
+  }
+}

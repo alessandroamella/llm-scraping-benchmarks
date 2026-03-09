@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-05-02 08:30:00",
+      "endDate": "2023-05-02 12:30:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "08:30-12:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19339,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00067495,
+      "outputCost": 0.000528,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00120295
+    },
+    "hash": "1ee04b59f5a5502f8a94f8c37461f7f9",
+    "sourceFile": "martedi_2_maggio_sciopero_nazionale_4_ore_trasporto_pubblico_romano_rischio.html",
+    "thoughts": "**Evaluating national strike data**\n\nIt seems like I'm dealing with a national strike, which means locationType should be \"NATIONAL.\" For locationCodes, they need to be explicitly set to null. The JSON schema indicates that if it's not a strike, isStrike is false. If it is, I need the startDate and endDate, which I'll format correctly. Based on the article, the start is \"2023-05-02 08:30:00\" and the end is \"2023-05-02 12:30:00.\" I'll ensure to include locationCodes as null.",
+    "tokens": {
+      "input": 13499,
+      "output": 1320,
+      "total": 14819
+    }
+  }
+}

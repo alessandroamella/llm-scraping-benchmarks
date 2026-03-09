@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-01-16 08:30:00",
+      "endDate": "2023-01-16 12:30:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "08:30-12:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21734,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007955,
+      "outputCost": 0.0007976,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00087715
+    },
+    "hash": "db4c10559ad9c365e150ee70c6a6448b",
+    "sourceFile": "luned_16_gennaio_sciopero_atac_4_ore_servizio_rischio_830_1230.html",
+    "thoughts": "**Clarifying date assumptions**\n\nI see the date \"Lunedì 16 gennaio,\" but there's no year provided, which leaves me in a bit of a quandary. In Italian, it's common not to include the year. Since the instructions ask for the date in 'yyyy-MM-dd HH:mm:ss' format, I need to make an educated guess. Today’s date is 2026-03-09, so could it refer to 2023 when January 16 was a Monday? This seems to fit best, especially since the status code might relate to a strike in Rome's ATAC network. I could set the start and end times for this regional event.",
+    "tokens": {
+      "input": 1591,
+      "output": 1994,
+      "total": 3585
+    }
+  }
+}

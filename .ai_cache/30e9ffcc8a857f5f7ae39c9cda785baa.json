@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 2998,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.003697,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0002775,
+      "cachedCost": 0,
+      "totalCost": 0.0039895
+    },
+    "hash": "30e9ffcc8a857f5f7ae39c9cda785baa",
+    "sourceFile": "comunicato_stampa_sciopero_adesione.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, let's break this down. The task at hand is to determine if this document is announcing a *future* strike. I need to sift through the content and context to make that call.\n\nI see phrases like \"Sciopero del trasporto pubblico\" which clearly indicates a public transport strike. However, the key is this phrase, \"L’adesione complessiva del personale Atac – rilevata nel corso della mattinata- allo sciopero nazionale di oggi è stata pari al 16,4%\". This talks about participation in the *existing* strike. The phrase \"di oggi\" indicates that the strike has \"already happened\" and that the document is reporting on the participation rate, and is therefore not announcing a future strike.\n\nMy instruction set clearly states that if the document is *just* providing information about participation in a strike that *already occurred*, I should set `isStrike` to `false`. Therefore, given that this document describes a past event, I'll set `isStrike` to `false`. It's a report on the strike's impact, not a warning of an impending disruption.\n\n\n",
+    "tokens": {
+      "input": 14788,
+      "output": 10,
+      "total": 14983
+    }
+  }
+}

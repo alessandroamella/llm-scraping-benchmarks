@@ -1,0 +1,32 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21833,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006679,
+      "outputCost": 0.0006056,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0012735
+    },
+    "hash": "504f6d74d106926641d5c31950e0229f",
+    "sourceFile": "roma_servizi_mobilit_domani_attivit_rischio_sciopero.html",
+    "thoughts": "**Clarifying strike details**\n\nI’m looking at the instruction that says all fields are required, and if \"isStrike\" is true, I need to extract details about the strike. The dates must be formatted as 'yyyy-MM-dd HH:mm:ss', but I noticed there’s no specific time given. The article mentions \"Domani,\" which would refer to October 24, 2024, following its publication on October 23, 2024. Since it's likely referring to an upcoming strike, I can confirm that \"isStrike\" should be true.",
+    "tokens": {
+      "input": 13358,
+      "output": 1514,
+      "total": 14872
+    }
+  }
+}

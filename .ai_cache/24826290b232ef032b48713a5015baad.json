@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-01-24 00:00:00",
+      "endDate": "2024-01-24 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 29120,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00066955,
+      "outputCost": 0.0008,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00146955
+    },
+    "hash": "24826290b232ef032b48713a5015baad",
+    "sourceFile": "sciopero_nazionale_24_gennaio_trasporto_pubblico_rischio.html",
+    "thoughts": "**Extracting strike data**\n\nI need to check if the document is announcing a new or upcoming strike. The content mentions a national strike scheduled for January 24th, which indicates that public transport will be at risk, according to the announcement. It provides specific timings for services and mentions a website for real-time updates. Based on this information, I confirm that this is indeed an announcement for an upcoming strike, so isStrike should be true, and I need to extract the start and end dates correctly.",
+    "tokens": {
+      "input": 13391,
+      "output": 2000,
+      "total": 15391
+    }
+  }
+}

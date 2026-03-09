@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8439,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00067645,
+      "outputCost": 0.0001504,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00082685
+    },
+    "hash": "646d28e9e5cc705835ef1a6bd3cec6fd",
+    "sourceFile": "sciopero_del_trasporto_pubblico_aperte_le_metropolitane_e_la_ferrovia_termini_centocelle.html",
+    "thoughts": "**Setting strike status**\n\nI need to ensure that \"isStrike\" is set to false because the content does not announce an upcoming strike — it's ongoing. That's clear from my instructions. So I'll prepare to output a JSON object with the structure required. It should look like this: {\"isStrike\": false}. There's no need for extra commentary; I want to keep it straightforward and deliver exactly what's asked.",
+    "tokens": {
+      "input": 13529,
+      "output": 376,
+      "total": 13905
+    }
+  }
+}

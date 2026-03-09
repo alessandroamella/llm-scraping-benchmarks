@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-10-28 00:00:00",
+      "endDate": "2024-10-28 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 25187,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006717,
+      "outputCost": 0.0010684,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0017401
+    },
+    "hash": "f0a9eaf2223a1b0905fba64482fa3adc",
+    "sourceFile": "trasporto_pubblico_28_ottobre_sciopero_sulla_rete_atac.html",
+    "thoughts": "**Analyzing strike information**\n\nI'm looking at a post titled \"Lunedì 28 ottobre,\" which seems to be from 2024, announcing a 24-hour strike that will affect the Atac network. Service will be regular until 8:30 and then again from 17:00 to 20:00. The article is confirming the upcoming strike on October 28, 2024. I need to determine the startDate and endDate as October 28 from midnight to 11:59 PM to extract the necessary strike data.",
+    "tokens": {
+      "input": 13434,
+      "output": 2671,
+      "total": 16105
+    }
+  }
+}

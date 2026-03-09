@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8859,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0037495,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.000945,
+      "cachedCost": 0,
+      "totalCost": 0.004879
+    },
+    "hash": "fdaf10216eb93e900347cdfe6c465f66",
+    "sourceFile": "venerdi_28_novembre_sciopero_generale_nazionale_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Analyzing the ATAC Strike Announcement**\n\nOkay, let's break this down. My goal is to extract the relevant strike information from this text about the ATAC (Rome public transport) strike. First, I see \"Venerdì 28 novembre sciopero generale nazionale... Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" This looks promising! That's my target: an upcoming strike announcement.\n\nThe critical information to extract is the date. It's explicitly stated as \"Venerdì 28 novembre\". The implied year, based on the article's publication date of \"21/11/2025\" and the update on \"24/11/2025\", is 2025. Therefore, the strike date is November 28th, 2025 – so, 2025-11-28. Given the nature of a strike, I'm inferring a 24-hour duration, from 00:00:00 to 23:59:59.\n\nNow, the strike details. I can extract from the text that \"Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20\". This means the guaranteed service times are \"00:00-08:30\" and \"17:00-20:00\". Also, the strike is described as \"nazionale\". According to the instructions, that means I don't need a location code.\n\nNext, I'll organize this information into a JSON structure, verifying that all the constraints are met. My initial structure will include:\n\n*   `isStrike`: `true`\n*   `strikeData`:\n    *   `startDate`: \"2025-11-28 00:00:00\"\n    *   `endDate`: \"2025-11-28 23:59:59\"\n    *   `locationType`: \"NATIONAL\"\n    *   `guaranteedTimes`: [\"00:00-08:30\", \"17:00-20:00\"]\n\nI also need to double-check that this is indeed a *future* strike. The article's publication date confirms that the strike is upcoming. I'm all set!\n\n\n",
+    "tokens": {
+      "input": 14998,
+      "output": 123,
+      "total": 15751
+    }
+  }
+}

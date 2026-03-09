@@ -1,0 +1,33 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22198,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000828,
+      "outputCost": 0.000658,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0007408
+    },
+    "hash": "f6d3dd8f6d7fab4eaf074fec05ab19e5",
+    "sourceFile": "lunedi_24_febbraio_sciopero_nazionale_del_trasporto_pubblico_possibili_disagi.html",
+    "thoughts": "**Interpreting strike announcement**\n\nI need to respond with JSON according to the strike_extraction spec. The content is an Italian announcement about an upcoming national public transport strike on February 24. The body mentions risks to public transport due to a 24-hour strike called by the Usb union, impacting services in Rome's Atac and peripheral lines, but services will be regular until 8:30 and from 5 to 8 PM. I'll set isStrike to true for this.",
+    "tokens": {
+      "input": 1656,
+      "output": 1645,
+      "total": 3301
+    }
+  }
+}

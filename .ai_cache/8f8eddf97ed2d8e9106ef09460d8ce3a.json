@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3704,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00370675,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000309,
+      "cachedCost": 0,
+      "totalCost": 0.00403075
+    },
+    "hash": "8f8eddf97ed2d8e9106ef09460d8ce3a",
+    "sourceFile": "sciopero_trasporto_pubblico_attive_linee_della_metropolitana.html",
+    "thoughts": "**Analyzing the Strike Information**\n\nOkay, let's break this down. My primary concern here is determining if this information signals a *new* strike or is simply providing real-time updates about an ongoing one. The instructions are very clear: only declare `isStrike: true` if it's an *announcement* of a *future* strike. Otherwise, if it's documenting an active event, I need to set `isStrike: false`.\n\nThe title, \"Sciopero del trasporto pubblico: attive le linee della metropolitana\" (Public transport strike: metro lines are active), isn't super helpful on its own. It mentions a strike and that the metro lines are running, which could mean anything. However, the body of the text solidifies the context. It states, \"È in corso lo sciopero di 24 ore del trasporto pubblico.\" (A 24-hour public transport strike is underway). The phrase \"in corso\" (underway) is crucial here.\n\nSince the document explicitly mentions that the strike is already \"in corso,\" this isn't an announcement of an *upcoming* event. It's an update on a currently active strike. Therefore, following the instructions, my conclusion is:\n\n`{\"isStrike\": false}`\n\n\n",
+    "tokens": {
+      "input": 14827,
+      "output": 10,
+      "total": 15043
+    }
+  }
+}

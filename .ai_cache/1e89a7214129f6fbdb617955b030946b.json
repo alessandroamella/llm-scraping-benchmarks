@@ -1,0 +1,36 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 29102,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000083,
+      "outputCost": 0.0009904,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0010734
+    },
+    "hash": "1e89a7214129f6fbdb617955b030946b",
+    "sourceFile": "martedi_29_marzo_sciopera_24_ore_trasporto_pubblico_servizio_rischio.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI'm working on producing JSON based on the strike_extraction schema. I need to figure out if the document indicates a new or upcoming strike. The content mentions a 24-hour public transport strike on Tuesday, March 29th, organized by the Faisa Cisal union affecting Atac workers. Services will be normal until 8:30 AM and again from 5 PM to 8 PM, and it notes that certain peripheral lines are not involved. It provides a source for real-time updates too.",
+    "tokens": {
+      "input": 1660,
+      "output": 2476,
+      "total": 4136
+    }
+  }
+}

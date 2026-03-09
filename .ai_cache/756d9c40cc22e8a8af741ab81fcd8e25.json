@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3543,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0037545,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000321,
+      "cachedCost": 0,
+      "totalCost": 0.0040905
+    },
+    "hash": "756d9c40cc22e8a8af741ab81fcd8e25",
+    "sourceFile": "sciopero_trasporto_pubblico_gioved_28_servizio_rischio_830_1230.html",
+    "thoughts": "**Analyzing the Potential Strike Announcement**\n\nOkay, let's break this down. My objective is to determine if this text announces an *upcoming* strike, specifically targeting ATAC/Roma Mobilità. The text clearly states a strike occurred on \"Giovedì 28 aprile\" – that's Thursday, April 28th, 2022. The publication date is 22/04/2022, which suggests the article was a news piece or announcement from that time. Interesting detail, it looks like this article was updated on 25/01/2023. This is probably a correction or clarification. Considering today's date is March 9, 2026, which is stated in the current context, this is a critical piece of information.\n\nThe article is from 2022 and mentions a strike that has already happened. Given that it's now 2026, there's no way this document is announcing a future strike. It's clearly a past event, most likely archived for reference. So, logically, this *cannot* be considered an announcement of a strike happening in the current time frame. The variable `isStrike` must be set to `false`.\n\n\n",
+    "tokens": {
+      "input": 15018,
+      "output": 10,
+      "total": 15242
+    }
+  }
+}

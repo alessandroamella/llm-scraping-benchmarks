@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-11-29 00:00:00",
+      "endDate": "2024-11-29 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 25520,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006731,
+      "outputCost": 0.0007948,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0014679
+    },
+    "hash": "97b58e8bf664287d4e56e846bf6b2ef0",
+    "sourceFile": "venerdi_29_novembre_sciopero_generale_nazionale_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Structuring strike information**\n\nI need to format the information regarding an upcoming strike in JSON following the strike_extraction schema. The content I’m reviewing discusses a national general strike on November 29, which will affect public transportation in Rome. It’s clear this involves a 24-hour strike affecting Atac services, with specifics about guaranteed service times before peak hours. I’ll ensure the JSON includes all the necessary details like startDate, endDate, locationType, and more.",
+    "tokens": {
+      "input": 13462,
+      "output": 1987,
+      "total": 15449
+    }
+  }
+}

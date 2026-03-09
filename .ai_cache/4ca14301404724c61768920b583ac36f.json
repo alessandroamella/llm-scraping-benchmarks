@@ -1,0 +1,33 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22142,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000801,
+      "outputCost": 0.0007232,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008033
+    },
+    "hash": "4ca14301404724c61768920b583ac36f",
+    "sourceFile": "venerd_17_febbraio_sciopero_nazionale_usb_24_ore_trasporto_pubblico_rischio.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to ensure we're outputting in the correct JSON format. The document clearly announces a new strike, which is set for Friday, February 17. The title and body both indicate that public transport will be at risk due to a 24-hour strike called by USB. The specifics, like the impact on Atac and Roma Tpl lines, will help shape the JSON output. I’ll make sure to follow the schema carefully to reflect this information.",
+    "tokens": {
+      "input": 1602,
+      "output": 1808,
+      "total": 3410
+    }
+  }
+}

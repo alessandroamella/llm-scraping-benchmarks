@@ -1,0 +1,33 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-23:59"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 26760,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000861,
+      "outputCost": 0.0007176,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008037
+    },
+    "hash": "39e197ab8b2e88032de924a12afe8b12",
+    "sourceFile": "news_media_comunicati_sciopero_generale_13_dicembre_240re.html",
+    "thoughts": "**Processing strike extraction**\n\nI need to create a JSON output for a strike extraction. The Italian article talks about a public transport strike that risk happening for 24 hours tomorrow. Since it indicates an upcoming strike, I'll mark isStrike as true. I also need to provide strikeData, which requires startDate and endDate in the specified format. The article mentions regular service times but doesn't give exact dates. I’ll need to consider that while generating the output.",
+    "tokens": {
+      "input": 1722,
+      "output": 1794,
+      "total": 3516
+    }
+  }
+}

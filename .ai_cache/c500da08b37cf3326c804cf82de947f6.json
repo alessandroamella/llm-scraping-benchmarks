@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3086,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0003265,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000192,
+      "cachedCost": 0,
+      "totalCost": 0.0005335
+    },
+    "hash": "c500da08b37cf3326c804cf82de947f6",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_212.html",
+    "thoughts": "**Analyzing the Strike Participation Report**\n\nOkay, so I'm looking at this piece of input: \"Sciopero del trasporto pubblico, adesione personale Atac al 21,2%\". Right away, my brain kicks in to deconstruct the information. It's reporting on a \"transport strike\" – that's the obvious core. But the key here is the *adesione personale Atac al 21,2%*. My intuition is that this translates to \"participation of ATAC staff at 21.2%.\"\n\nNow, I've got a built-in check in my head. I need to figure out the context. Is this *announcing* a strike, or *reporting* on one? The instructions I have tell me that if it's just about the *participation* level of an event that has already happened, then `isStrike` should be set to `false`. Looking at this specific phrase, it very strongly suggests that this is a *post-event* report. It's giving me a percentage of staff participation. If it were an *announcement*, I'd expect different phrasing, maybe focusing on the *call* for a strike.\n\nTherefore, the conclusion I reach is that this is simply a report on the strike's participation figures after the fact. `isStrike` is clearly false. This seems like it would be a very useful piece of data for anyone studying or analyzing the impact of strikes, worker sentiment, or the effectiveness of the strike itself, from my perspective.\n\n\n",
+    "tokens": {
+      "input": 1306,
+      "output": 10,
+      "total": 1444
+    }
+  }
+}

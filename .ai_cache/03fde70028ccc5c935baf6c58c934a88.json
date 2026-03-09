@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-04-11 20:00:00",
+      "endDate": "2024-04-11 24:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "20:00-24:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 25364,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008,
+      "outputCost": 0.0008008,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008808
+    },
+    "hash": "03fde70028ccc5c935baf6c58c934a88",
+    "sourceFile": "gioved_11_aprile_sciopero_nazionale_trasporto_pubblico_rischio_20_24.html",
+    "thoughts": "**Extracting strike details**\n\nI need to output JSON in the correct format for strike extraction. The article indicates a national strike in Italy on Thursday, April 11, from 20:00 to 24:00, meaning it is an upcoming event. I’ll determine that `isStrike` is true. However, I notice the year isn’t specified in the article, which makes it tricky for me to include `startDate` and `endDate` in the needed format. I might need to infer the year somehow.",
+    "tokens": {
+      "input": 1600,
+      "output": 2002,
+      "total": 3602
+    }
+  }
+}

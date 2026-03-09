@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7475,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00013215,
+      "outputCost": 0.0001612,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00029335
+    },
+    "hash": "014d04f9eea299c5c5c837daf603d06d",
+    "sourceFile": "sciopero_24_febbraio2025_stato_del_servizio.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to follow the strike_extraction schema for the Italian content. The text indicates that a national transport public strike is currently happening, which is confirmed by phrases like “in corso” (ongoing). It provides real-time updates on metro and bus services, stating which are closed or running with reductions. Since this content is not announcing a future strike but rather updating on one that's happening, I’ll output {\"isStrike\": false}.",
+    "tokens": {
+      "input": 2643,
+      "output": 403,
+      "total": 3046
+    }
+  }
+}

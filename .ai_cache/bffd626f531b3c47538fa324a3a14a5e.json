@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "08:30-12:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20692,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008065,
+      "outputCost": 0.0005544,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00063505
+    },
+    "hash": "bffd626f531b3c47538fa324a3a14a5e",
+    "sourceFile": "venerd_17_giugno_sciopero_4_ore_rete_atac_rischio_830_1230.html",
+    "thoughts": "**Extracting strike details**\n\nI need to output JSON according to the strike_extraction schema. The document indicates an upcoming strike in Italian, specifically stating there's a 4-hour strike on Friday, June 17, from 8:30 to 12:30. This is confirmed in the accompanying paragraph about public transport disruptions in Rome. Since the date is mentioned but not the year, I recognize that \"isStrike\" should be true, and I need to figure out how to format the extracted details appropriately.",
+    "tokens": {
+      "input": 1613,
+      "output": 1386,
+      "total": 2999
+    }
+  }
+}

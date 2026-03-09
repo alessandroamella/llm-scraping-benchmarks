@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-12-15 00:00:00",
+      "endDate": "2023-12-15 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 26217,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008045,
+      "outputCost": 0.0011832,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00126365
+    },
+    "hash": "aa3fd033c2a7df6f43acddcace3e025e",
+    "sourceFile": "venerd_sciopero_nazionale_trasporto_pubblico_servizio_rischio.html",
+    "thoughts": "**Analyzing event date year**\n\nThe event date is set for Friday, December 15, but it's unclear which year. The content indicates “Venerdì 15 dicembre” without specifying the year. This leaves me guessing based on context, which is tricky. The policy suggests extracting information when possible, but lacking the year could mean setting it to null. The required fields call for a specific date format, so I’ll need to navigate these challenges carefully and follow the instructions regarding date formatting.",
+    "tokens": {
+      "input": 1609,
+      "output": 2958,
+      "total": 4567
+    }
+  }
+}

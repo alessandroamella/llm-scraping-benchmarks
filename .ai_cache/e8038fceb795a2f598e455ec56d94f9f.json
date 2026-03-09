@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-12-07 09:00:00",
+      "endDate": "2023-12-07 13:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5992,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00370725,
+      "outputCost": 0.0001395,
+      "thinkingCost": 0.000879,
+      "cachedCost": 0,
+      "totalCost": 0.00472575
+    },
+    "hash": "e8038fceb795a2f598e455ec56d94f9f",
+    "sourceFile": "gioved_sciopero_regionale_4_ore_trasporto_pubblico_rischio.html",
+    "thoughts": "**Strike Analysis Summary**\n\nOkay, let's break this down. My task is to determine if this text announces an upcoming strike and, if so, to extract the relevant strike data and format it into a specific JSON structure. This is pretty straightforward, so I'll go through it methodically.\n\nFirst, the text is: \"Giovedì 7 dicembre trasporto pubblico a rischio per lo sciopero di 4 ore, dalle 9 alle 13, indetto a livello regionale dal sindacato Faisa Cisal. A Roma l’agitazione interesserà la rete Atac e i bus periferici della Roma Tpl.\" Immediately, \"sciopero\" (strike) jumps out, so `isStrike` is definitely `true`.\n\nNow, for the data extraction.  The date is clearly stated as \"Giovedì 7 dicembre.\"  Since the publication date is 05/12/2023, I can safely infer the year is 2023.  So, the start date/time is 2023-12-07 09:00:00, and the end date/time is 2023-12-07 13:00:00. The text also mentions a \"regional\" level strike, so `locationType` is \"REGIONAL\".\n\nThe location is specified as Rome, which is in the Lazio region. We need the location code for Lazio, which is \"12\" from my knowledge, making `locationCodes` [\"12\"]. There's no mention of guaranteed times in the text, so that field will be omitted in this instance.\n\nPutting it all together, I have:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2023-12-07 09:00:00\",\n    \"endDate\": \"2023-12-07 13:00:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\n      \"12\"\n    ]\n  }\n}\n```\n\nI've confirmed that this is valid JSON and that it strictly adheres to the schema provided. No extraneous comments or text are included. The job's done!\n\n\n",
+    "tokens": {
+      "input": 14829,
+      "output": 93,
+      "total": 15508
+    }
+  }
+}

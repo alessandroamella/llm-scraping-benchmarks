@@ -1,0 +1,32 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "08:30-16:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 25703,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000807,
+      "outputCost": 0.0008232,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0009039
+    },
+    "hash": "f77088fff7060f2b4eabcbfab625bbb9",
+    "sourceFile": "luned_9_settembre_sciopero_nazionale_trasporto_pubblico_servizio_rischio.html",
+    "thoughts": "**Evaluating date values**\n\nI need to set a value for \"startDate,\" potentially to null if it's not specified. The instructions say null is okay, but since \"startDate\" is part of the strike object and all fields are required, I could fill in null if it's unknown. The same applies for \"endDate.\" If I have a specific time, like 8:30-16:30, I can fill those in, but I must also consider the year. I could use a placeholder year like 2024 if I can't determine the exact year. However, the current year is 2026, and the content mentions \"Lunedì 9 settembre,\" which makes it tricky to guess the year correctly.",
+    "tokens": {
+      "input": 1614,
+      "output": 2058,
+      "total": 3672
+    }
+  }
+}

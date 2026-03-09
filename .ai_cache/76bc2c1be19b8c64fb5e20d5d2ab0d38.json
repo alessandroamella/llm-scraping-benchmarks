@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3447,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000326,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000363,
+      "cachedCost": 0,
+      "totalCost": 0.000704
+    },
+    "hash": "76bc2c1be19b8c64fb5e20d5d2ab0d38",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_191.html",
+    "thoughts": "**Analyzing the Atac Communication**\n\nOkay, let's break this down. My task is to determine if this HTML document from Atac represents an announcement *about* a future strike. The input is the raw HTML, and I need to transform it into JSON following a predefined schema. I need to focus on the key information that informs the `isStrike` field.\n\nThe title itself, \"Sciopero del trasporto pubblico, adesione personale Atac al 19,1%\", hints at a strike. However, the critical piece is within the body. It explicitly states, \"L’adesione del personale Atac allo sciopero del trasporto pubblico di oggi, rilevata in mattinata, è stata pari al 19,1%.\" - \"The participation of Atac staff in the public transport strike *of today*, detected in the morning, was 19.1%.\" The phrase \"of today\" is the deciding factor.\n\nMy rule evaluation is clear: if the document is simply providing information about the *participation* in a strike that has *already occurred*, then `isStrike` should be `false`. Since the text explicitly references a strike that happened \"today,\" the correct value for `isStrike` is definitely `false`. Therefore, I'm confident that the JSON output will reflect this.\n\n\n",
+    "tokens": {
+      "input": 1304,
+      "output": 10,
+      "total": 1556
+    }
+  }
+}

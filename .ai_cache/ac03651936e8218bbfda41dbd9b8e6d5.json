@@ -1,0 +1,33 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "endDate": "2023-05-02 12:30:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 26526,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00067325,
+      "outputCost": 0.0008732,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00154645
+    },
+    "hash": "ac03651936e8218bbfda41dbd9b8e6d5",
+    "sourceFile": "sciopero_trasporto_pubblico_aperte_metropolitane_possibili_riduzioni_bus_tram.html",
+    "thoughts": "**Producing JSON for transport strike**\n\nI need to produce JSON that includes `isStrike` and possibly `strikeData`. The content comes from a long Italian page about public transport strikes in Rome, stating that the strike concludes at 12:30. The phrase \"status: 1\" might indicate it's a relevant update. It mentions metro services are open, but there could be reductions for buses and trams. The publication date is 02/05/2023, and it looks like it’s providing details about the current situation.",
+    "tokens": {
+      "input": 13465,
+      "output": 2183,
+      "total": 15648
+    }
+  }
+}

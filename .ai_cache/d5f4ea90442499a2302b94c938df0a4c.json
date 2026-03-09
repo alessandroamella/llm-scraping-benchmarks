@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 10543,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007695,
+      "outputCost": 0.0001508,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00022775
+    },
+    "hash": "d5f4ea90442499a2302b94c938df0a4c",
+    "sourceFile": "sciopero_nazionale_adesione_personale_atac_al_237.html",
+    "thoughts": "**Evaluating strike data**\n\nI need to output JSON according to the schema in the strike_extraction process. First, I see the input is in Italian, with a title indicating a national strike and a participation rate of 23.7%. The content confirms that this is about the overall attendance of Atac staff at a strike that occurred today, meaning it’s not an announcement for an upcoming strike. Therefore, I need to set isStrike to false as I'm only reporting on participation from today’s strike.",
+    "tokens": {
+      "input": 1539,
+      "output": 377,
+      "total": 1916
+    }
+  }
+}

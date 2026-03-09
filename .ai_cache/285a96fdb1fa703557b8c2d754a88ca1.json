@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8459,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000779,
+      "outputCost": 0.0001436,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002215
+    },
+    "hash": "285a96fdb1fa703557b8c2d754a88ca1",
+    "sourceFile": "sciopero_trasporto_pubblico_mattinata_ha_aderito_222_personale_atac.html",
+    "thoughts": "**Analyzing strike information**\n\nI need to output JSON based on the schema for the ATAC strike info. The content indicates that 22.2% of Atac staff participated in a public transport strike. It’s clear this was about a past event, confirmed by the phrase “in mattinata,” meaning “in the morning.” Since it’s not announcing a new strike, I’ll set \"isStrike\" to false. The final output will be {\"isStrike\": false} in the required format.",
+    "tokens": {
+      "input": 1558,
+      "output": 359,
+      "total": 1917
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-03-08 00:00:00",
+      "endDate": "2025-03-08 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6240,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00034075,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.001194,
+      "cachedCost": 0,
+      "totalCost": 0.00174475
+    },
+    "hash": "7f12ccd0c265dbfbedc97896719d7d2b",
+    "sourceFile": "martedi_8_marzo_sciopero_generale_24_ore_rischio_trasporto_pubblico.html",
+    "thoughts": "**Strike Information Extraction: Rome, March 8th**\n\nOkay, let's process this HTML content regarding the ATAC strike in Rome. First, I need to confirm if it's a strike announcement, and yes, the headline clearly states \"Martedì 8 marzo sciopero generale di 24 ore\" which translates to a general 24-hour strike. Now, to extract the details for the JSON output.\n\nThe date is March 8th. Since the year isn't explicitly mentioned, I'm going to default to the upcoming year, which I'll assume is 2025. That gives me a `startDate` and `endDate` of `2025-03-08`. Since it's a 24-hour strike, I'll set the start at 00:00:00 and the end at 23:59:59.\n\nThe location is Rome.  I'll translate this to the `locationType` of \"REGIONAL\" since it's a city-wide strike, and find the corresponding ISTAT code, which is \"12\" for Lazio, the region Rome is in. So, `locationCodes` is [\"12\"].\n\nThe text mentions guaranteed service times: \"fino alle 8,30 e dalle 17 alle 20\". That translates to guaranteed service from 00:00 to 08:30 and again from 17:00 to 20:00, which I'll format as an array in the `guaranteedTimes` field.\n\nThe output will be in JSON format. The `isStrike` field will be `true`. Therefore, here's how the `strikeData` should look:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-03-08 00:00:00\",\n    \"endDate\": \"2025-03-08 23:59:59\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"00:00-08:30\", \"17:00-20:00\"]\n  }\n}\n```\n\nNow, just to be sure, I'll double-check the schema against this data. The `startDate`/`endDate` patterns are met (yyyy-MM-dd HH:mm:ss). `guaranteedTimes` also uses the correct pattern. `locationType` is correctly set as \"REGIONAL\", and `locationCodes` is also accurate. The information regarding the duration, and location are valid based on the input text. Perfect, the data is complete and accurate.\n\n\n",
+    "tokens": {
+      "input": 1363,
+      "output": 140,
+      "total": 2299
+    }
+  }
+}

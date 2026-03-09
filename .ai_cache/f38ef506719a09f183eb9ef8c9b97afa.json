@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7651,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007705,
+      "outputCost": 0.0001644,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00024145
+    },
+    "hash": "f38ef506719a09f183eb9ef8c9b97afa",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_186.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to output JSON based on the strike_extraction schema. The document discusses a public transport strike in Italy, with Atac staff participation at 18.6%. The header suggests it's a strike announcement, but the body clarifies that this is about participation measured in the morning. Since it doesn't indicate an upcoming strike, I conclude that this is more about reporting participation rather than announcing a new strike event.",
+    "tokens": {
+      "input": 1541,
+      "output": 411,
+      "total": 1952
+    }
+  }
+}

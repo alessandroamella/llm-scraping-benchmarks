@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-01-14 08:30:00",
+      "endDate": "2022-01-14 12:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6837,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.003751,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.001155,
+      "cachedCost": 0,
+      "totalCost": 0.005029
+    },
+    "hash": "3de9d68c3b4da861f09f5d3fac6de2dc",
+    "sourceFile": "venerdi_14_gennaio_sciopero_nazionale_4_ore_trasporto_pubblico_rischio.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, here's the breakdown of this text, focusing on extracting the key strike information. My task is to analyze content regarding a potential strike, specifically from Roma Servizi per la Mobilità, and output a JSON object. The text mentions \"Venerdì 14 gennaio,\" which I know refers to a past or historical event, and the task explicitly states to extract information from the provided text as a template, even if the date is in the past.\n\nMy first step is to confirm if it's a strike announcement. The phrase \"Venerdì 14 gennaio sciopero nazionale di 4 ore\" (\"Friday, January 14, national strike of 4 hours\") strongly indicates that it is. So, `isStrike` is `true`.\n\nNow, I need to parse the strike details. I am told to extract the start and end dates and the location. The text confirms the date of the strike to be January 14th; with the publication date being January 7th 2022, I am confirming the date of 2022-01-14. The information provided specifies the strike runs from 8:30 AM to 12:30 PM. I am formatting the start and end times as instructed.\nSo, I can determine:\n*   `startDate`: \"2022-01-14 08:30:00\"\n*   `endDate`: \"2022-01-14 12:30:00\"\n\nThe text describes it as a \"sciopero nazionale\" (national strike), which is important. The prompt states the user is asking me to extract data from a template, so while this is a past date, the information is still useful. Since it is a national strike, it is not tied to the specifics of the ATAC transit company of Rome or Lazio (region code 12), and I must categorize it as national. Therefore, `locationType` will be \"NATIONAL\". The JSON schema tells me that if the location type is NATIONAL, `locationCodes` should be omitted completely, so I won't include that.\n\nFinally, the text does not mention any guaranteed times, so I won't include anything for that key.\n\nHere's the data structure I would construct for output:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2022-01-14 08:30:00\",\n    \"endDate\": \"2022-01-14 12:30:00\",\n    \"locationType\": \"NATIONAL\"\n  }\n}\n```\n\n\n",
+    "tokens": {
+      "input": 15004,
+      "output": 82,
+      "total": 15856
+    }
+  }
+}

@@ -57,14 +57,8 @@ export class BenchmarkAiRunnerService implements OnModuleInit {
 
   private readonly failIfDomDistillationFails = true;
 
-  private readonly cacheDir = path.join(
-    process.cwd(),
-    'src/benchmarks/.ai_cache',
-  );
-  private readonly tracesDir = path.join(
-    process.cwd(),
-    'src/benchmarks/.traces',
-  );
+  private readonly cacheDir = path.join(process.cwd(), '.ai_cache');
+  private readonly tracesDir = path.join(process.cwd(), '.traces');
   private readonly manualConfirmationEnabled: boolean;
 
   constructor(private readonly envsService: EnvsService) {

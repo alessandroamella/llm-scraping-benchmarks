@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9332,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006732,
+      "outputCost": 0.0001648,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.000838
+    },
+    "hash": "261ebf0837f804616b6285a8d4279dfb",
+    "sourceFile": "sciopero_del_trasporto_pubblico_attive_le_metropolitane_e_la_termini_centocelle.html",
+    "thoughts": "**Ensuring JSON accuracy**\n\nThe instruction is clear: I should only set \"isStrike\" to true if there's an announcement of an upcoming strike. In this case, it should be false. I also want to confirm there are no hidden details. The content mentions an update but doesn’t signal a strike. I need to ensure that my output matches the required \"strike_extraction\" schema, which just needs \"isStrike\" in this scenario. So, I'll return: \n\n{\n  \"isStrike\": false\n}",
+    "tokens": {
+      "input": 13464,
+      "output": 412,
+      "total": 13876
+    }
+  }
+}

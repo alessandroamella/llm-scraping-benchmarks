@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3865,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00375525,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.00042,
+      "cachedCost": 0,
+      "totalCost": 0.00419025
+    },
+    "hash": "300fba21a30f4600e2498dcead0b49d3",
+    "sourceFile": "sciopero_generale_aperte_metro_a_e_b_la_situazione_sulla_rete_romana.html",
+    "thoughts": "**Analyzing Strike Information from \"Roma Servizi per la Mobilità\"**\n\nOkay, I need to figure out if this text is about a strike. The input is a web page from \"Roma Servizi per la Mobilità\" discussing a strike. The title is \"Sciopero generale, aperte metro A e B. La situazione sulla rete romana\" and the text begins, \"È in corso lo sciopero generale nazionale che coinvolge anche il trasporto pubblico. Ecco la situazione sulla rete romana: ...\". Hmm, it's explicitly stating that a strike *is currently in progress* (\"È in corso lo sciopero\"). This isn't a pre-strike announcement; it's providing a real-time update during the event. I have a decision rule for this: if it's giving real-time updates like this, or providing real-time service updates like the metro being open or closed, then `isStrike` should be `false`. Therefore, given that this content describes an *ongoing* situation, I will set `isStrike` to `false`. My output should be a clean JSON and nothing else, so I'll be sure to generate the result accordingly.\n\n\n",
+    "tokens": {
+      "input": 15021,
+      "output": 10,
+      "total": 15311
+    }
+  }
+}

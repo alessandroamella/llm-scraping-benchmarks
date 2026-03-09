@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3593,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00377275,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000459,
+      "cachedCost": 0,
+      "totalCost": 0.00424675
+    },
+    "hash": "8d98474b7a861a2e6eac44e6dd3a9890",
+    "sourceFile": "luned_16_gennaio_sciopero_atac_4_ore_servizio_rischio_830_1230.html",
+    "thoughts": "**Analyzing the Atac Strike Article**\n\nOkay, so I'm presented with an article regarding an \"ATAC\" strike, and my task is to determine if it's announcing an upcoming strike. The title, \"Lunedì 16 gennaio sciopero Atac di 4 ore. Servizio a rischio dalle 8,30 alle 12,30 - Roma Servizi per la Mobilità\", immediately jumps out. It's in Italian, which is fine, I can handle that. I see \"Lunedì 16 gennaio,\" which translates to Monday, January 16th. The body text confirms this date, mentioning a 4-hour strike from 8:30 to 12:30, organized by the Faisa-Cisal union and affecting the ATAC network. Critically, the publication date is listed as January 11th, 2023. Hmm...and I am processing this in March of 2026. Bingo! The date of the strike is *before* the current date, meaning this article is reporting on a *past* event, not a future one. Therefore, the answer is no, it's not announcing a new strike. It's a historical record. I'll set the \"isStrike\" field to \"false\" and format it as valid JSON following the schema requirements.\n\n\n",
+    "tokens": {
+      "input": 15091,
+      "output": 10,
+      "total": 15407
+    }
+  }
+}

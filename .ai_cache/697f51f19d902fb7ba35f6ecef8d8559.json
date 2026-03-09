@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-10-20 00:00:00",
+      "endDate": "2023-10-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 25366,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00067345,
+      "outputCost": 0.0008012,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00147465
+    },
+    "hash": "697f51f19d902fb7ba35f6ecef8d8559",
+    "sourceFile": "venerd_20_ottobre_sciopero_generale_nazionale_trasporto_pubblico_rischio.html",
+    "thoughts": "**Interpreting strike announcement**\n\nI need to extract details from a document written in Italian about an upcoming strike. It mentions a general national strike on Friday, October 20, 2023, affecting public transportation in Rome, and is published on October 13, 2023. The strike is scheduled to last for 24 hours, with regular service until 8:30 AM and from 5 PM to 8 PM. Since it’s announcing a strike, I’ll prepare the output in the specified JSON format accordingly.",
+    "tokens": {
+      "input": 13469,
+      "output": 2003,
+      "total": 15472
+    }
+  }
+}

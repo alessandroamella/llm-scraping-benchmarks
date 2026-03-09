@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-09-22 00:00:00",
+      "endDate": "2025-09-22 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22226,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00067775,
+      "outputCost": 0.0011184,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00179615
+    },
+    "hash": "4b6a94db1bcf4d2f96970cc52058c616",
+    "sourceFile": "lunedi_22_settembre_sciopero_nazionale_di_24_ore_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to determine if the document is announcing an upcoming strike. The title mentions a national 24-hour strike on September 22, 2025, highlighting that public transport is at risk in Rome. It confirms the announcement, noting the publication and update dates. Based on this content, it definitely qualifies as an announcement for an upcoming strike. Therefore, I can conclude that isStrike should be true.",
+    "tokens": {
+      "input": 13555,
+      "output": 2796,
+      "total": 16351
+    }
+  }
+}

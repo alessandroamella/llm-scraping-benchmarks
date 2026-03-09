@@ -1,0 +1,36 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24560,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008105,
+      "outputCost": 0.0013824,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00146345
+    },
+    "hash": "c343efdc431ea122ef7eba85e49b45ff",
+    "sourceFile": "venerdi_10_sciopero_del_trasporto_pubblico_rete_atac_a_rischio.html",
+    "thoughts": "**Parsing strike announcement**\n\nI need to output JSON indicating whether this document is announcing a new or upcoming strike. The Italian article states that on Friday, October 10, public transport will be at risk due to 24 and 4-hour strikes called by specific unions. The disruptions will only affect the Atac network. Service will be regular until 8:30 AM and from 5 PM to 8 PM. So, it's clear this is indeed announcing a scheduled strike.",
+    "tokens": {
+      "input": 1621,
+      "output": 3456,
+      "total": 5077
+    }
+  }
+}

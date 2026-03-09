@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7902,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00066645,
+      "outputCost": 0.0001584,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00082485
+    },
+    "hash": "fa555d42733f9167727c25231273cc9b",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_209.html",
+    "thoughts": "**Analyzing strike information**\n\nI need to format my output in JSON based on the details from the Italian content. The title indicates it's about a public transportation strike and mentions that the participation of Atac staff was 20.9%. Since this article is about a past event rather than an upcoming strike, I conclude that `isStrike` should be false. Therefore, the final output will simply state: `{\"isStrike\": false}` with no additional strike data needed.",
+    "tokens": {
+      "input": 13329,
+      "output": 396,
+      "total": 13725
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 12156,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006788,
+      "outputCost": 0.0002108,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008896
+    },
+    "hash": "070981af03dc740c8d15acf4761207b6",
+    "sourceFile": "sciopero_del_trasporto_pubblico_aperta_la_metro_b_chiuse_linee_a_c_e_termini_centocelle.html",
+    "thoughts": "**Assessing a nationwide strike**\n\nI’m examining a page that seems to describe a nationwide general strike that's currently happening, not an upcoming one. The \"Sciopero\" page I’m looking at is dated 2024, showing that the strike is ongoing, which means I can conclude that isStrike should be false. The source is from Roma Servizi per la Mobilità, which is relevant to Rome’s public transport. The updates confirm it's not about an upcoming strike, so I’ll output {\"isStrike\": false}.",
+    "tokens": {
+      "input": 13576,
+      "output": 527,
+      "total": 14103
+    }
+  }
+}

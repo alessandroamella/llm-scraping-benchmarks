@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8200,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00066535,
+      "outputCost": 0.0001692,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00083455
+    },
+    "hash": "2c7b658be0e235c080b80a709fa5269d",
+    "sourceFile": "sciopero_trasporto_pubblico_chiusa_metro_c.html",
+    "thoughts": "**Determining strike status**\n\nI'm looking at how to format the output in JSON based on whether there's an upcoming strike. The document mentions \"Sciopero del trasporto pubblico,\" indicating a current, ongoing strike, not a future one. Since it states this strike is currently happening and won't conclude until a specific time, it clearly isn’t an announcement for an upcoming strike. So, I need to set isStrike to false, as it’s already in progress.",
+    "tokens": {
+      "input": 13307,
+      "output": 423,
+      "total": 13730
+    }
+  }
+}

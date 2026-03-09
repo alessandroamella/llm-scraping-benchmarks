@@ -1,0 +1,54 @@
+{
+  "timestamp": "2026-03-09T18:51:25.837Z",
+  "isCacheHit": false,
+  "request": {
+    "sourceName": "ATAC",
+    "fileName": "venerdi_8_novembre_sciopero_nazionale_del_trasporto_pubblico_servizio_a_rischio_per_24_ore.html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "strategy": "mineru-html",
+    "useLenientSchema": false,
+    "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"ATAC\" (the public transport company of Rome, Lazio (12)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: mineru-html):\n<html lang=\"it-IT\" prefix=\"og: https://ogp.me/ns#\"><body class=\"wp-singular comunicato-template-default single single-comunicato postid-11114 wp-embed-responsive wp-theme-hello-elementor wp-child-theme-hello-elementor-child hello-elementor-default elementor-default elementor-kit-12678 elementor-page-15972\">\n<div class=\"elementor elementor-15972 elementor-location-single post-11114 comunicato type-comunicato status-publish hentry sezione-newsmedia\" data-elementor-id=\"15972\" data-elementor-post-type=\"elementor_library\" data-elementor-type=\"single-page\" data-rocket-location-hash=\"e95ff6bcfd277ee21dfb12a916ed34b2\">\n<div class=\"elementor-element elementor-element-6ee3468 e-flex e-con-boxed e-con e-parent\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"6ee3468\" data-settings='{\"background_background\":\"classic\"}'>\n<div class=\"e-con-inner\">\n<div class=\"elementor-element elementor-element-6945d4c e-con-full e-flex e-con e-child\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"6945d4c\">\n<div class=\"elementor-element elementor-element-da182fa e-con-full e-flex e-con e-child\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"da182fa\">\n<div class=\"elementor-element elementor-element-aff84d2 elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading\" data-e-type=\"widget\" data-element_type=\"widget\" data-id=\"aff84d2\" data-widget_type=\"theme-post-title.default\">\n<div class=\"elementor-widget-container\">\n<h1 class=\"elementor-heading-title elementor-size-default\" _item_id=\"1\">Venerdì 8 novembre sciopero nazionale del trasporto pubblico. Servizio a rischio per 24 ore</h1> </div>\n</div>\n</div>\n</div>\n</div>\n</div>\n<div class=\"elementor-element elementor-element-32c51eb e-flex e-con-boxed e-con e-parent\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"32c51eb\" data-rocket-location-hash=\"66daadf289c41592d316e571051fc202\">\n<div class=\"e-con-inner\">\n<div class=\"elementor-element elementor-element-7a3d033 e-con-full e-flex e-con e-child\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"7a3d033\" id=\"main-content\">\n<div class=\"elementor-element elementor-element-723d484 elementor-widget elementor-widget-theme-post-content\" data-e-type=\"widget\" data-element_type=\"widget\" data-id=\"723d484\" data-widget_type=\"theme-post-content.default\">\n<div class=\"elementor-widget-container\">\n<p _item_id=\"3\">Venerdì 8 novembre trasporto pubblico a rischio per lo sciopero nazionale di 24 ore proclamato dai sindacati Cgil, Cisl, Uil, Ugl e Faisa Cisal. </p>\n<p _item_id=\"4\">A Roma l’agitazione interesserà la rete Atac e le linee periferiche gestite dagli operatori privati. Saranno assicurati solo alcuni servizi essenziali dall’inizio del servizio diurno alle 8.30 e dalle 17 alle 20.</p>\n<p _item_id=\"5\">Ulteriori dettagli su <a href=\"atac.roma.it\">atac.roma.it</a> e <a href=\"romamobilita.it\">romamobilita.it</a></p>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</body></html>"
+  },
+  "response": {
+    "rawOutput": {
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2024-11-08 00:00:00",
+        "endDate": "2024-11-08 23:59:59",
+        "locationType": "NATIONAL",
+        "guaranteedTimes": [
+          "05:30-08:30",
+          "17:00-20:00"
+        ]
+      }
+    },
+    "parsedData": {
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2024-11-08 00:00:00",
+        "endDate": "2024-11-08 23:59:59",
+        "locationType": "NATIONAL",
+        "guaranteedTimes": [
+          "05:30-08:30",
+          "17:00-20:00"
+        ]
+      }
+    },
+    "usage": {
+      "input": 1514,
+      "output": 123,
+      "cached": 0,
+      "thinking": 646,
+      "total": 2283
+    },
+    "costUsd": {
+      "inputCost": 0.0003785,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.000969,
+      "cachedCost": 0,
+      "totalCost": 0.001532
+    },
+    "durationMs": 5564,
+    "thoughts": "**Strike Analysis: ATAC (Rome, Italy) - November 8th, 2024**\n\nOkay, here's what I've got. The input is clearly an announcement for a strike affecting ATAC in Rome, or more precisely, it's a *national* public transport strike. The critical bit is the date: \"Venerdì 8 novembre,\" which, assuming the current year, I'm interpreting as November 8th, 2024. No specific year is given, but I'll default to the current one, so I'll need to remember that.\n\nThe strike's duration is 24 hours. The text states it's a \"sciopero nazionale,\" confirming its broad scope. Now, about the details. It says, \"dall’inizio del servizio diurno alle 8.30\" and \"dalle 17 alle 20\". Based on my experience with these announcements, \"dall'inizio del servizio diurno\" typically translates to a window of 05:30 to 08:30. \"dalle 17 alle 20\" means 17:00 to 20:00. This is important: usually, strikes start at 00:00, but I need to confirm that this is not stated.\n\nSo, let's break this down into the necessary data fields.\n\n*   `isStrike`: definitely true.\n*   `startDate`: I'll set this to \"2024-11-08 00:00:00\" assuming the 24 hour duration starts at midnight.\n*   `endDate`: \"2024-11-08 23:59:59\".\n*   `locationType`: \"NATIONAL\".\n*   `locationCodes`: I can omit this for a national strike, which is the correct approach.\n*   `guaranteedTimes`: Based on the text, this is \"05:30-08:30\" and \"17:00-20:00\". \"dall’inizio del servizio diurno alle 8.30\" - yes, 05:30-08:30. \"dalle 17 alle 20\" is 17:00-20:00. These are the guaranteed service windows.\n\nTherefore, the system understands this input as a strike on the 8th of November, 2024, starting at midnight, national in scope, with guaranteed service during the times specified. That's a solid, efficient analysis.\n\n\n"
+  }
+}

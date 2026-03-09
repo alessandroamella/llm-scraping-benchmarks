@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9719,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000802,
+      "outputCost": 0.000196,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002762
+    },
+    "hash": "bd008d6bce53bb6803e2c37ddde92682",
+    "sourceFile": "sciopero_generale_servizio_regolare_metropolitane_ferrovia_termini_centocelle.html",
+    "thoughts": "**Evaluating strike extraction**\n\nI need to format the output as JSON according to the strike extraction schema. First, I must determine if the document relates to an upcoming strike. The content is in Italian and indicates a general strike is currently ongoing, affecting public transport, but metro services are regular. It mentions that the Furio Camillo station is closed on line A, while bus and tram services may be reduced. I'll also ensure the translation is clear for context!",
+    "tokens": {
+      "input": 1604,
+      "output": 490,
+      "total": 2094
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-05-20 00:00:00",
+      "endDate": "2022-05-20 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5945,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00036375,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.0008085,
+      "cachedCost": 0,
+      "totalCost": 0.00138225
+    },
+    "hash": "9f76c8a62d435b4a5939f84229d5679e",
+    "sourceFile": "venerd_20_maggio_sciopero_24_ore_trasporto_pubblico_rischio.html",
+    "thoughts": "**Strike Information Extraction - My Thought Process**\n\nOkay, here's the deal. I need to process this HTML content and pull out information about a potential strike, but the output *must* be parseable JSON. My goal is to extract the details if it's indeed an upcoming strike.\n\nFirst, I see the phrase \"Venerdì 20 maggio sciopero di 24 ore.\" That translates to \"Friday, May 20, 24-hour strike.\" Good start. Then, \"adesione dei sindacati... allo sciopero generale nazionale di 24 ore dei settori pubblici e privati\" confirms this is a national strike affecting both public and private sectors. \"A Roma l’agitazione interesserà la rete Atac...\" tells me Rome (Lazio) is affected, and \"Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20\" provides the guaranteed service times: 05:30-08:30 and 17:00-20:00. These guaranteed hours imply a 24-hour strike (00:00-23:59).\n\nNow, the critical question: is this an announcement of an *upcoming* strike? Yes, I'm pretty sure it is.\n\nThe date is \"Venerdì 20 maggio\". The issue is the year is not specified. Considering the instruction \"Date and time in format yyyy-MM-dd HH:mm:ss\", I need a year. The HTML snippet doesn't give me any clues about the year, so in a standard extraction task, I would use either the current year, or assume a date.\n\nNow, wait... the text specifies the day as \"Venerdì\" (Friday). So, looking at the dates in the calendar, May 20th, 2024 is a Monday, May 20th, 2023 is a Saturday, and May 20th, 2022 was a Friday. I'll use 2022-05-20 as the most likely reference date, since it aligns with the day of the week, or I will use 2024-05-20. The year must be provided. For compliance, let's use 2022-05-20.\n\n\n",
+    "tokens": {
+      "input": 1455,
+      "output": 140,
+      "total": 2134
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 12621,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00067425,
+      "outputCost": 0.0002428,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00091705
+    },
+    "hash": "4210b3054dec528f9b452694468ee1b8",
+    "sourceFile": "sciopero_generale_aperte_metro_a_e_b_la_situazione_sulla_rete_romana.html",
+    "thoughts": "**Analyzing strike information**\n\nThe content shows a banner stating that there’s an ongoing general strike, not an upcoming one. Since the instruction states that isStrike should be true only for future announcements, it should be false here. The document specifies to only extract strikeData if isStrike is true. Therefore, my output will be strictly: {\"isStrike\": false}. I’m ensuring no extra commentary and that the final answer is a JSON object that meets the required schema.",
+    "tokens": {
+      "input": 13485,
+      "output": 607,
+      "total": 14092
+    }
+  }
+}

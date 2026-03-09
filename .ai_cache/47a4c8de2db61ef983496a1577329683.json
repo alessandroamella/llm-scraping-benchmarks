@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4287,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00033525,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.00033,
+      "cachedCost": 0,
+      "totalCost": 0.00068025
+    },
+    "hash": "47a4c8de2db61ef983496a1577329683",
+    "sourceFile": "sciopero_generale_adesione_personale_atac_al_259.html",
+    "thoughts": "**Strike Adherence Assessment**\n\nOkay, here's what I've got. The input content is reporting on the adherence of Atac staff to a general strike: \"Sciopero generale, adesione personale Atac al 25,9%.\" That seems straightforward. Diving deeper, the content body states, \"L’adesione del personale Atac allo sciopero nazionale generale, rilevata in mattinata, è stata pari al 25,9%.\" Right, so it's the observed participation percentage this morning. The crucial thing here is the tense – \"è stata\" – it's past tense, indicating the strike has *already* happened. Now, let me check that against the instructions. Hmm, the instructions specify, \"If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\" And that's precisely what this text is doing, simply reporting the participation percentage after the fact. Therefore, considering the past tense and the nature of the information, I'm setting `isStrike` to `false`.\n\n\n",
+    "tokens": {
+      "input": 1341,
+      "output": 10,
+      "total": 1571
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-02-17 00:00:00",
+      "endDate": "2023-02-17 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 29848,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00067635,
+      "outputCost": 0.0008576,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00153395
+    },
+    "hash": "c4641bc6f5ea77de40b4d13f18776ac6",
+    "sourceFile": "venerd_17_febbraio_sciopero_nazionale_usb_24_ore_trasporto_pubblico_rischio.html",
+    "thoughts": "**Analyzing strike details**\n\nI’m looking at a national strike happening on Friday, February 17, which seems to last for 24 hours. The content doesn't specify start times, but it states that regular service will continue until 8:30 and from 17:00 to 20:00. This suggests disruptions outside these hours. I’ll assume the strike starts at midnight and runs until the end of the day, so I could set the start date as 2023-02-17 00:00:00 and the end date as 2023-02-17 23:59:59.",
+    "tokens": {
+      "input": 13527,
+      "output": 2144,
+      "total": 15671
+    }
+  }
+}

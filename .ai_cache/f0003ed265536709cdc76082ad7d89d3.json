@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-12-07 09:00:00",
+      "endDate": "2023-12-07 13:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6201,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000354,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.0008115,
+      "cachedCost": 0,
+      "totalCost": 0.001314
+    },
+    "hash": "f0003ed265536709cdc76082ad7d89d3",
+    "sourceFile": "gioved_sciopero_regionale_4_ore_trasporto_pubblico_rischio.html",
+    "thoughts": "**Strike Analysis: \"Giovedì 7 dicembre\"**\n\nOkay, here's the breakdown of this strike announcement. My input text describes a strike scheduled for \"Giovedì 7 dicembre\" – that's December 7th. Since the input doesn't provide a specific year, I need to make an assumption. Given the day of the week, I'm going to assume this refers to December 7th, 2023.\n\nThe strike is regional, specifically affecting Lazio, or Rome. The company involved is ATAC, the Rome public transport provider. The strike duration is four hours, from 9:00 AM to 1:00 PM (9 alle 13).\n\nMy goal here is to extract the relevant strike data. This is definitely an upcoming strike. So, I need to create the `strikeData` object with the correct details.\n\nThe `isStrike` flag will be set to `true`.\n\nI've determined the start and end dates and times: `startDate` is \"2023-12-07 09:00:00\" and `endDate` is \"2023-12-07 13:00:00\".\n\nThe `locationType` is clearly \"REGIONAL\". The corresponding `locationCodes` should be an array of 2-digit ISTAT region codes. Rome/Lazio corresponds to the code \"12\". I need to make sure my logic can handle this. The constraint is satisfied.\n\nI've also checked the guarantee times. The text simply states the strike period is \"dalle 9 alle 13\". It doesn't mention any guaranteed service windows. I will omit `guaranteedTimes` from the output. I need to take this into account for how the output is presented.\n\nSo, the extracted data should be:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2023-12-07 09:00:00\",\n    \"endDate\": \"2023-12-07 13:00:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"]\n  }\n}\n```\n\n\n",
+    "tokens": {
+      "input": 1416,
+      "output": 99,
+      "total": 2056
+    }
+  }
+}

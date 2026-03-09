@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8504,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00066295,
+      "outputCost": 0.0002128,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00087575
+    },
+    "hash": "c94cee9157d5adcd217e2d6e3e58159b",
+    "sourceFile": "sciopero_nazionale_adesione_personale_atac_al_237.html",
+    "thoughts": "**Formatting JSON output**\n\nI need to make sure I'm providing the right JSON format as per the instructions. It says “Output only JSON,” but doesn’t mention a trailing newline. I’ll give {\"isStrike\": false} as the simple output. \n\nHowever, I see that the example uses pretty formatting, which includes indentation. They specify their output like this:  \n{  \n  \"isStrike\": false  \n}  \n\nSo, I’ll follow that pretty format for my final response!",
+    "tokens": {
+      "input": 13259,
+      "output": 532,
+      "total": 13791
+    }
+  }
+}

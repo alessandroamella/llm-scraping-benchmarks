@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7661,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00067665,
+      "outputCost": 0.0001672,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00084385
+    },
+    "hash": "8377c89a06b2f8e71788f94564ec01f6",
+    "sourceFile": "sciopero_del_trasporto_pubblico_metro_aperte_chiusa_la_termini_centocelle.html",
+    "thoughts": "**Structuring JSON output**\n\nI need to provide the real-time status as a JSON object. It's clear from the instructions that the only output should be `{\"isStrike\": false}`, since there's no strike data to include. Even though they need data extraction when `isStrike` is true, I only output `isStrike false` this time. I'll make sure to keep it simple and present it without any extra text or details — just plain JSON. So, I’m finalizing that.",
+    "tokens": {
+      "input": 13533,
+      "output": 418,
+      "total": 13951
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 09:00:00",
+      "endDate": "2024-12-13 13:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "09:00-13:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 23170,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006685,
+      "outputCost": 0.0005304,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0011989
+    },
+    "hash": "32955ec1521aa79569f9db947d6d5b0b",
+    "sourceFile": "news_media_comunicati_sciopero_generale_13_dicembre.html",
+    "thoughts": "**Determining strike details**\n\nI'm setting some strike parameters: isStrike is true, and I need to figure out the startDate and endDate based on the provided format. The article mentions the strike on \"Venerdì 13 dicembre,\" and since it was published on December 12, 2024, I conclude the date is December 13, 2024. This means the startDate is 2024-12-13 09:00:00 and the endDate is 2024-12-13 13:00:00. It’s a national strike, so locationType is \"NATIONAL,\" with locationCodes set as null.",
+    "tokens": {
+      "input": 13370,
+      "output": 1326,
+      "total": 14696
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-09-29 00:00:00",
+      "endDate": "2023-09-30 00:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 26673,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00067185,
+      "outputCost": 0.0011868,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00185865
+    },
+    "hash": "3a0e5accc182a3cef18c0430b709e1b6",
+    "sourceFile": "venerd_29_settembre_sciopero_nazionale_trasporto_pubblico_possibili_disagi.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to output JSON according to the specified schema. The Italian text discusses an upcoming national strike for public transport on Friday, September 29. It suggests possible disruptions due to this strike. The content confirms it’s an announcement prior to the strike and references the date of publication, September 25, 2023. Thus, I see that I'm confirming the strike is in the future, specifically noting the status and potential impacts on public transport users.",
+    "tokens": {
+      "input": 13437,
+      "output": 2967,
+      "total": 16404
+    }
+  }
+}

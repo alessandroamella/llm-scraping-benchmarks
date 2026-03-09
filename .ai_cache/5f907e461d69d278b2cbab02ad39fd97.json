@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 2888,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0003245,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0002985,
+      "cachedCost": 0,
+      "totalCost": 0.000638
+    },
+    "hash": "5f907e461d69d278b2cbab02ad39fd97",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_385.html",
+    "thoughts": "**Analyzing Strike Participation Data**\n\nOkay, here's the deal. I've just processed a webpage reporting participation in an ATAC strike. The title, \"Sciopero del trasporto pubblico, adesione personale Atac al 38,5%\", clearly states the topic. The key sentence is, \"L’adesione del personale Atac allo sciopero del trasporto pubblico, rilevata in mattinata, è stata pari al 38,5%.\" The crucial part is \"è stata,\" past tense. This means the strike *already happened*. The instructions I've been given are crystal clear: if the source reports *on* a strike that's finished, then the `isStrike` flag must be set to `false`. Conversely, it would be `true` only for an announcement of an *upcoming* event. So, given the context is of an event which has already completed, the logic dictates returning a JSON object with `isStrike: false`. Simple enough.\n\n\n",
+    "tokens": {
+      "input": 1298,
+      "output": 10,
+      "total": 1507
+    }
+  }
+}

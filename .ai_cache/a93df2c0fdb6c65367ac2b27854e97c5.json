@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9242,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007725,
+      "outputCost": 0.0001216,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00019885
+    },
+    "hash": "a93df2c0fdb6c65367ac2b27854e97c5",
+    "sourceFile": "sciopero_generale_adesione_personale_atac_179.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to confirm if the document is announcing a new or upcoming strike. The title indicates \"General strike, ATAC staff participation at 17.9%,\" and the body mentions that the participation was measured today at that percentage. This confirms that it reports a strike that already took place. So, based on the guidelines, I’ll set \"isStrike\" to false and provide the exact JSON response: {\"isStrike\": false}.",
+    "tokens": {
+      "input": 1545,
+      "output": 304,
+      "total": 1849
+    }
+  }
+}

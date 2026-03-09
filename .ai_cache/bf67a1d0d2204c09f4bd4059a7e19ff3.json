@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3440,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00370425,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0003495,
+      "cachedCost": 0,
+      "totalCost": 0.00406875
+    },
+    "hash": "bf67a1d0d2204c09f4bd4059a7e19ff3",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_279.html",
+    "thoughts": "**Analyzing the Atac Strike Report**\n\nOkay, let's break this down. The input content is, verbatim, \"Sciopero del trasporto pubblico, adesione personale Atac al 27,9% - Roma Servizi per la Mobilità.\" Right away, the mention of \"adesione\" (participation) and the percentage immediately suggests this isn't a *pre*-strike announcement. My gut says it's reporting on participation, either during the event or after its conclusion.\n\nNow, let's confirm. The instruction calls to determine if this describes an upcoming strike or a past/ongoing one. The key phrase \"adesione...al 27,9%\" and the supporting text \"L’adesione del personale Atac allo sciopero del trasporto pubblico di oggi è stata pari al 27,9%\" firmly place this in the latter category. It details actual participation. So, definitively, `isStrike` is `false`. This data point represents participation *during* or *after* a strike, not a pre-strike notice. Got it.\n\n\n",
+    "tokens": {
+      "input": 14817,
+      "output": 10,
+      "total": 15060
+    }
+  }
+}

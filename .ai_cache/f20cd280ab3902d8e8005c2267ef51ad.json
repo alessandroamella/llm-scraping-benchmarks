@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3177,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0003435,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.00027,
+      "cachedCost": 0,
+      "totalCost": 0.0006285
+    },
+    "hash": "f20cd280ab3902d8e8005c2267ef51ad",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_302.html",
+    "thoughts": "**Analyzing the ATAC Strike Participation Data**\n\nOkay, let's break this down. My source is a report from \"ATAC\" in Rome, specifically titled \"Sciopero del trasporto pubblico, adesione personale Atac al 30,2%\". The core of the document is the statement: \"L’adesione del personale Atac allo sciopero del trasporto pubblico, rilevata in mattinata, è stata pari al 30,2%.\"\n\nThe key here is the use of the past tense (\"è stata\"). The document is *reporting* the participation (\"adesione\") in a strike that has *already happened*. It's not announcing a new strike, nor giving any advance notice. It's simply stating the level of employee participation observed this morning.\n\nTherefore, following the criteria provided, the correct determination is: `isStrike = false`. It's a report on the *aftermath* of a strike, not a pre-strike announcement. The focus is on the *result* and not the *event's prospect*. The document's title and contents are clearly indicative of this retrospective reporting.\n\n\n",
+    "tokens": {
+      "input": 1374,
+      "output": 10,
+      "total": 1564
+    }
+  }
+}

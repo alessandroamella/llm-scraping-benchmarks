@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8356,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006714,
+      "outputCost": 0.0001544,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008258
+    },
+    "hash": "89d64394f1f88419340075cd3d64c868",
+    "sourceFile": "sciopero_sulla_rete_atac_chiuse_metro_ferrovia_termini_centocelle.html",
+    "thoughts": "**Processing strike information**\n\nI need to produce JSON based on the strike extraction schema. The content is in Italian and discusses an ongoing strike on the Atac network, stating that it will conclude at 16:30. Since it's an ongoing strike, the status should reflect that. According to the instructions, I only set `isStrike` to true if it announces an upcoming strike, which it doesn't—it's ongoing. So, `isStrike` will be false, and I won’t extract any strike data.",
+    "tokens": {
+      "input": 13428,
+      "output": 386,
+      "total": 13814
+    }
+  }
+}

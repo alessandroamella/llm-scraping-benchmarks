@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8406,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000776,
+      "outputCost": 0.0001688,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002464
+    },
+    "hash": "701f19fbac2e7efb34d87724589697e7",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_212.html",
+    "thoughts": "**Evaluating strike data**\n\nI need to prepare a JSON output reflecting the current status of a public transport strike in Italy. The content indicates that there's a public transport strike, with Atac personnel's participation at 21.2% as of mid-morning. It looks like this is providing information on participation rather than announcing a future strike. According to instructions, I should only set isStrike to true for upcoming strikes, so I need to clarify that detail in the output.",
+    "tokens": {
+      "input": 1552,
+      "output": 422,
+      "total": 1974
+    }
+  }
+}

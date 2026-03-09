@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-03-21 00:00:00",
+      "endDate": "2025-03-21 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 25242,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006733,
+      "outputCost": 0.0007392,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0014125
+    },
+    "hash": "e1b195ab2698a57a6331c5a92ce876fc",
+    "sourceFile": "venerdi_21_marzo_sciopero_nazionale_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Extracting strike details**\n\nI’m looking into the details of a national strike scheduled for Friday, March 21, 2025. The article states it’s a 24-hour strike, but it doesn't specify exact times. I’m considering setting the startDate to \"2025-03-21 00:00:00\" and endDate to \"2025-03-21 23:59:59\". Since it’s a national strike, I’ll classify locationType as \"NATIONAL\". I’ll also need to assume the local timezone since it’s not specified.",
+    "tokens": {
+      "input": 13466,
+      "output": 1848,
+      "total": 15314
+    }
+  }
+}

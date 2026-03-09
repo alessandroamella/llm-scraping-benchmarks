@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 09:00:00",
+      "endDate": "2024-12-13 13:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "09:00-13:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 36890,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000872,
+      "outputCost": 0.0009548,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.001042
+    },
+    "hash": "0253989fdf867da7af12effe3895ca7d",
+    "sourceFile": "news_media_comunicati_sciopero_generale_13_dicembre.html",
+    "thoughts": "**Extracting strike data**\n\nI need to output a JSON structure indicating if there’s a strike, including details like `isStrike` true/false and possibly additional `strikeData`. The input content in Italian indicates a general strike on Friday, December 13, from 9 to 13 due to a ministry ordinance. It suggests that public transport in Rome, including the Atac network, will be affected. So yes, it seems to be an announcement for an upcoming strike.",
+    "tokens": {
+      "input": 1744,
+      "output": 2387,
+      "total": 4131
+    }
+  }
+}

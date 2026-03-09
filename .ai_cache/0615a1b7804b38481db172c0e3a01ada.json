@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7032,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007695,
+      "outputCost": 0.000154,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00023095
+    },
+    "hash": "0615a1b7804b38481db172c0e3a01ada",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_112.html",
+    "thoughts": "**Deciding on strike status**\n\nI need to output JSON according to the instructions, and the content is about a public transport strike in Italy. The specific turnout rate mentioned is 11.2%. Since this news is discussing participation in a strike that already happened, I understand that I should set isStrike to false. Ultimately, the output should be {\"isStrike\": false}, with no additional strikeData. It's good to keep things clear and concise!",
+    "tokens": {
+      "input": 1539,
+      "output": 385,
+      "total": 1924
+    }
+  }
+}

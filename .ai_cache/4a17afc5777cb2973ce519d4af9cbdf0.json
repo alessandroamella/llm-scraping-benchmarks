@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-10-21 08:30:00",
+      "endDate": "2022-10-21 12:30:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 35705,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008075,
+      "outputCost": 0.001342,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00142275
+    },
+    "hash": "4a17afc5777cb2973ce519d4af9cbdf0",
+    "sourceFile": "venerd_prossimo_bus_della_roma_tpl_rischio_830_1230_sciopero_usb.html",
+    "thoughts": "**Outputting JSON for strike announcement**\n\nI need to create a JSON output based on the provided schema. The announcement indicates isStrike should be true because it mentions an upcoming strike. The content states that bus services from Roma Tpl will be at risk next Friday from 8:30 to 12:30 due to a four-hour strike declared by the Usb union. It notes that services by Atac will run normally. I’ll ensure to format this correctly.",
+    "tokens": {
+      "input": 1615,
+      "output": 3355,
+      "total": 4970
+    }
+  }
+}

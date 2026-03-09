@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5320,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007725,
+      "outputCost": 0.0001156,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00019285
+    },
+    "hash": "f8a042f3b6ce5296b70e0658f4e46da1",
+    "sourceFile": "sciopero_nazionale_trasporto_pubblico_ha_aderito_101_personale_atac.html",
+    "thoughts": "**Ensuring accurate output format**\n\nI see that the system needs the \"strike_extraction\" format, which includes the fields isStrike and strikeData. When isStrike is false, I can either omit strikeData or set it to null. The example given is simply {\"isStrike\": false}, so I’ll make sure to match that exactly. I want to keep it concise, with no extra commentary, and just deliver the required format. Got it!",
+    "tokens": {
+      "input": 1545,
+      "output": 289,
+      "total": 1834
+    }
+  }
+}

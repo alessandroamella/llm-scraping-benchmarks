@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-12-07 09:00:00",
+      "endDate": "2023-12-07 13:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "09:00-13:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19851,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008175,
+      "outputCost": 0.0005952,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00067695
+    },
+    "hash": "60c3b3d5ce0ff8fd103cbbf9edb425e0",
+    "sourceFile": "gioved_sciopero_regionale_4_ore_trasporto_pubblico_rischio.html",
+    "thoughts": "**Extracting strike data**\n\nI need to output the JSON for the strike extraction. The document announces a new upcoming strike, with the title mentioning a \"Thursday four-hour regional strike,\" which puts public transport at risk. The details state it's for Thursday, December 7, from 9 to 1. The year isn't specified, so I'll assume it's the current year. Therefore, I plan to extract the data, confirming that \"isStrike\" is true and setting the start date appropriately.",
+    "tokens": {
+      "input": 1635,
+      "output": 1488,
+      "total": 3123
+    }
+  }
+}

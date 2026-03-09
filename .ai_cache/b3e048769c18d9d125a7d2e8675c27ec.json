@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 2869,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00032475,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000192,
+      "cachedCost": 0,
+      "totalCost": 0.00053175
+    },
+    "hash": "b3e048769c18d9d125a7d2e8675c27ec",
+    "sourceFile": "sciopero_nazionale_adesione_personale_atac_al_237.html",
+    "thoughts": "**Strike Participation Analysis**\n\nOkay, so I've got this piece of input: \"Sciopero nazionale, adesione personale Atac al 23,7%.\" Right away, I see \"adesione... allo sciopero nazionale di oggi,\" which tells me this is about participation in a national strike that's *already* happened, today. The crucial instruction is the one about setting `isStrike` to false if it's just about *participation* in a past strike. Since this clearly falls into that category – it's reporting the after-the-fact participation percentage – my assessment is straightforward: `isStrike` definitely needs to be set to `false`. It's a simple fact-based data point, not an ongoing strike event I need to track.\n\n\n",
+    "tokens": {
+      "input": 1299,
+      "output": 10,
+      "total": 1437
+    }
+  }
+}

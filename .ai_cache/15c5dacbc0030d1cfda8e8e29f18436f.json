@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 10160,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006689,
+      "outputCost": 0.0001508,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008197
+    },
+    "hash": "15c5dacbc0030d1cfda8e8e29f18436f",
+    "sourceFile": "sciopero_trasporto_pubblico_ha_aderito_135_personale_atac.html",
+    "thoughts": "**Finalizing strike status**\n\nI need to determine whether this event indicates a strike. The title indicates a past strike involving 13.5% of Atac personnel. Since the publication and update dates confirm that it's no longer ongoing, I’ll set \"isStrike\" to false. \n\nI’ll respond with the required JSON format, ensuring no extra commentary or formatting issues. Here’s the final answer: \n\n{\n  \"isStrike\": false\n}",
+    "tokens": {
+      "input": 13378,
+      "output": 377,
+      "total": 13755
+    }
+  }
+}

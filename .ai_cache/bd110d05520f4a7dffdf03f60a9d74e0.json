@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-10-05 00:00:00",
+      "endDate": "2024-10-05 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18777,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006755,
+      "outputCost": 0.0007152,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0013907
+    },
+    "hash": "bd110d05520f4a7dffdf03f60a9d74e0",
+    "sourceFile": "trasporto_pubblico_sabato_5_ottobre_sciopero_nazionale_24_ore_servizio_rischio.html",
+    "thoughts": "**Processing strike announcement**\n\nI need to prepare a JSON output indicating whether there's a strike. The content states there's a nationwide public transport strike in Rome on October 5, lasting for 24 hours, which makes isStrike true. The announcement also mentions service will be regular until 8:30 AM and again from 5 PM to 8 PM. I must also fill in the strikeData with the start and end dates formatted as 'yyyy-MM-dd HH:mm:ss', focusing on the timeframe provided.",
+    "tokens": {
+      "input": 13510,
+      "output": 1788,
+      "total": 15298
+    }
+  }
+}

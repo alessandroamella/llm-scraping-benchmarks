@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-11-27 00:00:00",
+      "endDate": "2023-11-27 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 27121,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006727,
+      "outputCost": 0.0010512,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0017239
+    },
+    "hash": "c05c9982dad337116296ce1ecde1cf84",
+    "sourceFile": "luned_27_novembre_sciopero_nazionale_trasporto_pubblico_possibili_disagi.html",
+    "thoughts": "**Analyzing content for JSON**\n\nI need to output JSON according to the schema provided in the prompt, analyzing the relevant content. The long page titled \"Lunedì 27 novembre sciopero nazionale del trasporto pubblico, possibili disagi - Roma Servizi per la Mobilità\" indicates that there will be a national public transport strike on November 27. It’s clear from the status section that the transport services will be at risk due to this strike, making it an essential upcoming announcement.",
+    "tokens": {
+      "input": 13454,
+      "output": 2628,
+      "total": 16082
+    }
+  }
+}

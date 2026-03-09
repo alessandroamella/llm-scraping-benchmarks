@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-07-07 00:00:00",
+      "endDate": "2023-07-07 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7685,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00036125,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.001374,
+      "cachedCost": 0,
+      "totalCost": 0.00191975
+    },
+    "hash": "acd9cb840680aeb655fff39679db8ab6",
+    "sourceFile": "venerd_7_luglio_trasporto_pubblico_rischio_sciopero_nazionale_24_ore_della_faisa_confail.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, so I've got a web page announcing a national strike, which is the core source material. The first thing to confirm is the date: it's a strike happening on Friday, July 7th. Since no year is explicitly stated, I'm going to assume it's the current year, 2023, as that matches the day of the week, but I'll make a note of this assumption given standard practice. The strike is for 24 hours. The location is \"national\" - \"Sciopero nazionale\" - a straightforward translation.\n\nNow, the service details are where it gets a little tricky. The text states \"regular until 8:30 and from 17 to 20.\" Initially, I need to interpret these windows. In Italian, this usually indicates periods *where* service is guaranteed or regular. However, it is an Italian text, and it's best to assume standard practice. This means the service is guaranteed from 00:00 to 08:30 and from 17:00 to 20:00. This implies the strike likely runs from 08:30 to 17:00 and from 20:00 until the end of service, but that's implied.\n\nOkay, let's start constructing the JSON object based on the schema, but I want to be extra careful on dates and times.\n\n*   `isStrike`: definitely true.\n*   `strikeData`:\n    *   `startDate`: I have to set the beginning of the strike to 00:00:00 of July 7th. Thus, it's \"2023-07-07 00:00:00\". I will use 2023, as it's the current year and the provided data makes it match.\n    *   `endDate`: Given the strike is for 24 hours, the end date is \"2023-07-07 23:59:59\".\n    *   `locationType`: \"NATIONAL\". That's easy.\n    *   `guaranteedTimes`: The text indicates that the service will be regular, so I'll put: \\[\"00:00-08:30\", \"17:00-20:00\"\\]. But hold on. Let me check the provided schema. The `guaranteedTimes` should fit the pattern. Yep, it fits. The JSON is built.\n\n\n",
+    "tokens": {
+      "input": 1445,
+      "output": 123,
+      "total": 2484
+    }
+  }
+}

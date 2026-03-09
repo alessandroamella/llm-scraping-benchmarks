@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9179,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00066265,
+      "outputCost": 0.0001824,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00084505
+    },
+    "hash": "150f54f48bc2c3bd559325a21a645691",
+    "sourceFile": "sciopero_attive_metro_b_chiusa_c.html",
+    "thoughts": "**Determining strike status**\n\nI need to output a JSON response based on specific criteria. I have a long piece from Roma Servizi per la Mobilità regarding the ongoing strike status. The title suggests active metro lines, but specifically, it's about metro C being closed. The content indicates that the strike is current and expected to end at 1 PM. Therefore, since this is not an announcement of an upcoming strike, I have to set \"isStrike\" to false.",
+    "tokens": {
+      "input": 13253,
+      "output": 456,
+      "total": 13709
+    }
+  }
+}

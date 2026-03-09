@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 12164,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006635,
+      "outputCost": 0.0001448,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008083
+    },
+    "hash": "ebb4bdb3841395e2e865bb83be40f591",
+    "sourceFile": "sciopero_generale_nazionale_adesione_personale_atac_23.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to output JSON based on the strike_extraction schema. The provided content discusses a national general strike with a specific adherence rate of 23%. However, it seems to refer to a past event from December 2022. Since this information indicates participation in a strike that has already occurred, it doesn't announce an upcoming strike. Therefore, I’ll conclude that `isStrike` should be set to false, resulting in this output: {\"isStrike\": false}.",
+    "tokens": {
+      "input": 13270,
+      "output": 362,
+      "total": 13632
+    }
+  }
+}

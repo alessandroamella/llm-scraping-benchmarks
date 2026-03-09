@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-04-28 08:30:00",
+      "endDate": "2022-04-28 12:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 28659,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006746,
+      "outputCost": 0.0006108,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0012854
+    },
+    "hash": "b757d59e9bcbe1aa258ac6d8e4686ec1",
+    "sourceFile": "sciopero_trasporto_pubblico_gioved_28_servizio_rischio_830_1230.html",
+    "thoughts": "**Formatting JSON for strike information**\n\nI need to create a JSON output following the strike_extraction schema for a public transport strike in Rome. The content mentions the upcoming strike on Thursday, the 28th, with service disrupted from 8:30 AM to 12:30 PM. However, I noticed inconsistencies regarding publication dates—the article cites both 2022 and a publication date in 2026. This raises questions about the accuracy of the information. I'll clarify these details before finalizing the JSON.",
+    "tokens": {
+      "input": 13492,
+      "output": 1527,
+      "total": 15019
+    }
+  }
+}

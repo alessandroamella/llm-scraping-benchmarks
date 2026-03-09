@@ -1,0 +1,33 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24689,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007975,
+      "outputCost": 0.0013268,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00140655
+    },
+    "hash": "103aeab70c3b70983e7e75aa79245f65",
+    "sourceFile": "lunedi_22_settembre_sciopero_nazionale_di_24_ore_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Extracting strike announcement details**\n\nI need to determine if the document indicates an announcement for a new or upcoming strike. The content mentions a national 24-hour strike in Italy on Monday, September 22, threatening public transport services. It lists involved unions and specifies that the Roma transport system will be affected, but services will run normally until 8:30 AM and again from 5 PM to 8 PM. I should format this information into JSON according to the specified strike_extraction schema.",
+    "tokens": {
+      "input": 1595,
+      "output": 3317,
+      "total": 4912
+    }
+  }
+}

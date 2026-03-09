@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7071,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006676,
+      "outputCost": 0.0001384,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.000806
+    },
+    "hash": "5562960724711309f2c04ec53b0f5c45",
+    "sourceFile": "sciopero_trasporto_pubblico_ha_aderito_246_personale_atac.html",
+    "thoughts": "**Finalizing JSON output**\n\nI need to make sure I follow the instructions clearly. If it’s about cancellation or participation, I should set isStrike to false. The JSON format I need to provide is:\n\n{\"isStrike\": false}\n\nI must ensure to output this in the specified \"strike_extraction\" format as a JSON string without any extra text. Okay, let's get this correctly structured and ready to go!",
+    "tokens": {
+      "input": 13352,
+      "output": 346,
+      "total": 13698
+    }
+  }
+}

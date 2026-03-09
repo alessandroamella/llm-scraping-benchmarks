@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5094,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00374325,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0008085,
+      "cachedCost": 0,
+      "totalCost": 0.00456675
+    },
+    "hash": "07f88654dbe06079c5553ed08bd520fd",
+    "sourceFile": "venerd_20_maggio_sciopero_24_ore_trasporto_pubblico_rischio.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, let's break this down. My task is clear: I need to determine if this text announces an *upcoming* strike. The output needs to be a JSON object, specifically indicating `isStrike: true` or `false`, along with detailed strike data if it's a \"yes.\"\n\nFirst, I look at the text. The title is \"Venerdì 20 maggio sciopero di 24 ore. Trasporto pubblico a rischio - Roma Servizi per la Mobilità,\" immediately suggesting a strike. The content mentions \"Venerdì 20 maggio\" and \"sciopero generale nazionale di 24 ore.\" That's the core of the matter, a strike *is* being announced.\n\nHowever, a key data point: the \"Published Date\" is 09 Mar 2026, which is in the future. I need to be careful. Also, the Content Date Context reveals that the article was *actually* published in May 2022, and last updated in January 2023. *Aha!* This is a historical piece, not a new announcement, and a past event.\n\nThe instructions are specific, though: \"ONLY set isStrike to true if it is an announcement of an upcoming strike.\" This is the critical piece of the puzzle. Even though the text describes a strike, and is *about* a strike, it's not announcing one. It is a historical article from May 2022, so it's not an upcoming strike. The instructions are very clear that I am to analyze the content in the context of it being a strike announcement.\n\nTherefore, because this article *is not* announcing an upcoming strike, I am left to provide the following output: `{ \"isStrike\": false }`.\n\n\n",
+    "tokens": {
+      "input": 14973,
+      "output": 10,
+      "total": 15522
+    }
+  }
+}

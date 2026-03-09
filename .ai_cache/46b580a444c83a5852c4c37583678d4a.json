@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-11-29 09:00:00",
+      "endDate": "2024-11-29 13:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "09:00-13:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 23280,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00066395,
+      "outputCost": 0.0006916,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00135555
+    },
+    "hash": "46b580a444c83a5852c4c37583678d4a",
+    "sourceFile": "sciopero_generale_nazionale.html",
+    "thoughts": "**Clarifying strike details**\n\nI’m trying to make sense of the start date, which appears to be 2024-11-29 at 09:00:00. The strike runs from 9 to 13 on that day in November. The content mentions \"trasporto pubblico,\" specifically indicating that public transportation, including Rome's Atac, will be affected. Since this is a national strike, locationCodes should be explicitly null. For \"guaranteedTimes,\" I need to confirm if \"9 to 13\" indicates times when service is guaranteed, given the content's mention of a four-hour protest.",
+    "tokens": {
+      "input": 13279,
+      "output": 1729,
+      "total": 15008
+    }
+  }
+}

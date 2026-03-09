@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 16081,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00067725,
+      "outputCost": 0.0002456,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00092285
+    },
+    "hash": "569c9b45bb51fecb23f3a8f5f9d527aa",
+    "sourceFile": "sciopero_del_trasporto_pubblico_aperte_le_metropolitane_2.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI'm noticing a possible discrepancy in dates; the header says published in 2026, while internal references are from 2025. The user wants me to analyze if the content indicates a new or upcoming strike from ATAC. The title mentions a public transport strike, but it states, \"È in corso lo sciopero generale nazionale di 24 ore,\" meaning it's an ongoing strike, not an upcoming one. Therefore, I should conclude that isStrike is false, outputting it as {\"isStrike\": false}.",
+    "tokens": {
+      "input": 13545,
+      "output": 614,
+      "total": 14159
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9709,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008205,
+      "outputCost": 0.0001664,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00024845
+    },
+    "hash": "26d6731e838022012d9bb3ead013ea5a",
+    "sourceFile": "sciopero_del_trasporto_pubblico_aperte_le_metropolitane_2.html",
+    "thoughts": "**Confirming strike status**\n\nI’m analyzing service updates due to an ongoing strike. It looks like the Metro A-B/B1 and Termini-Centocelle services continue, but there might be some reductions. Metro C is running normally, while buses and trams may also see service reductions. Since we’re supposed to mark the strike status as not ongoing, I’ll prepare the output as a JSON object: {\"isStrike\": false}. No extra details are needed, just the straightforward JSON!",
+    "tokens": {
+      "input": 1641,
+      "output": 416,
+      "total": 2057
+    }
+  }
+}

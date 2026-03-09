@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9525,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00067475,
+      "outputCost": 0.0001672,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00084195
+    },
+    "hash": "e002cc047109c754bf73f5d53d0b99b0",
+    "sourceFile": "sciopero_del_trasporto_pubblico_aperte_le_metropolitane_e_la_termini_centocelle.html",
+    "thoughts": "**Clarifying strike status**\n\nThe content mentions a strike, but our guidelines specify that \"isStrike\" should only be set to true if there’s an upcoming strike. In this case, it indicates an ongoing strike, so \"isStrike\" should be false. \n\nI need to ensure the JSON format matches the example exactly, without any extra text. The final output will be: {\"isStrike\": false}. Let's deliver this as the clear and concise answer!",
+    "tokens": {
+      "input": 13495,
+      "output": 418,
+      "total": 13913
+    }
+  }
+}

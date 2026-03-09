@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9533,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000668,
+      "outputCost": 0.0001732,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008412
+    },
+    "hash": "8456faa2f20b45479d4b98c3f4825e65",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_174.html",
+    "thoughts": "**Evaluating strike participation**\n\nI'm realizing the content is about participation in a strike that has already taken place rather than announcing a new one. So, I should set isStrike to false. The output needs to precisely match the required JSON format without any additional commentary or formatting. It's clear that this reflects the instruction that if it’s just about participation, then isStrike should be false. So my final answer will be:  \n\n{\"isStrike\": false}",
+    "tokens": {
+      "input": 13360,
+      "output": 433,
+      "total": 13793
+    }
+  }
+}

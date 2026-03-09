@@ -1,0 +1,33 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20409,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000804,
+      "outputCost": 0.0008268,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0009072
+    },
+    "hash": "81b0a238d17f1726c2f61505153be51a",
+    "sourceFile": "luned_9_ottobre_sciopero_nazionale_trasporto_pubblico_possibili_disagi_24_ore.html",
+    "thoughts": "**Determining strike announcement details**\n\nI need to check if this document is announcing a strike according to the strike_extraction schema. The content is in Italian, and the title indicates a national transport strike on \"Monday, October 9.\" The body of the text discusses potential disruptions for public transport users due to a 24-hour strike declared by the USB union, mentioning service specifics in Rome. It appears to confirm that it's a planned strike announcement, likely needing to format this into JSON.",
+    "tokens": {
+      "input": 1608,
+      "output": 2067,
+      "total": 3675
+    }
+  }
+}

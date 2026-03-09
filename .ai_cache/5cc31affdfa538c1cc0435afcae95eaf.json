@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3907,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0037085,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000384,
+      "cachedCost": 0,
+      "totalCost": 0.0041075
+    },
+    "hash": "5cc31affdfa538c1cc0435afcae95eaf",
+    "sourceFile": "sciopero_trasporto_pubblico_ha_aderito_246_personale_atac.html",
+    "thoughts": "**Analyzing the Strike Document**\n\nOkay, let's break this down. The task at hand is to determine if this document is announcing a *future* strike. I need to be precise about this. \"Upcoming\" is the key. My criteria are clear: a \"yes\" means the document is announcing something that hasn't happened yet. A \"no\" means it's anything else, like a cancellation, a report *after* the fact, or real-time updates during the event.\n\nThe input content is \"Sciopero del trasporto pubblico, ha aderito il 24,6% del personale Atac\" – right away, the phrasing \"ha aderito\" (participated) is a flashing red light. This, combined with the context \"Public transport strike, 24.6% of Atac staff participated,\" this already indicates this event is over. The fact that the document's date is 11/11/2022 (updated 25/01/2023) is a further clue that it is not new.\n\nMy assessment is clear. The title and content, specifically the reported participation percentage (\"L’adesione del personale Atac allo sciopero dei trasporto pubblico di questa mattina è stata pari al 24,6%\"), all point to a post-event report. This is a post-mortem, not a heads-up. Therefore, it is *not* an announcement of an upcoming strike. The participation rate is what is important and that clearly describes an event which has already transpired.\n\n\n",
+    "tokens": {
+      "input": 14834,
+      "output": 10,
+      "total": 15100
+    }
+  }
+}

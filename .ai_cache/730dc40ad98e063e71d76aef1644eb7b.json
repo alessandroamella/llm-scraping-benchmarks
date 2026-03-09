@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-07-07 00:00:00",
+      "endDate": "2023-07-07 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 30537,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00068135,
+      "outputCost": 0.0009712,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00165255
+    },
+    "hash": "730dc40ad98e063e71d76aef1644eb7b",
+    "sourceFile": "venerd_7_luglio_trasporto_pubblico_rischio_sciopero_nazionale_24_ore_della_faisa_confail.html",
+    "thoughts": "**Extracting strike data**\n\nI need to extract the start and end dates in the 'yyyy-MM-dd HH:mm:ss' format. The text refers to \"Venerdì 7 luglio\" (Friday July 7) but doesn't specify times. It mentions a \"sciopero nazionale di 24 ore,\" implying it's 24 hours long. Service is said to be regular until 8:30 and from 17:00 to 20:00. This suggests these are the guaranteed service times during the strike. I also noticed there are updates available on romamobilita.it.",
+    "tokens": {
+      "input": 13627,
+      "output": 2428,
+      "total": 16055
+    }
+  }
+}

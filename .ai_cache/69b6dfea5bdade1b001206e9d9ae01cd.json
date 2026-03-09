@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5854,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00374375,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000498,
+      "cachedCost": 0.00019253,
+      "totalCost": 0.00444928
+    },
+    "hash": "69b6dfea5bdade1b001206e9d9ae01cd",
+    "sourceFile": "sciopero_del_trasporto_pubblico_ha_aderito_il_195_del_personale_atac.html",
+    "thoughts": "**Analyzing the Strike Document**\n\nOkay, let's break this down. My task is clear: determine if this document announces a future strike and, if so, extract the relevant details, returning only a JSON object. The crucial constraint here is to only return `isStrike = true` if this is an *announcement* of a *future* strike. Anything else - cancellations, participation reports, real-time updates – gets `isStrike = false`.\n\nNow, looking at the provided text, the title itself, \"Sciopero del trasporto pubblico, ha aderito il 19,5% del personale Atac\" (\"Public transport strike, 19.5% of Atac staff participated\"), already raises a red flag. The phrase \"ha aderito\" (has participated) implies this is about *past* participation. The content further confirms this: \"L’adesione complessiva del personale Atac allo sciopero odierno, rilevata in mattinata, è stata pari al 19,5%\" (\"The overall participation of Atac staff in today's strike, recorded in the morning, was 19.5%\"). The use of \"odierno\" (today's) and phrases like \"rilevata in mattinata\" (recorded in the morning) strongly suggests we're dealing with a report of a strike that has *already occurred*, not a forthcoming one. The publication date, 09/12/2025, aligns with this interpretation.\n\nTherefore, given that this document provides information on the participation in a strike that *already took place*, it clearly falls under the category of providing information *post-strike*. Thus, the final verdict is: `isStrike = false`.\n\n\n",
+    "tokens": {
+      "input": 14975,
+      "output": 10,
+      "total": 15317
+    }
+  }
+}

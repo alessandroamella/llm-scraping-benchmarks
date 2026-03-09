@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-02-25 08:30:00",
+      "endDate": "2022-02-25 23:59:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "08:30-17:00",
+        "20:00-23:59"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 27822,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008205,
+      "outputCost": 0.0008392,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00092125
+    },
+    "hash": "426bbabfaac695308c8d994cae865a58",
+    "sourceFile": "trasporto_pubblico_venerdi_25_febbraio_sciopero_nazionale_24_ore.html",
+    "thoughts": "**Extracting strike information**\n\nI need to output JSON that follows the strike extraction schema because this is focused on precise data extraction. The Italian article signals a strike on Friday, February 25, due to national 24-hour strikes from unions. It indicates possible disruptions for the Atac network, with agitation times specified. So, I should set isStrike to true and extract key strike data. I'm also figuring out the proper date format for February 25, without a year provided.",
+    "tokens": {
+      "input": 1641,
+      "output": 2098,
+      "total": 3739
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 29383,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00066795,
+      "outputCost": 0.0007972,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00146515
+    },
+    "hash": "5f460819b84a74573e9039bfc312beab",
+    "sourceFile": "news_media_comunicati_sciopero_generale_13_dicembre_240re.html",
+    "thoughts": "**Analyzing strike details**\n\nI need to output JSON according to the specified strike extraction format. There’s some content from Roma Servizi per la Mobilità titled \"Sciopero del trasporto pubblico, domani rischio stop per 24 ore.\" It indicates a nationwide 24-hour strike by the Usb union impacting public transport in Rome. The regular service runs until 8:30 AM and from 5 PM to 8 PM. Since it references \"tomorrow,\" the event date is December 13, 2024. I wonder if this is a new announcement.",
+    "tokens": {
+      "input": 13359,
+      "output": 1993,
+      "total": 15352
+    }
+  }
+}

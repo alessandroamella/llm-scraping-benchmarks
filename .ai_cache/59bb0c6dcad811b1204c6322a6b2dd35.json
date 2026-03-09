@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7676,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000773,
+      "outputCost": 0.000138,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002153
+    },
+    "hash": "59bb0c6dcad811b1204c6322a6b2dd35",
+    "sourceFile": "sciopero_nazionale_trasporto_pubblico_adesione_personale_atac_al_274.html",
+    "thoughts": "**Analyzing strike data**\n\nI'm checking the input to determine if we need to output JSON with isStrike or possibly strikeData. The content revolves around an Italian public transport strike, where the Atac staff's participation was at 27.4%. \n\nIt looks like the information is focused on reporting existing participation rather than announcing a new strike. So, by the instructions, I should set isStrike to false. This is just about participation in a strike that already occurred.",
+    "tokens": {
+      "input": 1546,
+      "output": 345,
+      "total": 1891
+    }
+  }
+}

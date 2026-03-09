@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-20 00:00:00",
+      "endDate": "2025-06-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 27154,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00068245,
+      "outputCost": 0.0008848,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00156725
+    },
+    "hash": "821362000257e03abc1513e89539f54f",
+    "sourceFile": "venerdi_20_giugno_sciopero_generale_nazionale_di_usb_cub_e_sgb_a_roma_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Identifying strike announcement**\n\nI need to format the output in JSON and confirm the content is about a strike announcement. The heading clearly states there's a general national strike on Friday, June 20, organized by USB, Cub, and Sgb, which puts public transportation in Rome at risk. The details indicate this will affect the Atac network and privately operated buses, but there will still be some service available between 8:30 and 20:00.",
+    "tokens": {
+      "input": 13649,
+      "output": 2212,
+      "total": 15861
+    }
+  }
+}

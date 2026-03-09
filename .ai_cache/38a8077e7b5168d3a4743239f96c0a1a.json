@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6388,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00066905,
+      "outputCost": 0.0001796,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00084865
+    },
+    "hash": "38a8077e7b5168d3a4743239f96c0a1a",
+    "sourceFile": "sciopero_trasporto_pubblico_attive_metropolitane_termini_centocelle.html",
+    "thoughts": "**Finalizing strike data output**\n\nIt seems like isStrike should be set to false, so we will just output {\"isStrike\": false}. The task requires us to extract strikeData only if isStrike is true, which it's not in this case. I need to confirm if the content is indeed from ATAC. The page mentions an ongoing strike, but there’s no new one. I'll ensure that the output matches the required JSON format without any extra commentary or whitespace.",
+    "tokens": {
+      "input": 13381,
+      "output": 449,
+      "total": 13830
+    }
+  }
+}

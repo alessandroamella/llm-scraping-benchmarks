@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-12-16 20:00:00",
+      "endDate": "2022-12-16 24:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "20:00-24:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 29894,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006755,
+      "outputCost": 0.0007776,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0014531
+    },
+    "hash": "849f6818553306e3ee3b6b1acee2a940",
+    "sourceFile": "venerd_16_dicembre_sciopero_generale_regionale_trasporto_pubblico_rischio_20_24.html",
+    "thoughts": "**Analyzing strike details**\n\nThe instruction is clear: I need to analyze the content about a strike announcement, confirming that isStrike is true. I should extract specific data like startDate, endDate, locationType, and locationCodes. The Italian text indicates a general strike on Friday, December 16, 2022, from 20:00 to 24:00 local time. However, I realize that using 24:00 isn't valid in ISO time, so I need to convert it to represent it as 00:00 the next day for proper formatting.",
+    "tokens": {
+      "input": 13510,
+      "output": 1944,
+      "total": 15454
+    }
+  }
+}

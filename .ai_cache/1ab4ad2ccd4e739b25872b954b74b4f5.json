@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-11-29 00:00:00",
+      "endDate": "2024-11-30 00:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 26606,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007955,
+      "outputCost": 0.0014252,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00150475
+    },
+    "hash": "1ab4ad2ccd4e739b25872b954b74b4f5",
+    "sourceFile": "venerdi_29_novembre_sciopero_generale_nazionale_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Preparing strike data output**\n\nI need to output JSON indicating whether there's a strike, with true or false for `isStrike` and relevant `strikeData` if it's applicable. The content is in Italian, detailing a national strike on Friday, November 29, affecting public transport. It mentions that the service will be normal until 8:30 AM and between 5 PM and 8 PM, but a strike will occur the rest of the day. So, I’ll set `isStrike` to true and fill in the start and end dates accordingly.",
+    "tokens": {
+      "input": 1591,
+      "output": 3563,
+      "total": 5154
+    }
+  }
+}

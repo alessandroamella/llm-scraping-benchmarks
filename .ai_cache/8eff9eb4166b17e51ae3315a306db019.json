@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 14816,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00066635,
+      "outputCost": 0.000248,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00091435
+    },
+    "hash": "8eff9eb4166b17e51ae3315a306db019",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_22.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI'm looking at a document mentioning \"Sciopero del trasporto pubblico, adesione personale Atac al 22%,\" published on February 17, 2023. It doesn't announce a new strike but rather talks about adherence to a strike that already occurred. The phrase \"L'adesione ... è stata rilevata in mattinata\" indicates it's reflecting on an event that happened, so I'm concluding that there isn't an active strike. Therefore, I'll output a JSON object saying it's not a strike.  \n{\"isStrike\": false}",
+    "tokens": {
+      "input": 13327,
+      "output": 620,
+      "total": 13947
+    }
+  }
+}

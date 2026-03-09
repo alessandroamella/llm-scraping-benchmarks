@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3794,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0003255,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0003495,
+      "cachedCost": 0,
+      "totalCost": 0.00069
+    },
+    "hash": "434ff9a38bf65e094a06be89c14543d8",
+    "sourceFile": "sciopero_generale_adesione_personale_atac_179.html",
+    "thoughts": "**Analyzing the Atac Strike Data**\n\nOkay, so I've got this piece of text: \"L’adesione complessiva del personale Atac allo sciopero generale di oggi, rilevata in mattinata, è stata del 17,9 per cento.\" My immediate goal is to figure out if this is an announcement about a future strike or a report on one that's already happening. The instructions are pretty clear: if it's talking about participation *during* a strike, then `isStrike` needs to be set to false.\n\nLet me break down the Italian. \"Adesione... di oggi\" – \"participation... of today.\" The critical phrase here is \"di oggi,\" indicating that they are measuring participation *today*. Since they are measuring something in the moment, it's safe to assume that the strike is either ongoing or already completed. This isn't a *pre-emptive* announcement.\n\nTherefore, because the text describes *participation* on the day in question, I'm setting `isStrike` to false. This is a post-strike assessment, not a pre-strike warning. Case closed.\n\n\n",
+    "tokens": {
+      "input": 1302,
+      "output": 10,
+      "total": 1545
+    }
+  }
+}

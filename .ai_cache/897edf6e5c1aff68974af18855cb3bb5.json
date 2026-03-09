@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-29 20:00:00",
+      "endDate": "2025-10-29 24:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "20:00-24:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24278,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00067435,
+      "outputCost": 0.0007016,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00137595
+    },
+    "hash": "897edf6e5c1aff68974af18855cb3bb5",
+    "sourceFile": "domani_sciopero_serale_di_4_ore_a_rischio_i_bus_del_deposito_magliana.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to format the content as JSON and identify if it's announcing an upcoming strike. The text is in Italian, with a title indicating a 4-hour strike affecting buses at the Magliana depot. The content confirms this strike is scheduled for tomorrow evening. It notes that certain bus lines will be impacted from 8 PM to midnight, confirmed by the unions Orsa Tpl and Usb. With this information, it looks clear that this document is indeed announcing a new strike.",
+    "tokens": {
+      "input": 13487,
+      "output": 1754,
+      "total": 15241
+    }
+  }
+}

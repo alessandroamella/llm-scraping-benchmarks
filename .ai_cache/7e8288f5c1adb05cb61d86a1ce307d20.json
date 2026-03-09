@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-12-15 00:00:00",
+      "endDate": "2023-12-15 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 26522,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006704,
+      "outputCost": 0.000966,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0016364
+    },
+    "hash": "7e8288f5c1adb05cb61d86a1ce307d20",
+    "sourceFile": "venerd_sciopero_nazionale_trasporto_pubblico_servizio_rischio.html",
+    "thoughts": "**Analyzing strike information**\n\nI’m looking at a document dated 2023, mentioning \"status: 1 Venerdì 15 dicembre ...\" It seems related to a strike occurring then, not in 2026. The mention of \"sciopero nazionale del trasporto pubblico\" suggests it's about public transport services, with notes about regular operations until specific times. The release date being 10/12/2023 indicates it's historical. I need to classify this accurately: it’s not announcing an upcoming strike, so setting isStrike to true isn’t appropriate.",
+    "tokens": {
+      "input": 13408,
+      "output": 2415,
+      "total": 15823
+    }
+  }
+}

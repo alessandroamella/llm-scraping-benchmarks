@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "20:00-24:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22200,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007955,
+      "outputCost": 0.0007824,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00086195
+    },
+    "hash": "e2c1a53076b86955d03bb6d56c505f5f",
+    "sourceFile": "domani_sciopero_serale_di_4_ore_a_rischio_i_bus_del_deposito_magliana.html",
+    "thoughts": "**Clarifying strike details**\n\nI’m looking at the times given—20 to 24 for a four-hour strike—which is affecting only buses from the Magliana depot. That suggests it's specific to that depot rather than a broader region. The strike data requires identifying location types as either \"NATIONAL\" or \"REGIONAL.\" If it’s just limited to that depot, I think it leans toward being regional. Since Magliana is in Rome, the Lazio region code is 12, so I'll probably categorize it as REGIONAL with locationCodes [\"12\"].",
+    "tokens": {
+      "input": 1591,
+      "output": 1956,
+      "total": 3547
+    }
+  }
+}

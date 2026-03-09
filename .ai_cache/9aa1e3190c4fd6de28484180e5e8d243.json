@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-03 00:00:00",
+      "endDate": "2025-10-03 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7640,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00370675,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.0011445,
+      "cachedCost": 0,
+      "totalCost": 0.00503575
+    },
+    "hash": "9aa1e3190c4fd6de28484180e5e8d243",
+    "sourceFile": "sciopero_generale_nazionale_domani_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Strike Analysis and JSON Object Generation**\n\nOkay, let's break this down. My task is clear: I need to analyze this text and return a single JSON object confirming if it's a strike announcement and, if so, provide the relevant strike data. The constraints are straightforward – a boolean `isStrike` and an optional `strikeData` object, following the schema.\n\nFirst, I see the title: \"Sciopero generale nazionale, domani trasporto pubblico a rischio\" – \"General national strike, public transport at risk tomorrow.\" That screams strike! The publication date is 02/10/2025. The summary states \"Domani trasporto pubblico a rischio per lo sciopero generale nazionale di 24 ore...\" (Tomorrow public transport at risk for a 24-hour general national strike). Confirmed.\n\nLocation is \"nazionale\" (national). No need for region codes based on the prompt instructions when `locationType` is NATIONAL.\n\nNow for the guaranteed times. It says \"Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" The text specifically says \"fino alle 8,30\" (until 08:30) and \"dalle 17 alle 20\" (from 17:00 to 20:00). So I'll use those precise ranges: 00:00-08:30 and 17:00-20:00. This is pretty standard for Italian transport guarantees. Since the article was published on 02/10/2025 and it refers to \"domani\" (tomorrow), the strike date is 03/10/2025. The strike is a 24-hour strike. That gives me start date/time: 2025-10-03 00:00:00, and end date/time: 2025-10-03 23:59:59.\n\nTherefore, the final output needs to be:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-10-03 00:00:00\",\n    \"endDate\": \"2025-10-03 23:59:59\",\n    \"locationType\": \"NATIONAL\",\n    \"guaranteedTimes\": [\n      \"00:00-08:30\",\n      \"17:00-20:00\"\n    ]\n  }\n}\n```\n\n\n",
+    "tokens": {
+      "input": 14827,
+      "output": 123,
+      "total": 15713
+    }
+  }
+}

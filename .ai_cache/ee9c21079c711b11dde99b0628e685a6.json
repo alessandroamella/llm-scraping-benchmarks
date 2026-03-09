@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-10-09 00:00:00",
+      "endDate": "2023-10-09 23:59:59",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 41449,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006778,
+      "outputCost": 0.0011548,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0018326
+    },
+    "hash": "ee9c21079c711b11dde99b0628e685a6",
+    "sourceFile": "venerdi_trasporto_pubblico_regolarmente_servizio_sciopero_nazionale_usb_rinviato_9_ottobre.html",
+    "thoughts": "**Assessing strike announcement criteria**\n\nI'm checking the instructions which say to set \"isStrike\" to true only for announcements of upcoming strikes. But, is a postponement considered an announcement? It's about a future strike, just rescheduled. According to the guidelines, if it's a cancellation or updates about past or ongoing strikes, I should set it to false. Since this is about the new date (October 9), it feels like it qualifies as an upcoming strike announcement.",
+    "tokens": {
+      "input": 13556,
+      "output": 2887,
+      "total": 16443
+    }
+  }
+}

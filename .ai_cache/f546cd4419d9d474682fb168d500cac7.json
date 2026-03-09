@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9581,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008065,
+      "outputCost": 0.0001844,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00026505
+    },
+    "hash": "f546cd4419d9d474682fb168d500cac7",
+    "sourceFile": "sciopero_del_trasporto_pubblico_aperte_le_metropolitane_e_la_ferrovia_termini_centocelle.html",
+    "thoughts": "**Evaluating strike announcement data**\n\nI need to focus on outputting JSON based on the strike_extraction schema and determine if the document is about an upcoming strike. The content from the Italian news post talks about an ongoing public transportation strike that ends at 12:30. Since it provides real-time updates like services continuing on various transport lines, it's clear this isn't about an upcoming strike; it's already happening. So, I won’t classify it as an announcement for a future event.",
+    "tokens": {
+      "input": 1613,
+      "output": 461,
+      "total": 2074
+    }
+  }
+}

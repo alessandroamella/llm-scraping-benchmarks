@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5279,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007705,
+      "outputCost": 0.0001344,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00021145
+    },
+    "hash": "c6ff046625a81de08a154bb013674652",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_22.html",
+    "thoughts": "**Determining strike status**\n\nI'm trying to output JSON based on the strike_extraction format. The content is Italian, indicating a public transport strike with Atac staff participation at 22%. Since this shows participation in an already occurred strike, I need to set isStrike to false. The output should therefore be: {\"isStrike\": false}. Although I'm cautious about potential misinterpretation due to \"pre-processing: mineru-html,\" the message clearly indicates a past strike participation. So, this output should reflect that accurately!",
+    "tokens": {
+      "input": 1541,
+      "output": 336,
+      "total": 1877
+    }
+  }
+}

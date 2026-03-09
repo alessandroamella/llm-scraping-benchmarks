@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-07-18 08:30:00",
+      "endDate": "2024-07-18 12:30:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "08:30-12:30], "
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 26699,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00068175,
+      "outputCost": 0.0010428,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00172455
+    },
+    "hash": "4735296f95a3a2cab969770b3d3c26b2",
+    "sourceFile": "trasporto_pubblico_gioved_sciopero_nazionale_830_1230_servizio_rischio.html",
+    "thoughts": "**Analyzing JSON output requirements**\n\nI need to output a JSON structure according to the specified schema for strike extraction. The instructions require fields like isStrike and possibly strikeData. We're looking at a national strike and there's a date reference stating \"giovedì sciopero nazionale dalle 8,30 alle 12,30\" and a publication time of 2026-03-09. However, the content also mentions an older date from July 2024. It's confusing because I see a historical mention alongside a future publication date.",
+    "tokens": {
+      "input": 13635,
+      "output": 2607,
+      "total": 16242
+    }
+  }
+}

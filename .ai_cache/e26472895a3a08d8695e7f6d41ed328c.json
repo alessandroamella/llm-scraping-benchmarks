@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-14 00:00:00",
+      "endDate": "2025-11-14 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 35638,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00067555,
+      "outputCost": 0.0009208,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00159635
+    },
+    "hash": "e26472895a3a08d8695e7f6d41ed328c",
+    "sourceFile": "trasporto_pubblico_venerdi_prossimo_sciopero_di_24_ore_servizio_a_rischio.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to structure the output in JSON using the strike extraction format. The document clearly indicates an announcement of an upcoming 24-hour strike for public transportation in Rome, scheduled for Friday. It includes essential details about the strike and service disruptions. Based on the content provided, I conclude that \"isStrike\" should indeed be set to true since it meets the criteria for an upcoming strike announcement, confirming my understanding of the task.",
+    "tokens": {
+      "input": 13511,
+      "output": 2302,
+      "total": 15813
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7972,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006806,
+      "outputCost": 0.0001448,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008254
+    },
+    "hash": "85596754f70d6c5ce8459c1a6314c5e9",
+    "sourceFile": "sciopero_del_trasporto_pubblico_chiuse_le_metropolitane_e_la_ferrovia_termini_centocelle_2.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI’m checking if the document is about an upcoming strike. The content mentions an ongoing national transport strike in Italy, with dates showing it’s active as of 08/11/2024. Since it is not announcing an upcoming strike, I determine that \"isStrike\" should be false. \n\nI realize we should format the output exactly as specified in the schema, so I’ll present the JSON simply as: { \"isStrike\": false }. There doesn't seem to be any additional details needed.",
+    "tokens": {
+      "input": 13612,
+      "output": 362,
+      "total": 13974
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 43248,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000821,
+      "outputCost": 0.0012828,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0013649
+    },
+    "hash": "037424a26ecc41bebd6cf9383ff29102",
+    "sourceFile": "4_febbraio_sciopera_4_ore_sindacato_usb_trasporto_pubblico_rischio.html",
+    "thoughts": "**Extracting strike details**\n\nI need to format the information according to the strike_extraction schema in JSON. The document is announcing a new strike, specifically a 4-hour strike on February 4 by the USB union. The text clearly indicates that this strike will affect public transport from 8:30 to 12:30. Since this is an official announcement, isStrike should be set to true. I'll extract the strike's start date in the specified format.",
+    "tokens": {
+      "input": 1642,
+      "output": 3207,
+      "total": 4849
+    }
+  }
+}

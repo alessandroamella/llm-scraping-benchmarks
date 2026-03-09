@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-12-15 00:00:00",
+      "endDate": "2023-12-15 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6191,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00034675,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.0008775,
+      "cachedCost": 0,
+      "totalCost": 0.00143425
+    },
+    "hash": "56737780a9a9c7d60dc261b28aa4b2f2",
+    "sourceFile": "trasporto_pubblico_sciopero_nazionale_differito_15_dicembre.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, here's the breakdown of this document. My primary task is to determine if this is indeed an announcement of an upcoming strike and, if so, extract the relevant details. The text explicitly states \"sciopero nazionale differito al 15 dicembre,\" meaning a national strike originally scheduled for November 27th has been postponed to December 15th. So, `isStrike` is definitely `true`.\n\nNow, let's nail down the specifics. The strike date is clearly December 15th. Since the text mentions a 24-hour strike, I'll set `startDate` to \"2023-12-15 00:00:00\" and `endDate` to \"2023-12-15 23:59:59\". These are standard assumptions for 24-hour events when the precise time isn't explicitly given.\n\nThe location is a bit nuanced. The document calls it a national strike, but it provides very specific details about Rome's public transport network (\"A Roma... Atac\"). While it's national in scope, the provided information is very localized. Given the detail concerning Atac in Rome, I'm classifying the `locationType` as \"REGIONAL\". Considering the ISTAT code request in the prompt and because the document concerns Rome (ATAC), assigning Lazio's code, \"12\" to `locationCodes` feels correct. It accurately reflects the specific information at hand.\n\nFinally, the text mentions guaranteed service times: \"regolare fino alle 8,30 e dalle 17 alle 20\". That translates directly into guaranteed times of \"00:00-08:30\" and \"17:00-20:00\".\n\nTherefore, here's my strike data:\n\n*   `isStrike`: true\n*   `strikeData`:\n    *   `startDate`: \"2023-12-15 00:00:00\"\n    *   `endDate`: \"2023-12-15 23:59:59\"\n    *   `locationType`: \"REGIONAL\"\n    *   `locationCodes`: [\"12\"]\n    *   `guaranteedTimes`: [\"00:00-08:30\", \"17:00-20:00\"]\n\nDespite the \"nazionale\" designation, the localized details strongly suggest focusing on the regional (Lazio) impact and providing the relevant regional code.\n\n\n",
+    "tokens": {
+      "input": 1387,
+      "output": 140,
+      "total": 2112
+    }
+  }
+}

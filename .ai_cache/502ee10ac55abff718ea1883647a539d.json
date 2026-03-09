@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-24 00:00:00",
+      "endDate": "2025-02-24 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6034,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0003535,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.0009045,
+      "cachedCost": 0,
+      "totalCost": 0.0014425
+    },
+    "hash": "502ee10ac55abff718ea1883647a539d",
+    "sourceFile": "lunedi_24_febbraio_sciopero_nazionale_del_trasporto_pubblico_possibili_disagi.html",
+    "thoughts": "**Strike Announcement Analysis: ATAC Strike - February 24, 2025**\n\nOkay, let's break this down. The task is clear: I need to determine if this HTML input describes a strike announcement and, if so, extract the crucial details. The text is in Italian, but I can work with that. The input mentions an ATAC strike on \"Lunedì 24 febbraio.\"\n\nMy initial thought is to identify the key elements. I've found the announcement itself: \"Lunedì 24 febbraio sciopero nazionale del trasporto pubblico.\" \"Sciopero\" clearly indicates a strike. The date is February 24th, and, based on the context of the prompt, I'm inferring this is February 24, 2025. The duration is specified as \"24 ore.\" This makes my job easier, and more clear to the user.\n\nNow, let's get granular. It's a \"sciopero nazionale,\" confirming a national scope. The text explicitly states guaranteed service times: \"Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" This translates to guaranteed periods from 00:00 to 08:30 and 17:00 to 20:00. This is important.\n\nBased on this, I'm setting the strike start as 2025-02-24 00:00:00 and the end as 2025-02-24 23:59:59, which is 24 hours. Let's refine the details. The confirmation is absolute: yes, it's a strike. My extracted data looks like this:\n\n*   **isStrike**: true\n*   **strikeData**:\n    *   **startDate**: 2025-02-24 00:00:00\n    *   **endDate**: 2025-02-24 23:59:59\n    *   **locationType**: NATIONAL\n    *   **guaranteedTimes**: \\[\"00:00-08:30\", \"17:00-20:00\"]\n\nI need to make sure this aligns perfectly with the expected schema for the output. I'm checking it now:\n* `isStrike`: boolean\n* `strikeData`:\n    * `startDate`: yyyy-MM-dd HH:mm:ss\n    * `endDate`: yyyy-MM-dd HH:mm:ss\n    * `locationType`: \"NATIONAL\" | \"REGIONAL\"\n    * `locationCodes` (optional if NATIONAL)\n    * `guaranteedTimes` (optional)\n\nGood. The data matches the schema precisely. Excellent. I'm confident in this interpretation. The HTML is processed, and the strike details are extracted accurately.\n\n\n",
+    "tokens": {
+      "input": 1414,
+      "output": 123,
+      "total": 2140
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6551,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007765,
+      "outputCost": 0.0001628,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00024045
+    },
+    "hash": "0631b181aae619a0b2f1faac241aac3f",
+    "sourceFile": "sospeso_sciopero_atac_16_gennaio_servizio_sar_regolare.html",
+    "thoughts": "**Setting strike status**\n\nI'm determining the strike status based on real-time updates. Since the content indicates that the strike scheduled for January 16 has been suspended, I know it's a cancellation and not an upcoming event. Therefore, I'll set `isStrike` to false. \n\nFor the output, I need to follow the correct format, so I'll prepare a simple JSON object: `{\"isStrike\": false}` without any additional explanation. That's all I need to provide!",
+    "tokens": {
+      "input": 1553,
+      "output": 407,
+      "total": 1960
+    }
+  }
+}

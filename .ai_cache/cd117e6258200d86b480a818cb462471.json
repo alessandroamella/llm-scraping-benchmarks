@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-11-28 00:00:00",
+      "endDate": "2024-11-28 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5302,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00033875,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.000657,
+      "cachedCost": 0,
+      "totalCost": 0.00118025
+    },
+    "hash": "cd117e6258200d86b480a818cb462471",
+    "sourceFile": "venerdi_28_novembre_sciopero_generale_nazionale_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Strike Information Extraction: A JSON Rendering**\n\nOkay, let's break this down. My task is to extract strike information from the source text and represent it as valid JSON. It's a national strike scheduled for Friday, November 28th. The details provided specify a 24-hour duration, implying it runs from midnight to midnight.\n\nGiven the time constraints, I can assume the start and end dates. That means the strike **starts** at \"2024-11-28 00:00:00\" and ends, effectively, at \"2024-11-28 23:59:59\" (or, technically, 00:00:00 the following day). The **location** is clearly \"NATIONAL\".\n\nNow, for the critical part: guaranteed service times. The source mentions service being regular \"until 08:30 and from 17:00 to 20:00,\" implying those are the protected service windows. Translating that, the `guaranteedTimes` should be `[\"00:00-08:30\", \"17:00-20:00\"]`. I have to be precise with the time format, as I recall there's a strict format requirement.\n\nI'm omitting `locationCodes` since instructions stated they are omitted.\n\nSo, constructing the JSON payload, I'll have:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-11-28 00:00:00\",\n    \"endDate\": \"2024-11-28 23:59:59\",\n    \"locationType\": \"NATIONAL\",\n    \"guaranteedTimes\": [\"00:00-08:30\", \"17:00-20:00\"]\n  }\n}\n```\n\nI'll double-check this JSON output for syntax correctness using a validator, and ensure the date/time formats are precisely as requested before calling this a day. Everything hinges on ensuring the data format is perfect for this!\n\n\n",
+    "tokens": {
+      "input": 1355,
+      "output": 123,
+      "total": 1916
+    }
+  }
+}

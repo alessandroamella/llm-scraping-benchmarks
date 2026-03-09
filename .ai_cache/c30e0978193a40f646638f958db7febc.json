@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-01-14 08:30:00",
+      "endDate": "2022-01-14 12:30:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "08:30-12:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 32329,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008085,
+      "outputCost": 0.0007872,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00086805
+    },
+    "hash": "c30e0978193a40f646638f958db7febc",
+    "sourceFile": "venerdi_14_gennaio_sciopero_nazionale_4_ore_trasporto_pubblico_rischio.html",
+    "thoughts": "**Determining context for a national strike**\n\nI'm trying to pinpoint the year of an excerpt referring to a date in Italy, specifically \"Venerdì 14 gennaio.\" Without a year, it could refer to several years, but 2022 is a possibility since January 14 was a Friday that year. \n\nNow, I'm diving into the details of national strikes. The instructions suggest that location codes should be null for national strikes. I’ll set location codes to null since the content refers to \"sciopero nazionale.\"",
+    "tokens": {
+      "input": 1617,
+      "output": 1968,
+      "total": 3585
+    }
+  }
+}

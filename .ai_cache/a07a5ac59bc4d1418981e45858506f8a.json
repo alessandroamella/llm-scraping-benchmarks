@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 10729,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000774,
+      "outputCost": 0.000154,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002314
+    },
+    "hash": "a07a5ac59bc4d1418981e45858506f8a",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_144.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to output JSON based on the strike_extraction schema. I see that the content of the Italian article discusses participation in a public transport strike by Atac, reporting a 14.4% involvement at mid-morning. While it mentions “today,” it implies that the strike is ongoing rather than announcing a new one. Since it only provides information about participation, I should set isStrike to false, per the instructions. It's not announcing an upcoming strike—just a participation report.",
+    "tokens": {
+      "input": 1548,
+      "output": 385,
+      "total": 1933
+    }
+  }
+}

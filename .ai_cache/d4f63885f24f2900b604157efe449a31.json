@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3146,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00032575,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0003405,
+      "cachedCost": 0,
+      "totalCost": 0.00068125
+    },
+    "hash": "d4f63885f24f2900b604157efe449a31",
+    "sourceFile": "sciopero_del_trasporto_pubblico_adesione_personale_atac_al_273.html",
+    "thoughts": "**Analyzing the \"Strike\" Input**\n\nOkay, let's break this down. The core task is to identify if this text signals an *upcoming* strike. The input uses Italian, and the core phrases are \"Sciopero del Trasporto pubblico\" (strike of public transport) and \"adesione personale Atac\" (participation of Atac personnel). We have a straightforward rule set: if it's *about* an upcoming strike, we flag `isStrike: true` and include `strikeData`. Otherwise, it's `isStrike: false`. Cancellation/real-time service updates also get a `false` flag.\n\nThe key is in the phrasing: \"adesione del personale Atac allo sciopero... rilevata in mattinata.\" That \"rilevata in mattinata\" (detected this morning) is the giveaway. We're getting a report on the *participation*, not the announcement of a future event. This is about an *existing* strike, or one in progress. Therefore, this clearly describes the percentage of people who *participated* (adesione) in a strike that has already occurred or is ongoing. My final assessment is `isStrike: false`.\n\n\n",
+    "tokens": {
+      "input": 1303,
+      "output": 10,
+      "total": 1540
+    }
+  }
+}

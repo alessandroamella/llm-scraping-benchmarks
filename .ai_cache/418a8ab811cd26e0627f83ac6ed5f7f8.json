@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8991,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00066555,
+      "outputCost": 0.00016,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00082555
+    },
+    "hash": "418a8ab811cd26e0627f83ac6ed5f7f8",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_302.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to analyze the input content to check if it announces an upcoming strike. The document's title mentions a past strike in public transport, with a participation percentage of 30.2%. The publication dates suggest this event occurred in December 2021 and was updated in February 2022. Since it's reporting on a historical event, not an upcoming one, I conclude that the classification for isStrike should be false. My output will be a simple JSON indicating that.",
+    "tokens": {
+      "input": 13311,
+      "output": 400,
+      "total": 13711
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4063,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00370625,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0003165,
+      "cachedCost": 0,
+      "totalCost": 0.00403775
+    },
+    "hash": "f1ce9b000a9545d9247e37fea0b485bb",
+    "sourceFile": "sciopero_trasporto_aperte_metro_ferrovia_termini_centocelle.html",
+    "thoughts": "**Analyzing the Transport Strike Update**\n\nOkay, so I've got this piece of information from \"Sciopero del trasporto: aperte metro e ferrovia Termini-Centocelle.\" The goal is to figure out if this is an *announcement* of a future strike or a *real-time update* about an existing one. The instructions are pretty clear: only mark `isStrike` as `true` if it's an announcement of an upcoming strike. Otherwise, if it's about a current strike, it's `false`.\n\nThe Italian phrasing, \"È in corso lo sciopero del trasporto pubblico\" – literally \"The public transport strike *is in progress*\" – makes it pretty straightforward. This isn't some advance warning; it's a current state report. The strike is *happening now*. It even provides the information that the strike will end at 12:30. Therefore, based on the instructions, and because this isn't an *announcement*, I'm setting `isStrike` to `false`. It’s a real-time status update.\n\n\n",
+    "tokens": {
+      "input": 14825,
+      "output": 10,
+      "total": 15046
+    }
+  }
+}

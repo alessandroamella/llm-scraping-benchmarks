@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-03 00:00:00",
+      "endDate": "2025-10-03 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 23414,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00066765,
+      "outputCost": 0.0009116,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00157925
+    },
+    "hash": "85a12506f6b74c1fc9197a7bc74ca2bc",
+    "sourceFile": "sciopero_generale_nazionale_domani_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI'm looking at a content announcement for a 24-hour general national strike affecting public transport. So, it seems like I should set isStrike to true. Now, I need to extract the strikeData fields. The start date is tricky; the article mentions that the strike starts \"Domani,\" which likely means tomorrow.\n\nI’m interpreting that as starting at 00:00, but I need to consider the times mentioned: services will be regular until 8:30 and resume after 17:00. This is quite a conundrum!",
+    "tokens": {
+      "input": 13353,
+      "output": 2279,
+      "total": 15632
+    }
+  }
+}

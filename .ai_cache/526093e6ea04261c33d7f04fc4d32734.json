@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6923,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006719,
+      "outputCost": 0.0001764,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008483
+    },
+    "hash": "526093e6ea04261c33d7f04fc4d32734",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_132.html",
+    "thoughts": "**Evaluating strike status**\n\nI'm looking at a previous strike, and it seems that \"isStrike\" should be set to false because the content refers to a strike that has already happened. The information mentions it's regarding an adherence to a strike on public transport and indicates past dates. I need to confirm that there isn't an upcoming strike, and since everything points to it being in the past, I’ll prepare to respond with the correct JSON format: {\"isStrike\": false}.",
+    "tokens": {
+      "input": 13438,
+      "output": 441,
+      "total": 13879
+    }
+  }
+}
