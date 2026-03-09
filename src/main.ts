@@ -1,16 +1,22 @@
 import { NestFactory } from '@nestjs/core';
 import { config } from 'dotenv';
-import { BenchmarksModule } from './benchmarks/benchmarks.module';
+import { AppModule } from './app.module';
 import { BenchmarksService } from './benchmarks/benchmarks.service';
+import { AppLogger } from './logger/logger.service';
 
 // Carica variabili d'ambiente
 config();
 
 async function bootstrap() {
   // Crea il contesto dell'applicazione senza avviare server HTTP
-  const app = await NestFactory.createApplicationContext(BenchmarksModule, {
-    logger: ['log', 'error', 'warn', 'debug', 'verbose'],
+  const app = await NestFactory.createApplicationContext(AppModule, {
+    // logger: ['log', 'error', 'warn', 'debug', 'verbose'],
+    logger: false, // usa custom logger
   });
+
+  // Use logger as the application logger
+  const logger = app.get(AppLogger);
+  app.useLogger(logger);
 
   const benchmarksService = app.get(BenchmarksService);
 

@@ -699,3 +699,84 @@ else:
     print(
         "⚠️ Nessun dato sui token trovato nel JSON. Salto il grafico del consumo token."
     )
+
+# --- GRAFICO 8: PERFORMANCE (F1-SCORE) PER SOURCE (AZIENDA) ---
+details_data = []
+
+for d in data.get("details", []):
+    parser_name = d.get("parser", "")
+
+    # Ignora i modelli manuali o i test CHAOS
+    if "Manual" in parser_name or "CHAOS" in parser_name:
+        continue
+
+    # Estraiamo Modello e Strategia
+    try:
+        model_part = normalize_model_name(parser_name.split(" [")[0])
+        strategy_part = normalize_strategy_name(
+            parser_name.split("[")[-1].replace("]", "")
+        )
+    except IndexError:
+        continue
+
+    details_data.append(
+        {
+            "Source": d.get("source", "Sconosciuta"),
+            "Modello": model_part,
+            "Strategia": strategy_part,
+            "F1-Score": d.get("f1", 0),
+        }
+    )
+
+if details_data:
+    df_details = pd.DataFrame(details_data)
+
+    # Raggruppiamo per calcolare la media dell'F1-Score per Source e Modello
+    # In questo grafico ignoriamo la separazione per strategia (usiamo la media generale del modello)
+    # oppure puoi filtrare per la tua strategia "vincente", ad esempio:
+    # df_details = df_details[df_details["Strategia"] == "html-to-markdown"]
+
+    plt.figure(figsize=(14, 8))
+    ax = sns.barplot(
+        data=df_details,
+        x="Source",
+        y="F1-Score",
+        hue="Modello",
+        palette="viridis",
+        errorbar=None,  # Nascondiamo le barre di errore per maggiore pulizia visiva
+    )
+
+    plt.title(
+        "F1-Score medio per Modello su ciascun dataset (Source)",
+        fontsize=16,
+        fontweight="bold",
+    )
+    plt.ylabel("F1-Score (0.0 - 1.0)", fontsize=12)
+    plt.xlabel("Sorgente dati (azienda)", fontsize=12)
+    plt.ylim(0, 1.15)
+    plt.legend(title="Modello AI", bbox_to_anchor=(1.05, 1), loc="upper left")
+
+    # Aggiunta dei valori sopra le barre
+    for p in ax.patches:
+        height = p.get_height()
+        if height > 0:
+            ax.annotate(
+                format(height, ".2f"),
+                (p.get_x() + p.get_width() / 2.0, height),
+                ha="center",
+                va="bottom",
+                xytext=(0, 5),
+                textcoords="offset points",
+                fontsize=8,
+            )
+
+    plt.tight_layout()
+    if args.save:
+        plt.savefig("08_performance_per_source.png", dpi=300)
+        print("Generato: 08_performance_per_source.png")
+    if args.view:
+        plt.show()
+else:
+    print(
+        "⚠️ Nessun dettaglio valido trovato nel JSON per generare il grafico per Source."
+    )

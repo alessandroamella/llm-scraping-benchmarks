@@ -80,6 +80,7 @@ class ConfigurableAiParser implements IStrikeParser {
 // Define the shape of the saved report
 type BenchmarkResultDetail = ParserMetadata & {
   file: string;
+  source: Company;
   parser: string;
   score: number;
   isExactMatch: boolean;
@@ -645,6 +646,7 @@ export class BenchmarksService implements OnModuleInit {
               // Record Detail
               details.push({
                 file,
+                source: company,
                 parser: parser.name,
                 score: Number(comparison.score.toFixed(2)),
                 isExactMatch: comparison.isExactMatch,
@@ -803,6 +805,7 @@ export class BenchmarksService implements OnModuleInit {
 
       const qualityDetails = details.map((d) => ({
         file: d.file,
+        source: d.source,
         parser: d.parser,
         isExactMatch: d.isExactMatch,
         precision: d.precision,
