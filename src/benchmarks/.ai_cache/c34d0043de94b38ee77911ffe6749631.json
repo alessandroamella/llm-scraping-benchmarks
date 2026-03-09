@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7515,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000544,
+      "outputCost": 0.0001436,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.000198
+    },
+    "hash": "c34d0043de94b38ee77911ffe6749631",
+    "sourceFile": "funivia_del_faito_sospensione_temporanea_del_servizio_funiviario_dalle_ore_1105.html",
+    "thoughts": "**Analyzing service disruptions**\n\nI need to focus on extracting JSON for the content related to a service disruption, not a strike. The title indicates a temporary suspension of the funicular service due to adverse weather conditions, starting at 11:05 on April 14, 2025, and it states that updates will follow. Since this isn’t an upcoming strike announcement, I’ll set `isStrike` to false. My final output will be exactly: `{\"isStrike\": false}`.",
+    "tokens": {
+      "input": 1088,
+      "output": 359,
+      "total": 1447
+    }
+  }
+}

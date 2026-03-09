@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5974,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0002505,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.000861,
+      "cachedCost": 0,
+      "totalCost": 0.001296
+    },
+    "hash": "5455b1f1684bd50951a576ac2756149d",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_generale_di_24h_per_venerdi_12_dicembre_2025.html",
+    "thoughts": "**Analyzing the EAV Strike Announcement**\n\nOkay, so I've got this announcement from EAV about a strike. My primary goal here is to determine if this is an upcoming strike and then to extract the relevant information, structuring it according to a specific JSON schema. The announcement states \"Avviso di sciopero generale di 24h per venerdì 12 dicembre 2025.\" Straight away, I see it's for December 12, 2025, and it's a 24-hour strike. \"Generale\" indicates a general/national strike.\n\nI need to map this information into the schema. Since it's a 24-hour strike starting on December 12th, the `startDate` is \"2025-12-12 00:00:00\". The `endDate` should be \"2025-12-12 23:59:59,\" to represent the full day. The announcement mentions guaranteed service bands from 05:30 to 08:30 and 16:30 to 19:30, so those become the `guaranteedTimes` in the array. Since the text says \"sciopero generale nazionale\", I'm confident in setting `locationType` to \"NATIONAL\".\n\nNow, given that the `locationType` is \"NATIONAL,\" I need to remember the schema rule: `locationCodes` should be *omitted* entirely. This is crucial for data integrity.\n\nBased on all this, yes, this is an upcoming strike, so `isStrike` is true. Therefore, I can fill in the `strikeData` object with the dates, the `locationType`, and the `guaranteedTimes`. The final structure will reflect a full 24h strike.\n\n\n",
+    "tokens": {
+      "input": 1002,
+      "output": 123,
+      "total": 1699
+    }
+  }
+}

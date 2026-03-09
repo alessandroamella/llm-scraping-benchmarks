@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20063,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000075,
+      "outputCost": 0.0007972,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008722
+    },
+    "hash": "5163b9ca677cbcd562e39a4da782d56f",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_24_ore_del_13_dicembre_2024_aggiornamento.html",
+    "thoughts": "**Extracting strike details**\n\nI need to output JSON for strike extraction based on the user's content in Italian. The message indicates an upcoming strike on December 13, 2024, for 24 hours. It says, \"lo sciopero proclamato per domani 13 dicembre torna ad essere di 24 ore,\" confirming it's an upcoming event. I must confirm the strike's details, including the start and end dates, location type, location codes, and guaranteed times to produce the necessary strike data.",
+    "tokens": {
+      "input": 1500,
+      "output": 1993,
+      "total": 3493
+    }
+  }
+}

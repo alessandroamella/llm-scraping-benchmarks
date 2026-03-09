@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5973,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00246275,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.0007905,
+      "cachedCost": 0,
+      "totalCost": 0.00343775
+    },
+    "hash": "223b2694aeb721089f200d8e4fea038c",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_generale_nazionale_di_24_ore_venerdi_28_novembre_2025.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, here's the deal. My task is to take this EAV webpage content and determine if it's announcing an upcoming strike and, if so, format the information into a JSON output. This needs to be in a very specific format.\n\nI see the title: \"Servizio Autolinee - Avviso di sciopero generale nazionale di 24 ore venerdì 28 novembre 2025 - EAV srl\". Pretty clear so far. The key sentence confirms it: \"Per il giorno 28 novembre 2025 la O.S. USB ha proclamato azione di sciopero nazionale generale di 24 ore.\" Yep, definitely a strike announcement.\n\nNow, let's get down to the data. I need to output `isStrike` as a boolean, and if it's true, I also need to provide the `strikeData`. So, `isStrike: true`.\n\nI need the strike's `startDate` and `endDate`. The text says \"24 ore\" on November 28th, 2025. Typically, a 24-hour strike would run from the beginning of the day. Checking standard practice, I will set `startDate` to \"2025-11-28 00:00:00\" and `endDate` to \"2025-11-28 23:59:59\". No specific time is given so I set these times.\n\nThe content provides \"05:30-08:30\" and \"16:30-19:30\" as guaranteed times. So, I will store this as `guaranteedTimes`: [\"05:30-08:30\", \"16:30-19:30\"].\n\nThe text explicitly mentions \"nazionale\" which means the strike is \"national\". According to the documentation, if the `locationType` is \"NATIONAL\", then `locationCodes` MUST BE OMITTED. OK, so I’ll set `locationType` to \"NATIONAL\".\n\nThe final JSON structure I will need is:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-11-28 00:00:00\",\n    \"endDate\": \"2025-11-28 23:59:59\",\n    \"locationType\": \"NATIONAL\",\n    \"guaranteedTimes\": [\n      \"05:30-08:30\",\n      \"16:30-19:30\"\n    ]\n  }\n}\n```\n\n\n",
+    "tokens": {
+      "input": 9851,
+      "output": 123,
+      "total": 10501
+    }
+  }
+}

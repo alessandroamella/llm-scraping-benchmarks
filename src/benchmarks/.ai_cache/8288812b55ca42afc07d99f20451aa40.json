@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4710,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000297,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.0006165,
+      "cachedCost": 0,
+      "totalCost": 0.001098
+    },
+    "hash": "8288812b55ca42afc07d99f20451aa40",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_24h_per_venerdi_12_novembre_2025.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, let's break this down. I've got an announcement here for a strike on December 12, 2025. The key indicators are clear: CGIL, the General National Strike, is targeting EAV srl, which I know is the public transport entity in Campania. The announcement confirms a full 24-hour strike.\n\nMy initial assessment is definitely \"isStrike: true.\" I'll extract the core strike data. The start date is obviously December 12, 2025, but a 24-hour strike means it encompasses the entire day, so the refined start is \"2025-12-12 00:00:00\" and the end is \"2025-12-12 23:59:59.\"\n\nNow, the location. The text specifies \"sciopero generale nazionale,\" a national general strike. While EAV is specific to Campania (Region 15), the *type* is national. I need to be precise here. According to my schema, if the `locationType` is NATIONAL, the `locationCodes` *must* be omitted. So, I will set `locationType` to \"NATIONAL\" and leave `locationCodes` empty.\n\nFinally, the guaranteed service times: they're explicitly stated as 05:30-08:30 and 16:30-19:30. That's all the relevant information I require. This is now fully characterized.\n\n\n",
+    "tokens": {
+      "input": 1188,
+      "output": 123,
+      "total": 1722
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 09:00:00",
+      "endDate": "2024-12-13 13:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 23864,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00053155,
+      "outputCost": 0.0008276,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00135915
+    },
+    "hash": "ef736471be6e1344e73bdd9e542bb3f9",
+    "sourceFile": "linea_metropolitana_avvisi_di_sciopero_di_4_ore_del_13_dicembre_2024.html",
+    "thoughts": "**Defining strike parameters**\n\nI'm working on a four-hour strike scheduled for December 13, 2024. The strike has to be marked as true. \n\nI need to set the start date to \"2024-12-13 09:00:00\" and end it at \"2024-12-13 13:00:00\". For location type, it seems to be a national strike based on the context, but there might be regional elements. I'll keep it categorized as \"NATIONAL,\" since they require null for LocationCodes when it's national. But if it turns out to be regional, I'd have to use two-digit ISTAT codes.",
+    "tokens": {
+      "input": 10631,
+      "output": 2069,
+      "total": 12700
+    }
+  }
+}

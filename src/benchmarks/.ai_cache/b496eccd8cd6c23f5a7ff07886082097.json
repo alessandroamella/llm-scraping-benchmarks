@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8174,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00031825,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.001098,
+      "cachedCost": 0,
+      "totalCost": 0.00160075
+    },
+    "hash": "b496eccd8cd6c23f5a7ff07886082097",
+    "sourceFile": "strike-detail-venerd--12-dicembre-da-mezzanotte-alle-21-sciopero.html",
+    "thoughts": "**Strike Analysis & JSON Generation**\n\nOkay, let's break this down. My task is to analyze this text and construct the necessary JSON object for this Trenord strike in the Lombardy region (03). The core information is a national strike (\"sciopero nazionale\") on December 12th, 2025. Specifically, the text states \"Venerdì 12 dicembre da mezzanotte alle 21\". So, the strike runs from midnight to 9 PM on that day. It looks like there's a mention of potential additional impacts on the FERROVIENORD network from 9 PM to midnight that same day, but the core strike period is the one I need to capture.\n\nThe guaranteed service times are 6 AM to 9 AM and then again from 6 PM to 9 PM, which I'll need to include. Because this is a \"national strike\", the location type will be \"NATIONAL\" and I don't need location codes.\n\nNow, to format the JSON: I'm setting `isStrike` to true, obviously. The `startDate` is \"2025-12-12 00:00:00\". The `endDate`... that's the key. The initial text clearly says \"alle 21\", so the main strike ends at 21:00. However, the added impacts from 21:00 to 00:00 need consideration. I can include 23:59:59 to cover the possible disruption. I am leaning towards \"2025-12-12 21:00:00\", as I believe the main strike end time is 21:00. But, to be absolutely precise, I can include \"2025-12-12 23:59:59\". Let's make it 23:59:59 to be safe.\n\nSo: `locationType` is \"NATIONAL\". Since it is a national strike I do not need a `locationCodes`. The `guaranteedTimes` will be an array: `[\"06:00-09:00\", \"18:00-21:00\"]`.\n\nFinally, based on the provided date of the news (11/12/2025) and the strike date (12/12/2025), I can confirm this is indeed an upcoming strike. And yes, it is \"sciopero nazionale\". That should cover the JSON schema requirements for the required fields: `startDate`, `endDate`, and `locationType`. All set.\n\n\n",
+    "tokens": {
+      "input": 1273,
+      "output": 123,
+      "total": 2128
+    }
+  }
+}

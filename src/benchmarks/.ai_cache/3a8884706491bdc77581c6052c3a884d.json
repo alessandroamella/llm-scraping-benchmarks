@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 11163,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0009484,
+      "outputCost": 0.0002652,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0012136
+    },
+    "hash": "3a8884706491bdc77581c6052c3a884d",
+    "sourceFile": "sciopero_nazionale_trasporto_chiuse_metro_bb1_linea_c_corso_lavori_prolungamento_colosseo.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to output JSON according to the strike_extraction schema, which requires an isStrike boolean and strikeData if it's true. I have to determine if this content announces a new or upcoming strike. The title translates to \"National transport strike, metro A and B/B1 closed,\" which indicates that there is indeed a strike happening. The body confirms it too, stating there's a 24-hour national public transport strike occurring.",
+    "tokens": {
+      "input": 18968,
+      "output": 663,
+      "total": 19631
+    }
+  }
+}

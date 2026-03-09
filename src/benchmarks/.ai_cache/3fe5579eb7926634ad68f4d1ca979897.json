@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4186,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0001725,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.0005655,
+      "cachedCost": 0,
+      "totalCost": 0.0009225
+    },
+    "hash": "3fe5579eb7926634ad68f4d1ca979897",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_generale_nazionale_di_24_ore_venerdi_28_novembre_2025.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, here's the breakdown of this strike notification. It's a national general strike, spanning a full 24 hours on November 28th, 2025. The company affected is EAV (Campania), which is a regional transport provider, but the strike is national in scope. The guaranteed service bands are standard: 05:30 to 08:30 and 16:30 to 19:30. That's what we'd expect for this type of strike.\n\nFrom the data structure, `isStrike` is correctly set to `true`, confirming it's an announcement for an upcoming strike. The `startDate` and `endDate` are accurately defined as the beginning and end of the day on November 28th, 2025. Given the `locationType` is \"NATIONAL\", the `locationCodes` should be omitted, which is correct. The `guaranteedTimes` are also parsed properly. Everything seems consistent with established strike parameters. Looks like a standard input with the usual checks. No issues so far.\n\n\n",
+    "tokens": {
+      "input": 690,
+      "output": 123,
+      "total": 1190
+    }
+  }
+}

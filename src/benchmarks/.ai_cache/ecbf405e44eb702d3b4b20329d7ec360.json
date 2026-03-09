@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5487,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005185,
+      "outputCost": 0.0001448,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00019665
+    },
+    "hash": "ecbf405e44eb702d3b4b20329d7ec360",
+    "sourceFile": "sciopero_del_trasporto_pubblico_la_situazione_sulla_rete.html",
+    "thoughts": "**Crafting JSON response**\n\nOkay, I need to focus on the specifics: the content is about a general strike in Rome. Since it’s ongoing, I’ll determine that `isStrike` should be false. So, my final output should be exactly this: \n\n```json\n{\"isStrike\": false}\n```\n\nNo extra fields or comments, just the valid JSON object. Got it! I'm all set to deliver this concisely.",
+    "tokens": {
+      "input": 1037,
+      "output": 362,
+      "total": 1399
+    }
+  }
+}

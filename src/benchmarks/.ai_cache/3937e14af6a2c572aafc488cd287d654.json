@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-24 00:00:00",
+      "endDate": "2025-02-24 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22519,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003344,
+      "outputCost": 0.0006556,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00099
+    },
+    "hash": "3937e14af6a2c572aafc488cd287d654",
+    "sourceFile": "eav_autolinee_avviso_di_sciopero_di_24_ore_lunedi_24_febbraio_2025.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to check if the document announces an upcoming strike. It states: \"EAV Autolinee- Avviso di sciopero di 24 ore lunedì 24 febbraio 2025.\" The date is February 20, 2025, and it mentions a 24-hour national strike on February 24, 2025. The strike times are specified, so it is definitely an announcement. This means the isStrike status should be true since it's not a cancellation; it’s an upcoming strike.",
+    "tokens": {
+      "input": 6688,
+      "output": 1639,
+      "total": 8327
+    }
+  }
+}

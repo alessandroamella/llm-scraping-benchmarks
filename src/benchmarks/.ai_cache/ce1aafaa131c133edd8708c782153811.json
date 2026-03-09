@@ -1,0 +1,43 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-01-07 09:01:00",
+      "endDate": "2026-01-07 17:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "01",
+        "03",
+        "05",
+        "08",
+        "09",
+        "11"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 25946,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000614,
+      "outputCost": 0.000716,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0007774
+    },
+    "hash": "ce1aafaa131c133edd8708c782153811",
+    "sourceFile": "ttper_2026-01-07_09-01.pdf",
+    "thoughts": "**Determining strike announcement**\n\nI'm working on how to output JSON that marks whether there's a strike. The document clearly states a regional strike of Trenitalia Tper, scheduled for January 7, 2026, from 09:01 to 17:00. It mentions that this strike could involve regional trains, which means we definitely classify this as an announcement. I need to include that it guarantees certain services around the strike times, but the main focus is confirming it’s officially announced.",
+    "tokens": {
+      "input": 1228,
+      "output": 1790,
+      "total": 3018
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 28292,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00059825,
+      "outputCost": 0.000772,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00137025
+    },
+    "hash": "8410d45a32f6ecebd72cc6390e40d780",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_24_ore_venerdi_13_dicembre_2024.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to output JSON according to the strike_extraction schema. I’m looking at an article from EAV srl that announces a 24-hour strike on December 13, 2024. The union OS USB has proclaimed this strike, detailing the reasons and the service hours guarantee from 05:30 to 08:30 and 16:30 to 19:30. Since this announcement clearly references a future strike, I can confirm it’s about an upcoming strike for that date.",
+    "tokens": {
+      "input": 11965,
+      "output": 1930,
+      "total": 13895
+    }
+  }
+}

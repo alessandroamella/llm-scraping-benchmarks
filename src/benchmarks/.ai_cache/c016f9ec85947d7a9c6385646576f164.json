@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8296,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00093725,
+      "outputCost": 0.0001932,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00113045
+    },
+    "hash": "c016f9ec85947d7a9c6385646576f164",
+    "sourceFile": "sciopero_generale_nazionale_adesione_del_personale_atac_al_182.html",
+    "thoughts": "**Deciding on strike announcement**\n\nI need to output JSON based on the strike extraction schema. The document talks about a national strike, specifically mentioning Atac personnel with a participation rate of 18.2%. The title and body state that this participation occurred this morning, so it suggests the strike already happened. The publication date also confirms that it's reporting on an ongoing or past event, not an upcoming strike. I'll ensure the JSON reflects that accurately!",
+    "tokens": {
+      "input": 18745,
+      "output": 483,
+      "total": 19228
+    }
+  }
+}

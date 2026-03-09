@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 23969,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00052375,
+      "outputCost": 0.0006316,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00115535
+    },
+    "hash": "141e77d297665b6021e8e77847b883d1",
+    "sourceFile": "eav_autolinee_avviso_di_sciopero_di_24_ore_venerdi_13_dicembre_2024.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to output JSON according to the schema. The content is in Italian and is about a 24-hour strike on Friday, December 13, 2024, declared by EAV srl. It's stating that OS USB has proclaimed a national general strike for that day. Key points include a notice for bus lines and specified guarantee time windows of 05:30-08:30 and 16:30-19:30. During the strike, service depends on how many workers participate, so I'll set isStrike to true.",
+    "tokens": {
+      "input": 10475,
+      "output": 1579,
+      "total": 12054
+    }
+  }
+}

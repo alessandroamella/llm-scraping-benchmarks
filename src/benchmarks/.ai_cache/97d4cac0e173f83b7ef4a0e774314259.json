@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-09-22 00:00:00",
+      "endDate": "2025-09-22 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8174,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00255025,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.0010335,
+      "cachedCost": 0,
+      "totalCost": 0.00376825
+    },
+    "hash": "97d4cac0e173f83b7ef4a0e774314259",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_generale_nazionale_lunedi_22_settembre_2025.html",
+    "thoughts": "**Strike Information Extraction - EAV - National Strike**\n\nOkay, let's break this down. My objective is to pull strike information from this EAV HTML content, and the output *must* be JSON. I see an announcement: \"Linee Suburbane: Avviso di sciopero generale nazionale lunedì 22 settembre 2025 - EAV srl.\" Right, that's the title. And the body says \"Per il giorno 22 settembre 2025 la O.S. USB ha proclamato azione di sciopero generale nazionale...\". Got it, a strike is declared for September 22nd, 2025.\n\nSo, let me confirm. Yes, it's a strike. Location... \"nazionale\" which means national. The guaranteed service windows are from \"05:30 alle ore 8:30 e dalle ore 16:30 alle ore 19:30\".  Since it's a national strike, I don't need any regional codes, so I need to make sure to omit those (if present). Now to structure the information. The dates have to be in \"yyyy-MM-dd HH:mm:ss\" format. Strike start will be 2025-09-22 00:00:00 (since it's a 24-hour strike and the prompt doesn't give a specific hour, 00:00 is standard), and the end is 2025-09-22 23:59:59.  The `locationType` will be \"NATIONAL\" and the `guaranteedTimes` will be [\"05:30-08:30\", \"16:30-19:30\"].\n\nOkay, let's put it together:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-09-22 00:00:00\",\n    \"endDate\": \"2025-09-22 23:59:59\",\n    \"locationType\": \"NATIONAL\",\n    \"guaranteedTimes\": [\"05:30-08:30\", \"16:30-19:30\"]\n  }\n}\n```\n\nThat looks right. Valid strike, correctly formatted, and no forbidden fields. EAV is the carrier. Excellent. That should be a valid JSON output.\n\n\n",
+    "tokens": {
+      "input": 10201,
+      "output": 123,
+      "total": 11013
+    }
+  }
+}

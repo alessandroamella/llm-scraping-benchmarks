@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8242,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00093785,
+      "outputCost": 0.0001724,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00111025
+    },
+    "hash": "a5337f37833a7fcc4402f7dbde38f720",
+    "sourceFile": "sciopero_del_trasporto_pubblico_adesione_personale_atac_al_273.html",
+    "thoughts": "**Analyzing strike announcement content**\n\nI need to determine if the document signifies a new or upcoming strike based on its content. The document mentions a public transportation strike in Rome, with Atac staff participation at 27.3%. This figure indicates the participation rate for a strike occurring that day, possibly in October 2024. Given that the date indicates updates regarding this strike, it isn't announcing a future strike, so I’ll set `isStrike` to false.",
+    "tokens": {
+      "input": 18757,
+      "output": 431,
+      "total": 19188
+    }
+  }
+}

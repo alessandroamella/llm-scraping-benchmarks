@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-01-30 09:01:00",
+      "endDate": "2026-01-30 16:59:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "08"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 17190,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006125,
+      "outputCost": 0.0005268,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00058805
+    },
+    "hash": "7ecc27518685e3c0db59c5e37aba22ae",
+    "sourceFile": "ttper_2026-01-30_09-01.pdf",
+    "thoughts": "**Extracting required data**\n\nI need to pull out the strikeData with startDate and endDate formatted as 'yyyy-MM-dd HH:mm:ss'. The date provided is \"Dalle ore 9:01 alle ore 16:59 di venerdì 30 gennaio 2026\", so I'll set startDate to 2026-01-30 09:01:00 and endDate to 2026-01-30 16:59:00. The location type is \"REGIONAL\" for Emilia Romagna, with the relevant region code being \"08\". However, there aren't guaranteed service times listed in the text due to potential cancellations.",
+    "tokens": {
+      "input": 1225,
+      "output": 1317,
+      "total": 2542
+    }
+  }
+}

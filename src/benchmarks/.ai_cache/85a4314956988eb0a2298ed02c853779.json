@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7490,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00191325,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.000867,
+      "cachedCost": 0,
+      "totalCost": 0.00296475
+    },
+    "hash": "85a4314956988eb0a2298ed02c853779",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_generale_di_24h_per_venerdi_12_dicembre_2025.html",
+    "thoughts": "**My Analysis of the Strike Information**\n\nAlright, let's break this down. My objective is clear: I need to extract strike information from the provided text and structure it as a JSON object, meeting all the specified constraints. The text pertains to an EAV strike announcement, scheduled for December 12, 2025.\n\nFirst, I confirm that this is indeed an upcoming strike, so I'll set `isStrike` to `true`. Now, for the critical part: the `strikeData` object.\n\nThe text specifies a strike on December 12, 2025. It's a 24-hour strike. Thus, the `startDate` is \"2025-12-12 00:00:00\" and the `endDate` becomes \"2025-12-12 23:59:59\".\n\nThe crucial detail here is the strike's scope. Even though EAV is a regional entity and operates in Campania, the text explicitly describes the strike as a \"sciopero generale nazionale,\" which translates to a National General Strike. According to the instruction, when `locationType` is NATIONAL, `locationCodes` MUST be OMITTED. Therefore, `locationType` is set to \"NATIONAL\" and `locationCodes` will not be included.\n\nFinally, let's not forget the guaranteed times. The text provides two periods: \"05:30-08:30\" and \"16:30-19:30\". These need to be formatted as an array of strings in the `guaranteedTimes` field. So, the `guaranteedTimes` array is [\"05:30-08:30\", \"16:30-19:30\"].\n\nWith all the components identified, my JSON output is:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-12-12 00:00:00\",\n    \"endDate\": \"2025-12-12 23:59:59\",\n    \"locationType\": \"NATIONAL\",\n    \"guaranteedTimes\": [\"05:30-08:30\", \"16:30-19:30\"]\n  }\n}\n```\n\n\n",
+    "tokens": {
+      "input": 7653,
+      "output": 123,
+      "total": 8354
+    }
+  }
+}

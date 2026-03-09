@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:01:00",
+      "endDate": "2025-12-12 21:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4797,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00282975,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.000597,
+      "cachedCost": 0,
+      "totalCost": 0.00354975
+    },
+    "hash": "6e4e846789d3fbd552ca2a45445a266e",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-12-12-sciopero-nazionale-del-traspor.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, here's the deal. I've received a document concerning a \"SCIOPERO NAZIONALE DEL TRASPORTO FERROVIARIO\" – a national railway strike. My immediate goal is to extract the strike information and represent it in a clean, valid JSON object, assuming this is, in fact, a legitimate and upcoming strike announcement.\n\nFirst, I confirm it *is* an announcement – `isStrike` is confidently set to `true`. Now, I need to pinpoint the key details. The date is \"12 dicembre 2025,\" which I will parse to \"2025-12-12\" to fit the `yyyy-MM-dd` format. The strike starts at \"00:01\" and ends at \"21:00\" on that day. The location is clearly \"NAZIONALE,\" meaning National. The text doesn't specify any \"guaranteed times,\" so I will omit that field, as instructed.\n\nI am generating the structure:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-12-12 00:01:00\",\n    \"endDate\": \"2025-12-12 21:00:00\",\n    \"locationType\": \"NATIONAL\"\n  }\n}\n```\n\nThis adheres to all instructions and is in the correct format. The dates match the expected `yyyy-MM-dd HH:mm:ss` format. And, importantly, if the `locationType` is NATIONAL, `locationCodes` should not be included. It's all good, it's valid, and it's complete, based on the input text.\n\n\n",
+    "tokens": {
+      "input": 11319,
+      "output": 82,
+      "total": 11799
+    }
+  }
+}

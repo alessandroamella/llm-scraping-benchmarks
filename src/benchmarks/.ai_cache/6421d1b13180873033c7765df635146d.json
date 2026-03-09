@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-09-06 03:00:00",
+      "endDate": "2023-09-07 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 15191,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007745,
+      "outputCost": 0.0003972,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00047465
+    },
+    "hash": "6421d1b13180873033c7765df635146d",
+    "sourceFile": "strike-detail-mercoled--6-settembre--sciopero-dei-treni-regional.html",
+    "thoughts": "**Creating a strike JSON output**\n\nI need to format the information about the upcoming train strike on September 6th into a JSON structure. The event is confirmed, so I’ll set `isStrike` to true and include the `strikeData` with the start and end dates formatted as 'yyyy-MM-dd HH:mm:ss'. It appears this strike is specifically for regional trains in Lombardia, so I’ll mark the `locationType` as \"REGIONAL\" and set `locationCodes` to [\"03\"]. This should cover the necessary details!",
+    "tokens": {
+      "input": 1549,
+      "output": 993,
+      "total": 2542
+    }
+  }
+}

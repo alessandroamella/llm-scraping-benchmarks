@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-07-18 09:00:00",
+      "endDate": "2024-07-18 13:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 28326,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00054655,
+      "outputCost": 0.0010132,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00155975
+    },
+    "hash": "e7f253bad6744f3cdfd2a91a97c1332e",
+    "sourceFile": "strike-detail-gioved--18-luglio-dalle-9-alle-13-sciopero-del-per.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to output JSON according to the schema for the Trenord press release. The content indicates there's an upcoming strike for Ferroviord personnel on July 18, 2024, from 9 AM to 1 PM. The announcement specifies that it affects the infrastructure staff and doesn’t include Trenord personnel. I’m deciding if I should mark isStrike as true. Since today's date is July 16, 2024, it qualifies as an upcoming strike announcement. The article mentions the affected lines as well.",
+    "tokens": {
+      "input": 10931,
+      "output": 2533,
+      "total": 13464
+    }
+  }
+}

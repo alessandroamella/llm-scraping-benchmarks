@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8358,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00223125,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.000858,
+      "cachedCost": 0,
+      "totalCost": 0.00327375
+    },
+    "hash": "ee5db7a01360db45fa5bad77287fd351",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_generale_nazionale_di_venerdi_12_dicembre_2025.html",
+    "thoughts": "**Analyzing the EAV Strike Announcement**\n\nOkay, let's break this down. My goal is to determine if this EAV web page is announcing an upcoming strike and, if so, extract the crucial details. The input is clearly an announcement about a strike scheduled for December 12th, 2025. It's explicitly stated as a \"sciopero generale nazionale\" – a national general strike. That confirms my `isStrike` criterion is TRUE.\n\nNow, let's get the specific data. The title, \"Linee Flegree: Avviso di sciopero generale nazionale di venerdì 12 dicembre 2025,\" nails the strike date: 2025-12-12. The phrase \"sciopero generale nazionale\" definitively establishes its national scope, so my `locationType` is definitely \"NATIONAL.\" Since it's national, I don't need `locationCodes`.\n\nThe text also provides the guaranteed service times: \"Servizio garantito dalle ore 05:30 alle ore 8:30 e dalle ore 16:30 alle ore 19:30.\" Those are key, so I'll store them as `guaranteedTimes`. Because it's a general strike, the entire day is impacted, so my `startDate` will be \"2025-12-12 00:00:00\" and the `endDate` is \"2025-12-12 23:59:59\". That covers the full service day.\n\nMy output format needs to be JSON, and here's the final strike data structure:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-12-12 00:00:00\",\n    \"endDate\": \"2025-12-12 23:59:59\",\n    \"locationType\": \"NATIONAL\",\n    \"guaranteedTimes\": [\"05:30-08:30\", \"16:30-19:30\"]\n  }\n}\n```\n\nThe strike is confirmed, it's an announcement, and I've extracted the critical date, location type, and guaranteed service times for the EAV strike. Perfect.\n\n\n",
+    "tokens": {
+      "input": 8925,
+      "output": 123,
+      "total": 9620
+    }
+  }
+}

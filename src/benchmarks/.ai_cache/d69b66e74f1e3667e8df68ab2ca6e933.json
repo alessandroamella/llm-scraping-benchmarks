@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-09-22 00:00:00",
+      "endDate": "2025-09-23 00:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 28849,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003491,
+      "outputCost": 0.0009964,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0013455
+    },
+    "hash": "d69b66e74f1e3667e8df68ab2ca6e933",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_generale_nazionale_lunedi_22_settembre_2025.html",
+    "thoughts": "**Clarifying strike duration**\n\nThe phrase suggests a strike duration of 23 hours for certain staff and 24 hours for others, which is typical for a national strike starting at 00:00 on September 22 and lasting until 23:59 on the same day or the following day. I need to set plausible times for the start and end dates. The instruction specifies a format for dates, so I could set the end date to \"2025-09-23 23:59:59,\" though I'm aware this is an assumption.",
+    "tokens": {
+      "input": 6982,
+      "output": 2491,
+      "total": 9473
+    }
+  }
+}

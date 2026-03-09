@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "04",
+        "05"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4796,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0029145,
+      "outputCost": 0.000159,
+      "thinkingCost": 0.000495,
+      "cachedCost": 0,
+      "totalCost": 0.0035685
+    },
+    "hash": "1faa0a2f8ed07ab47b28afa11c722f16",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-11-28-sciopero-del-personale-di-sad-.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, let's break this down. My task is crystal clear: determine if this document is announcing a strike. The input is a markdown web page from Trenitalia/FS, which strongly suggests it's related to Italian rail services. I need to extract key details to definitively answer the `isStrike` question and populate the `strikeData` structure if it's a strike announcement.\n\nThe title itself, \"SCIOPERO DEL PERSONALE DI SAD E TRENTINO TRASPORTI,\" screams \"strike.\" That's a strong indicator. I need to confirm this definitively. The provided data gives me the structure for how to parse the information.\n\nI see a date: November 28th, 2025. The time frame is the entire day, from 00:00 to 23:59. That's good information for the `strikeData`. I need to convert that into the `yyyy-MM-dd HH:mm:ss` format.\n\nThe announcement specifies the region: Trentino Alto Adige and Veneto. That's crucial for `locationType`, which will be \"REGIONAL.\" The corresponding ISTAT codes are 04 and 05, respectively. That directly translates to the `locationCodes` array.\n\nFinally, the operators involved are \"SAD\" and \"TT – Trentino Trasporti.\" That will guide the `operator` field to record this.\n\nTherefore, `isStrike` should be `true`. The data seems very reliable. I can now extract the relevant details and compile the `strikeData` object. My next step will be to parse and structure the information into the `strikeData` format, using the given data. I need to be exact here, avoiding any ambiguity.\n\n\n",
+    "tokens": {
+      "input": 11658,
+      "output": 106,
+      "total": 12094
+    }
+  }
+}

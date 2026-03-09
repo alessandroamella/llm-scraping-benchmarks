@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 30565,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00054565,
+      "outputCost": 0.000866,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00141165
+    },
+    "hash": "d35e29c7667150e26694d8347008d001",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_di_24_ore_venerdi_13_dicembre_2024_aggiornamento.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI see that the document lists service hours and mentions a strike announcement—specifically, it's about a 24-hour strike on December 13, 2024. The reference to \"domani\" confirms it’s indeed for the next day, as today is December 12. It might be connected to a previous TAR decision. So, I think it’s accurate to say that there is an impending strike, which means isStrike should be true. Now, I need to extract relevant strike data.",
+    "tokens": {
+      "input": 10913,
+      "output": 2165,
+      "total": 13078
+    }
+  }
+}

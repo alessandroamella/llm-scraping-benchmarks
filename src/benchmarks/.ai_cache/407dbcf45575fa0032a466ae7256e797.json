@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3760,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00262625,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0003795,
+      "cachedCost": 0,
+      "totalCost": 0.00302075
+    },
+    "hash": "407dbcf45575fa0032a466ae7256e797",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_112.html",
+    "thoughts": "**Analyzing Strike Information**\n\nOkay, the task is straightforward: I need to pull strike information from this text and, crucially, return it as a parseable JSON array. The key here is the `isStrike` field.  I'm only considering something a true strike if it's explicitly announcing an *upcoming* event. Cancellations, post-strike summaries, real-time updates, or reports on past strikes are all out.\n\nLet's dive into the provided example. The headline is \"Sciopero del trasporto pubblico, adesione personale Atac all’11,2%\" which translates to \"Public transport strike, 11.2% Atac staff adherence.\" The content confirms this as it states, \"L’adesione complessiva del personale Atac allo sciopero del trasporto pubblico di questa mattina è stata pari all’11,2%\" which translates to, \"The overall adherence of Atac personnel to the public transport strike this morning was 11.2%.\" The publication date, 28/04/2022, is also a relevant piece of information.\n\nConsidering the content is about the *adherence* to a strike this morning. It's clearly a post-event report detailing the participation percentage of a strike that has already happened. Given the strict definition of `isStrike`, the correct value here is definitively `false`.\n\nTherefore, the final JSON output should be: `{\"isStrike\": false}`.\n\n\n",
+    "tokens": {
+      "input": 10505,
+      "output": 10,
+      "total": 10768
+    }
+  }
+}

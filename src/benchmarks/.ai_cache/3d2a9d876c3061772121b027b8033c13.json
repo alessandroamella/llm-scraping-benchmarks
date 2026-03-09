@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 09:00:00",
+      "endDate": "2024-12-13 13:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7918,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0018845,
+      "outputCost": 0.0001395,
+      "thinkingCost": 0.000795,
+      "cachedCost": 0,
+      "totalCost": 0.002819
+    },
+    "hash": "3d2a9d876c3061772121b027b8033c13",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_di_4_ore_del_13_dicembre_2024.html",
+    "thoughts": "**My Analysis of the Strike Information**\n\nAlright, let's break this down. My objective is clear: I need to extract strike information from the provided text and present it as valid JSON. No comments, no extraneous data; just the facts. The task is straightforward – flag whether it's an upcoming strike or not.  Specifically, an *announcement* of a future strike means `isStrike: true`, while information about a cancelled or past event would lead to `isStrike: false`.\n\nThe provided input is an announcement from EAV (Ente Autonomo Volturno), the Campania regional public transport company, concerning a strike. I need to treat this information about a strike scheduled for December 13, 2024. The text specifies a 4-hour strike: \"Servizio Autolinee: Avviso di sciopero di 4 ore del 13 dicembre 2024\" (Service: 4-hour strike notice for Dec 13, 2024).  Additionally, the text says: \"lo sciopero generale nazionale di 24 ore proclamato per il giorno 13 dicembre 2024 [...] è stato ridotto a 4 ore, dalle ore 09:00 alle ore 13:00.\" (The national general strike of 24 hours scheduled for Dec 13, 2024... has been reduced to 4 hours, from 09:00 to 13:00).\n\nBecause this text is an *announcement*, that makes this an *upcoming* strike.  Now, to define the relevant parameters. I'll construct the JSON.\n\n*   `isStrike`:  I determine this to be `true` because it is an announcement of an upcoming strike.\n*   `startDate`:  The date and time of the strike: `2024-12-13 09:00:00`.\n*   `endDate`:  The end date and time:  `2024-12-13 13:00:00`.\n*   `locationType`:  The location is regional, so: `\"REGIONAL\"`.\n*   `locationCodes`:  The ISTAT code for Campania is 15: `[\"15\"]`.\n*   `guaranteedTimes`: The information provided indicates there are no guaranteed services during the strike: \"Non sarà garantito il servizio durante l’orario di sciopero.\" The text does not provide enough information to include the window of service guarantee.\n\nWith these parameters identified, I can now construct the required JSON.\n\n\n",
+    "tokens": {
+      "input": 7538,
+      "output": 93,
+      "total": 8161
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20852,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000909,
+      "outputCost": 0.0007836,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008745
+    },
+    "hash": "b13e2a8b303d47d3dc99cd8ee672f376",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_24_ore_del_13_dicembre_2024_aggiornamento.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to output JSON based on the given schema. The document seems to announce an upcoming strike on December 13, 2024, as it mentions a 24-hour strike due to a legal decision. The content confirms that the strike remains in place and is an official update. So, it's clear there's an upcoming strike announcement for tomorrow. Therefore, I’ll set the ‘isStrike’ to true in the output.",
+    "tokens": {
+      "input": 1818,
+      "output": 1959,
+      "total": 3777
+    }
+  }
+}

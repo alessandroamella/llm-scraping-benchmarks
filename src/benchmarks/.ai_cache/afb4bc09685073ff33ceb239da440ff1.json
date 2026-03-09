@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6420,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00264275,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0002415,
+      "cachedCost": 0,
+      "totalCost": 0.00289925
+    },
+    "hash": "afb4bc09685073ff33ceb239da440ff1",
+    "sourceFile": "sciopero_generale_adesione_personale_atac_al_259.html",
+    "thoughts": "**Analyzing Strike Participation Data**\n\nOkay, here's the deal. I've just processed the following text: \"Sciopero generale, adesione personale Atac al 25,9% - Roma Servizi per la Mobilità.\" Right away, I see this is about the level of participation, the \"adesione,\" of ATAC staff in Rome for a general strike. The critical piece of information here is that participation rate is 25.9%.\n\nMy task, as I understand it, is to determine if this describes a *new* or *upcoming* strike, or if it's simply reporting the results of one that has *already* taken place. I'm going to follow the instructions carefully, this is straightforward.\n\nGiven the phrasing about \"participation,\" I'm concluding that this text is about reporting the actual *result* of a strike, not announcing a future event. Therefore, I'm setting `isStrike` to `false`. I can definitively say this is past-tense data, the 25.9% represents actual adherence in the past. It looks like it's simply reporting information about the concluded strike.\n\n\n",
+    "tokens": {
+      "input": 10571,
+      "output": 10,
+      "total": 10742
+    }
+  }
+}

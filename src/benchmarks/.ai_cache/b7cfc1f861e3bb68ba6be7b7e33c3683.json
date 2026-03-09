@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-05 03:00:00",
+      "endDate": "2025-02-06 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7469,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00140275,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.00081,
+      "cachedCost": 0,
+      "totalCost": 0.00242275
+    },
+    "hash": "b7cfc1f861e3bb68ba6be7b7e33c3683",
+    "sourceFile": "strike-detail-mercoled--5-febbraio-sciopero-dei-treni-regionali.html",
+    "thoughts": "**Analyzing a Potential Trenord Strike Announcement**\n\nOkay, here's the breakdown. I need to process this text regarding a potential strike from Trenord in the Lombardia region (code \"03\"). The goal is a strict JSON output, which I've got to ensure is valid and parseable. The key is determining if it's a strike (`isStrike: true`) and then extracting all the necessary `strikeData`.\n\nThe content says \"Mercoledì 5 febbraio sciopero dei treni regionali,\" which translates to \"Wednesday, February 5th strike of regional trains.\" The date is a bit tricky, but the context earlier mentions Monday, Feb 3rd, 2025, which helps me determine the year and date - I'm putting together that it's Wednesday, February 5th, 2025.\n\nSo, here's what I've parsed: the strike starts \"Dalle ore 3 di mercoledì 5 ... febbraio\" - that's 2025-02-05 03:00:00 - and ends \"...alle ore 2 di giovedì 6 febbraio\" - 2025-02-06 02:00:00. Guaranteed times are \"06:00-09:00\" and \"18:00-21:00\". Region is Lombardia, code \"03.\"\n\nTherefore, `isStrike` is definitely `true`.\n\nAnd the `strikeData` looks like this:\n\n*   `startDate`: \"2025-02-05 03:00:00\"\n*   `endDate`: \"2025-02-06 02:00:00\"\n*   `locationType`: \"REGIONAL\"\n*   `locationCodes`: [\"03\"]\n*   `guaranteedTimes`: [\"06:00-09:00\", \"18:00-21:00\"]\n\nI need to confirm all that fits the expected JSON schema and date format (`yyyy-MM-dd HH:mm:ss`), also the correct 2-digit location code. Seems good, no need for any extra comments. All set.\n\n\n",
+    "tokens": {
+      "input": 5611,
+      "output": 140,
+      "total": 6291
+    }
+  }
+}

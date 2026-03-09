@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9228,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00048265,
+      "outputCost": 0.0001328,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00061545
+    },
+    "hash": "6146f97c7f540320e86301988169cfc6",
+    "sourceFile": "sciopero_del_trasporto_pubblico_aperte_le_metropolitane_e_la_ferrovia_termini_centocelle.html",
+    "thoughts": "**Analyzing strike details**\n\nI need to format my output in JSON based on the article regarding the public transport strike in Rome. It's about an ongoing strike, which started on January 10, 2025, and is set to conclude at 12:30. Since the instructions specify that I should set \"isStrike\" to true only for upcoming strikes, this means I need to mark \"isStrike\" as false for this current situation. So, I will output: {\"isStrike\": false}. That's really straightforward!",
+    "tokens": {
+      "input": 9653,
+      "output": 332,
+      "total": 9985
+    }
+  }
+}

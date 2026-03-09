@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7216,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00189425,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.0007005,
+      "cachedCost": 0,
+      "totalCost": 0.00280475
+    },
+    "hash": "b3d87e4d6a9b70656bb6be5859d69116",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_di_24_ore_del_13_dicembre_2024_aggiornamento.html",
+    "thoughts": "**Analyzing the EAV Strike Announcement**\n\nOkay, let's break this down. My task is to analyze this EAV website text about a strike supposedly happening on December 13, 2024. The goal is to figure out if it's an *announcement* about an upcoming strike, and if so, to extract the relevant data into a JSON format. Let's see...\n\nAlright, the text says: \"Servizio Autolinee: Avviso di sciopero di 24 ore del 13 dicembre 2024 - Aggiornamento\" and, crucially, \"Si comunica che... lo sciopero proclamato per domani 13 dicembre torna ad essere di 24 ore.\" That looks like it *is* an announcement of an upcoming strike. And the use of \"domani\" (tomorrow) means that it's a strike that is being announced *before* it happens.\n\nSo, let's start constructing that JSON. I'll set `isStrike` to `true` immediately. Now, for the details:\n\nThe text specifically states that the strike is for the entire day of December 13th, 2024, so I'll set `startDate` to `2024-12-13 00:00:00` and `endDate` to `2024-12-13 23:59:59`. The notice mentions EAV (which I know is a Campania-based company), so I will set the `locationType` to \"REGIONAL\". Since we are only concerned with Campania, I'll set `locationCodes` to `[\"15\"]`. The guaranteed service bands are given as \"05:30 alle ore 08:30 e dalle ore 16:30 alle ore 19:30\". I can convert those into the `guaranteedTimes` array as `[\"05:30-08:30\", \"16:30-19:30\"]`.\n\nNow, compiling everything, the output will be:\n\n```json\n{\n  \"isStrike\": true,\n  \"startDate\": \"2024-12-13 00:00:00\",\n  \"endDate\": \"2024-12-13 23:59:59\",\n  \"locationType\": \"REGIONAL\",\n  \"locationCodes\": [\"15\"],\n  \"guaranteedTimes\": [\"05:30-08:30\", \"16:30-19:30\"]\n}\n```\n\nThat should be the relevant data extracted and correctly formatted.\n\n\n",
+    "tokens": {
+      "input": 7577,
+      "output": 140,
+      "total": 8184
+    }
+  }
+}

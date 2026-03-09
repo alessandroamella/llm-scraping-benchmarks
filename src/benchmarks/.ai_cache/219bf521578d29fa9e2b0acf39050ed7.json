@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-01-07 09:01:00",
+      "endDate": "2026-01-07 17:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "08"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7233,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000196,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.0008775,
+      "cachedCost": 0,
+      "totalCost": 0.0012835
+    },
+    "hash": "219bf521578d29fa9e2b0acf39050ed7",
+    "sourceFile": "Sciopero Trenitalia Tper 07 gennaio 2026.pdf",
+    "thoughts": "**Strike Information Extraction: A Focused Review**\n\nOkay, let's break this down. My task is to extract strike information from this text and present it as valid JSON. It's a strike by Trenitalia TPER on January 7, 2026. The time window is clear: from 09:01 to 17:00. The location is specified as \"Regionale\" covering Emilia-Romagna and neighboring regions – the ISTAT code for Emilia-Romagna is \"08,\" so that’s a key piece. There are guaranteed service windows: 06:00-09:00 and 18:00-21:00.\n\nMy immediate focus is crafting the JSON object. I'll need a `isStrike` boolean set to `true`, and then a `strikeData` object holding all the details.\n\nWithin `strikeData`, the `startDate` is easy, it's \"2026-01-07 09:01:00\", ensuring it's in the correct `yyyy-MM-dd HH:mm:ss` format. Similarly, the `endDate` is \"2026-01-07 17:00:00\". The `locationType` is definitely \"REGIONAL,\" and the `locationCodes` will be an array containing \"08.\" Finally, the `guaranteedTimes` will be an array: [\"06:00-09:00\", \"18:00-21:00\"].\n\nBefore finalizing, I need to double-check that the date formats are exact, the location code aligns with the ISTAT code and the location type is correct, and finally, there are no extra text fragments. I'll also ensure the whole structure is a single JSON object.\n\n\n",
+    "tokens": {
+      "input": 784,
+      "output": 140,
+      "total": 1509
+    }
+  }
+}

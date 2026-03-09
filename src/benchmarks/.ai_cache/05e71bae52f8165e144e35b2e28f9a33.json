@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4273,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00411625,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000249,
+      "cachedCost": 0,
+      "totalCost": 0.00438025
+    },
+    "hash": "05e71bae52f8165e144e35b2e28f9a33",
+    "sourceFile": "sciopero_generale_adesione_personale_atac_al_259.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, let's break this down. My objective is clear: I need to ascertain if this content indicates an *upcoming* strike. The text I'm given, \"Sciopero generale, adesione personale Atac al 25,9%\" with a publication date of 28/11/2025, requires careful consideration. It's essentially reporting on the participation rate in a strike – a *past* event, as indicated by the tense used (\"è stata pari al 25,9%,\" translating to \"was equal to 25.9%\"). Since the content explicitly describes a strike that has already transpired, the critical `isStrike` flag must, by definition, be set to `false`. This aligns with the rules I've established for analyzing this type of information. It is crucial to determine if it is an upcoming strike, and since this reports on past participation, this is not the case. Therefore, I will follow the schema requirements with `isStrike` as `false`.\n\n\n",
+    "tokens": {
+      "input": 16465,
+      "output": 10,
+      "total": 16641
+    }
+  }
+}

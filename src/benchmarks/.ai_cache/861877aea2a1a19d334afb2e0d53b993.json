@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-28 08:20:00",
+      "endDate": "2025-01-28 12:20:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8396,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00275875,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.0011445,
+      "cachedCost": 0,
+      "totalCost": 0.00405175
+    },
+    "hash": "861877aea2a1a19d334afb2e0d53b993",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_4_ore_martedi_28_gennaio_2025.html",
+    "thoughts": "**Analyzing Strike Information for EAV**\n\nOkay, here's what I'm thinking. My primary goal is to extract strike information from this HTML content, specifically focusing on \"EAV\" (Ente Autonomo Volturno). The key is to determine if this document describes an *upcoming* strike – that's what will set `isStrike` to true. My output will be in JSON format, adhering to the provided schema.\n\nI'm looking at this title: \"Linee Vesuviane: Avviso di sciopero di 4 ore, martedì 28 gennaio 2025 - EAV srl.\" The announcement date is January 27, 2025, and the strike is scheduled for Tuesday, January 28, 2025. It's a 4-hour strike, from 08:20 to 12:20. The region is Campania (code 15), and the company is indeed EAV.\n\nNow, about \"guaranteed times\". The text mentions \"Ultime partenze garantite prima dello sciopero\" and \"Prime partenze garantite dopo lo sciopero,\" which is a good sign. However, the schema specifies a \"Time ranges during which service is guaranteed (e.g., '06:00-09:00')\". The text doesn't *explicitly* give those standard \"fasce di garanzia\" (guaranteed time windows) like a 6-9 AM window. It directly states \"Di seguito vengono elencate le ultime e le prime partenze garantite in relazione alle diverse fasce di garanzia.\" This is interesting. The text provides specific guaranteed train departures.\n\nThe prompt requires extracting data *from* the provided content. Since it doesn't give me the typical guaranteed windows (like 6-9 or 17-20), and only provides the specific train departures, I'll need to interpret this carefully, especially given the schema requirement. I think I'll omit this field. After all, the prompt says they are \"omitted if not specified\".\n\nTherefore, I'll set `isStrike` to `true`. And based on the text:\n\n*   `startDate`: \"2025-01-28 08:20:00\"\n*   `endDate`: \"2025-01-28 12:20:00\"\n*   `locationType`: \"REGIONAL\"\n*   `locationCodes`: [\"15\"] (Campania)\n*   `guaranteedTimes`: I will omit this, as the text provides specific train departures rather than the standard \"guaranteed time window\".\n\n\n",
+    "tokens": {
+      "input": 11035,
+      "output": 99,
+      "total": 11897
+    }
+  }
+}

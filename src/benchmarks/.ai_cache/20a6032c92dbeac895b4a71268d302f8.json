@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-07-23 09:00:00",
+      "endDate": "2025-07-23 11:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8057,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00273975,
+      "outputCost": 0.0001395,
+      "thinkingCost": 0.0009435,
+      "cachedCost": 0,
+      "totalCost": 0.00382275
+    },
+    "hash": "20a6032c92dbeac895b4a71268d302f8",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_2_ore_mercoledi_23_luglio_2025.html",
+    "thoughts": "**My Analysis of the Strike Information**\n\nAlright, let's break this down. The core task is to distill strike information from this HTML and format it as valid JSON according to the schema. The input is an announcement regarding a strike affecting the \"Linee Vesuviane,\" which is part of EAV srl, dated \"22 Luglio 2025,\" and I'm interpreting this as the announcement date.\n\nThe announcement indicates a strike on \"23 luglio 2025\" for a duration of \"2 ore,\" from \"dalle ore 09:00 alle ore 11:00.\" So, the strike *itself* is on the 23rd, and that's the key. The location is clearly \"Linee Vesuviane,\" which I have to translate into location codes. Since this concerns Campania, according to my knowledge, that corresponds to code \"15\". It is a \"REGIONAL\" location type.\n\nNow, about \"guaranteed services\". The page mentions \"Ultime partenze garantite\" (last guaranteed departures) and \"Prime partenze garantite\" (first guaranteed departures). The schema asks for \"guaranteedTimes.\" However, the text doesn't provide the typical \"guaranteed bands\" (e.g., specific time blocks) that are standard in Italian law. It just provides *specific* departure times before and after the strike. I think that the prompt means to extract complete bands, and these departures do not represent time bands in the manner required. Therefore, I will omit `guaranteedTimes` from the output; if this were a more complex strike description, I'd need to extract them by identifying regular Italian strike time bands.\n\nI've confirmed that this is indeed a strike announcement, and the output format is JSON. Dates need to be in 'yyyy-MM-dd HH:mm:ss' format. I'm confident about Campania's code (15) and its \"REGIONAL\" location type.\n\nBased on all this, here's how I'm structuring the data for the JSON output: `isStrike`: true, the `strikeData` object with the dates (derived from the announcement and strike dates), the location information, and finally, omitting `guaranteedTimes` because there are no clear guarantees provided as whole bands.\n\n\n",
+    "tokens": {
+      "input": 10959,
+      "output": 93,
+      "total": 11681
+    }
+  }
+}

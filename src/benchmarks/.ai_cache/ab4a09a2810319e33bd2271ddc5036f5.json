@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-12-14 09:00:00",
+      "endDate": "2023-12-14 17:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "09:00-10:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 43330,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00028195,
+      "outputCost": 0.0014552,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00173715
+    },
+    "hash": "ab4a09a2810319e33bd2271ddc5036f5",
+    "sourceFile": "strike-detail-gioved--14-dicembre-dalle-ore-9-alle-ore-17-sciope.html",
+    "thoughts": "**Extracting strike information**\n\nI need to output JSON according to the custom schema. The document clearly announces an upcoming strike in Italy on Thursday, December 14, from 9 to 17. It’s clearly informational and indicates the strike will have repercussions. I’ve got to extract the relevant strike data: start date, end date, location type, location codes, and guaranteed times. The date doesn’t mention a year, but it’s implied to be 2023 based on the surrounding content. I'll format the dates as required.",
+    "tokens": {
+      "input": 5639,
+      "output": 3638,
+      "total": 9277
+    }
+  }
+}

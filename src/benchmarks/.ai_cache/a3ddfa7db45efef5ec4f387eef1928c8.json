@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3981,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00408475,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000279,
+      "cachedCost": 0,
+      "totalCost": 0.00437875
+    },
+    "hash": "a3ddfa7db45efef5ec4f387eef1928c8",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_191.html",
+    "thoughts": "**Analyzing Strike Adherence Data**\n\nOkay, so I'm looking at this source, \"Sciopero del trasporto pubblico, adesione personale Atac al 19,1% - Roma Servizi per la Mobilità.\" Right off the bat, the title gives it away. It's reporting *on* a strike, and the phrase \"...dello sciopero del trasporto pubblico di oggi...\" confirms this is *after* the event. The key here is \"adesione\" – adherence, or participation, to an event that has passed. I need to determine if this is a report on a *future* strike, or one that has *already* taken place. Since it’s clearly reporting on today's figures, it's about a past strike. Therefore, the variable `isStrike` needs to be set to `false`. So my final output is: `{ \"isStrike\": false }`. Simple enough.\n\n\n",
+    "tokens": {
+      "input": 16339,
+      "output": 10,
+      "total": 16535
+    }
+  }
+}

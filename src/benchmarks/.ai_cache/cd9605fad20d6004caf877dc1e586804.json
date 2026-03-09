@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-20 00:00:00",
+      "endDate": "2025-06-20 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 10718,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.002813,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.0010575,
+      "cachedCost": 0,
+      "totalCost": 0.0040805
+    },
+    "hash": "cd9605fad20d6004caf877dc1e586804",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_24h_venerdi_20_giugno_2025.html",
+    "thoughts": "**Strike Announcement Analysis**\n\nOkay, let's break this down. My primary objective is to determine whether the provided HTML content from EAV constitutes an announcement for an upcoming strike. The input is specifically about an \"Avviso di Sciopero 24h venerdì 20 giugno 2025,\" so I need to parse the information accurately and return it in a valid JSON format, adhering to a defined schema.\n\nThe schema requires a boolean `isStrike` field, and if it's true, a `strikeData` object with `startDate`, `endDate`, `locationType`, `locationCodes` (optional), and `guaranteedTimes`. Date formats must strictly follow 'yyyy-MM-dd HH:mm:ss', `locationCodes` uses \"15\" for Campania, and `guaranteedTimes` are in 'HH:mm-HH:mm' format. Absolutely no extraneous text, comments, or control characters are allowed in the output.\n\nAnalyzing the content, the title \"Linee Vesuviane: Avviso di Sciopero 24h venerdì 20 giugno 2025 - EAV srl\" and the text \"Per il giorno 20 giugno 2025 la O.S. USB ha proclamato azione di sciopero per adesione a sciopero nazionale di 24 ore...\" clearly confirms that this is indeed a strike announcement. The date is Friday, June 20, 2025, and since it is a 24-hour strike, I'll need to interpret the start and end times as covering the full service day, from 00:00:00 to 23:59:59. EAV operates in Campania (Region 15), thus giving me the correct `locationCodes`. The provided text states guaranteed times as \"05:30-08:30\" and \"16:30-19:30\".\n\nTherefore, I'm confident in constructing the following JSON output:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-06-20 00:00:00\",\n    \"endDate\": \"2025-06-20 23:59:59\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"15\"],\n    \"guaranteedTimes\": [\"05:30-08:30\", \"16:30-19:30\"]\n  }\n}\n```\n\nNow, I will validate each value in the constructed JSON against the specifications to ensure a complete solution.\n\n\n",
+    "tokens": {
+      "input": 11252,
+      "output": 140,
+      "total": 12097
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9175,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00048265,
+      "outputCost": 0.0001496,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00063225
+    },
+    "hash": "524ae4009ef013a617c28d141e9601e4",
+    "sourceFile": "sciopero_trasporto_pubblico_chiusa_metro_aperte_b_c_termini_centocelle.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to output JSON according to the schema. The content clearly indicates there's a public transport strike but mentions it's an ongoing situation, with real-time updates. Since the instructions specify that we should only set `isStrike` to true for an announcement about an upcoming strike, I conclude that `isStrike` should be false in this case. So I'll provide the output as: `{\"isStrike\": false}`.",
+    "tokens": {
+      "input": 9653,
+      "output": 374,
+      "total": 10027
+    }
+  }
+}

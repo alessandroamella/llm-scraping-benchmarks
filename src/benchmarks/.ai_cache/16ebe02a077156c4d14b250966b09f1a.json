@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-05-11 00:00:00",
+      "endDate": "2025-05-11 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7445,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00190925,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.0005715,
+      "cachedCost": 0,
+      "totalCost": 0.00269075
+    },
+    "hash": "16ebe02a077156c4d14b250966b09f1a",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_24h_domenica_11_maggio_2025.html",
+    "thoughts": "**Analyzing the EAV Linea Metropolitana Strike Announcement**\n\nOkay, so I've got this webpage about a planned strike affecting the EAV Linea Metropolitana in Campania. My immediate task is to break down this announcement into structured data. It's a strike, clearly, a *24-hour aziendale* one, so I need to extract the core information.\n\nFirst, the date is straightforward – Sunday, May 11, 2025. Given it's a full-day strike as stated (\"24 ore\"), I'm setting `startDate` to \"2025-05-11 00:00:00\" and `endDate` to \"2025-05-11 23:59:59\". No ambiguity there.\n\nThe location is crucial, and based on the context of EAV and Campania, this is definitely a \"REGIONAL\" issue, specifically concerning location code \"15\". I'll format `locationType` as \"REGIONAL\" and set `locationCodes` to [\"15\"].\n\nFinally, I need to pinpoint any guaranteed service times. The text clearly states two blocks: \"05:30-08:30\" and \"16:30-19:30\". I'll extract these and store them in `guaranteedTimes` as [\"05:30-08:30\", \"16:30-19:30\"].\n\nNow, I'll assemble this information. It needs to be properly structured as JSON, of course, strictly formatted and valid, ensuring that all constraints are met. I'll make sure the `isStrike` flag is set to `true`. I'll double-check everything, cross-referencing and validating, to guarantee data integrity.\n\n\n",
+    "tokens": {
+      "input": 7637,
+      "output": 140,
+      "total": 8158
+    }
+  }
+}

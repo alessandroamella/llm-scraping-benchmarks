@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-24 00:00:00",
+      "endDate": "2025-02-24 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6213,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0004845,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.000921,
+      "cachedCost": 0,
+      "totalCost": 0.0016155
+    },
+    "hash": "90bec8db8151eb58459443c2cae96b01",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_24_h_lunedi_24_febbraio_2025.html",
+    "thoughts": "**Strike Announcement Analysis for EAV (Campania)**\n\nOkay, here's the breakdown. My task is to determine if this document announces a strike and, if so, extract the relevant data in JSON format according to the specified schema.\n\nFirst, I see the page title: \"Linee Vesuviane: Avviso di sciopero di 24 h lunedì 24 febbraio 2025 - EAV srl\". The title itself screams strike announcement, and it's for EAV, which I know is in the Campania region. The title confirms my initial thought.\n\nThe content reads: \"Per il giorno 24 febbraio 2025 la O.S. USB ha proclamato azione di sciopero per adesione a sciopero nazionale di 24 ore...\" That's a clear confirmation of an upcoming 24-hour strike on February 24, 2025.\n\nNow for the structured data. `isStrike` is definitely `true`.\n\nThe `startDate` is clearly implied as \"2025-02-24 00:00:00\" and the `endDate` as \"2025-02-24 23:59:59\". The text confirms that it is a 24-hour strike beginning at the start of the day.\n\nEAV operates in Campania, so `locationType` is `REGIONAL`, and the `locationCodes` is `\"15\"`.\n\nThe text explicitly mentions guaranteed service times: \"Servizio garantito dalle ore 05:30 alle ore 8:30 e dalle ore 16:30 alle ore 19:30\". So, `guaranteedTimes` should be `[\"05:30-08:30\", \"16:30-19:30\"]`.\n\nNow, let's assemble the JSON output. All the data matches the schema, and there are no ambiguities or extra information, so I can generate the JSON output.\n\n\n",
+    "tokens": {
+      "input": 1938,
+      "output": 140,
+      "total": 2692
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-07-23 09:00:00",
+      "endDate": "2025-07-23 11:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "09:00-11:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19642,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005205,
+      "outputCost": 0.0003872,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0009077
+    },
+    "hash": "bc2ea99746825ee20ef34d67f884f228",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_di_2_ore_mercoledi_23_luglio_2025.html",
+    "thoughts": "**Determining strike announcement details**\n\nI need to output JSON based on the schema to classify a document about an upcoming strike announcement. The article from EAV srl is about a two-hour strike on July 23, 2025, from 09:00 to 11:00. It definitely indicates that isStrike should be true. For the strikeData, I’ll format the start and end dates as 'yyyy-MM-dd HH:mm:ss', so they will be 2025-07-23 09:00:00 and 2025-07-23 11:00:00. Since it involves EAV and front-line personnel, I'll assume this is a regional strike.",
+    "tokens": {
+      "input": 10410,
+      "output": 968,
+      "total": 11378
+    }
+  }
+}

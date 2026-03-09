@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-24 10:00:00",
+      "endDate": "2025-11-24 14:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 28093,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00051485,
+      "outputCost": 0.0006352,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00115005
+    },
+    "hash": "b14c886dc92c8e6d7dfcf1f63b7d91d2",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-11-24-sciopero-24-novembre-personale.html",
+    "thoughts": "**Confirming date and location types**\n\nI'm figuring out that November 24, 2025, is indeed a Monday, confirming that the start and end dates should be \"2025-11-24 10:00:00\" and \"2025-11-24 14:00:00.\" It seems I should categorize the location type as either REGIONAL or NATIONAL based on the text about service types. This strike possibly affects all Trenitalia services, but I need to be careful about location codes. If it's REGIONAL, I'll need specific region codes; if NATIONAL, those codes should be null.",
+    "tokens": {
+      "input": 10297,
+      "output": 1588,
+      "total": 11885
+    }
+  }
+}

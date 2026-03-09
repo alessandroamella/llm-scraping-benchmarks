@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20340,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00034135,
+      "outputCost": 0.0004476,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00078895
+    },
+    "hash": "027ab3f236b86f629909ac601382aa03",
+    "sourceFile": "eav_autolinee_avviso_di_sciopero_di_24_ore_venerdi_13_dicembre_2024.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to output JSON according to a specific schema. The provided content clearly indicates it's announcing an upcoming 24-hour strike on December 13, 2024. The service hours are guaranteed from 05:30 to 08:30 and 16:30 to 19:30, but the actual service will depend on the number of workers present. So, I'll set isStrike to true. For the strikeData, I'll format the start date as '2024-12-13 00:00:00', given the 24-hour duration on that day.",
+    "tokens": {
+      "input": 6827,
+      "output": 1119,
+      "total": 7946
+    }
+  }
+}

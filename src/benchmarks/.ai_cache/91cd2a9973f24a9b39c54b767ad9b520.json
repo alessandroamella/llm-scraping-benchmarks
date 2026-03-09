@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5209,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00026375,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.0006315,
+      "cachedCost": 0,
+      "totalCost": 0.00107975
+    },
+    "hash": "91cd2a9973f24a9b39c54b767ad9b520",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_24h_venerdi_28_novembre_2025.html",
+    "thoughts": "**Analyzing the Strike Information**\n\nOkay, here's the deal. My primary task is crystal clear: I need to pull out strike information from this text and package it up neatly in JSON format. The core goal is to definitively say if it's an upcoming strike, and if so, grab the key details – the start and end dates, the location type, the location codes, and the guaranteed service times. The constraints are pretty tight. JSON output *only*, specific date formats, the correct location code mapping, and the particular definition of 'isStrike'.\n\nThe page title is \"Linea Metropolitana: Avviso di sciopero 24h venerdì 28 novembre 2025,\" which gives me some initial cues. The announcement itself states \"Per il giorno 28 novembre 2025 la O.S. USB ha proclamato azione di sciopero generale nazionale di 24 ore...\" That's the meat of it. \"Sciopero generale nazionale\" tells me this is a national strike. The date is clearly November 28th, 2025, and it’s for 24 hours. The guaranteed service times are explicitly given as \"05:30-08:30\" and \"16:30-19:30\".\n\nPutting it all together, I’m confident that `isStrike` is `true`. Given that the text mentions a 24-hour strike, and no specific start time is listed, I'll derive the start date as `2025-11-28 00:00:00` and the end date as `2025-11-28 23:59:59`. The \"sciopero generale nazionale\" language indicates a `locationType` of `NATIONAL`, and, as per the guidelines, national strikes don't require `locationCodes` - so that will be omitted. Finally, the guaranteed service times are `[\"05:30-08:30\", \"16:30-19:30\"]`. Now, to assemble the JSON.\n\n\n",
+    "tokens": {
+      "input": 1055,
+      "output": 123,
+      "total": 1599
+    }
+  }
+}

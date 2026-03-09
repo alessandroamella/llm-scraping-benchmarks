@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-06-16 03:00:00",
+      "endDate": "2024-06-17 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8870,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0002665,
+      "outputCost": 0.00015,
+      "thinkingCost": 0.0008145,
+      "cachedCost": 0,
+      "totalCost": 0.001231
+    },
+    "hash": "3395c13ee68ef364648aae2a29e025ab",
+    "sourceFile": "strike-detail-sciopero-uiltrasporti-e-orsa-domenica-16-giugno--p.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, here's the deal. My primary task is to determine if the given text is announcing a strike and, if so, extract the relevant details in a JSON format. I've been given a text about a Trenord strike scheduled for Sunday, June 16, 2024.\n\nFirst, I need to check the JSON output requirements. The output has to be a single JSON object. The keys are: `isStrike`, `startDate`, `endDate`, `locationType`, `locationCodes`, and `guaranteedTimes`.\n\nAlright, reading the text, it's clear this is a strike announcement, so `isStrike` will be `true`. The text specifies the strike's duration: \"Dalle ore 3 di domenica 16 giugno alle ore 2 di lunedì 17 giugno,\" which means the strike begins at 03:00 on June 16, 2024, and ends at 02:00 on June 17, 2024. Therefore, `startDate` is \"2024-06-16 03:00:00\" and `endDate` is \"2024-06-17 02:00:00\".\n\nThe text mentions \"servizio ferroviario lombardo,\" which indicates a REGIONAL scope, and the ISTAT code for Lombardia is \"03\". So, `locationType` is \"REGIONAL\" and `locationCodes` is [\"03\"].\n\nFinally, regarding guaranteed service, the text states \"Trattandosi di una giornata festiva, non sono attuabili fasce di garanzia,\" meaning there are no guaranteed times. The schema says that guaranteedTimes is an array. I'll omit it.\n\nBased on these considerations, I'll assemble the JSON, ensuring it adheres precisely to the schema, omitting comments, newlines, and any unnecessary details:\n```json\n{\n  \"isStrike\": true,\n  \"startDate\": \"2024-06-16 03:00:00\",\n  \"endDate\": \"2024-06-17 02:00:00\",\n  \"locationType\": \"REGIONAL\",\n  \"locationCodes\": [\"03\"]\n}\n```\n\n\n",
+    "tokens": {
+      "input": 1066,
+      "output": 100,
+      "total": 1709
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-03 00:00:00",
+      "endDate": "2025-10-03 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 25733,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003703,
+      "outputCost": 0.0005204,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008907
+    },
+    "hash": "1f5cdbae527edc55869cdffc0a2dd5ec",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_generale_nazionale_di_24_ore_venerdi_03_ottobre_2025.html",
+    "thoughts": "**Creating JSON for strike data**\n\nI need to make sure our example JSON includes \"startDate\" and \"endDate\" formatted as 'yyyy-MM-dd HH:mm:ss'. Based on the instructions, I'll set \"startDate\" to \"2025-10-03 00:00:00\" and \"endDate\" to \"2025-10-03 23:59:59\" since the text specifies a 24-hour strike duration. We will also need to indicate that \"isStrike\" is true. The final JSON should have all the necessary fields, including \"locationType\" as \"NATIONAL\" and the specific times.",
+    "tokens": {
+      "input": 7406,
+      "output": 1301,
+      "total": 8707
+    }
+  }
+}

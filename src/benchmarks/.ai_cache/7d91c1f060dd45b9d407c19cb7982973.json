@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5988,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0021205,
+      "outputCost": 0.000189,
+      "thinkingCost": 0.000792,
+      "cachedCost": 0,
+      "totalCost": 0.0031015
+    },
+    "hash": "7d91c1f060dd45b9d407c19cb7982973",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_24_h_venerdi_12_dicembre_2025.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, here's the breakdown of this strike information. My task is to extract all relevant details from this announcement, adhering to some specific constraints. First, I need to determine if this actually describes a strike; it does. The headline and content clearly indicate a strike on the \"Linee Vesuviane\". Therefore, `isStrike` is true.\n\nThe constraints are pretty clear: dates in `yyyy-MM-dd HH:mm:ss` format, guaranteed times as `HH:mm-HH:mm`, and using 2-digit ISTAT codes for regions. Campania is code \"15,\" so I need to keep that in mind.\n\nThe headline gives me the date: \"venerdì 12 Dicembre 2025\" – December 12, 2025. This is easy to translate to the required format; it's `2025-12-12`. The mention of a 24-hour strike usually means the strike encompasses the entire day, from 00:00:00 to 23:59:59 (or possibly 00:00:00 on the following day), but transport strikes usually take this pattern. The content explicitly states \"24 h\", so this seems pretty straightforward. The `startDate` is \"2025-12-12 00:00:00\" and the `endDate` is \"2025-12-12 23:59:59\".\n\nThe location is \"Linee Vesuviane,\" which operates in Campania (EAV). I need to represent this regionally, so I use the ISTAT code \"15\". Thus, `locationType` will be \"REGIONAL\" and `locationCodes` will be `[\"15\"]`.\n\nFinally, the guaranteed service times are listed as \"Servizio garantito dalle ore 05:30 alle ore 8:30 e dalle ore 16:30 alle ore 19:30\". I can extract these as is, formatting as requested. Thus, `guaranteedTimes` is `[\"05:30-08:30\", \"16:30-19:30\"]`.\n\nSo, the extracted data is:\n\n`isStrike`: `true`\n\n`strikeData`:\n*   `startDate`: \"2025-12-12 00:00:00\"\n*   `endDate`: \"2025-12-12 23:59:59\"\n*   `locationType`: \"REGIONAL\"\n*   `locationCodes`: `[\"15\"]`\n*   `guaranteedTimes`: `[\"05:30-08:30\", \"16:30-19:30\"]`\n\n\n",
+    "tokens": {
+      "input": 8482,
+      "output": 126,
+      "total": 9136
+    }
+  }
+}

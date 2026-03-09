@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 21:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 17928,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005406,
+      "outputCost": 0.0005156,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0010562
+    },
+    "hash": "c1a3210949dd1dec9234cdc1a1190b05",
+    "sourceFile": "strike-detail-venerd--12-dicembre-da-mezzanotte-alle-21-sciopero.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to output JSON in the specified strike extraction format. After reading the document, it’s mostly HTML, but I noticed it mentions a national strike on “Friday 12 December from midnight to 9pm.” It also notes expected disruptions in various services. The organization CGIL has called for this strike and specifies the time frame from 00:00 to 21:00. Some train services will still run during certain hours, indicating a schedule for guaranteed services. It looks like a press release about an upcoming strike.",
+    "tokens": {
+      "input": 10812,
+      "output": 1289,
+      "total": 12101
+    }
+  }
+}

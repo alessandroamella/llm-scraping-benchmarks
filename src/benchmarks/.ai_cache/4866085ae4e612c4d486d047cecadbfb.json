@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-01-30 09:01:00",
+      "endDate": "2026-01-30 16:59:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "08"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6974,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00019625,
+      "outputCost": 0.0001395,
+      "thinkingCost": 0.0009,
+      "cachedCost": 0,
+      "totalCost": 0.00123575
+    },
+    "hash": "4866085ae4e612c4d486d047cecadbfb",
+    "sourceFile": "ttper_2026-01-30_09-01.pdf",
+    "thoughts": "**Strike Announcement Analysis for Trenitalia TPER (Emilia-Romagna)**\n\nOkay, let's break this down. My task is to analyze this text specifically for strike announcements impacting Trenitalia TPER in the Emilia-Romagna region (code 08). The primary goal is to determine if the text indicates an *upcoming* strike. The final output needs to be in JSON format, adhering to a defined schema with strict date and location specifications.\n\nHere's what I've got: The text describes a strike impacting RFI personnel in the Emilia-Romagna region. The announcement states the strike will occur \"Dalle ore 9:01 alle ore 16:59 di venerdì 30 gennaio 2026\", which translates to January 30th, 2026, from 09:01 to 16:59. Crucially, this specifies an *upcoming* strike, so `isStrike` is definitely `true`.\n\nNow, let's map this to the JSON schema. The start date will be \"2026-01-30 09:01:00\", and the end date is \"2026-01-30 16:59:00\". The strike affects a *region*, meaning `locationType` will be \"REGIONAL\". The relevant region is Emilia-Romagna, corresponding to the ISTAT code \"08\", so `locationCodes` will be `[\"08\"]`. The text doesn't mention guaranteed times, so that will be omitted.\n\nTherefore, the final JSON output, based on the `isStrike` value being `true`, should look like this:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2026-01-30 09:01:00\",\n    \"endDate\": \"2026-01-30 16:59:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"08\"]\n  }\n}\n```\n\nThis adheres to all specified constraints, including the date format, `locationType` values, the `locationCodes` array and I can confirm that there are no extraneous details or commentary included in the JSON. The job is complete.\n\n\n",
+    "tokens": {
+      "input": 785,
+      "output": 93,
+      "total": 1478
+    }
+  }
+}

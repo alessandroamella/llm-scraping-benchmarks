@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 23063,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00037305,
+      "outputCost": 0.000916,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00128905
+    },
+    "hash": "a180486a9e42ff65afd172ce560efaa5",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_24_ore_del_13_dicembre_2024_aggiornamento.html",
+    "thoughts": "**Extracting strike details**\n\nI’m noting that the strike on December 13 will last 24 hours, starting from 00:00 and running through to 23:59:59 local time. The provided service times indicate availability from 05:30 to 08:30 and again from 16:30 to 19:30. It’s clear I need to extract the start and end time in the ‘yyyy-MM-dd HH:mm:ss’ format. The announcement specifies it’s a 24-hour strike on December 13, 2024, which I need to keep in mind.",
+    "tokens": {
+      "input": 7461,
+      "output": 2290,
+      "total": 9751
+    }
+  }
+}

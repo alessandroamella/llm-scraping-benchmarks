@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-11-17 09:00:00",
+      "endDate": "2023-11-17 13:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9095,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00025775,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.0012195,
+      "cachedCost": 0,
+      "totalCost": 0.00160025
+    },
+    "hash": "86b5e7bcc943d52eec69b10d2de58cc6",
+    "sourceFile": "strike-detail-sciopero-nazionale-17-novembre-ore-9-13-personale-.html",
+    "thoughts": "**Strike Information Extraction: A Thought Process**\n\nOkay, here's the scenario: I've got this text, \"Sciopero Nazionale 17 novembre ore 9-13 personale Trenord non coinvolto\" (National strike November 17, 9-13, Trenord personnel not involved), and my goal is to figure out if it's an announcement of a strike and, if so, extract the details in a specific JSON format.\n\nFirst, I parsed the text and noted it describes a \"Sciopero Nazionale\" – a national strike – on November 17th, from 9 AM to 1 PM. It immediately mentions that \"personale Trenord non coinvolto\" - Trenord staff are not involved. My initial thought was: does this even qualify as a strike announcement if Trenord staff *aren't* striking? The prompt specified to set `isStrike` to `true` *only* if it's an announcement of an upcoming strike.\n\nHowever, I dug deeper. The text confirms that even if Trenord staff aren't striking, the *service* itself will be impacted. The infrastructure managers, like FERROVIENORD and RFI, might be striking, which is a major part of the service. The important part is that the text is announcing a strike event impacting Trenord's service. Therefore, I'm confident that this qualifies as a strike announcement.\n\nSo, `isStrike` is `true`. The dates are straightforward: start date is 2023-11-17 09:00:00 and end date is 2023-11-17 13:00:00. The location type is clearly \"NATIONAL\", because the text explicitly states \"Sciopero Nazionale.\" The prompt also specifically dictates that `locationCodes` MUST be omitted if the `locationType` is `NATIONAL`.\n\nNow, the text also mentions something about guaranteed services: \"saranno garantiti i treni con orario di partenza entro le ore 9 e arrivo alla destinazione finale entro le ore 10.\" The prompt asks for guaranteed service times, but the example is \"06:00-09:00\". The text, though, doesn't mention a specific block but *departures* by 9am, *arrival* by 10am. Since it doesn't clearly map to a standard guaranteed window like `HH:mm-HH:mm`, I'll omit that from the output. The schema for `guaranteedTimes` is also an array of strings in format `HH:mm-HH:mm`, and this text does not provide such specific blocks.\n\nFinally, I made sure I was following the rules. I re-read the instruction to check if it's a strike *announcement*. Yes, it is. With all those decisions validated, I'm confident in the output. The extracted strike details fit into the expected schema.\n\n\n",
+    "tokens": {
+      "input": 1031,
+      "output": 82,
+      "total": 1926
+    }
+  }
+}

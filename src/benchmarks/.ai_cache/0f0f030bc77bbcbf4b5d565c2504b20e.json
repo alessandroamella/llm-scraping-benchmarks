@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 11758,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000204,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.0006285,
+      "cachedCost": 0,
+      "totalCost": 0.001017
+    },
+    "hash": "0f0f030bc77bbcbf4b5d565c2504b20e",
+    "sourceFile": "eav_autolinee_avviso_di_sciopero_di_24_ore_venerdi_13_dicembre_2024.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, let's break this down. The input is an announcement – looks like it's confirming a general strike, and I need to parse the details into a JSON object based on my pre-defined schema. First, is this actually about an upcoming strike? Yep, the text clearly states a \"24-hour national general strike\" scheduled for December 13, 2024. Therefore, `isStrike` is definitely `true`.\n\nNow to extract the critical data. The strike spans a full day, so the start and end times need to be determined. Given the \"24-hour\" description, I'll infer that `startDate` is \"2024-12-13 00:00:00\" and `endDate` is \"2024-12-13 23:59:59\". The location is \"national\" – the phrase \"Sciopero Generale nazionale\" makes that explicit. So, `locationType` is \"NATIONAL.\"\n\nFinally, I need to pick out the guaranteed service times. The text gives \"dalle ore 05:30 alle ore 8:30 e dalle ore 16:30 alle ore 19:30.\" That translates directly to `guaranteedTimes` as [\"05:30-08:30\", \"16:30-19:30\"].\n\nSince this is a national strike, I need to be careful about `locationCodes`. The schema specifies that `locationCodes` should be omitted if `locationType` is NATIONAL. I can confirm this is the case here.\n\nSo the resulting JSON structure for this strike, based on my understanding of the schema and the input, would be:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-13 00:00:00\",\n    \"endDate\": \"2024-12-13 23:59:59\",\n    \"locationType\": \"NATIONAL\",\n    \"guaranteedTimes\": [\"05:30-08:30\", \"16:30-19:30\"]\n  }\n}\n```\n\n\n",
+    "tokens": {
+      "input": 816,
+      "output": 123,
+      "total": 1358
+    }
+  }
+}

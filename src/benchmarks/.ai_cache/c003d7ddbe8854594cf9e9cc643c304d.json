@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6646,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000581,
+      "outputCost": 0.0001725,
+      "thinkingCost": 0.0006435,
+      "cachedCost": 0,
+      "totalCost": 0.001397
+    },
+    "hash": "c003d7ddbe8854594cf9e9cc643c304d",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_generale_nazionale_di_venerdi_12_dicembre_2025.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, here's the deal. I need to extract strike information from this text, and I need to do it precisely. The task is clear: I'm dealing with an EAV announcement about a national strike scheduled for December 12, 2025. My primary goal is to return the data in a valid JSON format, adhering to the provided schema, which I understand perfectly. The key here is only to set `isStrike: true` if this is indeed an upcoming strike, and it is.\n\nThe announcement itself, in Italian, translates to a \"General national strike, Dec 12, 2025\". Straightforward enough. I immediately confirm this is an *upcoming* strike. Based on the understanding that a strike typically lasts the whole day unless otherwise stated, and since nothing else is indicated, I can determine the `startDate` is 2025-12-12 00:00:00 and the `endDate` is 2025-12-12 23:59:59.\n\nThe phrase \"sciopero generale nazionale\" tells me the `locationType` should be \"NATIONAL\". Then I see the specific guarantee times: \"dalle ore 05:30 alle ore 8:30 e dalle ore 16:30 alle ore 19:30\".  That translates directly to `[\"05:30-08:30\", \"16:30-19:30\"]` for the `guaranteedTimes` field.\n\nSo the `strikeData` structure that I need to build looks like this:\n\n*   `isStrike`: true\n*   `strikeData`:\n    *   `startDate`: \"2025-12-12 00:00:00\"\n    *   `endDate`: \"2025-12-12 23:59:59\"\n    *   `locationType`: \"NATIONAL\"\n    *   `guaranteedTimes`: [\"05:30-08:30\", \"16:30-19:30\"]\n\n\n",
+    "tokens": {
+      "input": 2324,
+      "output": 115,
+      "total": 2868
+    }
+  }
+}

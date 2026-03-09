@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 10774,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00051025,
+      "outputCost": 0.0001308,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00064105
+    },
+    "hash": "824ac357fd8a25e63f0def4650ce7aec",
+    "sourceFile": "strike-detail-venerd--29-novembre-revocato-sciopero-ferrovienord.html",
+    "thoughts": "**Formatting strike information**\n\nI'm examining whether to announce a new or upcoming strike, but it looks like this is about a strike that has been revoked. The Italian content states that the strike originally scheduled for November 29 has been canceled, meaning train operations will continue normally.\n\nBased on this, I need to set \"isStrike\" to false, and we should format the output as:\n\n{ \"isStrike\": false }\n\nThere won't be any strike data included since it is a cancellation.",
+    "tokens": {
+      "input": 10205,
+      "output": 327,
+      "total": 10532
+    }
+  }
+}

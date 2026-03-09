@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7771,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0004826,
+      "outputCost": 0.0001724,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.000655
+    },
+    "hash": "9c2fa400ee7debd2cb91fcb515fb2b1a",
+    "sourceFile": "sciopero_trasporto_pubblico_aggiornamento_riapertura_stazione_repubblica.html",
+    "thoughts": "**Analyzing strike information**\n\nI need to output JSON according to the strike_extraction schema. The content is in Italian, referring to a public transport strike with an update about the reopening of Repubblica station. The status indicates the strike is currently happening and will end at 13:00. The document was originally published on 07/12/2023 and updated on 08/12/2023. Since this is not announcing a new strike but updating on an ongoing one, I'll set isStrike to false.",
+    "tokens": {
+      "input": 9652,
+      "output": 431,
+      "total": 10083
+    }
+  }
+}

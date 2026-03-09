@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 14033,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000774,
+      "outputCost": 0.0004636,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.000541
+    },
+    "hash": "bae2f4e83b1a2b6579a2e8075901a01d",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_24_ore_di_venerdi_28_novembre_2025.html",
+    "thoughts": "**Setting strike parameters**\n\nI'm looking at the details for a 24-hour national strike, setting the start and end dates to 2025-11-28 00:00:00 and 2025-11-28 23:59:59, respectively. I need to confirm that the end date reflects the full day since they specify \"24 ore.\" Also, for locationType as NATIONAL, the locationCodes must be explicitly set to null, not omitted. Lastly, I'll need to include the guaranteedTimes as an array of strings, like \"HH:mm-HH:mm,\" based on the provided schedules.",
+    "tokens": {
+      "input": 1548,
+      "output": 1159,
+      "total": 2707
+    }
+  }
+}

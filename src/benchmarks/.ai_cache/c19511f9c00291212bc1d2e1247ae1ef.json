@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 26223,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00009675,
+      "outputCost": 0.0007572,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00085395
+    },
+    "hash": "c19511f9c00291212bc1d2e1247ae1ef",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_generale_nazionale_di_venerdi_12_dicembre_2025.html",
+    "thoughts": "**Deciding on strike announcement**\n\nI need to output JSON according to the extraction rules. The content discusses a general national strike planned for December 12, 2025, which I can confirm is an upcoming strike. It mentions service guarantee times and also notes that operations depend on how many workers participate. The instructions indicate I need to determine if this is a new strike announcement. Since it clearly announces a future strike, I'll set isStrike to true.",
+    "tokens": {
+      "input": 1935,
+      "output": 1893,
+      "total": 3828
+    }
+  }
+}

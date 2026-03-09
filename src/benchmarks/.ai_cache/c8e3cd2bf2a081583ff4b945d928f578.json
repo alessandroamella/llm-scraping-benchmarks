@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-28 08:20:00",
+      "endDate": "2025-01-28 12:20:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "08:20-12:20"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 15989,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005474,
+      "outputCost": 0.0004508,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0009982
+    },
+    "hash": "c8e3cd2bf2a081583ff4b945d928f578",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_di_4_ore_martedi_28_gennaio_2025.html",
+    "thoughts": "**Creating JSON output**\n\nI see that the date is \"27 Gennaio 2025,\" and it indicates a strike, so isStrike is true. I'll create JSON with the specified fields. The key points include \"startDate\" and \"endDate\" for the single date of January 28, 2025, and for guaranteedTimes, the range is \"08:20-12:20.\" \n\nI'll make sure to structure it correctly: \n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-01-28 08:20:00\",\n    \"endDate\": \"2025-01-28 12:20:00\",\n    \"locationType\": \"NATIONAL\",\n    \"locationCodes\": null,\n    \"guaranteedTimes\": [\"08:20-12:20\"]\n  }\n} \n\nNow, I’ll finalize and return only the JSON.",
+    "tokens": {
+      "input": 10948,
+      "output": 1127,
+      "total": 12075
+    }
+  }
+}

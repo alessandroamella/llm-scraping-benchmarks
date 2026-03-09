@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8441,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00093605,
+      "outputCost": 0.0001972,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00113325
+    },
+    "hash": "45dbe85e3175e7b3803eeca44c0680a1",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_22.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to output JSON in the specified strike extraction format while determining if this document is a strike announcement. The content appears to be about a past public transport strike in Italy, with a participation rate of 22% noted in the article dated 17/02/2023. The text indicates that it's reporting on past participation rather than announcing a new strike. The header confirms it’s a news item, focusing on the strike's adherence percentage, which confirms it's not a new announcement.",
+    "tokens": {
+      "input": 18721,
+      "output": 493,
+      "total": 19214
+    }
+  }
+}

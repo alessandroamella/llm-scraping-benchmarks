@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9804,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0025315,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.000858,
+      "cachedCost": 0,
+      "totalCost": 0.0035995
+    },
+    "hash": "2401c9c2af158755db4bb2cfaf5c51a4",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_di_24_ore_del_13_dicembre_2024_aggiornamento.html",
+    "thoughts": "**My Analysis of the EAV Strike Announcement**\n\nOkay, let's break this down systematically. I've received a web page from EAV, that transportation authority in Campania, regarding a strike announcement for December 13, 2024. The objective is clear: to extract the relevant strike information and format it as a JSON object, adhering strictly to the provided schema.\n\nFirst, the title, \"Servizio Autolinee: Avviso di sciopero di 24 ore del 13 dicembre 2024 - Aggiornamento,\" confirms this is indeed a strike announcement. The content explicitly states a 24-hour strike on the specified date. So, `isStrike` is definitely `true`.\n\nThe date is explicitly stated as December 13, 2024, I'm interpreting this as a full-day strike so, the `startDate` becomes `2024-12-13 00:00:00` and the `endDate` is `2024-12-13 23:59:59`, reflecting the entire calendar day. The text \"sciopero proclamato per domani 13 dicembre torna ad essere di 24 ore\" strengthens this interpretation.\n\nThe guaranteed service times are clearly mentioned as \"dalle ore 05:30 alle ore 08:30 e dalle ore 16:30 alle ore 19:30.\" These translate directly into `guaranteedTimes`: `[\"05:30-08:30\", \"16:30-19:30\"]`.\n\nSince EAV operates in Campania, and the prompt states Campania's region code is 15. Then, the `locationType` is `REGIONAL` and `locationCodes` is `[\"15\"]`.\n\nI've made sure to adhere to the schema in the JSON object and that the format is valid. There's no extraneous information and the data is accurate. Therefore, I'm confident in the extraction and the subsequent JSON object.\n\n\n",
+    "tokens": {
+      "input": 10126,
+      "output": 140,
+      "total": 10838
+    }
+  }
+}

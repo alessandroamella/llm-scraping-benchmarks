@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5701,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00047885,
+      "outputCost": 0.0001716,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00065045
+    },
+    "hash": "0ac570e71dd1c8f7763af47b8f0e3e10",
+    "sourceFile": "sciopero_adesione_personale_atac_185.html",
+    "thoughts": "**Setting isStrike status**\n\nI need to set `isStrike` to false, so the output should be a JSON object like this: `{ \"isStrike\": false }`. I realize there's no need for any `strikeData`. I also check that there are no details about any upcoming strikes, as indicated by recent updates. The reference simply states the current day's strike participation, which is 18.5%. So, I’ll confirm that the output remains as stated.",
+    "tokens": {
+      "input": 9577,
+      "output": 429,
+      "total": 10006
+    }
+  }
+}

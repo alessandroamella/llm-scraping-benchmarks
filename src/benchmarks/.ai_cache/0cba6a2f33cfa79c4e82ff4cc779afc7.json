@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-28 08:20:00",
+      "endDate": "2025-01-28 12:20:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8740,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00262825,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.001119,
+      "cachedCost": 0,
+      "totalCost": 0.00389575
+    },
+    "hash": "0cba6a2f33cfa79c4e82ff4cc779afc7",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_di_4_ore_martedi_28_gennaio_2025.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, here's the breakdown of this strike announcement. My task is to extract relevant information from this HTML and format it as valid JSON according to the specified schema.\n\nFirst, I need to confirm this is indeed a strike announcement. The headline, \"Linea Metropolitana: Avviso di sciopero di 4 ore, martedì 28 gennaio 2025,\" and the body text, \"hanno proclamato uno sciopero aziendale di 4 ore...\", clearly indicate an upcoming strike. So, `isStrike` is definitely `true`.\n\nNow, for the details. The strike is scheduled for January 28, 2025. The body text provides the start and end times: 08:20 to 12:20. Thus, I'll set `startDate` to \"2025-01-28 08:20:00\" and `endDate` to \"2025-01-28 12:20:00\".\n\nNext, I need to identify the location and its code. The announcement mentions EAV (Ente Autonomo Volturno), which operates in Campania. This falls under the \"REGIONAL\" location type. As for the location code, I need the 2-digit ISTAT code for Campania, which is \"15\". So, `locationType` will be \"REGIONAL\" and `locationCodes` will be `[\"15\"]`.\n\nFinally, guaranteed times. Hmm. The text mentions \"Ultime partenze prima dello sciopero\" (08:15) and \"Prime partenze dopo lo sciopero\" (12:30/12:45). This implies service is guaranteed before 08:15 and after 12:45 (or 12:30). However, the prompt asks for \"Time ranges during which service is guaranteed (e.g., '06:00-09:00')\". The phrasing in the original text isn't explicit regarding a standard \"fasce di garanzia\". The text says \"Di seguito vengono elencate le ultime e le prime partenze garantite in relazione alle diverse fasce di garanzia.\" This implies guaranteed times exist but are not explicitly listed as time blocks. Thus, even though I can infer them based on \"ultime\" and \"prime\" I will omit `guaranteedTimes` to be absolutely sure I'm following the explicit instructions to only include the \"fasce di garanzia\" if explicitly defined.\n\nNow, let's double-check the schema compliance. `isStrike` is a boolean, good. The `strikeData` is an object, that is fine. The date format is yyyy-MM-dd HH:mm:ss, which is correct. And I've confirmed the location code is the correct 2-digit ISTAT for Campania (15).\n\nExcellent, everything checks out. I'm ready to output this as a properly formatted JSON object.\n\n\n",
+    "tokens": {
+      "input": 10513,
+      "output": 99,
+      "total": 11358
+    }
+  }
+}

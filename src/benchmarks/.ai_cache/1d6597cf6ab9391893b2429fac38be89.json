@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-07-23 09:00:00",
+      "endDate": "2025-07-23 11:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 12315,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00199375,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.0005325,
+      "cachedCost": 0,
+      "totalCost": 0.00267475
+    },
+    "hash": "1d6597cf6ab9391893b2429fac38be89",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_di_2_ore_giorno_23_luglio_2025.html",
+    "thoughts": "**Strike Announcement Analysis: EAV Campania**\n\nOkay, let's break this down. My task is to definitively determine if this text constitutes an announcement regarding an impending strike. The company in question is EAV, which, based on the provided region code, corresponds to the regional transport authority in Campania (code \"15\"). The text itself reads: \"Linee Flegree: Avviso di sciopero di 2 ore mercoledì 23 luglio 2025,\" which, translated, states \"Flegrean Lines: Notice of 2-hour strike on Wednesday, July 23, 2025.\"\n\nThe details are pretty straightforward. We have a clear date: July 23rd, 2025. It's explicitly a two-hour strike, and, importantly, it's an *avviso* – a notice – signaling an upcoming event. The time frame is implicit, but the context strongly suggests that the strike will last two hours.\n\nThe location is identified as EAV in Campania. Considering the nature of the transport agency, location type would be REGIONAL and location code is \"15\".\n\nThe text mentions that this is an *announcement* of a strike. In terms of data structuring, I'd set the `isStrike` flag to `true`. I'll define `startDate` as \"2025-07-23 09:00:00\" and `endDate` as \"2025-07-23 11:00:00\" - if the notice doesn't provide the exact timing, then the strike starts at the earliest time in the range. The location parameters seem clear.\n\nRegarding \"guaranteed times,\" the text includes \"in relazione alle fasce di garanzia\" but this is not an explicit listing of \"guaranteed time bands\" themselves, and the prompt asks for these as an array of time ranges. So, I will omit this field.\n\n\n",
+    "tokens": {
+      "input": 7975,
+      "output": 99,
+      "total": 8429
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-01-09 21:00:00",
+      "endDate": "2026-01-10 23:59:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "04",
+        "05"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 25846,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00053395,
+      "outputCost": 0.0009168,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00145075
+    },
+    "hash": "cfcedf60944a0e444ef3b6ce3014c036",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2026-1-9-sciopero-del-personale-di-sad---.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to extract data from a press release in Italian, German, and English about a staff strike for SAD and Trentino Trasporti happening from January 9 to January 10, 2026. It states the strike will be from 9 PM on January 9 to 8:59 PM on January 10 for SAD, and from 12:01 AM to 11:59 PM on January 10 for Trentino Trasporti. The affected region is Trentino Alto Adige and Veneto, and I need to format these dates properly for the JSON output.",
+    "tokens": {
+      "input": 10679,
+      "output": 2292,
+      "total": 12971
+    }
+  }
+}

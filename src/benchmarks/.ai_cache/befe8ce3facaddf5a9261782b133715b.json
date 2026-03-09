@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 14034,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00047965,
+      "outputCost": 0.0002352,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00071485
+    },
+    "hash": "befe8ce3facaddf5a9261782b133715b",
+    "sourceFile": "comunicato_stampa_sciopero_adesione.html",
+    "thoughts": "**Determining strike status**\n\nI need to format the JSON according to the schema. The document is in Italian and titled \"Sciopero del trasporto pubblico, adesione personale Atac al 16,4%\" published on 10/01/2025. It mentions a 16.4% attendance for the strike happening today. I’m trying to figure out if this is a new strike announcement, but it seems like it reports on an ongoing strike rather than an upcoming one. So, I won’t set isStrike to true.",
+    "tokens": {
+      "input": 9593,
+      "output": 588,
+      "total": 10181
+    }
+  }
+}

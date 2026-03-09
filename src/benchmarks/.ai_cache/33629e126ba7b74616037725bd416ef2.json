@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6500,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00016625,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0001665,
+      "cachedCost": 0,
+      "totalCost": 0.00034775
+    },
+    "hash": "33629e126ba7b74616037725bd416ef2",
+    "sourceFile": "strike-detail-venerd--29-novembre-revocato-sciopero-ferrovienord.html",
+    "thoughts": "**Strike Revocation Analysis**\n\nOkay, here's the deal. I've got this announcement in front of me, and my job is to quickly assess it. The input content clearly states that a strike, which was initially scheduled for Friday, November 29th, from 9 AM to 1 PM, has been *revoked*. The Italian word \"revocato\" is a dead giveaway here – it translates directly to \"revoked\" or \"cancelled.\" My task is to verify if this indeed a strike and extract any relevant data, so I need to check the data against my internal data structures. Given that the document explicitly uses the phrase \"revocato sciopero,\" meaning \"strike revoked,\" there's absolutely no ambiguity. Therefore, based on this clear and concise language, my immediate conclusion is that this is *not* an active strike. So, my internal flag, `isStrike`, must be set to `false`. That's that.\n\n\n",
+    "tokens": {
+      "input": 665,
+      "output": 10,
+      "total": 786
+    }
+  }
+}

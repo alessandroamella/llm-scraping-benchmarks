@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4934,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0041005,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000387,
+      "cachedCost": 0,
+      "totalCost": 0.0045025
+    },
+    "hash": "e609473e5317bd8d9c10063a7abbaf4a",
+    "sourceFile": "sciopero_adesione_personale_atac_185.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, my primary goal here is to figure out if this document is announcing a *future* strike, keeping in mind I need to return a JSON object with specific fields. Let's break it down. The title, \"Sciopero, adesione personale Atac al 18,5% - Roma Servizi per la Mobilità,\" immediately hints at a strike – \"sciopero\" is the key word – but the phrase \"adesione personale\" (personnel adherence) makes me pause. Now let’s dig a little deeper.\n\nThe content confirms that the document is reporting that \"L’adesione complessiva del personale Atac allo sciopero di oggi è stata pari al 18,5%\" (The overall adherence of Atac personnel to today's strike was 18.5%). So, this is about adherence *to* a strike, which has *already* occurred – it's a post-mortem, essentially. The date, \"17/11/2023 - Aggiornato il: 17/11/2023\" (Published 17 Nov 2023) supports this, as it's the date of the report, not a future date.\n\nCrucially, the instructions are clear: if this is *just* providing information about participation in a strike that has *already* happened, I should set `isStrike` to `false`. Therefore, given that this document is clearly a report on adherence to a past event, `isStrike` is definitely going to be `false`. I can move on to the next document.\n\n\n",
+    "tokens": {
+      "input": 16402,
+      "output": 10,
+      "total": 16670
+    }
+  }
+}

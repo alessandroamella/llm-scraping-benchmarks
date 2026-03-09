@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7817,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000512,
+      "outputCost": 0.000156,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002072
+    },
+    "hash": "c5161da0a37368b13650bf6505fae0f7",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_22.html",
+    "thoughts": "**Deciding on strike status**\n\nI need to assess if this content is about an upcoming strike. The Italian text mentions the public transport strike and personnel participation at 22%. It looks like this is reporting on a current strike, not announcing a future one. The 22% is the attendance rate for the strike observed in the morning. So, I’ll set \"isStrike\" to false. The JSON output will be: {\"isStrike\": false}. There’s no strike data needed.",
+    "tokens": {
+      "input": 1024,
+      "output": 390,
+      "total": 1414
+    }
+  }
+}

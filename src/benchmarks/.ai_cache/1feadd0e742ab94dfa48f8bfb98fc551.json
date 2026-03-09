@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7283,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00293475,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.0011835,
+      "cachedCost": 0,
+      "totalCost": 0.00430275
+    },
+    "hash": "1feadd0e742ab94dfa48f8bfb98fc551",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_generale_nazionale_di_24_ore_di_venerdi_28_novembre_2025.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, let's break this down. My task is clear: I need to analyze this HTML content and determine if it announces a strike for EAV (Campania). I need to output only JSON, strictly adhering to the specified schema. The core of this hinges on the `isStrike` boolean.  `true` means it's an announcement of a strike *about* to happen; `false` indicates anything else—cancellation, participation info, etc. No room for ambiguity there. Dates must be in 'yyyy-MM-dd HH:mm:ss' format; Guaranteed times as arrays of 'HH:mm-HH:mm'. The location code for Campania is 15, which I'll keep in mind.\n\nNow, let's look at the specifics. The title is \"Linee Flegree: Avviso di sciopero generale nazionale di 24 ore di venerdì 28 novembre 2025 - EAV srl\". The content confirms a 24-hour national strike on November 28, 2025.  The guaranteed service times are from 05:30 to 08:30 and 16:30 to 19:30.  \"Nazionale\" indicates this applies nationally, which includes Campania. This \"national\" designation is crucial. The instructions state explicitly that if it's national, I *must omit* `locationCodes`.\n\nSo, `isStrike` is definitely `true`. Now, the strike data. The strike date is November 28, 2025, a 24-hour strike. Since it's a 24-hour strike, I'll go with a start date of \"2025-11-28 00:00:00\" and an end date of \"2025-11-28 23:59:59\". The strike's `locationType` should be \"NATIONAL\" given the text. The guaranteed times are an array of [\"05:30-08:30\", \"16:30-19:30\"].\n\nI'm confident this is an *upcoming* strike because the document date (let's assume it's before the strike date) precedes the strike date, November 28, 2025.\n\nFinally, I need to verify strict adherence to the JSON schema.  `isStrike` (boolean) - Check. `strikeData` (object) - Check.  `startDate` (yyyy-MM-dd HH:mm:ss pattern) - Check. `endDate` (yyyy-MM-dd HH:mm:ss pattern) - Check. `locationType` (enum) - Check.  `guaranteedTimes` (array of HH:mm-HH:mm strings) - Check. *Crucially*, the `locationType` being \"NATIONAL\" means I must ensure `locationCodes` is *completely absent* from the output. I've double-checked that.\n\nTherefore:\n*   Start date: 2025-11-28 00:00:00\n*   End date: 2025-11-28 23:59:59\n\n\n",
+    "tokens": {
+      "input": 11739,
+      "output": 123,
+      "total": 12651
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-09-06 03:00:00",
+      "endDate": "2023-09-07 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24474,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005353,
+      "outputCost": 0.000606,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0011413
+    },
+    "hash": "0e7d2d685f85fa2d02abd7b19ea6f1d7",
+    "sourceFile": "strike-detail-mercoled--6-settembre--sciopero-dei-treni-regional.html",
+    "thoughts": "**Extracting strike data**\n\nI need to extract the strike data, including the start and end dates in the 'yyyy-MM-dd HH:mm:ss' format. The location type should either be \"REGIONAL\" or \"NATIONAL,\" and if it’s regional, location codes will be needed. For the Lombardia region, the code is \"03\" based on ISTAT. The context mentions a regional train strike starting from 6th September, with guaranteed times for certain trains. I'll ensure to include those details!",
+    "tokens": {
+      "input": 10706,
+      "output": 1515,
+      "total": 12221
+    }
+  }
+}

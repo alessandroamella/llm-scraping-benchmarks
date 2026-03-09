@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-24 00:00:00",
+      "endDate": "2025-02-24 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8964,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0020895,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.0011685,
+      "cachedCost": 0,
+      "totalCost": 0.003468
+    },
+    "hash": "f446acc7eb7dfc7961ef4b2a7fef0b7d",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_24h_lunedi_24_febbraio_2025.html",
+    "thoughts": "**Strike Announcement Analysis for EAV (Campania)**\n\nOkay, here's the breakdown. My task is to determine if this text announces a strike for EAV in Campania and, if so, to format the information into a valid, parseable JSON object adhering to a specific schema. The headline immediately suggests a strike: \"Linee Flegree: Avviso di sciopero 24h lunedì 24 febbraio 2025.\"\n\nI've got the company, EAV, and the region, Campania, which corresponds to ISTAT code \"15\". The output needs to be a JSON object with a `isStrike` boolean and, if true, a `strikeData` object containing `startDate`, `endDate`, `locationType`, `locationCodes`, and `guaranteedTimes`. The date format must be `yyyy-MM-dd HH:mm:ss`, the location type can be \"NATIONAL\" or \"REGIONAL\", location codes are 2-digit ISTAT codes, and guaranteed times are in the format \"HH:mm-HH:mm\".\n\nThe text itself confirms a strike on February 24, 2025, lasting 24 hours. The union, USB, has called a national strike. EAV operates regionally, so `locationType` should be \"REGIONAL\", and the relevant ISTAT code is \"15\". I can see it is definitely an announcement. The strike runs for the full day, from 00:00:00 to 23:59:59. Also, there are guaranteed service times: 05:30-08:30 and 16:30-19:30.\n\nNow, let's assemble the JSON. It's a strike, so `isStrike` will be true. The `startDate` is \"2025-02-24 00:00:00\", `endDate` is \"2025-02-24 23:59:59\". The `locationType` is \"REGIONAL\", and `locationCodes` is [\"15\"]. Finally, the `guaranteedTimes` are [\"05:30-08:30\", \"16:30-19:30\"].\n\nI'll check the validity: the start/end date format matches, the `locationType` is correct, the `locationCodes` are correct for Campania, and the guaranteed times are correctly formatted. Everything looks good.\n\n\n",
+    "tokens": {
+      "input": 8358,
+      "output": 140,
+      "total": 9277
+    }
+  }
+}

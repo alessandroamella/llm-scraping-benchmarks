@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-24 00:00:00",
+      "endDate": "2025-02-24 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 27607,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005822,
+      "outputCost": 0.0008592,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0014414
+    },
+    "hash": "0082508cd8b88a42f8322b0a051d2390",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_24_h_lunedi_24_febbraio_2025.html",
+    "thoughts": "**Analyzing strike details**\n\nThe content mentions a 24-hour strike on February 24, 2025, labeled as a national-level strike. Since it specifically states \"sciopero nazionale di 24 ore,\" I can confirm the location type should be \"NATIONAL\" rather than \"REGIONAL.\" For the location codes, they must be set to null according to instructions, so I'll make sure to include \"locationCodes\": null. Additionally, guaranteed service times are from 5:30 to 8:30 and 16:30 to 19:30.",
+    "tokens": {
+      "input": 11644,
+      "output": 2148,
+      "total": 13792
+    }
+  }
+}

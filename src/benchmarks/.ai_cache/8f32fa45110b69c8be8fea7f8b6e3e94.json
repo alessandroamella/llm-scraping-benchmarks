@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 10225,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00094105,
+      "outputCost": 0.0001564,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00109745
+    },
+    "hash": "8f32fa45110b69c8be8fea7f8b6e3e94",
+    "sourceFile": "sciopero_del_trasporto_pubblico_aperte_le_metropolitane_e_la_ferrovia_termini_centocelle.html",
+    "thoughts": "**Analyzing Strike Announcement**\n\nI need to format the output as JSON, per the specified schema. It seems that the document is not an upcoming strike announcement, but rather an article about an ongoing public transport strike. The date indicates it's current, with real-time updates showing that the strike is already happening and will end by 12:30. Since this is not a pre-announcement, I'll conclude that `isStrike` should be false. Hence, the output will be: `{\"isStrike\": false}`.",
+    "tokens": {
+      "input": 18821,
+      "output": 391,
+      "total": 19212
+    }
+  }
+}

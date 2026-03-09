@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8979,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00093655,
+      "outputCost": 0.000234,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00117055
+    },
+    "hash": "6f3ad8bf7d127e0ea2ef2db0e3031732",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_361.html",
+    "thoughts": "**Finalizing JSON output**\n\nI need to ensure that `isStrike` is set to false, so I’ll produce JSON like this: `{ \"isStrike\": false }`. The example outputs guide the structure, but I have to skip irrelevant content like \"Chiusura Check Point Aurelia.\" \n\nSo for the final answer, I’ll keep it simple without including `strikeData`. The prompt specifies the JSON format for strike extraction needs to be exact, which I’ll make sure to follow. Let’s deliver that correctly!",
+    "tokens": {
+      "input": 18731,
+      "output": 585,
+      "total": 19316
+    }
+  }
+}

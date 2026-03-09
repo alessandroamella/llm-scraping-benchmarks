@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-16 10:00:00",
+      "endDate": "2025-11-16 17:59:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "08",
+        "07",
+        "03",
+        "01",
+        "05"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 28077,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00052445,
+      "outputCost": 0.0007724,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00129685
+    },
+    "hash": "faf690965d1b87371d08920b9fce3035",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-11-16-sciopero-del-personale-di-tren.html",
+    "thoughts": "**Extracting strike data**\n\nIt mentions \"In vigore: 16 NOVEMBRE 2025\" and indicates that a strike was announced. This suggests it's an upcoming strike, making isStrike true. I need to extract strike data: \n\nFor the start date, I see it as \"2025-11-16 10:00:00,\" aligning with the required format. The end date will be \"2025-11-16 17:59:00.\"\n\nThe content states it's a regional strike covering Emilia Romagna, Liguria, Lombardia, Piemonte, and Veneto, so locationType should be \"REGIONAL.\" \n\nI also need the two-digit ISTAT codes for these regions.",
+    "tokens": {
+      "input": 10489,
+      "output": 1931,
+      "total": 12420
+    }
+  }
+}

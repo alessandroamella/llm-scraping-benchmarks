@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4748,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00410725,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.00042,
+      "cachedCost": 0,
+      "totalCost": 0.00454225
+    },
+    "hash": "a1dc18e2d3dfa67b19d8da6e4a84fd91",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_322.html",
+    "thoughts": "**Analyzing the Strike Content**\n\nOkay, my primary task here is to figure out if this text is announcing a *future* strike. The prompt sets the rules: if it's about a past event or a real-time update, it's not an upcoming strike, and the result should be `isStrike: false`. Conversely, if it's a strike announcement, I need to parse out the relevant details like date and location.\n\nLet's dive into this specific content. The title, \"Sciopero del trasporto pubblico, adesione personale Atac al 32,2% - Roma Servizi per la Mobilità,\" and the body text, which discusses the participation in *today's* strike ( \"di oggi,\" and the past tense verb \"è stata\"), clearly point to a past event. They're reporting on the *results* of a strike that has already occurred, not an announcement of a future one. The use of \"oggi\" (today) also makes that clear.\n\nTherefore, this definitively fails to meet the criteria for an *upcoming* strike announcement. The prompt specifies a single JSON object. Consequently, the correct response is `{\"isStrike\": false}`.\n\n\n",
+    "tokens": {
+      "input": 16429,
+      "output": 10,
+      "total": 16719
+    }
+  }
+}

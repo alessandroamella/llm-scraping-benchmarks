@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-05-11 00:00:00",
+      "endDate": "2025-05-11 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20076,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005338,
+      "outputCost": 0.000722,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0012558
+    },
+    "hash": "d86bfc4f0cb0be06086ff7083e4ac5bc",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_24h_domenica_11_maggio_2025.html",
+    "thoughts": "**Parsing strike announcement**\n\nI need to check if this document is announcing a strike. The Italian content indicates a 24-hour strike notice for May 11, 2025, proclaimed by OS Or.S.A. It seems that transportation is guaranteed from 5:30 AM to 8:30 AM and from 4:30 PM to 7:30 PM. So, it looks like this is an upcoming strike notice. I need to extract relevant data like startDate, endDate, locationType, locationCodes, and guaranteedTimes for the JSON output.",
+    "tokens": {
+      "input": 10676,
+      "output": 1805,
+      "total": 12481
+    }
+  }
+}

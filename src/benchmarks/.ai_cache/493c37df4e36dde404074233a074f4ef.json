@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-09-06 03:00:00",
+      "endDate": "2023-09-07 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9160,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0002835,
+      "outputCost": 0.000189,
+      "thinkingCost": 0.000522,
+      "cachedCost": 0,
+      "totalCost": 0.0009945
+    },
+    "hash": "493c37df4e36dde404074233a074f4ef",
+    "sourceFile": "strike-detail-mercoled--6-settembre--sciopero-dei-treni-regional.html",
+    "thoughts": "**Analyzing the Italian Regional Train Strike Announcement**\n\nOkay, so I've received an input regarding a regional train strike in Italy, specifically for \"Mercoledì 6 settembre,\" or Wednesday, September 6th, 2023. This information is future-dated, with the announcement made on September 4th for an event happening on the 6th. Excellent, that's exactly what I'd expect.\n\nI need to parse this effectively. The key details are: the strike *is* indeed happening. It’s starting at 3:00 AM on September 6th, 2023 and continuing until 2:00 AM on September 7th. The location is specified as Trenord in Lombardia, confirming it's a \"REGIONAL\" strike, code \"03\". This tells me exactly where and what type of transportation will be affected.\n\nCrucially, there are guaranteed service times: between \"6-9\" and \"18-21,\" that's my \"06:00-09:00\" and \"18:00-21:00\" format.\n\nNow, I need to translate this information into the correct, and very precise JSON format for further processing and integration. All the essential details are there: start date, end date, the \"REGIONAL\" location type, the location code list [\"03\"], and the guaranteed service times. The focus must be on an entirely valid JSON output, strict adherence to the data structure and field names. I must ensure there's no extraneous text or deviations from the format.\n\n\n",
+    "tokens": {
+      "input": 1134,
+      "output": 126,
+      "total": 1608
+    }
+  }
+}

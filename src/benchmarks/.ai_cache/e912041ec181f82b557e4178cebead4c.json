@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-05-11 00:00:00",
+      "endDate": "2025-05-11 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8442,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0003345,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.000651,
+      "cachedCost": 0,
+      "totalCost": 0.0011955
+    },
+    "hash": "e912041ec181f82b557e4178cebead4c",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_24h_domenica_11_maggio_2025.html",
+    "thoughts": "**Strike Analysis: EAV Linee Vesuviane - May 11, 2025**\n\nOkay, here's what I've got. The input is an announcement: \"Avviso di Sciopero 24h domenica 11 maggio 2025\". My goal is to determine if this confirms a strike and, if so, to extract the key data points into a structured JSON object. The target is a `{\"isStrike\": true, \"strikeData\": {...}}` format, of course.\n\nThe announcement clearly indicates a 24-hour strike on Sunday, May 11, 2025. It's for EAV, specifically related to the Linee Vesuviane, which I know is a regional transport provider. So, yes, `isStrike` is definitely `true`.\n\nNow, let's break down the details:\n\n*   **Date:** Confirmed as Sunday, May 11, 2025. I'll need to translate that into a `startDate` and `endDate` format as `yyyy-MM-dd HH:mm:ss`. A 24-hour strike like this usually starts at midnight, so my `startDate` will be \"2025-05-11 00:00:00\" and `endDate` will be \"2025-05-11 23:59:59\". Or maybe 00:00:00 of the 12th depending on how it's defined. I'll have to keep that in mind.\n*   **Company:** EAV, which I'll translate to a `locationType` of \"REGIONAL\". Campania is the region, which I know is represented by the location code \"15\". This will populate the `locationCodes` array.\n*   **Duration:** 24 hours. Already processed.\n*   **Guaranteed Bands:** I see guaranteed service during \"05:30-08:30\" and \"16:30-19:30\". I'll format this into an array of strings like `[\"05:30-08:30\", \"16:30-19:30\"]` for the `guaranteedTimes` field.\n\nFinally, let me double check the structure: `isStrike` is a boolean, and the extracted data will go into the `strikeData` object. Date formats are as specified, `locationType` is \"REGIONAL\", `locationCodes` is an array of strings, and `guaranteedTimes` is an array of strings as well. This all looks good. Now, to write that output.\n\n\n",
+    "tokens": {
+      "input": 1338,
+      "output": 140,
+      "total": 1912
+    }
+  }
+}

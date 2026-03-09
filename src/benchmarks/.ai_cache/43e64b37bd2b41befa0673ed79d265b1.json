@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-10 19:32:00",
+      "endDate": "2025-01-10 23:32:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21694,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00052785,
+      "outputCost": 0.0007056,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00123345
+    },
+    "hash": "43e64b37bd2b41befa0673ed79d265b1",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_di_4_ore10_gennaio_2025.html",
+    "thoughts": "**Formatting dates and location types**\n\nI need to ensure the dates are in the 'yyyy-MM-dd HH:mm:ss' format. For the strike occurring from 19:32 to 23:32 on January 10, 2025, the startDate should be \"2025-01-10 19:32:00\" and the endDate \"2025-01-10 23:32:00\". The strike is national, so the locationType should be \"NATIONAL\" in capital letters. LocationCodes must be explicitly set to null because it's a national strike, aligning with the schema's requirement. I'm also checking if \"guaranteedTimes\" is present.",
+    "tokens": {
+      "input": 10557,
+      "output": 1764,
+      "total": 12321
+    }
+  }
+}

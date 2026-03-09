@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-09-22 00:00:00",
+      "endDate": "2025-09-22 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7978,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00280075,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.0012735,
+      "cachedCost": 0,
+      "totalCost": 0.00428425
+    },
+    "hash": "7d2e31c79e6986dc74f583696d09acf6",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_generale_nazionale_lunedi_22_settembre_2025.html",
+    "thoughts": "**Strike Analysis for EAV (Campania)**\n\nOkay, let's break this down. My task is to analyze this HTML content and determine if it announces a strike, specifically for EAV in Campania (region code 15), and then extract the relevant strike details, all in JSON format.\n\nFirst, I confirm the article *is* announcing a strike; the headline explicitly states, \"Avviso di sciopero generale nazionale,\" which indicates a general, national strike warning.  The headline also includes \"Linee Vesuviane,\" which I know is associated with EAV. The date of the article's publication is September 17th, 2025, but it refers to a strike on September 22nd, 2025 – so that's the key date.\n\nThe text confirms the strike is organized by USB. The strike duration is specified as 23 or 24 hours depending on the personnel type and includes the guarantee times \"fasce di garanzia\" of 05:30-08:30 and 16:30-19:30.  A 24-hour strike in Italy typically starts at 00:00 and ends at 23:59.\n\nNow, I'm extracting the strike information. Since the strike is confirmed, `isStrike` is set to `true`.  The `startDate` is \"2025-09-22 00:00:00\", derived from the text, and the `endDate` is \"2025-09-22 23:59:59\".  The `locationType` is \"REGIONAL\" because EAV is the regional transport company for Campania (code 15), and the `locationCodes` is set to `[\"15\"]`. The `guaranteedTimes` are \"05:30-08:30\" and \"16:30-19:30\".\n\nI'm verifying that each extracted data point is in the expected format: `isStrike` is a boolean and correct. `startDate` and `endDate` are both matching the `YYYY-MM-DD HH:MM:SS` regex and correct. `locationType` is one of the accepted enum values and matches. `locationCodes` matches the enum value (15) and is correct. The `guaranteedTimes` are in the proper `HH:MM-HH:MM` format, matching the regex.\n\nThe headline and the content confirm this is an announcement. It's a strike warning, and all details align perfectly. I'm satisfied. The analysis is complete.\n\n\n",
+    "tokens": {
+      "input": 11203,
+      "output": 140,
+      "total": 12192
+    }
+  }
+}

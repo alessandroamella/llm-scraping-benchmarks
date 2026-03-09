@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-01-19 00:00:00",
+      "endDate": "2026-01-19 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 26334,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000364,
+      "outputCost": 0.0007412,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0011052
+    },
+    "hash": "ef8254924988807a5f49b3394763c9df",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_aziendale_di_24_h_lunedi_19_gennaio_2026.html",
+    "thoughts": "**Extracting strike information**\n\nI need to check if this document announces a new strike by EAV. It clearly states there's a 24-hour strike on January 19, 2026. The content specifies guaranteed service times and mentions the strike's motivation related to organizational issues. Since the date and details match perfectly, the \"startDate\" for JSON will be formatted as 2026-01-19 05:30. So I'm ready to output that in the specified JSON format!",
+    "tokens": {
+      "input": 7280,
+      "output": 1853,
+      "total": 9133
+    }
+  }
+}

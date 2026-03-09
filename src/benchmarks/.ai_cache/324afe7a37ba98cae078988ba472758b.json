@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-10 19:32:00",
+      "endDate": "2025-01-10 23:32:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9516,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0002405,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.000798,
+      "cachedCost": 0,
+      "totalCost": 0.0011615
+    },
+    "hash": "324afe7a37ba98cae078988ba472758b",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_4_ore_10_gennaio_2025.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, here's what I've got. I'm looking at an announcement about a strike. The input clearly states a national strike by CONF.A.I.L. is planned for January 10th, 2025. Specifically, the strike's duration is from 19:32 to 23:32, a 4-hour window. Although the prompt mentions the public transport company of Campania (15), the announcement specifies a *national* strike. Therefore, even if Campania (15) is affected, the `locationType` should be set to `NATIONAL`, and any associated location codes MUST be omitted according to the instructions. I need to make sure I don't introduce `locationCodes` since the `locationType` is `NATIONAL`.\n\nNow, the dates and times. The `startDate` will be \"2025-01-10 19:32:00\" and the `endDate` will be \"2025-01-10 23:32:00.\" I just checked the formatting; both date and time values are in the correct `yyyy-MM-dd HH:mm:ss` format, which is good.\n\nThe text also mentions \"ultime e prime partenze garantite in relazione alle fasce di garanzia.\" This implies guaranteed service, but it doesn't explicitly *define* those \"fasce di garanzia\" – those guaranteed time ranges. It goes on to list specific train departures, but no actual time ranges for guaranteed service are included in the text, such as \"06:00-09:00\" or similar. Since I'm expected to extract this information and it's not present, I'll omit the `guaranteedTimes` field entirely. The schema indicates it is an array, and since no guaranteed times are included, I will omit the entire array.\n\nTherefore, the strike data should be structured like this:\n\n*   `isStrike`: true\n*   `strikeData`:\n    *   `startDate`: \"2025-01-10 19:32:00\"\n    *   `endDate`: \"2025-01-10 23:32:00\"\n    *   `locationType`: \"NATIONAL\"\n    *   `guaranteedTimes`: Omitted\n\nI've carefully checked for any contradictions and inconsistencies, and I believe this accurately reflects the information presented, adhering to the instruction about national strikes and the absence of guaranteed service time ranges.\n\n\n",
+    "tokens": {
+      "input": 962,
+      "output": 82,
+      "total": 1576
+    }
+  }
+}

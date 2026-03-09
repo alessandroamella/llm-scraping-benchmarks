@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-24 00:00:00",
+      "endDate": "2025-02-24 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8436,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0002625,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.000756,
+      "cachedCost": 0,
+      "totalCost": 0.0012285
+    },
+    "hash": "2b1988c4fdb2731e794d5aa7a1de3b45",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_24h_lunedi_24_febbraio_2025.html",
+    "thoughts": "**Strike Analysis and Data Extraction**\n\nOkay, let's break this down. The input clearly announces a 24-hour strike, specifically targeting the EAV system in the Campania region. My primary objective is to accurately determine the strike details and represent them in a strict JSON format, adhering precisely to the pre-defined schema. The page title and content leave no room for ambiguity.\n\nThe title, \"Linea Metropolitana: Avviso di sciopero 24h lunedì 24 febbraio 2025,\" explicitly declares a 24-hour strike. The content confirms this, mentioning \"azione di sciopero\" (strike action) on February 24, 2025, called by the USB union.\n\nSince it's a full 24-hour strike, I'll assume it starts at the beginning of the day, 00:00:00, and concludes at the end, 23:59:59. This gives me my `startDate` and `endDate`.\n\nThe text explicitly mentions EAV and Campania. I confirm the EAV system is in the Campania region, coded as \"15\". I understand that `locationType` should be \"REGIONAL,\" and `locationCodes` is \"15.\"\n\nThe text also provides \"Servizio garantito dalle ore 05:30 alle ore 8:30 e dalle ore 16:30 alle ore 19:30\" (guaranteed service from 05:30 to 08:30 and from 16:30 to 19:30). That's my `guaranteedTimes` data, formatted as an array of strings.\n\nI'm confident I have a solid understanding of the information, and I can now construct the JSON:\n\n*   `isStrike`: true\n*   `startDate`: \"2025-02-24 00:00:00\"\n*   `endDate`: \"2025-02-24 23:59:59\"\n*   `locationType`: \"REGIONAL\"\n*   `locationCodes`: [\"15\"]\n*   `guaranteedTimes`: [\"05:30-08:30\", \"16:30-19:30\"]\n\nThis should fulfill the request. I've validated the data, and it aligns with my established understanding of strike announcements and data structures.\n\n\n",
+    "tokens": {
+      "input": 1050,
+      "output": 140,
+      "total": 1694
+    }
+  }
+}

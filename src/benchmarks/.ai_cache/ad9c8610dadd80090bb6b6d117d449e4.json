@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-10 19:32:00",
+      "endDate": "2025-01-10 23:32:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19472,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005337,
+      "outputCost": 0.0007184,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0012521
+    },
+    "hash": "ad9c8610dadd80090bb6b6d117d449e4",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_4_ore_10_gennaio_2025.html",
+    "thoughts": "**Evaluating field requirements**\n\nThe instructions say we can omit guaranteedTimes if no time range is specified. However, the schema indicates that all fields in the strikeData object are required, and missing fields should be filled with null values, not omitted. So, I’m a bit confused: does this null requirement apply to the entire dataset from the HTML extraction? It seems conflicting, particularly with the strict instruction that all fields must be present. I need to clarify this!",
+    "tokens": {
+      "input": 10674,
+      "output": 1796,
+      "total": 12470
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21960,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00057615,
+      "outputCost": 0.0006444,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00122055
+    },
+    "hash": "713d6dd38cd0d01852b1a88b63e46d5b",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_24_h_venerdi_12_dicembre_2025.html",
+    "thoughts": "**Extracting strike data**\n\nI need to generate JSON based on the extraction format. The HTML document indicates an upcoming strike with the title \"Linee Vesuviane: Avviso di sciopero di 24 h venerdì 12 Dicembre 2025.\" It specifies a 24-hour strike on December 12, 2025. The data also includes the announcement date of December 7, 2025, and mentions guaranteed service times. Therefore, I should set isStrike to true and extract the relevant strike data, including dates and locations.",
+    "tokens": {
+      "input": 11523,
+      "output": 1611,
+      "total": 13134
+    }
+  }
+}

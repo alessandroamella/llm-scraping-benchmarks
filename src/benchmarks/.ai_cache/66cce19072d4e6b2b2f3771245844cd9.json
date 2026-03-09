@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5253,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005105,
+      "outputCost": 0.000104,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00015505
+    },
+    "hash": "66cce19072d4e6b2b2f3771245844cd9",
+    "sourceFile": "sciopero_nazionale_adesione_personale_atac_al_237.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to figure out if the document is announcing a new or upcoming strike. The content is in Italian, with a title about national strike participation. It states the percentage of staff participation for a strike that has already happened today. So, I conclude that this isn’t about an upcoming strike. Based on that, I’ll formulate the response as JSON, specifically stating: {\"isStrike\": false}.",
+    "tokens": {
+      "input": 1021,
+      "output": 260,
+      "total": 1281
+    }
+  }
+}

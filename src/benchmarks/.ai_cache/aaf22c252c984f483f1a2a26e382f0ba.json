@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-24 00:00:00",
+      "endDate": "2025-02-24 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20975,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005102,
+      "outputCost": 0.000654,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0011642
+    },
+    "hash": "aaf22c252c984f483f1a2a26e382f0ba",
+    "sourceFile": "eav_autolinee_avviso_di_sciopero_di_24_ore_lunedi_24_febbraio_2025.html",
+    "thoughts": "**Extracting strike details**\n\nI need to determine if the document is announcing a new or upcoming strike. The title translates to a 24-hour strike notice for EAV Autolinee on February 24, 2025. The content confirms that the USB union has declared this action as part of a national strike. It provides guarantee times for service. So, it looks like it is indeed announcing an upcoming strike, and I should set the isStrike to true and fill out the necessary strike data.",
+    "tokens": {
+      "input": 10204,
+      "output": 1635,
+      "total": 11839
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8500,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000515,
+      "outputCost": 0.0001152,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0001667
+    },
+    "hash": "62b5ece393d4887024f1eb895495227f",
+    "sourceFile": "sciopero_trasporto_pubblico_ha_aderito_246_personale_atac.html",
+    "thoughts": "**Determining strike status**\n\nI need to respond with JSON according to the specified strike extraction format. I see that the document discusses participation in a past strike, not an upcoming one. The title indicates that 24.6% of personnel participated in today's strike, which means it’s not an announcement for a future strike. Therefore, I’ll set isStrike to false and return the output as {\"isStrike\": false}. There’s no need for additional strike data.",
+    "tokens": {
+      "input": 1030,
+      "output": 288,
+      "total": 1318
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-10 19:32:00",
+      "endDate": "2025-01-10 23:32:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6584,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000365,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.0006615,
+      "cachedCost": 0,
+      "totalCost": 0.0011495
+    },
+    "hash": "aa2def676acc22d1500d0982f498e0bf",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_4_ore_venerdi_10_gennaio_2025.html",
+    "thoughts": "**Strike Announcement Analysis**\n\nOkay, let's break this down. My task is to determine if this document announces a strike and, if so, pull out the critical details. The input is an EAV announcement for a strike on January 10th, 2025. The condition is clear: `isStrike` should be true if it *is* a strike announcement and false otherwise. The required details are `startDate`, `endDate`, `locationType`, `locationCodes`, and `guaranteedTimes`.\n\nAlright, the announcement itself says: \"Si comunica che per il giorno 10 Gennaio 2025 la O.S. CONF.A.I.L. ha proclamato uno sciopero nazionale di 4 ore, dalle ore 19:32 alle ore 23:32\". Seems pretty straightforward – this *is* a strike. So, `isStrike` is true.\n\nNow for the specifics. The date is easily derived as 2025-01-10. The time range is from 19:32 to 23:32. We can combine those to get `startDate` as 2025-01-10 19:32:00 and `endDate` as 2025-01-10 23:32:00.\n\nThe scope of the strike is defined as \"nazionale\", meaning national. Therefore, `locationType` should be \"NATIONAL\". The instructions are very specific: \"If locationType is NATIONAL, locationCodes MUST BE OMITTED completely.\" Got it.\n\nFinally, `guaranteedTimes`. The text mentions \"ultime partenze garantite\" (last guaranteed departures), but it doesn't specify any explicit time ranges in the format expected. There are no ranges like \"06:00-09:00\" given, so I'll omit the `guaranteedTimes` field. It's important to provide only what's explicitly requested in the required format.\n\n\n",
+    "tokens": {
+      "input": 1460,
+      "output": 82,
+      "total": 1983
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-03 00:00:00",
+      "endDate": "2025-10-03 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7087,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0004555,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.00105,
+      "cachedCost": 0,
+      "totalCost": 0.00169
+    },
+    "hash": "798c16bab81243b8eeebc6a22285ac38",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_generale_nazionale_di_24_ore_venerdi_03_ottobre_2025.html",
+    "thoughts": "**Strike Analysis: EAV srl - October 3, 2025**\n\nOkay, let's break this down. My source is EAV srl, focusing on public transport in Campania. The core information here is a national general strike, *sciopero generale nazionale*, slated for Friday, October 3rd, 2025. It's a full 24-hour strike, which implies a start at 00:00:00 and an end at 23:59:59 on that day. The location type is clearly defined as \"NATIONAL.\"\n\nI've extracted the key details: `isStrike: true`, indicating a confirmed strike event. The `startDate` is \"2025-10-03 00:00:00\" and the `endDate` is \"2025-10-03 23:59:59\". The `locationType` is correctly set as \"NATIONAL.\" And critically, the guaranteed service times are listed as: \"05:30-08:30\" and \"16:30-19:30\". I've made a note of the different timings for AIR Campania/Napoli-Baiano, but I will stick to the EAV defined times for the moment. The schema allows for multiple guaranteed times, so I can include both if required.\n\nThe data itself is clean; it's valid JSON, with no extraneous comments or formatting errors. The dates fit the established regex pattern for date and time. And I just checked the \"locationCodes\" rules. The documentation states that if the \"locationType\" is \"NATIONAL\", the \"locationCodes\" should be completely omitted. Which I have done here.\n\nIn short, everything checks out. The strike information is well-defined and accurately represented, ready for processing.\n\n\n",
+    "tokens": {
+      "input": 1822,
+      "output": 123,
+      "total": 2645
+    }
+  }
+}

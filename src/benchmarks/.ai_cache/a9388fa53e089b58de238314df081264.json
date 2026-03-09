@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:01:00",
+      "endDate": "2025-12-12 21:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4772,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00349,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.0005325,
+      "cachedCost": 0,
+      "totalCost": 0.0041455
+    },
+    "hash": "a9388fa53e089b58de238314df081264",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-12-12-sciopero-nazionale-del-traspor.html",
+    "thoughts": "**Analyzing the Italian Railway Strike Announcement**\n\nOkay, so I've pulled up this webpage from *rfi.it*, and it's quite straightforward: \"SCIOPERO NAZIONALE DEL TRASPORTO FERROVIARIO.\" Basically, a national railway strike is planned. Let's break this down systematically.\n\nFirst, the key details: it's happening on December 12th, 2025 – a Friday, from 00:01 to 21:00. The strike involves the \"Gruppo FS Italiane, Italo e Trenord,\" which is pretty much the main players in Italian rail. And crucially, it's *national* in scope.\n\nNow, let's confirm this data is structured in a way I can use and, yes, it’s clearly a strike, so `isStrike` is `true`. The data's also neatly organized within a `strikeData` object. I've got the `startDate` and `endDate` in that standard \"yyyy-MM-dd HH:mm:ss\" format: `2025-12-12 00:01:00` and `2025-12-12 21:00:00`, respectively. The `locationType` is definitely \"NATIONAL,\" which is what I expected. No specific `locationCodes` are needed in this case since it’s national. Also, there are no 'guaranteedTimes' to track, so that's good.\n\nPerfect! The data is consistent. This fits the required schema, and it's expressed in JSON format, which means I can easily parse it and integrate this information with my existing systems. Very efficient.\n\n\n",
+    "tokens": {
+      "input": 13960,
+      "output": 82,
+      "total": 14397
+    }
+  }
+}

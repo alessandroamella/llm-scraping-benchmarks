@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7728,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0009378,
+      "outputCost": 0.0001588,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0010966
+    },
+    "hash": "9820b2e46d0653b6916889ef07617168",
+    "sourceFile": "sospeso_sciopero_atac_16_gennaio_servizio_sar_regolare.html",
+    "thoughts": "**Formatting strike information**\n\nI need to output the information in JSON format per the strike extraction guidelines. The source content is a bit messy HTML, but key lines state that the ATAC strike scheduled for January 16 has been suspended, and service will be regular. \n\nThe main points confirm this is a cancellation, not an upcoming strike. Since the document clearly indicates the strike is suspended, the `isStrike` value should be false.",
+    "tokens": {
+      "input": 18756,
+      "output": 397,
+      "total": 19153
+    }
+  }
+}

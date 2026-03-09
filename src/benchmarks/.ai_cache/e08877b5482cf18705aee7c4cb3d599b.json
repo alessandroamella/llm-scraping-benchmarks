@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-07-23 09:00:00",
+      "endDate": "2025-07-23 11:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7802,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00185375,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.0008535,
+      "cachedCost": 0,
+      "totalCost": 0.00285575
+    },
+    "hash": "e08877b5482cf18705aee7c4cb3d599b",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_di_2_ore_mercoledi_23_luglio_2025.html",
+    "thoughts": "**Analyzing Strike Information for EAV (Campania)**\n\nOkay, here's how I'm approaching this. My task is to extract strike information from the text provided, specifically concerning EAV, the public transport company in Campania (region code \"15\"). I need to output a JSON object with specific fields.\n\nFirst, I need to confirm it's a strike announcement, and I've got that - it explicitly mentions a strike is being announced. The date is \"mercoledì 23 luglio 2025,\" confirmed as an *upcoming* strike. The relevant company is EAV srl, and the location is definitely Campania, identified by the ISTAT code \"15\".\n\nNow, let's break down the data for the JSON.\n\n*   `isStrike`: This is clearly true; it's an announcement.\n*   `startDate`: The text says \"dalle ore 09:00 alle ore 11:00\" which translates to \"from 09:00 to 11:00\", so \"2025-07-23 09:00:00\".\n*   `endDate`: Correspondingly, \"2025-07-23 11:00:00\".\n*   `locationType`: EAV operates regionally, so \"REGIONAL\".\n*   `locationCodes`: \"15\" is Campania's code.\n*   `guaranteedTimes`: The text explicitly states \"Non saranno garantite le corse durante l’orario di sciopero.\" which means no guaranteed times are mentioned. According to the instructions, it should be omitted or an empty array.\n\nTherefore, the resulting JSON will be:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-07-23 09:00:00\",\n    \"endDate\": \"2025-07-23 11:00:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"15\"]\n  }\n}\n```\n\nThis JSON is valid, the strike is upcoming, and it correctly identifies Campania (15) as the affected location. I have considered the instruction to omit the `guaranteedTimes` field as they were not stated.\n\n\n",
+    "tokens": {
+      "input": 7415,
+      "output": 99,
+      "total": 8083
+    }
+  }
+}

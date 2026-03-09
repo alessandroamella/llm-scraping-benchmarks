@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6206,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000382,
+      "outputCost": 0.000189,
+      "thinkingCost": 0.000618,
+      "cachedCost": 0,
+      "totalCost": 0.001189
+    },
+    "hash": "d05f52ff77a8154edf9985a330eef62a",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_di_24_ore_del_13_dicembre_2024_aggiornamento.html",
+    "thoughts": "**Strike Analysis & Data Extraction**\n\nOkay, so I've received some text, likely an EAV notice, and my primary concern is to determine if it indicates an upcoming strike. The text explicitly mentions a \"24-hour strike\" happening on December 13, 2024. Therefore, *isStrike* is definitively true.\n\nNow, I need to extract the pertinent strike details. I can see the strike duration is for the entire day of December 13th, 2024. So, the *startDate* will be \"2024-12-13 00:00:00\" and the *endDate* will be \"2024-12-13 23:59:59\". This is standard for a full day strike.\n\nThe location information points to a regional impact, specifically identified as \"Campania (15)\". This allows me to classify the *locationType* as \"REGIONAL\" and the *locationCodes* should contain the single entry [\"15\"].\n\nThe notice also includes guaranteed service hours. Those windows of service are between 05:30 and 08:30 and 16:30 and 19:30, which are therefore added to *guaranteedTimes* as [\"05:30-08:30\", \"16:30-19:30\"].\n\nFinally, I will assemble this extracted data into a JSON formatted object, which is very important for data consistency and ease of use in downstream processes. I am going to make sure the response strictly follows JSON format.\n\n\n",
+    "tokens": {
+      "input": 1528,
+      "output": 126,
+      "total": 2066
+    }
+  }
+}

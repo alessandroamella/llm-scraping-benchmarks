@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-13 08:30:00",
+      "endDate": "2025-10-13 12:30:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7845,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00201625,
+      "outputCost": 0.00015,
+      "thinkingCost": 0.0007995,
+      "cachedCost": 0,
+      "totalCost": 0.00296575
+    },
+    "hash": "deb035e80216d7a606e017801e9f2de3",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_4_ore_del_13_ottobre_2025.html",
+    "thoughts": "**Strike Announcement Analysis**\n\nOkay, let me break this down. My task is clear: determine if this text announces an upcoming strike. The content is from \"Linee Vesuviane,\" which suggests it's related to the transport network. Let's dig in.\n\nThe title, \"Linee Vesuviane: Avviso di sciopero di 4 ore del 13 ottobre 2025 - EAV srl,\" is a dead giveaway. \"Avviso di sciopero\" *means* \"strike notice.\" The text confirms this: \"Si comunica che...ha proclamato uno sciopero aziendale di 4 ore...\" Yep, it's definitely a strike.\n\nNow, to extract the details for the JSON output. The date is October 13, 2025, confirmed by the text itself. The strike duration is 4 hours, and it starts on that date. The text indicates that the strike runs from 08:30 to 12:30. Good, good.\n\nLocation is crucial. \"EAV\" implies the regional transportation operator. It specifies the location as Campania, and my prior knowledge confirms that the ISTAT code for Campania is \"15.\" The instructions explicitly state this, so that's easy to verify. The `locationType` should therefore be \"REGIONAL.\" The strike is *regional* because it involves a specific transportation operator in the region of Campania.\n\nNow for the JSON schema. We want `isStrike: true`. For the `strikeData`, I'll format the `startDate` and `endDate` as instructed: `yyyy-MM-dd HH:mm:ss`. So that's `2025-10-13 08:30:00` and `2025-10-13 12:30:00`. `locationType` is definitely \"REGIONAL.\"  And the `locationCodes` will be `[\"15\"]`, representing Campania.\n\nThe only remaining question is the guaranteed times. The text says \"prime partenze garantite dopo lo sciopero\" (\"first guaranteed departures after the strike\") but *not* \"fasce di garanzia\" in the sense of general service bands. The instructions say to omit the bands, unless clearly specified. Since the text specifies *departures* after, it does not fit the criteria of specified time bands for guaranteed service. Therefore, I'll omit that field from the JSON. This fits the schema requirements perfectly. Done.\n\n\n",
+    "tokens": {
+      "input": 8065,
+      "output": 100,
+      "total": 8698
+    }
+  }
+}

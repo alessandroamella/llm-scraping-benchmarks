@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-01-13 00:00:00",
+      "endDate": "2026-01-13 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6495,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00285225,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.000855,
+      "cachedCost": 0.000189,
+      "totalCost": 0.00408075
+    },
+    "hash": "ed5baa488a3023a876cd4d633c7b8351",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2026-1-13-sciopero-nazionale-del-trasport.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, let's break this down. My task is clear: I need to analyze this text and determine if it's announcing an upcoming strike, and output the result in strict JSON format. I need to be precise, adhering to the provided schema and date/time formats, especially handling the `isStrike` boolean correctly. Cancellations, past events, or real-time status updates are *not* considered strikes, only upcoming announcements count.\n\nThe title \"SCIOPERO NAZIONALE PERSONALE AUTOFERROTRANVIERI\" immediately sets the stage. The date is \"Il giorno martedì 13 gennaio 2026\" - January 13th, 2026. \"24 ore\" indicates a 24-hour duration, and \"NAZIONALE\" tells me the scope is national. The guaranteed times are \"dalle ore 6.00 alle ore 9.00 e dalle ore 18.00 alle ore 21.00,\" which translates to 6:00 to 9:00 and 18:00 to 21:00. This is a clear announcement of an upcoming strike.\n\nTherefore, `isStrike` is definitely `true`. Now, to construct the `strikeData` object.\n\n*   `startDate`: Since it's a 24-hour strike starting on the day of the announcement, the start date must be \"2026-01-13 00:00:00\".\n*   `endDate`: Similarly, the end date is \"2026-01-13 23:59:59\". I'll stick with the standard format.\n*   `locationType`: The scope is \"NAZIONALE,\" therefore the location type should be \"NATIONAL\".\n*   `guaranteedTimes`: \"06:00-09:00\" and \"18:00-21:00\"\n\nNow, I'm verifying the parameters. `isStrike` is `true`.  I've checked the date formats: `startDate` is \"2026-01-13 00:00:00\" and `endDate` is \"2026-01-13 23:59:59\". The `locationType` \"NATIONAL\" matches the enum. I believe this is complete and accurate.\n\n\n",
+    "tokens": {
+      "input": 11409,
+      "output": 123,
+      "total": 12102
+    }
+  }
+}

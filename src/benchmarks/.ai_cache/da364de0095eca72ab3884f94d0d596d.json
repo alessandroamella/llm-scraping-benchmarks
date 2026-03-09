@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9047,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0004795,
+      "outputCost": 0.0001616,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0006411
+    },
+    "hash": "da364de0095eca72ab3884f94d0d596d",
+    "sourceFile": "sciopero_nazionale_trasporto_pubblico_adesione_personale_atac_al_274.html",
+    "thoughts": "**Analyzing strike extraction info**\n\nI need to output JSON according to the strike extraction specification and analyze content about a possible strike from ATAC. The information indicates a national public transport strike in Italy, with a participation rate of 27.4%. It announces that the strike took place on the morning of February 24, 2025. However, this isn't an upcoming strike but rather a report on participation. So, I need to set `isStrike` to false, as it's reporting an already occurred event.",
+    "tokens": {
+      "input": 9590,
+      "output": 404,
+      "total": 9994
+    }
+  }
+}

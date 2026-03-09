@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:01:00",
+      "endDate": "2025-12-12 23:59:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "04",
+        "05"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5429,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00290225,
+      "outputCost": 0.0001575,
+      "thinkingCost": 0.000495,
+      "cachedCost": 0,
+      "totalCost": 0.00355475
+    },
+    "hash": "eacc8aefe852334ce6560ff1534c2b28",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-12-12-sciopero-del-personale-di-sad-.html",
+    "thoughts": "**Strike Analysis & Data Extraction**\n\nOkay, let's break this down. The task at hand is to determine if this HTML content constitutes an announcement about an impending strike. My initial assessment is that it *is* a strike announcement. I can confirm this by examining the provided details. The input is clearly focused on strike information related to two entities: \"SAD\" and \"Trentino Trasporti\".\n\nI'll set the `isStrike` flag to `true` – confirmation. Now, I need to extract the relevant data and structure it correctly as a JSON output. This means I'll need to identify the crucial elements for a clean output.\n\nThe information provides the specific start and end times for these strikes. I need to consolidate this into a single start and end time. The earliest start time is `2025-12-12 00:01:00` and the latest end time is `2025-12-12 23:59:00`, so these become the strike window.\n\nFurthermore, the data includes location details, \"Trentino Alto Adige, VENETO.\" I need to map these regions to their ISTAT codes, which are essential for proper geo-referencing. Trentino-Alto Adige is \"04\" and Veneto is \"05.\" This indicates a regional impact, so I'll set `locationType` to \"REGIONAL.\" The `locationCodes` array then becomes `[\"04\", \"05\"]`.\n\nFinally, it seems the data doesn't mention any guaranteed operational times, so there's nothing to extract or explicitly exclude. This is all relatively straightforward, but I need to make sure the output adheres to the specified JSON schema for interoperability.\n\n\n",
+    "tokens": {
+      "input": 11609,
+      "output": 105,
+      "total": 12044
+    }
+  }
+}

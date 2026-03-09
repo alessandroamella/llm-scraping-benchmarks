@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7437,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00048455,
+      "outputCost": 0.0001164,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00060095
+    },
+    "hash": "5aac46e30c84d09bc6d620c5a9e90fd5",
+    "sourceFile": "sciopero_generale_aperte_le_metropolitane_e_la_ferrovia_termini_centocelle.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to ensure the output is in the JSON format specified in the strike_extraction schema. The content I'm looking at discusses an ongoing strike in Italy, mentioning a general strike and updating details about it. Since it states \"È in corso lo sciopero nazionale generale,\" which means it's ongoing rather than announcing a future strike, I’ll set isStrike to false. So the final output will be {\"isStrike\": false}. Let's make sure to follow the required format!",
+    "tokens": {
+      "input": 9691,
+      "output": 291,
+      "total": 9982
+    }
+  }
+}

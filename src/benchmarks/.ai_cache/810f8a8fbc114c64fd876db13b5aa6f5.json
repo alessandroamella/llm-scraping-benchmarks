@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-03 00:00:00",
+      "endDate": "2025-10-03 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7225,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00254,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.0008625,
+      "cachedCost": 0,
+      "totalCost": 0.003587
+    },
+    "hash": "810f8a8fbc114c64fd876db13b5aa6f5",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_generale_nazionale_di_venerdi_03_ottobre_2025.html",
+    "thoughts": "**Analyzing the EAV srl Strike Announcement**\n\nOkay, let's break this down. My objective is to interpret this EAV srl webpage announcement and extract strike information into a JSON format based on the specified schema. The format is `isStrike` (boolean), and `strikeData` (an object with `startDate`, `endDate`, `locationType`, potentially `locationCodes`, and `guaranteedTimes`).\n\nFirst, I recognize the title: \"Linea Metropolitana: Avviso di sciopero generale nazionale di venerdì 03 ottobre 2025\". This is the key. The title and the date, October 3, 2025 (\"venerdì 03 ottobre 2025\"), immediately flags it as a potential strike announcement.\n\nThe text clearly states it's a \"sciopero generale nazionale\" – a general national strike. The duration is 24 hours. And it specifies guaranteed service times: \"Servizio garantito dalle ore 05:30 alle ore 8:30 e dalle ore 16:30 alle ore 19:30\". All the pieces are there. Yes, this is definitely a strike announcement.\n\nNow, to structure the JSON. I'll set `isStrike` to `true`. Next is the `strikeData` object.\n\n*   `startDate`: Since it's a 24-hour strike starting on October 3rd, and the instructions require the format 'yyyy-MM-dd HH:mm:ss', it's `2025-10-03 00:00:00`.\n*   `endDate`: Again, for a full day strike, and if the announcement just states a 24-hour duration, the ending time is at the end of the day `2025-10-03 23:59:59`. The provided text says \"sciopero generale nazionale di 24 ore\", which I will use to make the range.\n*   `locationType`: The text specifies a \"sciopero generale nazionale\" so it is clearly `NATIONAL`.\n*   `locationCodes`: I need to omit this key completely as a national strike should have no codes listed.\n*   `guaranteedTimes`: The text gives guaranteed service times. I will parse them, and represent them as an array of strings in HH:mm-HH:mm format, as specified. This gives me `[\"05:30-08:30\", \"16:30-19:30\"]`.\n\nI've ensured I'm adhering to the 'yyyy-MM-dd HH:mm:ss' date format requirement. I'm also remembering the note in the instructions that if `locationType` is `NATIONAL`, `locationCodes` MUST BE OMITTED. All set.\n\n\n",
+    "tokens": {
+      "input": 10160,
+      "output": 123,
+      "total": 10858
+    }
+  }
+}

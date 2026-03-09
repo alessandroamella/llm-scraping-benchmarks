@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-24 00:00:00",
+      "endDate": "2025-02-24 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22902,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005731,
+      "outputCost": 0.0005568,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0011299
+    },
+    "hash": "73d8fcaa716012f2ed6ecbba0fdb432c",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_24h_lunedi_24_febbraio_2025.html",
+    "thoughts": "**Identifying strike announcement**\n\nI need to focus on outputting JSON based on the specifications. The document is in Italian and announces a 24-hour strike for February 24, 2025. It directly states this with service hours guaranteed during the strike. Since it's indeed an upcoming strike, I’ll set the `isStrike` value to true. I’ll extract strike data and format the fields correctly, including the start and end dates, location type, region codes if available, and guaranteed times.",
+    "tokens": {
+      "input": 11462,
+      "output": 1392,
+      "total": 12854
+    }
+  }
+}

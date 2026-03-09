@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7830,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000514,
+      "outputCost": 0.0001168,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0001682
+    },
+    "hash": "414965072747dededf729ca9f8718450",
+    "sourceFile": "sciopero_del_trasporto_pubblico_adesione_personale_atac_al_532.html",
+    "thoughts": "**Determining strike status**\n\nI'm analyzing a document titled \"Sciopero del trasporto pubblico, adesione personale Atac al 53,2%.\" It discusses the participation rate of Atac staff in a public transport strike that has already happened, not an upcoming one. The text mentions a participation rate of 53.2% measured in the morning. Therefore, I need to confirm that this is not a strike currently happening. I should output JSON stating that `isStrike` is false. The correct output is: \n\n{\"isStrike\": false}",
+    "tokens": {
+      "input": 1028,
+      "output": 292,
+      "total": 1320
+    }
+  }
+}

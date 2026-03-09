@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3548,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0001735,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000207,
+      "cachedCost": 0,
+      "totalCost": 0.0003955
+    },
+    "hash": "7dd9b9721dedb515dc4de9a2d0151153",
+    "sourceFile": "sciopero_del_trasporto_pubblico_metro_aperte_chiusa_la_termini_centocelle.html",
+    "thoughts": "**Analyzing the Strike Situation**\n\nOkay, so I'm processing this input, and it's pretty clear: there's a strike underway, \"E' in corso,\" that's the key. The text gives me the current state of services: metro is running, but Termini-Centocelle is closed. From my expert understanding of these situations and the prompt's instructions, this information is providing real-time updates *during* an ongoing strike. The first instruction is pretty specific here: if the input is detailing the live status during a strike, `isStrike` needs to be set to `false`. Therefore, I'm setting `isStrike` to `false`. This makes perfect sense; we're tracking *what's happening* during the disruption, not just stating that a strike *exists*.\n\n\n",
+    "tokens": {
+      "input": 694,
+      "output": 10,
+      "total": 842
+    }
+  }
+}

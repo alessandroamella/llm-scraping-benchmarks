@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-03-19 09:00:00",
+      "endDate": "2025-03-19 17:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "09:00-10:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 35830,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00052925,
+      "outputCost": 0.0014432,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00197245
+    },
+    "hash": "84bcadd5a647eb7e4866390651211c7d",
+    "sourceFile": "strike-detail-mercoled--19-marzo-dalle-ore-9-alle-ore-17-scioper.html",
+    "thoughts": "**Clarifying date and time formatting**\n\nI need to set the location type to \"NATIONAL\" and leave the location codes as null. The article states an event is on \"Mercoledì 19 marzo dalle ore 9 alle ore 17,\" but it’s a bit unclear since the page shows \"lunedì 17/03/2025.\" It looks like the correct date for the event is 2025-03-19, with hours from 09:00 to 17:00. I’ll format the start and end dates as \"yyyy-MM-dd HH:mm:ss\" for clarity.",
+    "tokens": {
+      "input": 10585,
+      "output": 3608,
+      "total": 14193
+    }
+  }
+}

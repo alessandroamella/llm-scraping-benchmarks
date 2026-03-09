@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-03 00:00:00",
+      "endDate": "2025-10-03 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6578,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00219075,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.000984,
+      "cachedCost": 0,
+      "totalCost": 0.00335925
+    },
+    "hash": "a91edee5c0883c5fdd883afe0c80ce87",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_generale_nazionale_di_24_ore_venerdi_03_ottobre_2025.html",
+    "thoughts": "**Strike Information Extraction - My Thought Process**\n\nOkay, here's the task: I need to pull strike information from this text and return it as a clean JSON object. No extra fluff, just the JSON. The text is \"Linee Flegree: Avviso di sciopero generale nazionale di 24 ore venerdì 03 ottobre 2025 - EAV srl.\"\n\nFirst, let's see, it's pretty clear this *is* a strike announcement. The text confirms it with \"per il giorno 03 ottobre 2025 è stato proclamato uno sciopero generale di 24 ore\". Excellent. Let's start building the JSON.\n\nBased on the information, the strike is on October 3rd, 2025. It's a 24-hour strike. That gives me a `startDate` of 2025-10-03 00:00:00 and an `endDate` of 2025-10-03 23:59:59.\n\nThe text also says \"sciopero generale nazionale\", so `locationType` should be \"NATIONAL\". And the instructions say that if it's \"NATIONAL\", `locationCodes` *must* be omitted completely. Got it.\n\nLooking at guaranteed services, the text specifies \"Servizio garantito dalle ore 05:30 alle ore 8:30 e dalle ore 16:30 alle ore 19:30\". So, I should include `guaranteedTimes` as [\"05:30-08:30\", \"16:30-19:30\"].\n\nNow, let's double-check the schema to ensure it's correct. Okay, here's what I've got:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-10-03 00:00:00\",\n    \"endDate\": \"2025-10-03 23:59:59\",\n    \"locationType\": \"NATIONAL\",\n    \"guaranteedTimes\": [\"05:30-08:30\", \"16:30-19:30\"]\n  }\n}\n```\n\n`isStrike` is boolean, and should be `true`. `strikeData` object is present. `startDate` and `endDate` are in the correct format. `locationType` is the correct enum value. `locationCodes` is omitted as required. Alright, I'm confident in this. Ready to submit this JSON!\n\n\n",
+    "tokens": {
+      "input": 8763,
+      "output": 123,
+      "total": 9542
+    }
+  }
+}

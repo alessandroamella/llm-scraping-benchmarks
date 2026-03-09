@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5000,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005165,
+      "outputCost": 0.0001412,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00019285
+    },
+    "hash": "a5ccd57935e123d7c2c6da39839e38ff",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_144.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to figure out if this document is announcing a new or upcoming strike. The content is about a public transport strike involving Atac personnel, indicating a participation rate of 14.4%. The publication date is April 26, 2024, which suggests that the strike occurred today. Since it's not announcing a future strike, I'll confirm that \"isStrike\" is false. I’ll make sure to output the necessary JSON format as specified: {\"isStrike\": false}.",
+    "tokens": {
+      "input": 1033,
+      "output": 353,
+      "total": 1386
+    }
+  }
+}

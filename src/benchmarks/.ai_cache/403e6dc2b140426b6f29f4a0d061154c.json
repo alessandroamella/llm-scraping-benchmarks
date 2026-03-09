@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-03 00:00:00",
+      "endDate": "2025-10-03 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7882,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.002596,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.000885,
+      "cachedCost": 0,
+      "totalCost": 0.0036655
+    },
+    "hash": "403e6dc2b140426b6f29f4a0d061154c",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_generale_nazionale_di_24_ore_venerdi_03_ottobre_2025.html",
+    "thoughts": "**Analyzing EAV Content for Strike Information**\n\nOkay, here's the breakdown of my process. My primary goal is to determine if the EAV HTML content I've received announces an upcoming strike. If it does, I need to extract the relevant data and structure it into a specific JSON format. I need to be precise, as the schema has strict constraints.\n\nFirst, I looked at the input: the HTML content from EAV. From the title, \"Linee Suburbane: Avviso di sciopero generale nazionale di 24 ore venerdì 03 ottobre 2025 - EAV srl\" and the content \"per il giorno 03 ottobre 2025 è stato proclamato uno sciopero generale nazionale di 24 ore... Servizio garantito dalle ore 05:30 alle ore 8:30 e dalle ore 16:30 alle ore 19:30\" it's pretty clear – there *is* a strike! \"Avviso di sciopero\" is a dead giveaway, and the title explicitly states it.\n\nNow, to extract the data. The date is easily identified: Friday, October 3, 2025. It is a general national strike, lasting 24 hours. The guaranteed service times are 05:30-08:30 and 16:30-19:30.\n\nBased on this, I'm going to set `isStrike` to `true`. And then, I need to build the `strikeData` object. The `startDate` is \"2025-10-03 00:00:00\", assuming the 24-hour strike begins at midnight. The `endDate` is \"2025-10-03 23:59:59\", running until the end of the day. The `locationType` is \"NATIONAL\" as the content states \"nazionale\". Because it's national, I need to omit `locationCodes` completely, as per the rules. Finally, the `guaranteedTimes` will be [\"05:30-08:30\", \"16:30-19:30\"].\n\nFinally, I need to validate this structure. `isStrike` must be boolean. The `strikeData` object needs to adhere exactly to the required structure: it has to be an object, it has to have the right keys and types.\n\n\n",
+    "tokens": {
+      "input": 10384,
+      "output": 123,
+      "total": 11097
+    }
+  }
+}

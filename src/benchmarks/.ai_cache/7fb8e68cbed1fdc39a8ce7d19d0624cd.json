@@ -1,0 +1,41 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-24 00:00:00",
+      "endDate": "2025-02-24 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:03-06:03",
+        "07:47-07:47",
+        "17:27-17:27",
+        "20:30-20:30",
+        "05:10-05:10",
+        "06:21-06:21",
+        "13:13-13:13",
+        "17:21-17:21"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 26415,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000532,
+      "outputCost": 0.0009448,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0014768
+    },
+    "hash": "7fb8e68cbed1fdc39a8ce7d19d0624cd",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_24h_lunedi_24_febbraio_2025.html",
+    "thoughts": "**Determining date and time formats**\n\nI need to use the 'yyyy-MM-dd HH:mm:ss' format for startDate and endDate. The times aren't explicitly stated, but it seems to be a 24-hour period starting at midnight on February 24th. So, I think I should set startDate as \"2025-02-24 00:00:00\" and endDate as \"2025-02-24 23:59:59\". The instructions mention both, so including seconds seems appropriate. \n\nFor locationType, I see \"REGIONAL\" or \"NATIONAL\" based on the context. The page reflects a national notice due to the 24-hour strike.",
+    "tokens": {
+      "input": 10640,
+      "output": 2362,
+      "total": 13002
+    }
+  }
+}

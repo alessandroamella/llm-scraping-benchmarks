@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-03 00:00:00",
+      "endDate": "2025-10-03 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 23624,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003456,
+      "outputCost": 0.0005664,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.000912
+    },
+    "hash": "eeb00d9d8b557ae971a7967ecc567118",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_generale_nazionale_di_venerdi_03_ottobre_2025.html",
+    "thoughts": "**Determining strike details**\n\nI need to ensure the output of JSON follows the required schema. The document confirms an upcoming national strike on October 3, 2025. It states that it will last for 24 hours and provides specific guaranteed service windows from 05:30 to 08:30 and 16:30 to 19:30. The start date is clear, but I'm not seeing exact times for the start or end. Since it says \"24 ore,\" it implies it runs from 00:00 to 23:59. So, isStrike should be true.",
+    "tokens": {
+      "input": 6912,
+      "output": 1416,
+      "total": 8328
+    }
+  }
+}

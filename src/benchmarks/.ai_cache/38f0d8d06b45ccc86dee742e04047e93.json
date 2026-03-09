@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9763,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000948,
+      "outputCost": 0.0002032,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0011512
+    },
+    "hash": "38f0d8d06b45ccc86dee742e04047e93",
+    "sourceFile": "sciopero_del_trasporto_pubblico_aperte_le_metropolitane_2.html",
+    "thoughts": "**Extracting strike information**\n\nI need to respond using the JSON format according to the strike_extraction schema. Analyzing the provided Italian HTML page, it mentions an ongoing transport strike with details indicating it’s not a future event. The text confirms a 24-hour national strike is happening, along with specific transportation updates in Rome. Since the information indicates it’s currently ongoing rather than upcoming, I’ll mark isStrike as false. I've got all the details lined up for response!",
+    "tokens": {
+      "input": 18960,
+      "output": 508,
+      "total": 19468
+    }
+  }
+}

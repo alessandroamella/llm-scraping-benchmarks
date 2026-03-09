@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5477,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00222025,
+      "outputCost": 0.000189,
+      "thinkingCost": 0.0006825,
+      "cachedCost": 0,
+      "totalCost": 0.00309175
+    },
+    "hash": "b6a48f608dc2a7a5e39d1fdfb89e58cf",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_24_h_venerdi_28_novembre_2025.html",
+    "thoughts": "**Strike Analysis: EAV Campania - November 28, 2025**\n\nOkay, let's break this down. My task is crystal clear: determine if this text announces an upcoming strike. The provided text, specifically \"Linee Vesuviane: Avviso di sciopero di 24 h venerdì 28 Novembre 2025,\" is quite explicit. It's an *Avviso di sciopero*, a strike announcement, for the EAV (Ente Autonomo Volturno) lines in Campania. The date is Friday, November 28, 2025. It's a 24-hour strike.\n\nBased on the information, the location is regional and specifically concerns Campania, code 15. Standard practice for a 24-hour strike means it will start at 00:00:00 and run until 23:59:59 on the specified date. Crucially, we have guaranteed service windows: 05:30-08:30 and 16:30-19:30.\n\nGiven this analysis, I'm confident we have a strike. I've structured the data in the required JSON format and carefully adhered to the schema. Here's what I've got:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-11-28 00:00:00\",\n    \"endDate\": \"2025-11-28 23:59:59\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\n      \"15\"\n    ],\n    \"guaranteedTimes\": [\n      \"05:30-08:30\",\n      \"16:30-19:30\"\n    ]\n  }\n}\n```\n\nNo extraneous text, just the data, precisely as required.\n\n\n",
+    "tokens": {
+      "input": 8881,
+      "output": 126,
+      "total": 9462
+    }
+  }
+}

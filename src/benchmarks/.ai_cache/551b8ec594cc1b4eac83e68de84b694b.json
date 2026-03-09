@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-27 21:00:00",
+      "endDate": "2025-11-28 21:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22039,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005179,
+      "outputCost": 0.00045,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0009679
+    },
+    "hash": "551b8ec594cc1b4eac83e68de84b694b",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-11-27-sciopero-nazionale-del-traspor.html",
+    "thoughts": "**Extracting strike data**\n\nI'm working on outputting JSON for the strike extraction. I need to determine if the document indicates an upcoming strike announcement. The page mentions \"SCIOPERO NAZIONALE DEL TRASPORTO FERROVIARIO\" with dates of November 27, 2025, to November 28, 2025. It clearly announces a strike, so I’ll set isStrike to true. \n\nI'll extract the strike data, ensuring the startDate and endDate are formatted correctly and decide on the location type as either \"REGIONAL\" or \"NATIONAL.\"",
+    "tokens": {
+      "input": 10358,
+      "output": 1125,
+      "total": 11483
+    }
+  }
+}

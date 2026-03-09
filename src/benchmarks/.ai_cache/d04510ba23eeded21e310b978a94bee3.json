@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-05 03:00:00",
+      "endDate": "2025-02-06 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6829,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00028275,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.0006705,
+      "cachedCost": 0,
+      "totalCost": 0.00116325
+    },
+    "hash": "d04510ba23eeded21e310b978a94bee3",
+    "sourceFile": "strike-detail-mercoled--5-febbraio-sciopero-dei-treni-regionali.html",
+    "thoughts": "**Analyzing the Upcoming Regional Train Strike in Lombardy**\n\nOkay, let's break this down. My initial thought is, \"Mercoledì 5 febbraio sciopero dei treni regionali\" – a train strike is happening on Wednesday, February 5th. I'm noting the date this information was captured, 03/02/2025. It's crucial for my analysis to confirm this is an officially announced strike, and yes, it is – ORSA is the union behind it.\n\nThe critical parameters are: the strike will last from 3:00 AM on Wednesday, February 5, 2025, until 2:00 AM on Thursday, February 6, 2025. Specifically, this impacts Trenord services in the Lombardia region (\"03\").\n\nNow, let's confirm the data structure. It's a strike, `isStrike` is clearly `true`. The `strikeData` object looks complete. The `startDate` and `endDate` are in the correct `yyyy-MM-dd HH:mm:ss` format, which is perfect for parsing. The `locationType` is correctly identified as \"REGIONAL,\" and the `locationCodes` array confirms it's focused on the Lombardia region – code \"03.\" Finally, the guaranteed service times are listed as [\"06:00-09:00\", \"18:00-21:00\"]. All the key information is captured and easily usable. This is a well-structured notification.\n\n\n",
+    "tokens": {
+      "input": 1131,
+      "output": 140,
+      "total": 1718
+    }
+  }
+}

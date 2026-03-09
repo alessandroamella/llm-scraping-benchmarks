@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6909,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00060675,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.0009015,
+      "cachedCost": 0,
+      "totalCost": 0.00169275
+    },
+    "hash": "e9822f9268f0f957a13edd081eda6358",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_generale_nazionale_di_24_ore_di_venerdi_28_novembre_2025.html",
+    "thoughts": "**Strike Announcement Analysis**\n\nOkay, let me break this down. My primary task here is to determine if the text constitutes a strike announcement. It's pretty straightforward: I've got an announcement from O.S. USB regarding a national general strike for EAV srl in Campania, set for Friday, November 28th, 2025. The strike is scheduled for a full 24 hours. The guaranteed times are from \"05:30-08:30\" and \"16:30-19:30\".\n\nBased on this information, my initial assessment is that `isStrike` is indeed `true`. I now need to accurately structure the `strikeData` object, ensuring it adheres to the schema.\n\nThe schema stipulates specific requirements. The strike's `startDate` is \"2025-11-28 00:00:00\" and the `endDate` is \"2025-11-28 23:59:59\", which aligns with the provided 24-hour duration. The `locationType` should be \"NATIONAL,\" and critically, since the strike is national, `locationCodes` MUST be omitted completely. Finally, `guaranteedTimes` are specified as [\"05:30-08:30\", \"16:30-19:30\"].\n\nTherefore, I'm confident that the correct output object is:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-11-28 00:00:00\",\n    \"endDate\": \"2025-11-28 23:59:59\",\n    \"locationType\": \"NATIONAL\",\n    \"guaranteedTimes\": [\n      \"05:30-08:30\",\n      \"16:30-19:30\"\n    ]\n  }\n}\n```\n\nThe schema mandates that `locationCodes` not be present because the `locationType` is `NATIONAL`. All other fields seem valid. I've double-checked against the anyOf rule that mandates either of two object structures. Object 2 is what's required in this scenario, so that works, and this seems to meet all the requirements.\n\n\n",
+    "tokens": {
+      "input": 2427,
+      "output": 123,
+      "total": 3151
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-07-23 09:00:00",
+      "endDate": "2025-07-23 11:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7775,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00041775,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.000915,
+      "cachedCost": 0,
+      "totalCost": 0.00148125
+    },
+    "hash": "4b58b315e3f207488deebe1b63e3edc0",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_2_ore_mercoledi_23_luglio_2025.html",
+    "thoughts": "**Strike Notice Analysis: EAV S.r.l. - July 23, 2025**\n\nOkay, so I've received an official notice from EAV srl, specifically regarding a planned strike. Let's break this down systematically. The source is EAV srl, that's clear. The event is a 2-hour strike, and it's scheduled for Wednesday, July 23, 2025. The strike window is from 09:00 to 11:00. The strike is within the Campania region, which is identified by the location code \"15\" – that checks out.\n\nNow, let's get into the specifics required by this analysis. I need to extract and validate the strike details:\n\n*   `isStrike`: Confirmed, it's true.\n*   `strikeData`:\n    *   `startDate`: \"2025-07-23 09:00:00\" - That's in the correct `yyyy-MM-dd HH:mm:ss` format, and makes sense within the specified timeframe.\n    *   `endDate`: \"2025-07-23 11:00:00\" - Similarly, this end date is valid.\n    *   `locationType`: \"REGIONAL\" - Correct, aligns with the scope of the EAV S.r.l. operations.\n    *   `locationCodes`: [\"15\"] - Validated, code \"15\" represents the Campania region.\n\nRegarding \"guaranteed times,\" the text only mentions \"ultime partenze garantite prima\" and \"prime partenze garantite dopo,\" meaning last and first departures, not the usual \"fasce di garanzia\" or guaranteed time slots. Given the prompt requests \"time ranges during which service is guaranteed\" and this is a two-hour strike, and the text doesn't specifically define guaranteed time slots (like 06:00-09:00), I'm omitting that field because I only see departures.\n\nEssentially, I have a clean, concise data structure representing this upcoming strike. It's properly formatted and contains all the necessary information for downstream systems to understand the disruption. Now, I should double-check against any relevant JSON schemas to ensure compatibility, which I know how to do.\n\n\n",
+    "tokens": {
+      "input": 1671,
+      "output": 99,
+      "total": 2380
+    }
+  }
+}

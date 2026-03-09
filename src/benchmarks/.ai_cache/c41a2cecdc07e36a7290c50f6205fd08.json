@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 12763,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00047915,
+      "outputCost": 0.0002024,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00068155
+    },
+    "hash": "c41a2cecdc07e36a7290c50f6205fd08",
+    "sourceFile": "sciopero_generale_nazionale_adesione_personale_atac_al_26.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to decide if the document is announcing a new strike or just reporting on participation. The document includes a title about a general national strike and notes participation at 26%. Since it mentions \"today,\" it clearly refers to an event that has already taken place. Therefore, it isn't announcing an upcoming strike. According to the instructions, I'll set isStrike to false, resulting in the output being {\"isStrike\": false}.",
+    "tokens": {
+      "input": 9583,
+      "output": 506,
+      "total": 10089
+    }
+  }
+}

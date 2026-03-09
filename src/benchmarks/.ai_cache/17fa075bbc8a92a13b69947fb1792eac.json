@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-03 00:00:00",
+      "endDate": "2025-10-03 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5992,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00018825,
+      "outputCost": 0.0001725,
+      "thinkingCost": 0.000708,
+      "cachedCost": 0,
+      "totalCost": 0.00106875
+    },
+    "hash": "17fa075bbc8a92a13b69947fb1792eac",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_generale_nazionale_di_24_ore_venerdi_03_ottobre_2025.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, here's the breakdown of this strike information. My task is to extract the relevant strike data based on the provided text: \"sciopero generale nazionale di 24 ore venerdì 03 ottobre 2025.\" I see this is an *upcoming* strike, so `isStrike` is definitely `true`.\n\nNow, for the `strikeData`. I need to figure out the `startDate`, `endDate`, `locationType`, and `guaranteedTimes`.\n\nThe announcement clearly states a 24-hour national strike (\"nazionale\") for Friday, October 3rd, 2025. Given the information, a national strike doesn't require location codes. I also have the date of the announcement, October 2nd, 2025, which helps contextualize the timing.\n\n*   `startDate`: Since it's a 24-hour strike and the announcement refers to the whole day, I'll set the `startDate` to the beginning of the day: \"2025-10-03 00:00:00\".\n*   `endDate`: Similarly, the `endDate` should be the end of the day, so \"2025-10-03 23:59:59\".\n*   `locationType`: \"nazionale\" means `locationType` should be \"NATIONAL\". No need for `locationCodes` in this case.\n*   `guaranteedTimes`: The text mentions \"05:30 alle ore 8:30\" and \"16:30 alle ore 19:30\" as guaranteed times. I'll represent this as the array: `[\"05:30-08:30\", \"16:30-19:30\"]`.\n\nSo, there you have it – I've extracted all the relevant details according to the criteria.\n\n\n",
+    "tokens": {
+      "input": 753,
+      "output": 115,
+      "total": 1340
+    }
+  }
+}

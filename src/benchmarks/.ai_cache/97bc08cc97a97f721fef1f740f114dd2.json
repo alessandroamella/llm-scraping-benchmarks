@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-05-11 00:00:00",
+      "endDate": "2025-05-11 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18616,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00035875,
+      "outputCost": 0.0006656,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00102435
+    },
+    "hash": "97bc08cc97a97f721fef1f740f114dd2",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_24h_domenica_11_maggio_2025.html",
+    "thoughts": "**Extracting strike information**\n\nI need to create a JSON format, capturing the isStrike boolean and any applicable strike data. The content indicates a strike announcement for 24 hours on Sunday, May 11, 2025. There’s a particular date noted as May 6, 2025, with details about guaranteed service times from 5:30 AM to 8:30 AM and 4:30 PM to 7:30 PM. This is clearly an announcement, so I’m concluding that isStrike should be set to true.",
+    "tokens": {
+      "input": 7175,
+      "output": 1664,
+      "total": 8839
+    }
+  }
+}

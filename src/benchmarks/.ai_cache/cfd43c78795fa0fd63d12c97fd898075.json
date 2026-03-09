@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-27 21:00:00",
+      "endDate": "2025-11-28 21:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5678,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00017725,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.000603,
+      "cachedCost": 0,
+      "totalCost": 0.00090325
+    },
+    "hash": "cfd43c78795fa0fd63d12c97fd898075",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-11-27-sciopero-nazionale-del-traspor.html",
+    "thoughts": "**Strike Announcement Analysis: My Findings**\n\nOkay, here's what I've got after analyzing that text. My task was to identify a strike announcement and distill key information into a JSON format. Let's see...\n\nFirst, I recognized this as a strike announcement immediately. The headline, \"SCIOPERO NAZIONALE DEL TRASPORTO FERROVIARIO,\" is a dead giveaway, and the wording in the description, talking about a \"sciopero\" (strike) of personnel, confirms it. So, `isStrike` is definitely `true`.\n\nNow for the details. The \"In vigore\" section clearly states the strike's duration: 27 NOVEMBRE 2025 - 28 NOVEMBRE 2025. I'll need to parse that into the requested format. Reading through the description, it tells me that the start time is \"Dalle ore 21:00 di giovedì 27 novembre\" and the end time is \"alle ore 21:00 di venerdì 28 novembre 2025.\" Therefore, my `startDate` will be \"2025-11-27 21:00:00\" and the `endDate` is \"2025-11-28 21:00:00\".\n\nNext up, location. The text \"NAZIONALE\" in the \"Scope\" field and implied by the page title indicates a national strike. My instructions say to set `locationType` to \"NATIONAL\" in this case and omit `locationCodes`, so that's exactly what I'll do.\n\nFinally, the guaranteed times. The text doesn't provide any information on guaranteed services or specific time windows. So, according to the specifications, I'll omit the `guaranteedTimes` field from the output.\n\nLooks like I've got all the information I need, and in the right format. Excellent!\n\n\n",
+    "tokens": {
+      "input": 709,
+      "output": 82,
+      "total": 1193
+    }
+  }
+}

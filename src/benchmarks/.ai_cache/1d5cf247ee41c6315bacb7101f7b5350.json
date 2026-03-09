@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-01-19 00:00:00",
+      "endDate": "2026-01-19 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5526,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000479,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.0006075,
+      "cachedCost": 0,
+      "totalCost": 0.0012965
+    },
+    "hash": "1d5cf247ee41c6315bacb7101f7b5350",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_aziendale_di_24_h_lunedi_19_gennaio_2026.html",
+    "thoughts": "**Strike Announcement Analysis: A Logical Breakdown**\n\nOkay, let's break this down. My task is clear: I need to determine if this document signals an upcoming strike. The target is EAV, specifically in the Campania region, identified by the code \"15\". The strike date is the 19th of January 2026, and it's a 24-hour event. The format is JSON, and the constraints are strict—schema adherence, no extraneous text, correct date formatting, and those specific region codes.\n\nI see the Italian text, \"Linee Vesuviane: Avviso di sciopero aziendale di 24 h lunedì 19 gennaio 2026.\" Translation: an announcement of a 24-hour company strike. The date checks out: January 19th, 2026. Region: Campania, code 15. The guaranteed service times are 05:30 to 08:30 and 16:30 to 19:30.\n\nNow, let's assemble the JSON data. `isStrike` is obviously `true`. The strike's `startDate` is \"2026-01-19 00:00:00\", and the `endDate` is \"2026-01-19 23:59:59\" which is correct for a 24-hour strike. The `locationType` is `REGIONAL`, and since the prompt dictates that `REGIONAL` demands an array of 2-digit ISTAT region codes, the `locationCodes` must be [\"15\"]. And that's correct, Campania's ISTAT code is indeed 15. Finally, the guaranteed times, \"05:30-08:30\" and \"16:30-19:30\", are included in `guaranteedTimes`.\n\nThe entire response conforms to my understanding of the parameters; the schema and specific instructions are fully respected. The analysis checks out.\n\n\n",
+    "tokens": {
+      "input": 1916,
+      "output": 140,
+      "total": 2461
+    }
+  }
+}

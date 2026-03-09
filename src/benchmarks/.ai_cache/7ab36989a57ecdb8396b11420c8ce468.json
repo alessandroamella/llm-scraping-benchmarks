@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3652,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0001465,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000252,
+      "cachedCost": 0,
+      "totalCost": 0.0004135
+    },
+    "hash": "7ab36989a57ecdb8396b11420c8ce468",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_322.html",
+    "thoughts": "**Analyzing Strike Information**\n\nOkay, let's break this down. My primary objective is clear: I need to pull strike-related details from the text provided. The input is Italian, which is fine, I can handle that. The important bit is to get the information and put it into JSON format. That's the output requirement, straightforward.\n\nThe text itself, \"Sciopero del trasporto pubblico, adesione personale Atac al 32,2% - Roma Servizi per la Mobilità ... L’adesione del personale Atac allo sciopero di oggi, rilevata in mattinata, è stata pari al 32,2%\", describes a *participation* rate, or *adesione*, within a *strike that's already occurred* or is currently underway. The instructions are very explicit here; they guide me in how to evaluate the information and the nature of the strike. Given the emphasis on *participation* numbers *after* the strike or *during* a strike, I need to set the flag `isStrike` to `false`. It's not a strike announcement, but rather a report on the involvement. So the appropriate JSON response should reflect this.\n\n\n",
+    "tokens": {
+      "input": 586,
+      "output": 10,
+      "total": 764
+    }
+  }
+}

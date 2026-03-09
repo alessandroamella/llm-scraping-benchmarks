@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-16 03:00:00",
+      "endDate": "2025-06-17 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 14123,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007735,
+      "outputCost": 0.0004788,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00055615
+    },
+    "hash": "aba114239f5eaff1189737a335b84873",
+    "sourceFile": "strike-detail-luned--16-giugno-sciopero-dei-treni-regionali.html",
+    "thoughts": "**Processing strike information**\n\nI need to output JSON that indicates whether there's a strike upcoming based on the content about the train strike announced for Monday, June 16, 2025, by ORSA. The announcement is set to affect circulation from 3:00 AM on Monday until 2:00 AM on Tuesday, and it seems to qualify as an upcoming strike, so I’ll mark \"isStrike\" as true. The strike is regional, affecting areas in Lombardia, which has the region code of 03.",
+    "tokens": {
+      "input": 1547,
+      "output": 1197,
+      "total": 2744
+    }
+  }
+}

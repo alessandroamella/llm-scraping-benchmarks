@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-07-23 09:00:00",
+      "endDate": "2025-07-23 11:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "09:00-11:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19256,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003546,
+      "outputCost": 0.0007928,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0011474
+    },
+    "hash": "c6386d16c23e008126a0b4ab678603d8",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_2_ore_mercoledi_23_luglio_2025.html",
+    "thoughts": "**Extracting strike data details**\n\nI need to extract strike data, including startDate, endDate, locationType, and locationCodes. The document mentions a strike on Wednesday, July 23, 2025, from 09:00 to 11:00, which likely corresponds to guaranteed times. The phrase \"Durante l’orario di sciopero\" confirms it's during the strike. I'm formatting startDate as \"2025-07-23 09:00:00\" and endDate as \"2025-07-23 11:00:00\". It seems the locationType is \"REGIONAL\" since it mentions \"Linee Suburbane.\"",
+    "tokens": {
+      "input": 7092,
+      "output": 1982,
+      "total": 9074
+    }
+  }
+}

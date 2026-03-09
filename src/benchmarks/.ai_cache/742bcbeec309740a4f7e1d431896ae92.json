@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-28 08:20:00",
+      "endDate": "2025-01-28 12:20:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "08:20-12:20"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18358,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00035605,
+      "outputCost": 0.0005048,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00086085
+    },
+    "hash": "742bcbeec309740a4f7e1d431896ae92",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_di_4_ore_martedi_28_gennaio_2025.html",
+    "thoughts": "**Producing JSON for strike announcement**\n\nI'm working on extracting the relevant information for a potential strike announcement. The content mentions a 4-hour strike scheduled for January 28, 2025, from 08:20 to 12:20, announced officially. This means isStrike should definitely be true. I need to prepare the strikeData with the required fields: startDate formatted as \"yyyy-MM-dd HH:mm:ss\" for January 28, 2025, at 08:20:00, the same for endDate, and specify the location type as \"REGIONAL\" since it's in Campania.",
+    "tokens": {
+      "input": 7121,
+      "output": 1262,
+      "total": 8383
+    }
+  }
+}

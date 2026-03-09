@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 10263,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00093905,
+      "outputCost": 0.0001848,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00112385
+    },
+    "hash": "9aae4a19924985b8d58a9dce552e2353",
+    "sourceFile": "sciopero_trasporto_pubblico_chiuse_metro_b1_c_aperte_linea_b_ferrovia_termini_centocelle.html",
+    "thoughts": "**Determining strike status**\n\nI need to output JSON according to the specifications. The document is about a public transport strike in Italy. The title indicates a current situation with specific metro lines affected. The content mentions an ongoing 24-hour strike and indicates the status of the services. Since it’s an update on an ongoing strike, I’ll set `isStrike` to false. Therefore, the output will be: `{\"isStrike\": false}`.",
+    "tokens": {
+      "input": 18781,
+      "output": 462,
+      "total": 19243
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-20 00:00:00",
+      "endDate": "2025-06-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22634,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000696,
+      "outputCost": 0.000612,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0006816
+    },
+    "hash": "678cf2be0f5f38d029ecd1ab01d9fc37",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_24_h_venerdi_20_giugno_2025.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to format a JSON output according to the strike_extraction schema. The content indicates a strike announcement on June 20, 2025, when USB has proclaimed a 24-hour national strike. It mentions specific times for guaranteed services and substitutes, indicating it's indeed a strike. I’ll set the start and end dates, considering it begins at 05:30 on June 20 and lasts through that full day, using the required 'yyyy-MM-dd HH:mm:ss' format.",
+    "tokens": {
+      "input": 1392,
+      "output": 1530,
+      "total": 2922
+    }
+  }
+}

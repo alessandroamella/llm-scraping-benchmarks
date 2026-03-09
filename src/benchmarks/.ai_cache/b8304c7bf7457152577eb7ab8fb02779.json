@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-24 00:00:00",
+      "endDate": "2025-02-24 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6729,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0027465,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.0006675,
+      "cachedCost": 0,
+      "totalCost": 0.003624
+    },
+    "hash": "b8304c7bf7457152577eb7ab8fb02779",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_24h_lunedi_24_febbraio_2025.html",
+    "thoughts": "**Analyzing the EAV Strike Announcement**\n\nOkay, so I've got a webpage here about a strike for EAV, the public transport company in Campania (region 15). The title is pretty straightforward: \"Linee Flegree: Avviso di sciopero 24h lunedì 24 febbraio 2025 - EAV srl.\" So, it's a 24-hour strike on February 24th, 2025. That date is crucial. The task is to identify and process *upcoming* strikes, and this fits the bill. The announcement is dated February 19th, 2025, so it is an announcement of an upcoming strike.\n\nLet's break down the details for data extraction.\n\n*   **isStrike**: Definitely true.\n*   **startDate**: Based on the \"24h\" wording and the date, I can confidently assume it starts at the beginning of that service day: 2025-02-24 00:00:00.\n*   **endDate**: And logically, a 24-hour strike ends at the end of that day: 2025-02-24 23:59:59.\n*   **locationType**: \"REGIONAL\" makes sense for EAV.\n*   **locationCodes**: \"15\" is the Campania region code.\n*   **guaranteedTimes**: I see the guaranteed service times mentioned as \"05:30-08:30\" and \"16:30-19:30.\" I need to capture these.\n\nSo, this is a clear, valid strike announcement. I can proceed to store this data.\n\n\n",
+    "tokens": {
+      "input": 10986,
+      "output": 140,
+      "total": 11571
+    }
+  }
+}

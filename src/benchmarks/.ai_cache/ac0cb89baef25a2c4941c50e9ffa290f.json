@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5145,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000544,
+      "outputCost": 0.0001428,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0001972
+    },
+    "hash": "ac0cb89baef25a2c4941c50e9ffa290f",
+    "sourceFile": "sciopero_del_trasporto_pubblico_aperte_le_metropolitane.html",
+    "thoughts": "**Finalizing JSON output**\n\nThe instruction is clear: I should only set \"isStrike\" to true for announcements of future strikes, which doesn't apply here. Thus, the output should be {\"isStrike\": false} with no strikeData field. It's essential to keep the response in the specified JSON format without any extra text. Since there’s no location parameter needed, I’ll confirm the final response as {\"isStrike\": false} and ensure it's structured correctly for the tool’s expectations.",
+    "tokens": {
+      "input": 1088,
+      "output": 357,
+      "total": 1445
+    }
+  }
+}

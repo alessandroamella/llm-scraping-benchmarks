@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-03 00:00:00",
+      "endDate": "2025-10-03 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 17312,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005875,
+      "outputCost": 0.0004288,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00048755
+    },
+    "hash": "74bc52ef960e8607109c3b794ba278aa",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_generale_nazionale_di_24_ore_venerdi_03_ottobre_2025.html",
+    "thoughts": "**Analyzing upcoming strike**\n\nI need to format the output in JSON for the strike extraction task. The content I’m reviewing is from an Italian article about a 24-hour national strike on October 3, 2025, proclaimed by CGIL and USB due to the Gaza war. It mentions service running in guaranteed time bands from 5:30 to 8:30 and 16:30 to 19:30. The notice confirms this is indeed an announcement of an upcoming strike happening the following day.",
+    "tokens": {
+      "input": 1175,
+      "output": 1072,
+      "total": 2247
+    }
+  }
+}

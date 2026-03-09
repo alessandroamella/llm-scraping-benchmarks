@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-01-09 21:00:00",
+      "endDate": "2026-01-10 21:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6223,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00017625,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.000768,
+      "cachedCost": 0,
+      "totalCost": 0.00106725
+    },
+    "hash": "a7f6d86aa396c79d741f3ed0271f07fb",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2026-1-9-sciopero-nazionale-del-trasporto.html",
+    "thoughts": "**Analyzing the Railway Strike Notice**\n\nAlright, let's get down to brass tacks. I've got this text about a \"SCIOPERO NAZIONALE DEL TRASPORTO FERROVIARIO,\" and my job is to determine if it's an upcoming strike and, if so, format the data in a specific JSON structure. Seems straightforward enough.\n\nFirst, I need to break down the information. The title confirms it's a national railway strike. The dates jump out: January 9th, 2026, to January 10th, 2026. \"Dalle ore 21:00 di venerdì 9 gennaio alle ore 21:00 di sabato 10 gennaio 2026\" clearly specifies the strike duration—starting at 9 PM on the 9th and ending at 9 PM on the 10th. The \"NAZIONALE\" scope is critical; it defines the strike's reach. I also see mentions of FS Italiane, Italo, and Trenord. So far, so good; yes, this is an upcoming strike announcement.\n\nNow, to format this for the output schema. I've got to make sure it adheres to all the constraints. The `isStrike` field will be set to `true`, indicating the strike's existence. The `startDate` is clearly `2026-01-09 21:00:00`, and the `endDate` is `2026-01-10 21:00:00`. The `locationType` is definitely \"NATIONAL,\" which matches the schema's enum. Importantly, the instructions state that if `locationType` is \"NATIONAL,\" I must omit the `locationCodes` field completely, so that's what I'll do. Since the notice doesn't provide any information on guaranteed train times, I'll also be omitting that field.\n\nI'm checking the schema against the `anyOf` branch, and this falls into the `isStrike` branch with `strikeData`. I have a starting date, ending date, and location, and all of those are being correctly formatted. The `startDate` and `endDate` formats (`yyyy-MM-dd HH:mm:ss`) are validated against the provided date and time, and the \"NATIONAL\" location type is validated to ensure it matches the schema's required enum. No location codes, which is what's required, and no guaranteed times, which is also correct. I think I'm ready to output the JSON.\n\n\n",
+    "tokens": {
+      "input": 705,
+      "output": 82,
+      "total": 1299
+    }
+  }
+}

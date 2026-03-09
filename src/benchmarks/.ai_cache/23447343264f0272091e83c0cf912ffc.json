@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 09:00:00",
+      "endDate": "2024-12-13 13:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 11119,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.002622,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.0009405,
+      "cachedCost": 0,
+      "totalCost": 0.003711
+    },
+    "hash": "23447343264f0272091e83c0cf912ffc",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_4_ore_del_13_dicembre_2024.html",
+    "thoughts": "**Strike Information Extraction: EAV (Campania, Italy)**\n\nOkay, let's break this down. My task is to extract strike information from this HTML content, specifically focusing on EAV in Campania, Italy, and provide the results in JSON format. The HTML clearly announces a 4-hour strike set for December 13, 2024. The title, \"Linee Vesuviane: Avviso di sciopero di 4 ore del 13 dicembre 2024 - EAV srl,\" confirms the target company (EAV srl) and the scope of the announcement.\n\nThe content states: \"Si comunica che ... lo sciopero generale nazionale di 24 ore proclamato per il giorno 13 dicembre 2024 ... è stato ridotto a 4 ore, dalle ore 09:00 alle ore 13:00.\" This is straightforward: the strike is on December 13, 2024, from 09:00 to 13:00.\n\nI need to construct the JSON response now. It needs to reflect the strike details. I can extract the `isStrike` field, which should be set to `true`. The `strikeData` object is next. The `startDate` is clearly \"2024-12-13 09:00:00\", and the `endDate` is \"2024-12-13 13:00:00.\" The `locationType` is REGIONAL, specifically targeting the EAV network, and I'll represent Campania with the location code \"15\".\n\nNow, the `guaranteedTimes` field. The text mentions \"fasce di garanzia\" (guaranteed time slots), but it doesn't provide them directly in the required format (\"HH:mm-HH:mm\" like the prompt schema). It lists the *departures* within the guarantee times, but not the actual time ranges. I need to be exact here, and since the text doesn't provide the explicit time ranges, I'll omit the `guaranteedTimes` field. It's better to be accurate than to guess or infer. I will double-check to make absolutely certain, \"Di seguito vengono elencate le ultime e le prime partenze garantite in relazione alle fasce di garanzia.\" - it does not provide *ranges* per se, so I'll omit the field.\n\nTherefore, my final JSON output will reflect this analysis, adhering to the given schema as precisely as possible.\n\n\n",
+    "tokens": {
+      "input": 10488,
+      "output": 99,
+      "total": 11214
+    }
+  }
+}

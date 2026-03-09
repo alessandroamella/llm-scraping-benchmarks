@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-16 10:00:00",
+      "endDate": "2025-11-16 17:59:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "08",
+        "07",
+        "03",
+        "01",
+        "05"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5001,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00021025,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.000447,
+      "cachedCost": 0,
+      "totalCost": 0.00084175
+    },
+    "hash": "be8875b0118cb4532a033a24e766e043",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-11-16-sciopero-del-personale-di-tren.html",
+    "thoughts": "**Analyzing the Trenord Strike Announcement**\n\nOkay, let's break this down. I've got an announcement about a \"Sciopero del personale di Trenord\" – a Trenord staff strike. My primary objective is to determine if this is an upcoming strike and, if so, to extract the key details. Given my expertise, I'm already formulating how to represent this data logically.\n\nFirst, the crucial flag: `isStrike`. Based on the context, this is definitely an upcoming strike; the document explicitly mentions it. So, `isStrike = true`.\n\nNext, the date and time. It's happening on November 16, 2025. It also specifies a start time of 10:00:00 and an end time of 17:59:00. This translates directly to `startDate = \"2025-11-16 10:00:00\"` and `endDate = \"2025-11-16 17:59:00\"`. Easy enough.\n\nNow, the location. The announcement mentions specific regions: Emilia Romagna, Liguria, Lombardia, Piemonte, and Veneto. These are all regional, so `locationType = \"REGIONAL\"`. Now, I need to map these to numerical codes. Thankfully, it also provides the mapping. This leads to `locationCodes = [\"08\", \"07\", \"03\", \"01\", \"05\"]` - Emilia Romagna=08, Liguria=07, Lombardia=03, Piemonte=01, and Veneto=05.\n\nFinally, the guaranteed times. The text says \"Lo sciopero ricade in una fascia oraria senza treni garantiti\" (The strike falls within a time slot without guaranteed trains). This means there are no guaranteed times. Therefore, the `guaranteedTimes` field can be omitted or represented as empty.\n\nExcellent. I have extracted all the necessary data for a structured representation of this strike information.\n\n\n",
+    "tokens": {
+      "input": 841,
+      "output": 123,
+      "total": 1262
+    }
+  }
+}

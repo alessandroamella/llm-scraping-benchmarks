@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-28 08:20:00",
+      "endDate": "2025-01-28 12:20:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 15027,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003513,
+      "outputCost": 0.000494,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008453
+    },
+    "hash": "4b6d8d892399daa2dbd447f509b5c3c3",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_di_4_ore_martedi_28_gennaio_2025.html",
+    "thoughts": "**Determining location type**\n\nI’m looking at \"sciopero aziendale,\" meaning a company-wide strike for EAV S.r.l. Since it’s not regional, but company-specific, I’m considering that \"azienda\" seems ambiguous. The guidelines suggest locationType can be either \"NATIONAL\" or \"REGIONAL,\" and since it’s enterprise-wide, I'll set it to \"NATIONAL.\" The instruction indicates if it’s regional, we should use specific ISTAT codes, but since it’s a single company strike, \"NATIONAL\" appears to fit best.",
+    "tokens": {
+      "input": 7026,
+      "output": 1235,
+      "total": 8261
+    }
+  }
+}

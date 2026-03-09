@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-07-23 09:00:00",
+      "endDate": "2025-07-23 11:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9840,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00264275,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.0009585,
+      "cachedCost": 0,
+      "totalCost": 0.00372425
+    },
+    "hash": "d3ab30820d0a7220a48bea0f63ca7ab4",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_di_2_ore_giorno_23_luglio_2025.html",
+    "thoughts": "**Analyzing the EAV Strike Announcement**\n\nOkay, here's how I'm approaching this EAV web page content. First, I'm taking the input, which is this text from EAV regarding a potential strike on July 23, 2025. My goal here is to figure out if it *is* indeed announcing an upcoming strike and, if so, extract the relevant details in the precise JSON format they've specified.\n\nThe instructions are very clear: I need to set `isStrike` to `true` or `false`, depending on whether this is an announcement of a future strike. If it *is* an upcoming strike, I have to populate the `strikeData` object with `startDate`, `endDate`, `locationType`, `locationCodes` (which is optional if the strike is national), and `guaranteedTimes` (which is also optional). The output needs to be a valid JSON object.\n\nSo, let's look at the data. The title is \"Linee Flegree: Avviso di sciopero di 2 ore mercoledì 23 luglio 2025,\" which translates to \"Flegree Lines: Notice of a 2-hour strike Wednesday, July 23, 2025.\" The text itself begins, \"Si comunica che... per il giorno 23 luglio 2025 la O.S. CONF.A.I.L. ha proclamato uno sciopero nazionale di 2 ore, dalle ore 09:00 alle ore 11:00...\" Translation: \"We announce that... for the day July 23, 2025, the O.S. CONF.A.I.L. has proclaimed a national strike of 2 hours, from 09:00 to 11:00...\" So, obviously, this *is* an announcement of a strike. It's happening on July 23, 2025, from 09:00 to 11:00. The text explicitly says it's a \"sciopero nazionale\" - a national strike.\n\nNow to populate the JSON. Because it *is* an upcoming strike, `isStrike` will be `true`. For `strikeData`, the `startDate` is easy: \"2025-07-23 09:00:00.\" `endDate` is \"2025-07-23 11:00:00.\" The `locationType` is definitely \"NATIONAL.\" I don't see any specific location codes mentioned, and since it's a national strike, those are not needed. Finally, the text mentions \"ultime e prime partenze garantite\", but it doesn't specify time bands where service is *guaranteed* in the way this schema seems to expect. It's more about specific train departures that *may* be available. Since the text doesn't explicitly provide the kind of guaranteed time ranges the schema expects, I'm going to omit `guaranteedTimes` entirely to avoid any ambiguity or misinterpretation.\n\nSo, the JSON output looks like this (after validation, of course):\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-07-23 09:00:00\",\n    \"endDate\": \"2025-07-23 11:00:00\",\n    \"locationType\": \"NATIONAL\"\n  }\n}\n```\n\nNow, I'll run a schema check. `isStrike` is a boolean, so it's good. `startDate` and `endDate` are in the correct format. `locationType` is one of the accepted values. And, since `locationType` is NATIONAL, `locationCodes` is correctly omitted. Looks good.\n\n\n",
+    "tokens": {
+      "input": 10571,
+      "output": 82,
+      "total": 11292
+    }
+  }
+}

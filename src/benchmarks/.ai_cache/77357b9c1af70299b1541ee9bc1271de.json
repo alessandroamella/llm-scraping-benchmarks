@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-24 00:00:00",
+      "endDate": "2025-02-24 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19283,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000897,
+      "outputCost": 0.0007476,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008373
+    },
+    "hash": "77357b9c1af70299b1541ee9bc1271de",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_24h_lunedi_24_febbraio_2025.html",
+    "thoughts": "**Extracting strike data**\n\nI'm responding using JSON according to the defined schema. The content is about a 24-hour strike announced for February 24, 2025, by O.S. USB. I need to capture relevant details like start and end dates, location type, and guaranteed service times. The strike impact depends on how many workers participate. The start and end date will be formatted as 'yyyy-MM-dd HH:mm:ss', and I’ll mark isStrike as true since it's officially announced.",
+    "tokens": {
+      "input": 1794,
+      "output": 1869,
+      "total": 3663
+    }
+  }
+}

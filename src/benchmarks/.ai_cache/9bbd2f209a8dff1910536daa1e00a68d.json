@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-20 00:00:00",
+      "endDate": "2025-06-20 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 11138,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0002035,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.0008265,
+      "cachedCost": 0,
+      "totalCost": 0.00124
+    },
+    "hash": "9bbd2f209a8dff1910536daa1e00a68d",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_24h_giorno_venerdi_20_giugno_2025.html",
+    "thoughts": "**Strike Analysis: EAV Campania - June 20, 2025**\n\nOkay, let's break this down. My input is an announcement regarding a strike, so first and foremost, I need to confirm that's what this is. Based on the text, yes, it's explicitly a strike announcement. The goal is to extract key details. It's a 24-hour strike scheduled for June 20, 2025, by the USB union, specifically impacting EAV services in Campania.\n\nThe date is clearly Friday, June 20, 2025. It's a full 24-hour strike, and therefore the start time is going to be 00:00:00 and the end will be 23:59:59 on the same day - covering the whole day. The location is \"Campania,\" and that translates to regional code \"15.\" The announcement also specifies guaranteed service bands from 05:30 to 08:30 and again from 16:30 to 19:30.\n\nNow, let's structure the output in JSON format, which requires a clean `isStrike` boolean and a `strikeData` object. I am confident that the strike is upcoming (as it's been announced), so `isStrike` is `true`. Inside `strikeData`, the `startDate` is \"2025-06-20 00:00:00\" and `endDate` is \"2025-06-20 23:59:59\". The `locationType` is definitely \"REGIONAL\" and `locationCodes` is `[\"15\"]`. Finally, the `guaranteedTimes` are `[\"05:30-08:30\", \"16:30-19:30\"]`.\n\nI've verified that this structure adheres to the schema I'm working with. It's valid JSON and there are no extraneous comments or text. Therefore, I can confidently extract this strike information.\n\n\n",
+    "tokens": {
+      "input": 814,
+      "output": 140,
+      "total": 1505
+    }
+  }
+}

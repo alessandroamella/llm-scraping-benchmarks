@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-28 00:00:00",
+      "endDate": "2025-01-28 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 30979,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003292,
+      "outputCost": 0.0009944,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0013236
+    },
+    "hash": "4965b61474ad8e3f95534c69a2b922d8",
+    "sourceFile": "eav_informa_sciopero_di_4_ore_del_28_01_2025.html",
+    "thoughts": "**Determining strike announcement details**\n\nI need to output JSON based on a specified schema, and first, I have to decide whether this is a strike announcement. The message says there's a strike for 4 hours on January 28, 2025, and the date section mentions it is January 27, 2025. The content clarifies that the strike won't affect substitute bus services, which will operate normally. So, yes, this indeed is an announcement of an upcoming strike, meaning I can set isStrike to true. Next, I’ll extract the relevant strike data!",
+    "tokens": {
+      "input": 6584,
+      "output": 2486,
+      "total": 9070
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-01-09 21:00:00",
+      "endDate": "2026-01-10 23:59:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "04",
+        "05"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 37323,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007245,
+      "outputCost": 0.0013792,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00145165
+    },
+    "hash": "4b1ed51e9c051f0a715ba5b32d2a1197",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2026-1-9-sciopero-del-personale-di-sad---.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to determine if this document is about an upcoming strike. The content is in Italian and German, mentioning specific dates: \"In vigore: 9 GENNAIO 2026 - 10 GENNAIO 2026,\" which means it relates to a strike that was already called for January 9-10, 2026. Since the phrasing indicates that the strike has already happened, I should set \"isStrike\" to false, as the event occurred in the past relative to today's date in 2026.",
+    "tokens": {
+      "input": 1449,
+      "output": 3448,
+      "total": 4897
+    }
+  }
+}

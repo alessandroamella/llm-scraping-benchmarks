@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 17426,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003474,
+      "outputCost": 0.0006304,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0009778
+    },
+    "hash": "74554bace310f49a3284272b427cc10f",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_di_24_ore_del_13_dicembre_2024_aggiornamento.html",
+    "thoughts": "**Extracting strike details**\n\nThis is an announcement for an upcoming strike, not a cancellation. I’ll note that isStrike should be true. I need to extract details like the start and end dates, location type, location codes, and guaranteed times. The article uses Italian for dates, indicating the strike lasts 24 hours. It mentions guaranteed service times between 5:30 AM and 8:30 AM, and 4:30 PM and 7:30 PM, so outside those times, service won't be provided.",
+    "tokens": {
+      "input": 6948,
+      "output": 1576,
+      "total": 8524
+    }
+  }
+}

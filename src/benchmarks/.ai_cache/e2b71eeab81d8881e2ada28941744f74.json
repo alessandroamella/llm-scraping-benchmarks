@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19345,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000523,
+      "outputCost": 0.0005548,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0010778
+    },
+    "hash": "e2b71eeab81d8881e2ada28941744f74",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-12-12-sciopero-nazionale-personale-a.html",
+    "thoughts": "**Extracting strike dates**\n\nI need to extract strike data with startDate and endDate in the 'yyyy-MM-dd HH:mm:ss' format. Based on the content mentioning \"Il giorno venerdì 12 dicembre 2025\" and stating a 24-hour strike, I think the startDate should be 2025-12-12 00:00:00. However, I want to be precise about the hours. It seems safer to use endDate as 2025-12-12 23:59:59 to cover the full day, ensuring I follow the required format.",
+    "tokens": {
+      "input": 10460,
+      "output": 1387,
+      "total": 11847
+    }
+  }
+}

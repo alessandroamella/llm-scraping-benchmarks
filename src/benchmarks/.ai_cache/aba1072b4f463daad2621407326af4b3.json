@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-20 00:00:00",
+      "endDate": "2025-06-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21433,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003487,
+      "outputCost": 0.0005972,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0009459
+    },
+    "hash": "aba1072b4f463daad2621407326af4b3",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_24h_venerdi_20_giugno_2025.html",
+    "thoughts": "**Extracting strike information**\n\nI'm determining if the document is announcing a new or upcoming strike. The content indicates a 24-hour strike on June 20, 2025, organized by USB. Since it’s confirmed there is an upcoming strike, I’ll set isStrike to true. I need to extract the strike data with specific fields: startDate, endDate, locationType, locationCodes, and guaranteedTimes. It looks like I have the relevant details to work with.",
+    "tokens": {
+      "input": 6974,
+      "output": 1493,
+      "total": 8467
+    }
+  }
+}

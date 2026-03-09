@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8785,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0004828,
+      "outputCost": 0.00016,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0006428
+    },
+    "hash": "953d753ae6c4b19f9a3a427b5cf7cdae",
+    "sourceFile": "sciopero_generale_servizio_regolare_metropolitane_ferrovia_termini_centocelle.html",
+    "thoughts": "**Determining strike status**\n\nI need to output JSON following the specified schema for strike extraction. The document is in Italian and pertains to an ongoing general strike, which isn’t an upcoming one. The content mentions that the transport service for certain metro lines is normal, but some stations are closed. It confirms that the general strike is currently happening, not indicating an upcoming strike. Hence, I’d set isStrike to false.",
+    "tokens": {
+      "input": 9656,
+      "output": 400,
+      "total": 10056
+    }
+  }
+}

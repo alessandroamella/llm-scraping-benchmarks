@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4045,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00015325,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0003135,
+      "cachedCost": 0,
+      "totalCost": 0.00048175
+    },
+    "hash": "dc8aee1eff7261698a42000e43316d79",
+    "sourceFile": "sciopero_del_trasporto_pubblico_aperte_le_metropolitane_2.html",
+    "thoughts": "**Analyzing a Real-Time Public Transport Update**\n\nOkay, so I've received some input: \"Sciopero del trasporto pubblico, aperte le metropolitane,\" along with a publication date of November 28th, 2025. This clearly indicates a real-time update on the state of public transport in Rome during a strike. The description explicitly states a 24-hour national strike is ongoing (\"È in corso\").\n\nMy immediate focus, given my expertise, is to assess if this qualifies as an *ongoing* disruption. The instructions are specific: if the content pertains to a *current* strike, even with real-time updates, `isStrike` should be `false`. The text emphasizes the *present* tense, noting the strike's *current* status, making it a live report. Therefore, I'm setting `isStrike` to `false` because the intent here is to describe the *current* state of the strike, not the general existence of it.\n\nTherefore, the processed output is: `{\"isStrike\": false}`.\n\n\n",
+    "tokens": {
+      "input": 613,
+      "output": 10,
+      "total": 832
+    }
+  }
+}

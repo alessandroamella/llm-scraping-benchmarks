@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-09-22 00:00:00",
+      "endDate": "2025-09-22 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9923,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0002675,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.001035,
+      "cachedCost": 0,
+      "totalCost": 0.001487
+    },
+    "hash": "644674c980a5b5cf5252ecb7ba076050",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_generale_nazionale_lunedi_22_settembre_2025.html",
+    "thoughts": "**Strike Information Extraction: A Thought Process**\n\nAlright, let's break this down. My task is to extract strike information from this text, and I need to do it with precision, adhering to a specific JSON format and constraints. First, I need to confirm whether this text even *is* a strike announcement. Scanning \"Avviso di sciopero generale nazionale lunedì 22 settembre 2025,\" that's a clear indicator: it's definitely an upcoming strike.\n\nNow, let's get down to the specifics. I have a date, September 22, 2025. It specifies a general strike on that day. Even though it gives durations of 23 and 24 hours, the wording implies the entire day. I'll translate that into a start time of 00:00:00 and an end time of 23:59:59 on that date. The location is \"nazionale,\" which translates to \"NATIONAL\". I'll flag this as a national strike, which means no location codes are required. The text also provides \"guaranteed times\": 05:30-08:30 and 16:30-19:30. These need to be included in the output.\n\nMy thought process continues. I need to structure this into a JSON output. It will be:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-09-22 00:00:00\",\n    \"endDate\": \"2025-09-22 23:59:59\",\n    \"locationType\": \"NATIONAL\",\n    \"guaranteedTimes\": [\n      \"05:30-08:30\",\n      \"16:30-19:30\"\n    ]\n  }\n}\n```\n\nI have checked each data point: \"isStrike\" is a boolean, \"strikeData\" is present. The `startDate` and `endDate` formats (`yyyy-MM-dd HH:mm:ss`) are correct. The `locationType` is the correct enum value. Finally, the `guaranteedTimes` are validated against the expected pattern. All seems in order, and the output adheres precisely to the stated constraints. That's a wrap.\n\n\n",
+    "tokens": {
+      "input": 1070,
+      "output": 123,
+      "total": 1883
+    }
+  }
+}

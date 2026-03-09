@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 21:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 17606,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0002931,
+      "outputCost": 0.0005008,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0007939
+    },
+    "hash": "2a32c9335dd65efaac35addc7ed90996",
+    "sourceFile": "strike-detail-venerd--12-dicembre-da-mezzanotte-alle-21-sciopero.html",
+    "thoughts": "**Extracting strike announcement details**\n\nI'm working on outputting JSON based on the strike extraction schema. The document is announcing an upcoming strike on Friday, December 12, from midnight to 21:00. It mentions guaranteed services during specific hours and the potential ripple effects. The article's date is Thursday, December 11, 2025, making it clear this is a prediction. So, I can confidently say this is an announcement for a future strike event.",
+    "tokens": {
+      "input": 5862,
+      "output": 1252,
+      "total": 7114
+    }
+  }
+}

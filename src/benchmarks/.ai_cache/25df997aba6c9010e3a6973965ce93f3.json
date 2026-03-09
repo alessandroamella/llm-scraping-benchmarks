@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19592,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00010305,
+      "outputCost": 0.0005084,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00061145
+    },
+    "hash": "25df997aba6c9010e3a6973965ce93f3",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_generale_nazionale_di_24_ore_di_venerdi_28_novembre_2025.html",
+    "thoughts": "**Clarifying date formats**\n\nI need to interpret the 'startDate' and 'endDate' in the required 'yyyy-MM-dd HH:mm:ss' format. The times mentioned are \"service guaranteed from 05:30 to 08:30 and 16:30 to 19:30.\" For a 24-hour national strike on 2025-11-28, the startDate would be 2025-11-28 00:00:00 and endDate would be 2025-11-28 23:59:59. However, I'm not sure if there's a standard, so I'll stick with the entire day concept for the end time.",
+    "tokens": {
+      "input": 2061,
+      "output": 1271,
+      "total": 3332
+    }
+  }
+}

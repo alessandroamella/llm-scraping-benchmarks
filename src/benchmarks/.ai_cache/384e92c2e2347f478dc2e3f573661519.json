@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-05 03:00:00",
+      "endDate": "2025-02-06 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18368,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005332,
+      "outputCost": 0.000518,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0010512
+    },
+    "hash": "384e92c2e2347f478dc2e3f573661519",
+    "sourceFile": "strike-detail-mercoled--5-febbraio-sciopero-dei-treni-regionali.html",
+    "thoughts": "**Extracting strike details**\n\nI need to format the information into JSON according to the schema. The HTML talks about a regional train strike on \"Wednesday, February 5,\" organized by the ORSA union, running from 3 AM on the 5th to 2 AM on the 6th, 2025. It suggests there will be disruptions for the entire day, affecting train schedules. It also mentions guaranteed trains during specific hours. Plus, there's a PDF press release on the Trenord site.",
+    "tokens": {
+      "input": 10664,
+      "output": 1295,
+      "total": 11959
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 21:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9373,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0024175,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.0008925,
+      "cachedCost": 0,
+      "totalCost": 0.0034945
+    },
+    "hash": "5f277591e6228e16029a014dc6582d65",
+    "sourceFile": "strike-detail-venerd--12-dicembre-da-mezzanotte-alle-21-sciopero.html",
+    "thoughts": "**Strike Information Extraction: A Mental Walkthrough**\n\nOkay, let's break this down. My task is to analyze HTML content and pull out strike information, specifically creating a JSON output. The rules are clear: it *has* to be valid JSON, an array of objects (even if it's just one), and each object needs an `isStrike` boolean. If `isStrike` is true, then I have to include the strike data: `startDate`, `endDate`, `locationType`, potentially `locationCodes` if it's regional, and `guaranteedTimes`. The date format is rigid: 'yyyy-MM-dd HH:mm:ss', guaranteed times are 'HH:mm-HH:mm', and the location codes should be 2-digit ISTAT codes.\n\nI'm given some content to analyze. The title says \"Friday December 12, midnight to 21:00, national strike\". The post date is Thursday, December 11, 2025. This clearly defines the strike date as December 12, 2025. From the title, I've got the start time: 00:00 (midnight) on the 12th, and the end time: 21:00 (9 PM) on the 12th. It's a national strike, which simplifies the location. The guaranteed service times are 6-9 AM and 6-9 PM.\n\nNow, let me translate that into the required JSON structure. `isStrike` is definitely true here because it's an upcoming strike.  The `startDate` is \"2025-12-12 00:00:00\".  The `endDate` is \"2025-12-12 21:00:00\". `locationType` is \"NATIONAL\". And the `guaranteedTimes` are [\"06:00-09:00\", \"18:00-21:00\"].\n\nI'm validating my understanding from the original text: \"From midnight to 21:00 on Friday, December 12th\" confirms the start and end dates/times, so that is correct. \"National strike\" directly maps to `locationType`: \"NATIONAL\". And \"Guaranteed hours are 6-9 and 18-21\" gives the correct `guaranteedTimes`. Okay, everything checks out. Time to construct the JSON.\n\n\n",
+    "tokens": {
+      "input": 9670,
+      "output": 123,
+      "total": 10388
+    }
+  }
+}

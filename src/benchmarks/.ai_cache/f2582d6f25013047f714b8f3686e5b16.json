@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8304,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000512,
+      "outputCost": 0.0001288,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00018
+    },
+    "hash": "f2582d6f25013047f714b8f3686e5b16",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_322.html",
+    "thoughts": "**Classifying strike information**\n\nI need to determine if the document is announcing a new or upcoming strike. It appears to be in Italian and discusses public transport strike participation, specifically mentioning that Atac personnel's adherence was 32.2%. Since this reflects participation in a strike that already happened today rather than an upcoming one, I conclude that it should be marked as false. I should prepare the JSON with `{\"isStrike\": false}` in my final response.",
+    "tokens": {
+      "input": 1024,
+      "output": 322,
+      "total": 1346
+    }
+  }
+}

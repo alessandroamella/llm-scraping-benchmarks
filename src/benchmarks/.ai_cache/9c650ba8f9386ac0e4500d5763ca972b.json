@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-09-22 00:00:00",
+      "endDate": "2025-09-22 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7384,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00248775,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.0006315,
+      "cachedCost": 0,
+      "totalCost": 0.00330375
+    },
+    "hash": "9c650ba8f9386ac0e4500d5763ca972b",
+    "sourceFile": "linee_automobilistiche_avviso_di_sciopero_generale_nazionale_lunedi_22_settembre_2025.html",
+    "thoughts": "**Strike Announcement Analysis for EAV**\n\nOkay, let's break this down. My task is clear: I need to determine if this input text constitutes an upcoming strike announcement, specifically concerning EAV (Ente Autonomo Volturno). The schema requires a boolean `isStrike` flag, and if true, I must populate the `strikeData` object with the relevant details: `startDate`, `endDate`, `locationType`, `locationCodes`, and `guaranteedTimes`. If it's *not* a strike announcement – say, a revocation, a report of a past event, or an update – then `isStrike` must be set to false.\n\nNow, let's look at the input. The headline, \"Linee Automobilistiche: Avviso di sciopero generale nazionale lunedì 22 settembre 2025,\" is quite telling. The date, September 22, 2025, is explicitly stated. The content explicitly mentions \"azione di sciopero generale nazionale\" and that it has been \"proclamato\" for that date. This strongly suggests an upcoming strike.\n\nTherefore, I'm confident in classifying this as an active strike announcement. `isStrike` will be `true`. The strike date is September 22, 2025. Given the context of a 24-hour strike, the `startDate` should be \"2025-09-22 00:00:00\" and the `endDate` \"2025-09-22 23:59:59\" to cover the entire day. The type of strike is a \"sciopero generale nazionale\" which translates to a \"NATIONAL\" `locationType`. Given this is a national strike I will omit `locationCodes`. Lastly, the guaranteed times, \"dalle ore 05:30 alle ore 8:30 e dalle ore 16:30 alle ore 19:30\", translates to `guaranteedTimes` of [\"05:30-08:30\", \"16:30-19:30\"].\n\n\n",
+    "tokens": {
+      "input": 9951,
+      "output": 123,
+      "total": 10495
+    }
+  }
+}

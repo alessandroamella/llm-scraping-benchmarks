@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-03 00:00:00",
+      "endDate": "2025-10-03 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8732,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00284225,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.0011775,
+      "cachedCost": 0,
+      "totalCost": 0.00420425
+    },
+    "hash": "36cdf0366d6454c032db81f8fc939893",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_generale_nazionale_di_24_ore_venerdi_03_ottobre_2025.html",
+    "thoughts": "**Strike Announcement Analysis**\n\nOkay, let's break this down. My task is to determine if this content from EAV is an announcement about a strike and, if so, to extract the relevant details into a JSON format. The provided text is a webpage titled \"Linee Flegree: Avviso di sciopero generale nazionale di 24 ore venerdì 03 ottobre 2025.\" Straight away, I'm keying in on \"sciopero\" (strike) and the date, October 3rd, 2025. It also mentions \"24 ore\", which is important. The text clearly states that a \"sciopero generale di 24 ore\" is proclaimed for October 3rd, 2025. Excellent, we've got a strike announcement.\n\nThe content also details that services will be guaranteed between 05:30 and 08:30 and again from 16:30 to 19:30. This is valuable information that I need to capture.\n\nNow, let's assemble the data according to the schema. We have a strike on October 3rd, 2025. I'll need to use the standard assumption for the start time for 24-hour strikes which is 00:00:00 on that day, and for the end time, I'll go with 23:59:59 on the same day. The strike is \"nazionale\" which I'll represent as \"NATIONAL\" for the `locationType`. We can omit `locationCodes` since this is a national strike. The `guaranteedTimes` are clearly defined as \"05:30-08:30\" and \"16:30-19:30\".\n\nSo, I'm going to assemble the final JSON output:\n\n```json\n[\n  {\n    \"isStrike\": true,\n    \"strikeData\": {\n      \"startDate\": \"2025-10-03 00:00:00\",\n      \"endDate\": \"2025-10-03 23:59:59\",\n      \"locationType\": \"NATIONAL\",\n      \"guaranteedTimes\": [\n        \"05:30-08:30\",\n        \"16:30-19:30\"\n      ]\n    }\n  }\n]\n```\n\nThat's it, the JSON is correctly formatted, `isStrike` is true, and the strike details are all accounted for according to the schema. Ready to move on.\n\n\n",
+    "tokens": {
+      "input": 11369,
+      "output": 123,
+      "total": 12277
+    }
+  }
+}

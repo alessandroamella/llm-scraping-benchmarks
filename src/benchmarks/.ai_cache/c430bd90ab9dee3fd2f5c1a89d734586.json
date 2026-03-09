@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6039,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00258975,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.000771,
+      "cachedCost": 0,
+      "totalCost": 0.00357075
+    },
+    "hash": "c430bd90ab9dee3fd2f5c1a89d734586",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_24h_per_venerdi_12_novembre_2025.html",
+    "thoughts": "**Analyzing the EAV Strike Announcement**\n\nOkay, let's see. I've been given some HTML content describing a potential strike affecting EAV in Campania, and my task is to determine if it's an *upcoming* strike and, if so, extract the relevant details. I need to output `isStrike`, the strike data itself, including `startDate`, `endDate`, `locationType`, `locationCodes`, and `guaranteedTimes`.\n\nAlright, I see the text mentions \"Linee Suburbane: Avviso di sciopero di 24h per venerdì 12 dicembre 2025 - EAV srl.\" Perfect, that's a clear indicator. \"Venerdì 12 dicembre 2025\" - that's the date. I also see \"Per il giorno 12 dicembre 2025 la O.S. CGIL ha proclamato azione di sciopero generale nazionale...\" confirming the strike announcement. The document describes a 24-hour strike. Based on EAV’s typical strike definitions, a 24-hour strike means it will run from 00:00 to 23:59 on the specified date.\n\nThe document states, \"Servizio garantito dalle ore 05:30 alle ore 8:30 e dalle ore 16:30 alle ore 19:30.\" So, that will be my guaranteed service times. The region is Campania, indicated by the EAV context. Based on EAV’s conventions, Campania has a region code of \"15\".\n\nNow, let's put it all together.\n\n*   `isStrike`: definitely true.\n*   `startDate`: \"2025-12-12 00:00:00\".\n*   `endDate`: \"2025-12-12 23:59:59\".\n*   `locationType`: \"REGIONAL\" (as it's a regional strike).\n*   `locationCodes`: [\"15\"] (ensuring it's an array of strings as per the JSON schema).\n*   `guaranteedTimes`: [\"05:30-08:30\", \"16:30-19:30\"].\n\nThat should provide a complete and accurate extraction of the strike information. I should be able to produce the final output with confidence.\n\n\n",
+    "tokens": {
+      "input": 10359,
+      "output": 140,
+      "total": 11013
+    }
+  }
+}

@@ -1,15 +1,27 @@
 {
-  "timestamp": "2026-03-09T13:36:27.952Z",
-  "isCacheHit": true,
+  "timestamp": "2026-03-09T14:42:05.949Z",
+  "isCacheHit": false,
   "request": {
     "sourceName": "EAV",
     "fileName": "linee_flegree_avviso_di_sciopero_generale_nazionale_di_venerdi_12_dicembre_2025.html",
     "model": "gpt-5-nano",
     "strategy": "dom-distillation-markdown",
-    "useLenientSchema": true,
+    "useLenientSchema": false,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"EAV\" (the public transport company of Campania (15)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: Linee Flegree: Avviso di sciopero generale nazionale di venerdì 12 dicembre 2025 - EAV srl\n\n* * *\n\n## Linee Flegree: Avviso di sciopero generale nazionale di venerdì 12 dicembre 2025\n\nData:  \n**7 Dicembre 2025**\n\nPer il giorno 12 dicembre 2025 la O.S. CGIL ha proclamato azione di sciopero generale nazionale di tutte le categorie pubbliche e private avente le seguenti motivazioni: contro la manovra finanziaria del Governo. Lo sciopero, che interesserà sia i servizi ferroviari che su gomma, prevede comunque il rispetto delle fasce di garanzia\n\nDurante l’ultima proclamazione di sciopero della O.S. CGIL la percentuale di adesione è stata del 14,50% (sciopero del 3 ottobre 2025)\n\nDi seguito vengono elencate le ultime e le prime partenze garantite in relazione alle fasce di garanzia.\n\nDurante l’orario di sciopero l’effettuazione delle corse è subordinata al numero di lavoratori aderenti allo sciopero.\n\n**_Servizio garantito dalle ore 05:30 alle ore 8:30 e dalle ore 16:30 alle ore 19:30_**\n\n **Prime partenze garantite dopo lo sciopero – operatività servizio dalle 5.30 alle 8.30**\n\n-   da Montesanto per Bagnoli            05:45\n-   da Fuorigrotta per Bagnoli             05:38\n-   da Gerolomini per Torregaveta      06:01\n-   da Montesanto per Licola               05:36\n-   da Quarto per Licola                       05:44\n-   da Soccavo per Monte S.Angelo    07:26\n-   da Monte S.Angelo per Soccavo    07:34\n-   da Fuorigrotta per Montesanto        05:30\n-   da Bagnoli per Montesanto             05:47\n-   da Torregaveta per Gerolomini       05:38\n-   da Licola  per Montesanto               05:56\n-   da Quarto per Montesanto               05:45\n\n**Ultime partenze garantite prima dello sciopero – operatività servizio dalle 5.30 alle 8.30**\n\n-   da Montesanto per Bagnoli              08:30\n-   da Gerolomini per Torregaveta        08:16\n-   da Montesanto per Licola                   8:24\n-   Da Bagnoli per Montesanto               08:17\n-   da Torregaveta per Gerolomini         07:53\n-   da Licola  per Montesanto                 08:20\n-   da Soccavo per Monte S.Angelo       08:14\n-   da Monte S.Angelo per Soccavo       08:22\n\n**Prime partenze garantite dopo lo sciopero – operatività servizio dalle 16.30 alle 19.30**\n\n-   da Montesanto per Bagnoli                      16:30\n-   da Gerolomini per Torregaveta        16:31\n-   da Montesanto per Licola                  16:48\n-   Da Bagnoli per Montesanto               16:32\n-   da Torregaveta per Gerolomini         16:53\n-   da Licola  per Montesanto                16:44\n-   da Soccavo per Monte S.Angelo       16:38\n-   da Monte S.Angelo per Soccavo       16:46\n\n**Ultime partenze garantite prima dello sciopero – operatività servizio dalle 16.30 alle 19.30**\n\n-   da Montesanto per Bagnoli                        19:30\n-   da Gerolomini per Torregaveta          18:46\n-   da Montesanto per Licola                   19:12\n-   Da Bagnoli per Montesanto                19:17\n-   da Torregaveta per Gerolomini           19:08\n-   da Licola  per Montesanto                   19:08\n-   da Soccavo per Monte S.Angelo         19:26\n-   da Monte S.Angelo per Soccavo         19:10"
   },
   "response": {
+    "rawOutput": {
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2025-12-12 00:00:00",
+        "endDate": "2025-12-12 23:59:59",
+        "locationType": "NATIONAL",
+        "guaranteedTimes": [
+          "05:30-08:30",
+          "16:30-19:30"
+        ]
+      }
+    },
     "parsedData": {
       "isStrike": true,
       "strikeData": {
@@ -23,17 +35,18 @@
       }
     },
     "usage": {
-      "input": 1849,
-      "output": 1410,
-      "total": 3259
+      "input": 1935,
+      "output": 1893,
+      "total": 3828
     },
     "costUsd": {
-      "inputCost": 0.00009245,
-      "outputCost": 0.000564,
+      "inputCost": 0.00009675,
+      "outputCost": 0.0007572,
       "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.00065645
+      "totalCost": 0.00085395
     },
-    "durationMs": 15498
+    "durationMs": 26223,
+    "thoughts": "**Deciding on strike announcement**\n\nI need to output JSON according to the extraction rules. The content discusses a general national strike planned for December 12, 2025, which I can confirm is an upcoming strike. It mentions service guarantee times and also notes that operations depend on how many workers participate. The instructions indicate I need to determine if this is a new strike announcement. Since it clearly announces a future strike, I'll set isStrike to true."
   }
 }

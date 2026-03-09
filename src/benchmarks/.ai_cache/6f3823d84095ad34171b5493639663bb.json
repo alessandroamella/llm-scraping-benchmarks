@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-07-23 09:00:00",
+      "endDate": "2025-07-23 11:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 11356,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0025955,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.001086,
+      "cachedCost": 0,
+      "totalCost": 0.00383
+    },
+    "hash": "6f3823d84095ad34171b5493639663bb",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_di_2_ore_mercoledi_23_luglio_2025.html",
+    "thoughts": "**Strike Analysis Summary**\n\nOkay, let's break this down. My task is to determine if this text announces a strike for EAV (Campania, Region 15) and, if so, to format the output as strict JSON, following the schema. The goal is to produce `isStrike` as a boolean and, if true, provide the strike details in `strikeData` as defined. The output has to be pure JSON.\n\nThe headline and content clearly point to a strike: \"Linea Metropolitana: Avviso di sciopero di 2 ore mercoledì 23 luglio 2025\" and \"per mercoledì 23 luglio 2025 la O.S. Faisa Confail ha proclamato uno sciopero aziendale di 2 ore, dalle ore 09:00 alle ore 11:00\" The strike is confirmed.\n\nThe start time is 09:00, and the end time is 11:00, both on July 23rd, 2025. That's straightforward: `startDate` is \"2025-07-23 09:00:00\" and `endDate` is \"2025-07-23 11:00:00\".\n\nThe location is Campania (Region 15), so `locationType` should be \"REGIONAL\", and `locationCodes` is [\"15\"].\n\nThe content mentions \"Di seguito vengono elencate le ultime e le prime partenze garantite...\", but *doesn't* explicitly give the guaranteed *time ranges* like \"06:00-09:00\" as specified in the prompt. While the text indicates the service is guaranteed at some times, I will omit the `guaranteedTimes` field altogether as it is optional, and I do not have a time range to work with.\n\nTherefore, the final output needs to include: `isStrike`: true and `strikeData` which is an object containing `startDate`, `endDate`, `locationType`, and `locationCodes`. I'll make sure all the datatypes and formatting are correct, especially the date format and ensuring `locationType` is an enum value and `locationCodes` is a list of strings and not integers. No extra comments, no extraneous text – strictly parseable JSON.\n\n\n",
+    "tokens": {
+      "input": 10382,
+      "output": 99,
+      "total": 11205
+    }
+  }
+}

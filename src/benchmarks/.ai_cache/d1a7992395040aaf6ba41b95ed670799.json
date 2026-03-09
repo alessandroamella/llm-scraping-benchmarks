@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-09-22 00:00:00",
+      "endDate": "2025-09-22 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22068,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005838,
+      "outputCost": 0.00067,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0012538
+    },
+    "hash": "d1a7992395040aaf6ba41b95ed670799",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_generale_nazionale_lunedi_22_settembre_2025.html",
+    "thoughts": "**Setting event details**\n\nI need to ensure that \"startDate\" and \"endDate\" correspond with the strike date of September 22, 2025. The document mentions this date and notes that a national strike will take place. So, I’ll set:\n\n- startDate: \"2025-09-22 00:00:00\"  \n- endDate: \"2025-09-22 23:59:59\"\n\nThe LocationType will be \"NATIONAL,\" and locationCodes will be explicitly null. I'm also noting guaranteed service times: [\"05:30-08:30\", \"16:30-19:30\"]. Everything is lining up correctly!",
+    "tokens": {
+      "input": 11676,
+      "output": 1675,
+      "total": 13351
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-11-29 09:00:00",
+      "endDate": "2024-11-29 13:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 16441,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005471,
+      "outputCost": 0.0005736,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0011207
+    },
+    "hash": "f2cb56e6288a87440fc3deb4cb019edb",
+    "sourceFile": "strike-detail-venerd--29-novembre-dalle-9-alle-13-sciopero-gener.html",
+    "thoughts": "**Determining strike details**\n\nI need to format this in JSON according to the required schema. The document is in Italian and clearly announces an upcoming strike on Friday, November 29, from 9 AM to 1 PM. It looks like there will be impacts on the Ferrovienord network but regular service on RFI. I need to confirm that \"isStrike\" should be true, then I'll extract the start and end time data and confirm the location type as REGIONAL since it pertains to the Ferrovienord lines.",
+    "tokens": {
+      "input": 10942,
+      "output": 1434,
+      "total": 12376
+    }
+  }
+}

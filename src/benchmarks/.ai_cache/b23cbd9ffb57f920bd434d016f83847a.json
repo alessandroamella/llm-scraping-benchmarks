@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24359,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00037585,
+      "outputCost": 0.000676,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00105185
+    },
+    "hash": "b23cbd9ffb57f920bd434d016f83847a",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_24_ore_venerdi_13_dicembre_2024.html",
+    "thoughts": "**Extracting strike announcement data**\n\nI’m working on extracting a JSON following the strike_extraction schema to determine if the document is a strike announcement. The content I have is about a 24-hour strike notice for \"Linee Vesuviane\" on December 13, 2024, which confirms it's an actual strike announcement. So, I’ll mark isStrike as true and extract relevant data like the start and end dates, location type, and guaranteed service windows but without exact times since they weren't specified.",
+    "tokens": {
+      "input": 7517,
+      "output": 1690,
+      "total": 9207
+    }
+  }
+}

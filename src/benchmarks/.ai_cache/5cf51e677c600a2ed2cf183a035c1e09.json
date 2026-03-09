@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 12096,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00186725,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.000849,
+      "cachedCost": 0,
+      "totalCost": 0.00292625
+    },
+    "hash": "5cf51e677c600a2ed2cf183a035c1e09",
+    "sourceFile": "eav_autolinee_avviso_di_sciopero_di_24_ore_venerdi_13_dicembre_2024.html",
+    "thoughts": "**Processing the EAV Strike Information**\n\nOkay, so I've got a webpage about an upcoming strike for EAV, the public transport system in Campania. The strike is scheduled for \"venerdì 13 dicembre 2024,\" which translates to Friday, December 13th, 2024. It's a full 24-hour strike. The critical bit is the guaranteed service hours, which are 05:30 to 08:30 in the morning and 16:30 to 19:30 in the afternoon.\n\nBased on this information, I need to construct the data structure requested. Let's see... the system needs `isStrike`, `startDate`, `endDate`, `locationType`, `locationCodes`, and `guaranteedTimes`.\n\nSo, `isStrike` is clearly `true`. The strike starts at the stroke of midnight on the 13th, making `startDate` \"2024-12-13 00:00:00\". Being a 24-hour strike, the `endDate` will be \"2024-12-13 23:59:59\" (safer to use this than 24:00:00). Since EAV covers the Campania region, the `locationType` should be \"REGIONAL,\" and the `locationCodes` will be an array containing \"15\" (Campania's code). Finally, the `guaranteedTimes` are straightforward: [\"05:30-08:30\", \"16:30-19:30\"].\n\nTherefore, I have:\n\n*   `isStrike`: `true`\n*   `startDate`: \"2024-12-13 00:00:00\"\n*   `endDate`: \"2024-12-13 23:59:59\"\n*   `locationType`: \"REGIONAL\"\n*   `locationCodes`: [\"15\"]\n*   `guaranteedTimes`: [\"05:30-08:30\", \"16:30-19:30\"]\n\nNow, before I commit this, I need to do a quick check to ensure data integrity. Let me quickly verify: The `startDate` and `endDate` are in the correct format (yyyy-MM-dd HH:mm:ss). \"REGIONAL\" is a valid `locationType`, and \"15\" is a valid 2-digit code. And the `guaranteedTimes` are in the correct HH:mm-HH:mm format. All looks good. Ready to proceed.\n\n\n",
+    "tokens": {
+      "input": 7469,
+      "output": 140,
+      "total": 8175
+    }
+  }
+}

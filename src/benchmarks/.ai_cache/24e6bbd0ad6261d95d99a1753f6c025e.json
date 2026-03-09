@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-05-11 00:00:00",
+      "endDate": "2025-05-11 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7433,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00262875,
+      "outputCost": 0.000189,
+      "thinkingCost": 0.000738,
+      "cachedCost": 0,
+      "totalCost": 0.00355575
+    },
+    "hash": "24e6bbd0ad6261d95d99a1753f6c025e",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_24h_domenica_11_maggio_2025.html",
+    "thoughts": "**Strike Announcement Analysis for EAV**\n\nOkay, let's break this down. My task is clear: I need to analyze this EAV text and determine if it's a strike announcement, and if so, extract the relevant data into a JSON object.\n\nThe provided text, \"Linee Flegree: avviso di sciopero 24h domenica 11 maggio 2025,\" is quite straightforward. It's an announcement for a strike on the Flegrean Lines. Excellent!\n\nFirst, I'll set `isStrike` to `true`. Now, the strike data. Date is Sunday, May 11, 2025. It's a 24-hour strike. That means the `startDate` is 2025-05-11 00:00:00, and the `endDate` is 2025-05-11 23:59:59. I need to be precise here, so I'll format the date and time correctly. The instructions specified `yyyy-MM-dd HH:mm:ss`, so that's what I'll use.\n\nThe location is the EAV company which operates in Campania (Region code \"15\"). So, `locationType` is \"REGIONAL\", and `locationCodes` is [\"15\"].\n\nFinally, the guaranteed times: \"05:30-08:30\" and \"16:30-19:30\".  These go into `guaranteedTimes` as an array. I think I've covered everything. Time to build the JSON object.\n\n\n",
+    "tokens": {
+      "input": 10515,
+      "output": 126,
+      "total": 11133
+    }
+  }
+}

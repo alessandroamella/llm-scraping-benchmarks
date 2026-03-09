@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-07-23 09:00:00",
+      "endDate": "2025-07-23 11:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9143,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00194825,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.000852,
+      "cachedCost": 0,
+      "totalCost": 0.00294875
+    },
+    "hash": "91dbd2af14b1c1a36181b72444fa6a4c",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_di_2_ore_mercoledi_23_luglio_2025.html",
+    "thoughts": "**My Analysis of the Strike Information**\n\nAlright, let's break this down. My objective is clear: I need to extract strike information from this text snippet and return it as valid JSON. The target company is EAV (Campania), which is a key data point. Crucially, `isStrike` needs to be set to `true` *only* if the text announces an upcoming strike. Any other scenario, like a cancellation, post-strike info, service updates, or real-time status updates, must result in a `false` value.\n\nThe text itself reads: \"Linea Metropolitana: Avviso di sciopero di 2 ore mercoledì 23 luglio 2025\" – a pretty straightforward announcement of a strike. It's an announcement. The date of the post is July 22, 2025, and the event itself is scheduled for July 23, 2025 – confirming this is an *upcoming* event. The event type is clearly defined as a \"sciopero\" (strike), and the duration is given as 2 hours.\n\nTherefore, `isStrike` is definitely `true`.\n\nNow, I need to construct the `strikeData` object. I know that the strike starts on July 23, 2025, at 09:00 and ends at 11:00.  I can confidently create `startDate` as \"2025-07-23 09:00:00\" and `endDate` as \"2025-07-23 11:00:00\".\n\nSince EAV operates in Campania, `locationType` should be \"REGIONAL,\" and the location codes should be [\"15\"] for the ISTAT region code.\n\nThe trickiest part comes with `guaranteedTimes`. The text mentions that the strike is for \"2 hours, 09:00 to 11:00\", and states \"During the strike hours...\". But it doesn't give *explicit* time ranges during which service is *guaranteed* for *all* services, such as \"06-09/18-21\", which is common in Italy during strikes. Since the prompt states that if the guaranteed times are not specified, then I should omit it, so I will either leave `guaranteedTimes` out of the JSON, or put it as an empty array, depending on how best my system works. This looks like the right approach, to me.\n\nSo, in summary, here is the resulting JSON structure that I would create:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-07-23 09:00:00\",\n    \"endDate\": \"2025-07-23 11:00:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"15\"]\n  }\n}\n```\n\n\n",
+    "tokens": {
+      "input": 7793,
+      "output": 99,
+      "total": 8460
+    }
+  }
+}

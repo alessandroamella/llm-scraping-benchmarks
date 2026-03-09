@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-09-22 00:00:00",
+      "endDate": "2025-09-22 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 27628,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007265,
+      "outputCost": 0.000972,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00104465
+    },
+    "hash": "f07a0825c99f2e918430bf0ac7073867",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_generale_nazionale_lunedi_22_settembre_2025.html",
+    "thoughts": "**Extracting strike data**\n\nI need to output JSON in the specified strike extraction format and determine if isStrike is true or false. The content is about a general national strike announced by USB OS for September 22, 2025. The announcement includes details such as service times and indicates that the strike is forthcoming. Therefore, I'll set isStrike to true. Now I’ll extract the strike data, starting with the strike date, which is September 22, 2025.",
+    "tokens": {
+      "input": 1453,
+      "output": 2430,
+      "total": 3883
+    }
+  }
+}

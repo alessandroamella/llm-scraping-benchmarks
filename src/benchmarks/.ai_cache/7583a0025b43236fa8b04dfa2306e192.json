@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7909,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0004834,
+      "outputCost": 0.0001224,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0006058
+    },
+    "hash": "7583a0025b43236fa8b04dfa2306e192",
+    "sourceFile": "sciopero_24_febbraio2025_stato_del_servizio.html",
+    "thoughts": "**Determining strike status**\n\nI need to output JSON according to the given schema for strike extraction. The document is in Italian and indicates a public transport strike with certain lines operating. It’s clear from the text that this is about an ongoing strike rather than an upcoming one, especially since it mentions “in corso.” So, I can confirm that `isStrike` should be set to false. I’ll output: \n\n{ \"isStrike\": false } \n\nNo strike data is necessary here.",
+    "tokens": {
+      "input": 9668,
+      "output": 306,
+      "total": 9974
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7760,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0009411,
+      "outputCost": 0.0002,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0011411
+    },
+    "hash": "419e0a86badd0b13da13714d6089d7ff",
+    "sourceFile": "sciopero_generale_servizio_regolare_metropolitane_ferrovia_termini_centocelle.html",
+    "thoughts": "**Analyzing strike information**\n\nI need to parse the HTML to see if it's announcing a new strike or providing information about an existing one. The user's content is about the ATAC public transport company in Rome and mentions a general strike. I should check the context for ongoing updates. If the content shows it’s just info about participation in a previous strike, I’ll set isStrike to false. For current conditions, service appears regular except for some station closures.",
+    "tokens": {
+      "input": 18822,
+      "output": 500,
+      "total": 19322
+    }
+  }
+}

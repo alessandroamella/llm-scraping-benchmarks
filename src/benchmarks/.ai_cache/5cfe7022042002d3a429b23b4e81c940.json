@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-20 00:00:00",
+      "endDate": "2025-06-20 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9158,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000303,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.000522,
+      "cachedCost": 0,
+      "totalCost": 0.001035
+    },
+    "hash": "5cfe7022042002d3a429b23b4e81c940",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_24_h_venerdi_20_giugno_2025.html",
+    "thoughts": "**Strike Announcement Analysis**\n\nOkay, let's break this down. My task is to analyze this text and determine if it's a strike announcement. The input is \"Linee Suburbane – Avviso di sciopero 24 h venerdì 20 giugno 2025 - EAV srl.\" Looks pretty clear-cut, doesn't it? It's definitely an announcement, and the word \"sciopero\" (strike) is a dead giveaway. So, `isStrike` is true.\n\nNow, let's get the details. The strike date is June 20, 2025. Duration: 24 hours. Given it's a full-day strike, I'll set the `startDate` to 2025-06-20 00:00:00 and the `endDate` to 2025-06-20 23:59:59.\n\nThe announcement mentions \"EAV srl,\" which looks like the operating entity.  EAV operates in the Campania region, code 15. The `locationType` is definitely \"REGIONAL,\" and `locationCodes` is [\"15\"].\n\nFinally, it specifies guaranteed service times, \"05:30-08:30\" and \"16:30-19:30.\" These get stored as is in `guaranteedTimes`. So, to recap:\n`isStrike`: true\n`startDate`: 2025-06-20 00:00:00\n`endDate`: 2025-06-20 23:59:59\n`locationType`: \"REGIONAL\"\n`locationCodes`: [\"15\"]\n`guaranteedTimes`: [\"05:30-08:30\", \"16:30-19:30\"]\n\n\n",
+    "tokens": {
+      "input": 1212,
+      "output": 140,
+      "total": 1700
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-28 08:20:00",
+      "endDate": "2025-01-28 12:20:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6449,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.001952,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.000861,
+      "cachedCost": 0,
+      "totalCost": 0.0029615
+    },
+    "hash": "6a9453cd975c94ddebedb86ad26bc1d7",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_4_ore_martedi_28_gennaio_2025.html",
+    "thoughts": "**Strike Announcement Analysis**\n\nOkay, let's analyze this EAV web page concerning a potential strike. The task is straightforward: determine if this is a strike announcement and, if so, extract the relevant data in JSON format. The core rule is `isStrike` should be true if it's an announcement, and then the structure for strike data.\n\nThe initial information is clear: \"Linee Suburbane: Avviso di sciopero di 4 ore, martedi 28 gennaio 2025\" and \"martedì 28 gennaio 2025 ... hanno proclamato uno sciopero aziendale di 4 ore, dalle ore 08:20 alle ore 12:20\" – definitely a strike announcement. `isStrike` is undeniably true.\n\nNow to populate the `strikeData` object.  The dates are explicit:  `startDate` is 2025-01-28 08:20:00, and `endDate` is 2025-01-28 12:20:00. The text mentions that EAV operates in Campania (Region 15), so `locationType` is \"REGIONAL\" and `locationCodes` is [\"15\"].\n\nThe tricky part is `guaranteedTimes`. The text mentions \"Ultime partenze prima dello sciopero\" with times (06:21/07:47) and \"Prime partenze dopo lo sciopero\" (13:02/13:13). The prompt specifies \"Time ranges during which service is guaranteed.\" I'm not seeing that format in the text. Let's look again: \"Di seguito vengono elencate le ultime e le prime partenze garantite in relazione alle diverse fasce di garanzia.\" Okay, so the text refers to *guaranteed departures*, not time ranges. This is a crucial distinction. Since I am unable to identify time ranges for *guaranteed services* in the format explicitly requested, I must omit `guaranteedTimes` from the output.\n\nTherefore, the final output will reflect these deductions.\n\n\n",
+    "tokens": {
+      "input": 7808,
+      "output": 99,
+      "total": 8481
+    }
+  }
+}

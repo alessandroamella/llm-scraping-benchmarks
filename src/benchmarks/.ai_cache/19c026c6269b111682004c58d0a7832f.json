@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5380,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0009403,
+      "outputCost": 0.0001824,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0011227
+    },
+    "hash": "19c026c6269b111682004c58d0a7832f",
+    "sourceFile": "sciopero_trasporto_pubblico_attive_linee_della_metropolitana.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to output JSON according to the strike_extraction schema. The document is long and has the title about a public transport strike, saying metro lines are active. The body mentions an ongoing strike of 24 hours with services still running on the metro network, plus real-time updates. Since the page is dated in January 2024 and it's referencing an ongoing strike, it’s clear this isn't an announcement for a future strike. So, isStrike should be false.",
+    "tokens": {
+      "input": 18806,
+      "output": 456,
+      "total": 19262
+    }
+  }
+}

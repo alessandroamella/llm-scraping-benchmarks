@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-10 19:32:00",
+      "endDate": "2025-01-10 23:32:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19253,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000068,
+      "outputCost": 0.0005832,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0006512
+    },
+    "hash": "5db913c6f5df6ef615cfb38468c73ac6",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_4_ore_10_gennaio_2025.html",
+    "thoughts": "**Deciding on strike details**\n\nI need to determine if the document is announcing a new or upcoming strike. It clearly states a national strike is planned for January 10, 2025, from 19:32 to 23:32, proclaimed by O.S. CONF.A.I.L. It looks like this is indeed an announcement for a future strike, so I can set isStrike to true. The date format required for startDate and endDate is \"yyyy-MM-dd HH:mm:ss,\" and the locationType should be \"NATIONAL\" with locationCodes set explicitly to null.",
+    "tokens": {
+      "input": 1360,
+      "output": 1458,
+      "total": 2818
+    }
+  }
+}

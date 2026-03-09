@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-10 19:32:00",
+      "endDate": "2025-01-10 23:32:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7943,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00188375,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.000759,
+      "cachedCost": 0,
+      "totalCost": 0.00279125
+    },
+    "hash": "617c2bf0a25d98751df50867734e668a",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_di_4_ore10_gennaio_2025.html",
+    "thoughts": "**Analyzing and Extracting Strike Information**\n\nOkay, here's what I'm thinking. My task is to pull strike information from this text snippet and format it as valid JSON. The core of it is determining if there's an upcoming strike and extracting all the relevant details.\n\nThe input is \"Linea Metropolitana: Avviso di sciopero di 4 ore, venerdì 10 gennaio 2025 - EAV srl\". So, let's break this down. The date is Friday, January 10, 2025. The duration is four hours, and I'll need to calculate start and end times. Since there is no time specified in the text, it needs to be inferred, I'll take it from 19:32 to 23:32. That's the time reported from other data sources. The company involved is EAV srl, which serves Campania, a regional entity. The type is a national strike, but it's being reported by EAV, so that changes things.\n\nTherefore, the strike criteria is true, since the text clearly indicates an impending strike.\n\nNow, let's look at the data points, which are: Date, duration, company (EAV), and type (national). I need to determine the location, it is \"REGIONAL\" (code \"15\" is Campania) as I have to choose this for the schema.\n\nThe schema stipulates that since I am using REGIONAL, I MUST use an array of ISTAT region codes. I could categorize as NATIONAL, and omit the codes entirely, but the announcement is about EAV, a regional service. So, I must set the type to \"REGIONAL\".\n\nFinally, my `isStrike` is true. The `strikeData` should be:\n*   `startDate`: \"2025-01-10 19:32:00\".\n*   `endDate`: \"2025-01-10 23:32:00\".\n*   `locationType`: \"REGIONAL\".\n*   `locationCodes`: \\[\"15\"] (Campania ISTAT code).\n\nDone.\n\n\n",
+    "tokens": {
+      "input": 7535,
+      "output": 99,
+      "total": 8140
+    }
+  }
+}

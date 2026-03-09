@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-24 10:00:00",
+      "endDate": "2025-11-24 14:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6942,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.003476,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.001029,
+      "cachedCost": 0,
+      "totalCost": 0.004628
+    },
+    "hash": "f80180cb7fdb13fe9e0a48e37eddf1f9",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-11-24-sciopero-24-novembre-personale.html",
+    "thoughts": "**Analyzing the RFI Strike Announcement**\n\nOkay, let's break this down. My task is clear: I need to determine if this document announces a strike and, if so, extract the relevant data in valid JSON format. The input is HTML content from RFI regarding a strike on November 24th, and I need to adhere strictly to the provided JSON schema. No comments, no extraneous text – pure, clean JSON.\n\nThe document's heading, \"SCIOPERO 24 NOVEMBRE PERSONALE DELLE SOCIETÀ DI MANOVRA FERROVIARIA,\" immediately signals a strike. The effective date is stated as \"24 NOVEMBRE 2025,\" and the time is given as \"Dalle ore 10:00 alle ore 14:00 di lunedì 24 Novembre.\" Perfect – everything's lining up. This is a clear announcement.\n\nNow for the data extraction.  I need to populate `isStrike`, and the `strikeData` object with `startDate`, `endDate`, `locationType`, and potentially `locationCodes` and `guaranteedTimes`.\n\n`isStrike` is definitely `true` based on the heading and context.\n\nThe `startDate` is clearly 2025-11-24 10:00:00, and the `endDate` is 2025-11-24 14:00:00. Those are straightforward.\n\nThe tricky part is the `locationType`. The text specifies \"personale delle società di manovra ferroviaria.\"  It's not explicitly regional, but these types of national maneuvering strikes generally affect the entire network. The prompt specifies that if it's general (and therefore national), locationCodes should be omitted. Therefore, I will set `locationType` to \"NATIONAL\" and leave `locationCodes` out entirely as per the prompt instructions.\n\n`guaranteedTimes` are not mentioned, so that field won't be in the result.\n\nNow, let's assemble the JSON:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-11-24 10:00:00\",\n    \"endDate\": \"2025-11-24 14:00:00\",\n    \"locationType\": \"NATIONAL\"\n  }\n}\n```\n\nOkay, let's run a check: Is this parseable JSON? Yes. Are there any comments? No. Does it have a valid structure? Yes. Is `isStrike` set correctly? Absolutely. The data values and format meet the schema requirements as well.  Done. I'm satisfied.\n\n\n",
+    "tokens": {
+      "input": 13904,
+      "output": 82,
+      "total": 14672
+    }
+  }
+}

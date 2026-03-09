@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-24 00:00:00",
+      "endDate": "2025-02-24 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21306,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00036785,
+      "outputCost": 0.0007068,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00107465
+    },
+    "hash": "65c1c377c22872669d0d12647e5a9992",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_24_h_lunedi_24_febbraio_2025.html",
+    "thoughts": "**Processing strike announcement**\n\nI need to produce JSON according to the strike extraction format. The document indicates an upcoming strike: \"Linee Vesuviane: Avviso di sciopero di 24 h lunedì 24 febbraio 2025.\" It's clearly stating a 24-hour strike on February 24, announced on February 19, so I have to set `isStrike` to true.\n\nNow, I should extract the relevant `strikeData` like `startDate`, `endDate`, `locationType`, `locationCodes`, and `guaranteedTimes`, ensuring everything is formatted correctly in the specified 'yyyy-MM-dd HH:mm:ss' format. For the guaranteed times, I need to figure out where those come from.",
+    "tokens": {
+      "input": 7357,
+      "output": 1767,
+      "total": 9124
+    }
+  }
+}

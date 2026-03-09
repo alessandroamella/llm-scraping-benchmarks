@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-07-23 09:00:00",
+      "endDate": "2025-07-23 11:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 25201,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00053875,
+      "outputCost": 0.001044,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00158275
+    },
+    "hash": "e761efdf4f155307b4c605930dc71fa7",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_2_ore_mercoledi_23_luglio_2025.html",
+    "thoughts": "**Extracting strike data**\n\nIt looks like `isStrike` should be true, so I'll extract the relevant fields. For `startDate`, it should be formatted as \"2025-07-23 09:00:00\" and `endDate` as \"2025-07-23 11:00:00\", covering the hours from 09:00 to 11:00.\n\nFor `locationType`, it could be either REGIONAL or NATIONAL. The mention of \"Linee Suburbane\" falls under a specific title, but the text indicates it's a company-wide strike for EAV S.r.l. Thus, I'm leaning towards marking `locationType` as REGIONAL, although it's somewhat ambiguous.",
+    "tokens": {
+      "input": 10775,
+      "output": 2610,
+      "total": 13385
+    }
+  }
+}

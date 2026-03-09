@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-10 19:32:00",
+      "endDate": "2025-01-10 23:32:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 17093,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006405,
+      "outputCost": 0.000566,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00063005
+    },
+    "hash": "daf85984da54ccb13a17a599f3fb3219",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_di_4_ore_giorno_10_gennaio_2025.html",
+    "thoughts": "**Considering guaranteed departure times**\n\nIt looks like I need to address the \"ULTIME PARTENZE GARANTITE PRIMA DELLO SCIOPERO,\" which lists individual departure times before a strike. The \"guaranteedTimes\" field is supposed to have time ranges, but the content lists single times instead. I’m wondering if it would be appropriate to set \"guaranteedTimes\" to null or provide ranges. Since the instruction implies arrays of \"HH:mm-HH:mm,\" it might be best to omit it if it's not specified.",
+    "tokens": {
+      "input": 1281,
+      "output": 1415,
+      "total": 2696
+    }
+  }
+}

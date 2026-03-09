@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6357,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000568,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0004185,
+      "cachedCost": 0,
+      "totalCost": 0.0010015
+    },
+    "hash": "8d6e94428869498a505697ed02fbaeff",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-10-8-linee-della-sardegna--treni-gar.html",
+    "thoughts": "**Analyzing Strike Information from the Document**\n\nOkay, let's break this down. The task is clear: I need to determine if the provided text indicates an *upcoming* strike. There are a couple of crucial constraints here: `isStrike` should be `true` ONLY if it's an announcement of an *impending* strike. If the document describes procedures or policies related to strikes, or what happens *during* a strike, then `isStrike` is `false`.\n\nThe document I'm given is titled \"LINEE DELLA SARDEGNA: TRENI GARANTITI NEI GIORNI FERIALI IN CASO DI SCIOPERO,\" which immediately suggests it's related to guaranteed services *during* a strike, not a strike announcement itself. Upon analysis, it becomes clear that the document explains which trains will be guaranteed on lines in Sardinia, effective from October 8, 2025, to December 13, 2025.\n\nThe key phrase is \"Treni garantiti nei giorni feriali in caso di sciopero\" (Guaranteed trains on weekdays in case of a strike). While it does specify a timeframe, this timeframe is the period in which the service guarantee is applicable, not the date of a specific strike. It's a general reference document outlining service levels during *potential* future strike actions. This isn't a declaration of a particular strike event. Therefore, the logical conclusion, given the constraints and the document's content, is that `isStrike` should be `false`. The document is informing, not announcing.\n\n\n",
+    "tokens": {
+      "input": 2272,
+      "output": 10,
+      "total": 2561
+    }
+  }
+}

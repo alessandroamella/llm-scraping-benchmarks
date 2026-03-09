@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-05 03:00:00",
+      "endDate": "2025-02-06 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6797,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.002378,
+      "outputCost": 0.000189,
+      "thinkingCost": 0.0009195,
+      "cachedCost": 0,
+      "totalCost": 0.0034865
+    },
+    "hash": "71d6172b3c060f6277e2ccf339e15026",
+    "sourceFile": "strike-detail-mercoled--5-febbraio-sciopero-dei-treni-regionali.html",
+    "thoughts": "**Strike Analysis: Trenord - Lombardy**\n\nOkay, let's process this Trenord data. My goal here is to determine if this is a strike announcement and, if so, extract the crucial details. The source is Trenord, and the region code is \"03,\" which confirms it’s Lombardy. Looking at the content, the title \"Mercoledì 5 febbraio sciopero dei treni regionali\" immediately signals a strike. The text confirms the strike's duration: From 3:00 on Wednesday, February 5th, to 2:00 on Thursday, February 6th. The trade union ORSA is responsible for this.\n\nKey information: I've extracted `isStrike` as true, along with the precise `startDate`: \"2025-02-05 03:00:00\" and `endDate`: \"2025-02-06 02:00:00\". The `locationType` is definitely \"REGIONAL,\" and its corresponding `locationCodes` is the expected [\"03\"] for Lombardy.\n\nFurthermore, there are guaranteed service times, as anticipated, detailed here in the data as `guaranteedTimes`: [\"06:00-09:00\", \"18:00-21:00\"].\n\nI've validated that the data structure meets the constraints; `isStrike` is correctly a boolean, `strikeData` is an object, and the date/time formats are as expected, using the pattern yyyy-MM-dd HH:mm:ss. The location type aligns with the provided code list. Therefore, all constraints are met. This information is now ready for downstream consumption.\n\n\n",
+    "tokens": {
+      "input": 9512,
+      "output": 126,
+      "total": 10251
+    }
+  }
+}

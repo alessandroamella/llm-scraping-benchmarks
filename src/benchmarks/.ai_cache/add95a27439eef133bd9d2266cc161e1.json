@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 11068,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00093285,
+      "outputCost": 0.00015,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00108285
+    },
+    "hash": "add95a27439eef133bd9d2266cc161e1",
+    "sourceFile": "sciopero_generale_nazionale_adesione_personale_atac_23.html",
+    "thoughts": "**Analyzing strike data**\n\nI need to output JSON in the strike extraction format, including the `isStrike` boolean and possibly `strikeData` if true. The content is about a national general strike, specifically Atac's participation at 23%. The press release states that the participation rate was observed in the morning and confirms it pertains to a strike that has already occurred. Since it's a notification about past participation, `isStrike` should be false, as it is not for an upcoming strike.",
+    "tokens": {
+      "input": 18657,
+      "output": 375,
+      "total": 19032
+    }
+  }
+}

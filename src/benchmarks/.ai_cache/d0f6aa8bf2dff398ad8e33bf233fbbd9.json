@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5300,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00033275,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.000723,
+      "cachedCost": 0,
+      "totalCost": 0.00124025
+    },
+    "hash": "d0f6aa8bf2dff398ad8e33bf233fbbd9",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_24_ore_di_venerdi_28_novembre_2025.html",
+    "thoughts": "**Analyzing the EAV Strike Announcement for Data Extraction**\n\nOkay, so I've got this announcement about a strike by EAV on November 28, 2025. It's a \"sciopero generale nazionale,\" a national general strike, which is the key piece of information. This isn't just a regional affair; it's *national*. The prompt requires a JSON object with `isStrike` set to `true` and the strike details. Let's break down the details for this thing...\n\nThe start date is simple, November 28, 2025, since it's a 24-hour strike, I'll assume it starts at midnight (00:00:00) of that day and runs until 23:59:59 of the same day.  That's how these 24-hour strikes typically work. They specified guaranteed bands of service: 05:30 to 08:30 and 16:30 to 19:30. Good to know. And because it is national, the `locationType` should be \"NATIONAL\" and, as the instructions say, I must omit any location codes.\n\nSo, here's what I've got:\n\n*   `isStrike`: true\n*   `startDate`: \"2025-11-28 00:00:00\"\n*   `endDate`: \"2025-11-28 23:59:59\"\n*   `locationType`: \"NATIONAL\"\n*   `guaranteedTimes`: [\"05:30-08:30\", \"16:30-19:30\"]\n\nAll seems right. Ready to format this into the proper JSON output.\n\n\n",
+    "tokens": {
+      "input": 1331,
+      "output": 123,
+      "total": 1936
+    }
+  }
+}

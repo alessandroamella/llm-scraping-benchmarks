@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-12-14 09:00:00",
+      "endDate": "2023-12-14 17:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 10767,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00138,
+      "outputCost": 0.0001395,
+      "thinkingCost": 0.000876,
+      "cachedCost": 0,
+      "totalCost": 0.0023955
+    },
+    "hash": "96084828ab33a421349b7417673d09f4",
+    "sourceFile": "strike-detail-gioved--14-dicembre-dalle-ore-9-alle-ore-17-sciope.html",
+    "thoughts": "**Analyzing the Train Strike Announcement**\n\nOkay, let's break this down. The task is to interpret this text – \"Giovedì 14 dicembre dalle ore 9 alle ore 17 sciopero dei treni regionali\" and \"martedì 12/12/2023\" – and extract the relevant information into a JSON object based on the provided schema. The goal is to determine if this is a strike announcement, and if so, when and where. The primary constraint is that `isStrike` is only true for *upcoming* strikes.\n\nFirst, I need to check if this is, in fact, an announcement of an *upcoming* strike. Yes, the text is announcing a future strike. The date mentioned is Thursday, December 14th, 2023, based on the text \"Giovedì 14 dicembre\". The other text, \"martedì 12/12/2023\" seems to be irrelevant.\n\nNext, I extract the date and time. The text explicitly states \"dalle ore 9 alle ore 17\" so the strike runs from 9 AM to 5 PM on the 14th of December. Therefore, the strike will take place on 2023-12-14, starting at 09:00:00 and ending at 17:00:00, formatted as \"yyyy-MM-dd HH:mm:ss\", which matches the prescribed format.\n\nThe text specifies \"sciopero dei treni regionali\", so the `locationType` is clearly \"REGIONAL\". It is important to note that the text also mentions \"Trenord\", which means the strike is in Lombardia (\"03\").\n\nNow, let's construct the JSON object. Based on the information gathered, I'll set `isStrike` to `true` because it is an announcement of an upcoming strike.  Then, within a `strikeData` object, I'll populate the other fields:\n\n*   `startDate`: \"2023-12-14 09:00:00\"\n*   `endDate`: \"2023-12-14 17:00:00\"\n*   `locationType`: \"REGIONAL\"\n*   `locationCodes`: \\[\"03\"]\n\nFinally, I need to verify that all the extracted data meets the given constraints. The date and time format matches the regex requirement (`\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}`). \"REGIONAL\" is a valid location type, and \"03\" is a valid location code for Lombardia. The data is all correct and the output format is JSON only. I can generate the JSON output now.\n\n\n",
+    "tokens": {
+      "input": 5520,
+      "output": 93,
+      "total": 6197
+    }
+  }
+}

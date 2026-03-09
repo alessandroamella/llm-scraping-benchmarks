@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6787,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0001875,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.000867,
+      "cachedCost": 0,
+      "totalCost": 0.001239
+    },
+    "hash": "af6c7134a97f255d51fe030eba0c72a0",
+    "sourceFile": "linee_automobilistiche_avviso_di_sciopero_generale_di_24h_per_venerdi_12_dicembre_2025.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, so I've got an announcement about a national strike on December 12, 2025. My primary goal here is to determine if it is indeed a strike and, if so, extract specific data about it – the start and end dates, the location type, the location codes (if applicable), and any guaranteed service times. The output *must* be in JSON format, adhering to strict data type and format constraints. No comments, no markdown except for the JSON.\n\nFirst, is it a strike? Yes, the announcement explicitly states it's a \"national general strike\" – that's a clear indicator. So, `isStrike` is `true`.\n\nNow for the `strikeData`. The start date is December 12, 2025. Given it's a 24-hour strike, I'll set the `startDate` to \"2025-12-12 00:00:00\" and the `endDate` to \"2025-12-12 23:59:59\". These adhere to the 'yyyy-MM-dd HH:mm:ss' format.\n\nThe announcement indicates a \"national general strike\" – so the `locationType` is definitely \"NATIONAL\". That means, as per the instructions, the `locationCodes` field *must* be omitted entirely.\n\nFinally, regarding guaranteed times, the announcement mentions \"05:30-08:30\" and \"16:30-19:30\". These seem to fit the required \"HH:mm-HH:mm\" format, so I'll include them as an array: `[\"05:30-08:30\", \"16:30-19:30\"]`.\n\nI've carefully checked all the constraints: the date format, the `locationCodes` omission based on the `locationType`, and the `guaranteedTimes` format. Everything checks out.\n\n\n",
+    "tokens": {
+      "input": 750,
+      "output": 123,
+      "total": 1451
+    }
+  }
+}

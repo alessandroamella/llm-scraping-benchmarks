@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 27710,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003476,
+      "outputCost": 0.0007016,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0010492
+    },
+    "hash": "10c0838c234f3a4d24be3ad0910075a7",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_generale_di_24h_per_venerdi_12_dicembre_2025.html",
+    "thoughts": "**Outputting JSON for strike announcement**\n\nI need to format the information about the general strike into JSON per the provided schema. The document in Italian from EAV srl announces a strike on December 12, 2025. The key details include the date—December 7, 2025—along with confirmation of the strike, which affects both public and private sectors, and mentions guaranteed service times from 5:30 AM to 8:30 AM and 4:30 PM to 7:30 PM. This is a clear announcement about a future strike!",
+    "tokens": {
+      "input": 6952,
+      "output": 1754,
+      "total": 8706
+    }
+  }
+}

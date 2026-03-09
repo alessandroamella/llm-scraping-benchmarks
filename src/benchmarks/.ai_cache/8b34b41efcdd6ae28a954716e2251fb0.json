@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-20 00:00:00",
+      "endDate": "2025-06-20 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 11012,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00249275,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.00123,
+      "cachedCost": 0,
+      "totalCost": 0.00393275
+    },
+    "hash": "8b34b41efcdd6ae28a954716e2251fb0",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_24h_giorno_venerdi_20_giugno_2025.html",
+    "thoughts": "**Strike Announcement Analysis: EAV Campania (15)**\n\nOkay, let's break this down. My task is to analyze this EAV (Campania, district 15) strike announcement and determine if it represents an *upcoming* strike. The core criteria are pretty straightforward: an upcoming strike warrants `isStrike = true`, while cancellations, post-event reports, or real-time updates indicate `isStrike = false`.\n\nI'm given the announcement from EAV. The title is \"Servizio autolinee - Avviso di sciopero 24h giorno venerdì 20 giugno 2025 - EAV srl\" – immediately, \"Avviso di sciopero\" screams \"upcoming strike.\" Let's dive deeper. The content confirms this; it explicitly states that the USB has \"proclamato azione di sciopero.\" The date is Friday, June 20, 2025, and it's a 24-hour strike. EAV operates in Campania (district code 15), so that's the \"REGIONAL\" location context I'm expecting.\n\nNow, the crucial details: I need to extract `startDate`, `endDate`, `locationType`, `locationCodes`, and `guaranteedTimes`. Based on the input, I'll assume that the 24-hour strike starting on June 20, 2025 means the `startDate` is \"2025-06-20 00:00:00\" and the `endDate` is \"2025-06-20 23:59:59\". The strike is regional, so the `locationType` will be \"REGIONAL,\" and the `locationCodes` is just [\"15\"]. The content mentions \"dalle ore 05:30 alle ore 8:30 e dalle ore 16:30 alle ore 19:30\" as guaranteed times; therefore, `guaranteedTimes` should be [\"05:30-08:30\", \"16:30-19:30\"].\n\nSo, confidently, `isStrike` is `true`. Let's package up the extracted data:\n`strikeData`:\n*   `startDate`: \"2025-06-20 00:00:00\"\n*   `endDate`: \"2025-06-20 23:59:59\"\n*   `locationType`: \"REGIONAL\"\n*   `locationCodes`: [\"15\"]\n*   `guaranteedTimes`: [\"05:30-08:30\", \"16:30-19:30\"]\n\nJust a final check on formatting, no comments in my JSON, everything is double-quoted, correct data structure, all good. We're done.\n\n\n",
+    "tokens": {
+      "input": 9971,
+      "output": 140,
+      "total": 10931
+    }
+  }
+}

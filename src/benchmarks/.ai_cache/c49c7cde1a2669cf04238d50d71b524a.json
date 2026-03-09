@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5874,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0026255,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000393,
+      "cachedCost": 0,
+      "totalCost": 0.0030335
+    },
+    "hash": "c49c7cde1a2669cf04238d50d71b524a",
+    "sourceFile": "sciopero_generale_nazionale_adesione_personale_atac_23.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, my primary task here is to determine if this content from \"Roma Servizi per la Mobilità\" signals a *new* or *upcoming* strike. I'm operating under specific conditions: `isStrike` is `true` only if it's an announcement *of* an upcoming strike. If it's anything else – cancellation, revocation, reporting on past participation, or real-time info about a strike that's underway or already finished – then `isStrike` is `false`.\n\nThe input is a web page from \"Roma Servizi per la Mobilità\" titled \"Sciopero generale nazionale, adesione personale Atac al 23%.\" The critical sentence is, \"L’adesione del personale Atac allo sciopero generale nazionale, rilevata in mattinata, è stata pari al 23%.\"\n\nNow, let's dissect this. \"Rilevata in mattinata\" – this is key. It means the adherence was *observed* or *measured* \"in the morning.\" The document is reporting on the *percentage of adherence*, 23%, to a strike. The publication date of 02/12/2022, with an update on 25/01/2023, further suggests this is *not* an advance notice. The fact that they are reporting *adherence* is a critical indication that this is a report on events *after* they took place.\n\nTherefore, given that it's a post-strike reporting page, and not a pre-strike announcement, I'm setting `isStrike` to `false`.\n\n\n",
+    "tokens": {
+      "input": 10502,
+      "output": 10,
+      "total": 10774
+    }
+  }
+}

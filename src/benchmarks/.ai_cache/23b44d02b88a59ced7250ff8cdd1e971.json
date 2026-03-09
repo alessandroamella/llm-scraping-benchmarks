@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7306,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005155,
+      "outputCost": 0.000124,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00017555
+    },
+    "hash": "23b44d02b88a59ced7250ff8cdd1e971",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_195.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to check whether the document is announcing a new or upcoming strike. The content discusses a public transport strike regarding Atac personnel, with a participation rate of 19.5%. It mentions this information was recorded mid-morning, meaning the strike has already occurred. Since it’s not announcing a future strike, I’ll mark `isStrike` as false. The final output should just be: `{\"isStrike\": false}` without any extra commentary.",
+    "tokens": {
+      "input": 1031,
+      "output": 310,
+      "total": 1341
+    }
+  }
+}

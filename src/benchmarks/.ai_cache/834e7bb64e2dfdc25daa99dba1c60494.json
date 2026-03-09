@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-16 09:00:00",
+      "endDate": "2025-11-16 18:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6066,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00025425,
+      "outputCost": 0.0001395,
+      "thinkingCost": 0.00066,
+      "cachedCost": 0,
+      "totalCost": 0.00105375
+    },
+    "hash": "834e7bb64e2dfdc25daa99dba1c60494",
+    "sourceFile": "strike-detail-domenica-16-novembre-dalle-ore-10-alle-ore-18-scio.html",
+    "thoughts": "**Strike Analysis: Trenord - Lombardia**\n\nOkay, let's break this down. My task is to identify and extract key information from this text regarding a potential strike announcement. The input is news about a strike impacting Trenord, specifically in Lombardia. It's happening on Sunday, November 16, 2025.\n\nFirst, the key takeaway: **isStrike: true**. Confirmed, it's a strike. Next, I need the details. The strike starts at 09:00 and ends at 18:00 on that Sunday, November 16th, 2025. That gives us **startDate: \"2025-11-16 09:00:00\"** and **endDate: \"2025-11-16 18:00:00\"**.\n\nNow, for location. The text clearly indicates this is a regional strike affecting Lombardia. Since Lombardia's region code is \"03\" that means **locationType: \"REGIONAL\"** and **locationCodes: [\"03\"]**.\n\nFinally, I need to address the \"guaranteed times\". The text mentions some trains will run *before* 10:00, but the typical guaranteed bands are, generally, 6-9/18-21. The prompt requires the information to be in the \"HH:mm-HH:mm\" format. Although the text has some implications, it doesn't explicitly state the classic time bands required, so I'll need to omit this as it doesn't align with the format. So, no **guaranteedTimes** field is needed.\n\n\n",
+    "tokens": {
+      "input": 1017,
+      "output": 93,
+      "total": 1550
+    }
+  }
+}

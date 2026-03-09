@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4597,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00262625,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0004515,
+      "cachedCost": 0,
+      "totalCost": 0.00309275
+    },
+    "hash": "d4147dc1fb15fe6f099cadf061657d0b",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_132.html",
+    "thoughts": "**Strike Information Analysis: Roma Servizi per la Mobilità**\n\nOkay, let's break this down. My objective is to determine if this content from \"Roma Servizi per la Mobilità\" signals an *upcoming* strike. I know my criteria: past strikes, stats, cancellations, or real-time status updates are not \"upcoming strike\" information. *Only* an announcement of a future strike gets the `isStrike = true` flag.\n\nAlright, the input is a web page, and the title immediately catches my eye: \"Sciopero del trasporto pubblico, adesione personale Atac al 13,2%.\" Translation: \"Public transport strike, 13.2% Atac staff adherence.\" Seems relevant, let's dig deeper.\n\nI'm now going to analyze the content. The body of the page states: \"L’adesione del personale Atac allo sciopero del trasporto pubblico di questa matttina è stata pari al 13,2%.\" That translates to \"The adherence of Atac staff to this morning's public transport strike was 13.2%.\" \"Questa mattina\" - \"this morning\" is key. That's *past* tense, a past event.\n\nI also see publication and update dates. Published: 17/06/2022, Updated: 25/01/2023. These dates aren't crucial here, but I always take them into account.\n\nSo, taking all of this into consideration, this *clearly* reports on the *participation rate* of a strike that has *already* taken place. \"This morning\" is the dead giveaway. Thus, `isStrike` is definitely `false`. This is a report, not a warning.\n\n\n",
+    "tokens": {
+      "input": 10505,
+      "output": 10,
+      "total": 10816
+    }
+  }
+}

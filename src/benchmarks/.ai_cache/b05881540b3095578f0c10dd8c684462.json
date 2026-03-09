@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:01:00",
+      "endDate": "2025-12-12 21:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5613,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000227,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.000378,
+      "cachedCost": 0,
+      "totalCost": 0.0007895
+    },
+    "hash": "b05881540b3095578f0c10dd8c684462",
+    "sourceFile": "ttper_2025-12-12_00-01.pdf",
+    "thoughts": "**Analyzing the Railway Strike Announcement**\n\nOkay, so I've got this announcement about a national strike affecting FS Group, Trenitalia, Trenitalia Tper, and Trenord. Immediately, my brain kicks into gear: *Friday, December 12th, 2025. National strike, from 00:01 to 21:00*.  Essentially, it's a full-day disruption, but with guaranteed services during peak hours.\n\nLet's break this down further. The *isStrike* flag needs to be set to true, obviously. Then, I need to extract the start and end dates and times for the strike which I've got as \"2025-12-12 00:01:00\" and \"2025-12-12 21:00:00\" respectively. The term \"SCIOPERO NAZIONALE\" confirms this is a *NATIONAL* strike, so the *locationType* should be set to \"NATIONAL\", and I'll omit the *locationCodes* as that's correct for a national event.\n\nFinally, the guaranteed services window. These are the key times: 06:00-09:00 and 18:00-21:00. This data needs to be stored as the *guaranteedTimes* field so the system can use it appropriately. Essentially, this data confirms service guarantees within those windows, even amidst the strike.\n\n\n",
+    "tokens": {
+      "input": 908,
+      "output": 123,
+      "total": 1283
+    }
+  }
+}

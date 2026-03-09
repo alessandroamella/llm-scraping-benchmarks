@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7786,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00094155,
+      "outputCost": 0.0001668,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00110835
+    },
+    "hash": "06625b5a5669708d938af4662b39272c",
+    "sourceFile": "sciopero_24_febbraio2025_stato_del_servizio.html",
+    "thoughts": "**Clarifying strike status**\n\nI’m working on determining the strike status. It seems that `isStrike` should be false based on the page's title and ongoing content. They actually instruct to set `isStrike` to false for ongoing updates. So, my final output will be a JSON object stating `{\"isStrike\": false}`. I’ll keep the formatting exact and won’t add any extra text. Additionally, no need for \"strike details\" since `isStrike` is false.",
+    "tokens": {
+      "input": 18831,
+      "output": 417,
+      "total": 19248
+    }
+  }
+}

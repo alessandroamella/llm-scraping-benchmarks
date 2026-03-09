@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-03 00:00:00",
+      "endDate": "2025-10-03 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20263,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000891,
+      "outputCost": 0.0005424,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0006315
+    },
+    "hash": "914a9b27d4839f20872dba425c49806c",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_generale_nazionale_di_24_ore_venerdi_03_ottobre_2025.html",
+    "thoughts": "**Setting strike details**\n\nI’m looking at the 24-hour strike and the guaranteed service times from 05:30-08:30 and 16:30-19:30. The strike runs the entire day, so I need to format the start date as 2025-10-03 00:00:00 and the end date as 2025-10-03 23:59:59. For this national strike, the location type should be \"NATIONAL,\" which means the location codes should be explicitly set to null in the JSON. So, I’ll ensure \"locationCodes\": null is included.",
+    "tokens": {
+      "input": 1782,
+      "output": 1356,
+      "total": 3138
+    }
+  }
+}

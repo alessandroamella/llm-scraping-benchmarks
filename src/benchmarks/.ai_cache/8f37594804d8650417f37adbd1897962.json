@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-20 00:00:00",
+      "endDate": "2025-06-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 30268,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005215,
+      "outputCost": 0.0005408,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0010623
+    },
+    "hash": "8f37594804d8650417f37adbd1897962",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_24h_giorno_venerdi_20_giugno_2025.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to output JSON based on the specified schema. The document indicates an upcoming 24-hour strike for June 20, 2025, announced by USB. It includes the date of June 15, 2025, and specifies that the strike is in support of a national 24-hour strike with reasons provided. It also lists guaranteed service times, so I confirm that this is indeed an upcoming strike announcement. I’ll extract the necessary strike data elements now.",
+    "tokens": {
+      "input": 10430,
+      "output": 1352,
+      "total": 11782
+    }
+  }
+}

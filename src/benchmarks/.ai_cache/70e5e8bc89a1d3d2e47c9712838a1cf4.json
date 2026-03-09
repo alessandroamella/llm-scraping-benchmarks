@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7196,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000555,
+      "outputCost": 0.0001288,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0001843
+    },
+    "hash": "70e5e8bc89a1d3d2e47c9712838a1cf4",
+    "sourceFile": "sciopero_generale_aperte_metro_a_e_b_la_situazione_sulla_rete_romana.html",
+    "thoughts": "**Evaluating strike status**\n\nI need to determine the output format for a strike extraction in JSON. The content is about an ongoing general strike that affects public transport and was updated on March 10, 2025. It clearly states that the strike is happening now, so I should set `isStrike` to false since this is real-time information, not an announcement for an upcoming strike. Therefore, the output will be: `{\"isStrike\": false}`.",
+    "tokens": {
+      "input": 1110,
+      "output": 322,
+      "total": 1432
+    }
+  }
+}

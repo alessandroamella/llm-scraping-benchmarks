@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-24 00:00:00",
+      "endDate": "2025-02-24 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8111,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0002475,
+      "outputCost": 0.0001395,
+      "thinkingCost": 0.0011355,
+      "cachedCost": 0,
+      "totalCost": 0.0015225
+    },
+    "hash": "78359aaa38f23a6479c9fe028b359314",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_24h_lunedi_24_febbraio_2025.html",
+    "thoughts": "**Strike Announcement Analysis for EAV in Campania (Region 15)**\n\nOkay, here's the deal. I need to analyze this text and determine if it's a strike announcement, specifically targeting EAV services within the Campania region (that's region code 15, I remember). The core logic is pretty straightforward: if it's a strike, I need to flag `isStrike` as `true` and then provide the strike details in a JSON format. Otherwise, `isStrike` will be `false`, and I can move on.\n\nThe task is to convert the announcement: \"Per il giorno 24 febbraio 2025 la O.S. USB ha proclamato azione di sciopero... di 24 ore\" into JSON.\n\nThe key requirements are: the dates need to follow the yyyy-MM-dd HH:mm:ss format, the `locationType` should be \"REGIONAL\" given that we're dealing with a specific transport company within the region, and `locationCodes` must be [\"15\"]. The text gives the \"strike\" announcement is for Feb 24, 2025, which translates to a start date of \"2025-02-24 00:00:00\" and an end date of \"2025-02-24 23:59:59\".\n\nThe part that gives me a pause is the \"guaranteedTimes\" element. The instructions explicitly ask for time *ranges* during which service is guaranteed, formatted like \"HH:mm-HH:mm\". The provided text lists specific departure times from various stations (e.g., \"da Cancello per Piedimonte 06:03\"), but not *ranges*. So, I’m going to have to make a call here. I can't construct proper ranges, and the data format requires ranges. Since there's no explicitly defined guaranteed time ranges in the correct format, I'll omit the `guaranteedTimes` field altogether.\n\nTherefore, the JSON output, based on the strike information, should look something like this, using the \"AnyOf\" object as instructed:\n\n*   `isStrike`: `true`\n*   `strikeData`:\n    *   `startDate`: \"2025-02-24 00:00:00\"\n    *   `endDate`: \"2025-02-24 23:59:59\"\n    *   `locationType`: \"REGIONAL\"\n    *   `locationCodes`: [\"15\"]\n\nI believe that's an accurate translation of the strike information, formatted as requested.\n\n\n",
+    "tokens": {
+      "input": 990,
+      "output": 93,
+      "total": 1840
+    }
+  }
+}

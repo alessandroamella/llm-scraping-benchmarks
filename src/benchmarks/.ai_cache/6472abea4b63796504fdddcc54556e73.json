@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3727,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000146,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000255,
+      "cachedCost": 0,
+      "totalCost": 0.000416
+    },
+    "hash": "6472abea4b63796504fdddcc54556e73",
+    "sourceFile": "sciopero_nazionale_adesione_personale_atac_al_237.html",
+    "thoughts": "**Analyzing the Atac Strike Data**\n\nOkay, let's break this down. The input content clearly states, \"…di oggi\" – \"of today\" – and \"...è stata del 23,7%\" – \"...was 23.7%\". The language immediately tells me this is *retrospective* data. It's reporting on participation in a strike that has already concluded, not an announcement of a future event. My objective was to determine if this was an announcement of an upcoming strike. The constraint explicitly states that if the content is reporting *participation* of a past event, then `isStrike` must be `false`. Therefore, I've got to set the `isStrike` flag to `false`. Simple deduction. It's just a report on the *adesione* (participation) percentage, nothing more.\n\n\n",
+    "tokens": {
+      "input": 584,
+      "output": 10,
+      "total": 764
+    }
+  }
+}

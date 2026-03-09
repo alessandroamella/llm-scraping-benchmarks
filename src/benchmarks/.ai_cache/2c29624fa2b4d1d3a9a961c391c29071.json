@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7977,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005505,
+      "outputCost": 0.0001056,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00016065
+    },
+    "hash": "2c29624fa2b4d1d3a9a961c391c29071",
+    "sourceFile": "strike-detail-venerd--29-novembre-revocato-sciopero-ferrovienord.html",
+    "thoughts": "**Analyzing strike information**\n\nI need to output JSON based on the instructions concerning a strike that was planned for November 29 but has now been canceled. The text indicates that the strike has been revoked, which means there's no upcoming strike. Therefore, I'll set \"isStrike\" to false. It's essential to make sure my output matches the exact expected format, so it will be: {\"isStrike\": false}. I’ll ensure there’s no extra information in the final output.",
+    "tokens": {
+      "input": 1101,
+      "output": 264,
+      "total": 1365
+    }
+  }
+}

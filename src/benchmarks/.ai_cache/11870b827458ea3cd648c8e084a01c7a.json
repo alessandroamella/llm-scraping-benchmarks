@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-24 00:00:00",
+      "endDate": "2025-02-24 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9648,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00280525,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.0012555,
+      "cachedCost": 0,
+      "totalCost": 0.00427075
+    },
+    "hash": "11870b827458ea3cd648c8e084a01c7a",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_24_h_lunedi_24_febbraio_2025.html",
+    "thoughts": "**Strike Detection and Data Structuring**\n\nOkay, let's break this down. My objective is clear: determine if this HTML content indicates a strike, specifically concerning EAV (Ente Autonomo Volturno) in Campania. The content itself seems straightforward. The title, \"Linee Vesuviane: Avviso di sciopero di 24 h lunedì 24 febbraio 2025,\" is the key.  \"Sciopero\" is the Italian word for strike, and the date is explicitly stated.  The publication date is helpful for context but less critical than the strike announcement itself.\n\nNow, let's extract and structure the relevant information.  The strike is on February 24, 2025, and it's a 24-hour national strike declared by USB.  This will influence the data representation. The guaranteed service hours are crucial: \"05:30 alle ore 8:30 e dalle ore 16:30 alle ore 19:30\".  That gives me the `guaranteedTimes`. The geographical scope is Campania, coded as \"15,\" and I can categorize this as \"REGIONAL.\" The strike is localized to this specific entity, so the `locationType` of `REGIONAL` is appropriate.\n\nI need to create a JSON representation. The schema requires `isStrike` (boolean), which will be `true` here.  The `strikeData` object needs `startDate`, `endDate`, `locationType`, `locationCodes`, and `guaranteedTimes`. `startDate` is \"2025-02-24 00:00:00\" and `endDate` is \"2025-02-24 23:59:59\".  The `locationType` is \"REGIONAL,\" and `locationCodes` is [\"15\"]. `guaranteedTimes` becomes [\"05:30-08:30\", \"16:30-19:30\"].\n\nI must adhere to the formatting guidelines strictly. Dates and times are crucial and must conform. Double-checking all these fields against the schema and requirements is key. The instruction explicitly states \"Do not include any extra text outside of the JSON string,\" but also that I should return a single parseable JSON array for the single strike detected. Given the `anyOf` schema, I will check the strike data object and return it directly. Thus, my output must be this:\n\n```json\n{\n    \"isStrike\": true,\n    \"strikeData\": {\n        \"startDate\": \"2025-02-24 00:00:00\",\n        \"endDate\": \"2025-02-24 23:59:59\",\n        \"locationType\": \"REGIONAL\",\n        \"locationCodes\": [\"15\"],\n        \"guaranteedTimes\": [\"05:30-08:30\", \"16:30-19:30\"]\n    }\n}\n```\n\n\n",
+    "tokens": {
+      "input": 11221,
+      "output": 140,
+      "total": 12198
+    }
+  }
+}

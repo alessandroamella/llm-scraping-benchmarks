@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-05-11 00:00:00",
+      "endDate": "2025-05-11 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19836,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000695,
+      "outputCost": 0.0006172,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0006867
+    },
+    "hash": "aa33b31a275a1430a4e734dabfb466c8",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_24h_domenica_11_maggio_2025.html",
+    "thoughts": "**Extracting strike details**\n\nI need to output in JSON format according to the strike_extraction schema. The document indicates an upcoming strike, specifically a 24-hour strike on May 11, 2025. Since today is March 9, 2026, this qualifies as an upcoming announcement. I see that the strike starts at midnight and ends at 11:59 PM on that date. So, I'll set startDate as 2025-05-11 00:00:00 and endDate as 2025-05-11 23:59:59.",
+    "tokens": {
+      "input": 1390,
+      "output": 1543,
+      "total": 2933
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-01-12 03:00:00",
+      "endDate": "2026-01-13 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "08",
+        "07",
+        "03",
+        "01",
+        "05"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4386,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00350925,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.0004785,
+      "cachedCost": 0,
+      "totalCost": 0.00417225
+    },
+    "hash": "51ef692a50c699457eb76dd1bf0e68a2",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2026-1-12-sciopero-del-personale-di-treno.html",
+    "thoughts": "**Strike Analysis: Lombardia Railway**\n\nOkay, let's see. I'm looking at a web page announcing a railway strike in Lombardia, specifically titled \"SCIOPERO REGIONALE DEL TRASPORTO FERROVIARIO - REGIONE LOMBARDIA\". Straightforward enough. This looks like an official announcement.\n\nRight, so the strike is scheduled to run from \"Dalle ore 03:00 di lunedì 12 gennaio alle ore 02:00 di martedì 13 gennaio 2026.\" I need to translate that into a usable format, so the start date is 2026-01-12 03:00:00, and the end date is 2026-01-13 02:00:00. Makes sense, that's a pretty standard timeframe for these things.\n\nThe region affected is described as \"Emilia Romagna, LIGURIA, LOMBARDIA, PIEMONTE, VENETO.\" This confirms the strike's regional nature. Now, I need to translate that into codes. Emilia-Romagna is 08, Liguria is 07, Lombardia is 03 (that's the one I started with), Piemonte is 01, and Veneto is 05. I'll flag this as \"REGIONAL\" in terms of location type.\n\nI don't see anything mentioned about guaranteed services during the strike. That's good, I can just omit that field entirely. This is all relatively clear-cut.\n\n\n",
+    "tokens": {
+      "input": 14037,
+      "output": 123,
+      "total": 14479
+    }
+  }
+}

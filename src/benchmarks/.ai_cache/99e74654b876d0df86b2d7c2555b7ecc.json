@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-12 00:00:00",
+      "endDate": "2025-11-12 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21264,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00009015,
+      "outputCost": 0.0006708,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00076095
+    },
+    "hash": "99e74654b876d0df86b2d7c2555b7ecc",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_aziendale_di_24_h_di_mercoledi_12_11_2025.html",
+    "thoughts": "**Determining strike announcement details**\n\nI need to format this JSON document according to the schema, and I think it’s clear this is announcing an upcoming strike. The content is in Italian and mentions a 24-hour company strike on November 12, 2025, caused by organizational issues affecting Vesuviane lines. I’m guessing that we need to set isStrike to true and include various details like start and end dates in the specified format, which I believe should be: startDate as 2025-11-12 00:00:00 and endDate as 2025-11-12 23:59:59.",
+    "tokens": {
+      "input": 1803,
+      "output": 1677,
+      "total": 3480
+    }
+  }
+}

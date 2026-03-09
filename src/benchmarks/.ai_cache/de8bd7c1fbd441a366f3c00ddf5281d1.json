@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-10 19:32:00",
+      "endDate": "2025-01-10 23:32:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7130,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00256,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.00072,
+      "cachedCost": 0,
+      "totalCost": 0.003403
+    },
+    "hash": "de8bd7c1fbd441a366f3c00ddf5281d1",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_4_ore_10_gennaio_2025.html",
+    "thoughts": "**Strike Announcement Analysis and JSON Output**\n\nOkay, let's break this down. My task is clear: I need to analyze this text and produce a single, parseable JSON object that follows the specified schema. The target company is EAV in the Campania region (code 15).\n\nThe title gives it away: it's a strike announcement, specifically for the \"Linee Suburbane.\" The announcement itself explicitly states a strike is planned for January 10, 2025. I've got the date, that's 2025-01-10. The strike window is four hours, from 19:32 to 23:32.\n\nThe key here is the phrase \"sciopero nazionale\" – \"national strike\". EAV is in Campania, but the scope is national. The instructions explicitly state that if `locationType` is \"NATIONAL,\" then I *must* omit the `locationCodes` field completely. That's crucial.\n\nNow, let's assemble the JSON object. `isStrike` is obviously `true`. The `strikeData` object needs to contain the `startDate` and `endDate`, both in the format `yyyy-MM-dd HH:mm:ss`, which I've got: \"2025-01-10 19:32:00\" and \"2025-01-10 23:32:00\" respectively. The `locationType` is definitively \"NATIONAL\". I'll be sure to omit `locationCodes` as the instruction said to do.\n\nLooks like everything is covered. This should be a straightforward JSON output, no comments or control tokens needed. The data is all clean and ready to go. The boolean is correct, the dates and format are all good. Okay, let's build the output.\n\n\n",
+    "tokens": {
+      "input": 10240,
+      "output": 82,
+      "total": 10802
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8605,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0004825,
+      "outputCost": 0.0001988,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0006813
+    },
+    "hash": "37b2de818372c1209f71d461864952d0",
+    "sourceFile": "sciopero_del_trasporto_pubblico_attive_le_metropolitane_e_la_termini_centocelle.html",
+    "thoughts": "**Processing strike updates**\n\nI’m focusing on ongoing strike updates, so it looks like isStrike should be false. I need to ensure I’m outputting in the required JSON format. The provided example shows what the output should look like if there’s no strike, which is {\"isStrike\": false}. The instruction mentions that the strike is ongoing, so I’ll structure the output as required, delivering it within the \"strike_extraction\" object. My response will be: {\"isStrike\": false}.",
+    "tokens": {
+      "input": 9650,
+      "output": 497,
+      "total": 10147
+    }
+  }
+}

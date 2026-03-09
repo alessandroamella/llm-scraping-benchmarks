@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-10-09 00:00:00",
+      "endDate": "2023-10-09 23:59:59",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7049,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0001565,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.0008955,
+      "cachedCost": 0,
+      "totalCost": 0.001175
+    },
+    "hash": "f0c884fa0542d04de1691b2d3ddda9c3",
+    "sourceFile": "venerdi_trasporto_pubblico_regolarmente_servizio_sciopero_nazionale_usb_rinviato_9_ottobre.html",
+    "thoughts": "**Strike Analysis: October 9th National Strike**\n\nOkay, let's break this down. First, the input text, \"Venerdi trasporto pubblico regolarmente in servizio. Sciopero nazionale Usb rinviato al 9 ottobre,\" seems like a mixed bag. My goal here is to identify if there's a strike and extract the relevant details.\n\nThe initial phrase, \"Venerdi trasporto pubblico regolarmente in servizio,\" indicates that the public transport is running as usual on Friday. This immediately sets off alarm bells about cancellations or postponements. Then comes the key phrase: \"Sciopero nazionale Usb rinviato al 9 ottobre\" - the USB national strike is postponed to October 9th. Aha!\n\nMy checklist kicks in. Is this an upcoming strike? Definitely. It provides a specific, *new* date. I re-read the sentence. It confirms the postponement from Friday and announces the October 9th strike with a 24-hour duration. It's an announcement of a new strike, not a cancellation, even if the Friday strike *was* cancelled.\n\nSo, let's extract the strike details. Date is 2023-10-09, assuming it starts at 00:00:00 and goes until 23:59:59. The location is \"nazionale,\" which translates to NATIONAL. No mention of guaranteed services or location codes, so I omit those.\n\nI'm verifying that this is a valid *announcement* of an *upcoming* strike. Yes, it's a report about a *new* strike. Now I'll format the output in JSON. Given the text, I'm confident I can return the strike data.\n\nBut hold on, the Friday headline... that gave me pause. It does say that public transport is running on Friday. The prompt explicitly says to set `isStrike` to false if it's a strike cancellation. However, this isn't a *cancellation*; it's a *new* strike announcement. The October 9th strike is the one I need to focus on. So, my final JSON should reflect the upcoming strike.\n\nTherefore, this is what I conclude:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2023-10-09 00:00:00\",\n    \"endDate\": \"2023-10-09 23:59:59\",\n    \"locationType\": \"NATIONAL\"\n  }\n}\n```\n\n\n",
+    "tokens": {
+      "input": 626,
+      "output": 82,
+      "total": 1305
+    }
+  }
+}

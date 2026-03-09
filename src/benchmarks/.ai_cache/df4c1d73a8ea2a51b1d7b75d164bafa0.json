@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 10904,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000514,
+      "outputCost": 0.0001488,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002002
+    },
+    "hash": "df4c1d73a8ea2a51b1d7b75d164bafa0",
+    "sourceFile": "comunicato_stampa_sciopero_trasporto_pubblico.html",
+    "thoughts": "**Interpreting strike information**\n\nI need to determine if this document is announcing a new or upcoming strike. The title mentions \"Sciopero del trasporto pubblico\" and indicates participation by Atac staff is at 53.2%. Since it specifies a measurement taken in the morning of an already occurred event, this information is definitely about participation in a past strike, not a future one. Therefore, following the rules, I’ll set isStrike to false and produce the JSON output: {\"isStrike\": false}.",
+    "tokens": {
+      "input": 1028,
+      "output": 372,
+      "total": 1400
+    }
+  }
+}

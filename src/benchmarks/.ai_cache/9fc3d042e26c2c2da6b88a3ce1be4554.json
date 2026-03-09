@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-01-09 21:00:00",
+      "endDate": "2026-01-10 23:59:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "04",
+        "05"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7817,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.003588,
+      "outputCost": 0.0001455,
+      "thinkingCost": 0.0013635,
+      "cachedCost": 0.00019203,
+      "totalCost": 0.00528903
+    },
+    "hash": "9fc3d042e26c2c2da6b88a3ce1be4554",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2026-1-9-sciopero-del-personale-di-sad---.html",
+    "thoughts": "**Analyzing Strike Information for JSON Output**\n\nOkay, here's the breakdown. My task is to extract strike information from this HTML and format it as a parseable JSON array. The key is to determine if it *is* a strike (`isStrike` = true in the schema if it is an announcement of an upcoming strike) and represent that appropriately. Date and time formats must be 'yyyy-MM-dd HH:mm:ss', location types are either NATIONAL or REGIONAL (with ISTAT 2-digit codes for the latter), and, importantly, the final output must be a *valid* JSON array, with no extra text, comments, or control tokens.\n\nThe headline gives us a clear indication: \"SCIOPERO DEL PERSONALE...\" – that's a strike, no doubt. The dates are January 9-10, 2026. The regions involved are Trentino-Alto Adige and Veneto. Looking at the two strike descriptions, it's clear there are *two* distinct strike periods from different operators (SAD and Trentino Trasporti). That complicates things a bit, but the prompt's instruction is clear: a *single* JSON array. Let's see what the schema says. Ah, the schema allows *either* a single object or a single array of objects, so this will work.\n\nNow, let's nail down the start and end times. Strike 1 is from 21:00 on January 9th to 20:59 on January 10th. Strike 2 is from 00:01 to 23:59 on January 10th. Combining these, the overall strike period is from January 9th at 21:00 to January 10th at 23:59. Trentino-Alto Adige has the ISTAT code 04, and Veneto is 05.\n\nSo, I can now define the elements. I'm going to set `isStrike` to `true`. My `startDate` is \"2026-01-09 21:00:00\", my `endDate` is \"2026-01-10 23:59:00\". The `locationType` is \"REGIONAL\", and the `locationCodes` are [\"04\", \"05\"]. Guaranteed times are not specified.\n\nThe final output has to be valid JSON, so double quotes are essential, and there must be no extra characters. The content of the HTML is consistent with that of an upcoming strike, dates are in the correct format, and the regions are correct.\n\nThis is the JSON I'll generate:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2026-01-09 21:00:00\",\n    \"endDate\": \"2026-01-10 23:59:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"04\", \"05\"]\n  }\n}\n```\n\n\n",
+    "tokens": {
+      "input": 14352,
+      "output": 97,
+      "total": 15358
+    }
+  }
+}

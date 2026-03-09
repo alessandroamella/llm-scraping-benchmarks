@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-07-23 09:00:00",
+      "endDate": "2025-07-23 11:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21057,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007635,
+      "outputCost": 0.0004852,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00056155
+    },
+    "hash": "3c612e0d774c20a34935c04711396b4c",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_di_2_ore_giorno_23_luglio_2025.html",
+    "thoughts": "**Formatting strike announcement**\n\nI need to output JSON following the \"strike_extraction\" schema and determine if this document is announcing an upcoming strike. The content indicates there’s a national strike for 2 hours on July 23, 2025, from 09:00 to 11:00, proclaimed by O.S. CONF.AIL. So, isStrike should be true. I’ll extract the details with startDate and endDate in the correct format. The locationType is \"NATIONAL\" based on the term \"nazionale,\" and since it’s national, locationCodes will be null.",
+    "tokens": {
+      "input": 1527,
+      "output": 1213,
+      "total": 2740
+    }
+  }
+}

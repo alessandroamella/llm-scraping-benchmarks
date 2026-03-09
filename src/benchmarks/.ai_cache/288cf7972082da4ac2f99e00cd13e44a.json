@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21139,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005805,
+      "outputCost": 0.0005412,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00059925
+    },
+    "hash": "288cf7972082da4ac2f99e00cd13e44a",
+    "sourceFile": "linee_automobilistiche_avviso_di_sciopero_generale_di_24h_per_venerdi_12_dicembre_2025.html",
+    "thoughts": "**Determining strike data**\n\nI need to output JSON according to the spec and decide if \"isStrike\" should be true or false based on the content. The announcement details an upcoming general strike for 24 hours on December 12, 2025, specified by the union CGIL. It provides guaranteed service times and warns about potential service disruptions. Since this confirms a strike is indeed happening, I'll set \"isStrike\" to true. Now I’ll extract the relevant details for the JSON.",
+    "tokens": {
+      "input": 1161,
+      "output": 1353,
+      "total": 2514
+    }
+  }
+}

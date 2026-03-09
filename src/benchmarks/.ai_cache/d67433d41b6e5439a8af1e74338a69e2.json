@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "04",
+        "05"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 23121,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00053375,
+      "outputCost": 0.0005952,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00112895
+    },
+    "hash": "d67433d41b6e5439a8af1e74338a69e2",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-11-28-sciopero-del-personale-di-sad-.html",
+    "thoughts": "**Extracting strike data**\n\nI need to output JSON according to the strike_extraction schema, determining if the document is announcing a strike. The title indicates it’s about a strike on November 28, 2025, from 00:00 to 23:59. Yes, this is indeed an announcement — so I’ll set isStrike to true. Then I'll extract the start and end dates to the 'yyyy-MM-dd HH:mm:ss' format, using the provided times. The content is in both Italian and German.",
+    "tokens": {
+      "input": 10675,
+      "output": 1488,
+      "total": 12163
+    }
+  }
+}

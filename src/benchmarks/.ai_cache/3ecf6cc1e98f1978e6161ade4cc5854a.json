@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-12 00:00:00",
+      "endDate": "2025-11-12 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19853,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000587,
+      "outputCost": 0.0006872,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0012742
+    },
+    "hash": "3ecf6cc1e98f1978e6161ade4cc5854a",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_aziendale_di_24_h_di_mercoledi_12_11_2025.html",
+    "thoughts": "**Clarifying ISTAT and service times**\n\nI found that the ISTAT code for Campania is \"15.\" Looking into the regional codes, it lists “15” as Campania, which is confirmed by the content “EAV srl.” As for guaranteed service times, the article mentions something like \"5:30 AM to 8:30 AM and 4:30 PM to 7:30 PM,\" so that's “05:30-08:30” and “16:30-19:30.” I also need to ensure strike details objects include all required fields, using null for any missing values.",
+    "tokens": {
+      "input": 11740,
+      "output": 1718,
+      "total": 13458
+    }
+  }
+}

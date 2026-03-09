@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-07-18 09:00:00",
+      "endDate": "2024-07-18 13:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 25503,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008715,
+      "outputCost": 0.0007468,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00083395
+    },
+    "hash": "202d00d85aed62583416b2690bc47c8e",
+    "sourceFile": "strike-detail-gioved--18-luglio-dalle-9-alle-13-sciopero-del-per.html",
+    "thoughts": "**Extracting strike announcement details**\n\nI need to format the output in JSON according to the strike_extraction schema. The document is about an upcoming strike on July 18, 2024, from 9 AM to 1 PM. It mentions possible cancellations and changes due to the strike by FERROVIENORD personnel, so I will set isStrike to true as it's an announcement. I'll extract the necessary strikeData like startDate, endDate, locationType, and locationCodes in the correct date format.",
+    "tokens": {
+      "input": 1743,
+      "output": 1867,
+      "total": 3610
+    }
+  }
+}

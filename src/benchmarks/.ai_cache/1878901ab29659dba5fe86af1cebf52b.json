@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-01-08 09:01:00",
+      "endDate": "2026-01-08 17:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "07"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8132,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0034895,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.000741,
+      "cachedCost": 0,
+      "totalCost": 0.004379
+    },
+    "hash": "1878901ab29659dba5fe86af1cebf52b",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2026-1-8-sciopero-del-personale-mobile-in.html",
+    "thoughts": "**Strike Information Extraction: My Analysis**\n\nOkay, here's what I've got. The task is pretty straightforward: I need to pull strike information from this HTML content and format it into a specific JSON object. The schema is clear: `isStrike`, and if true, the strike details: `startDate`, `endDate`, `locationType`, `locationCodes`, and `guaranteedTimes`.\n\nLet's break down the information presented. The headline, \"SCIOPERO DEL PERSONALE MOBILE INTERCITY DI GENOVA DI TRENITALIA,\" is a big clue. The phrase *sciopero* clearly means strike. The content confirms this: \"Dalle ore 9:01 alle ore 17:00 di giovedì 8 gennaio 2026 è stato indetto uno sciopero...\" - which translates to \"From 9:01 to 17:00 on Thursday, January 8, 2026, a strike has been called...\".\n\nThe crucial dates and times are there: January 8, 2026, starting at 09:01 and ending at 17:00. The text also explicitly mentions \"personale mobile di Trenitalia della Direzione Operation Intercity di Genova,\" which suggests this is about Trenitalia employees in Genoa. The region is named explicitly as LIGURIA, and I know that corresponds to the ISTAT code \"07.\"\n\nBased on all of this, the JSON output is quite clear:\n\n*   `isStrike`: true.\n*   `strikeData`:\n    *   `startDate`: \"2026-01-08 09:01:00\"\n    *   `endDate`: \"2026-01-08 17:00:00\"\n    *   `locationType`: \"REGIONAL\" (since it's tied to Genoa/Liguria, rather than nationwide)\n    *   `locationCodes`: \\[\"07\"]\n    *   `guaranteedTimes`: The prompt specified that this should be omitted if not explicitly stated, which is the case here.\n\nSo, in essence, I've extracted the core strike information (date, time, region, and implicitly, the involved personnel, along with the correct schema, and have accounted for the prompt guidance on implied data to create the most accurate JSON output possible.\n\n\n",
+    "tokens": {
+      "input": 13958,
+      "output": 99,
+      "total": 14551
+    }
+  }
+}

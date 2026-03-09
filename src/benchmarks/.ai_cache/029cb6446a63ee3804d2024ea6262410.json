@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-03-19 09:00:00",
+      "endDate": "2025-03-19 17:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 25897,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00028375,
+      "outputCost": 0.0011288,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00141255
+    },
+    "hash": "029cb6446a63ee3804d2024ea6262410",
+    "sourceFile": "strike-detail-mercoled--19-marzo-dalle-ore-9-alle-ore-17-scioper.html",
+    "thoughts": "**Clarifying date and time formats**\n\nI need to ensure locationCodes should be null, not an array. For the date and time fields, I’ll set \"startDate\" to 2025-03-19 09:00:00 and \"endDate\" to 2025-03-19 17:00:00. The description mentions trains departing before 10:00, but I should ignore that detail. Also, while there’s a mention of possible variations, it doesn’t specify guaranteed times. If I include \"guaranteedTimes,\" I might use \"09:00-10:00\" based on the context, but I’ll keep it as null if necessary.",
+    "tokens": {
+      "input": 5675,
+      "output": 2822,
+      "total": 8497
+    }
+  }
+}

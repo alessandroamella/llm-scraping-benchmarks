@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7697,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005105,
+      "outputCost": 0.0001268,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00017785
+    },
+    "hash": "10b4a6017e0d42b9f0682313d10bd4d6",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_154.html",
+    "thoughts": "**Determining strike status**\n\nI'm looking at the document to decide if it's announcing a new or upcoming strike. The content mentions a strike involving Atac, with a staff participation rate of 15.4%. Since this is about current participation and not an upcoming strike announcement, I’ll set \"isStrike\" to false. \n\nSo, I’ll output {\"isStrike\": false}.\n\nI’ll also ensure that the formatting matches what’s required and take into account if it involves cancellation or real-time updates.",
+    "tokens": {
+      "input": 1021,
+      "output": 317,
+      "total": 1338
+    }
+  }
+}

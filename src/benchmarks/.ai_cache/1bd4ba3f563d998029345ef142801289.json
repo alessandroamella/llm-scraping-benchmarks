@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-09-22 00:00:00",
+      "endDate": "2025-09-22 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 42100,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005552,
+      "outputCost": 0.0009708,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.001526
+    },
+    "hash": "1bd4ba3f563d998029345ef142801289",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_di_24h_giorno_22_settembre_2025.html",
+    "thoughts": "**Considering strike date parameters**\n\nThe strike likely starts at midnight on September 22 and lasts 24 hours. However, there’s confusion about the guarantee window timings. It mentions \"23 ore per il personale,\" suggesting 23 hours for public sector and 24 hours for the full day. So, I should set the start date to \"2025-09-22 00:00:00\" and the end date to \"2025-09-22 23:59:59.\" The event is a \"sciopero generale nazionale,\" so the location type should be \"NATIONAL.\"",
+    "tokens": {
+      "input": 11104,
+      "output": 2427,
+      "total": 13531
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 15240,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00093735,
+      "outputCost": 0.000234,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00117135
+    },
+    "hash": "504d26d68189aae35eb769514038614d",
+    "sourceFile": "comunicato_stampa_sciopero_trasporto_pubblico.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to check if the document is announcing an upcoming strike, but it seems like it's actually reporting on one that has already happened. The content is in Italian and mentions a participation rate of 53.2% for personnel. Since the main title and details indicate this relates to a past event, I’m concluding that it’s not about an upcoming strike. Therefore, I'll output {\"isStrike\": false}.",
+    "tokens": {
+      "input": 18747,
+      "output": 585,
+      "total": 19332
+    }
+  }
+}

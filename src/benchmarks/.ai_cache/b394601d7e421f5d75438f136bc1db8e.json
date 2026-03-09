@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-13 08:30:00",
+      "endDate": "2025-10-13 12:30:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7180,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0003505,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.0009375,
+      "cachedCost": 0,
+      "totalCost": 0.0014365
+    },
+    "hash": "b394601d7e421f5d75438f136bc1db8e",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_4_ore_del_13_ottobre_2025.html",
+    "thoughts": "**Analyzing the EAV Strike Announcement**\n\nOkay, let's break this down. I've got an announcement from EAV concerning a strike on the Linee Vesuviane, specifically in the Campania region, code-numbered 15. The immediate goal is to confirm if it's a strike and pull out the relevant details.\n\nFirst, the simple part: `isStrike` is definitely `true`. It's explicitly stated. Next, `strikeData`. I need to extract the date, time, and location. The strike's start time will be at 08:30 on October 13, 2025, and it will end at 12:30 on the same day. I'll represent this as `startDate` and `endDate`. The `locationType` is clearly \"REGIONAL\", and the `locationCodes` is \"15\".\n\nNow, the trickier part: the guaranteed service. The announcement mentions \"ultime partenze garantite\" and \"prime partenze garantite\", suggesting some level of service will continue. However, the prompt specifically asks for \"Time ranges during which service is guaranteed (e.g., \\\"06:00-09:00\\\")\". The text describes guaranteed trains, but doesn't define any *specific time ranges* in the format requested. My understanding is these notices usually outline *ranges* within which service is guaranteed, but this one lists trains instead. So, while it implies guaranteed service, it doesn't meet the format requirement. Therefore, I will have to exclude the `guaranteedTimes` key to avoid any misinterpretation.\n\n\n",
+    "tokens": {
+      "input": 1402,
+      "output": 99,
+      "total": 2126
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3328,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00014625,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0002535,
+      "cachedCost": 0,
+      "totalCost": 0.00041475
+    },
+    "hash": "de3433a1345360bcc37612d8593a34fc",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_112.html",
+    "thoughts": "**Analyzing the Strike Data**\n\nOkay, here's what I've got. The input content is, in essence, a report on the strike participation rate within Atac this morning. It's a simple percentage: 11.2%. My immediate goal is to figure out whether this is an *announcement* of a *future* strike, or a *report* on a strike that's *already happened*. The wording, specifically \"adesione personale...di questa mattina,\" suggests this is about participation (\"adesione\") in an event that is *in the past* (\"di questa mattina\"). Based on this, it is not an announcement, I can confidently set my `isStrike` flag to false. Therefore, this is a report of participation in a completed strike, not a heads-up about one to come. The 'isStrike' flag is false.\n\n\n",
+    "tokens": {
+      "input": 585,
+      "output": 10,
+      "total": 764
+    }
+  }
+}

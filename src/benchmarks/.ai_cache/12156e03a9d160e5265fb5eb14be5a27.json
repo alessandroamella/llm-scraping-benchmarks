@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5974,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00255275,
+      "outputCost": 0.000189,
+      "thinkingCost": 0.0009045,
+      "cachedCost": 0,
+      "totalCost": 0.00364625
+    },
+    "hash": "12156e03a9d160e5265fb5eb14be5a27",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_24h_venerdi_28_novembre_2025.html",
+    "thoughts": "**Strike Analysis: EAV (Ente Autonomo Volturno) - November 28, 2025**\n\nOkay, let's break this down. The task is to analyze EAV's web page content and pull out the relevant strike information, specifically focusing on a 24-hour strike on November 28, 2025. The output must be a well-formatted JSON object (or an array of JSON objects; single is the request, of course).\n\nThe title immediately tells me the subject: a strike alert from EAV for the metro line on November 28, 2025. Digging into the body text, it confirms a 24-hour national strike declared by USB that affects both railway and bus services. Crucially, the text specifies \"fasce di garanzia,\" or guaranteed service times, which I need to extract. These times are provided: 05:30 to 08:30 and 16:30 to 19:30.\n\nThe date is simple: November 28, 2025, and given it's a 24-hour strike, I can safely assume it covers the entire day. The location is EAV, which indicates that it's a regional strike impacting Campania (ISTAT code 15), as EAV operates there.\n\nNow, to structure the output. I need to generate this strike data in JSON format. The core information to extract and render is as follows:\n\n*   `isStrike`: true - this is a strike event, so this is correct.\n*   `strikeData` object which contains:\n    *   `startDate`: \"2025-11-28 00:00:00\" - the strike starts at midnight, November 28th\n    *   `endDate`: \"2025-11-28 23:59:59\" - it ends just before midnight on November 28th.\n    *   `locationType`: \"REGIONAL\" - EAV covers a region.\n    *   `locationCodes`: [\"15\"] - Campania's ISTAT code.\n    *   `guaranteedTimes`: [\"05:30-08:30\", \"16:30-19:30\"] - the service guarantee times, as arrayed.\n\nI'll double-check that the date/time format is correct (`yyyy-MM-dd HH:mm:ss`), and that location codes and guaranteed times are in arrays. The single JSON will represent the strike event. Perfect.\n\n\n",
+    "tokens": {
+      "input": 10211,
+      "output": 126,
+      "total": 10940
+    }
+  }
+}

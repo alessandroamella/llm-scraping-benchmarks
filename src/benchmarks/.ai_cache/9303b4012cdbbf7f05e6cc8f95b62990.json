@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6198,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0025215,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000291,
+      "cachedCost": 0,
+      "totalCost": 0.0028275
+    },
+    "hash": "9303b4012cdbbf7f05e6cc8f95b62990",
+    "sourceFile": "eav_informa_servizio_automobilistico_integrativo_vico_equense_monte_faito_2.html",
+    "thoughts": "**Analyzing the EAV Strike Announcement**\n\nOkay, let's break down this EAV announcement. My task is to determine if this HTML represents an *actual* strike announcement, and the key is that `isStrike` should be `true` *only* if it signals an upcoming strike. The format I'm working with is JSON, which is straightforward enough.\n\nThe text provided is about EAV, specifically concerning their service between Vico Equense and Monte Faito. The title gives it away: \"EAV Informa – Servizio automobilistico integrativo...\" This is about a *replacement* service. The content confirms this; it's referencing the interruption of the \"Funivia del Faito\" (the cable car) and the implementation of a bus service starting April 28, 2025. It falls under the category \"Trasporto pubblico,\" which is expected.\n\nCrucially, this isn't a strike. It's a logistical change. There is no mention of labor action or disruptions due to workers' protests. Instead, it seems to describe a maintenance issue for a cable car. Therefore, the `isStrike` flag is correctly set to `false`. That's a clear conclusion.\n\n\n",
+    "tokens": {
+      "input": 10086,
+      "output": 10,
+      "total": 10290
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:01:00",
+      "endDate": "2025-12-12 21:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 13008,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000566,
+      "outputCost": 0.0004344,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.000491
+    },
+    "hash": "200f52d4e7bf91f070f6c1504d4e83cf",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-12-12-sciopero-nazionale-del-traspor.html",
+    "thoughts": "**Processing strike data**\n\nI need to ensure that all fields in the strikeData object are present, or set to null if not specified. The fields include startDate, endDate, locationType, locationCodes, and guaranteedTimes. I’ll set guaranteedTimes to null because the information suggests a single time window for the strike on December 12, 2025, from 00:01 to 21:00. The dates need to be formatted correctly as \"yyyy-MM-dd HH:mm:ss\". It looks like this is upcoming, so I’ll set isStrike to true.",
+    "tokens": {
+      "input": 1132,
+      "output": 1086,
+      "total": 2218
+    }
+  }
+}

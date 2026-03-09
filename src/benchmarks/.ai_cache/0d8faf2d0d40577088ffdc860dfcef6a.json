@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4225,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.002626,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0002985,
+      "cachedCost": 0,
+      "totalCost": 0.0029395
+    },
+    "hash": "0d8faf2d0d40577088ffdc860dfcef6a",
+    "sourceFile": "sciopero_generale_nazionale_adesione_del_personale_atac_al_182.html",
+    "thoughts": "**Analyzing Atac Strike Participation Data**\n\nOkay, so I'm looking at this webpage from \"Roma Servizi per la Mobilità.\" The headline immediately grabs my attention: \"Sciopero generale nazionale, adesione del personale Atac al 18,2%.\" Right, so it's about a national strike, and specifically, the participation rate of Atac staff. Now, let's dive into the core content: \"L’adesione complessiva del personale Atac allo sciopero generale nazionale di questa mattina è stata pari al 18,2%.\" Bingo. \"Di questa mattina\" tells me this isn't about *planning* a strike; it's reporting on the *actual* participation – what *happened* this morning. The focus is on the *outcome*, the *level of involvement*.\n\nGiven that, I'm confident in setting `isStrike` to `false`. The key takeaway is the *observed participation rate* after the event, and therefore this content is not describing an *ongoing* or *future* strike.\n\n\n",
+    "tokens": {
+      "input": 10504,
+      "output": 10,
+      "total": 10713
+    }
+  }
+}

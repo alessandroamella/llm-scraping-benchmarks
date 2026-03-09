@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-10 19:32:00",
+      "endDate": "2025-01-10 23:32:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19687,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000628,
+      "outputCost": 0.000626,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0006888
+    },
+    "hash": "29ec572ecf5bb8c1c9b3dda1bee75d9b",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_di_4_ore10_gennaio_2025.html",
+    "thoughts": "**Processing strike extraction data**\n\nI need to output JSON in the specified strike_extraction format. The document announces an upcoming national strike for January 10, 2025, from 19:32 to 23:32. Therefore, I can set isStrike to true. The startDate will be \"2025-01-10 19:32:00\" and endDate will be \"2025-01-10 23:32:00\". The locationType is \"NATIONAL,\" so locationCodes must be null. The description reinforces that it should be explicitly null.",
+    "tokens": {
+      "input": 1256,
+      "output": 1565,
+      "total": 2821
+    }
+  }
+}

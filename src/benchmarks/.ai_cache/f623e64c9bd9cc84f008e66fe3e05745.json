@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:01:00",
+      "endDate": "2025-12-12 21:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 27745,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000674,
+      "outputCost": 0.0007564,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008238
+    },
+    "hash": "f623e64c9bd9cc84f008e66fe3e05745",
+    "sourceFile": "ttper_2025-12-12_00-01.pdf",
+    "thoughts": "**Determining upcoming strike announcement**\n\nI need to extract information in JSON format about an upcoming strike. The document content is in Italian, announcing a national railway strike on Friday, December 12, 2025, from 00:01 to 21:00. It mentions possible cancellations or changes, and essential services will be guaranteed on regional transport from Trenitalia and Trenord during specific hours. This clearly indicates that it's an announcement for an upcoming strike, and I’ll format it accordingly.",
+    "tokens": {
+      "input": 1348,
+      "output": 1891,
+      "total": 3239
+    }
+  }
+}

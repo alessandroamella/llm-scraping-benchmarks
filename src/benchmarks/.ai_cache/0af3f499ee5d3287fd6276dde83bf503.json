@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8392,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00262775,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000462,
+      "cachedCost": 0,
+      "totalCost": 0.00310475
+    },
+    "hash": "0af3f499ee5d3287fd6276dde83bf503",
+    "sourceFile": "comunicato_stampa_sciopero_adesione.html",
+    "thoughts": "**Analyzing the Text for a Strike Announcement**\n\nOkay, let's break this down. My task is to determine if this text constitutes an announcement for an *upcoming* strike. The core criteria are already laid out: if the text describes cancellations, revocations, or post-strike summaries (like participation stats), or provides real-time updates *during* a strike, then `isStrike` is `false`. Conversely, the announcement of an *upcoming* strike would get a `true` value.\n\nThe input text is \"Sciopero del trasporto pubblico, adesione personale Atac al 16,4%\". Hmm, Italian... let's see, the full context, \"L’adesione complessiva del personale Atac – rilevata nel corso della mattinata- allo sciopero nazionale di oggi è stata pari al 16,4%,\" seems to be key.\n\nA quick scan shows \"adesione...allo sciopero nazionale di **oggi** è stata pari...\" The inclusion of \"oggi\" (today) is critical. This whole statement is about *participation* in a strike that has already *happened* \"today\". It's a post-event report. This isn't an *announcement* of a strike; it's a summary of its aftermath.\n\nTherefore, applying the rule: \"If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false,\" I'm confident in setting `isStrike` to `false`.\n\nSo, the JSON response should be: `{ \"isStrike\": false }`. That's that.\n\n\n",
+    "tokens": {
+      "input": 10511,
+      "output": 10,
+      "total": 10829
+    }
+  }
+}

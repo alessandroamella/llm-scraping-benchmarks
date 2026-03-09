@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 16758,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005545,
+      "outputCost": 0.0004036,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00045905
+    },
+    "hash": "b847edb1f15cef03c35052ac523858a4",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_generale_nazionale_di_24_ore_venerdi_28_novembre_2025.html",
+    "thoughts": "**Extracting strike details**\n\nI need to format the JSON for this announcement about an upcoming strike, specifically for the Italian \"Avviso di sciopero generale nazionale di 24 ore\". The date indicates a national 24-hour strike on 28 November 2025, so I set `isStrike` to true. I have to extract details like startDate, endDate, locationType, locationCodes, and guaranteedTimes in the proper 'yyyy-MM-dd HH:mm:ss' format. I think start and end times should reflect 2025-11-28 from 00:00:00 to 23:59:59.",
+    "tokens": {
+      "input": 1109,
+      "output": 1009,
+      "total": 2118
+    }
+  }
+}

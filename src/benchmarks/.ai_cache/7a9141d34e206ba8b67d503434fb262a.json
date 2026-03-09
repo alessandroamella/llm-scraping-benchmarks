@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7234,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00185275,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.0009045,
+      "cachedCost": 0,
+      "totalCost": 0.00294175
+    },
+    "hash": "7a9141d34e206ba8b67d503434fb262a",
+    "sourceFile": "linee_automobilistiche_avviso_di_sciopero_generale_di_24h_per_venerdi_12_dicembre_2025.html",
+    "thoughts": "**My Analysis of the Strike Information**\n\nOkay, here's my assessment. The task is to pull strike data from this notice from EAV srl. The core requirement is a JSON object with `isStrike` (boolean) and, if true, a `strikeData` object with start/end dates, location type, location codes (if regional), and guaranteed times.\n\nBased on the text, it's a strike announcement from \"EAV srl\". The text explicitly mentions \"sciopero nazionale generale di 24 ore\" – a 24-hour general, *national* strike. Even though EAV is a regional entity (Campania), the strike itself is described as *national*.\n\nNow, let's nail down the details: The date is \"12 dicembre 2025.\" Since it's a 24-hour strike, without specific times mentioned, I'm interpreting the strike duration as the entire day. That means a `startDate` of \"2025-12-12 00:00:00\" and an `endDate` of \"2025-12-12 23:59:59\".\n\nThe notice also provides guaranteed service times: \"dalle ore 05:30 alle ore 8:30 e dalle ore 16:30 alle ore 19:30.\" I will put that into `guaranteedTimes` as an array: [\"05:30-08:30\", \"16:30-19:30\"].\n\nThe key bit is the location. The text clearly states \"sciopero nazionale generale.\" The schema specifies that, if the `locationType` is NATIONAL, the `locationCodes` field MUST be omitted.\n\nHold on, the user prompt highlights that EAV is the public transport of Campania (region code 15) and mentions a *possible* strike from them. The strike is indeed affecting a specific regional entity, EAV. However, the text says \"nazionale generale\". While there is a regional component to the strike (it affects EAV), the strike is *itself* being declared as a national one. So, I will categorize this as a \"NATIONAL\" strike.\n\nTherefore, my final JSON object will be:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-12-12 00:00:00\",\n    \"endDate\": \"2025-12-12 23:59:59\",\n    \"locationType\": \"NATIONAL\",\n    \"guaranteedTimes\": [\"05:30-08:30\", \"16:30-19:30\"]\n  }\n}\n```\n\n\n",
+    "tokens": {
+      "input": 7411,
+      "output": 123,
+      "total": 8137
+    }
+  }
+}

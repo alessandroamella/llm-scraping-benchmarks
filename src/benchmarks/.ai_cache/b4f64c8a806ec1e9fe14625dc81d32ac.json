@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-24 00:00:00",
+      "endDate": "2025-02-24 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22662,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00036785,
+      "outputCost": 0.00068,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00104785
+    },
+    "hash": "b4f64c8a806ec1e9fe14625dc81d32ac",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_24h_lunedi_24_febbraio_2025.html",
+    "thoughts": "**Processing strike details**\n\nI need to output JSON based on the specifications provided. The document from EAV srl is announcing an upcoming strike on February 24, 2025. It specifies that the strike will last for 24 hours and includes reasons along with guaranteed service times. I should confirm that `isStrike` is true and populate `strikeData` with the required fields like `startDate`, `endDate`, `locationType`, and `locationCodes`. I’ll ensure the date is in the correct format, and I’ll note the service guarantee times provided.",
+    "tokens": {
+      "input": 7357,
+      "output": 1700,
+      "total": 9057
+    }
+  }
+}

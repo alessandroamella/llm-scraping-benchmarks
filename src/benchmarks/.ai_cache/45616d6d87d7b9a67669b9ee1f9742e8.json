@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18035,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00052935,
+      "outputCost": 0.0006028,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00113215
+    },
+    "hash": "45616d6d87d7b9a67669b9ee1f9742e8",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_di_24_ore_del_13_dicembre_2024_aggiornamento.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to determine if this document is announcing an upcoming strike. The Italian content points to a 24-hour strike set for December 13, 2024. It mentions the acceptance of a request to suspend a previous order, thus reinstating the strike. The date confirms the relevant details, and I need to extract key information such as startDate, endDate, locationType, locationCodes, and guaranteedTimes. It looks like we have a clear announcement of a strike.",
+    "tokens": {
+      "input": 10587,
+      "output": 1507,
+      "total": 12094
+    }
+  }
+}

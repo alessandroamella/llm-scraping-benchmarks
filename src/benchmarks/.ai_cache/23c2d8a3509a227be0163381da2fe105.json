@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-03-22 19:40:00",
+      "endDate": "2025-03-22 23:40:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7875,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0024675,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.0008115,
+      "cachedCost": 0,
+      "totalCost": 0.0034275
+    },
+    "hash": "23c2d8a3509a227be0163381da2fe105",
+    "sourceFile": "autolinee_sciopero_del_22_marzo_2025.html",
+    "thoughts": "**Strike Information Extraction from EAV Announcement**\n\nOkay, let's break this down. My objective is to pull the relevant strike information from this EAV announcement: \"Servizio Autolinee – Avviso di sciopero di 4 ore del 22 marzo 2025.\" Straightforward enough. I've got the text.\n\nFirst, is this actually a strike announcement? Yes, the text explicitly states \"sciopero\" (strike) and \"proclamato\" (proclaimed). Confirmed, it's a strike.\n\nNow for the details. The body text provides a clear start and end: March 22, 2025, from 19:40 to 23:40. Converting that to a more usable format gives me a start date/time of `2025-03-22 19:40:00` and an end date/time of `2025-03-22 23:40:00`.\n\nThe location is EAV, which, as I know, operates in Campania. Region 15, specifically. So, the `locationType` is REGIONAL, and the `locationCodes` is \"15\".\n\nThe text *does* mention guaranteed times (\"Non saranno garantite le corse durante l’orario di sciopero\"), but crucially, it *doesn't* specify any *actual* guaranteed time slots. My initial instinct was to just leave them out (as the text indicated they are not guaranteed during the strike), but the schema for guaranteed times, upon review, clearly states that they are \"Time ranges during which service is guaranteed.\" This means, given that the text specifies no guaranteed times, I will omit the key altogether.\n\nSo here's my processed output:\n\n*   `isStrike`: true\n*   `strikeData`:\n    *   `startDate`: \"2025-03-22 19:40:00\"\n    *   `endDate`: \"2025-03-22 23:40:00\"\n    *   `locationType`: \"REGIONAL\"\n    *   `locationCodes`: [\"15\"]\n\nThat should be the relevant strike information, accurately extracted and formatted.\n\n\n",
+    "tokens": {
+      "input": 9870,
+      "output": 99,
+      "total": 10510
+    }
+  }
+}

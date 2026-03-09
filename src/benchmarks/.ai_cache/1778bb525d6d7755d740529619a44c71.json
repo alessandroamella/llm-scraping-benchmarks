@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8750,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00052615,
+      "outputCost": 0.0001692,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00069535
+    },
+    "hash": "1778bb525d6d7755d740529619a44c71",
+    "sourceFile": "eav_informa_servizio_automobilistico_integrativo_vico_equense_monte_faito_3.html",
+    "thoughts": "**Determining strike announcement status**\n\nI'm evaluating if this document is an announcement regarding a strike. It's a noisy HTML page about a bus service update related to the Faito Funivia. There's a new bus service starting on Monday, April 28, 2025, due to the current interruption of the Funivia. However, although it mentions \"avvisi di sciopero,\" there's no actual strike announced. So, I conclude that this document is about a service update, not a strike; thus, isStrike should be false.",
+    "tokens": {
+      "input": 10523,
+      "output": 423,
+      "total": 10946
+    }
+  }
+}

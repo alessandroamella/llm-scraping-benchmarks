@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8045,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00048005,
+      "outputCost": 0.0001372,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00061725
+    },
+    "hash": "b099e3916f03d3ae392e95990bd85b7f",
+    "sourceFile": "sospeso_sciopero_atac_16_gennaio_servizio_sar_regolare.html",
+    "thoughts": "**Deciding on strike announcement**\n\nI need to create JSON according to the strike_extraction schema. It looks like this document is not announcing a new strike, as it states that the Atac strike on January 16 has been suspended, meaning it’s not happening. The service will remain regular. Since this is a cancellation, not an upcoming strike, I’ll set `isStrike` to false. The output will be: `{\"isStrike\": false}`.",
+    "tokens": {
+      "input": 9601,
+      "output": 343,
+      "total": 9944
+    }
+  }
+}

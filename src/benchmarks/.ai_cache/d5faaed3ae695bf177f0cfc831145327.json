@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22349,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000663,
+      "outputCost": 0.0006928,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0007591
+    },
+    "hash": "d5faaed3ae695bf177f0cfc831145327",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_di_24_ore_del_13_dicembre_2024_aggiornamento.html",
+    "thoughts": "**Extracting strike information**\n\nI need to output JSON following the strike_extraction schema to determine if the document is announcing an upcoming strike. The content is about an Italian strike with a title that indicates a 24-hour notice for December 13, 2024. It communicates that the strike will last for 24 hours due to a recent decision. There are insights about previous participation rates and service guarantees during the strike hours. This is indeed an announcement for an upcoming strike.",
+    "tokens": {
+      "input": 1326,
+      "output": 1732,
+      "total": 3058
+    }
+  }
+}

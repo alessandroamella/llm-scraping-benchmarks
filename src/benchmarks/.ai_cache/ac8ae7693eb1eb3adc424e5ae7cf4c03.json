@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6518,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0027895,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0011475,
+      "cachedCost": 0,
+      "totalCost": 0.003952
+    },
+    "hash": "ac8ae7693eb1eb3adc424e5ae7cf4c03",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_generale_nazionale_di_24_ore_venerdi_03_ottobre_2025.html",
+    "thoughts": "**Strike Announcement Analysis**\n\nOkay, let's break this down. My task is to analyze this text – a strike announcement from \"EAV\" – and output a JSON object adhering to the provided schema. The crucial part here is the `isStrike` field. It needs to be `true` only if the announcement is for an *upcoming* strike. Otherwise, it's `false`. Easy enough, but there are nuances.\n\nFirst, I need to extract relevant information: the start and end dates in `yyyy-MM-dd HH:mm:ss` format, the location type (\"NATIONAL\" or \"REGIONAL\"), location codes (if regional), and any guaranteed service times as an array of \"HH:mm-HH:mm\" strings.\n\nThe text reads \"sciopero generale nazionale di 24 ore venerdì 03 ottobre 2025,\" and \"Linee Vesuviane: Avviso di sciopero generale nazionale di 24 ore venerdì 03 ottobre 2025\". Alright, national strike (\"sciopero generale nazionale\"). A 24-hour strike usually implies starting at midnight and ending at 11:59 pm. The guaranteed times listed are \"05:30-08:30\" and \"16:30-19:30\".\n\nNow, the critical piece. The announcement date is \"03 ottobre 2025\", but my timestamp is 2026-02-26, so it's a past event. I need to ensure that `isStrike` is only set to true if it is an *upcoming* strike. I have to be careful here, even if it's framed as an \"announcement\", the date is in the past! Let's double-check the instruction: \"Only set isStrike to true if it is an announcement of an upcoming strike.\"\n\nSo, even if this is technically an \"announcement,\" the date makes it a record of a *past* event. This *was* an announcement, but it's not announcing an *upcoming* strike anymore. Therefore, `isStrike` should be set to `false`. That's the correct way to handle this.\n\n\n",
+    "tokens": {
+      "input": 11158,
+      "output": 10,
+      "total": 11933
+    }
+  }
+}

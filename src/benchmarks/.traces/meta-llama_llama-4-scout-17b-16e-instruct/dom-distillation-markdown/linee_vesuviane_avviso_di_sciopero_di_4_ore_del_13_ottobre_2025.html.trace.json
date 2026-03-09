@@ -1,15 +1,30 @@
 {
-  "timestamp": "2026-03-09T13:31:31.389Z",
-  "isCacheHit": true,
+  "timestamp": "2026-03-09T14:41:13.676Z",
+  "isCacheHit": false,
   "request": {
     "sourceName": "EAV",
     "fileName": "linee_vesuviane_avviso_di_sciopero_di_4_ore_del_13_ottobre_2025.html",
     "model": "meta-llama/llama-4-scout-17b-16e-instruct",
     "strategy": "dom-distillation-markdown",
-    "useLenientSchema": true,
+    "useLenientSchema": false,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"EAV\" (the public transport company of Campania (15)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: Linee Vesuviane: Avviso di sciopero di 4 ore del 13 ottobre 2025 - EAV srl\n\n* * *\n\n## Linee Vesuviane: Avviso di sciopero di 4 ore del 13 ottobre 2025\n\nData:  \n**10 Ottobre 2025**\n\nSi comunica che per lunedì 13 ottobre 2025 le O.S. Faisa Confail ha proclamato uno sciopero aziendale di 4 ore **per il solo personale viaggiante delle linee vesuviane**, dalle ore 08:30 alle ore 12:30, avente le seguenti motivazioni: problematiche organizzazione aziendale.\n\nDurante l’ultima proclamazione di sciopero delle citata O.S., la percentuale di adesione è stata del 3,39% (sciopero del 23/07/2025).\n\nDi seguito vengono elencate le ultime e le prime partenze garantite in relazione alle diverse fasce di garanzia.\n\nDurante l’orario di sciopero l’effettuazione delle corse è subordinata al numero di lavoratori aderenti allo sciopero\n\n**Ultime partenze garantite prima dello sciopero**\n\nDa Napoli per\n\n-   Sorrento                    8:05\n-   Sarno                         8:10\n-   Torre Annunziata  8:26\n-   Poggiomarino        8:14\n\nPer Napoli da\n\n-   Sorrento                      8:14\n-   Sarno                           8:26\n-   Poggiomarino            8:18\n-   Torre Annunziata\\*   8:44  \\*treno 4082 proveniente da Poggiomarino\n\n**Prime partenze garantite dopo lo sciopero**\n\nDa Napoli per\n\n-   Sorrento                      12:53\n-   Sarno                           13:34\n-   Poggiomarino            13:02\n-   Torre Annunziata     12:33\n\nPer Napoli da\n\n-   Sorrento                    13:02\n-   Sarno                          13:14\n-   Poggiomarino           12:30\n-   Torre Annunziata     12:45\n\nLo sciopero non riguarderà i servizi sostitutivi che, pertanto, circoleranno regolarmente."
   },
   "response": {
+    "rawOutput": {
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2025-10-13 08:30:00",
+        "endDate": "2025-10-13 12:30:00",
+        "locationType": "REGIONAL",
+        "locationCodes": [
+          "15"
+        ],
+        "guaranteedTimes": [
+          "08:00-08:30",
+          "12:30-13:00"
+        ]
+      }
+    },
     "parsedData": {
       "isStrike": true,
       "strikeData": {
@@ -21,22 +36,22 @@
         ],
         "guaranteedTimes": [
           "08:00-08:30",
-          "12:30-13:30"
+          "12:30-13:00"
         ]
       }
     },
     "usage": {
-      "input": 1473,
-      "output": 103,
-      "total": 1576
+      "input": 1474,
+      "output": 98,
+      "total": 1572
     },
     "costUsd": {
-      "inputCost": 0.00016203,
-      "outputCost": 0.00003502,
+      "inputCost": 0.00016214,
+      "outputCost": 0.00003332,
       "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.00019705
+      "totalCost": 0.00019546
     },
-    "durationMs": 1344
+    "durationMs": 503
   }
 }

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8499,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00287425,
+      "outputCost": 0.0001725,
+      "thinkingCost": 0.001263,
+      "cachedCost": 0,
+      "totalCost": 0.00430975
+    },
+    "hash": "6a29deeeccbe82afb2c110a48a1fce74",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_24_h_venerdi_28_novembre_2025.html",
+    "thoughts": "**Strike Analysis: EAV & National General Strike - November 28, 2025**\n\nOkay, let's break this down. My source is the EAV srl website, and the announcement from November 23, 2025, clearly states a 24-hour national general strike is scheduled for Friday, November 28th, 2025. The strike is organized by USB.\n\nGiven the announcement specifically mentions EAV, it's safe to assume this impacts their services. The guaranteed service times are from 5:30 AM to 8:30 AM and again from 4:30 PM to 7:30 PM.\n\nSince it is a \"sciopero generale nazionale\", the strike is *national*, even though the initial context involves a regional transport provider. I need to make sure I get the `locationType` correct. The instructions are clear: if `locationType` is NATIONAL, then `locationCodes` MUST BE OMITTED. I need to make sure I remember this distinction.\n\nThe `isStrike` property is obviously true. Based on the 24-hour nature of the strike, it *starts* at 00:00:00 on November 28th, 2025, and *ends* at 23:59:59 on the same day.\n\nNow, let's convert this into the required data structure and *very carefully* check the constraints.\n\nSo, the strike data will be:\n\n*   `isStrike`: `true`\n*   `strikeData`:\n    *   `startDate`: \"2025-11-28 00:00:00\"\n    *   `endDate`: \"2025-11-28 23:59:59\"\n    *   `locationType`: \"NATIONAL\"\n    *   `guaranteedTimes`: `[\"05:30-08:30\", \"16:30-19:30\"]`\n\nAnd now a final validation against the instructions:\n\n*   `startDate`: \"2025-11-28 00:00:00\" - format checks out.\n*   `endDate`: \"2025-11-28 23:59:59\" - format checks out.\n*   `locationType`: \"NATIONAL\" - valid enum value.\n*   `locationCodes`: *Not* included, as required for a \"NATIONAL\" `locationType`. Excellent, I've got this right.\n*   `guaranteedTimes`: `[\"05:30-08:30\", \"16:30-19:30\"]` - matches the specified pattern.\n\nAlright, seems good. I'm confident in this interpretation and data structure.\n\n\n",
+    "tokens": {
+      "input": 11497,
+      "output": 115,
+      "total": 12454
+    }
+  }
+}

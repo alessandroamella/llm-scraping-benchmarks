@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-03 00:00:00",
+      "endDate": "2025-10-03 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 23371,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00057885,
+      "outputCost": 0.0005772,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00115605
+    },
+    "hash": "ca0c585b9219815e0ac0baaf316d4136",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_generale_nazionale_di_24_ore_venerdi_03_ottobre_2025.html",
+    "thoughts": "**Extracting strike data**\n\nI need to output JSON using the strike_extraction schema. I’m determining if the document announces a new strike. The content is in Italian and states, \"Linee Vesuviane: Avviso di sciopero generale nazionale di 24 ore venerdì 03 ottobre 2025 - EAV srl.\" This clearly announces an upcoming strike on October 3, 2025, for 24 hours. It also includes the last guaranteed service times. So, I’ll fill in the strikeData with the start date set for 00:00 on October 3, 2025.",
+    "tokens": {
+      "input": 11577,
+      "output": 1443,
+      "total": 13020
+    }
+  }
+}

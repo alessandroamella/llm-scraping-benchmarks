@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 17202,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00054735,
+      "outputCost": 0.000532,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00107935
+    },
+    "hash": "747115b196e65c37e3698d52ce8a3aea",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_24_ore_di_venerdi_28_novembre_2025.html",
+    "thoughts": "**Analyzing location types and times**\n\nI'm looking at the example times of 8:30 to 12:30, but I'll choose 00:00:00 to 23:59:59 for a national context. Since it's a general national strike, the location type should indeed be \"NATIONAL\" with explicit null for location codes. The instructions specifically state that location codes must always be present, so I'll include location codes as null. Also, the guaranteed times from the text show service availability from 5:30 to 8:30 and from 16:30 to 19:30.",
+    "tokens": {
+      "input": 10947,
+      "output": 1330,
+      "total": 12277
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-16 03:00:00",
+      "endDate": "2025-06-17 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7958,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0014055,
+      "outputCost": 0.000189,
+      "thinkingCost": 0.0007275,
+      "cachedCost": 0,
+      "totalCost": 0.002322
+    },
+    "hash": "70c5b8714123a62ef17252cfa43d6c23",
+    "sourceFile": "strike-detail-luned--16-giugno-sciopero-dei-treni-regionali.html",
+    "thoughts": "**Strike Information Extraction - My Thought Process**\n\nOkay, here's the deal. I need to pull strike information from this text, and it needs to be *perfect* JSON – no comments, no extra fluff. It's a pretty straightforward extraction task, following a predefined schema. I need to nail this, given the constraints.\n\nFirst, I see the task itself: it's a strike, so `isStrike` is definitely `true`.\n\nNow, let's break down the details. The headline, \"Lunedì 16 giugno sciopero dei treni regionali\", is helpful, but the body has the real meat: \"Dalle ore 3 di lunedì 16 alle ore 2 di martedì 17 giugno l’organizzazione sindacale ORSA ha indetto uno sciopero...\". OK, I can convert these dates and times to the correct format (`yyyy-MM-dd HH:mm:ss`). It's June 16, 2025, and it is in the Lombardia region (03), as specified in the context.\n\n*   `startDate`: Monday, June 16, at 3:00, that's \"2025-06-16 03:00:00\".\n*   `endDate`: Tuesday, June 17, at 2:00, \"2025-06-17 02:00:00\".\n*   `locationType`: It's a strike affecting \"treni regionali\", so I'll set that to \"REGIONAL\".\n*   `locationCodes`: Lombardia (03) -- so that's `[\"03\"]`.\n*   `guaranteedTimes`: \"Negli orari 6-9 e 18-21\" – simple enough, that translates directly to `[\"06:00-09:00\", \"18:00-21:00\"]`.\n\nSo, putting it all together, here's my extracted strike information:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-06-16 03:00:00\",\n    \"endDate\": \"2025-06-17 02:00:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\n      \"03\"\n    ],\n    \"guaranteedTimes\": [\n      \"06:00-09:00\",\n      \"18:00-21:00\"\n    ]\n  }\n}\n```\n\nNow, let's just make sure I haven't missed anything: Does it match the schema? Yes. No comments? Yes. Is it valid JSON? Absolutely. No extra text? It's all data, so yes. Good. All done!\n\n\n",
+    "tokens": {
+      "input": 5622,
+      "output": 126,
+      "total": 6233
+    }
+  }
+}

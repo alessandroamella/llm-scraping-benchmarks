@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-24 00:00:00",
+      "endDate": "2025-02-24 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8034,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00189825,
+      "outputCost": 0.0001125,
+      "thinkingCost": 0.0011685,
+      "cachedCost": 0,
+      "totalCost": 0.00317925
+    },
+    "hash": "9f8dfa160e5a9bb4e50b9d56d419246e",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_24h_lunedi_24_febbraio_2025.html",
+    "thoughts": "**Strike Information Extraction: A Thought Process**\n\nOkay, here's the deal. I need to pull strike information from this text and output it as valid JSON, *without* any pesky control characters, and sticking strictly to the provided JSON schema. No problem.\n\nFirst, I need to parse the text. It's a strike announcement. The document title, \"Linee Suburbane: Avviso di sciopero 24h lunedì 24 febbraio 2025 - EAV srl,\" already gives me a lot of key details. It's a 24-hour strike on Monday, February 24, 2025, concerning EAV, which is a transport company operating in the Campania region. So, I need to represent that.\n\nThe date is clear: February 24, 2025. The duration is 24 hours. The text states \"adesione asciopero nazionale di 24 ore,\" meaning the strike is a national strike that EAV is adhering to. Because EAV is a regional transport company, and the strike is national, I have to specify the location as \"REGIONAL\" and use the region code \"15\" for Campania.\n\nThis is an *upcoming* strike, so `isStrike` is clearly `true`.  Now, I need to build the `strikeData` object.\n\nThe start date is \"2025-02-24 00:00:00,\" and the end date is \"2025-02-24 23:59:59.\" The `locationType` is \"REGIONAL,\" and the `locationCodes` should be `[\"15\"]`. The text mentions \"Corse garantite\" (guaranteed runs) but only lists departure times, not *ranges* of time, like the schema requests (e.g., \"06:00-09:00\"). I'll omit this field to avoid fabrication and keep it within schema requirements.\n\nI have all the parts for my JSON output.  I'll build the JSON object now:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-02-24 00:00:00\",\n    \"endDate\": \"2025-02-24 23:59:59\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"15\"]\n  }\n}\n```\n\nNow, the final check. I have to make sure the JSON is valid and doesn't contain any forbidden characters. And, that is all. Done.\n\n\n",
+    "tokens": {
+      "input": 7593,
+      "output": 75,
+      "total": 8447
+    }
+  }
+}

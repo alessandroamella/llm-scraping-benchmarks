@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-20 00:00:00",
+      "endDate": "2025-06-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 26780,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003707,
+      "outputCost": 0.0006208,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0009915
+    },
+    "hash": "f5687adb3ac26a9ecde8dfd1899453f9",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_24h_venerdi_20_giugno_2025.html",
+    "thoughts": "**Extracting strike information**\n\nI need to output JSON based on the defined schema for strike extraction. The content indicates it’s an announcement for a 24-hour strike happening on Friday, June 20, 2025, which means isStrike should be true. I'll need to extract specific details like startDate, endDate, locationType, locationCodes, and guaranteedTimes. The posting date is provided as June 15, 2025, but I’ll have to format the dates in 'yyyy-MM-dd HH:mm:ss' properly for the output.",
+    "tokens": {
+      "input": 7414,
+      "output": 1552,
+      "total": 8966
+    }
+  }
+}

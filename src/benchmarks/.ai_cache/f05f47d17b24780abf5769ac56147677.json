@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:01:00",
+      "endDate": "2025-12-12 21:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22103,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0007419,
+      "outputCost": 0.0007196,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0014615
+    },
+    "hash": "f05f47d17b24780abf5769ac56147677",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-12-12-sciopero-nazionale-del-traspor.html",
+    "thoughts": "**Setting parameters correctly**\n\nI see the instructions about setting `locationType` to \"NATIONAL,\" and `locationCodes` should be explicitly set to null. Now, I need to format the dates correctly; it says to use 'yyyy-MM-dd HH:mm:ss'. The given time frame is \"Dalle ore 00:01 alle ore 21:00 di venerdì 12 dicembre 2025\", so I’ll convert that to \"2025-12-12 00:01:00\" for the start date and \"2025-12-12 21:00:00\" for the end date. Regarding `guaranteedTimes`, they aren’t specified, so I’ll just omit that part.",
+    "tokens": {
+      "input": 14838,
+      "output": 1799,
+      "total": 16637
+    }
+  }
+}

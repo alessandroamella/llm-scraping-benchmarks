@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-24 10:00:00",
+      "endDate": "2025-11-24 14:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4712,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0001595,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.000537,
+      "cachedCost": 0,
+      "totalCost": 0.0008195
+    },
+    "hash": "ec637f1f55c882f0bedb9b19a76abd31",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-11-24-sciopero-24-novembre-personale.html",
+    "thoughts": "**Analyzing the Railway Shunting Strike Notice**\n\nOkay, here's what I've got. The document announces a strike by railway shunting personnel, specifically titled \"SCIOPERO 24 NOVEMBRE PERSONALE DELLE SOCIETÀ DI MANOVRA FERROVIARIA\". The strike is scheduled for November 24th, 2025, from 10:00 AM to 2:00 PM.\n\nSince the announcement specifies \"personale delle società di manovra ferroviaria,\" and doesn't explicitly mention any geographical region, I'm interpreting this as a national-level strike affecting these types of employees. This means I can classify `locationType` as \"NATIONAL\" and omit `locationCodes`. I don't see any mention of guaranteed times, so I'll leave that part out.\n\nBased on this information, I can now create a strike object or data structure with `isStrike` set to `true` and store the `strikeData`. This includes the `startDate` and `endDate` for the strike, as well as the `locationType` of \"NATIONAL\". The core information is now distilled and ready for further analysis or integration into a system.\n\n\n",
+    "tokens": {
+      "input": 638,
+      "output": 82,
+      "total": 1078
+    }
+  }
+}

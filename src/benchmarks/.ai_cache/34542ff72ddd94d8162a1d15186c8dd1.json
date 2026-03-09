@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-12-14 09:00:00",
+      "endDate": "2023-12-14 17:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "09:00-10:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 43354,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005281,
+      "outputCost": 0.0014008,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0019289
+    },
+    "hash": "34542ff72ddd94d8162a1d15186c8dd1",
+    "sourceFile": "strike-detail-gioved--14-dicembre-dalle-ore-9-alle-ore-17-sciope.html",
+    "thoughts": "**Extracting strike announcement**\n\nI need to extract details according to the specifications. The content indicates a strike announcement for Thursday, December 14, from 9 AM to 5 PM, specifically for regional trains. It seems the source is Trenord Informa, and it clearly states there's a strike planned by certain unions that may disrupt regional train services. This confirms it’s an announcement, and the location type is likely REGIONAL with a code of \"03\" for Lombardia. The date is indeed December 14, 2023.",
+    "tokens": {
+      "input": 10562,
+      "output": 3502,
+      "total": 14064
+    }
+  }
+}

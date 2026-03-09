@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-12-14 09:00:00",
+      "endDate": "2023-12-14 17:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7185,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00025175,
+      "outputCost": 0.0001395,
+      "thinkingCost": 0.0010425,
+      "cachedCost": 0,
+      "totalCost": 0.00143375
+    },
+    "hash": "e414eb5f335b4440b36b2d787d8712b1",
+    "sourceFile": "strike-detail-gioved--14-dicembre-dalle-ore-9-alle-ore-17-sciope.html",
+    "thoughts": "**Strike Announcement Analysis for Trenord (Lombardia)**\n\nOkay, here's what I've got. The task is to analyze this text and determine if it's a strike announcement, and if so, to extract the relevant data into a JSON format. Let me break it down:\n\nFirst, the input: a news piece dated December 12, 2023, concerning a strike affecting Trenord in Lombardia (region code \"03\") on Thursday, December 14, 2023, from 09:00 to 17:00. The headline itself, \"Giovedì 14 dicembre dalle ore 9 alle ore 17 sciopero dei treni regionali\" confirms it's a strike announcement.\n\nMy decision rules are straightforward: announcement of a strike means `isStrike: true`; anything else, like a cancellation or past event, is `isStrike: false`. Based on the input, it's definitely an upcoming strike.\n\nNow, let's build the JSON object. The `isStrike` field will be `true`. Then, for `strikeData`, I need to extract the start and end dates/times, location details and guaranteed times.\n\nThe strike starts on December 14, 2023 at 09:00 and ends at 17:00. So, I'll format the start date as \"2023-12-14 09:00:00\" and the end date as \"2023-12-14 17:00:00\". The `locationType` is clearly \"REGIONAL\", and the `locationCodes` is \"03\" for Lombardia, as stated in the text. I am omitting `guaranteedTimes` because, while it is mentioned that trains departing before 09:00 should arrive before 10:00, the text does not give a guaranteed *range* in the required format.\n\nSo the initial JSON structure looks like this:\n\n```json\n{\n    \"isStrike\": true,\n    \"strikeData\": {\n        \"startDate\": \"2023-12-14 09:00:00\",\n        \"endDate\": \"2023-12-14 17:00:00\",\n        \"locationType\": \"REGIONAL\",\n        \"locationCodes\": [\"03\"]\n    }\n}\n```\n\nNow, let's validate: Is it valid JSON? Yes. Single object? Yes. Dates in the correct format? Yes. Double quotes for strings? Yes. Code for Lombardia (03)? Correct. Anything else to add? No, I'm good. This seems like a complete and correct representation of the strike information in the required format.\n\n\n",
+    "tokens": {
+      "input": 1007,
+      "output": 93,
+      "total": 1795
+    }
+  }
+}

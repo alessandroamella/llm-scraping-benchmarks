@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 09:00:00",
+      "endDate": "2024-12-13 13:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9050,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0002245,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.000825,
+      "cachedCost": 0,
+      "totalCost": 0.0011725
+    },
+    "hash": "2fb23f85f55e33ac57b819ae9b0f9868",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_di_4_ore_del_13_dicembre_2024.html",
+    "thoughts": "**My Analysis of the EAV Strike Announcement**\n\nOkay, let's break this down systematically. I've received an announcement about a 4-hour strike affecting EAV (Campania transport) on December 13, 2024. My primary goal is to determine if this is an *upcoming* strike and, if so, extract specific details into a valid JSON format, adhering to the specified constraints on date format and content, avoiding any markdown or control characters.\n\nFirst, the input: \"Avviso di sciopero di 4 ore del 13 dicembre 2024\" – this *definitely* confirms a strike announcement. Next, I need to confirm if it's in the future. Today is December 11th, so December 13th is upcoming, perfect. Is it a cancellation? No, although it's a reduction, from 24h to 4 hours, it's still a strike that reduces service.\n\nThe text specifies the window \"dalle ore 09:00 alle ore 13:00\". So, I have my date: 2024-12-13. The strike starts at 09:00:00 on that day and ends at 13:00:00 on the same day.\n\nNow for location. EAV operates in Campania. But it indicates a “sciopero generale nazionale” (national general strike). The prompt says that if `locationType` is NATIONAL, then `locationCodes` MUST BE OMITTED. Ok, so even though it's specific to EAV, since it's characterized as a “sciopero generale nazionale”, I'll mark the `locationType` as \"NATIONAL\" and omit `locationCodes`.\n\nAs for guaranteed times, the text states \"Non sarà garantito il servizio durante l’orario di sciopero\", therefore, no guaranteed times were specified.\n\nTime to build the output. I'll construct a JSON object:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-13 09:00:00\",\n    \"endDate\": \"2024-12-13 13:00:00\",\n    \"locationType\": \"NATIONAL\"\n  }\n}\n```\n\nNow, I need to make sure this JSON is *valid* and meets all requirements. Date format is correct (yyyy-MM-dd HH:mm:ss) and the constraint on omitting `locationCodes` for `NATIONAL` is met. The object should now be validated before output.\n\n\n",
+    "tokens": {
+      "input": 898,
+      "output": 82,
+      "total": 1530
+    }
+  }
+}

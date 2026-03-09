@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-05-11 00:00:00",
+      "endDate": "2025-05-11 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6873,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00247275,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.0006645,
+      "cachedCost": 0,
+      "totalCost": 0.00328575
+    },
+    "hash": "3e924043b48a6dc72d9a8c8eff7bab93",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_24h_domenica_11_maggio_2025.html",
+    "thoughts": "**Analyzing the EAV Strike Announcement**\n\nOkay, here's what I've got. I'm taking in this HTML content from EAV, the transportation authority. My job is to figure out if it's a strike announcement, and if so, pull out the important details. The only thing I can return is a JSON object; that's key. The schema has two fields: `isStrike` (boolean) and `strikeData` (an object if it's a strike).\n\nThe title immediately grabs my attention: \"Linee Suburbane: avviso di sciopero 24h domenica 11 maggio 2025 - EAV srl.\" The words \"avviso di sciopero\" (strike announcement) are pretty clear. The body text confirms this: \"Per il giorno 11 maggio 2025 la O.S. Or.S.A. ha proclamato azione di sciopero aziendale di 24 ore...\" Yup, it's a strike.\n\nSo, `isStrike` is definitely true. Now, let's build the `strikeData` object.\n\nThe date is May 11, 2025, and it's a 24-hour strike. No specific start or end times are mentioned, which is normal for this kind of announcement. I'll make a reasonable assumption: a 24-hour transport strike usually runs from midnight to midnight (or thereabouts) of the given date. That gives me a start date of 2025-05-11 00:00:00 and an end date of 2025-05-11 23:59:59.\n\nSince EAV is the regional provider for Campania, the `locationType` will be \"REGIONAL.\" The `locationCodes` from the instructions tell me that \"15\" is the code for Campania. And no \"guaranteedTimes\" are specified, so I will omit this from the JSON data.\n\nI'm ready to output the JSON now.\n\n\n",
+    "tokens": {
+      "input": 9891,
+      "output": 99,
+      "total": 10433
+    }
+  }
+}

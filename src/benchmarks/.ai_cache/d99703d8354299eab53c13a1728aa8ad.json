@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-10 19:32:00",
+      "endDate": "2025-01-10 23:32:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24645,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00055375,
+      "outputCost": 0.000658,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00121175
+    },
+    "hash": "d99703d8354299eab53c13a1728aa8ad",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_4_ore_venerdi_10_gennaio_2025.html",
+    "thoughts": "**Determining strike notice details**\n\nI need to output JSON based on the \"strike_extraction\" schema to determine if a document announces a new or upcoming strike. The content discusses a 4-hour strike notice for Linee Vesuviane scheduled for January 10, 2025. It notes that the O.S. CONF.A.I.L. announced this national strike due to issues with local public transport. Since the strike date is after the document's date of January 5, 2025, it seems to be an upcoming strike notice.",
+    "tokens": {
+      "input": 11075,
+      "output": 1645,
+      "total": 12720
+    }
+  }
+}

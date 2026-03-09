@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6443,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.004085,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0005745,
+      "cachedCost": 0,
+      "totalCost": 0.0046745
+    },
+    "hash": "bb049cfb29a6c62e125d626c57bcf364",
+    "sourceFile": "sciopero_tpl_mattinata_adesione_personale_atac_233.html",
+    "thoughts": "**Analyzing the HTML for an Upcoming ATAC Strike**\n\nOkay, let's break this down. My task is to determine whether this HTML content indicates an *upcoming* strike by ATAC, the public transport system in Rome. I need to output valid JSON, adhering to the specified schema, which includes a `isStrike` boolean and an optional `strikeData` object. I know the rules: cancellation or revocation means false, information about a *past* strike participation also means false, as does real-time updates on ongoing or past events. It *must* be an *upcoming* strike to return true.\n\nThe title is \"Sciopero del Tpl, in mattinata adesione personale Atac al 23,3% - Roma Servizi per la Mobilità,\" and the content explicitly states, \"L’adesione del personale Atac allo sciopero del trasporto pubblico, rilevata a metà mattinata, è stata del 23,3%.\" The provided date is 06/05/2024, implying that we are dealing with a strike that's either in progress or has already concluded.\n\nThe key here is \"adesione\" (participation). It's describing the percentage of staff *participating* in a strike. According to the constraints, this means I need to classify this as *not* an upcoming strike. The text is providing feedback on an existing event. I must apply the specific rule: if it's just about *participation* in a past strike, then `isStrike` is false.\n\nTherefore, my final determination is `isStrike`: false. This adheres to the schema constraints.\n\n\n",
+    "tokens": {
+      "input": 16340,
+      "output": 10,
+      "total": 16733
+    }
+  }
+}

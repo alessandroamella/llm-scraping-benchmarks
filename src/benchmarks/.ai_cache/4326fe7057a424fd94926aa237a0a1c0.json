@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-03-22 19:40:00",
+      "endDate": "2025-03-22 23:40:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8777,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00188125,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.0009735,
+      "cachedCost": 0,
+      "totalCost": 0.00300325
+    },
+    "hash": "4326fe7057a424fd94926aa237a0a1c0",
+    "sourceFile": "flegree_sciopero_del_22_marzo_2025.html",
+    "thoughts": "**Strike Analysis from EAV srl Announcement**\n\nOkay, let's break this down. I've received an announcement from EAV srl, the public transport company in Campania (with ISTAT code 15), regarding a strike. The text explicitly states \"Linee Flegree – Avviso di sciopero di 4 ore del 22 marzo 2025,\" so we're definitely dealing with an upcoming strike. This isn't a retraction or a historical piece; it's a current announcement.\n\nMy objective is to confirm this, and then to extract the strike details, carefully structuring them into a JSON format for proper integration.\n\nHere's my understanding, broken down:\n\n*   **Strike Confirmation:** `isStrike: true` – Confirmed. This is an active strike announcement.\n*   **Strike Details (JSON Extraction):** I've identified the core strike parameters:\n    *   `startDate`: \"2025-03-22 19:40:00\" - Clear start time.\n    *   `endDate`: \"2025-03-22 23:40:00\" - Clear end time.\n    *   `locationType`: \"REGIONAL\" - Correct, as Campania is a region.\n    *   `locationCodes`: \\[\"15\"] - This refers to the Campania region itself, confirmed by the given ISTAT code. The enum check for `locationCodes` shows this to be valid.\n\nSince the text doesn't provide explicit \"guaranteed times\" in the expected format (HH:mm-HH:mm), I will omit the `guaranteedTimes` key to avoid any ambiguity. It's important to be precise and avoid assumptions.\n\nThe resulting JSON structure, based on my analysis, is as follows:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-03-22 19:40:00\",\n    \"endDate\": \"2025-03-22 23:40:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"15\"]\n  }\n}\n```\n\nThis adheres to the JSON schema requirements I've confirmed during analysis. That should be a clean and accurate extraction.\n\n\n",
+    "tokens": {
+      "input": 7525,
+      "output": 99,
+      "total": 8273
+    }
+  }
+}

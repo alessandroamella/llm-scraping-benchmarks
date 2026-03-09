@@ -1,15 +1,30 @@
 {
-  "timestamp": "2026-03-09T13:31:28.715Z",
-  "isCacheHit": true,
+  "timestamp": "2026-03-09T14:39:23.812Z",
+  "isCacheHit": false,
   "request": {
     "sourceName": "EAV",
     "fileName": "linee_vesuviane_avviso_di_sciopero_24h_domenica_11_maggio_2025.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "dom-distillation-markdown",
-    "useLenientSchema": true,
+    "useLenientSchema": false,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"EAV\" (the public transport company of Campania (15)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: Linee Vesuviane: Avviso di Sciopero 24h domenica 11 maggio 2025 - EAV srl\n\n* * *\n\n## Linee Vesuviane: Avviso di Sciopero 24h domenica 11 maggio 2025\n\nData:  \n**6 Maggio 2025**\n\nPer il giorno 11 maggio 2025 la O.S. Or.S.A. ha proclamato azione di sciopero aziendale di 24 ore avente le seguenti motivazioni: problematiche organizzazione aziendale.  \n_Durante l’ultima proclamazione di sciopero della O.S. Or.S.A., la percentuale di adesione è stata del 40,31% (sciopero aziendale di 4 ore del 22 marzo 2025)  \n_Di seguito vengono elencate le ultime e le prime partenze garantite in relazione alle fasce di garanzia.  \n_Durante l’orario di sciopero l’effettuazione delle corse è subordinata al numero di lavoratori aderenti allo sciopero.  \n_**Servizio garantito dalle ore 05:30 alle ore 8:30 e dalle ore 16:30 alle ore 19:30**\n\n**Ultime partenze garantite prima dello sciopero – fascia operatività servizio dalle ore 5:30 alle ore 08:30**  \n**da Napoli per**  \nSorrento 08:05  \nPoggiomarino 08:14  \nSarno 08:10  \nTorre Annunziata 08:26 diretto  \nper Baiano 07:43\n\n**per Napoli da**  \nSorrento 08:14  \nPoggiomarino 08:18  \nSarno 08:26  \nTorre Annunziata 08:44 treno 4082 da Poggiomarino  \nda Baiano per San Giorgio 08:15\n\n**Prime partenze garantite dopo lo sciopero – fascia operatività servizio dalle 16.30 alle 19.30**  \n**da Napoli per**  \nSorrento 17:05  \nPoggiomarino 16:38  \nTorre Annunziata 16:45  \nSarno 16:34  \nda San Giorgio per Baiano 16:30\n\n**per Napoli da**  \nSorrento 16:38  \nPoggiomarino 16:42  \nSarno 16:50  \nTorre Annunziata 16:57  \nda Baiano per San Giorgio 17:15\n\n**Ultime partenze garantite prima dello sciopero – fascia operatività servizio dalle 16.30 alle 19.30**  \n**da Napoli per**  \nSorrento 19:29  \nPoggiomarino 19:02  \nSarno 18:58  \nTorre Annunziata 19:09  \nda San Giorgio per Baiano 18:54\n\n**per Napoli da**  \nSorrento 19:02  \nPoggiomarino 18:30  \nSarno 19:14  \nTorre Annunziata 19:21  \nBaiano 19:03\n\n**Categoria:** [Trasporto pubblico](https://www.eavsrl.it/categoria-disservizio/trasporto-pubblico/)\n\n**Area:** [Linee Vesuviane](https://www.eavsrl.it/area/linee-vesuviane/)"
   },
   "response": {
+    "rawOutput": {
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2025-05-11 00:00:00",
+        "endDate": "2025-05-11 23:59:59",
+        "locationType": "REGIONAL",
+        "locationCodes": [
+          "15"
+        ],
+        "guaranteedTimes": [
+          "05:30-08:30",
+          "16:30-19:30"
+        ]
+      }
+    },
     "parsedData": {
       "isStrike": true,
       "strikeData": {
@@ -28,15 +43,18 @@
     "usage": {
       "input": 1338,
       "output": 140,
-      "total": 1947
+      "cached": 0,
+      "thinking": 434,
+      "total": 1912
     },
     "costUsd": {
       "inputCost": 0.0003345,
       "outputCost": 0.00021,
-      "thinkingCost": 0.0007035,
+      "thinkingCost": 0.000651,
       "cachedCost": 0,
-      "totalCost": 0.001248
+      "totalCost": 0.0011955
     },
-    "durationMs": 4956
+    "durationMs": 8442,
+    "thoughts": "**Strike Analysis: EAV Linee Vesuviane - May 11, 2025**\n\nOkay, here's what I've got. The input is an announcement: \"Avviso di Sciopero 24h domenica 11 maggio 2025\". My goal is to determine if this confirms a strike and, if so, to extract the key data points into a structured JSON object. The target is a `{\"isStrike\": true, \"strikeData\": {...}}` format, of course.\n\nThe announcement clearly indicates a 24-hour strike on Sunday, May 11, 2025. It's for EAV, specifically related to the Linee Vesuviane, which I know is a regional transport provider. So, yes, `isStrike` is definitely `true`.\n\nNow, let's break down the details:\n\n*   **Date:** Confirmed as Sunday, May 11, 2025. I'll need to translate that into a `startDate` and `endDate` format as `yyyy-MM-dd HH:mm:ss`. A 24-hour strike like this usually starts at midnight, so my `startDate` will be \"2025-05-11 00:00:00\" and `endDate` will be \"2025-05-11 23:59:59\". Or maybe 00:00:00 of the 12th depending on how it's defined. I'll have to keep that in mind.\n*   **Company:** EAV, which I'll translate to a `locationType` of \"REGIONAL\". Campania is the region, which I know is represented by the location code \"15\". This will populate the `locationCodes` array.\n*   **Duration:** 24 hours. Already processed.\n*   **Guaranteed Bands:** I see guaranteed service during \"05:30-08:30\" and \"16:30-19:30\". I'll format this into an array of strings like `[\"05:30-08:30\", \"16:30-19:30\"]` for the `guaranteedTimes` field.\n\nFinally, let me double check the structure: `isStrike` is a boolean, and the extracted data will go into the `strikeData` object. Date formats are as specified, `locationType` is \"REGIONAL\", `locationCodes` is an array of strings, and `guaranteedTimes` is an array of strings as well. This all looks good. Now, to write that output.\n\n\n"
   }
 }

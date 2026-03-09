@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8072,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00196325,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.001125,
+      "cachedCost": 0,
+      "totalCost": 0.00329825
+    },
+    "hash": "1a5d09366a1ee8540933bc78bcf8e42b",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_di_24_ore_venerdi_13_dicembre_2024_aggiornamento.html",
+    "thoughts": "**Strike Analysis for EAV - Campania Linea Metropolitana**\n\nOkay, let's process this information from the EAV (Ente Autonomo Volturno) source in Campania. It's a strike notice regarding the Linea Metropolitana between Piscinola and Aversa. The source is clear: a 24-hour strike is confirmed for Friday, December 13, 2024.\n\nFirst, I need to extract the relevant data, which I'll format as JSON. `isStrike` is clearly `true`.  The `strikeData` object is where the core information is. `startDate` is set to \"2024-12-13 00:00:00\" and `endDate` will be \"2024-12-13 23:59:59\". The strike's `locationType` is \"REGIONAL\", indicated by the region code \"15\".  Crucially, there are guaranteed service bands: \"05:30-08:30\" and \"16:30-19:30\".\n\nNow, time to validate everything. I need to make sure the data conforms to my expected patterns. `startDate` is good: `\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}` -- check. `endDate` also checks out: `\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}` -- again, good. The `locationType` is just \"REGIONAL\", and that matches perfectly. `locationCodes` has a single item, \"15\" and that's exactly what I'd expect for this data set. Finally, the guaranteed times: I need to ensure the format for those intervals. They should match the `^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]-(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$` pattern, and they do, so that validates successfully.\n\nThe information is solid.\n\n\n",
+    "tokens": {
+      "input": 7853,
+      "output": 140,
+      "total": 8743
+    }
+  }
+}

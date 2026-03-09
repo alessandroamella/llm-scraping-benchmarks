@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-27 21:00:00",
+      "endDate": "2025-11-28 21:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24801,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0007425,
+      "outputCost": 0.000488,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0012305
+    },
+    "hash": "03277082a823b2f75ed6f6cdc04a3893",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-11-27-sciopero-nazionale-del-traspor.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to output JSON in a specific format for strike extraction. The content indicates an upcoming strike announcement for railway transport in Italy, occurring from 9 PM on November 27 to 9 PM on November 28, 2025. Since it’s clearly stated that the strike is instituted during that time frame, and it’s future relative to the article's date, it confirms that this is indeed an upcoming strike. Therefore, I should set \"isStrike\" to true.",
+    "tokens": {
+      "input": 14850,
+      "output": 1220,
+      "total": 16070
+    }
+  }
+}

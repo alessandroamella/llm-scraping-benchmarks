@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-09-30 03:00:00",
+      "endDate": "2024-10-01 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18668,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000787,
+      "outputCost": 0.0004292,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0005079
+    },
+    "hash": "ae3aac52a8602c0cdf838885d6367ca4",
+    "sourceFile": "strike-detail-sciopero-del-trasporto-ferroviario-luned--30-sette.html",
+    "thoughts": "**Evaluating strike announcement details**\n\nI need to output JSON in a specific format. This document is announcing an upcoming strike scheduled for Monday, September 30, from 3:00 PM to 2:00 AM on October 1, so isStrike should be true. I have to extract strikeData, which includes elements like startDate, endDate, locationType, and locationCodes. Since the content says it's a regional strike affecting Lombardy, locationType should be REGIONAL, confirming it impacts local trains and services.",
+    "tokens": {
+      "input": 1574,
+      "output": 1073,
+      "total": 2647
+    }
+  }
+}

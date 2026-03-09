@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 23060,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006235,
+      "outputCost": 0.0006236,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00068595
+    },
+    "hash": "48cd9eefa136c87826f2f09e11b8df0b",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-12-12-sciopero-nazionale-personale-a.html",
+    "thoughts": "**Extracting strike details**\n\nI need to output JSON for a strike announcement in Italian, titled \"SCIOPERO NAZIONALE PERSONALE AUTOFERROTRANVIERI,\" effective on 12 December 2025. It indicates a 24-hour strike for staff of transportation companies, with variable bus services. Trenitalia guarantees essential services from 06:00-09:00 and 18:00-21:00 on weekdays. It mentions the national scope of the strike, and since it’s an announcement for an upcoming strike, I’ll set isStrike to true accordingly.",
+    "tokens": {
+      "input": 1247,
+      "output": 1559,
+      "total": 2806
+    }
+  }
+}

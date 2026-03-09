@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-16 03:00:00",
+      "endDate": "2025-06-17 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 16603,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0002871,
+      "outputCost": 0.0005612,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008483
+    },
+    "hash": "8a81738fc4d43e2b69ee037bb66ae7b2",
+    "sourceFile": "strike-detail-luned--16-giugno-sciopero-dei-treni-regionali.html",
+    "thoughts": "**Formatting strike announcement**\n\nI need to produce JSON based on the strike extraction schema. The document is announcing a new strike titled \"Lunedì 16 giugno sciopero dei treni regionali.\" The strike will take place from 3:00 AM Monday, June 16, to 2:00 AM Tuesday, June 17, as organized by ORSA. The startDate should be 2025-06-16 03:00:00 and the endDate 2025-06-17 02:00:00. I’ll also assign the location type as REGIONAL.",
+    "tokens": {
+      "input": 5742,
+      "output": 1403,
+      "total": 7145
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4166,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0001475,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0002355,
+      "cachedCost": 0,
+      "totalCost": 0.000398
+    },
+    "hash": "56653bdb48750ef5b3608e5efa0fd90c",
+    "sourceFile": "sciopero_generale_adesione_personale_atac_179.html",
+    "thoughts": "**Analyzing Strike Participation Data**\n\nOkay, so I've got this input: \"Sciopero generale, adesione personale Atac al 17,9%.\" Right away, I see that this is about a general strike, but importantly, it’s reporting *already happened* participation. The text explicitly mentions \"lo sciopero generale di oggi, rilevata in mattinata,\" which confirms this is about past data.\n\nMy instructions tell me to determine the `isStrike` value, and based on the fact that this data reflects participation *after* the event, it's not describing an ongoing or future strike. It’s simply reporting on the *results* of a past strike. Therefore, the `isStrike` value must be `false`.\n\nSo, the appropriate JSON output is clearly `{\"isStrike\": false}`. Simple enough.\n\n\n",
+    "tokens": {
+      "input": 590,
+      "output": 10,
+      "total": 757
+    }
+  }
+}

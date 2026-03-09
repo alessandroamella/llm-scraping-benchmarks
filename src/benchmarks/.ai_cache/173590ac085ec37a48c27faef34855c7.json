@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6197,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0019915,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.000582,
+      "cachedCost": 0,
+      "totalCost": 0.0027835
+    },
+    "hash": "173590ac085ec37a48c27faef34855c7",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_24_ore_di_venerdi_28_novembre_2025.html",
+    "thoughts": "**Analyzing Strike Information for JSON Extraction**\n\nOkay, here's how I'm approaching this. My primary task is to extract strike information from the text provided and format it as valid JSON. I'm operating under specific constraints: the JSON output must adhere to the provided structure – a single JSON object or an array, depending on the instructions, and it must only contain details of upcoming strikes.\n\nFirst, I see the text mentions a 24-hour strike set for Friday, November 28, 2025, and mentions \"EAV srl\". This is relevant. I confirm that this is a confirmed upcoming 24-hour strike. Since no specific end date is mentioned, a standard 24 hour strike starting at midnight would be presumed, ending the following day at midnight.\n\nNow, let's assemble the strike details. I'll need to create the JSON object with the strike information. Since the text specifies a regional transport company (EAV), I'm reasonably sure the location type is \"REGIONAL\". I also know that Campania is the regional location, so the location code should be \"15\" based on my knowledge of ISTAT codes. The text explicitly mentions guaranteed service times, so I'll include those as well.\n\nTherefore, the strike details are as follows: It's a strike, so `isStrike: true`. The start date is `2025-11-28 00:00:00`, and the end date will be `2025-11-28 23:59:59`. The `locationType` will be \"REGIONAL\", and the `locationCodes` will be [\"15\"]. Finally, the `guaranteedTimes` are [\"05:30-08:30\", \"16:30-19:30\"]. This should produce a valid JSON output based on the extraction constraints.\n\n\n",
+    "tokens": {
+      "input": 7966,
+      "output": 140,
+      "total": 8494
+    }
+  }
+}

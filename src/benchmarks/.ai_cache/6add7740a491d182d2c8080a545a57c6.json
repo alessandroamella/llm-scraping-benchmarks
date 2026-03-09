@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6637,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003298,
+      "outputCost": 0.000096,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0004258
+    },
+    "hash": "6add7740a491d182d2c8080a545a57c6",
+    "sourceFile": "funivia_del_faito_sospensione_temporanea_del_servizio_funiviario_dalle_ore_1105.html",
+    "thoughts": "**Generating JSON output**\n\nI need to create JSON that follows the strike_extraction schema. The content is about the \"Funivia del Faito\" service suspension due to weather at 11:05 on April 14, 2025. It's important to note this is not a strike, so \"isStrike\" should be set to false. I'll keep the JSON minimal and straightforward, given that they only want details if there’s an actual upcoming strike. My final output will be: {\"isStrike\": false}. Let's go ahead and deliver this!",
+    "tokens": {
+      "input": 6596,
+      "output": 240,
+      "total": 6836
+    }
+  }
+}

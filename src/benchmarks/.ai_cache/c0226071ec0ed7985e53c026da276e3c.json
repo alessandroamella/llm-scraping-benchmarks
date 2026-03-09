@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-03 00:00:00",
+      "endDate": "2025-10-03 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6276,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00027625,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.0008355,
+      "cachedCost": 0,
+      "totalCost": 0.00129625
+    },
+    "hash": "c0226071ec0ed7985e53c026da276e3c",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_generale_nazionale_di_24_ore_venerdi_03_ottobre_2025.html",
+    "thoughts": "**Analyzing and Extracting Strike Information**\n\nAlright, let's break this down. My task is crystal clear: I need to extract strike information from the text and represent it as a JSON object. The desired output format is either `{\"isStrike\": false}` or `{\"isStrike\": true, \"strikeData\": {...}}` following a specific schema, depending on whether a strike is announced. The input text is \"Linee Suburbane: Avviso di sciopero generale nazionale di 24 ore venerdì 03 ottobre 2025 - EAV srl.\"\n\nFirst, I need to confirm whether it is a strike. The text \"Avviso di sciopero generale nazionale di 24 ore venerdì 03 ottobre 2025\" clearly states \"sciopero\" which means \"strike\", so I'll set `isStrike` to `true`.\n\nNow, I'll extract the strike details. I identify the strike type as \"National strike\". The date is October 3, 2025, and the duration is 24 hours. Given this, and following best practice, I need to translate the dates into the 'yyyy-MM-dd HH:mm:ss' format. The strike appears to start at the beginning of the day and end at the end of the day.\n\nTherefore, the `startDate` is \"2025-10-03 00:00:00\" and the `endDate` is \"2025-10-03 23:59:59\". The strike's `locationType` is \"NATIONAL\". It's a national strike, so according to the instructions, there is no need to add location codes.\n\nThe text also provides guaranteed times: 05:30-08:30 and 16:30-19:30. These are already in the correct format, so I will store these as is in an array as `guaranteedTimes`: [\"05:30-08:30\", \"16:30-19:30\"].\n\nSo the final JSON object to be returned is:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-10-03 00:00:00\",\n    \"endDate\": \"2025-10-03 23:59:59\",\n    \"locationType\": \"NATIONAL\",\n    \"guaranteedTimes\": [\"05:30-08:30\", \"16:30-19:30\"]\n  }\n}\n```\n\n\n",
+    "tokens": {
+      "input": 1105,
+      "output": 123,
+      "total": 1785
+    }
+  }
+}

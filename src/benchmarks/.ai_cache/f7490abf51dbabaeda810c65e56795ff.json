@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 21:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 17558,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008375,
+      "outputCost": 0.0006232,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00070695
+    },
+    "hash": "f7490abf51dbabaeda810c65e56795ff",
+    "sourceFile": "strike-detail-venerd--12-dicembre-da-mezzanotte-alle-21-sciopero.html",
+    "thoughts": "**Extracting strike information**\n\nI need to format a JSON output according to the strike_extraction schema. The content is in Italian and announces an upcoming nationwide strike on Friday, December 12, from midnight to 21:00. It mentions potential impacts on the FERROVIENORD network during this time. So, it’s confirmed that this is a future strike announcement, not a cancellation or an ongoing one. I’ll set isStrike to true and extract relevant strike data like start and end dates, location type, and guaranteed times.",
+    "tokens": {
+      "input": 1675,
+      "output": 1558,
+      "total": 3233
+    }
+  }
+}

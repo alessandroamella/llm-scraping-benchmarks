@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-28 08:20:00",
+      "endDate": "2025-01-28 12:20:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8843,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00025475,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.000687,
+      "cachedCost": 0,
+      "totalCost": 0.00109025
+    },
+    "hash": "fb7750345af8734d470c46c1ae4e017a",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_di_4_ore_martedi_28_gennaio_2025.html",
+    "thoughts": "**Analyzing the Strike Notice**\n\nOkay, here's the deal. I've got this input – a notice about a strike from EAV, specifically dated January 28, 2025. My primary goal is to extract the critical data points and structure them into the pre-defined JSON format.\n\nFirst, I need to confirm if it *is* a strike. The notice *is* an announcement of a strike, so `isStrike` is `true`. Good.\n\nNext, I need to parse the strike details. The notice explicitly states the strike duration: it's on January 28, 2025, lasting four hours, from 08:20 to 12:20. Thus, I'll set the `startDate` to \"2025-01-28 08:20:00\" and `endDate` to \"2025-01-28 12:20:00\".\n\nNow, about the location. EAV operates in the Campania region, code \"15\". This means `locationType` should be \"REGIONAL\" and `locationCodes` should be `[\"15\"]`.\n\nFinally, guaranteed times. The notice says \"Non saranno garantite le corse durante l’orario di sciopero,\" which translates to \"No trips will be guaranteed during the strike hours\". Therefore, I'll set `guaranteedTimes` to `None`, or rather omit it since it is not specified.\n\nSo, the key-value pairs need to be in JSON format. `isStrike` will be boolean. The `strikeData` needs to be an object. The data I've just processed neatly fits this structure, so it's a matter of ensuring the JSON output is well formed.\n\n\n",
+    "tokens": {
+      "input": 1019,
+      "output": 99,
+      "total": 1576
+    }
+  }
+}

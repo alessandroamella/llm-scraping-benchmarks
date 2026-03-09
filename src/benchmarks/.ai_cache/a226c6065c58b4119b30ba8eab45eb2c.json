@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-10 19:32:00",
+      "endDate": "2025-01-10 23:32:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6042,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00254875,
+      "outputCost": 0.0001395,
+      "thinkingCost": 0.000564,
+      "cachedCost": 0,
+      "totalCost": 0.00325225
+    },
+    "hash": "a226c6065c58b4119b30ba8eab45eb2c",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_di_4_ore_giorno_10_gennaio_2025.html",
+    "thoughts": "**Analyzing a Public Transport Strike Notice**\n\nOkay, let's see. I've got a strike notice from EAV srl, the public transport company in Campania – their ISTAT code is 15. The content says \"Linee Flegree: Avviso di sciopero di 4 ore, venerdì 10 gennaio 2025,\" which translates to \"Linee Flegree: 4-hour strike notice, Friday January 10, 2025.\" Straightforward enough.\n\nAlright, the key details are: January 10, 2025, for a duration of 4 hours. Specifically, the strike runs from 19:32 to 23:32. And the location? EAV, which means it's in Campania (code 15).\n\nMy task is to confirm if this is a valid, upcoming strike and then structure the information into a JSON format. So, let me structure the info as follows. This seems pretty clear, I'll set:\n\n`isStrike`: true.\n\nThen the start and end dates/times:\n\n`startDate`: 2025-01-10 19:32:00\n`endDate`: 2025-01-10 23:32:00\n\nLocation type is regional because it is a regional transport company:\n\n`locationType`: REGIONAL\n`locationCodes`: [\"15\"]\n\nNow, for any \"guaranteed times.\" The prompt said to omit it if not explicitly stated. Let me double-check. The text *does* mention \"Di seguito vengono elencate le ultime e le prime partenze garantite...\" listing the last departures. However, there's no mention of a standard \"guaranteed time\" window (like 06:00-09:00). So, I'll follow the instructions and omit the guaranteed times from the JSON structure, as it's not explicitly defined in a standard sense. Looks good!\n\n\n",
+    "tokens": {
+      "input": 10195,
+      "output": 93,
+      "total": 10664
+    }
+  }
+}

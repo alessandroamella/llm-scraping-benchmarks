@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-13 08:30:00",
+      "endDate": "2025-10-13 12:30:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 34029,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007285,
+      "outputCost": 0.0011836,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00125645
+    },
+    "hash": "050dbae3fb346bcc61670e7d0234e4c2",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_4_ore_del_13_ottobre_2025.html",
+    "thoughts": "**Processing strike announcement**\n\nI need to respond with JSON according to the strike_extraction format. I've got Italian content about a strike on the Vesuvian lines for 4 hours on October 13, 2025. This confirms it's an announcement, so isStrike is true. \n\nI’ll extract the start and end dates in 'yyyy-MM-dd HH:mm:ss' format. That gives me a start date of 2025-10-13 08:30:00 and an end date of 2025-10-13 12:30:00. \n\nAs for location type, since it’s specific to the Vesuvian lines in Campania, it should be marked as \"REGIONAL.\"",
+    "tokens": {
+      "input": 1457,
+      "output": 2959,
+      "total": 4416
+    }
+  }
+}

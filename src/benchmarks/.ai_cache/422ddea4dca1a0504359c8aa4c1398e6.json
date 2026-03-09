@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 11460,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00047945,
+      "outputCost": 0.0002216,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00070105
+    },
+    "hash": "422ddea4dca1a0504359c8aa4c1398e6",
+    "sourceFile": "sciopero_del_trasporto_pubblico_adesione_personale_atac_al_273.html",
+    "thoughts": "**Analyzing strike information**\n\nI need to output JSON according to a specific schema. The content is in Italian and relates to the public transport strike, indicating a 27.3% participation rate from Atac staff. It was published on 28/10/2024 and updated on 31/10/2024. This isn't announcing a future strike; rather, it's reporting historical participation info. So, according to the instructions, I will set isStrike to false. I need to ensure I’m being precise with the details here!",
+    "tokens": {
+      "input": 9589,
+      "output": 554,
+      "total": 10143
+    }
+  }
+}

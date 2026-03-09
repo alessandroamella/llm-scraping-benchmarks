@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-24 00:00:00",
+      "endDate": "2025-02-24 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19205,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003489,
+      "outputCost": 0.000552,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0009009
+    },
+    "hash": "acb8aaa43202a3cad7abfe3d886fc01f",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_24h_lunedi_24_febbraio_2025.html",
+    "thoughts": "**Clarifying strike details**\n\nThe strike is national, so I should set the locationType to \"NATIONAL\" and leave locationCodes as null. For the date of the strike on February 24, 2025, I need to extract the start and end times. Since it's a 24-hour strike, I think I'll use \"2025-02-24 00:00:00\" for startDate and \"2025-02-24 23:59:59\" for endDate. While there's some ambiguity about 24:00, using 00:00:00 seems to fit.",
+    "tokens": {
+      "input": 6978,
+      "output": 1380,
+      "total": 8358
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-05-11 00:00:00",
+      "endDate": "2025-05-11 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21224,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003479,
+      "outputCost": 0.0006572,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0010051
+    },
+    "hash": "0a2e7e8d7db099309c9eb8edd908d8ad",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_24h_domenica_11_maggio_2025.html",
+    "thoughts": "**Analyzing strike timing and location**\n\nThe strike is scheduled for 24 hours on May 11, 2025, likely starting at midnight. For setting the date and time formats, I need \"yyyy-MM-dd HH:mm:ss,\" so the startDate will be \"2025-05-11 00:00:00\" and endDate as \"2025-05-11 23:59:59.\" I also wonder if I should classify the locationType as REGIONAL or NATIONAL, given that it concerns the metropolitan line in Campania, which appears more local. It likely falls under REGIONAL.",
+    "tokens": {
+      "input": 6958,
+      "output": 1643,
+      "total": 8601
+    }
+  }
+}

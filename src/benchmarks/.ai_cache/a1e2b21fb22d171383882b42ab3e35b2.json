@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5822,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00409175,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0004125,
+      "cachedCost": 0,
+      "totalCost": 0.00451925
+    },
+    "hash": "a1e2b21fb22d171383882b42ab3e35b2",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_279.html",
+    "thoughts": "**Analyzing Strike Information from \"Roma Servizi per la Mobilità\"**\n\nOkay, so I've received some HTML content from Roma Servizi per la Mobilità related to a potential strike. My goal here is straightforward: figure out if this is announcing an *upcoming* strike, and if so, extract the crucial details. Alternatively, if it's about a past strike, such as adherence data, or simply providing statistics related to a strike that already occurred, I need to return `isStrike: false`. Let's dig in.\n\nThe title reads \"Sciopero del trasporto pubblico, adesione personale Atac al 27,9% - Roma Servizi per la Mobilità\" – that immediately raises a flag. \"Adesione\" usually suggests it's about *participation* in a strike, not the strike's announcement itself. The body text confirms my suspicion: \"L’adesione del personale Atac allo sciopero del trasporto pubblico *di oggi* è stata pari al 27,9%.\" – \"of today\" is pretty clear.\n\nThe key decision-making criteria is to filter out historical data of strike participation. So since the content focuses on the adherence of the Atac staff to the strike *today* (which has already happened), I need to set `isStrike` to false. The content is about past strike participation rates, not an upcoming strike.\n\nTherefore, the final output will be `isStrike: false`. I just need to format this as a clean, single JSON object, nothing else. No extra commentary or anything.\n\n\n",
+    "tokens": {
+      "input": 16367,
+      "output": 10,
+      "total": 16652
+    }
+  }
+}

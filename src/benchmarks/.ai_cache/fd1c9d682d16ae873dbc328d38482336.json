@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "04",
+        "05"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5938,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00358475,
+      "outputCost": 0.000159,
+      "thinkingCost": 0.0007815,
+      "cachedCost": 0,
+      "totalCost": 0.00452525
+    },
+    "hash": "fd1c9d682d16ae873dbc328d38482336",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-11-28-sciopero-del-personale-di-sad-.html",
+    "thoughts": "**Strike Information Extraction: A Concise Summary**\n\nOkay, here's the breakdown. My immediate task is to pull strike data from this HTML content, focusing on accuracy and a clean JSON output. The goal is to determine if it's a strike and, if so, capture the essential details: dates, location, and guaranteed times, if applicable. The key constraint is a strict JSON-only format—no comments, no extraneous text, and it needs to be valid and parseable.\n\nI see the content's title explicitly states a strike: \"SCIOPERO DEL PERSONALE DI SAD E TRENTINO TRASPORTI\". The date is clear: \"28 NOVEMBRE 2025,\" which translates to November 28th, 2025. The body text confirms a strike has been called \"Dalle ore 00:00 alle ore 23:59 del 28 novembre 2025 è stato indetto uno sciopero...\" The location is \"Trentino Alto Adige, VENETO,\" with associated ISTAT codes of 04 and 05 respectively. The companies involved are SAD and Trentino Trasporti.\n\nSo, here's my interpretation in a JSON format:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-11-28 00:00:00\",\n    \"endDate\": \"2025-11-28 23:59:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"04\", \"05\"]\n  }\n}\n```\n\nRegarding guaranteed times, the text states, \"Maggiori informazioni sui servizi garantiti... sono disponibili sui canali digitali\". This implies that the text does *not* explicitly list any guaranteed times. Therefore, I will **not** include a `guaranteedTimes` field in the JSON output, as the prompt specifies omitting it if not explicitly present.\nThe JSON output satisfies the requirements. It’s valid, in the right format, and contains no additional text.\n\n\n",
+    "tokens": {
+      "input": 14339,
+      "output": 106,
+      "total": 14966
+    }
+  }
+}

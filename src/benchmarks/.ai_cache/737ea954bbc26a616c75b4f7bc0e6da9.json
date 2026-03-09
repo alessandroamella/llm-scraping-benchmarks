@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-20 00:00:00",
+      "endDate": "2025-06-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 35864,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00058545,
+      "outputCost": 0.0008716,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00145705
+    },
+    "hash": "737ea954bbc26a616c75b4f7bc0e6da9",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_24h_venerdi_20_giugno_2025.html",
+    "thoughts": "**Considering date formats**\n\nI'm examining the requirements for startDate and endDate, which must be formatted as 'yyyy-MM-dd HH:mm:ss'. If there's no explicit start time provided, I might use \"2025-06-20 00:00:00\" for startDate and \"2025-06-20 23:59:59\" for endDate. However, since both dates are required when isStrike is true, it's unclear if setting endDate to null is appropriate. I'll have to navigate these rules carefully while ensuring both dates are correctly specified.",
+    "tokens": {
+      "input": 11709,
+      "output": 2179,
+      "total": 13888
+    }
+  }
+}

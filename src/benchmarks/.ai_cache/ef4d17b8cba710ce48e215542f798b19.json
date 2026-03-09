@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7895,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00285825,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.001005,
+      "cachedCost": 0,
+      "totalCost": 0.00404775
+    },
+    "hash": "ef4d17b8cba710ce48e215542f798b19",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-11-28-sciopero-nazionale-personale-a.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, let's break this down systematically. My task is to determine if this text describes an upcoming strike concerning Trenitalia and output the information in strict JSON format according to a prescribed schema. The headline immediately catches my attention: \"SCIOPERO NAZIONALE PERSONALE AUTOFERROTRANVIERI,\" clearly indicating a national transport strike. The date is given as \"28 NOVEMBRE 2025,\" which is Friday, November 28th, 2025. The description explicitly mentions \"uno sciopero di 24 ore,\" a 24-hour strike, on that date, in adesione allo sciopero generale.\n\nGiven the headline's \"NAZIONALE\" designation and confirmation in the body, I can safely set `locationType` to \"NATIONAL.\" The guaranteed service times are listed as \"dalle ore 6.00 alle ore 9.00 e dalle ore 18.00 alle ore 21.00,\" easily translated to \"06:00-09:00\" and \"18:00-21:00.\" Therefore, these will populate the `guaranteedTimes` array.\n\nNow, let's address the dates. The text indicates a 24-hour strike on November 28th, 2025. Typically, a 24-hour strike encompasses the entire day. Therefore, I will set `startDate` to \"2025-11-28 00:00:00\" and `endDate` to \"2025-11-28 23:59:59.\" This covers the full day of the strike. Given the \"NATIONAL\" designation, the `locationCodes` field is omitted.\n\nI'm confident in my analysis. The `isStrike` field will be set to `true`, and I'm ready to construct the JSON output, making sure it validates against the schema:\n\n```json\n{\n  \"isStrike\": true,\n  \"startDate\": \"2025-11-28 00:00:00\",\n  \"endDate\": \"2025-11-28 23:59:59\",\n  \"locationType\": \"NATIONAL\",\n  \"guaranteedTimes\": [\n    \"06:00-09:00\",\n    \"18:00-21:00\"\n  ]\n}\n```\n\n\n",
+    "tokens": {
+      "input": 11433,
+      "output": 123,
+      "total": 12226
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-20 00:00:00",
+      "endDate": "2025-06-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 25103,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00054285,
+      "outputCost": 0.0005464,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00108925
+    },
+    "hash": "ca9ac5217eb8f094f2c43117808e7a36",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_24_h_venerdi_20_giugno_2025.html",
+    "thoughts": "**Setting strike data**\n\nI need to fill the strikeData with startDate and endDate in the 'yyyy-MM-dd HH:mm:ss' format. According to the article, for a 24-hour strike, it should be 2025-06-20 00:00:00 to 2025-06-20 23:59:59. There's a mention of a strike on June 20, 2025, so it makes sense to use these times. I think I can confidently set the times as mentioned for both the start and end of the strike.",
+    "tokens": {
+      "input": 10857,
+      "output": 1366,
+      "total": 12223
+    }
+  }
+}

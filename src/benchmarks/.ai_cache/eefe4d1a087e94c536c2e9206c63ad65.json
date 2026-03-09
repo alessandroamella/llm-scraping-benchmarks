@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-01-09 21:00:00",
+      "endDate": "2026-01-10 23:59:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "04",
+        "05"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5612,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00025825,
+      "outputCost": 0.000159,
+      "thinkingCost": 0.000765,
+      "cachedCost": 0,
+      "totalCost": 0.00118225
+    },
+    "hash": "eefe4d1a087e94c536c2e9206c63ad65",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2026-1-9-sciopero-del-personale-di-sad---.html",
+    "thoughts": "**Strike Analysis: January 2026**\n\nOkay, let's break this down. My task is to definitively determine if this text describes an upcoming strike and, if so, extract the necessary data into a clean, parseable JSON format. The core requirement is precision: a valid JSON output, adhering strictly to the schema, with no extraneous text.\n\nThe page title, \"SCIOPERO DEL PERSONALE DI SAD E TRENTINO TRASPORTI,\" immediately flags a potential strike (\"Sciopero\" means strike in Italian), concerning personnel of SAD and Trentino Trasporti. The dates are critical: January 9th to 10th, 2026. This confirms it's an upcoming event, which is essential to determine.\n\nNow, let's analyze the details. The strike duration for SAD starts at 21:00 on January 9th and ends at 20:59 on January 10th. Trentino Trasporti's strike runs from 00:01 to 23:59 on January 10th. The region impacted is Trentino-Alto Adige (Code 04) and Veneto (Code 05). That's regional coverage.\n\nBased on this information, the JSON output is confirmed. `isStrike` is true.\n\nThe calculated start date is \"2026-01-09 21:00:00\" (earliest start time) and the end date is \"2026-01-10 23:59:00\" (latest end time). The `locationType` is unequivocally \"REGIONAL\" since the strike affects multiple regions. The `locationCodes` are \"04\" and \"05,\" corresponding to Trentino-Alto Adige and Veneto. Guaranteed times are not specified.\n\nFinally, let's verify that the JSON is valid. The required fields are present and correctly formatted (`yyyy-MM-dd HH:mm:ss`), there's no extraneous text, and the `locationCodes` are correct. Confirmed. We are all set.\n\n\n",
+    "tokens": {
+      "input": 1033,
+      "output": 106,
+      "total": 1649
+    }
+  }
+}

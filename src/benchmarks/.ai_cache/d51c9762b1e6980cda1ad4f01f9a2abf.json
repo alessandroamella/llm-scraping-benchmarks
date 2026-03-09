@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5433,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000541,
+      "outputCost": 0.0001292,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0001833
+    },
+    "hash": "d51c9762b1e6980cda1ad4f01f9a2abf",
+    "sourceFile": "sciopero_del_trasporto_pubblico_aperta_la_metro_b_chiuse_linee_a_c_e_termini_centocelle.html",
+    "thoughts": "**Finalizing JSON output**\n\nI need to ensure we’re outputting the right format. Since there’s no strike data, I’ll specify {\"isStrike\": false}. It’s essential to follow the structure because the system's \"strike_extraction\" tool expects a JSON object. I just want to avoid any misinterpretation with terms like \"Apertura/chiuse,\" as it's specifically about ongoing strikes. So, I’ll deliver it exactly as needed with that JSON string format!",
+    "tokens": {
+      "input": 1082,
+      "output": 323,
+      "total": 1405
+    }
+  }
+}

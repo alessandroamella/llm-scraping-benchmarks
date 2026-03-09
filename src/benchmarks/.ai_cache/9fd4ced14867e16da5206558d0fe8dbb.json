@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-01-09 21:00:00",
+      "endDate": "2026-01-10 21:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6720,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00283375,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.000777,
+      "cachedCost": 0.0001889,
+      "totalCost": 0.00392265
+    },
+    "hash": "9fd4ced14867e16da5206558d0fe8dbb",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2026-1-9-sciopero-nazionale-del-trasporto.html",
+    "thoughts": "**Strike Information Extraction - My Thought Process**\n\nOkay, the task is clear: I need to extract strike information from this text and output it as a JSON object, adhering strictly to the provided schema. The most important thing here is to generate *valid*, parseable JSON *only*. No extraneous text or comments allowed. I'm going to focus on getting that structure right first.\n\nAlright, the text says \"SCIOPERO NAZIONALE DEL TRASPORTO FERROVIARIO\", followed by the time frame: \"Dalle ore 21:00 di venerdì 9 gennaio alle ore 21:00 di sabato 10 gennaio 2026\", and then the affected entities: \"è stato indetto uno sciopero del personale del Gruppo FS Italiane, Italo e Trenord.\"\n\nRight, let's break this down piece by piece. First, `isStrike`: Obviously, this is a strike announcement, so `isStrike` is `true`. The text provides the start and end dates directly. Let me extract those... Okay, start is \"2026-01-09 21:00:00\", end is \"2026-01-10 21:00:00\". Good.\n\nThe text says \"NAZIONALE\", so `locationType` should be \"NATIONAL\". Since it is a national strike, `locationCodes` is omitted, as specified. There's no mention of guaranteed times.\n\nNow, let's assemble this into the required JSON structure. Given the schema, I need to represent this with `isStrike` and a `strikeData` object. I think the structure should be something like this:\n\n`{ \"isStrike\": true, \"strikeData\": { \"startDate\": \"2026-01-09 21:00:00\", \"endDate\": \"2026-01-10 21:00:00\", \"locationType\": \"NATIONAL\" } }`\n\nOkay, before I finalize, let me double-check: is it a strike? Yes. Is the date format correct (`yyyy-MM-dd HH:mm:ss`)? Yes. Is the location type correct (\"NATIONAL\")? Yes. No location codes are needed for NATIONAL, and they are omitted. Everything seems to be in order. Let's make sure it's valid JSON, and that's it!\n\n\n",
+    "tokens": {
+      "input": 11335,
+      "output": 82,
+      "total": 11935
+    }
+  }
+}

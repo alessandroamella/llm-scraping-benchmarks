@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 09:00:00",
+      "endDate": "2024-12-13 13:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8439,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00024525,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.0007935,
+      "cachedCost": 0,
+      "totalCost": 0.00118725
+    },
+    "hash": "95801d678ee33cf319b558320b1525a1",
+    "sourceFile": "linea_metropolitana_avvisi_di_sciopero_di_4_ore_del_13_dicembre_2024.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, here's how I'm approaching this. The input is an announcement from EAV (Campania), and my primary task is to determine if it describes a strike and, if so, extract the relevant information in the specified schema format. The text explicitly mentions a strike planned for December 13, 2024. Considering that the date is in the future relative to the announcement date, I can confidently set `isStrike` to `true`.\n\nNow, for the data extraction. The `startDate` is clearly December 13, 2024, at 09:00:00, and the `endDate` is the same day, ending at 13:00:00, which are straightforward and directly from the text.\n\nRegarding `locationType` and `locationCodes`, EAV operates in Campania. This means `locationType` should be \"REGIONAL,\" and I will use \"15\" for `locationCodes` since that's the established code for Campania.\n\nThe trickier part is the `guaranteedTimes` field. The text refers to \"fasce di garanzia\" (guaranteed time slots) and mentions \"Ultime partenze\" and \"Prime partenze,\" which suggests there are defined guaranteed services. However, the schema specifically asks for *time ranges* where service is guaranteed, such as a time before the strike. The announcement doesn't provide *explicit* time ranges like \"06:00-09:00.\" Since the prompt states that I should omit the field if it isn't specified, and I cannot extrapolate this information from the provided text, I'll omit this `guaranteedTimes` field.\n\nTherefore, the final output will be:\n\n*   `isStrike`: true\n*   `strikeData`:\n    *   `startDate`: \"2024-12-13 09:00:00\"\n    *   `endDate`: \"2024-12-13 13:00:00\"\n    *   `locationType`: \"REGIONAL\"\n    *   `locationCodes`: [\"15\"]\n\n\n",
+    "tokens": {
+      "input": 981,
+      "output": 99,
+      "total": 1609
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-07-23 09:00:00",
+      "endDate": "2025-07-23 11:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8233,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00193575,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.0006675,
+      "cachedCost": 0,
+      "totalCost": 0.00275175
+    },
+    "hash": "d222e5a57dcfd68a6a01265594b2862c",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_2_ore_mercoledi_23_luglio_2025.html",
+    "thoughts": "**Strike Information Extraction: A Process**\n\nOkay, let's break this down. My objective here is to parse this text and extract the relevant strike information into a neat JSON format. The goal is to produce a JSON string that clearly states whether there's an upcoming strike (`isStrike: boolean`) and, if so, details about it (`strikeData`). I have a few hard rules I need to stick to.\n\nFirst, the output *must* be valid JSON; no extraneous text allowed. The date and time formatting are crucial: `yyyy-MM-dd HH:mm:ss` is the expected standard. The critical piece, `isStrike`, will be `true` *only* if the strike is actually upcoming, so this needs to be assessed. `locationType` should always be \"REGIONAL,\" and the location code is the key piece for regional strikes, which has been provided as Campania which is code \"15\".\n\nAnalyzing the provided data, I see the headline is \"Linee Suburbane: Avviso di sciopero di 2 ore mercoledì 23 luglio 2025\" and the content details the strike itself: \"per mercoledì 23 luglio 2025 la O.S. Faisa Confail ha proclamato uno sciopero aziendale di 2 ore, dalle ore 09:00 alle ore 11:00\". The company involved is EAV, based in Campania. That means the relevant date is 2025-07-23, and the strike time is from 09:00 to 11:00.\n\nTherefore, `isStrike` is indeed true, because it is an upcoming strike. The `startDate` will be \"2025-07-23 09:00:00\" and `endDate` will be \"2025-07-23 11:00:00\". The `locationType` is \"REGIONAL\", and the relevant `locationCodes` is [\"15\"] because the company is located in Campania.\n\nNow, a quick check: the date format is correct, the `locationType` matches, and the region code matches, so it all fits the criteria. Ready to format the final JSON output.\n\n\n",
+    "tokens": {
+      "input": 7743,
+      "output": 99,
+      "total": 8287
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5694,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.002628,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000195,
+      "cachedCost": 0,
+      "totalCost": 0.002838
+    },
+    "hash": "4b81dae4d1359c517b9845f9d98d10eb",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_195.html",
+    "thoughts": "**Analyzing the ATAC Strike Report**\n\nOkay, so I'm looking at this piece about the ATAC strike in Rome. The title immediately clues me in: \"Sciopero del trasporto pubblico, adesione personale Atac al 19,5%\". The key word here is *adesione* - participation. The article isn't announcing a *planned* strike; it's *reporting* on the level of participation in a strike that *already occurred*, indicated by the past tense of \"è stata pari\".\n\nThe instructions I have explicitly state that if this is just *information* about participation in a *past* strike, then I need to set `isStrike` to `false`. That makes perfect sense; we're not dealing with an active or future strike event that needs analysis in the same way. So, based on the content and the clear guidance, I'm confident in setting the output to `{\"isStrike\": false}`. No need to overthink it; the intent is reporting, not prediction or current analysis.\n\n\n",
+    "tokens": {
+      "input": 10512,
+      "output": 10,
+      "total": 10652
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-20 00:00:00",
+      "endDate": "2025-06-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 23143,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000937,
+      "outputCost": 0.0005804,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0006741
+    },
+    "hash": "931bb0ed875f01f695e7f2b44443781d",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_24h_venerdi_20_giugno_2025.html",
+    "thoughts": "**Extracting strike data**\n\nI need to format the information into JSON following the strike extraction schema. The document I've got is in Italian, stating a 24-hour national strike on June 20, 2025, proclaimed by USB. It includes guaranteed service times from 05:30 to 08:30 and 16:30 to 19:30. Since it indicates a planned strike should be recognized as such, I'll set isStrike to true. Now, I'll fill in the strikeData, starting with the correct date and time for this strike.",
+    "tokens": {
+      "input": 1874,
+      "output": 1451,
+      "total": 3325
+    }
+  }
+}

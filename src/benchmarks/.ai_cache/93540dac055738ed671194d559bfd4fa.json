@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-05-11 00:00:00",
+      "endDate": "2025-05-11 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6919,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0003395,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.000477,
+      "cachedCost": 0,
+      "totalCost": 0.0010265
+    },
+    "hash": "93540dac055738ed671194d559bfd4fa",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_24h_domenica_11_maggio_2025.html",
+    "thoughts": "**Analyzing Strike Information for JSON Output**\n\nOkay, let's break this down. My objective is clear: I need to extract strike details from this text snippet and format them into a precise JSON structure. The input is \"Linee Flegree: avviso di sciopero 24h domenica 11 maggio 2025 - EAV srl\". I see the core information is straightforward, but I have to be extremely meticulous in the translation to JSON.\n\nFirst, I need to flag that this indeed *is* a strike, so `isStrike` will be `true`. The date, 11 May 2025, dictates the `startDate` and `endDate`. Since it's a 24-hour strike, the `startDate` is 2025-05-11 00:00:00, and the `endDate` is 2025-05-11 23:59:59. This is standard practice.\n\nThe company is identified as EAV, and the text implicitly identifies the scope as being regional. I'll need to specify a `locationType` of \"REGIONAL\", and I'll include the relevant region code, \"15\" for Campania, in the `locationCodes` array. Lastly, the guaranteed service times are listed as \"05:30-08:30\" and \"16:30-19:30\"; these will go into the `guaranteedTimes` array. All of this must be precisely formatted within the JSON schema, of course.\n\n\n",
+    "tokens": {
+      "input": 1358,
+      "output": 140,
+      "total": 1816
+    }
+  }
+}

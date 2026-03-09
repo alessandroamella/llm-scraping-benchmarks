@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 26111,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007465,
+      "outputCost": 0.0006264,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00070105
+    },
+    "hash": "63ff5b4c1f078d2ca79856a2b8656865",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_di_24_ore_venerdi_13_dicembre_2024_aggiornamento.html",
+    "thoughts": "**Determining upcoming strike details**\n\nI need to output JSON based on the schema regarding an announcement of a new strike. The content indicates a 24-hour strike on Friday, December 13, 2024, and it's confirmed as an update due to a recent decision. The date states December 12, 2024, mentioning \"domani 13 dicembre\" to indicate it's upcoming. It also provides guaranteed service times during the strike. I need to decide that isStrike is true based on this information.",
+    "tokens": {
+      "input": 1493,
+      "output": 1566,
+      "total": 3059
+    }
+  }
+}

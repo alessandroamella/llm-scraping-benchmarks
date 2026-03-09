@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-20 00:00:00",
+      "endDate": "2025-06-21 00:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 32542,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000536,
+      "outputCost": 0.0008588,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0013948
+    },
+    "hash": "568c37cd17bd9e0e91653ad745d91594",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_24h_venerdi_20_giugno_2025.html",
+    "thoughts": "**Extracting strike data**\n\nI'm focusing on extracting the required fields for the strike data. The start date should be in the format 'yyyy-MM-dd HH:mm:ss', and since it mentions a 24-hour strike on June 20, 2025, I deduce the start time is 00:00 on that day. The article specifies a guaranteed service period, which doesn't affect the strike duration. So, the start date would indeed be 2025-06-20 00:00:00, lasting until 24:00 on the same day.",
+    "tokens": {
+      "input": 10720,
+      "output": 2147,
+      "total": 12867
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-01-13 00:00:00",
+      "endDate": "2026-01-13 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7418,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000195,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.0006435,
+      "cachedCost": 0,
+      "totalCost": 0.001023
+    },
+    "hash": "bef1ec69c08792c0f183c0adbb120d71",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2026-1-13-sciopero-nazionale-del-trasport.html",
+    "thoughts": "**Strike Announcement Analysis: A Deep Dive**\n\nOkay, let's break this down. My primary task is to process this text and determine if it's a strike announcement, and if so, to extract the relevant details. I'm going to set `isStrike` to true or false accordingly. The input is an announcement, so, yes, it’s a strike. Easy, `isStrike: true`. Now, it’s time to fill in the specific strike data points.\n\nThe page title itself, \"SCIOPERO NAZIONALE PERSONALE AUTOFERROTRANVIERI,\" is a pretty clear indicator, but I'm not just relying on the title, I'm verifying with the body text. Let's look at the date: \"13 GENNAIO 2026\". That translates to January 13th, 2026. Perfect. I'll need to format the dates. The duration is stated as \"24 hours,\" and the scope is \"NAZIONALE\" – National. Good, that makes my `locationType`: \"NATIONAL\". Since it's national, I don't need any regional codes.\n\nNow, those guaranteed times. We have \"dalle ore 6.00 alle ore 9.00 e dalle ore 18.00 alle ore 21.00\". That’s from 6 AM to 9 AM and 6 PM to 9 PM. Gotta format this into an array of strings. I've got it, `guaranteedTimes`: [\"06:00-09:00\", \"18:00-21:00\"].\n\nLastly, the start and end dates. Since it's a 24-hour strike on January 13th, the `startDate` is \"2026-01-13 00:00:00\" and the `endDate` is \"2026-01-13 23:59:59\". So, based on the entire analysis, `isStrike: true` and my data structure now looks like this:\n\n`strikeData`:\n*   `startDate`: \"2026-01-13 00:00:00\"\n*   `endDate`: \"2026-01-13 23:59:59\"\n*   `locationType`: \"NATIONAL\"\n*   `guaranteedTimes`: [\"06:00-09:00\", \"18:00-21:00\"]\n\nDone. Data extracted, validated, and formatted. On to the next task!\n\n\n",
+    "tokens": {
+      "input": 780,
+      "output": 123,
+      "total": 1332
+    }
+  }
+}

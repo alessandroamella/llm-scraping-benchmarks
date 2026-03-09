@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 11342,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0009452,
+      "outputCost": 0.00019,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0011352
+    },
+    "hash": "ceee694a5bddeaaa54879367d7f4e174",
+    "sourceFile": "sciopero_generale_aperte_le_metropolitane_e_la_ferrovia_termini_centocelle.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to figure out if the document is announcing a new or upcoming strike. The title suggests a general strike is happening, and the content confirms that a national general strike is already in progress, with updates about public transport in Rome. It says things like metro services continue, but surface transport has unreliable service until 1 PM. Since this is not an announcement for an upcoming strike, I'll set isStrike to false.",
+    "tokens": {
+      "input": 18904,
+      "output": 475,
+      "total": 19379
+    }
+  }
+}

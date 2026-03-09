@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7950,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005165,
+      "outputCost": 0.0001288,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00018045
+    },
+    "hash": "705bc8e2476ee7a1534eb94982a2d83c",
+    "sourceFile": "sciopero_nazionale_trasporto_pubblico_ha_aderito_101_personale_atac.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to output a JSON response for strike extraction. First, I have to verify if the document indicates a new or upcoming strike. The title and content are in Italian, and the information discusses the adhesion rate for a national public transport strike, which was 10.1%. Since this is about a current strike, it's an update rather than an announcement of a new strike. Thus, I’ll set isStrike to false and format it correctly as {\"isStrike\": false}.",
+    "tokens": {
+      "input": 1033,
+      "output": 322,
+      "total": 1355
+    }
+  }
+}

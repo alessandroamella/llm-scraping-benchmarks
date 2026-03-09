@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:01:00",
+      "endDate": "2025-12-12 21:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 16110,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005173,
+      "outputCost": 0.0005624,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0010797
+    },
+    "hash": "9d1e2c599eb4d58a295f5541c07d6fd4",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-12-12-sciopero-nazionale-del-traspor.html",
+    "thoughts": "**Extracting strike data**\n\nI need to format the information according to the Strike extraction format in JSON. The content is about an upcoming nationwide rail strike in Italy scheduled for December 12, 2025, from 00:01 to 21:00. It affects services like Alta Velocità and mentions companies like Gruppo FS Italiane and Italo Nuovo Trasporto Viaggiatori. I should indicate that a strike will occur, so isStrike will be true while extracting essential data like startDate, endDate, locationType, locationCodes, and the guaranteedTimes array.",
+    "tokens": {
+      "input": 10346,
+      "output": 1406,
+      "total": 11752
+    }
+  }
+}

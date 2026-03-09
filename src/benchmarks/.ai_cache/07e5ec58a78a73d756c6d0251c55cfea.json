@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 28673,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000682,
+      "outputCost": 0.0006904,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0007586
+    },
+    "hash": "07e5ec58a78a73d756c6d0251c55cfea",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_24h_per_venerdi_12_novembre_2025.html",
+    "thoughts": "**Setting time parameters**\n\nI'm working on defining guaranteed times as an array of strings in the \"HH:mm-HH:mm\" format. Based on the information, it seems like I need to use the two time ranges: 05:30-08:30 and 16:30-19:30. So, I'll represent that as [\"05:30-08:30\",\"16:30-19:30\"]. For the start and end dates, since this is a 24-hour strike on December 12, 2025, I’ll set the start date to \"2025-12-12 00:00:00\" and the end date to \"2025-12-12 23:59:59\".",
+    "tokens": {
+      "input": 1364,
+      "output": 1726,
+      "total": 3090
+    }
+  }
+}

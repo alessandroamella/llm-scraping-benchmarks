@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-01-12 03:00:00",
+      "endDate": "2026-01-13 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "08",
+        "07",
+        "03",
+        "01",
+        "05"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 30215,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00052075,
+      "outputCost": 0.0010856,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00160635
+    },
+    "hash": "68fe3768cf209d14fdcaeae72ae6fabb",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2026-1-12-sciopero-del-personale-di-treno.html",
+    "thoughts": "**Evaluating passport guidelines**\n\nThe passport guidelines mention that we need location codes, specifically 2-digit ISTAT for regions or to omit them if there’s a national strike. Firstly, I need to check if there's a regional strike across regions like Emilia Romagna. The codes are a bit tricky: for example, 08 is for Emilia Romagna, and other codes include 07 for Liguria and 03 for Lombardia. So I’ll compile the location codes as [\"08\", \"07\", \"03\", \"01\", \"05\"], but the order isn't specified.",
+    "tokens": {
+      "input": 10415,
+      "output": 2714,
+      "total": 13129
+    }
+  }
+}

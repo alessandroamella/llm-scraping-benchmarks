@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-10 19:32:00",
+      "endDate": "2025-01-10 23:32:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9494,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.001903,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.0007905,
+      "cachedCost": 0,
+      "totalCost": 0.0028165
+    },
+    "hash": "eaf9a4aff3547ff89e4988b700f2f9a1",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_4_ore_10_gennaio_2025.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, here's the breakdown of this task. I need to determine if this text constitutes an announcement of an upcoming strike and, if so, extract the relevant strike data. The input is a web page content from EAV (Ente Autonomo Volturno), mentioning a 4-hour strike on Friday, January 10, 2025.\n\nFirst, I'll need to confirm that this is indeed an *announcement* of an upcoming strike. The criteria require me to output `isStrike: true` and then populate a `strikeData` object if it is. If it's something else - cancellation, past strike, real-time update, etc. - I'll output `isStrike: false`. The output must be valid JSON.\n\nThe text itself, \"Linee Suburbane: Avviso di sciopero di 4 ore, venerdì 10 gennaio 2025\" and \"Si comunica che per il giorno 10 Gennaio 2025 la O.S. CONF.A.I.L. ha proclamato uno sciopero nazionale di 4 ore, dalle ore 19:32 alle ore 23:32,\" clearly indicates an upcoming strike. Therefore, the answer is: `isStrike: true`.\n\nNow, the `strikeData` needs to be defined. Let's break it down:\n\n*   `startDate`: The text specifies the strike will start on \"10 Gennaio 2025 dalle ore 19:32\", which translates to \"2025-01-10 19:32:00\".\n*   `endDate`: Similarly, the text states the strike ends at \"23:32\", which means \"2025-01-10 23:32:00\".\n*   `locationType`: The text explicitly says \"sciopero nazionale\" meaning \"national strike\".\n*   `locationCodes`: The schema specifies that when `locationType` is NATIONAL, `locationCodes` MUST BE OMITTED.\n\nSo, I'll structure the output as follows:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-01-10 19:32:00\",\n    \"endDate\": \"2025-01-10 23:32:00\",\n    \"locationType\": \"NATIONAL\"\n  }\n}\n```\n\nThat's valid JSON. There's no extraneous text, and it adheres to the schema.\n\n*A quick self-check is in order!* The prompt makes a reference to EAV being the public transport company of Campania. However, the text clearly indicates a \"sciopero nazionale\", i.e. national strike. So I will follow the text. The prompt does not overrule the text. My analysis is complete.\n\n\n",
+    "tokens": {
+      "input": 7612,
+      "output": 82,
+      "total": 8221
+    }
+  }
+}

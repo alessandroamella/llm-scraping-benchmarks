@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5484,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00047025,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.0006795,
+      "cachedCost": 0,
+      "totalCost": 0.00133425
+    },
+    "hash": "ada98113f6d6a1390eb204b03bb1646c",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_24_h_venerdi_12_dicembre_2025.html",
+    "thoughts": "**Strike Announcement Analysis**\n\nOkay, let's break this down. My task is to analyze this text and identify if it's a strike announcement. The input is \"Linee Vesuviane: Avviso di sciopero di 24 h venerdì 12 Dicembre 2025 - EAV srl.\" Right away, the word \"sciopero\" (strike) suggests we're dealing with a strike, so I'll set `isStrike` to true. Now, I need to extract the relevant details.\n\nFirst, the date: Friday, December 12, 2025. Converting that to a standard format, I get \"2025-12-12 00:00:00\". Since the text specifies a 24-hour strike, the end date will be \"2025-12-12 23:59:59\". The text indicates this is a \"sciopero generale nazionale\", so the `locationType` should be \"NATIONAL\".\n\nNext, the guaranteed times. The text mentions guaranteed bands: 05:30-08:30 and 16:30-19:30.  These should be stored as `guaranteedTimes`: [\"05:30-08:30\", \"16:30-19:30\"]. The duration of 24 hours confirms the start and end times calculated previously.\n\nLet's double-check the data structure: `isStrike` is a boolean, and yes, it is True. For `strikeData`, I have `startDate`: \"2025-12-12 00:00:00\", `endDate`: \"2025-12-12 23:59:59\", `locationType`: \"NATIONAL\", and `guaranteedTimes`: [\"05:30-08:30\", \"16:30-19:30\"]. All of this aligns with the expected pattern. This looks like a solid extraction.\n\n\n",
+    "tokens": {
+      "input": 1881,
+      "output": 123,
+      "total": 2457
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-10 19:32:00",
+      "endDate": "2025-01-10 23:32:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19681,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00034435,
+      "outputCost": 0.0006288,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00097315
+    },
+    "hash": "9876a11db73370aee0afc494abd0200d",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_di_4_ore_giorno_10_gennaio_2025.html",
+    "thoughts": "**Clarifying event details**\n\nThe date is listed as \"Data: 5 Gennaio 2025,\" but the actual event occurs on January 10, 2025. We’ll represent that in the format 2025-01-10. \n\nFor locationType, I see it’s a \"sciopero nazionale di 4 ore,\" meaning it should be \"NATIONAL.\" The locationCodes should indeed be null based on the specifications. I need to set \"locationCodes\": null in JSON, as required.  \n\nLastly, guaranteedTimes needs to be structured as an array of strings in the HH:mm-HH:mm format based on the “fasce di garanzia” details.",
+    "tokens": {
+      "input": 6887,
+      "output": 1572,
+      "total": 8459
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-20 00:00:00",
+      "endDate": "2025-06-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22998,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00058095,
+      "outputCost": 0.0005716,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00115255
+    },
+    "hash": "e28db4b2fe3e818075bc7b892f96125f",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_24h_venerdi_20_giugno_2025.html",
+    "thoughts": "**Determining date and time formats**\n\nI’m working on the needed date format for the task. It specifies a 24-hour window on June 20, 2025, from midnight to 23:59. There’s a bit of confusion since sometimes it can start at 00:01, but it clearly says 24 hours, so I’ll use 00:00 to 23:59 for both startDate and endDate.\n\nNow, I'll also consider the guaranteed times mentioned, which occur between 05:30 to 08:30 and 16:30 to 19:30.",
+    "tokens": {
+      "input": 11619,
+      "output": 1429,
+      "total": 13048
+    }
+  }
+}

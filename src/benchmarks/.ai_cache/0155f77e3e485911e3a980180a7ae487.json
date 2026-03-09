@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7457,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005445,
+      "outputCost": 0.0001168,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00017125
+    },
+    "hash": "0155f77e3e485911e3a980180a7ae487",
+    "sourceFile": "sciopero_trasporto_pubblico_chiusa_metro_aperte_b_c_termini_centocelle.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to output JSON for strike extraction. This document announces an ongoing public transport strike in Rome. It reports ongoing conditions, indicating it isn’t an upcoming strike. Given the instructions, I need to set `isStrike` to false since it offers updates on an existing situation. \n\nI’ll ensure to format the JSON correctly with just that field, and no strikeData field included. \n\nSo the final output will be:  \n```json\n{\n  \"isStrike\": false\n}\n```",
+    "tokens": {
+      "input": 1089,
+      "output": 292,
+      "total": 1381
+    }
+  }
+}

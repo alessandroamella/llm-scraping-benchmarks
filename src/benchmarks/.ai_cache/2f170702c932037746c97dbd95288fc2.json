@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:01:00",
+      "endDate": "2025-12-12 21:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4963,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00017225,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.0006045,
+      "cachedCost": 0,
+      "totalCost": 0.00089975
+    },
+    "hash": "2f170702c932037746c97dbd95288fc2",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-12-12-sciopero-nazionale-del-traspor.html",
+    "thoughts": "**Analyzing the Trenitalia Strike Announcement**\n\nOkay, let's break this down. My task is clear: I need to analyze this text to identify strike information related to Trenitalia, the Italian railways. I've received the text: \"SCIOPERO NAZIONALE DEL TRASPORTO FERROVIARIO\", dated \"12 DICEMBRE 2025,\" and specifying a duration of \"Dalle ore 00:01 alle ore 21:00 di venerdì 12 dicembre 2025.\"\n\nFirst, I need to confirm this is an actual strike announcement. The phrase \"SCIOPERO NAZIONALE\" (National Strike) is a dead giveaway. So, I'll set `isStrike` to `true` – that's the primary condition met.\n\nNow, for the details. The page title itself confirms the subject matter. I've extracted the core information: the date, which is Friday, December 12, 2025, and the time frame, running from 00:01 to 21:00. Importantly, the scope is \"NAZIONALE\" which translates to \"NATIONAL,\" making this a national strike.\n\nI'm translating this into a JSON format. The `startDate` will be \"2025-12-12 00:01:00,\" and the `endDate` is \"2025-12-12 21:00:00.\" Since the strike is national, the `locationType` is \"NATIONAL.\" There's no specific location data within the text, so `locationCodes` will be omitted. And, there are no mentions of any guaranteed services, therefore `guaranteedTimes` should be left out.\n\nFinally, the output will be:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-12-12 00:01:00\",\n    \"endDate\": \"2025-12-12 21:00:00\",\n    \"locationType\": \"NATIONAL\"\n  }\n}\n```\n\nThis is a straightforward extraction.\n\n\n",
+    "tokens": {
+      "input": 689,
+      "output": 82,
+      "total": 1174
+    }
+  }
+}

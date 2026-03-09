@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-01-19 00:00:00",
+      "endDate": "2026-01-19 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 27990,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008765,
+      "outputCost": 0.0006912,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00077885
+    },
+    "hash": "b015369a9daaf386ba31ee0bf356adef",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_aziendale_di_24_h_lunedi_19_gennaio_2026.html",
+    "thoughts": "**Classifying strike announcement**\n\nI need to classify whether isStrike should be true based on the content provided. It's about a company strike affecting operating staff lines Vesuviane on January 19, 2026, for 24 hours. The text indicates that it’s a future strike announcement, so I can conclude that isStrike should indeed be true. Then I’ll need to extract the strike details: startDate and endDate in the required format of 'yyyy-MM-dd HH:mm:ss'.",
+    "tokens": {
+      "input": 1753,
+      "output": 1728,
+      "total": 3481
+    }
+  }
+}

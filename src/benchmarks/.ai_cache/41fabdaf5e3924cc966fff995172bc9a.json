@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-01-13 00:00:00",
+      "endDate": "2026-01-13 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 27131,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00074705,
+      "outputCost": 0.0006816,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00142865
+    },
+    "hash": "41fabdaf5e3924cc966fff995172bc9a",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2026-1-13-sciopero-nazionale-del-trasport.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to output JSON according to the strike_extraction schema. This document is indeed announcing an upcoming strike. The title translates to \"NATIONAL STRIKE OF AUTOTRANSPORTER EMPLOYEES,\" and it talks about a 24-hour strike on January 13, 2026. It mentions potential changes to bus services and outlines guaranteed times for Trenitalia services. There's also information about changes around the strike period, confirming it's announcing future plans for the strike.",
+    "tokens": {
+      "input": 14941,
+      "output": 1704,
+      "total": 16645
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-28 08:20:00",
+      "endDate": "2025-01-28 12:20:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "08:20-12:20"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18794,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00057495,
+      "outputCost": 0.0007816,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00135655
+    },
+    "hash": "326f29441530f1273e67f3c8f57a3878",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_4_ore_martedi_28_gennaio_2025.html",
+    "thoughts": "**Deciding Date and Location Type**\n\nI'm figuring out how to set the startDate and endDate using the specified format 'yyyy-MM-dd HH:mm:ss.' For the date, it’s 28 January 2025, and the times go from 08:20 to 12:20. So, startDate is 2025-01-28 08:20:00 and endDate is 2025-01-28 12:20:00. Now for the locationType, \"sciopero aziendale\" suggests it's within a single company, likely \"NATIONAL,\" but it’s corporate-wide within EAV S.r.l., so it’s not regional. The requirements are clear: the locationCodes must be present as an array or null.",
+    "tokens": {
+      "input": 11499,
+      "output": 1954,
+      "total": 13453
+    }
+  }
+}

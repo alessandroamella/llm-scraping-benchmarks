@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7136,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00039225,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.0004845,
+      "cachedCost": 0,
+      "totalCost": 0.00108675
+    },
+    "hash": "987f09f6c4a7269ae0e9d2eee8bcd95d",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_24_ore_del_13_dicembre_2024_aggiornamento.html",
+    "thoughts": "**EAV Strike Analysis: December 13, 2024**\n\nOkay, let's break this down. We have an EAV strike scheduled for December 13th, 2024. The duration is a standard 24 hours, starting at midnight that day. The key here is the region: Campania, specifically identified by the location code \"15\". I need to make sure I take the regional aspect into account when I use this data.\n\nThe system flagged \"isStrike\" as true which is what I would expect. The guaranteed service times are 05:30 to 08:30 and 16:30 to 19:30. These times are crucial; they dictate when reliable transportation will be available, and I need to be sure any systems using this data acknowledge that.\n\nThe date formatting is standard, using \"2024-12-13 00:00:00\" as the start and then, \"2024-12-13 23:59:59\" for the end. That's a clean way to define a 24-hour period.\n\nFurthermore, the data structure looks correct in the `strikeData` object. I see the start and end dates defined, the region is properly identified as \"REGIONAL\", and the location codes array correctly lists \"15\" for Campania. The guaranteed times are also present, correctly formatted.\n\nI confirmed that the JSON is valid and importantly, there are no extraneous comments or control tokens that could cause parsing issues. The data conforms to the schema I expect and the format is accurate, so the output is reliable and ready to be integrated into any related systems.\n\n\n",
+    "tokens": {
+      "input": 1569,
+      "output": 140,
+      "total": 2032
+    }
+  }
+}

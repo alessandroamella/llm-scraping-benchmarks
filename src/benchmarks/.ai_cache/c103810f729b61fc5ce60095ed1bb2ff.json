@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 17945,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005326,
+      "outputCost": 0.0005688,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0011014
+    },
+    "hash": "c103810f729b61fc5ce60095ed1bb2ff",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_24h_venerdi_28_novembre_2025.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to output JSON according to the strike_extraction schema. The document content is in Italian, and the page title translates to a 24-hour strike notice for November 28, 2025. The article shows the date November 23, 2025, and clearly announces a general national strike by the O.S. USB on that date. It discusses the strike's motivations and mentions guaranteed service times, confirming that this is indeed an announcement of an upcoming strike.",
+    "tokens": {
+      "input": 10652,
+      "output": 1422,
+      "total": 12074
+    }
+  }
+}

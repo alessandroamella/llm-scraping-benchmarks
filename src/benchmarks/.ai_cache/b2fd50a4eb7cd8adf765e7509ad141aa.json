@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 09:00:00",
+      "endDate": "2024-12-13 13:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7729,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000286,
+      "outputCost": 0.0001395,
+      "thinkingCost": 0.000882,
+      "cachedCost": 0,
+      "totalCost": 0.0013075
+    },
+    "hash": "b2fd50a4eb7cd8adf765e7509ad141aa",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_di_4_ore_del_13_dicembre_2024.html",
+    "thoughts": "**My Analysis of the Strike Announcement**\n\nOkay, let's break this down. The input clearly indicates a strike, so `isStrike` is definitely `true`. The core of this is the announcement of a strike affecting EAV in Campania. My focus is on extracting and structuring the details according to the provided instructions.\n\nFirst, I identified the critical dates and times. The strike is scheduled for December 13, 2024, specifically from 09:00 to 13:00. Those seem straightforward: `startDate` is \"2024-12-13 09:00:00\" and `endDate` is \"2024-12-13 13:00:00\". Format is all good.\n\nNow, the location. The text mentions a \"general national strike,\" but the prompt *specifically* asks about EAV (Campania), which operates within region 15. The prompt's instructions are clear: if the location is for EAV Campania, location type needs to be regional. So, even if the phrasing *suggests* a broader national scope, I'm going with `locationType` as \"REGIONAL\" and `locationCodes` as [\"15\"] to accurately reflect the scope of this notice and the prompt.\n\nThe prompt mentions guaranteed service times (\"fasce di garanzia\"), but the provided text only gives the *strike* times. No specific guarantee ranges are provided as instructed (e.g., 06:00-09:00). Without explicit ranges in the text, I will omit any guaranteed service information.\n\nFinally, I'll double-check my extracted data against the specified JSON format and schema to ensure everything is compliant. No issues there, everything looks good and properly formatted.\n\n\n",
+    "tokens": {
+      "input": 1144,
+      "output": 93,
+      "total": 1825
+    }
+  }
+}

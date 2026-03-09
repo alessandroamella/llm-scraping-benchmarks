@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5846,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005345,
+      "outputCost": 0.0001672,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00022065
+    },
+    "hash": "9c82a9e052c429c1ec681f1aeea3904a",
+    "sourceFile": "sciopero_21_marzo_metropolitane.html",
+    "thoughts": "**Finalizing output format**\n\nI think I need to set `isStrike` to false and deliver the output as this JSON: `{\"isStrike\": false}`. The required format is clear. The documentation mentions \"nazione... 24 ore,\" but the ongoing strike in public transport confirms that `isStrike` should indeed be false. I’ll make sure there’s proper punctuation. It’s important to stick strictly to the format with no extra text, so I’ll go ahead and prepare the final output now!",
+    "tokens": {
+      "input": 1069,
+      "output": 418,
+      "total": 1487
+    }
+  }
+}

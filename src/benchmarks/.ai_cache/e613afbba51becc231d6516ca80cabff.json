@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-16 03:00:00",
+      "endDate": "2025-06-17 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 10487,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000284,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.0007485,
+      "cachedCost": 0,
+      "totalCost": 0.0012425
+    },
+    "hash": "e613afbba51becc231d6516ca80cabff",
+    "sourceFile": "strike-detail-luned--16-giugno-sciopero-dei-treni-regionali.html",
+    "thoughts": "**Strike Information Extraction - My Thought Process**\n\nOkay, here's what I need to do. I've been given text about a train strike and my task is to extract the relevant strike information and present it as a single, parseable JSON object. The focus here is regional trains in Italy, specifically Trenord/Lombardia. I have a very specific schema I need to follow: `isStrike`, and if true, a `strikeData` object with `startDate`, `endDate`, `locationType`, `locationCodes`, and `guaranteedTimes`. Date and time formats are critical - `yyyy-MM-dd HH:mm:ss` for dates and \"HH:mm-HH:mm\" for guaranteed times, which is pretty standard. The `locationType` should be \"REGIONAL\" which corresponds to location code \"03\" for Trenord/Lombardia. I need *just* the JSON; no surrounding text or extraneous data.\n\nLet's break this down from the provided text. The page title and the strike announcement are almost identical which indicates we can extract the strike start date from this. The news date is 2025-06-13, and that provides context. The announcement states \"Lunedì 16 giugno\" which translates to Monday, June 16, 2025. I need to make the dates and times conform to the specified formatting.\n\nFrom the strike duration details, \"Dalle ore 3 di lunedì 16 alle ore 2 di martedì 17 giugno\" gives me both the start and end times. So, the strike starts at 03:00 on June 16, 2025, and ends at 02:00 on June 17, 2025. That gives me my `startDate` and `endDate`. The \"guaranteed times\" section - \"Negli orari 6-9 e 18-21\" – gives me the periods when trains *will* be running. These translate to \"06:00-09:00\" and \"18:00-21:00\". These need to be formatted correctly and put into the `guaranteedTimes` array.\n\nSince this is a Trenord strike in Lombardia, the `locationType` is definitely \"REGIONAL\", and the `locationCodes` is \"03\". Now I can construct the JSON.\n\nI have:\n\n*   `isStrike`: true\n*   `strikeData`:\n    *   `startDate`: \"2025-06-16 03:00:00\"\n    *   `endDate`: \"2025-06-17 02:00:00\"\n    *   `locationType`: \"REGIONAL\"\n    *   `locationCodes`: [\"03\"]\n    *   `guaranteedTimes`: [\"06:00-09:00\", \"18:00-21:00\"]\n\nI can confirm this matches the schema, it's valid JSON, and contains no additional text. Job done.\n\n\n",
+    "tokens": {
+      "input": 1136,
+      "output": 140,
+      "total": 1775
+    }
+  }
+}

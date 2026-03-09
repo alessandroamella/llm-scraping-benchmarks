@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-24 00:00:00",
+      "endDate": "2025-02-24 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7354,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.002542,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.000888,
+      "cachedCost": 0,
+      "totalCost": 0.0035785
+    },
+    "hash": "5d023624046cc3c4a1ed1f5f1355e3ab",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_24h_lunedi_24_febbraio_2025.html",
+    "thoughts": "**My Analysis of the EAV Strike Information**\n\nOkay, so I need to extract strike information from this EAV webpage. The objective is clear: generate a clean JSON output, adhering to a specific format. The question I need to answer is: Is this an upcoming strike, and if so, what are the details?\n\nThe page title, \"Linee Suburbane: Avviso di sciopero 24h lunedì 24 febbraio 2025,\" is the first clue. It screams \"strike\"! Specifically, it's a 24-hour strike set for Monday, February 24, 2025. That title, combined with the content that confirms the USB union is organizing this national strike for 24 hours confirms this.\n\nI'm thinking, based on common practice and a 24-hour duration, the strike will likely span the full day: from 00:00:00 to 23:59:59 on February 24th, 2025.\n\nNow, the format calls for guaranteed service times. The text mentions \"fasce di garanzia\" and provides the last and first guaranteed train departures, with specific times like 06:03, 07:47, 05:10, and 06:21. The issue is, I don't see any explicit time ranges like \"06:00-09:00\" listed. The schema *specifically* calls for time *ranges* (e.g., \"06:00-09:00\"). I'm torn on how to handle this, as the prompt asks for the time ranges, not the individual trains. If I don't see the time ranges, I should omit the key.\n\nTherefore, my final JSON output will be straightforward: the strike *is* happening, the dates are defined, and the location is national. Since no time ranges are provided, I'll omit the `guaranteedTimes` field.\n\n\n",
+    "tokens": {
+      "input": 10168,
+      "output": 99,
+      "total": 10859
+    }
+  }
+}

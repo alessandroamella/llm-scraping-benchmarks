@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-05-11 00:00:00",
+      "endDate": "2025-05-11 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24874,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005421,
+      "outputCost": 0.0006884,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0012305
+    },
+    "hash": "672044c4705003cbffa539a01ffc680a",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_24h_domenica_11_maggio_2025.html",
+    "thoughts": "**Formatting date and time**\n\nI need to format dates as 'yyyy-MM-dd HH:mm:ss'. The article mentions \"Per il giorno 11 maggio 2025\" and includes \"Data: 6 Maggio 2025.\" The strike lasts \"24 ore,\" meaning 24 hours, but the exact times aren't fully listed, just some guaranteed service times like 5:30-8:30 and 16:30-19:30. So, I’ll assume the strike startDate should be set to \"2025-05-11 00:00:00\" and endDate to \"2025-05-11 23:59:59\" to match the 24-hour duration.",
+    "tokens": {
+      "input": 10842,
+      "output": 1721,
+      "total": 12563
+    }
+  }
+}

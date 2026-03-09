@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 29479,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00009625,
+      "outputCost": 0.0009044,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00100065
+    },
+    "hash": "6dec21552385cb1ab56bc398f99fc8a4",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_24_ore_venerdi_13_dicembre_2024.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to output JSON in the strike_extraction format. The document states a 24-hour strike on Friday, December 13, 2024, which confirms it's an announcement for an upcoming strike. So, isStrike becomes true. Now, I'll extract strikeData with start and end dates. As for locationType, since it pertains to the Linee Vesuviane area, I’ll consider whether it’s \"REGIONAL\" or \"NATIONAL\". The service guarantee times are during the strike, but I need to confirm overall classifications.",
+    "tokens": {
+      "input": 1925,
+      "output": 2261,
+      "total": 4186
+    }
+  }
+}

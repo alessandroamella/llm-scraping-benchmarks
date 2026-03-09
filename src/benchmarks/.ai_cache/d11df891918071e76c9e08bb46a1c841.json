@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8405,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.001904,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0003855,
+      "cachedCost": 0,
+      "totalCost": 0.0023045
+    },
+    "hash": "d11df891918071e76c9e08bb46a1c841",
+    "sourceFile": "eav_informa_servizio_automobilistico_integrativo_vico_equense_monte_faito_3.html",
+    "thoughts": "**Analyzing the EAV Website Content for a Strike Announcement**\n\nOkay, here's what I've got. My task is to figure out if this EAV website content is announcing a strike related to the \"Servizio automobilistico integrativo Vico Equense-Monte Faito.\" The input is the text from that page. I need to output a JSON object indicating whether a strike is declared (`isStrike` = `true`) or not (`isStrike` = `false`).\n\nLooking at the content, the title is \"EAV Informa - Servizio automobilistico integrativo Vico Equense-Monte Faito.\" It specifically mentions an *interruption* of the Funivia del Faito (Faito Cableway) and details a *supplementary bus service* (\"servizio di collegamento bus diretto\") starting April 28, 2025. That date is a key piece of data.\n\nThis clearly isn't a strike announcement. It's a notice about a *replacement* bus service due to the cableway's unavailability. It's a service update, not a labor dispute.\n\nTherefore, `isStrike` must be `false`.\n\nNow, the user wants a simple, parseable JSON array as the output. Considering the objective, an array containing a single JSON object with the boolean value fits the requirement perfectly.\nSo, I'm returning `[{\"isStrike\": false}]`. That's it, case closed.\n\n\n",
+    "tokens": {
+      "input": 7616,
+      "output": 10,
+      "total": 7883
+    }
+  }
+}

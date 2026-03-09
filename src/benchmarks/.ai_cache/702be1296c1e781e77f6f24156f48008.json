@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-09-22 00:00:00",
+      "endDate": "2025-09-22 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 25540,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00053215,
+      "outputCost": 0.00082,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00135215
+    },
+    "hash": "702be1296c1e781e77f6f24156f48008",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_generale_nazionale_lunedi_22_settembre_2025.html",
+    "thoughts": "**Evaluating strike date formatting**\n\nI need to think about how to format \"startDate\" and \"endDate\" for a strike. If it's on one day with time windows, I might set startDate to 2025-09-22 00:00:00 and endDate to 2025-09-22 23:59:59. The instructions say dates must be in 'yyyy-MM-dd HH:mm:ss' format. However, I'm wondering if I should stick to these times or adjust them, since it mentions specific service times. It seems like it probably makes sense to go with the dates as I suggested.",
+    "tokens": {
+      "input": 10643,
+      "output": 2050,
+      "total": 12693
+    }
+  }
+}

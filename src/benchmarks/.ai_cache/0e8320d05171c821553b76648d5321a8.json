@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-07-23 09:00:00",
+      "endDate": "2025-07-23 11:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6843,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00019475,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.0005085,
+      "cachedCost": 0,
+      "totalCost": 0.00085175
+    },
+    "hash": "0e8320d05171c821553b76648d5321a8",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_di_2_ore_mercoledi_23_luglio_2025.html",
+    "thoughts": "**Analyzing a Strike Announcement: A Detailed Breakdown**\n\nOkay, let's process this EAV (Campania, 15) strike notice. The task is clear: determine if this is a valid strike announcement and extract the relevant information. My primary criteria, as always, is that it pertains to an *upcoming* strike.\n\nThe input is \"Avviso di sciopero di 2 ore mercoledì 23 luglio 2025,\" and I immediately need to extract the pertinent details. The text clearly indicates a strike scheduled for July 23, 2025. It specifies a duration of 2 hours, from 09:00 to 11:00. Importantly, this strike is localized to the EAV system within the Campania region (region 15).\n\nMy next step is to format these extracted details into a structured JSON output. I'll flag `isStrike` as `true` because, based on the date, this is indeed a future strike. Now, I need to populate the `strikeData` object. I know to create the data object, and the attributes within that object:\n\n*   `startDate`:  \"2025-07-23 09:00:00\" - this represents the exact start time of the strike.\n*   `endDate`: \"2025-07-23 11:00:00\" - this is the end time of the strike.\n*   `locationType`: \"REGIONAL\" - since it's an EAV strike, impacting regional services.\n*   `locationCodes`: [\"15\"] - the specific region code for Campania.\n*   `guaranteedTimes`: The notice doesn't specify any guaranteed services, therefore I'll leave the `guaranteedTimes` key out of the `strikeData` object. It states \"Non saranno garantite le corse durante l’orario di sciopero\", meaning the text *implies* that no guarantees apply or were not specified, and so I should omit it.\n\nThe output will be a JSON structure containing `isStrike = true` and the extracted `strikeData` as outlined above. That's a clean, complete response to this text analysis task.\n\n\n",
+    "tokens": {
+      "input": 779,
+      "output": 99,
+      "total": 1217
+    }
+  }
+}

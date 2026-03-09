@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 35007,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00056435,
+      "outputCost": 0.0012348,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00179915
+    },
+    "hash": "90bca59161be6bc236acf700e2ebaa6e",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_di_24_ore_del_13_dicembre_2024_aggiornamento.html",
+    "thoughts": "**Processing strike announcement**\n\nI need to format this information in JSON based on the schema. The content is Italian and refers to a 24-hour strike announcement for December 13, 2024. It's an update, which details that the strike for tomorrow, December 13, is back to a 24-hour period due to the acceptance by the TAR of Lazio. The date mentioned in the content is December 12, 2024, making this timely information to include.",
+    "tokens": {
+      "input": 11287,
+      "output": 3087,
+      "total": 14374
+    }
+  }
+}

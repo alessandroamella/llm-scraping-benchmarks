@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-05-11 00:00:00",
+      "endDate": "2025-05-11 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 10065,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0025605,
+      "outputCost": 0.000189,
+      "thinkingCost": 0.0013545,
+      "cachedCost": 0,
+      "totalCost": 0.004104
+    },
+    "hash": "3e868a587d58232f568a38dcd6d4bc6e",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_24h_domenica_11_maggio_2025.html",
+    "thoughts": "**Strike Announcement Analysis for EAV (Campania)**\n\nOkay, here's the breakdown. My task is to determine if this document is a strike announcement for EAV in Campania and, if so, extract the relevant strike details in JSON format. The document looks to be correctly formatted; I see no comments or control tokens. The array/object structure is as it should be, a clean, well-formed JSON object.\n\nFirst, I examined the document. The title, \"Linea Metropolitana: avviso di sciopero 24h domenica 11 maggio 2025,\" is quite explicit. The announcement date is May 6, 2025, and the strike is scheduled for May 11, 2025. The text confirms the strike, mentioning Or.S.A. calling a 24-hour strike action on May 11, 2025. Given the announcement and the future strike date, the `isStrike` flag will definitely be true.\n\nNow, I'll extract the strike details to populate the `strikeData` object. The strike is for May 11, 2025, and is a 24-hour strike, so the `startDate` is \"2025-05-11 00:00:00\" (I'll assume it starts at the beginning of the day) and the `endDate` is \"2025-05-11 23:59:59\". The strike affects EAV in Campania, which corresponds to the regional code \"15\", therefore the `locationType` is \"REGIONAL\" and `locationCodes` is `[\"15\"]`. Finally, the document specifies guaranteed service times: \"05:30-08:30\" and \"16:30-19:30\". I'll put those into the `guaranteedTimes` array.\n\nTherefore, the final output, the JSON object, will be:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-05-11 00:00:00\",\n    \"endDate\": \"2025-05-11 23:59:59\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"15\"],\n    \"guaranteedTimes\": [\"05:30-08:30\", \"16:30-19:30\"]\n  }\n}\n```\n\n\n",
+    "tokens": {
+      "input": 10242,
+      "output": 126,
+      "total": 11271
+    }
+  }
+}

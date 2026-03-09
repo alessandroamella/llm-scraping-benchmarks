@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-08 00:00:00",
+      "endDate": "2025-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "20"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 29575,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005804,
+      "outputCost": 0.0005924,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0011728
+    },
+    "hash": "1aab71905a5d7aef0ff0697457022df1",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-10-8-linee-della-sardegna--treni-gar.html",
+    "thoughts": "**Clarifying strike details**\n\nI'm checking the date range mentioned: \"In vigore: 8 OTTOBRE 2025 - 13 DICEMBRE 2025.\" This indicates the period when the measure is active, but not necessarily the exact strike dates. I need to extract the strike details using the required date format, so I'll set the start date to \"2025-10-08 00:00:00\" and the end date to \"2025-12-13 23:59:59.\" I'm also considering the 24-hour coverage based on the mentioned times. \n\nFor the location, it seems I should classify it as \"REGIONAL\" since it pertains to Sardegna, and I'll collect the appropriate location codes too.",
+    "tokens": {
+      "input": 11608,
+      "output": 1481,
+      "total": 13089
+    }
+  }
+}

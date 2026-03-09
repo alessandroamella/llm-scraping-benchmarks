@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 09:00:00",
+      "endDate": "2024-12-13 13:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "09:00-13:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19763,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008005,
+      "outputCost": 0.0005612,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00064125
+    },
+    "hash": "eb127b8e1ce23ed41be4a85a2011e824",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_4_ore_del_13_dicembre_2024.html",
+    "thoughts": "**Extracting strike data**\n\nI need to output JSON following the strike_extraction schema and determine if the document is announcing a new or upcoming strike. The document indicates a national strike on December 13, 2024, but it's been reduced to 4 hours. So yes, it’s definitely an announcement about a strike, even if it’s shorter. My job now is to extract various details like startDate, endDate, locationType, and other relevant data from the document related to the Linee Vesuviane transit.",
+    "tokens": {
+      "input": 1601,
+      "output": 1403,
+      "total": 3004
+    }
+  }
+}

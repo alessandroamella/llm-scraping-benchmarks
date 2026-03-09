@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5950,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000052,
+      "outputCost": 0.0001328,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0001848
+    },
+    "hash": "f9099d0e7f96f4a3d2a1e605b7c23ef2",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_174.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to determine if the document announces a new or upcoming strike. The content states there's a \"Sciopero del trasporto pubblico\" with a participation rate of 17.4% from Atac. The context suggests this is about participation in a strike that has already occurred. Since the instruction says to set isStrike to false if it’s just reporting on past participation, I'll conclude that this document is not announcing a strike. I'll output:\n\n{ \"isStrike\": false }",
+    "tokens": {
+      "input": 1040,
+      "output": 332,
+      "total": 1372
+    }
+  }
+}

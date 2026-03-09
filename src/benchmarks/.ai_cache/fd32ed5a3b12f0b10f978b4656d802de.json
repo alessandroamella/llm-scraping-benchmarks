@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-03 00:00:00",
+      "endDate": "2025-10-03 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 25042,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000662,
+      "outputCost": 0.0005724,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0006386
+    },
+    "hash": "fd32ed5a3b12f0b10f978b4656d802de",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_generale_nazionale_di_venerdi_03_ottobre_2025.html",
+    "thoughts": "**Determining strike details**\n\nI need to output JSON following the specified schema for strike extraction. The document is announcing a national strike on October 3, 2025. From the content, I see it’s a 24-hour event proclaimed by CGIL and USB. I'll confirm that isStrike is true since it’s a pre-announcement. For the strikeData, the startDate should be \"2025-10-03 00:00:00\" and the endDate \"2025-10-03 23:59:59\", considering it’s a full-day strike.",
+    "tokens": {
+      "input": 1324,
+      "output": 1431,
+      "total": 2755
+    }
+  }
+}

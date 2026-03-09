@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6468,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0028585,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.0009915,
+      "cachedCost": 0,
+      "totalCost": 0.0040345
+    },
+    "hash": "24371ce49d725faccfbd4b302ebd270e",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-12-12-sciopero-nazionale-personale-a.html",
+    "thoughts": "**Analyzing the Trenitalia Strike Announcement**\n\nOkay, let's break this down systematically. My task here is pretty clear: I need to analyze this text, which appears to be a strike announcement from Trenitalia, and extract specific strike information into a defined JSON format. The key is to determine if this is indeed a strike announcement, and if so, to populate a `strikeData` object with the relevant details. Otherwise, I'll set `isStrike` to false.\n\nFirst, I see the phrase \"SCIOPERO NAZIONALE PERSONALE AUTOFERROTRANVIERI,\" which translates to \"NATIONAL STRIKE for TRANSPORT WORKERS.\" This immediately flags it as a strike announcement. The text explicitly mentions \"Il giorno venerdì 12 dicembre 2025... è stato indetto uno sciopero di 24 ore...\" – \"Friday, December 12, 2025... a 24-hour strike has been called...\" – so it's a future event, specifically December 12, 2025. It also provides the strike's duration as 24 hours. Given this, I can confidently set `isStrike` to `true`.\n\nNow, onto the `strikeData` extraction. The strike is described as \"NAZIONALE,\" which signifies its scope as \"NATIONAL\". The dates are straightforward: it's a 24-hour strike, starting on 2025-12-12. Usually, unless otherwise stated, that implies from 00:00:00 to 23:59:59 of that day. Also, the text specifies \"dalle ore 6.00 alle ore 9.00 e dalle ore 18.00 alle ore 21.00\" as guaranteed times, which means guaranteed services are available between 6:00 and 9:00, and 18:00 and 21:00.\n\nSo, here's how I'll construct the JSON. Based on the data, `isStrike` will be `true`. Then for `strikeData`, I'll format the fields as requested:\n\n*   `startDate`: \"2025-12-12 00:00:00\"\n*   `endDate`: \"2025-12-12 23:59:59\"\n*   `locationType`: \"NATIONAL\"\n*   `guaranteedTimes`: [\"06:00-09:00\", \"18:00-21:00\"]\n\nI need to make sure the date and time format `^\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}$` and the `guaranteedTimes` format `^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]-(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$` are correct. I will need to ensure there is no extraneous text, comments, or markdown formatting and it should output valid JSON.\n\n\n",
+    "tokens": {
+      "input": 11434,
+      "output": 123,
+      "total": 12218
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8900,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00093785,
+      "outputCost": 0.000162,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00109985
+    },
+    "hash": "c57ea56a4fb9bf686017a73bad87135e",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_195.html",
+    "thoughts": "**Analyzing strike data output**\n\nI need to determine if we should output JSON with `isStrike` and possibly `strikeData`. The HTML snippet is about a public transport strike involving Atac staff, with a participation rate of 19.5%. It seems to be dated 18/09/2023, which indicates it's reporting on an already occurred strike, rather than announcing a new one. The title’s reference to the participation percentage reinforces that this is past information related to participation, not an upcoming event.",
+    "tokens": {
+      "input": 18757,
+      "output": 405,
+      "total": 19162
+    }
+  }
+}

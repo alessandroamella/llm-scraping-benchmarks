@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-03 00:00:00",
+      "endDate": "2025-10-03 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 23407,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000701,
+      "outputCost": 0.0005608,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0006309
+    },
+    "hash": "be187287fb2a7f1e758e4fc592c3f1db",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_generale_nazionale_di_24_ore_venerdi_03_ottobre_2025.html",
+    "thoughts": "**Setting dates for strike**\n\nI’m looking at a strike that lasts 24 hours on October 3, 2025. I see that the format needed is 'yyyy-MM-dd HH:mm:ss'. The strike starts at 00:00 and ends at 23:59:59 on the same day, which means it’s a single-day event. \n\nSo, I’ll set the startDate as \"2025-10-03 00:00:00\" and the endDate as \"2025-10-03 23:59:59\" to fit this requirement perfectly.",
+    "tokens": {
+      "input": 1402,
+      "output": 1402,
+      "total": 2804
+    }
+  }
+}

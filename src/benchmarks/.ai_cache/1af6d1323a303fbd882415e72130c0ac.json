@@ -1,0 +1,39 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:01:00",
+      "endDate": "2025-12-12 23:59:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "04",
+        "05"
+      ],
+      "guaranteedTimes": [
+        "00:01-21:00",
+        "00:01-23:59"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24112,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005305,
+      "outputCost": 0.000798,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0013285
+    },
+    "hash": "1af6d1323a303fbd882415e72130c0ac",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-12-12-sciopero-del-personale-di-sad-.html",
+    "thoughts": "**Extracting strike data**\n\nI need to extract \"strikeData\" for two separate strikes from different entities occurring on December 12, 2025, with different end times. The start is clear: 00:01, but I'll have to encode each strike accordingly since they belong to different companies. The schema requires a single object containing startDate, endDate, locationType, locationCodes, and guaranteedTimes. Both strikes have distinct end times, but the announcement confirms it is indeed about upcoming strikes.",
+    "tokens": {
+      "input": 10610,
+      "output": 1995,
+      "total": 12605
+    }
+  }
+}

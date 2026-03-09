@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-09-30 03:00:00",
+      "endDate": "2024-10-01 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8878,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00140975,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.001023,
+      "cachedCost": 0,
+      "totalCost": 0.00264275
+    },
+    "hash": "49ab88fac93f9ba076971c76d31e755c",
+    "sourceFile": "strike-detail-sciopero-del-trasporto-ferroviario-luned--30-sette.html",
+    "thoughts": "**Strike Analysis & JSON Output**\n\nOkay, let's break this down. The task is clear: I need to analyze this text and determine if it describes an upcoming strike, and if so, extract the relevant strike data into a specific JSON format. The input is an HTML-to-Markdown text regarding a \"Sciopero 30 settembre\" for Trenord. Based on the criteria, I should only return `true` for `isStrike` if it is an announcement of an upcoming strike. The output *must* be valid, parseable JSON; no comments, no extra text.\n\nFirst, I see the phrase \"Sciopero del trasporto ferroviario lunedì 30 settembre,\" confirming it's about a railway strike on September 30th. Further information details the strike duration: \"Dalle ore 3 di lunedì 30 settembre alle ore 2 di martedì 1° ottobre,\" which gives me the start and end times. The text also indicates that \"le organizzazioni sindacali ORSA e Uiltrasporti hanno indetto uno sciopero,\" confirming the strike is organized. Guaranteed service times are mentioned as \"06-9\" and \"18-21\", and the location is Trenord in the Lombardia region, which is useful in determining `locationType`.\n\nNow, I'll translate this into the required JSON.\n\n*   `isStrike`: definitely `true`.\n*   `startDate`: I extract \"30 settembre\" and \"03:00\" to construct \"2024-09-30 03:00:00\".\n*   `endDate`: \"1° ottobre\" and \"02:00\" gives me \"2024-10-01 02:00:00\".\n*   `locationType`: Since it's Trenord, operating within Lombardy, that's clearly \"REGIONAL\".\n*   `locationCodes`: The ISTAT code for Lombardy is 03, so that's `[\"03\"]`.\n*   `guaranteedTimes`: The text provided “06-9” and “18-21”, which translates to “06:00-09:00” and \"18:00-21:00”.\n\nFinally, I'll assemble the JSON, meticulously checking for format compliance: `startDate`, `endDate`, `locationType`, `locationCodes`, and `guaranteedTimes` all adhere to the required specifications. The output should be this:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-09-30 03:00:00\",\n    \"endDate\": \"2024-10-01 02:00:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"03\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n```\n\n\n",
+    "tokens": {
+      "input": 5639,
+      "output": 140,
+      "total": 6461
+    }
+  }
+}

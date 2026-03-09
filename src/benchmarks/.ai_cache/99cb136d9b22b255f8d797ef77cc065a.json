@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-07-23 09:00:00",
+      "endDate": "2025-07-23 11:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "09:00-11:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21157,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005418,
+      "outputCost": 0.0006972,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.001239
+    },
+    "hash": "99cb136d9b22b255f8d797ef77cc065a",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_di_2_ore_mercoledi_23_luglio_2025.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to determine if this document announces an upcoming strike. It seems to be an Italian public transport news post about a 2-hour strike planned for Wednesday, July 23, 2025, from 09:00 to 11:00, declared by the organization Faisa Confail. The content clearly states that they're announcing the strike. Therefore, I can conclude that the `isStrike` should be set to true. Now, I'll need to extract specific strike data like start and end times, location, and reasons.",
+    "tokens": {
+      "input": 10836,
+      "output": 1743,
+      "total": 12579
+    }
+  }
+}

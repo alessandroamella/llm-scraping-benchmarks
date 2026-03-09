@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9462,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00093735,
+      "outputCost": 0.0001608,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00109815
+    },
+    "hash": "36bfabeef9b6168ae6a6c014ec99182e",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_154.html",
+    "thoughts": "**Determining strike status**\n\nI need to output JSON following the strike_extraction schema. The document is a long HTML page in Italian, titled about a public transport strike in Rome. It mentions that the participation rate was 15.4% related to a past strike. The key date shows it was published and updated on July 24, 2023. Since this info is about a strike that has already occurred, I’ll set isStrike to false, according to the instructions.",
+    "tokens": {
+      "input": 18747,
+      "output": 402,
+      "total": 19149
+    }
+  }
+}

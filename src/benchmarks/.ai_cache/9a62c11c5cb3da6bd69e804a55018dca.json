@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7375,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00047975,
+      "outputCost": 0.000162,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00064175
+    },
+    "hash": "9a62c11c5cb3da6bd69e804a55018dca",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_191.html",
+    "thoughts": "**Deciding on strike status**\n\nI need to output JSON according to the specified schema. The content talks about a public transport strike with \"Atac staff adhesion at 19.1%,\" and it mentions that this occurred today. Since this isn't announcing a new strike but rather providing details on participation in one that has already happened, I can conclude that isStrike should be false. Therefore, I’ll output: {\"isStrike\": false}. There's no need for strikeData.",
+    "tokens": {
+      "input": 9595,
+      "output": 405,
+      "total": 10000
+    }
+  }
+}

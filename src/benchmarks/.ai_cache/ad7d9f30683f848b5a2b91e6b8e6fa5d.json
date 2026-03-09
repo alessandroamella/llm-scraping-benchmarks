@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 10648,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00048005,
+      "outputCost": 0.0001572,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00063725
+    },
+    "hash": "ad7d9f30683f848b5a2b91e6b8e6fa5d",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_212.html",
+    "thoughts": "**Analyzing strike information**\n\nI need to follow the strike_extraction schema to check if this document announces a new strike. The text discusses a public transport strike in Italy, mentioning that Atac staff's participation is at 21.2%. The status shows the information pertains to an event from July 7-8, 2023, indicating participation in an already occurred strike. Since it does not announce a new strike, I’ll set isStrike to false. The final output will be: { \"isStrike\": false }.",
+    "tokens": {
+      "input": 9601,
+      "output": 393,
+      "total": 9994
+    }
+  }
+}

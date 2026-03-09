@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-16 03:00:00",
+      "endDate": "2025-06-17 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18385,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000534,
+      "outputCost": 0.0005232,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0010572
+    },
+    "hash": "5654e8f1cbf7851f94c51dfbd6e72219",
+    "sourceFile": "strike-detail-luned--16-giugno-sciopero-dei-treni-regionali.html",
+    "thoughts": "**Determining strike announcement details**\n\nI need to output the information as JSON according to the strike extraction schema. The content mentions a strike for regional trains on Monday, June 16, which makes it a strike announcement. The press release indicates from 3:00 am on June 16 to 2:00 am on June 17. So, I’ll set the start and end dates as 2025-06-16 03:00:00 and 2025-06-17 02:00:00, and it seems the location type is REGIONAL based on the context.",
+    "tokens": {
+      "input": 10680,
+      "output": 1308,
+      "total": 11988
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6234,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0009365,
+      "outputCost": 0.0001724,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0011089
+    },
+    "hash": "62fb5a4ecb124c487ebf6f4406b9d584",
+    "sourceFile": "sciopero_trasporto_pubblico_ha_aderito_246_personale_atac.html",
+    "thoughts": "**Preparing final JSON output**\n\nI’ve determined that the value for `isStrike` should be false, so I’m going to output `{\"isStrike\": false}`. We need to ensure that our extraction is tidy. The input specifies that the percentage of personnel involved in the strike is 24.6%, and since it’s not upcoming, I’ll confirm that as my final answer.\n\nI won’t include any extra fields like `strikeData`. The final response will be in a simple JSON format. Let's make sure that the output is plain and direct!",
+    "tokens": {
+      "input": 18730,
+      "output": 431,
+      "total": 19161
+    }
+  }
+}

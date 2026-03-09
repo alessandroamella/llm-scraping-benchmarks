@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7131,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00074845,
+      "outputCost": 0.0001652,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00091365
+    },
+    "hash": "30c884b7f7c6ecfa214ae8d893e324a4",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-12-12-sciopero-nazionale-personale-a.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to output JSON based on the strike extraction schema. The document shows an Italian announcement for a general strike on December 12, 2025, by autoferrotranvieri staff for 24 hours. It clearly states that this strike is in adherence to a general strike. Since it describes a strike that has already been declared and happened on that date, it’s not an upcoming strike. Therefore, isStrike should be false.",
+    "tokens": {
+      "input": 14969,
+      "output": 413,
+      "total": 15382
+    }
+  }
+}

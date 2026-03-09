@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-01-19 00:00:00",
+      "endDate": "2026-01-19 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6433,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0028085,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.00087,
+      "cachedCost": 0,
+      "totalCost": 0.0038885
+    },
+    "hash": "eaf71ac89e2aacc890ddc25a1a0d7928",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_aziendale_di_24_h_lunedi_19_gennaio_2026.html",
+    "thoughts": "**Strike Information Extraction: A Mental Checklist**\n\nOkay, let's break this down. My primary task is to extract strike information from this HTML content and format it according to very specific constraints.  First, I need to determine if this is even a strike announcement.  The text suggests it is, so `isStrike` is `true`.\n\nSince it *is* a strike, I need to extract the pertinent data: `strikeData`.  This includes the start and end dates, the location type and codes, and the guaranteed service hours.\n\nThe title clearly states it's a 24-hour strike on January 19, 2026.  So, the `startDate` is going to be `2026-01-19 00:00:00`, reflecting the typical starting time of these events.  The `endDate` will need to be `2026-01-19 23:59:59` to match the 24 hour duration. We could infer the end at 2026-01-20 00:00:00 but it is a bit more conservative to match the beginning day.\n\nThe location type is \"REGIONAL\" because it's for the \"Linee Vesuviane\" which is a regional transport company in Campania. The `locationCodes` need to use the 2-digit ISTAT code, so that's \"15\" for Campania.\n\nThe guaranteed service hours are explicitly mentioned: \"05:30 alle ore 8:30\" and \"16:30 alle ore 19:30\".  These need to be incorporated into the output.\n\nNow, let's double-check all the constraints. The dates are indeed in the correct `yyyy-MM-dd HH:mm:ss` format. The location code \"15\" is correct for Campania. The resulting JSON should be parseable and valid. And yes, it all matches my schema.  I'm confident I have a complete and valid output.\n\n\n",
+    "tokens": {
+      "input": 11234,
+      "output": 140,
+      "total": 11954
+    }
+  }
+}

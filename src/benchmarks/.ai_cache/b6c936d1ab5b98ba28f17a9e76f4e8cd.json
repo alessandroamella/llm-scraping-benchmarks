@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-03 00:00:00",
+      "endDate": "2025-10-03 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7115,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0002385,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.0013455,
+      "cachedCost": 0,
+      "totalCost": 0.0017685
+    },
+    "hash": "b6c936d1ab5b98ba28f17a9e76f4e8cd",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_generale_nazionale_di_venerdi_03_ottobre_2025.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, let's break this down systematically. My task is to analyze this text and extract information about a potential strike, formatting the output as a JSON object based on a predefined schema. The input is \"Avviso di sciopero generale nazionale di venerdì 03 ottobre 2025,\" and it's looking like a national strike on October 3rd, 2025.\n\nSo, I'll start by setting `isStrike` to `true`. Now, to build the `strikeData` object, I'll identify the relevant pieces of information. The date is October 3, 2025, which translates to a `startDate` of \"2025-10-03 00:00:00\" and an `endDate` of \"2025-10-03 23:59:59\" for a standard 24-hour strike. The text \"sciopero generale nazionale\" indicates a `locationType` of \"NATIONAL\". The text mentions \"05:30-08:30\" and \"16:30-19:30\" as guaranteed times, which will go into `guaranteedTimes` as an array.\n\nI've got `isStrike`: `true`, and now the `strikeData`: `startDate`, `endDate`, `locationType`, and `guaranteedTimes` are populated. Now, I need to make sure the JSON structure is complete and valid. I've confirmed all the required fields are present and that the resulting JSON will be valid.\n\nFurthermore, I have to validate that the extracted data matches the established patterns. It looks like the date formats and guaranteed times are correct.\n\nOne last thing, the prompt explicitly states that locationCodes are omitted if the locationType is NATIONAL. I've confirmed that the schema does not include a locationCodes field.\n\nAlright, the final JSON output should be:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-10-03 00:00:00\",\n    \"endDate\": \"2025-10-03 23:59:59\",\n    \"locationType\": \"NATIONAL\",\n    \"guaranteedTimes\": [\n      \"05:30-08:30\",\n      \"16:30-19:30\"\n    ]\n  }\n}\n```\n\n\n",
+    "tokens": {
+      "input": 954,
+      "output": 123,
+      "total": 1974
+    }
+  }
+}

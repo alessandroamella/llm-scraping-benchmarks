@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9028,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0020545,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.000837,
+      "cachedCost": 0,
+      "totalCost": 0.0031015
+    },
+    "hash": "3318a0b11dcc7aa7d6571a7176ff7347",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_di_24_ore_del_13_dicembre_2024_aggiornamento.html",
+    "thoughts": "**Strike Analysis: EAV, Campania - December 13, 2024**\n\nOkay, let's break this down. The source is EAV, which I immediately recognize as *Ente Autonomo Volturno* in Campania, meaning regional. The content is a strike announcement, confirmed. My initial thought is to verify the specifics for accurate data extraction and structuring.\n\nFirst, the date: December 13th, 2024. Clear. It's a 24-hour strike, the implication being a full-day disruption, but without specific start and end times given, I need to define those. I'm choosing 00:00:00 as the start and 23:59:59 as the end on that day, making sure that it completely covers the 24 hours.\n\nThe region is Campania (code 15), that's important for the location data. We can see that the announcement specifies guaranteed service bands from 05:30 to 08:30 and 16:30 to 19:30. These are the details I need to build the `strikeData` object.\n\nI need to confirm the data is correctly extracted. Looking at `isStrike`: true. Now, the `strikeData` is ready. The `startDate` is \"2024-12-13 00:00:00\" and `endDate` is \"2024-12-13 23:59:59\". The format matches the required pattern. The `locationType` is \"REGIONAL\" and `locationCodes` is [\"15\"]. Finally, the `guaranteedTimes` are captured correctly: [\"05:30-08:30\", \"16:30-19:30\"].\n\nThere are no comments to parse, which is straightforward. The input is just JSON. Good, the schema validates. This looks solid.\n\n\n",
+    "tokens": {
+      "input": 8218,
+      "output": 140,
+      "total": 8916
+    }
+  }
+}

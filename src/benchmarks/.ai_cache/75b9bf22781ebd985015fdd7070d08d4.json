@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24988,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003564,
+      "outputCost": 0.000588,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0009444
+    },
+    "hash": "75b9bf22781ebd985015fdd7070d08d4",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_24_ore_di_venerdi_28_novembre_2025.html",
+    "thoughts": "**Extracting strike data**\n\nI need to structure the information as JSON according to the `strike_extraction` schema. The content indicates a notice of a 24-hour strike on Friday, November 28, 2025, which means `isStrike` should be true. I need to extract `strikeData` with the correct start and end date formats. The document mentions guaranteed service times, but the focus is on the strike itself, confirming it's a 24-hour event. Got it!",
+    "tokens": {
+      "input": 7128,
+      "output": 1470,
+      "total": 8598
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-20 00:00:00",
+      "endDate": "2025-06-20 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8211,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00051225,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.000927,
+      "cachedCost": 0,
+      "totalCost": 0.00164925
+    },
+    "hash": "1c2020e4c9dca054886bfc94411fc4c7",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_24h_venerdi_20_giugno_2025.html",
+    "thoughts": "**Strike Announcement Analysis**\n\nOkay, let's break this down. My task is to definitively determine if this document represents a strike announcement, specifically for EAV, and to structure the information according to a predefined JSON schema.  The date in question is June 20, 2025, and it's a 24-hour strike.\n\nFirst, I examine the title: \"Linee Vesuviane: Avviso di Sciopero 24h venerdì 20 giugno 2025\". \"Avviso di Sciopero\" immediately flags this as a strike notice. The content confirms it: \"Per il giorno 20 giugno 2025 la O.S. USB ha proclamato azione di sciopero per adesione a sciopero nazionale di 24 ore\".  Clear confirmation of a 24-hour strike on the specified date.\n\nNow, let's populate the JSON.  `isStrike`: true, without a doubt. The start date, based on the 24-hour duration, is `startDate`: \"2025-06-20 00:00:00\" and the end date is `endDate`: \"2025-06-20 23:59:59\".  The location is *Regional* given that EAV operates in Campania. `locationType`: \"REGIONAL\". Campania's Region Code is \"15\", so `locationCodes`: [\"15\"].  I need to extract the guaranteed service windows. The text contains guaranteed times, I will infer from it, the guaranteed times are \"05:30-08:30\" and \"16:30-19:30\", so `guaranteedTimes`: [\"05:30-08:30\", \"16:30-19:30\"].\n\nI'm validating each element now. The start date, end date, location type, location code, and guaranteed times are all valid and correctly formatted. The JSON structure is complete.\n\nTherefore, the final output would be JSON structured.\n\n\n",
+    "tokens": {
+      "input": 2049,
+      "output": 140,
+      "total": 2807
+    }
+  }
+}

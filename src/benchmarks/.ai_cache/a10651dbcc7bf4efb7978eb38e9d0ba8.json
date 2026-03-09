@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 10584,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00050645,
+      "outputCost": 0.0001644,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00067085
+    },
+    "hash": "a10651dbcc7bf4efb7978eb38e9d0ba8",
+    "sourceFile": "funivia_del_faito_sospensione_temporanea_del_servizio_funiviario_dalle_ore_1105.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to check if this document announces a new or upcoming strike. The content is in Italian and pertains to \"Funivia del Faito\", indicating a temporary service suspension due to adverse weather conditions. Since it’s about service suspension and not a strike, I’ll determine that \"isStrike\" should be false. Therefore, my output will be: \n\n{\n  \"isStrike\": false\n} \n\nNo need for a strikeData field since it's not related to a strike.",
+    "tokens": {
+      "input": 10129,
+      "output": 411,
+      "total": 10540
+    }
+  }
+}

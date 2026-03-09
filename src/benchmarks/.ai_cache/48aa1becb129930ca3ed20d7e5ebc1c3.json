@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-01-09 21:00:00",
+      "endDate": "2026-01-10 21:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21207,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006775,
+      "outputCost": 0.000582,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00064975
+    },
+    "hash": "48aa1becb129930ca3ed20d7e5ebc1c3",
+    "sourceFile": "Locandina sciopero 9 10 gennaio 2026.pdf",
+    "thoughts": "**Extracting strike details**\n\nI need to output JSON for strike extraction, determining if the document announces a new or upcoming strike. The Italian content suggests there's a nationwide railway strike from January 9 at 21:00 to January 10 at 21:00, 2026, indicating potential train cancellations or changes. It mentions guaranteed services on weekdays. Since this clearly outlines a future strike, I’ll set isStrike to true. It's definitely a strike announcement!",
+    "tokens": {
+      "input": 1355,
+      "output": 1455,
+      "total": 2810
+    }
+  }
+}

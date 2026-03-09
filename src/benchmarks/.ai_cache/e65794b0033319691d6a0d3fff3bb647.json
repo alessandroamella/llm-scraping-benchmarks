@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-07-23 09:00:00",
+      "endDate": "2025-07-23 11:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7927,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000269,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.0008775,
+      "cachedCost": 0,
+      "totalCost": 0.001295
+    },
+    "hash": "e65794b0033319691d6a0d3fff3bb647",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_2_ore_mercoledi_23_luglio_2025.html",
+    "thoughts": "**Analyzing the EAV Strike Announcement**\n\nOkay, let's break this down. I have an announcement from EAV in Campania, Italy, and my objective is clear: determine if this is a strike and then extract the relevant data into a specific JSON format. I need to be precise here, ensuring I adhere to the schema's requirements.\n\nFirst, the key data points jump out. It's a strike by EAV in Campania. The date is July 23, 2025, and it's scheduled to last for two hours, from 9:00 to 11:00. Location is Campania, specifically Region 15, making it a regional strike.\n\nNow, for the JSON structure. `isStrike` is obviously true. The `startDate` is 2025-07-23 09:00:00, and the `endDate` is 2025-07-23 11:00:00. The `locationType` is definitely \"REGIONAL\", and the `locationCodes` array correctly contains [\"15\"].\n\nThe tricky part, as usual, are the \"guaranteed times.\" The text mentions \"ultime partenze prima dello sciopero\" and \"prime partenze dopo lo sciopero,\" but it *doesn't* explicitly define guaranteed time ranges in the standard \"HH:mm-HH:mm\" format expected by the system. My interpretation is that these are *departures*, not predefined *time windows* that must be guaranteed to run, so I'll omit the `guaranteedTimes` field entirely.\n\nTherefore, the final output needs to be this exact JSON, which I have verified as being correct:\n\n`{ \"isStrike\": true, \"strikeData\": { \"startDate\": \"2025-07-23 09:00:00\", \"endDate\": \"2025-07-23 11:00:00\", \"locationType\": \"REGIONAL\", \"locationCodes\": [\"15\"] } }`\n\nAlright. I'm satisfied. This data extraction is complete and accurately reflects the announcement, while adhering exactly to the requirements.\n\n\n",
+    "tokens": {
+      "input": 1076,
+      "output": 99,
+      "total": 1760
+    }
+  }
+}

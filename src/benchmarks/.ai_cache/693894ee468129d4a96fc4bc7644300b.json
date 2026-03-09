@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 23360,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00033815,
+      "outputCost": 0.0006924,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00103055
+    },
+    "hash": "693894ee468129d4a96fc4bc7644300b",
+    "sourceFile": "linee_automobilistiche_avviso_di_sciopero_generale_di_24h_per_venerdi_12_dicembre_2025.html",
+    "thoughts": "**Analyzing strike data**\n\nI need to output JSON following the strike extraction schema. The content is about a 24-hour general strike announced by CGIL for Friday, December 12, 2025, concerning Linee Automobilistiche (EAV srl). It also states service will proceed normally during specific guaranteed times, from 05:30 to 08:30 and 16:30 to 19:30. Thus, I’ll mark isStrike as true and determine the relevant data for the strike, including startDate, endDate, and guaranteedTimes.",
+    "tokens": {
+      "input": 6763,
+      "output": 1731,
+      "total": 8494
+    }
+  }
+}

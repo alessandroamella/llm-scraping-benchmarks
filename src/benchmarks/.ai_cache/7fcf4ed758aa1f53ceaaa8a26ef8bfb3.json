@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-11-17 09:00:00",
+      "endDate": "2023-11-17 13:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "09:00-10:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19131,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005334,
+      "outputCost": 0.0007308,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0012642
+    },
+    "hash": "7fcf4ed758aa1f53ceaaa8a26ef8bfb3",
+    "sourceFile": "strike-detail-sciopero-nazionale-17-novembre-ore-9-13-personale-.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to output JSON following the specific schema. The document in question seems to be a Trenord press release about a strike. It mentions a national strike on November 17 from 9 to 13 involving Trenord personnel, but they are not involved; it seems workers from FerrovieNord and RFI may participate, potentially affecting Trenord services with limitations and cancellations. So, I can confirm that this document is indeed announcing an upcoming strike.",
+    "tokens": {
+      "input": 10668,
+      "output": 1827,
+      "total": 12495
+    }
+  }
+}

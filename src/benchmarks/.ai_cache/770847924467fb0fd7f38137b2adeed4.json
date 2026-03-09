@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-01-09 21:00:00",
+      "endDate": "2026-01-10 23:59:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "04",
+        "05"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6495,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0029195,
+      "outputCost": 0.000159,
+      "thinkingCost": 0.0006105,
+      "cachedCost": 0.00018933,
+      "totalCost": 0.00387832
+    },
+    "hash": "770847924467fb0fd7f38137b2adeed4",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2026-1-9-sciopero-del-personale-di-sad---.html",
+    "thoughts": "**Strike Announcement Analysis**\n\nOkay, let me break this down. My primary task is to determine if this document signals a strike and, if so, extract the relevant strike information as a valid JSON object adhering to a predefined schema. I see the input text, \"SCIOPERO DEL PERSONALE DI SAD E TRENTINO TRASPORTI,\" which quite clearly points to a strike situation.\n\nFirst, I need to ensure this can be parsed. The text is very clear.\n\nNext, I need to extract and format the strike details. I note the provided dates: January 9th and 10th, 2026. This relates to SAD and Trentino Trasporti. I see the specific timestamps for both entities: SAD from 9 PM on January 9th to just before 9 PM on January 10th, and Trentino Trasporti from just after midnight to midnight on the 10th. Given that the schema likely dictates a single `startDate` and `endDate` for the entire strike, I'll need to synthesize this. Since these are overlapping, and regional, I'm going to consolidate this by taking the earliest start time (SAD) and the latest end time (Trentino Trasporti), which creates a reasonable representation of the duration. This effectively captures the *entire* period affected by the strike.\n\nConsidering that these strikes are regional in nature and affect different transport companies, I need to capture the associated geographical information. Trentino-Alto Adige is indicated by \"04\", and Veneto by \"05\". This requires me to create the corresponding `locationType` of `REGIONAL` and `locationCodes` of `[\"04\", \"05\"]` to make the result compliant.\n\nTherefore, the `isStrike` flag will be set to `true`, and I will formulate the `strikeData` object using the earliest start, the latest end, and the identified regional locations. I will ensure all the data is formatted correctly and aligns with the schema.\n\n\n",
+    "tokens": {
+      "input": 11678,
+      "output": 106,
+      "total": 12191
+    }
+  }
+}

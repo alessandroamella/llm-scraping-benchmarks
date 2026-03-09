@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 25877,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00051785,
+      "outputCost": 0.0005396,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00105745
+    },
+    "hash": "8b94c55d9b90e3707a04bcc544693476",
+    "sourceFile": "linee_automobilistiche_avviso_di_sciopero_generale_di_24h_per_venerdi_12_dicembre_2025.html",
+    "thoughts": "**Processing national strike details**\n\nIt looks like there's a 24-hour general strike scheduled for December 12, 2025. I need to categorize it as a national strike, so I'll set the locationType to \"NATIONAL\" and locationCodes to null since it's explicitly a national event. I'll include \"locationCodes\": null to meet the requirements. The guaranteed times are tricky, and I think they should be formatted as an array, like [\"05:30-08:30\", \"16:30-19:30\"]. The start and end date appear to be from the early morning to the evening of that day.",
+    "tokens": {
+      "input": 10357,
+      "output": 1349,
+      "total": 11706
+    }
+  }
+}

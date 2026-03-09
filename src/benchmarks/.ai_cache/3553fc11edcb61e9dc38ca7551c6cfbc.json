@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7255,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000516,
+      "outputCost": 0.0001616,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002132
+    },
+    "hash": "3553fc11edcb61e9dc38ca7551c6cfbc",
+    "sourceFile": "sciopero_del_trasporto_pubblico_ha_aderito_il_195_del_personale_atac.html",
+    "thoughts": "**Analyzing strike report**\n\nI'm looking at the content in Italian, and it's about a public transport strike. It mentions that 19.5% of Atac personnel in Rome participated today, with the report published on 09/12/2025. This indicates it’s a past event rather than an upcoming strike. Therefore, I can determine that \"isStrike\" should be set to false. Since it’s not an ongoing strike, I won't need to include any detailed strike data. The output will be: {\"isStrike\": false}.",
+    "tokens": {
+      "input": 1032,
+      "output": 404,
+      "total": 1436
+    }
+  }
+}

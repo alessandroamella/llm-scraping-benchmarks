@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 09:00:00",
+      "endDate": "2024-12-13 13:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 16138,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000656,
+      "outputCost": 0.0004216,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0004872
+    },
+    "hash": "6de2ff7f9eb272b9d5714c82b5569a66",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_di_4_ore_del_13_dicembre_2024.html",
+    "thoughts": "**Classifying strike announcement**\n\nI need to determine if this text is a strike announcement. The content includes an Italian announcement about a 4-hour strike on December 13, 2024, stating that service won’t be guaranteed during that time. Since it’s an upcoming strike, I think it’s safe to say that “isStrike” should be true. For the fields required, it'll be \"NATIONAL\" for location type, and location codes appear to be null since they aren’t specified.",
+    "tokens": {
+      "input": 1312,
+      "output": 1054,
+      "total": 2366
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 09:00:00",
+      "endDate": "2024-12-13 13:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9637,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.002564,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.0011835,
+      "cachedCost": 0,
+      "totalCost": 0.003896
+    },
+    "hash": "a3b751f085d4a000881ebfa1d367a467",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_4_ore_del_13_dicembre_2024.html",
+    "thoughts": "**Strike Analysis - EAV Announcement**\n\nOkay, let's analyze this content. My primary task here is to determine if this is a strike announcement and, if so, to extract the relevant details. The schema is the guiding light here, and I've got to ensure the output is a clean JSON object following its structure.\n\nFirst, I see the title: \"Linee Suburbane: Avviso di sciopero di 4 ore del 13 dicembre 2024 - EAV srl.\" That instantly flags my attention. The content confirms the strike: \"lo sciopero generale nazionale di 24 ore proclamato per il giorno 13 dicembre 2024 ... è stato ridotto a 4 ore, dalle ore 09:00 alle ore 13:00.\" This is definitely an upcoming strike; the `isStrike` flag will be set to `true`. And it's for EAV (Campania), which I know is code 15.\n\nThe date is December 13, 2024, and the strike duration is from 09:00 to 13:00. This is pretty straightforward. I'm going to set `startDate` to \"2024-12-13 09:00:00\" and `endDate` to \"2024-12-13 13:00:00.\" Since EAV operates regionally in Campania, the `locationType` will be \"REGIONAL,\" and `locationCodes` will be [\"15\"].\n\nNow, about `guaranteedTimes`. The text mentions \"ultime e le prime partenze garantite in relazione alle fasce di garanzia,\" but it doesn't *explicitly* list any guaranteed *bands* (e.g., \"06:00-09:00\"). It's talking about specific train times. Since the schema asks for *time ranges* and doesn't explicitly provide them here, it looks like I must omit `guaranteedTimes` in this case. Let's stick strictly to what the text provides.\n\nAlright, so the output should be a JSON object with:\n\n*   `isStrike`: `true`\n*   `strikeData`:\n    *   `startDate`: \"2024-12-13 09:00:00\"\n    *   `endDate`: \"2024-12-13 13:00:00\"\n    *   `locationType`: \"REGIONAL\"\n    *   `locationCodes`: [\"15\"]\n\nI've got the data formatted correctly, I'm confident this will be a valid JSON object, and it fully adheres to the schema. No comments necessary, of course. Excellent.\n\n\n",
+    "tokens": {
+      "input": 10256,
+      "output": 99,
+      "total": 11144
+    }
+  }
+}

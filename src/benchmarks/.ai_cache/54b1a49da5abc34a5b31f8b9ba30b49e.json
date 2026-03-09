@@ -1,0 +1,32 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 26533,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00050665,
+      "outputCost": 0.0008516,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00135825
+    },
+    "hash": "54b1a49da5abc34a5b31f8b9ba30b49e",
+    "sourceFile": "eav_informa_sciopero_di_4_ore_del_28_01_2025.html",
+    "thoughts": "**Analyzing strike details**\n\nI see there’s a strike mentioned for January 28, but it doesn't specify a start time. It could be common for such strikes to run for four hours, perhaps from 9 AM to 1 PM, but that’s not stated. The document also stresses that all fields are required, so if we lack specific times, I might set the start and end dates from midnight to the end of that day. I might label the LocationType as REGIONAL for the Campania region.",
+    "tokens": {
+      "input": 10133,
+      "output": 2129,
+      "total": 12262
+    }
+  }
+}

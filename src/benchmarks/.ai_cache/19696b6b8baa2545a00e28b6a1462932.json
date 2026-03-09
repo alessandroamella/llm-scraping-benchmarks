@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7627,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0004792,
+      "outputCost": 0.000134,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0006132
+    },
+    "hash": "19696b6b8baa2545a00e28b6a1462932",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_154.html",
+    "thoughts": "**Evaluating strike data output**\n\nI need to format the output as JSON according to the specified schema. The content discusses a historical strike participation, specifically mentioning a 15.4% participation rate, and it’s already past as of July 24, 2023. This means that “isStrike” should be set to false since it’s not about a future strike. I’ll ensure the output is accurate and concise with no extra text. The final output will be: { \"isStrike\": false }.",
+    "tokens": {
+      "input": 9584,
+      "output": 335,
+      "total": 9919
+    }
+  }
+}

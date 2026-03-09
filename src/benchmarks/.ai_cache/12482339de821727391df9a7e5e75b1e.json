@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9478,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000051,
+      "outputCost": 0.0001236,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0001746
+    },
+    "hash": "12482339de821727391df9a7e5e75b1e",
+    "sourceFile": "sciopero_generale_nazionale_adesione_del_personale_atac_al_182.html",
+    "thoughts": "**Formatting strike information**\n\nI need to format the information in the strike_extraction JSON style based on the user's provided Italian content. The article mentions a national general strike and specifies that the participation of Atac staff is at 18.2%. This indicates that it's not about a new strike but rather an occurrence earlier in the day. So, for the output, I should set \"isStrike\" to false. I’ll ensure to include no extra fields—just that JSON object.",
+    "tokens": {
+      "input": 1020,
+      "output": 309,
+      "total": 1329
+    }
+  }
+}

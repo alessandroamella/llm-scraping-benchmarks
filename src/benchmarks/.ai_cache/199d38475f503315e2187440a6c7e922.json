@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7974,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00130425,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000267,
+      "cachedCost": 0,
+      "totalCost": 0.00158625
+    },
+    "hash": "199d38475f503315e2187440a6c7e922",
+    "sourceFile": "strike-detail-venerd--29-novembre-revocato-sciopero-ferrovienord.html",
+    "thoughts": "**Analyzing the Trenord Announcement**\n\nOkay, let's break this down. The input is a Trenord announcement. My immediate task is to determine if this confirms an *upcoming* strike. The text \"revocato lo sciopero\" – the strike has been revoked – is clear enough. This isn't an *initiation* of a strike; it's a *cancellation*. Given the instruction, if it's a cancellation, the `isStrike` flag must be set to `false`. Therefore, the output JSON should be `{ \"isStrike\": false }`. Simple enough.\n\n\n",
+    "tokens": {
+      "input": 5217,
+      "output": 10,
+      "total": 5405
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4271,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00014575,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0002565,
+      "cachedCost": 0,
+      "totalCost": 0.00041725
+    },
+    "hash": "61fcff5e5a256788a30e4acfd1097949",
+    "sourceFile": "sciopero_generale_nazionale_adesione_personale_atac_al_26.html",
+    "thoughts": "**Analyzing the Atac Strike Report**\n\nOkay, let's break this down. My initial input is \"Sciopero generale nazionale, adesione personale Atac al 26%\". The context clarifies that this concerns the overall participation of Atac personnel in the national general strike. The goal is to figure out if this is about a *future* strike announcement or a report on a *past or current* one.\n\nThe key pieces of evidence here are the phrases \"di oggi\" (today) and \"è stata\" (it was). \"Today\" clearly anchors the event in the present, while \"was\" (past tense) indicates that the 26% participation has already happened and is being reported *after the fact*. This strongly suggests the strike is either ongoing, or concluded. Given this, I can confidently assess that this is not an announcement of a future event.\n\nTherefore, applying my rule, which states that if it's only providing information about strike *participation* from an event that's already happened, I need to set `isStrike` to `false`. So, my final result is `isStrike` = `false`. It's a report on a strike, not a strike announcement.\n\n\n",
+    "tokens": {
+      "input": 583,
+      "output": 10,
+      "total": 764
+    }
+  }
+}

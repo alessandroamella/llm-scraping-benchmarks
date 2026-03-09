@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7799,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00048255,
+      "outputCost": 0.0001444,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00062695
+    },
+    "hash": "812224e4be82ef587a75764e4c880260",
+    "sourceFile": "sciopero_del_trasporto_pubblico_aperte_le_metropolitane.html",
+    "thoughts": "**Analyzing strike content**\n\nI need to determine if the content is about an upcoming strike announcement. The text is in Italian and discusses ongoing public transport strikes. It includes publication and update dates, indicating that it’s providing real-time updates. Since the instruction is clear that \"isStrike\" should be true only for upcoming announcements, I conclude that “isStrike” should be false based on this report of an ongoing situation. My output will be a simple JSON with \"isStrike\": false.",
+    "tokens": {
+      "input": 9651,
+      "output": 361,
+      "total": 10012
+    }
+  }
+}

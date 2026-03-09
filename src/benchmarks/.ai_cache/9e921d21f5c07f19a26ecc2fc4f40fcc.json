@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-05-11 00:00:00",
+      "endDate": "2025-05-11 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 23630,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00036245,
+      "outputCost": 0.0008076,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00117005
+    },
+    "hash": "9e921d21f5c07f19a26ecc2fc4f40fcc",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_24h_domenica_11_maggio_2025.html",
+    "thoughts": "**Clarifying strike details**\n\nThe top line shows \"Linee Flegree: avviso di sciopero 24h domenica 11 maggio 2025,\" indicating a 24-hour strike. I need to figure out if the location type is \"REGIONAL\" or \"NATIONAL.\" Since it's a regional network in Campania, it should be REGIONAL. The location code \"15\" corresponds to Campania’s ISTAT code, and the instruction suggests using 2-digit region codes for regional strikes. So, I believe locationCodes should be [\"15\"], but I’m double-checking to ensure it fits the format correctly.",
+    "tokens": {
+      "input": 7249,
+      "output": 2019,
+      "total": 9268
+    }
+  }
+}

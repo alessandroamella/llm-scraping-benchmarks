@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-24 00:00:00",
+      "endDate": "2025-02-24 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19567,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008865,
+      "outputCost": 0.0006004,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00068905
+    },
+    "hash": "585baad512dfd2503841e77e1c1ef048",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_24_h_lunedi_24_febbraio_2025.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to output JSON according to the defined schema. The task involves analyzing a document regarding a possible strike from EAV, a public transport company in Campania. \n\nThe document states there is a 24-hour strike scheduled for February 24, 2025. It includes guaranteed service times, confirming it’s an upcoming strike announcement and not a cancellation or ongoing strike. So, the isStrike should be true, and I need to extract the start and end dates for the strike.",
+    "tokens": {
+      "input": 1773,
+      "output": 1501,
+      "total": 3274
+    }
+  }
+}

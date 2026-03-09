@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-05-11 00:00:00",
+      "endDate": "2025-05-11 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 23559,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008405,
+      "outputCost": 0.0008096,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00089365
+    },
+    "hash": "062d501459776e6fc4cf43234d2de781",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_24h_domenica_11_maggio_2025.html",
+    "thoughts": "**Determining strike announcement details**\n\nI'm examining whether the document is announcing a new upcoming strike. The content states a 24-hour strike for May 11, 2025, proclaimed by O.S. Or.S.A. It lists guaranteed service times, indicating it's not a cancellation but rather an announcement for an upcoming strike. Therefore, the `isStrike` should be true. I need to extract the strike details: the start time would be 2025-05-11 00:00:00 and end 24 hours later at 2025-05-12 00:00:00.",
+    "tokens": {
+      "input": 1681,
+      "output": 2024,
+      "total": 3705
+    }
+  }
+}

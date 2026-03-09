@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-10 19:32:00",
+      "endDate": "2025-01-10 23:32:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21067,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00034145,
+      "outputCost": 0.0008992,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00124065
+    },
+    "hash": "84dc523e224e624921135d6d83d88c24",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_di_4_ore10_gennaio_2025.html",
+    "thoughts": "**Extracting strike details**\n\nI need to output JSON according to the \"strike_extraction\" specification, which includes fields like isStrike and possibly strikeData if true. The content is in Italian, referring to a 4-hour strike announcement on January 10, 2025. It includes key dates and times, stating the strike is scheduled for 19:32 to 23:32. The announcement is related to the Line Metropolitan and indicates it's a national strike planned by the O.S. CONF.A.I.L.",
+    "tokens": {
+      "input": 6829,
+      "output": 2248,
+      "total": 9077
+    }
+  }
+}

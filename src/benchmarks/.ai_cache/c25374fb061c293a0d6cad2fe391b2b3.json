@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-28 08:20:00",
+      "endDate": "2025-01-28 12:20:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24671,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00036115,
+      "outputCost": 0.0008272,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00118835
+    },
+    "hash": "c25374fb061c293a0d6cad2fe391b2b3",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_di_4_ore_martedi_28_gennaio_2025.html",
+    "thoughts": "**Deciding on strike announcement**\n\nI need to output the information in JSON format based on the defined schema. I see that the document indicates an upcoming strike announcement for Linee Flegree for 4 hours on January 28, 2025. So, isStrike should be true. The start time is from 08:20 to 12:20, which means I need to format the 'startDate' and 'endDate' in 'yyyy-MM-dd HH:mm:ss' format as \"2025-01-28 08:20:00\" and \"2025-01-28 12:20:00.\"",
+    "tokens": {
+      "input": 7223,
+      "output": 2068,
+      "total": 9291
+    }
+  }
+}

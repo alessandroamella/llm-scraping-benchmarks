@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4746,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00264175,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000456,
+      "cachedCost": 0,
+      "totalCost": 0.00311275
+    },
+    "hash": "15b6272eace323b60acae6cb137fb306",
+    "sourceFile": "sciopero_trasporto_pubblico_chiusa_metro_aperte_b_c_termini_centocelle.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, here's the deal. I've received some input formatted in a Markdown-like structure. My job? To figure out if this is announcing a *future* strike. The instructions are clear: `isStrike` is only true if it’s an *upcoming* event. Any cancellation, update on a strike *in progress*, or information about a past strike gets a `false` value.\n\nLet's break down the content. The headline translates to \"Public transport strike, metro A closed, B, C and Termini-Centocelle open.\" That's a good start. Then, the body text reads, \"The national public transport strike is underway/in progress. Here is the situation on the Roman network.\" Further, the \"status: 1\" label reiterates that the strike *is already in progress*. Hmm. So, it looks like a real-time service update, detailing the current situation. This directly contradicts the criteria for a future announcement.\n\nTherefore, considering the instruction that I am *only* to return true if it is an upcoming strike announcement, and the input clearly specifies that the strike is already \"underway,\" `isStrike` has to be `false`.\n\n\n",
+    "tokens": {
+      "input": 10567,
+      "output": 10,
+      "total": 10881
+    }
+  }
+}

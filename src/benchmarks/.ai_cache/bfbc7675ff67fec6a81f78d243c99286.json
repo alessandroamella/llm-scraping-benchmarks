@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-05-11 00:00:00",
+      "endDate": "2025-05-11 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 11867,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000259,
+      "outputCost": 0.000189,
+      "thinkingCost": 0.0008355,
+      "cachedCost": 0,
+      "totalCost": 0.0012835
+    },
+    "hash": "bfbc7675ff67fec6a81f78d243c99286",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_24h_domenica_11_maggio_2025.html",
+    "thoughts": "**Strike Analysis: EAV Campania - May 11, 2025**\n\nOkay, let's break this down. My input is an announcement regarding a strike by Or.S.A. affecting the EAV network in the Campania region, scheduled for May 11th, 2025. My primary objective here is to parse this and extract the strike details, specifically if it *is* a strike, and then present it in clean JSON format.\n\nFirst, I confirm it's definitely a strike announcement. The language clearly states a \"sciopero aziendale,\" indicating an upcoming action. The date is May 11th, 2025. Given it's a 24-hour strike, I can safely infer the start time as 00:00:00 and the end time as 23:59:59 on that day – standard practice. The location is EAV, which I know corresponds to the Campania region, and its region code is 15. The announcement also mentions guaranteed service times, which I need to extract, and these are between 05:30-08:30 and 16:30-19:30.\n\nNow, let's assemble the JSON structure I need.  I need to report `isStrike: true`. Then, the `strikeData` object needs to hold `startDate: \"2025-05-11 00:00:00\"`, `endDate: \"2025-05-11 23:59:59\"`, `locationType: \"REGIONAL\"`, `locationCodes: [\"15\"]`, and `guaranteedTimes: [\"05:30-08:30\", \"16:30-19:30\"]`.\n\nFinally, I need to double-check that this meets all the criteria: it's a strike, the data types are correct, and there are no extraneous comments or additional text outside of the JSON structure itself. That's a clean, valid data output.\n\n\n",
+    "tokens": {
+      "input": 1036,
+      "output": 126,
+      "total": 1719
+    }
+  }
+}

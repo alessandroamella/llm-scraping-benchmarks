@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21219,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005469,
+      "outputCost": 0.000876,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0014229
+    },
+    "hash": "1d97a446191715a33c5328a8ada2aede",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_24_ore_del_13_dicembre_2024_aggiornamento.html",
+    "thoughts": "**Extracting strike details**\n\nI need to output in JSON format following the schema for strike extraction. The task is to analyze a content piece about a potential strike from EAV, Campania, scheduled for December 13, 2024. The title indicates it’s a 24-hour strike announcement update. The body suggests that the strike will be a full 24 hours again, as the court accepted a request regarding an order from the Ministry of Transport about the strike. Let's extract the details now!",
+    "tokens": {
+      "input": 10938,
+      "output": 2190,
+      "total": 13128
+    }
+  }
+}

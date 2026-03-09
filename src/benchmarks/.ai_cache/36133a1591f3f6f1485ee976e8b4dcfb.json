@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-05 03:00:00",
+      "endDate": "2025-02-06 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 15007,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0002873,
+      "outputCost": 0.0004712,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0007585
+    },
+    "hash": "36133a1591f3f6f1485ee976e8b4dcfb",
+    "sourceFile": "strike-detail-mercoled--5-febbraio-sciopero-dei-treni-regionali.html",
+    "thoughts": "**Interpreting strike announcement**\n\nI need to confirm if this document announces an upcoming strike. The content is in Italian and includes a statement about \"Wednesday February 5 strike of regional trains.\" The post date shows it's current, and it indicates a strike from 3:00 PM on February 5 through 2:00 AM on February 6, 2025. It also mentions guaranteed service times. This looks like a regional strike affecting suburban and airport connections, not national. So, the location type should be REGIONAL.",
+    "tokens": {
+      "input": 5746,
+      "output": 1178,
+      "total": 6924
+    }
+  }
+}

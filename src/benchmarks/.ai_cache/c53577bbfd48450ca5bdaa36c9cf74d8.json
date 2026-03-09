@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-07-18 09:00:00",
+      "endDate": "2024-07-18 13:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7534,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000331,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.000963,
+      "cachedCost": 0,
+      "totalCost": 0.0014425
+    },
+    "hash": "c53577bbfd48450ca5bdaa36c9cf74d8",
+    "sourceFile": "strike-detail-gioved--18-luglio-dalle-9-alle-13-sciopero-del-per.html",
+    "thoughts": "**Strike Analysis & JSON Output**\n\nOkay, let's analyze this. The task is clear: determine if the input represents a strike announcement and, if so, structure the data as a JSON object. I see the text, \"Giovedì 18 luglio dalle 9 alle 13 sciopero del personale FERROVIENORD,\" and the news date of 16/07/2024. This looks like a strike announcement – it’s a notice for an event two days out.\n\nMy immediate thought is, yes, this is a strike announcement. I need to extract the relevant details. The strike date is July 18, 2024, from 9:00 to 13:00. The company involved is FERROVIENORD, which I know is an infrastructure manager in Lombardy (region code \"03\"). The location is clearly the FERROVIENORD network within that region.\n\nNow for the JSON. `isStrike` is straightforward: `true`. The `startDate` is 2024-07-18 09:00:00, and the `endDate` is 2024-07-18 13:00:00. The `locationType` is definitely \"REGIONAL,\" and the `locationCodes` is just [\"03\"] for Lombardy. The text mentions \"Non coinvolte le fasce di garanzia\" and that trains departing before 9am will reach their destination, indicating the standard guarantee bands (typically 6-9) are *not* affected. Since `guaranteedTimes` is optional in the schema, and there's no information to populate it, I'll omit this field.\n\nFinally, I'll construct the JSON:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-07-18 09:00:00\",\n    \"endDate\": \"2024-07-18 13:00:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"03\"]\n  }\n}\n```\n\nI've confirmed: this is valid JSON, has no comments, the types are correct, the date format matches the required `yyyy-MM-dd HH:mm:ss`, and the region code is \"03\". This should be a clean and accurate representation of the strike information.\n\n\n",
+    "tokens": {
+      "input": 1324,
+      "output": 99,
+      "total": 2065
+    }
+  }
+}

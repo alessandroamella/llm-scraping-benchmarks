@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-28 08:20:00",
+      "endDate": "2025-01-28 12:20:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8060,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00034175,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.0007395,
+      "cachedCost": 0,
+      "totalCost": 0.00122975
+    },
+    "hash": "611ee2abf8e5f0a18c614fb9fe8e96ac",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_di_4_ore_martedi_28_gennaio_2025.html",
+    "thoughts": "**Analyzing the EAV Strike Notice**\n\nOkay, here's the deal. I've got this text notification from EAV about a potential strike on January 28, 2025. My primary task is to determine if it *is* an upcoming strike and then to pull out all the relevant details, specifically the date, duration, location, and any guaranteed service times. The output *must* be a single, parseable JSON object. No extra fluff, just the facts.\n\nLet's break this down. The text clearly states \"Avviso di sciopero\" (strike notice) and gives the date: January 28, 2025. That's a definite yes, it *is* a strike. Excellent.\n\nNow, for the specifics. \"Linee Flegree: Avviso di sciopero di 4 ore, martedì 28 gennaio 2025\" – okay, 4-hour strike. The notice says the unions have called for a four-hour company-wide strike (\"sciopero aziendale\") from 08:20 to 12:20 on that date. EAV is the company, and the text refers to \"Linee Flegree,\" which operates in Campania (region code 15), so that's the location.\n\nThe trickier part is the guaranteed service times. The text mentions \"Ultime partenze garantite prima dello sciopero\" (last guaranteed departures before the strike) and \"Prime partenze garantite dopo lo sciopero\" (first guaranteed departures after the strike). It's explicitly *not* providing a standard \"fasce di garanzia\" (guaranteed time slots) like 06:00-09:00. It doesn't specify duration, just departure times. I need to be precise here. I have to interpret this carefully. Given it's a 4-hour strike, I'm going to look for those specific departure times. Since explicit guaranteed durations aren't provided, I'll either leave the `guaranteedTimes` field empty or omit it entirely in the final JSON, depending on what's appropriate for the schema. I'll need to be super careful with the guaranteed departure times when creating the JSON.\n\n\n",
+    "tokens": {
+      "input": 1367,
+      "output": 99,
+      "total": 1959
+    }
+  }
+}

@@ -1,15 +1,26 @@
 {
-  "timestamp": "2026-03-09T13:31:29.408Z",
-  "isCacheHit": true,
+  "timestamp": "2026-03-09T14:39:55.362Z",
+  "isCacheHit": false,
   "request": {
     "sourceName": "EAV",
     "fileName": "servizio_autolinee_avviso_di_sciopero_di_2_ore_mercoledi_23_luglio_2025.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "dom-distillation-markdown",
-    "useLenientSchema": true,
+    "useLenientSchema": false,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"EAV\" (the public transport company of Campania (15)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: Servizio Autolinee - Avviso di sciopero di 2 ore mercoledì 23 luglio 2025 - EAV srl\n\n* * *\n\n## Servizio Autolinee – Avviso di sciopero di 2 ore mercoledì 23 luglio 2025\n\nData:  \n**22 Luglio 2025**\n\nSi comunica che, ai sensi dell’art. 2 comma 7 della L.146/90 (fattispecie: gravi eventi lesivi dell’incolumità e della sicurezza dei lavoratori) e delle integrazioni alla stessa della L.83/2000 e successive modifiche, per il giorno mercoledì **23 luglio 2025** la O.S. Faisa Confail ha proclamato uno sciopero aziendale di 2 ore, **dalle ore 09:00 alle ore 11:00**, avente le seguenti motivazioni: sicurezza sul posto di lavoro per il personale front-line di EAV S.r.l. ( autisti, macchinisti, capitreno, gestori, capistazione, Pl e biglietterie).\n\nNon saranno garantite le corse durante l’orario di sciopero.\n\nDurante l’orario di sciopero l’effettuazione delle corse è subordinata al numero di lavoratori aderenti allo sciopero."
   },
   "response": {
+    "rawOutput": {
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2025-07-23 09:00:00",
+        "endDate": "2025-07-23 11:00:00",
+        "locationType": "REGIONAL",
+        "locationCodes": [
+          "15"
+        ]
+      }
+    },
     "parsedData": {
       "isStrike": true,
       "strikeData": {
@@ -24,15 +35,18 @@
     "usage": {
       "input": 779,
       "output": 99,
-      "total": 1306
+      "cached": 0,
+      "thinking": 339,
+      "total": 1217
     },
     "costUsd": {
       "inputCost": 0.00019475,
       "outputCost": 0.0001485,
-      "thinkingCost": 0.000642,
+      "thinkingCost": 0.0005085,
       "cachedCost": 0,
-      "totalCost": 0.00098525
+      "totalCost": 0.00085175
     },
-    "durationMs": 6250
+    "durationMs": 6843,
+    "thoughts": "**Analyzing a Strike Announcement: A Detailed Breakdown**\n\nOkay, let's process this EAV (Campania, 15) strike notice. The task is clear: determine if this is a valid strike announcement and extract the relevant information. My primary criteria, as always, is that it pertains to an *upcoming* strike.\n\nThe input is \"Avviso di sciopero di 2 ore mercoledì 23 luglio 2025,\" and I immediately need to extract the pertinent details. The text clearly indicates a strike scheduled for July 23, 2025. It specifies a duration of 2 hours, from 09:00 to 11:00. Importantly, this strike is localized to the EAV system within the Campania region (region 15).\n\nMy next step is to format these extracted details into a structured JSON output. I'll flag `isStrike` as `true` because, based on the date, this is indeed a future strike. Now, I need to populate the `strikeData` object. I know to create the data object, and the attributes within that object:\n\n*   `startDate`:  \"2025-07-23 09:00:00\" - this represents the exact start time of the strike.\n*   `endDate`: \"2025-07-23 11:00:00\" - this is the end time of the strike.\n*   `locationType`: \"REGIONAL\" - since it's an EAV strike, impacting regional services.\n*   `locationCodes`: [\"15\"] - the specific region code for Campania.\n*   `guaranteedTimes`: The notice doesn't specify any guaranteed services, therefore I'll leave the `guaranteedTimes` key out of the `strikeData` object. It states \"Non saranno garantite le corse durante l’orario di sciopero\", meaning the text *implies* that no guarantees apply or were not specified, and so I should omit it.\n\nThe output will be a JSON structure containing `isStrike = true` and the extracted `strikeData` as outlined above. That's a clean, complete response to this text analysis task.\n\n\n"
   }
 }

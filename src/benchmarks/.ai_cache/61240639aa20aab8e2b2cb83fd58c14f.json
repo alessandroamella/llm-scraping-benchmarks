@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20282,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00036975,
+      "outputCost": 0.0006692,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00103895
+    },
+    "hash": "61240639aa20aab8e2b2cb83fd58c14f",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_di_24_ore_del_13_dicembre_2024_aggiornamento.html",
+    "thoughts": "**Clarifying strike details**\n\nI see there’s an upcoming strike that’s been updated to 24 hours. The instruction states to set isStrike to true if it’s an announcement of an upcoming strike. Here, the content confirms that the strike for tomorrow, December 13, is indeed a 24-hour one. So yes, I should classify it as isStrike true with strikeData. I need to extract information like startDate, endDate, and location codes based on the content provided.",
+    "tokens": {
+      "input": 7395,
+      "output": 1673,
+      "total": 9068
+    }
+  }
+}

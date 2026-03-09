@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5545,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000538,
+      "outputCost": 0.0001432,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.000197
+    },
+    "hash": "aaee5e18e62b1cf8e94bbb416350541c",
+    "sourceFile": "sciopero_trasporto_pubblico_chiuse_metro_c_termini_centocelle_0.html",
+    "thoughts": "**Generating JSON Output**\n\nI need to output the JSON with `isStrike: false` only, so I’ll create it like this: `{\"isStrike\": false}`. The requirements are clear: it should exactly match the example for a non-strike situation. I’ll make sure there’s no extra commentary and present it in the specified format. Since the \"strike_extraction\" format calls for this specific JSON object, I’ll keep it simple and deliver just `isStrike: false`.",
+    "tokens": {
+      "input": 1076,
+      "output": 358,
+      "total": 1434
+    }
+  }
+}

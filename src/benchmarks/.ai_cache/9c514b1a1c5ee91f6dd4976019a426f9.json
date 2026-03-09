@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21381,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000612,
+      "outputCost": 0.0005232,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0005844
+    },
+    "hash": "9c514b1a1c5ee91f6dd4976019a426f9",
+    "sourceFile": "eav_autolinee_avviso_di_sciopero_di_24_ore_venerdi_13_dicembre_2024.html",
+    "thoughts": "**Extracting strike data**\n\nI need to output the JSON for strike extraction based on the schema. The document is announcing an upcoming strike on December 13, 2024, declared as a 24-hour national strike. So, is the strike upcoming? Yes, it’s not ongoing. I'll set isStrike to true. The start date will be December 13, 2024, at 00:00:00 and the end date at 23:59:59. I need to ensure the date format matches the output specifications.",
+    "tokens": {
+      "input": 1224,
+      "output": 1308,
+      "total": 2532
+    }
+  }
+}

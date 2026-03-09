@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-28 08:20:00",
+      "endDate": "2025-01-28 12:20:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "08:20-12:20"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 12263,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000076,
+      "outputCost": 0.000382,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.000458
+    },
+    "hash": "d05d1c6525343dc2565f8733a4129a5e",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_4_ore_martedi_28_gennaio_2025.html",
+    "thoughts": "**Analyzing strike data**\n\nI'm focusing on extracting information to output in JSON format according to the strike_extraction schema. The document mentions a 4-hour strike on Tuesday, January 28, 2025, announced by certain unions, which confirms it's an upcoming strike. The start time is 08:20 and ends at 12:20 that day. So, I'll mark isStrike as true. The startDate formatted correctly will be \"2025-01-28 08:20:00\" and endDate as \"2025-01-28 12:20:00.\"",
+    "tokens": {
+      "input": 1520,
+      "output": 955,
+      "total": 2475
+    }
+  }
+}

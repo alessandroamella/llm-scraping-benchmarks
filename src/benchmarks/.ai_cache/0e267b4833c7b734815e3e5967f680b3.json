@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9039,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000942,
+      "outputCost": 0.0001708,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0011128
+    },
+    "hash": "0e267b4833c7b734815e3e5967f680b3",
+    "sourceFile": "sciopero_del_trasporto_pubblico_aperte_le_metropolitane_e_la_termini_centocelle.html",
+    "thoughts": "**Understanding strike extraction requirements**\n\nI need to output JSON in the “strike_extraction” format. The content I have talks about an ongoing strike related to public transportation, with the date published as 09/12/2025. Since it's reporting on an ongoing situation, I’ll determine that it’s not an upcoming strike. The instruction is clear: set `isStrike` to false for ongoing strikes. Therefore, the output will be: {\"isStrike\": false}, without any strike data since it’s not needed.",
+    "tokens": {
+      "input": 18840,
+      "output": 427,
+      "total": 19267
+    }
+  }
+}

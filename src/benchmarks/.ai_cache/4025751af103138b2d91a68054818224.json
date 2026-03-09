@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-10 19:32:00",
+      "endDate": "2025-01-10 23:32:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 13961,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00034705,
+      "outputCost": 0.0004716,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00081865
+    },
+    "hash": "4025751af103138b2d91a68054818224",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_4_ore_venerdi_10_gennaio_2025.html",
+    "thoughts": "**Clarifying JSON requirements**\n\nI’m looking at the JSON schema for a strike, noting that everything in the object is required, including fields for guaranteedTimes, which should be set to null if not specified. However, the article only mentions guaranteed departure times before the strike. So, I'll set \"guaranteedTimes\" to null. For \"startDate\" and \"endDate,\" they must be formatted as 'yyyy-MM-dd HH:mm:ss', for example, \"2025-01-10 19:32:00\". I'll include \"LocationType\" as \"NATIONAL\" and \"LocationCodes\" as null.",
+    "tokens": {
+      "input": 6941,
+      "output": 1179,
+      "total": 8120
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-12-14 09:00:00",
+      "endDate": "2023-12-14 17:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-10:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 34474,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000071,
+      "outputCost": 0.0012456,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0013166
+    },
+    "hash": "eec25e3fb3548b8dd0d3d0adf00ee298",
+    "sourceFile": "strike-detail-gioved--14-dicembre-dalle-ore-9-alle-ore-17-sciope.html",
+    "thoughts": "**Analyzing strike data**\n\nI need to output the JSON for isStrike and strikeData. The content is in Italian, announcing a strike of regional trains on Thursday, December 14, from 9 AM to 5 PM. This is real-time info as of December 12, 2023. The announcement mentions it’s a planned strike by unions, indicating disruptions may occur. Therefore, isStrike should be true. I'll also need to include the start and end times in the specified date format, and classify the location type and codes accordingly.",
+    "tokens": {
+      "input": 1420,
+      "output": 3114,
+      "total": 4534
+    }
+  }
+}

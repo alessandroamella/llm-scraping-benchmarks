@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 10589,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00093745,
+      "outputCost": 0.0001812,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00111865
+    },
+    "hash": "98f7e433014201af6baa52d9c397cf06",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_279.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to output JSON that indicates whether there’s a strike, following the schema with `isStrike` and possibly `strikeData`. The content is from an HTML page titled something like \"Public transport strike, personnel Atac adhesion at 27.9%.\" The text indicates that today’s strike has an adhesion rate of 27.9%. Since it mentions \"oggi,\" which means \"today,\" this is not an announcement for an upcoming strike. So, `isStrike` should be false.",
+    "tokens": {
+      "input": 18749,
+      "output": 453,
+      "total": 19202
+    }
+  }
+}

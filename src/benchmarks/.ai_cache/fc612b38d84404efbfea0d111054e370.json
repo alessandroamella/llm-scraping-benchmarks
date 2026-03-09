@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9222,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00048225,
+      "outputCost": 0.0001588,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00064105
+    },
+    "hash": "fc612b38d84404efbfea0d111054e370",
+    "sourceFile": "sciopero_del_trasporto_pubblico_aperta_la_metro_b_chiuse_linee_a_c_e_termini_centocelle.html",
+    "thoughts": "**Analyzing strike information**\n\nI need to output JSON based on the schema, checking if there's a strike. The content is in Italian and mentions ongoing public transport strikes in Rome, detailing which metro lines are affected and the date is from December 13, 2024.\n\nIt states that a general national strike is currently happening. Since this isn't announcing a new future strike but discussing an ongoing one, I conclude that \"isStrike\" should be false. Therefore, the output will be {\"isStrike\": false}.",
+    "tokens": {
+      "input": 9645,
+      "output": 397,
+      "total": 10042
+    }
+  }
+}

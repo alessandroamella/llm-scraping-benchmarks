@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8236,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00020125,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.0011775,
+      "cachedCost": 0,
+      "totalCost": 0.00156325
+    },
+    "hash": "fa0b1c3838034b6a72024df208bac973",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-12-12-sciopero-nazionale-personale-a.html",
+    "thoughts": "**Strike Data Extraction Analysis**\n\nOkay, here's the breakdown of how I'm processing this strike announcement. First, I need to confirm if this input explicitly announces an upcoming strike.  The input clearly states \"SCIOPERO NAZIONALE PERSONALE AUTOFERROTRANVIERI,\" which translates to \"NATIONAL STRIKE for TRANSPORT WORKERS.\" So, I'm going to mark `isStrike` as `true`.\n\nNow, I'm extracting the key details. The date is \"12 DICEMBRE 2025,\" which I'll convert to the standardized format of `yyyy-MM-dd HH:mm:ss`, resulting in \"2025-12-12 00:00:00\" for the start and \"2025-12-12 23:59:59\" for the end, assuming a full-day strike. The scope is \"NAZIONALE,\" translating to \"NATIONAL\".\n\nThe guaranteed service times are listed as \"06:00-09:00\" and \"18:00-21:00.\" I'll store those as an array of strings in the `guaranteedTimes` field. Given the \"NATIONAL\" scope, I'll omit the `locationCodes` field, as per the rules.\n\nTherefore, the structure I'll build is as follows:\n\n*   `isStrike`: `true`\n*   `strikeData`:\n    *   `startDate`: \"2025-12-12 00:00:00\"\n    *   `endDate`: \"2025-12-12 23:59:59\"\n    *   `locationType`: \"NATIONAL\"\n    *   `guaranteedTimes`: [\"06:00-09:00\", \"18:00-21:00\"]\n\nI will then validate it. I need to make sure that the output is valid JSON, and that the date and time patterns, and the guaranteed times patterns are correct, according to the specified regular expressions. It seems all valid. So, I will be returning the following JSON response:\n\n`{\"isStrike\": true, \"strikeData\": {\"startDate\": \"2025-12-12 00:00:00\", \"endDate\": \"2025-12-12 23:59:59\", \"locationType\": \"NATIONAL\", \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]}}`\n\n\n",
+    "tokens": {
+      "input": 805,
+      "output": 123,
+      "total": 1713
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-07-23 09:00:00",
+      "endDate": "2025-07-23 11:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 26638,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000571,
+      "outputCost": 0.0008296,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0014006
+    },
+    "hash": "fcacddb180ebe9a6f35f46b474303881",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_2_ore_mercoledi_23_luglio_2025.html",
+    "thoughts": "**Validating strike announcement**\n\nI need to output JSON according to the required schema. I'm checking if this document is an announcement about an upcoming strike based on the article titled \"Linee Vesuviane: Avviso di sciopero di 2 ore mercoledì 23 luglio 2025.\" The article clearly states that there will be a two-hour strike on July 23, 2025, from 09:00 to 11:00, which confirms it's an upcoming strike. The strike location is Linee Vesuviane in Campania, so the location type should be REGIONAL.",
+    "tokens": {
+      "input": 11420,
+      "output": 2074,
+      "total": 13494
+    }
+  }
+}

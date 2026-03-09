@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4683,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00352275,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.0004185,
+      "cachedCost": 0,
+      "totalCost": 0.00412575
+    },
+    "hash": "7bf56a6b8ee51cb3a03b2feb72414d8e",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-12-12-sciopero-nazionale-personale-a.html",
+    "thoughts": "**Analyzing the Trenitalia Strike Announcement**\n\nOkay, here's the deal. My primary task is to dissect this HTML and figure out if it's announcing a strike, specifically a \"Trenitalia\" strike. I need to distill this into a single, clean JSON object.\n\nFirst, I need to nail down a boolean, `isStrike`. If a strike is declared, I'll then extract the juicy details, packaging them into the `strikeData` object. This will contain: `startDate`, `endDate`, `locationType`, `locationCodes` (which I can assume is optional if it's a national strike, as this seems to be), and also `guaranteedTimes` if available.\n\nLooking at the content, I see a few key pieces. The title is a dead giveaway: \"SCIOPERO NAZIONALE PERSONALE AUTOFERROTRANVIERI\" – a national strike of autoferrotranvieri staff. The date is \"12 DICEMBRE 2025\" (Friday, December 12, 2025), and it's a 24-hour strike. The relevant sentence is \"Il giorno venerdì 12 dicembre 2025... è stato indetto uno sciopero di 24 ore\" – a strike of 24 hours has been declared on Friday, December 12th, 2025. It's explicitly \"Nazionale,\" so location details might not be present. Finally, the guaranteed service times are \"dalle ore 6.00 alle ore 9.00 e dalle ore 18.00 alle ore 21.00\" - from 6:00 to 9:00 and from 18:00 to 21:00. And finally, the specific company is \"Trenitalia\".\n\nSo, I have all the pieces I need to assemble the JSON. It's a strike, I'll have the relevant data formatted and ready to go.\n\n\n",
+    "tokens": {
+      "input": 14091,
+      "output": 123,
+      "total": 14493
+    }
+  }
+}

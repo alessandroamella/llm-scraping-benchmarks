@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-10 19:32:00",
+      "endDate": "2025-01-10 23:32:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19292,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000689,
+      "outputCost": 0.0004592,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0005281
+    },
+    "hash": "8c21688ead1ad944227603013ec3176a",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_4_ore_venerdi_10_gennaio_2025.html",
+    "thoughts": "**Determining strike details**\n\nI need to output JSON following the \"strike_extraction\" schema. The document mentions a strike notice for \"Linee Vesuviane,\" which is happening on January 10, 2025, from 19:32 to 23:32. So, it looks like this is an upcoming strike, meaning isStrike should be true. \n\nFor the details, startDate is \"2025-01-10 19:32:00\" and endDate is \"2025-01-10 23:32:00.\" The locationType is indicated as NATIONAL since it states \"nazionale.\" As for locationCodes, they should probably be null for a national strike.",
+    "tokens": {
+      "input": 1378,
+      "output": 1148,
+      "total": 2526
+    }
+  }
+}

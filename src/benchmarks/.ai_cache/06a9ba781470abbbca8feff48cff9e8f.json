@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-07-23 09:00:00",
+      "endDate": "2025-07-23 11:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21448,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000708,
+      "outputCost": 0.0008004,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008712
+    },
+    "hash": "06a9ba781470abbbca8feff48cff9e8f",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_di_2_ore_mercoledi_23_luglio_2025.html",
+    "thoughts": "**Determining strike details**\n\nI'm analyzing whether this document announces a new strike. The Italian content says there's a two-hour strike on July 23, 2025, proclaimed by OS Faisa Confail. It provides strike times, and states that service depends on workers participating. Since it lists key points like last departures before and first after the strike, it confirms an upcoming strike. So, I'll set isStrike to true and extract essential data like start and end dates, location type, and codes, formatted correctly.",
+    "tokens": {
+      "input": 1416,
+      "output": 2001,
+      "total": 3417
+    }
+  }
+}

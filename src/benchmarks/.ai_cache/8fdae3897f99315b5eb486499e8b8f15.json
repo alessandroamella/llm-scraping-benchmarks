@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4054,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000148,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0002655,
+      "cachedCost": 0,
+      "totalCost": 0.0004285
+    },
+    "hash": "8fdae3897f99315b5eb486499e8b8f15",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_195.html",
+    "thoughts": "**Analyzing the \"Sciopero del trasporto pubblico\" News**\n\nOkay, let's break this down. The input text is \"Sciopero del trasporto pubblico, adesione personale Atac al 19,5%.\" My immediate task is to determine if this signals an upcoming strike. The context provided clarifies that \"adesione\" refers to the participation of Atac personnel in a strike. Crucially, the text specifies this \"adesione\" was *measured* \"a metà mattinata\" (mid-morning), implying this isn't a pre-strike announcement; it's a report on the strike's level of participation. Therefore, according to the provided guidelines, because it's *about* the participation *of* a strike, and not announcing *the* strike, my *isStrike* flag must be set to `false`.\n\n\n",
+    "tokens": {
+      "input": 592,
+      "output": 10,
+      "total": 779
+    }
+  }
+}

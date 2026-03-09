@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-03-22 19:40:00",
+      "endDate": "2025-03-22 23:40:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 10822,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000241,
+      "outputCost": 0.0001395,
+      "thinkingCost": 0.0010065,
+      "cachedCost": 0,
+      "totalCost": 0.001387
+    },
+    "hash": "28dfcdbe6cf8bbbe08180b639a11d2f7",
+    "sourceFile": "suburbane_sciopero_del_22_marzo_2025.html",
+    "thoughts": "**Strike Announcement Analysis**\n\nOkay, let's break this down. My task is to analyze this text and determine if it's a strike announcement, and if so, extract the relevant information in the specified JSON format. The criteria are clear: `isStrike`, the strike details which are `startDate`, `endDate`, `locationType`, `locationCodes`, and optionally `guaranteedTimes`.\n\nThe input is a strike on March 22, 2025, lasting four hours, from 19:40 to 23:40, and the affected entity is EAV, located in Campania (15).\n\nReading the announcement: \"Si comunica che per il giorno 22 marzo 2025 la O.S. OR.S.A. ha proclamato uno sciopero aziendale di 4 ore, dalle ore 19:40 alle ore 23:40\" – yep, that's a strike announcement.  So, `isStrike` is true.\n\nNow, for the strike details.  `startDate` is clearly 2025-03-22 19:40:00. `endDate` is 2025-03-22 23:40:00.  The location is regional – \"EAV in Campania\" points to that, so `locationType` is REGIONAL and `locationCodes` is [\"15\"].\n\nThe tricky part is `guaranteedTimes`. The text mentions \"ultime partenze garantite\" and specific trains like \"il treno 7878... verrà effettuato in quanto garantito\".  The prompt says \"if not specified, omit\". However, the prompt is asking for time ranges. The provided text doesn't provide a general guarantee window or time range (fascia di garanzia) like \"06:00-09:00\".  Therefore, I'm going to omit `guaranteedTimes` because it's not a specified time range, and the prompt indicates to do so.\n\nSo, the strike data I've extracted are:\n\n*   `isStrike`: true\n*   `startDate`: \"2025-03-22 19:40:00\"\n*   `endDate`: \"2025-03-22 23:40:00\"\n*   `locationType`: \"REGIONAL\"\n*   `locationCodes`: [\"15\"]\n\nI have validated that it's valid JSON, with no comments, that `isStrike` is a boolean, that the date/time formats are correct (yyyy-MM-dd HH:mm:ss), that `locationType` is REGIONAL, and that `locationCodes` is an array of strings. Done.\n\n\n",
+    "tokens": {
+      "input": 964,
+      "output": 93,
+      "total": 1728
+    }
+  }
+}

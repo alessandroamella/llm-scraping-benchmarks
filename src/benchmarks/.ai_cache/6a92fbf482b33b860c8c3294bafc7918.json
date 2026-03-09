@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-02 21:00:00",
+      "endDate": "2025-10-03 20:59:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 17611,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006785,
+      "outputCost": 0.0004852,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00055305
+    },
+    "hash": "6a92fbf482b33b860c8c3294bafc7918",
+    "sourceFile": "ttper_2025-10-02_23-00.pdf",
+    "thoughts": "**Extracting strike data**\n\nI need to extract strikeData using startDate and endDate in the correct format: 'yyyy-MM-dd HH:mm:ss'. The given dates range from October 2, 2025, at 21:00 to October 3, 2025, at 20:59. So, I’ll set startDate as \"2025-10-02 21:00:00\" and endDate as \"2025-10-03 20:59:00\". For locationType, since this is a national strike, it should be \"NATIONAL,\" and locationCodes must be explicitly set to null.",
+    "tokens": {
+      "input": 1357,
+      "output": 1213,
+      "total": 2570
+    }
+  }
+}

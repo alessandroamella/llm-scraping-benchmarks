@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6079,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.004096,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0003525,
+      "cachedCost": 0,
+      "totalCost": 0.0044635
+    },
+    "hash": "1e0da17938a881c181cc9023c9db54d2",
+    "sourceFile": "sciopero_del_trasporto_pubblico_adesione_personale_atac_al_273.html",
+    "thoughts": "**Analyzing the Announcement: No Upcoming Strike Here**\n\nOkay, let's break this down. My objective is to figure out if this HTML content from `romamobilita.it` signals an upcoming strike. The title, \"Sciopero del Trasporto pubblico, adesione personale Atac al 27,3%,\" seems like a decent starting point. The crucial part, though, is the content itself.\n\nIt clearly states, \"L’adesione del personale Atac allo sciopero del trasporto pubblico, rilevata in mattinata, è stata pari al 27,3%.\" \"Rilevata in mattinata\" and \"è stata pari\" – this tells me this isn't about *planning* a strike. It's reporting the *participation* rate, which means the strike has *already happened*. The publication and update dates confirm this is reporting on a past event.\n\nTherefore, following the provided logic, since the content describes participation *in* a strike, rather than an announcement *of* one, `isStrike` is definitely false. The system is right to interpret this as historical reporting, not a forecast.\n\n\n",
+    "tokens": {
+      "input": 16384,
+      "output": 10,
+      "total": 16629
+    }
+  }
+}

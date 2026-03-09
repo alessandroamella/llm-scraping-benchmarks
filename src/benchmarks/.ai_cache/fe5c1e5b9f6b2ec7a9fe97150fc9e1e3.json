@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-27 21:00:00",
+      "endDate": "2025-11-28 21:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5829,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.003494,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.000618,
+      "cachedCost": 0,
+      "totalCost": 0.004235
+    },
+    "hash": "fe5c1e5b9f6b2ec7a9fe97150fc9e1e3",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-11-27-sciopero-nazionale-del-traspor.html",
+    "thoughts": "**My Analysis of Upcoming Strike Information**\n\nOkay, here's what I've got. The task is to pull strike information from this HTML and format it as JSON. The key field is `isStrike`, and it's *only* true if we're dealing with an *upcoming* strike. Cancellations, real-time updates, or historical data all get `isStrike: false`. Let's dig in.\n\nThe title alone, \"SCIOPERO NAZIONALE DEL TRASPORTO FERROVIARIO\" – that's \"National Railway Transport Strike\" – is a strong indicator. Then I see the dates: \"27 NOVEMBRE 2025 - 28 NOVEMBRE 2025\". The text confirms this: \"From 21:00 Thursday Nov 27th to 21:00 Friday Nov 28th 2025 is a strike...\" This is definitely an *announcement* of a *future* strike.\n\nSo, `isStrike` is *definitely* true. Now, what's the data?\n\n*   `isStrike`: True\n*   `startDate`: \"2025-11-27 21:00:00\" – straight forward.\n*   `endDate`: \"2025-11-28 21:00:00\" – that's the end time.\n*   `locationType`: \"NATIONAL\" – From the title, clearly it's national.\n*   `locationCodes`: Per instructions I must omit this if `locationType` is `NATIONAL`.\n*   `guaranteedTimes`: I can't find anything explicitly mentioning \"guaranteed times\" in the text. I need to leave this out. The text mentions that \"more information\" about \"guaranteed services\" is \"available\" but there's nothing specific here.\n\nEssentially, I have parsed this information and formulated a precise JSON object with all requested data fields.\n\n\n",
+    "tokens": {
+      "input": 13976,
+      "output": 82,
+      "total": 14470
+    }
+  }
+}

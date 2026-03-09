@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 16970,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0007421,
+      "outputCost": 0.0004932,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0012353
+    },
+    "hash": "cc2d8977aa916dca26af4d345e0ead29",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2026-1-8-sciopero-del-personale-mobile-in.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to output JSON based on the schema in the prompt. The document is announcing a new strike, specifically related to the mobile Intercity staff of Trenitalia in Genoa. The title translates to indicate that, and the text confirms the strike is set for January 8, 2026, from 9:01 to 17:00. Since the text states that a strike has been announced, I understand that I should set \"isStrike\" to true.",
+    "tokens": {
+      "input": 14842,
+      "output": 1233,
+      "total": 16075
+    }
+  }
+}

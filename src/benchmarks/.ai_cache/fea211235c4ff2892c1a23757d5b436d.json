@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-11-29 09:00:00",
+      "endDate": "2024-11-29 13:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 10100,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0024475,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.0009435,
+      "cachedCost": 0,
+      "totalCost": 0.0035395
+    },
+    "hash": "fea211235c4ff2892c1a23757d5b436d",
+    "sourceFile": "strike-detail-venerd--29-novembre-dalle-9-alle-13-sciopero-gener.html",
+    "thoughts": "**Strike Announcement Analysis for Trenord (Lombardia - 03)**\n\nOkay, let's break this down. The core objective is to determine if this HTML content describes an upcoming strike, specifically concerning Trenord in Lombardy (region code \"03\").  The input is clear; it's an announcement. The text clearly states a general strike is planned for Friday, November 29th, from 09:00 to 13:00.\n\nThe key pieces of information are: the date (November 29, 2024), the time frame (09:00 to 13:00), and the location (FERROVIENORD, which I'm inferring is the Lombardy regional network, hence the \"REGIONAL\" location type and the code \"03\").  The unions Cgil and Uil are clearly the ones calling for it.\n\nNow, the constraints. I need a JSON output. `isStrike` must be `true`. `startDate` and `endDate` must be in the 'yyyy-MM-dd HH:mm:ss' format.  The `locationType` should be \"REGIONAL\", and `locationCodes` is definitely [\"03\"].\n\nThe text mentions that trains with a departure time *before* 09:00 will run, meaning there are no \"guaranteed time bands\" specifically mentioned like peak hours, so I will leave this parameter out. It's not a standard guarantee.\n\nTherefore, the output should be:\n\n*   `isStrike`: true\n*   `strikeData`:\n    *   `startDate`: \"2024-11-29 09:00:00\"\n    *   `endDate`: \"2024-11-29 13:00:00\"\n    *   `locationType`: \"REGIONAL\"\n    *   `locationCodes`: [\"03\"]\n\nAnd, just to be absolutely clear: this isn't a revocation, it is a general strike announcement, and is not real time status. It's a clear \"yes\" to the strike question.\n\n\n",
+    "tokens": {
+      "input": 9790,
+      "output": 99,
+      "total": 10518
+    }
+  }
+}

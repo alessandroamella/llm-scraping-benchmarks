@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "04",
+        "05"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21413,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000724,
+      "outputCost": 0.0008312,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0009036
+    },
+    "hash": "01212b59da2c9a703c365e666556492a",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-11-28-sciopero-del-personale-di-sad-.html",
+    "thoughts": "**Extracting strike details**\n\nI need to output JSON based on the strike extraction schema. The content indicates that there’s an upcoming strike announced for November 28, 2025, happening from midnight to 11:59 PM. It’s noted as a public announcement, and the context suggests it's a regional strike in the Trentino Alto Adige and Veneto areas, organized by SAD and Trentino Trasporti. I'll categorize this as a regional strike.",
+    "tokens": {
+      "input": 1448,
+      "output": 2078,
+      "total": 3526
+    }
+  }
+}

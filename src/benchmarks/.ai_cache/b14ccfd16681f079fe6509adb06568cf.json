@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 09:00:00",
+      "endDate": "2024-12-13 13:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 23516,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005407,
+      "outputCost": 0.0008572,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0013979
+    },
+    "hash": "b14ccfd16681f079fe6509adb06568cf",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_di_4_ore_del_13_dicembre_2024.html",
+    "thoughts": "**Determining strike announcement**\n\nI'm focusing on outputting JSON as specified. The document is notifying about an upcoming strike, specifically a 4-hour strike on December 13, 2024. The text indicates that a general national strike was originally planned for 24 hours but is now shortened. Since the page is dated December 11, 2024, it confirms that it's an upcoming strike. I'll need to set the `isStrike` to true and extract various strike details like start date, end date, location type, and guaranteed times.",
+    "tokens": {
+      "input": 10814,
+      "output": 2143,
+      "total": 12957
+    }
+  }
+}

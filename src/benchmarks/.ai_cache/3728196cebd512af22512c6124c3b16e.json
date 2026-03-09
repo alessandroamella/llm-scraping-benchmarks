@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-10 19:32:00",
+      "endDate": "2025-01-10 23:32:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7440,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0025265,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.001086,
+      "cachedCost": 0,
+      "totalCost": 0.0037355
+    },
+    "hash": "3728196cebd512af22512c6124c3b16e",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_di_4_ore10_gennaio_2025.html",
+    "thoughts": "**Strike Analysis for EAV (Campania)**\n\nOkay, let's break this down. My task is to determine if the provided text announces an upcoming strike relevant to EAV, the public transport company of Campania, and then formulate a JSON output based on the provided schema. The text is titled \"Linea Metropolitana: Avviso di sciopero di 4 ore, venerdì 10 gennaio 2025\" and dated January 5th, 2025.\n\nThe content clearly states that CONF.A.I.L. has called for a \"sciopero nazionale\" (national strike) lasting 4 hours on January 10, 2025, from 19:32 to 23:32. Despite being a national strike, the context points to it affecting EAV in Campania, therefore, it is relevant to my analysis.\n\nSo, `isStrike` is definitely `true`.\n\nThe `startDate` is \"2025-01-10 19:32:00\" and the `endDate` is \"2025-01-10 23:32:00\".\n\nNow, the trickier part is the `locationType`. While it's a \"sciopero nazionale\", it impacts EAV in Campania. Considering the prompt says to use \"NATIONAL\" and omit `locationCodes` if it is a \"sciopero nazionale,\" that's what I'll do. So, `locationType` will be \"NATIONAL\" and I will *omit* `locationCodes`.\n\nFinally, regarding `guaranteedTimes`, the text mentions \"ultime partenze garantite prima dello sciopero\", but it doesn't give me a specific range like \"06:00-09:00\". Instead, it lists specific departures, not ranges. The text says \"Di seguito vengono elencate le ultime e le prime partenze garantite... da Aversa per Piscinola 19:30\". Since there are no ranges, and I only have specific times, I must omit `guaranteedTimes`.\n\nTherefore, my final JSON output will reflect these details, omitting `locationCodes` and `guaranteedTimes` as required by the schema.\n\n\n",
+    "tokens": {
+      "input": 10106,
+      "output": 82,
+      "total": 10912
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-01-12 03:00:00",
+      "endDate": "2026-01-13 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "08",
+        "07",
+        "03",
+        "01",
+        "05"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5177,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00019,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.000825,
+      "cachedCost": 0,
+      "totalCost": 0.0011995
+    },
+    "hash": "c52a895e8dea304cb08ef84b5c9615b3",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2026-1-12-sciopero-del-personale-di-treno.html",
+    "thoughts": "**Strike Analysis: Regional Rail Disruptions - January 2026**\n\nOkay, let's break this down. First, the title clearly indicates a strike: \"SCIOPERO REGIONALE DEL TRASPORTO FERROVIARIO\". So, yes, definitely a strike.\n\nIt's an *upcoming* strike, not a cancellation or a record of past participation. The dates are January 12th to January 13th, 2026. The start time is 2026-01-12 at 03:00:00, and the end time is 2026-01-13 at 02:00:00.\n\nThe location is crucial. Although the title mentions \"REGIONE LOMBARDIA,\" the text explicitly names multiple regions: Emilia Romagna, Liguria, Lombardia, Piemonte, and Veneto. Therefore, this is a *regional* strike. I've confirmed this with the location codes (ISTAT): 08 for Emilia-Romagna, 07 for Liguria, 03 for Lombardia, 01 for Piemonte, and 05 for Veneto.\n\nThere's no explicit mention of guaranteed services or times within this text. It directs users to \"canali digitali\" for more information, so I'll leave that detail out for now.\n\nSo, here's my interpretation: this is a strike.\n\n*   `isStrike`: `true`\n*   `strikeData`:\n    *   `startDate`: \"2026-01-12 03:00:00\"\n    *   `endDate`: \"2026-01-13 02:00:00\"\n    *   `locationType`: \"REGIONAL\"\n    *   `locationCodes`: [\"08\", \"07\", \"03\", \"01\", \"05\"]\n\nI'll flag this to be sure to check for guaranteed services information through the \"canali digitali\" later.\n\n\n",
+    "tokens": {
+      "input": 760,
+      "output": 123,
+      "total": 1433
+    }
+  }
+}

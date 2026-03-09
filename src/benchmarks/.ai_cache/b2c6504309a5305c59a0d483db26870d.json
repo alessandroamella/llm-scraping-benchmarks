@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-09-06 03:00:00",
+      "endDate": "2023-09-07 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 16373,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00028835,
+      "outputCost": 0.0004792,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00076755
+    },
+    "hash": "b2c6504309a5305c59a0d483db26870d",
+    "sourceFile": "strike-detail-mercoled--6-settembre--sciopero-dei-treni-regional.html",
+    "thoughts": "**Deciding on strike announcement**\n\nI need to create JSON output based on the strike_extraction format. The document mentions a strike on September 6, likely in 2023, stating it lasts from 03:00 on September 6 to 02:00 on September 7. This is clearly an announcement rather than a cancellation. It affects regional trains, so I'll categorize the locationType as REGIONAL, and location Codes will be [\"03\"] for Lombardia since it's relevant to the area mentioned.",
+    "tokens": {
+      "input": 5767,
+      "output": 1198,
+      "total": 6965
+    }
+  }
+}

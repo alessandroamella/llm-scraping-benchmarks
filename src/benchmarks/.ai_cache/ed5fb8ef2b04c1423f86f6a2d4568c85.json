@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7596,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0004798,
+      "outputCost": 0.0001392,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.000619
+    },
+    "hash": "ed5fb8ef2b04c1423f86f6a2d4568c85",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_144.html",
+    "thoughts": "**Outputting JSON for strike status**\n\nI need to format the information as JSON based on the provided schema. The content in Italian translates to details about a public transport strike, specifically noting that Atac staff adhesion is at 14.4% today. It confirms the strike is occurring now, so it isn't an upcoming strike. Therefore, I'll set \"isStrike\" to false. The final JSON output will be {\"isStrike\": false}, as it's reporting current attendance during the strike.",
+    "tokens": {
+      "input": 9596,
+      "output": 348,
+      "total": 9944
+    }
+  }
+}

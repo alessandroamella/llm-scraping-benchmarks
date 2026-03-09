@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 25584,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00053255,
+      "outputCost": 0.0005624,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00109495
+    },
+    "hash": "a6b67a384c7bd95642497a3975d2291e",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_generale_di_24h_per_venerdi_12_dicembre_2025.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI'm focusing on producing a JSON document based on the provided schema. The content is in Italian, announcing a general 24-hour strike for Friday, December 12, 2025. It mentions that the CGIL union has proclaimed this strike, highlighting concerns about financial maneuvers. The strike will affect both rail and road services, but there are guaranteed service windows from 5:30 AM to 8:30 AM and 4:30 PM to 7:30 PM. So, it's definitely an announcement about an upcoming strike.",
+    "tokens": {
+      "input": 10651,
+      "output": 1406,
+      "total": 12057
+    }
+  }
+}

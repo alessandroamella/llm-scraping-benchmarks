@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6587,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.002626,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0003975,
+      "cachedCost": 0,
+      "totalCost": 0.0030385
+    },
+    "hash": "95827bda1ae2043463a6fa681c445aaa",
+    "sourceFile": "sciopero_nazionale_adesione_personale_atac_al_237.html",
+    "thoughts": "**Analyzing the Text for a Strike Announcement**\n\nOkay, let's break this down. My task is to determine whether this text is announcing an upcoming strike. The instructions are clear: if it's about a past event, a cancellation, or real-time info about a current strike, then `isStrike` is `false`. Only an *announcement* of a *future* strike warrants a `true` value.\n\nNow, let's analyze the content. The headline translates to \"National strike, Atac staff participation at 23.7%.\" The text itself states, \"The overall participation of Atac staff in the national strike *today*, noted in the morning, was 23.7%.\" The date of publication is 22/09/2025.\n\nBased on this, it's pretty clear: the text is discussing the *participation rate* of a strike that happened *today*, not an announcement of a future event. Therefore, `isStrike` must be `false`. This is a report, not a warning.\n\n\n",
+    "tokens": {
+      "input": 10504,
+      "output": 10,
+      "total": 10779
+    }
+  }
+}

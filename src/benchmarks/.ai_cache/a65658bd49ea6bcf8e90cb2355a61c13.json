@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 11159,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00093705,
+      "outputCost": 0.000242,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00117905
+    },
+    "hash": "a65658bd49ea6bcf8e90cb2355a61c13",
+    "sourceFile": "sciopero_generale_adesione_personale_atac_179.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to output JSON according to the schema. The Italian text indicates a general strike with a participation rate of 17.9%. The page title confirms this, mentioning \"Sciopero generale\" and providing details about the current status, which shows that participation is happening today. Since this isn't an announcement of an upcoming strike but rather an ongoing one, I should set `isStrike` to false. This helps align my output correctly with the instructions given!",
+    "tokens": {
+      "input": 18741,
+      "output": 605,
+      "total": 19346
+    }
+  }
+}

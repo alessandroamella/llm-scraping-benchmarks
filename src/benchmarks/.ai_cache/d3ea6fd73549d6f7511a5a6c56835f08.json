@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-13 08:30:00",
+      "endDate": "2025-10-13 12:30:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7288,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00266525,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.000996,
+      "cachedCost": 0,
+      "totalCost": 0.00380975
+    },
+    "hash": "d3ea6fd73549d6f7511a5a6c56835f08",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_4_ore_del_13_ottobre_2025.html",
+    "thoughts": "**Strike Analysis: EAV (Campania)**\n\nOkay, let's break this down. My task is clear: I need to analyze this provided text about EAV (Ente Autonomo Volturno, region 15) and determine if it announces an *upcoming* strike. Cancellations, revocations, or real-time updates during a strike are a no-go – they're not what I'm looking for. I need to output a single, parseable JSON object.\n\nThe provided text, titled \"Linee Vesuviane: Avviso di sciopero di 4 ore del 13 ottobre 2025,\" is quite straightforward. It announces a four-hour company strike for the Vesuviane lines on October 13, 2025, from 08:30 to 12:30. This definitely fits the bill for an *upcoming* strike.\n\nTherefore, `isStrike` is unequivocally `true`. Now, for the `strikeData`. I need to extract the relevant details.\n\nThe `startDate` is \"2025-10-13 08:30:00\", and the `endDate` is \"2025-10-13 12:30:00\". The `locationType` is \"REGIONAL\" because it concerns a regional line.  The `locationCodes` is [\"15\"] because that corresponds to the Campania region.\n\nAh, the trickier part, the *guaranteedTimes*. The text mentions \"ultime partenze garantite prima dello sciopero\" and \"prime partenze garantite dopo lo sciopero\".  While these phrases imply service guarantees, they don't explicitly state the typical \"fasce di garanzia\" (guaranteed time ranges like 06:00-09:00, usually protected by law during strikes).  The prompt specifically says to omit this if it's not specified. Given the ambiguity and the instruction to omit if not specified, I'm going to *omit* `guaranteedTimes` from the output. I don't want to make an unwarranted assumption. I need to rely on the *explicit* information provided. The text doesn't mention \"06:00-09:00\" explicitly, so it's not present.\n\n\n",
+    "tokens": {
+      "input": 10661,
+      "output": 99,
+      "total": 11424
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 27697,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00035735,
+      "outputCost": 0.00079,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00114735
+    },
+    "hash": "5085a2502c050f371030b8806aceff5b",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_di_24_ore_venerdi_13_dicembre_2024_aggiornamento.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to format the output as JSON according to the provided schema. The document mentions an upcoming 24-hour strike scheduled for December 13, 2024. It references an update about the strike and includes service details, stating guaranteed operation times and mentions which services will be out of service. This clearly identifies it as an announcement about the strike for tomorrow with specific conditions given by the public transport company in Campania.",
+    "tokens": {
+      "input": 7147,
+      "output": 1975,
+      "total": 9122
+    }
+  }
+}

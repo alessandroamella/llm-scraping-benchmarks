@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20605,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00034955,
+      "outputCost": 0.0006772,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00102675
+    },
+    "hash": "fe2122c8b59de0a118a277cd810d38db",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_24h_venerdi_28_novembre_2025.html",
+    "thoughts": "**Extracting strike data**\n\nI need to output JSON for the strike data extraction. The document appears to announce a 24-hour general strike on Friday, November 28, 2025. It mentions a date of November 23, 2025, and includes the O.S. USB proclamation details. I see guaranteed service times of 5:30-8:30 and 16:30-19:30. It looks like the \"isStrike\" should definitely be set to true. I need to extract the start and end dates in the 'yyyy-MM-dd HH:mm:ss' format.",
+    "tokens": {
+      "input": 6991,
+      "output": 1693,
+      "total": 8684
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-24 00:00:00",
+      "endDate": "2025-02-24 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8301,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0019165,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.0006825,
+      "cachedCost": 0,
+      "totalCost": 0.002809
+    },
+    "hash": "94c3a9daba2dba704536f7960ee1c190",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_24h_lunedi_24_febbraio_2025.html",
+    "thoughts": "**My Analysis of the Strike Information**\n\nAlright, let's break this down. My objective is clear: I need to extract strike information from the provided text and structure it as valid JSON. It's a binary decision: is there a strike or not? And if so, I need the details. The structure is fixed: `isStrike`, and if true, a `strikeData` object with `startDate`, `endDate`, `locationType`, `locationCodes`, and `guaranteedTimes`.\n\nThe input is \"Linea Metropolitana: Avviso di sciopero 24h lunedì 24 febbraio 2025\" and \"Per il giorno 24 febbraio 2025 la O.S. USB ha proclamato azione di sciopero per adesione a sciopero nazionale di 24 ore...\". Okay, this looks like a strike announcement. Date: February 24, 2025. Duration: 24 hours. The body text explicitly calls it a \"sciopero\" (strike). There are guaranteed service times, \"Servizio garantito dalle ore 05:30 alle ore 8:30 e dalle ore 16:30 alle ore 19:30\".\n\nBased on this, `isStrike` is definitely `true`.\n\nNow, the `strikeData`. The start date is February 24, 2025, and since it’s a 24-hour strike, I'll assume it starts at the beginning of the day (\"2025-02-24 00:00:00\") and ends at the end (\"2025-02-24 23:59:59\"). The location seems to be EAV (Campania), which I can infer is regional. The prompt states \"If locationType is REGIONAL, you MUST return an array of 2-digit ISTAT region codes.\"  Right, Campania's ISTAT code is 15. The `locationType` will be \"REGIONAL\", and the `locationCodes` will be `[\"15\"]`. Finally, the guaranteed service times: \"05:30-08:30\" and \"16:30-19:30\", so `guaranteedTimes` will be `[\"05:30-08:30\", \"16:30-19:30\"]`.\n\nLooks like I have everything needed to construct the JSON.\n\n\n",
+    "tokens": {
+      "input": 7666,
+      "output": 140,
+      "total": 8261
+    }
+  }
+}

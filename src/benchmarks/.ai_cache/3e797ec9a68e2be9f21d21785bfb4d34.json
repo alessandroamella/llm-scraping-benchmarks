@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-07-23 09:00:00",
+      "endDate": "2025-07-23 11:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7910,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00248675,
+      "outputCost": 0.0001395,
+      "thinkingCost": 0.000837,
+      "cachedCost": 0,
+      "totalCost": 0.00346325
+    },
+    "hash": "3e797ec9a68e2be9f21d21785bfb4d34",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_di_2_ore_mercoledi_23_luglio_2025.html",
+    "thoughts": "**Analyzing EAV Strike Announcement Data**\n\nOkay, let's see. I've got some HTML content coming in from EAV, the Ente Autonomo Volturno. My task here is to determine if this content announces an upcoming strike. If it *is* a strike announcement, I need to extract specific details: the `startDate`, `endDate`, `locationType`, `locationCodes` (which should be regional, in this case), and any `guaranteedTimes`. Finally, I need to output all of this as a JSON formatted string.\n\nLooking at the text, the title is \"Servizio Autolinee - Avviso di sciopero di 2 ore mercoledì 23 luglio 2025 - EAV srl\" and the body says \"... per il giorno mercoledì 23 luglio 2025 la O.S. Faisa Confail ha proclamato uno sciopero aziendale di 2 ore, dalle ore 09:00 alle ore 11:00\". Clearly, this is an announcement of a strike. I can extract the relevant information.\n\nSo, the `isStrike` flag will be true. The `startDate` is 2025-07-23 09:00:00, and the `endDate` is 2025-07-23 11:00:00. Given that EAV is the regional transport authority for Campania, the `locationType` is definitely \"REGIONAL\". Campania's ISTAT code is \"15\", so `locationCodes` is [\"15\"]. Now, the text mentions that the strike is from 09:00 to 11:00 and doesn't explicitly mention guaranteed times, so I'll omit the `guaranteedTimes` field from the JSON.\n\nI've assembled the data and now, I'll output the following JSON:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-07-23 09:00:00\",\n    \"endDate\": \"2025-07-23 11:00:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"15\"]\n  }\n}\n```\n\nNow, I need to check the JSON: Is it valid JSON? Yes. Are the date/time formats correct? Yes, `yyyy-MM-dd HH:mm:ss`. Are there any comments? No. Does `locationCodes` use the correct 2-digit ISTAT code? Yes, \"15\" is correct for Campania. Is this truly an upcoming strike? Yes. All clear!\n\n\n",
+    "tokens": {
+      "input": 9947,
+      "output": 93,
+      "total": 10598
+    }
+  }
+}

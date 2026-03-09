@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9949,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00029725,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.000708,
+      "cachedCost": 0,
+      "totalCost": 0.00121525
+    },
+    "hash": "7ba9a12a9b2702cd7a6a687ef1dd9019",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_24_ore_del_13_dicembre_2024_aggiornamento.html",
+    "thoughts": "**Strike Analysis: EAV, December 13, 2024**\n\nOkay, let's break this down. The input clearly indicates a strike, a 24-hour one, declared by EAV for December 13th, 2024. The key phrase \"lo sciopero proclamato per domani 13 dicembre torna ad essere di 24 ore\" confirms this explicitly. I'm going to start by confirming that `isStrike` is indeed `true`.\n\nNow for the details. Because it's a 24-hour strike, I need to represent the start and end dates accurately. The date itself is straightforward: December 13th, 2024. The 24-hour duration dictates that the `startDate` should be \"2024-12-13 00:00:00\" and the `endDate` \"2024-12-13 23:59:59\". I'll format the date string to `yyyy-MM-dd HH:mm:ss`, of course, for consistency.\n\nThe location is crucial, and it's regional, in Campania. So, `locationType` will be \"REGIONAL\", and I'll represent Campania with the code \"15\". I need to ensure `locationCodes` is an array containing this code: `[\"15\"]`.\n\nFinally, the guaranteed time slots. The document lists \"05:30-08:30\" and \"16:30-19:30\". These seem to fit the required structure, so I'll include them as strings within the `guaranteedTimes` array: `[\"05:30-08:30\", \"16:30-19:30\"]`.\n\nNow, I'll package all that data into a JSON structure, keeping in mind the need for valid JSON format and that the arrays have the correct types. The final output is:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-13 00:00:00\",\n    \"endDate\": \"2024-12-13 23:59:59\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"15\"],\n    \"guaranteedTimes\": [\"05:30-08:30\", \"16:30-19:30\"]\n  }\n}\n```\nThat should be a clean and accurate representation of the strike information.\n\n\n",
+    "tokens": {
+      "input": 1189,
+      "output": 140,
+      "total": 1801
+    }
+  }
+}

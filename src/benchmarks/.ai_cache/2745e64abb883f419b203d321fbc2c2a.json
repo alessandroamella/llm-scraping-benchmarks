@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 21:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7216,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0014375,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.0006795,
+      "cachedCost": 0,
+      "totalCost": 0.0023015
+    },
+    "hash": "2745e64abb883f419b203d321fbc2c2a",
+    "sourceFile": "strike-detail-venerd--12-dicembre-da-mezzanotte-alle-21-sciopero.html",
+    "thoughts": "**Strike Announcement Analysis for Trenord (Lombardia)**\n\nOkay, let's break this down. My task is to verify if this text constitutes a strike announcement. It's for Trenord, specifically their operations in Lombardia, indicated by the company code \"03.\"\n\nThe core content states, \"Venerdì 12 dicembre da mezzanotte alle 21 sciopero nazionale\" which translates to \"Friday, December 12, from midnight to 21:00, national strike.\" The crucial date is December 12th. I infer the year is 2025 based on contextual clues, like a related date of \"giovedì 11/12/2025.\" The strike duration is from midnight to 9 pm. It's explicitly a \"national strike.\" Importantly, the text also mentions \"Negli orari 6-9 e 18-21 viaggeranno i treni indicati nella lista dei servizi garantiti\" which means there will be guaranteed services between 6 am-9 am and 6 pm-9 pm.\n\nBased on this analysis, I've confirmed that this is indeed a strike announcement. Consequently, I've generated a JSON structure that I should validate. The `isStrike` flag is correctly set to `true`. Now, to ensure data integrity, I need to check the details within `strikeData`.\n\nThe `startDate` is \"2025-12-12 00:00:00\" and the `endDate` is \"2025-12-12 21:00:00\" - the date and time formatting is correct (yyyy-MM-dd HH:mm:ss). The `locationType` is correctly specified as \"NATIONAL,\" which is what is required for national strikes. I've correctly omitted `locationCodes` since they are not specified for a national strike. Finally, the `guaranteedTimes` are accurately captured as [\"06:00-09:00\", \"18:00-21:00\"].\n\nYes. The extracted data is consistent with the required schema and is correctly derived from the source text.\n\n\n",
+    "tokens": {
+      "input": 5750,
+      "output": 123,
+      "total": 6326
+    }
+  }
+}

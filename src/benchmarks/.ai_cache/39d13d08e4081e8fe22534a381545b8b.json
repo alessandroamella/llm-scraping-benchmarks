@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5794,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00014475,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000252,
+      "cachedCost": 0,
+      "totalCost": 0.00041175
+    },
+    "hash": "39d13d08e4081e8fe22534a381545b8b",
+    "sourceFile": "sciopero_adesione_personale_atac_185.html",
+    "thoughts": "**Analyzing Strike Information**\n\nOkay, let's break this down. The task is to determine if the text describes an *active* strike. The text says \"adesione... allo sciopero di oggi è stata pari al 18,5%\". Hmm, \"è stata\" – that's past tense. That tells me this is *describing* a strike that *already* happened, not one that *is* happening. So, considering the phrasing and my understanding of reporting on these kinds of events, this definitely indicates a post-event participation report. The \"adesione\" refers to participation in a strike that has concluded. Therefore, `isStrike` needs to be set to `false`. Simple as that.\n\n\n",
+    "tokens": {
+      "input": 579,
+      "output": 10,
+      "total": 757
+    }
+  }
+}

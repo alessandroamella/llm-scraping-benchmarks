@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-28 08:20:00",
+      "endDate": "2025-01-28 12:20:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 26228,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00055425,
+      "outputCost": 0.0008744,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00142865
+    },
+    "hash": "a0edc08a8e7b25c63544df381b4217d2",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_di_4_ore_martedi_28_gennaio_2025.html",
+    "thoughts": "**Determining location type**\n\nEAV Campania handles lines, and while \"Linee Flegree\" is within the Campania region (Naples), the content mentions \"sciopero aziendale,\" which indicates a company-wide strike. I'm unsure if it should be classified as REGIONAL or NATIONAL. \"Aziendale\" refers to the company level, not regional. The location type requirements suggest that if it's REGIONAL, I'd need ISTAT region codes, but if NATIONAL, it should be null. I believe it leans towards the regional level, specific to Campania.",
+    "tokens": {
+      "input": 11085,
+      "output": 2186,
+      "total": 13271
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7393,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0009371,
+      "outputCost": 0.0001616,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0010987
+    },
+    "hash": "ff128449bac232555a16b513d8036df4",
+    "sourceFile": "sciopero_generale_nazionale_adesione_personale_atac_al_26.html",
+    "thoughts": "**Ensuring JSON format**\n\nI need to confirm that the `isStrike` should be set to false, and the output should be straightforward. The JSON format must be correct, reflecting just that field without any extra information. So, I'll output the JSON as: \n\n{\n  \"isStrike\": false\n}\n\nI'll ensure the response adheres to the appropriate schema, focusing solely on that necessary detail with no additional text or analysis. It's important we keep it clear and precise!",
+    "tokens": {
+      "input": 18742,
+      "output": 404,
+      "total": 19146
+    }
+  }
+}

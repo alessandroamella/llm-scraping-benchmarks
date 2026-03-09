@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-13 08:30:00",
+      "endDate": "2025-10-13 12:30:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "08:30-12:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 27512,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003535,
+      "outputCost": 0.000644,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0009975
+    },
+    "hash": "9b4b026ce857ca3ca793a9380eacb8ae",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_4_ore_del_13_ottobre_2025.html",
+    "thoughts": "**Clarifying event details**\n\nThe event is scheduled for October 13, 2025, from 08:30 to 12:30, in local time format. Given that \"Linee Vesuviane\" refers to the Vesuvian train lines around Naples, it's likely classified as a regional strike, so the locationType will be \"REGIONAL\". For locationCodes, the 2-digit ISTAT code for Campania is indeed \"15\". Therefore, I'll use locationCodes: [\"15\"] which aligns with the required 2-digit format for regions.",
+    "tokens": {
+      "input": 7070,
+      "output": 1610,
+      "total": 8680
+    }
+  }
+}

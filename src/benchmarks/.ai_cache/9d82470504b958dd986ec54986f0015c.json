@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9469,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0009437,
+      "outputCost": 0.0001804,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0011241
+    },
+    "hash": "9d82470504b958dd986ec54986f0015c",
+    "sourceFile": "sciopero_trasporto_pubblico_aggiornamento_riapertura_stazione_repubblica.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to check if this document is announcing a new or upcoming strike. It's in Italian, and it mentions \"Sciopero del trasporto pubblico\" with the status indicating that a regional public transport strike is ongoing, which will finish by 1 PM. The update mentions service details and closed stations. The date range is from December 7 to December 8, 2023, making it current, so it seems like I have to output this information in JSON according to the specified schema.",
+    "tokens": {
+      "input": 18874,
+      "output": 451,
+      "total": 19325
+    }
+  }
+}

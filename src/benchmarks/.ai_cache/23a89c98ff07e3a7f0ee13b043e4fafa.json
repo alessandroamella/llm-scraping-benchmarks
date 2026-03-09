@@ -1,0 +1,41 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-24 00:00:00",
+      "endDate": "2025-02-24 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:10-05:10",
+        "06:03-06:03",
+        "06:21-06:21",
+        "07:47-07:47",
+        "13:13-13:13",
+        "17:21-17:21",
+        "17:27-17:27",
+        "20:30-20:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 37874,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003466,
+      "outputCost": 0.0014444,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.001791
+    },
+    "hash": "23a89c98ff07e3a7f0ee13b043e4fafa",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_24h_lunedi_24_febbraio_2025.html",
+    "thoughts": "**Clarifying strike instructions**\n\nI'm analyzing the phrase \"Corse garantite,\" which mentions guaranteed departure times but raises a question about start times. It suggests the service is available 24 hours, but I'm focused on whether there’s a specified starting time. The instructions are key—it specifies the format for dates and location types. For regional routes, I need 2-digit ISTAT codes, while national routes should omit location codes. Essentially, if it’s national, I should leave out that field.",
+    "tokens": {
+      "input": 6932,
+      "output": 3611,
+      "total": 10543
+    }
+  }
+}

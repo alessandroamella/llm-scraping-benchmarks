@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3163,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.002629,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0002805,
+      "cachedCost": 0,
+      "totalCost": 0.0029245
+    },
+    "hash": "8954f0fee7235e89384136a7fe8a5631",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_212.html",
+    "thoughts": "**Analyzing Strike Information**\n\nOkay, let's break this down. My task is to pull strike data from this text and return it as valid JSON. Crucially, `isStrike` needs to be set to true *only* for upcoming strikes, and not for reports of past actions.\n\nThe title itself, \"Sciopero del trasporto pubblico, adesione personale Atac al 21,2% - Roma Servizi per la Mobilità,\" suggests a strike. However, reading the content, it's clear the text details the *participation percentage* of ATAC personnel in a strike. That means it already happened. The dates published (07/07/2023) and updated (08/07/2023) further confirm that this is a report on a *past* event. This isn't an announcement, so the `isStrike` parameter needs to be set to `false`. Simple as that.\n\n\n",
+    "tokens": {
+      "input": 10516,
+      "output": 10,
+      "total": 10713
+    }
+  }
+}

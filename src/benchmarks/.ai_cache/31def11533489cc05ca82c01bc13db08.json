@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6390,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005635,
+      "outputCost": 0.0001556,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00021195
+    },
+    "hash": "31def11533489cc05ca82c01bc13db08",
+    "sourceFile": "sciopero_generale_aperte_le_metropolitane_e_la_ferrovia_termini_centocelle.html",
+    "thoughts": "**Deciding on a strike status**\n\nThe text states a date of \"29/11/2024,\" which isn't in the future, and indicates the situation is ongoing. It uses the term \"in corso,\" meaning it's not an upcoming strike. So, the output format should be JSON, and it will be straightforward: `{\"isStrike\": false}`. I need to ensure there's no extra whitespace, and since that's all that's required, I’ll just return that.",
+    "tokens": {
+      "input": 1127,
+      "output": 389,
+      "total": 1516
+    }
+  }
+}

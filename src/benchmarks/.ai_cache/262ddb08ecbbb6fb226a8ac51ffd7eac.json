@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-09-30 03:00:00",
+      "endDate": "2024-10-01 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 15961,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005347,
+      "outputCost": 0.0004396,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0009743
+    },
+    "hash": "262ddb08ecbbb6fb226a8ac51ffd7eac",
+    "sourceFile": "strike-detail-sciopero-del-trasporto-ferroviario-luned--30-sette.html",
+    "thoughts": "**Determining train circulation details**\n\nI need to address the regional train circulation issues mentioned, specifically for the Lombardia region. The location type should indeed be REGIONAL, with the correct ISTAT code \"03\". It's clear that Lombardia is \"03\", and this matches with the article.  \n\nFor the time frame, I'll format the start and end dates as \"2024-09-30 03:00:00\" to \"2024-10-01 02:00:00\". I also want to include the guaranteed times of \"06:00-09:00\" and \"18:00-21:00\" mentioned in the content.",
+    "tokens": {
+      "input": 10694,
+      "output": 1099,
+      "total": 11793
+    }
+  }
+}

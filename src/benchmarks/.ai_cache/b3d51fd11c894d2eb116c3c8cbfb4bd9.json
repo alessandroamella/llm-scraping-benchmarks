@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24332,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000595,
+      "outputCost": 0.0006908,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0012858
+    },
+    "hash": "b3d51fd11c894d2eb116c3c8cbfb4bd9",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_24_h_venerdi_28_novembre_2025.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to figure out if this document is about an upcoming strike. The title suggests it's announcing a \"24-hour strike notice\" for November 28, 2025. The content confirms that a national strike has been declared by a union, detailing service times. Given this information, it appears to be an official announcement for a strike. However, I need to keep in mind that I should only mark it as a true \"isStrike\" if it pertains to an upcoming strike.",
+    "tokens": {
+      "input": 11900,
+      "output": 1727,
+      "total": 13627
+    }
+  }
+}

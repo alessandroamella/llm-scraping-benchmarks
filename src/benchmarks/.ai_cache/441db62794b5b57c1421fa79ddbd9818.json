@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-20 00:00:00",
+      "endDate": "2025-06-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21584,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00034075,
+      "outputCost": 0.0005832,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00092395
+    },
+    "hash": "441db62794b5b57c1421fa79ddbd9818",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_24h_giorno_venerdi_20_giugno_2025.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to format my output in JSON using the strike_extraction format since the user is asking me to analyze a potential strike announcement from EAV. The content states there’s a 24-hour strike planned for June 20, 2025. It includes specific guarantee times, making it clear this is an official announcement. So, I will confirm that \"isStrike\" should be true and fill in the required \"startDate\" and \"endDate\" in the correct format.",
+    "tokens": {
+      "input": 6815,
+      "output": 1458,
+      "total": 8273
+    }
+  }
+}

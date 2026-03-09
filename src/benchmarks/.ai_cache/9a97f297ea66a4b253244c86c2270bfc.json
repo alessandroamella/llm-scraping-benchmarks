@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-03 00:00:00",
+      "endDate": "2025-10-03 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18516,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00052095,
+      "outputCost": 0.0006796,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00120055
+    },
+    "hash": "9a97f297ea66a4b253244c86c2270bfc",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_generale_nazionale_di_24_ore_venerdi_03_ottobre_2025.html",
+    "thoughts": "**Considering strike data structure**\n\nI’m planning to set the start and end dates for the strike data, using 2025-10-03 from midnight to just before midnight. The date format needs to be in ISO-like 'yyyy-MM-dd HH:mm:ss' with specific duration for a national context. I’ll mark \"isStrike\" as true and ensure to include all necessary fields in the strikeData object. In the guaranteedTimes array, I need to correctly format time ranges as \"HH:mm-HH:mm.\" I'll avoid extraneous fields to keep it clean.",
+    "tokens": {
+      "input": 10419,
+      "output": 1699,
+      "total": 12118
+    }
+  }
+}

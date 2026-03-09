@@ -1,15 +1,26 @@
 {
-  "timestamp": "2026-03-09T13:31:26.878Z",
-  "isCacheHit": true,
+  "timestamp": "2026-03-09T14:37:59.643Z",
+  "isCacheHit": false,
   "request": {
     "sourceName": "EAV",
     "fileName": "linea_metropolitana_avviso_di_sciopero_di_4_ore_martedi_28_gennaio_2025.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "dom-distillation-markdown",
-    "useLenientSchema": true,
+    "useLenientSchema": false,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"EAV\" (the public transport company of Campania (15)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: Linea Metropolitana: Avviso di sciopero di 4 ore, martedì 28 gennaio 2025 - EAV srl\n\n* * *\n\n## Linea Metropolitana: Avviso di sciopero di 4 ore, martedì 28 gennaio 2025\n\nData:  \n**27 Gennaio 2025**\n\nSi comunica che, ai sensi dell’art. 2 comma 7 della L.146/90 (fattispecie: gravi eventi lesivi dell’incolumità e della sicurezza dei lavoratori) e delle integrazioni alla stessa della L.83/2000 e successive modifiche, per martedì 28 gennaio 2025 le OO.SS. ORSA, CONFAIL, Filt Cgil, Fit Cisl, Uiltrasporti, Ugl autoferro, Faisa Cisal e USB hanno proclamato uno sciopero aziendale di 4 ore, dalle ore 08:20 alle ore 12:20, avente le seguenti motivazioni: sicurezza sul posto di lavoro per il personale front-line di EAV S.r.l.\n\nDurante l’ultima proclamazione di sciopero delle citate OO.SS., la percentuale di adesione è stata la seguente:\n\n-   Or.S.A. e Confail: 15,5 % (sciopero di 4 ore del giorno 23 ottobre 2024)\n-   CGIL e UIL: 10,8% (sciopero di 4 ore del giorno 29 novembre 2024)\n-   CISL, CISAL e UGL: 42% (sciopero nazionale di 24 ore del giorno 8 novembre 2024)\n-   USB: 9,2% (sciopero generale nazionale di 24 ore del 13 dicembre 2024)\n\nDi seguito vengono elencate le ultime e le prime partenze garantite in relazione alle diverse fasce di garanzia.\n\n_Durante l’orario di sciopero l’effettuazione delle corse è subordinata al numero di lavoratori aderenti allo sciopero_\n\n**Ultime partenze prima dello sciopero**\n\n da Aversa per Piscinola                 08:15\n\nda Piscinola    per Aversa                08:15\n\n **Prime partenze dopo lo sciopero**\n\nda Aversa per Piscinola                 12:30\n\nda Piscinola per Aversa                  12:45\n\n**Categoria:** [Trasporto pubblico](https://www.eavsrl.it/categoria-disservizio/trasporto-pubblico/)\n\n**Area:** [EAV - Autobus Area Nord di Napoli e Giuglianese](https://www.eavsrl.it/area/eav-autobus-area-nord-di-napoli-e-giuglianese/)"
   },
   "response": {
+    "rawOutput": {
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2025-01-28 08:20:00",
+        "endDate": "2025-01-28 12:20:00",
+        "locationType": "REGIONAL",
+        "locationCodes": [
+          "15"
+        ]
+      }
+    },
     "parsedData": {
       "isStrike": true,
       "strikeData": {
@@ -24,15 +35,18 @@
     "usage": {
       "input": 1256,
       "output": 99,
-      "total": 1772
+      "cached": 0,
+      "thinking": 546,
+      "total": 1901
     },
     "costUsd": {
       "inputCost": 0.000314,
       "outputCost": 0.0001485,
-      "thinkingCost": 0.0006255,
+      "thinkingCost": 0.000819,
       "cachedCost": 0,
-      "totalCost": 0.001088
+      "totalCost": 0.0012815
     },
-    "durationMs": 5234
+    "durationMs": 9233,
+    "thoughts": "**Strike Analysis: EAV Announcement - January 28, 2025**\n\nOkay, let's break this down. The input is an EAV announcement about a strike on January 28, 2025. My goal is to confirm it *is* a strike, and then extract the necessary data in a JSON format. Straightforward.\n\nFirst, I need to verify that this is indeed an upcoming strike. The announcement mentions January 28, 2025, and the article date is January 27, 2025, confirming it's upcoming.\n\nNow, to extract the details. I've identified the date as January 28, 2025, the duration as 4 hours (08:20 to 12:20). I'm inferring the region as Campania (code 15) because it's from EAV and the context. Since it's company-specific, but the schema requires REGIONAL or NATIONAL, and ISTAT codes, I'm classifying this as \"REGIONAL.\"\n\nNext, the \"Guaranteed Times\" issue. The document provides \"Ultime partenze\" (08:15) and \"Prime partenze\" (12:30/12:45), but not specific time ranges like we usually have (06-09 and 18-21). The prompt *defines* \"Guaranteed times\" as time ranges, and since the text doesn't explicitly give these ranges, I will omit `guaranteedTimes`.\n\nTherefore, confirming that `isStrike` is `true`. The extracted `strikeData` should be:\n*   `startDate`: \"2025-01-28 08:20:00\"\n*   `endDate`: \"2025-01-28 12:20:00\"\n*   `locationType`: \"REGIONAL\"\n*   `locationCodes`: [\"15\"]\n\nI've double-checked the date format – it's `yyyy-MM-dd HH:mm:ss`, which is correct. And I've verified that Campania is indeed location code 15. The final JSON schema requirements are met: no comments, everything is parseable. I'm satisfied. This should be a clean extract.\n\n\n"
   }
 }

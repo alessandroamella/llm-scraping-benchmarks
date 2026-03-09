@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-28 08:20:00",
+      "endDate": "2025-01-28 12:20:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20222,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007555,
+      "outputCost": 0.0007028,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00077835
+    },
+    "hash": "88128371fbb10d48f187590e228b29da",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_di_4_ore_martedi_28_gennaio_2025.html",
+    "thoughts": "**Determining strike announcement details**\n\nI need to decide if the document is announcing an upcoming strike. The content clearly states a 4-hour strike for January 28, 2025, from 08:20 to 12:20, meaning it’s definitely an upcoming strike. The instruction specifies that `isStrike` should be true only for announcements of upcoming strikes. We need to extract the `startDate` and `endDate` in the format 'yyyy-MM-dd HH:mm:ss', which I'll set as \"2025-01-28 08:20:00\" and \"2025-01-28 12:20:00\". As for the location type, it seems it could be \"REGIONAL\" or \"NATIONAL\".",
+    "tokens": {
+      "input": 1511,
+      "output": 1757,
+      "total": 3268
+    }
+  }
+}

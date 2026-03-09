@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9815,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0040965,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0003285,
+      "cachedCost": 0,
+      "totalCost": 0.00444
+    },
+    "hash": "06a731b9caab8113be6d263287e4c72e",
+    "sourceFile": "sciopero_del_trasporto_pubblico_adesione_personale_atac_al_218.html",
+    "thoughts": "**Strike Announcement Determination - ATAC (Rome)**\n\nOkay, let's analyze this input. My primary goal here is to determine if this content is actually announcing an upcoming strike or simply reporting on participation in a strike that has already happened. The company in question is ATAC in Rome, and I'm going to base my assessment on the provided title, body text, and date information.\n\nThe title, \"Sciopero del trasporto pubblico, adesione personale Atac al 21,8%\" - immediately translates to 'Public transport strike, ATAC staff participation 21.8%'. Now the body is even more critical; it states, \"L’adesione complessiva del personale Atac allo sciopero del trasporto pubblico, rilevata in mattinata, è stata pari al 21,8%,\" - 'The overall participation of ATAC staff in the public transport strike, detected in the morning, was equal to 21.8%'. The key phrase is \"è stata pari,\" meaning \"was equal to.\" This suggests that the participation percentage is a report of something that *already* happened. The date also confirms it, \"Published on: 14/11/2025 - Updated on: 17/11/2025\". Both dates suggest this is a report.\n\nMy conclusion is clear: This is *not* a strike announcement. It is a post-strike participation report. The phrase \"adesione...è stata pari al 21,8%\" is the giveaway. Since this is just a report of participation, I'm setting the `isStrike` flag to `false`.\n\n\n",
+    "tokens": {
+      "input": 16386,
+      "output": 10,
+      "total": 16615
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9302,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00028775,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.0007215,
+      "cachedCost": 0,
+      "totalCost": 0.00121925
+    },
+    "hash": "300d67bb83a2061ccff292f47c527663",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_di_24_ore_venerdi_13_dicembre_2024_aggiornamento.html",
+    "thoughts": "**Strike Analysis: Linea Metropolitana - December 13, 2024**\n\nOkay, let's break this down. My goal here is clear: confirm whether this content constitutes a strike announcement. The title, \"Linea Metropolitana: Avviso di sciopero di 24 ore venerdì 13 dicembre 2024,\" is a good start – \"avviso di sciopero\" screams strike notice. The body confirms the 24-hour strike scheduled for tomorrow, December 13th, 2024. The date is December 12th, the day before the announced strike. The provided guaranteed service times—05:30 to 08:30 and 16:30 to 19:30—are also strong indicators. The company, EAV, serves the Campania region (code 15), which is crucial for regional targeting.\n\nGiven the information, I can definitively extract `isStrike: true`. I now need to meticulously define the strike parameters: the start date is 2024-12-13 00:00:00, and the end date is 2024-12-13 23:59:59. This covers the entire day. The `locationType` is definitely \"REGIONAL,\" and the location code is \"15\" for Campania. I'll include the guaranteed service times: [\"05:30-08:30\", \"16:30-19:30\"].\n\nWith that structured, the strike data looks solid:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-13 00:00:00\",\n    \"endDate\": \"2024-12-13 23:59:59\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"15\"],\n    \"guaranteedTimes\": [\"05:30-08:30\", \"16:30-19:30\"]\n  }\n}\n```\n\nNow, I'll need to run my standard validation checks: ensuring the JSON is valid, the format conforms to specifications, the enum values are all accurate, and there's no extraneous text muddying the waters. Assuming those checks pass, this is a clear and actionable strike announcement.\n\n\n",
+    "tokens": {
+      "input": 1151,
+      "output": 140,
+      "total": 1772
+    }
+  }
+}

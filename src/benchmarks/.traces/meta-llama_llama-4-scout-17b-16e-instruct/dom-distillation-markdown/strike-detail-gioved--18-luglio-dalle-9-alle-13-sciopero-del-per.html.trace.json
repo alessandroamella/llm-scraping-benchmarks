@@ -1,15 +1,27 @@
 {
-  "timestamp": "2026-03-09T13:25:03.240Z",
-  "isCacheHit": true,
+  "timestamp": "2026-03-09T14:35:01.368Z",
+  "isCacheHit": false,
   "request": {
     "sourceName": "Trenord",
     "fileName": "strike-detail-gioved--18-luglio-dalle-9-alle-13-sciopero-del-per.html",
     "model": "meta-llama/llama-4-scout-17b-16e-instruct",
     "strategy": "dom-distillation-markdown",
-    "useLenientSchema": true,
+    "useLenientSchema": false,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"Trenord\" (the public transport company of Lombardia (03)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: Giovedì 18 luglio dalle 9 alle 13 sciopero del personale FERROVIENORDUser-logged-no-picCloseSend-mail-OKAlert\n-   Date News: martedì 16/07/2024\n-   Header: Giovedì 18 luglio dalle 9 alle 13 sciopero del personale FERROVIENORD\n\n* * *\n\n# **Giovedì 18 luglio dalle 9 alle 13 sciopero del personale FERROVIENORD**\n\nmartedì 16/07/2024\n\n#### **L’agitazione riguarda il personale del gestore dell’infrastruttura,** **non interessa il personale Trenord.**\n\n#### **Possibili ripercussioni su alcune linee. Non coinvolte le fasce di garanzia**\n\nDalle ore 9 alle ore 13 di giovedì 18 luglio, a causa di uno sciopero al quale potrebbe aderire il personale del gestore dell’infrastruttura FERROVIENORD, il servizio ferroviario potrà subire cancellazioni e variazioni su alcune linee. L’agitazione non coinvolge il personale di Trenord.\n\nIn particolare, potranno essere interessati i treni che circolano su rete FERROVIENORD, cioè le linee regionali e suburbane che raggiungono Milano Bovisa e Milano Cadorna – da e per Saronno (S3), Seveso/Camnago (S4), Canzo/Asso, Novara Nord, Como Lago, Varese/Laveno – e la Brescia-Iseo-Edolo.\n\nLo sciopero potrà causare variazioni anche sul servizio delle linee “miste” che transitano su entrambe le reti, FERROVIENORD e RFI, cioè i collegamenti S1 Saronno-Milano-Lodi, S2 Mariano Comense-Milano Rogoredo, S9 Saronno-Milano Lambrate, S12 Cormano Cusano Milanino-Milano-Melegnano, S13 Garbagnate Milanese-Milano-Pavia. Non saranno interessati i treni circolanti unicamente sulla rete ferroviaria RFI.\n\nSaranno coinvolti anche i servizi aeroportuali Malpensa Express su Milano Cadorna, Milano Centrale e Milano Porta Garibaldi e S50 Malpensa Aeroporto-Bellinzona. Per garantire il collegamento con l’Aeroporto di Malpensa, saranno previsti autobus sostitutivi, senza fermate intermedie, per eventuali corse non effettuate tra Milano Cadorna e Malpensa Aeroporto (da via Paleocapa, 1) e tra Busto FS e Malpensa Aeroporto.\n\nIn attuazione di quanto previsto dalle modalità di sciopero, i treni circolanti esclusivamente su rete FERROVIENORD con partenza prevista dalla stazione di origine entro le ore 9 arriveranno alla destinazione finale. Sulle linee “miste”, occorre considerare l’orario di partenza dalle stazioni di cambio rete – Milano Bovisa e Seregno.\n\nInformazioni in tempo reale sulla circolazione saranno disponibili sulle pagine di ogni linea della App e del sito Trenord. Si invitano i passeggeri a prestare attenzione ad annunci sonori e monitor di stazione.\n\n* * *\n\n[Comunicato stampa sciopero 18 luglio 2024](/fileadmin/contenuti/TRENORD/3-News/Trenord_Informa/Comunicati_stampa/2024/Trenord_240716_CS_Sciopero_Ferrovienord_def.pdf)\n\nPDF Document Found: /fileadmin/contenuti/TRENORD/3-News/Trenord\\_Informa/Comunicati\\_stampa/2024/Trenord\\_240716\\_CS\\_Sciopero\\_Ferrovienord\\_def.pdf"
   },
   "response": {
+    "rawOutput": {
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2024-07-18 09:00:00",
+        "endDate": "2024-07-18 13:00:00",
+        "locationType": "REGIONAL",
+        "locationCodes": [
+          "03"
+        ],
+        "guaranteedTimes": []
+      }
+    },
     "parsedData": {
       "isStrike": true,
       "strikeData": {
@@ -18,21 +30,22 @@
         "locationType": "REGIONAL",
         "locationCodes": [
           "03"
-        ]
+        ],
+        "guaranteedTimes": []
       }
     },
     "usage": {
-      "input": 1745,
+      "input": 1746,
       "output": 81,
-      "total": 1826
+      "total": 1827
     },
     "costUsd": {
-      "inputCost": 0.00019195,
+      "inputCost": 0.00019206,
       "outputCost": 0.00002754,
       "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.00021949
+      "totalCost": 0.0002196
     },
-    "durationMs": 781
+    "durationMs": 660
   }
 }

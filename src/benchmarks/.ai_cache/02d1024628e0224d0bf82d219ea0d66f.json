@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-24 10:00:00",
+      "endDate": "2025-11-24 14:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24277,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000539,
+      "outputCost": 0.000592,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0006459
+    },
+    "hash": "02d1024628e0224d0bf82d219ea0d66f",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-11-24-sciopero-24-novembre-personale.html",
+    "thoughts": "**Identifying upcoming strike details**\n\nI need to output JSON for the strike extraction, particularly focusing on the boolean for isStrike and possibly strikeData. The content indicates an upcoming strike in Italy scheduled for November 24, 2025, during which services like Alta Velocità, Lunga percorrenza, and Regionale may be affected. It confirms this with the phrase \"è stato indetto uno sciopero,\" meaning it's officially announced. The strike will occur from 10:00 to 14:00, so I will set isStrike to true.",
+    "tokens": {
+      "input": 1078,
+      "output": 1480,
+      "total": 2558
+    }
+  }
+}

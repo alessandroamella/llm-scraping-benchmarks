@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 12971,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00047915,
+      "outputCost": 0.0001924,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00067155
+    },
+    "hash": "44ccd8212de0163e1dffdff16abfc157",
+    "sourceFile": "sciopero_generale_nazionale_adesione_del_personale_atac_al_182.html",
+    "thoughts": "**Determining strike status**\n\nI need to output JSON based on the specified schema. The goal is to see if the document is announcing a new or upcoming strike. The content mentions a general national strike with Atac staff participation at 18.2%. Given that it reports on the strike that occurred that morning, it’s clear this is not an announcement for an upcoming strike. Therefore, the value should be false for isStrike. I'll output: {\"isStrike\": false}. No strikeData is necessary.",
+    "tokens": {
+      "input": 9583,
+      "output": 481,
+      "total": 10064
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 10274,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0004797,
+      "outputCost": 0.0001996,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0006793
+    },
+    "hash": "cbc870000ecbbbea0585a2517111d6de",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_361.html",
+    "thoughts": "**Assessing strike announcement**\n\nI need to determine if the document is announcing a new or upcoming strike. The content says \"Public transport strike, Atac staff adhesion at 36.1%,\" implying they measured participation. This was published on 09/09/2024 and updated on 06/11/2024, referring to a strike that already happened, not one that's upcoming. So, I should conclude that it’s just informational about past participation rates. Therefore, isStrike should be false since there's no mention of a new strike.",
+    "tokens": {
+      "input": 9594,
+      "output": 499,
+      "total": 10093
+    }
+  }
+}

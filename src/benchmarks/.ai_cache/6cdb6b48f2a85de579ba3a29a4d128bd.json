@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-27 21:00:00",
+      "endDate": "2025-11-28 21:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 25935,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000678,
+      "outputCost": 0.0009136,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0009814
+    },
+    "hash": "6cdb6b48f2a85de579ba3a29a4d128bd",
+    "sourceFile": "ttper_2025-11-27_21-00.pdf",
+    "thoughts": "**Extracting strike details**\n\nI'm working with the information about a national strike happening from 21:00 on Thursday, November 27, 2025, to 21:00 on Friday, November 28, 2025. It looks like I'll set the isStrike value to true. I need to extract the strike data, formatted correctly with start and end dates as 'yyyy-MM-dd HH:mm:ss'. That means I’ll convert it to \"2025-11-27 21:00:00\" for the start and \"2025-11-28 21:00:00\" for the end.  \nThe location type seems national, so I should classify that as “NATIONAL.”",
+    "tokens": {
+      "input": 1356,
+      "output": 2284,
+      "total": 3640
+    }
+  }
+}

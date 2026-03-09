@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-10 19:32:00",
+      "endDate": "2025-01-10 23:32:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "19:32-23:32"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20659,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00034825,
+      "outputCost": 0.00063,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00097825
+    },
+    "hash": "f02a3afdd2da49450f990afd2573731c",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_4_ore_10_gennaio_2025.html",
+    "thoughts": "**Filling strike data**\n\nI need to format the strike data correctly. The startDate is \"2025-01-10 19:32:00\", which matches the required format. The endDate is also set properly. For locationType, since the text mentions \"sciopero nazionale,\" I’ll set it to \"NATIONAL.\" The locationCodes must be null, as per the guidelines for national strikes. Finally, the guaranteedTimes don't specify future times, only the period from 19:32 to 23:32 for that day, so I need to clarify that detail.",
+    "tokens": {
+      "input": 6965,
+      "output": 1575,
+      "total": 8540
+    }
+  }
+}

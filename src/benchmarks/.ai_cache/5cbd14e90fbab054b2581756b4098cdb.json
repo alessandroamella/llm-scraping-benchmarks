@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5630,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00408675,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0003405,
+      "cachedCost": 0,
+      "totalCost": 0.00444225
+    },
+    "hash": "5cbd14e90fbab054b2581756b4098cdb",
+    "sourceFile": "comunicato_stampa_sciopero_adesione.html",
+    "thoughts": "**Analyzing the Strike Report**\n\nOkay, here's the situation. I've received some input, specifically a webpage detailing something about a transport strike, a \"Sciopero del trasporto pubblico\" in Italian. The key question is whether this is an announcement about a *future* strike, or a report on one that's already happened.\n\nLet's break down the information: the page title itself, \"Sciopero del trasporto pubblico, adesione personale Atac al 16,4%\", gives us some context, and the body text states \"L’adesione complessiva del personale Atac – rilevata nel corso della mattinata- allo sciopero nazionale di oggi è stata pari al 16,4%\" which translates to something like \"The overall participation of Atac personnel... to today's national strike was 16.4%.\" The key phrase is \"è stata pari al\" - past tense. It mentions the participation *today* and uses past tense phrasing about the *relevata* of the numbers, suggesting that the event has already taken place.\n\nSo, this isn't a heads-up; it's a post-mortem, a summary of a strike's impact. The important part is the 16.4% number is participation in the strike.\n\nTherefore, `isStrike` is definitively `false`. It's a report.\n\n\n",
+    "tokens": {
+      "input": 16347,
+      "output": 10,
+      "total": 16584
+    }
+  }
+}

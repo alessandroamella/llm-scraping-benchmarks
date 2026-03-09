@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-09-22 00:00:00",
+      "endDate": "2025-09-22 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22477,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000712,
+      "outputCost": 0.000938,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0010092
+    },
+    "hash": "697126d845781f7444b40d9446260f6f",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_generale_nazionale_lunedi_22_settembre_2025.html",
+    "thoughts": "**Deciding on strike announcement**\n\nI need to output JSON according to the strike_extraction schema. This document is indeed announcing a strike, as indicated by the title: \"Lineae Metropolitana: Avviso di sciopero generale nazionale lunedì 22 settembre 2025.\" The date is set for September 22, 2025, and USB has declared a general national strike. They’re protesting the war and humanitarian situation in Gaza. Based on this, I can confirm that isStrike is true.",
+    "tokens": {
+      "input": 1424,
+      "output": 2345,
+      "total": 3769
+    }
+  }
+}

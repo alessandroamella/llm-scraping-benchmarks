@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-09-22 00:00:00",
+      "endDate": "2025-09-22 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 28712,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00053145,
+      "outputCost": 0.0007248,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00125625
+    },
+    "hash": "4285d45b75fc1a891c0b5a59bc6dfede",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_generale_nazionale_lunedi_22_settembre_2025.html",
+    "thoughts": "**Clarifying location codes and times**\n\nI’m considering how locationCodes should be handled: for REGIONAL types, they need to be 2-digit region codes, and for NATIONAL, they should be explicitly null. Regarding guaranteed service times, I see that they should follow the format 'HH:mm-HH:mm'—the example shows times like \"05:30-08:30\" and \"16:30-19:30.\" The dates and times for the strike also need clarification, starting from \"2025-09-22 00:00:00\" to \"2025-09-22 23:00:00.\"",
+    "tokens": {
+      "input": 10629,
+      "output": 1812,
+      "total": 12441
+    }
+  }
+}

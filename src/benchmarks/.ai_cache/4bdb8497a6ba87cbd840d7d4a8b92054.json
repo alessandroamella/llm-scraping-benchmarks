@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9856,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00093935,
+      "outputCost": 0.0002048,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00114415
+    },
+    "hash": "4bdb8497a6ba87cbd840d7d4a8b92054",
+    "sourceFile": "sciopero_nazionale_adesione_personale_atac_al_237.html",
+    "thoughts": "**Evaluating strike information**\n\nI need to format the output as JSON according to the strike_extraction schema. The webpage discusses a national strike with a participation rate of 23.7%. Since this information reflects a strike that has already occurred today, I should set isStrike to false. The details clearly indicate that it’s not announcing an upcoming strike, but rather providing participation data from an already happened event. I won't confuse past events with future ones.",
+    "tokens": {
+      "input": 18787,
+      "output": 512,
+      "total": 19299
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6632,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00055775,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.0008265,
+      "cachedCost": 0,
+      "totalCost": 0.00156875
+    },
+    "hash": "98c5e6cc92f069352d42e3c353c15555",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_24_h_venerdi_28_novembre_2025.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, let's break this down. I'm looking at an announcement from \"Linee Vesuviane\" about a 24-hour national general strike, slated for Friday, November 28, 2025. This is clearly an upcoming strike; the data confirms that. Since the text specifies a \"sciopero generale nazionale,\" I need to make sure I'm handling the location correctly according to the schema. The instructions are clear: if the `locationType` is NATIONAL, the `locationCodes` field should be completely omitted. Got it.\n\nIt's a full 24-hour strike, so the start time is 00:00:00 on the 28th, and it runs through to 23:59:59 of the same day. Standard for this type of notice. Crucially, they've specified guaranteed service times, \"05:30-08:30\" and \"16:30-19:30\" which I need to record.\n\nSo, here's what I'm deriving:\n\n*   `isStrike`: true\n*   `strikeData`:\n    *   `startDate`: \"2025-11-28 00:00:00\"\n    *   `endDate`: \"2025-11-28 23:59:59\"\n    *   `locationType`: \"NATIONAL\"\n    *   `locationCodes`: *Omitted* (as per the schema's rules)\n    *   `guaranteedTimes`: [\"05:30-08:30\", \"16:30-19:30\"]\n\nI need to confirm all the values are correct and in the right format. The dates are good, in the format I need, and the `locationType` is the correct value. `guaranteedTimes` are formatted correctly. That's it, ready to go.\n\n\n",
+    "tokens": {
+      "input": 2231,
+      "output": 123,
+      "total": 2905
+    }
+  }
+}

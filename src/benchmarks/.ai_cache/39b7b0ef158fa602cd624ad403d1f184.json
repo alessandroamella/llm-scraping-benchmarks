@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6214,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00048205,
+      "outputCost": 0.0001088,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00059085
+    },
+    "hash": "39b7b0ef158fa602cd624ad403d1f184",
+    "sourceFile": "sciopero_nazionale_trasporto_pubblico_roma_aperte_metropolitane.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to output JSON following the strike_extraction schema. The input is in Italian and mentions a current strike: \"Sciopero nazionale del trasporto pubblico,\" stating it's ongoing as of October 9, 2023. Since it indicates this is not an upcoming strike, I should set isStrike to false. It's essential to ensure the JSON format is exactly right. The final output should be: { \"isStrike\": false } with no additional strikeData needed.",
+    "tokens": {
+      "input": 9641,
+      "output": 272,
+      "total": 9913
+    }
+  }
+}

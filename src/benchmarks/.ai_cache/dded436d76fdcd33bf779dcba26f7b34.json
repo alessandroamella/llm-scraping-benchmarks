@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:01:00",
+      "endDate": "2025-12-12 23:59:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "04",
+        "05"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24102,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000689,
+      "outputCost": 0.0009072,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0009761
+    },
+    "hash": "dded436d76fdcd33bf779dcba26f7b34",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-12-12-sciopero-del-personale-di-sad-.html",
+    "thoughts": "**Extracting strike data**\n\nI need to format a JSON output based on the strike announcement for December 12, 2025. The content indicates a strike from 00:01 to 21:00 on that date, confirming it's an announcement. So, isStrike is true. I’ll extract the strike data: startDate should be \"2025-12-12 00:01:00,\" and endDate will be \"2025-12-12 21:00:00.\" The location is specified as a regional strike in Trentino Alto Adige and Veneto. Alright, let’s get that correctly structured!",
+    "tokens": {
+      "input": 1378,
+      "output": 2268,
+      "total": 3646
+    }
+  }
+}

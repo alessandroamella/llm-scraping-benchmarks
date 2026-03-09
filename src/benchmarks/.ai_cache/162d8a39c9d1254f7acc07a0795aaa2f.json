@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20686,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005406,
+      "outputCost": 0.0004824,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.001023
+    },
+    "hash": "162d8a39c9d1254f7acc07a0795aaa2f",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_24h_per_venerdi_12_novembre_2025.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to check if we're outputting JSON according to the specified schema. The document is in Italian and announces a 24-hour strike on December 12, 2025. The title clearly indicates it’s a warning about the strike. The body mentions that a national strike action is called for that day and outlines guaranteed service times. Since this is an announcement for an upcoming strike, I should set isStrike to true and extract the relevant date and time for start and end.",
+    "tokens": {
+      "input": 10812,
+      "output": 1206,
+      "total": 12018
+    }
+  }
+}

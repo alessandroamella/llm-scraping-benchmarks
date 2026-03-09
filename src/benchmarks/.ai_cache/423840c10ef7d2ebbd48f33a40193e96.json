@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9683,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00255275,
+      "outputCost": 0.0001725,
+      "thinkingCost": 0.0009825,
+      "cachedCost": 0,
+      "totalCost": 0.00370775
+    },
+    "hash": "423840c10ef7d2ebbd48f33a40193e96",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_generale_di_24h_per_venerdi_12_dicembre_2025.html",
+    "thoughts": "**Processing EAV Strike Announcement**\n\nOkay, let's break this down. I've received some HTML content from EAV. My task is clear: determine if this contains an announcement for an upcoming strike and, if so, extract the necessary information in a strictly defined JSON format. No deviations allowed, just clean, parseable JSON. The schema is my guide.\n\nFirst, I need to analyze the title and body of the text. The title, \"Linea Metropolitana: Avviso di sciopero generale di 24h per venerdì 12 dicembre 2025 - EAV srl,\" definitely looks promising. \"Sciopero\" (strike), \"24h,\" and a specific date—December 12, 2025—all point to a strike announcement. The body confirms this: \"Per il giorno 12 dicembre 2025 la O.S. CGIL ha proclamato azione di sciopero generale nazionale...\" It’s a definite strike.\n\nNow, let's extract the crucial details. It's a 24-hour strike set for December 12, 2025. Guaranteed service times are explicitly mentioned: \"05:30-08:30\" and \"16:30-19:30\". The location is \"nazionale\" which translates to \"NATIONAL.\" Since it's national, I need to remember the constraint: no location codes are required.\n\nWith the data identified, time to assemble the JSON.  `isStrike` will be `true`.  For `strikeData`, I need to construct the `startDate` and `endDate`. A 24-hour strike usually begins at the start of the service day, or 00:00:00, so `startDate` is \"2025-12-12 00:00:00\".  The strike ends at the end of the day: \"2025-12-12 23:59:59\" for `endDate`. `locationType` will be \"NATIONAL\" as identified.  `locationCodes` will be omitted as it's a national strike.  Finally, `guaranteedTimes` will be an array: `[\"05:30-08:30\", \"16:30-19:30\"]`.\n\nNow, does it meet the requirements? It's in valid JSON format.  There is no extra text. It conforms to the schema. The location codes have been omitted as per the rules. Done! The extracted data is ready.\n\n\n",
+    "tokens": {
+      "input": 10211,
+      "output": 115,
+      "total": 10981
+    }
+  }
+}

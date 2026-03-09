@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9607,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000507,
+      "outputCost": 0.0001528,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002035
+    },
+    "hash": "68f5ab49968cb6b648daa188cbd5c64b",
+    "sourceFile": "sciopero_adesione_personale_atac_185.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to determine if the document is announcing a new or upcoming strike. It mentions \"Sciopero, adesione personale Atac al 18,5%,\" published on November 17, 2023. The participation rate of 18.5% indicates it reports on attendance for a strike that occurred today, not an upcoming one. Since it reflects past participation, I will set isStrike to false. My final output will be a JSON response: {\"isStrike\": false}.",
+    "tokens": {
+      "input": 1014,
+      "output": 382,
+      "total": 1396
+    }
+  }
+}

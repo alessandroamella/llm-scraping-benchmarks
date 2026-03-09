@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-20 00:00:00",
+      "endDate": "2025-06-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 42024,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0001088,
+      "outputCost": 0.0009992,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.001108
+    },
+    "hash": "98fb5a47ce147eef0c73a4bac667bf32",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_24h_venerdi_20_giugno_2025.html",
+    "thoughts": "**Extracting strike data**\n\nI need to output JSON according to the strike extraction schema. The document announces a 24-hour strike on June 20, 2025, proclaimed by USB. This confirms it's an upcoming strike, not a cancellation or post-event participation. It even mentions a 7.02% participation rate from the last proclamation, but that's secondary. The key point here is confirming its future status, so I will set isStrike to true and extract relevant strike data accordingly.",
+    "tokens": {
+      "input": 2176,
+      "output": 2498,
+      "total": 4674
+    }
+  }
+}

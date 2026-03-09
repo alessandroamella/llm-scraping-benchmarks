@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-24 00:00:00",
+      "endDate": "2025-02-24 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18534,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000698,
+      "outputCost": 0.0005808,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0006506
+    },
+    "hash": "e26572bcdb408c4e1d21bb2c91a967d1",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_24h_lunedi_24_febbraio_2025.html",
+    "thoughts": "**Extracting strike data**\n\nI need to output in JSON format for a strike announcement. The document indicates an upcoming strike on February 24, 2025, for 24 hours as declared by USB. It's crucial to define strike times, specifically from 00:00 to 24:00 that day in local time. While it mentions service guaranteed times of 05:30-08:30 and 16:30-19:30, I don't have an exact start time for the strike itself. I'll determine isStrike as true based on the announcement.",
+    "tokens": {
+      "input": 1396,
+      "output": 1452,
+      "total": 2848
+    }
+  }
+}

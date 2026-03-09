@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 10059,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00261825,
+      "outputCost": 0.000189,
+      "thinkingCost": 0.001134,
+      "cachedCost": 0,
+      "totalCost": 0.00394125
+    },
+    "hash": "17ccce6ef8fcae7a40072fd2f4444dff",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_24_ore_del_13_dicembre_2024_aggiornamento.html",
+    "thoughts": "**Analyzing the EAV Strike Announcement**\n\nOkay, let's break this down. My objective is clear: to determine if this snippet is announcing a strike for EAV in Campania and, if so, to extract the relevant data in the specified JSON format. The input is a web page content excerpt about an EAV strike. The core criteria revolve around confirming `isStrike` (true/false) and, if true, extracting specific fields like `startDate`, `endDate`, `locationType`, `locationCodes`, and `guaranteedTimes`.\n\nThe title is pretty explicit: \"Linee Suburbane: Avviso di sciopero di 24 ore del 13 dicembre 2024 - Aggiornamento - EAV srl.\" The content confirms this further. It states the strike is *confirmed* for December 13th, 2024, after a legal decision. The date is December 13th, 2024. Guaranteed service times are between 05:30-08:30 and 16:30-19:30, which the text explicitly states. The region is Campania (code 15), confirmed.\n\nNow, let's assemble the data. `isStrike` is undeniably `true`. The strike is a 24-hour strike. Given that it's a full-day strike, `startDate` will be `2024-12-13 00:00:00` and `endDate` is `2024-12-13 23:59:59`. The `locationType` is `REGIONAL`, and the `locationCodes` is `[\"15\"]`, representing Campania. The `guaranteedTimes` are `[\"05:30-08:30\", \"16:30-19:30\"]`.\n\nTo ensure I haven't missed anything, let's quickly review: The text *explicitly* confirms the strike for the 13th, and notes the legal ruling's impact. It's a 24-hour strike, as explicitly written in the headline and content. The times are correct, as is the region code.\n\nFinally, the output should be in JSON, and I should format it as follows:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-13 00:00:00\",\n    \"endDate\": \"2024-12-13 23:59:59\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"15\"],\n    \"guaranteedTimes\": [\"05:30-08:30\", \"16:30-19:30\"]\n  }\n}\n```\n\nThat's it. It's an unambiguous strike announcement, and I've extracted the data according to the specs.\n\n\n",
+    "tokens": {
+      "input": 10473,
+      "output": 126,
+      "total": 11355
+    }
+  }
+}

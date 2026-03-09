@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3297,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0026275,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0002685,
+      "cachedCost": 0,
+      "totalCost": 0.002911
+    },
+    "hash": "71f1a477940e88336918f5090392bc00",
+    "sourceFile": "sciopero_generale_adesione_personale_atac_179.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, let's break this down. My objective is crystal clear: I need to ascertain if this text constitutes an *announcement* of a future strike. The input content, specifically \"Sciopero generale, adesione personale Atac al 17,9% - Roma Servizi per la Mobilità\" ... \"L’adesione complessiva del personale Atac allo sciopero generale di oggi, rilevata in mattinata, è stata del 17,9 per cento,\" is the crucial piece.\n\nMy analysis immediately keys in on the temporal aspect. The phrase \"sciopero generale di oggi\" (general strike *of today*) is the giveaway. This isn't a *preemptive* notice; it's a report on the *participation* rate, the \"adesione,\" for a strike that has *already* transpired on October 20th, 2023.\n\nBased on my established rule, which prioritizes actual announcements, and since this is a post-event report, the `isStrike` flag is unequivocally set to `false`. Therefore, the provided content is *not* an announcement of a strike. It's an after-the-fact participation percentage report.\n\n\n",
+    "tokens": {
+      "input": 10510,
+      "output": 10,
+      "total": 10699
+    }
+  }
+}

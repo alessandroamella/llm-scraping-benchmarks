@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9271,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00093785,
+      "outputCost": 0.0002144,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00115225
+    },
+    "hash": "8e642ae74e6fbab1506b632b12a53329",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_212.html",
+    "thoughts": "**Analyzing strike extraction requirements**\n\nI need to output a JSON based on the strike_extraction schema. The content is derived from a long HTML page. The title indicates a public transport strike with Atac's participation at 21.2%, providing key information. It mentions the date of publication and some specifics about the strike's status. The focus is on the participation rate reported in 2023. I need to determine if this document is announcing a new or upcoming strike.",
+    "tokens": {
+      "input": 18757,
+      "output": 536,
+      "total": 19293
+    }
+  }
+}

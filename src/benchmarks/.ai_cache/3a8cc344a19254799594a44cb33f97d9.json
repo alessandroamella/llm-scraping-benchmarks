@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-09-22 00:00:00",
+      "endDate": "2025-09-22 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7390,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00050075,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.001053,
+      "cachedCost": 0,
+      "totalCost": 0.00173825
+    },
+    "hash": "3a8cc344a19254799594a44cb33f97d9",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_generale_nazionale_lunedi_22_settembre_2025.html",
+    "thoughts": "**Strike Analysis: EAV (Campania)**\n\nOkay, let's break this down. My task is to analyze this text – \"Linee Vesuviane: Avviso di sciopero generale nazionale lunedì 22 settembre 2025\" – and determine if it announces a strike, and if so, extract the relevant data in the specified JSON format. The entity is EAV, which I understand to be located in the Campania region, code \"15\".\n\nFirst, is it a strike? Yes, clearly, it is: \"sciopero generale\" indicates a general strike. The date is specified as September 22, 2025. Now I need to extract and format the required information.\n\nI'm looking for the start and end dates, the location type, location codes (if applicable), and any guaranteed service times. The constraints are pretty clear: JSON output only, specific date-time formats, \"NATIONAL\" or \"REGIONAL\" for location type, 2-digit ISTAT codes for regional locations, and guaranteed times as an array of strings in \"HH:mm-HH:mm\" format.\n\nFrom the text, the strike date is definitely September 22, 2025. It's a \"sciopero generale nazionale,\" which means a national strike. The duration is specified as \"23-24 ore,\" which I'll interpret as an all-day strike from 00:00:00 to 23:59:59 on September 22nd. \"Guaranteed times\" for EAV (Vesuviane) are \"05:30-08:30\" and \"16:30-19:30\".\n\nSo, I'm thinking the following JSON structure is correct:\n\n*   `isStrike`: true\n*   `strikeData`:\n    *   `startDate`: \"2025-09-22 00:00:00\"\n    *   `endDate`: \"2025-09-22 23:59:59\"\n    *   `locationType`: \"NATIONAL\"\n    *   `guaranteedTimes`: [\"05:30-08:30\", \"16:30-19:30\"]\n\nI need to confirm: \"national\" implies *no* location codes. The instructions are clear that *if* the `locationType` is \"NATIONAL,\" then `locationCodes` must be omitted. The date format is correct. The guaranteed times are in the right format.\n\nYes, that looks solid. The 23/24-hour duration is standard practice for representing an all-day strike as the date range. The `guaranteedTimes` are formatted precisely as requested. This should be an accurate and compliant output.\n\n\n",
+    "tokens": {
+      "input": 2003,
+      "output": 123,
+      "total": 2828
+    }
+  }
+}

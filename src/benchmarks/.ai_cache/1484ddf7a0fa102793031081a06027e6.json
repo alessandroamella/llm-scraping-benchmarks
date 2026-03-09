@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "04",
+        "05"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20223,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0007621,
+      "outputCost": 0.0006544,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0014165
+    },
+    "hash": "1484ddf7a0fa102793031081a06027e6",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-11-28-sciopero-del-personale-di-sad-.html",
+    "thoughts": "**Preparing strike data**\n\nI need to provide the strikeData with specific details. I'll format the startDate as 'yyyy-MM-dd HH:mm:ss' and clarify the endDate. The locationType will be \"REGIONAL\" since the content references Trentino Alto Adige and Veneto. Next, I'll gather the 2-digit ISTAT region codes for these areas. Trentino-Alto Adige is code \"04\" and Veneto is \"05.\" So, the locationCodes array will be [\"04\", \"05\"].",
+    "tokens": {
+      "input": 15242,
+      "output": 1636,
+      "total": 16878
+    }
+  }
+}

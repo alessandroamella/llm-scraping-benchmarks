@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-16 10:00:00",
+      "endDate": "2025-11-16 17:59:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "01",
+        "03",
+        "05",
+        "07",
+        "08"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 30926,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000641,
+      "outputCost": 0.0007988,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008629
+    },
+    "hash": "009cffe56df64e1a6ea2add9338e17d8",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-11-16-sciopero-del-personale-di-tren.html",
+    "thoughts": "**Extracting strike data**\n\nI need to output JSON based on strike extraction. The document is announcing a strike for Trenord on November 16, 2025. It states the strike is scheduled from 10:00 to 17:59 that day. Since it’s future relative to today, it definitely seems like an upcoming strike announcement. Therefore, I’ll set `isStrike` to true. I’ll also extract the strike data with start and end date formatted correctly as “2025-11-16 10:00:00” and the end as “2025-11-16 17:59:00”.",
+    "tokens": {
+      "input": 1282,
+      "output": 1997,
+      "total": 3279
+    }
+  }
+}

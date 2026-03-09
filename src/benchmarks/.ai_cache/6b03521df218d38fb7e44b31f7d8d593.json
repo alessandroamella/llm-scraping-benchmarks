@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-01-08 09:01:00",
+      "endDate": "2026-01-08 17:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "07"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18402,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005171,
+      "outputCost": 0.0006008,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0011179
+    },
+    "hash": "6b03521df218d38fb7e44b31f7d8d593",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2026-1-8-sciopero-del-personale-mobile-in.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to check if this document is announcing an upcoming strike. It mentions \"SCIOPERO DEL PERSONALE MOBILE INTERCITY DI GENOVA DI TRENITALIA,\" effective January 8, 2026, from 09:01 to 17:00. This indicates a scheduled strike for that date, which means it is indeed an announcement of an upcoming strike. Therefore, I think I can confirm that the `isStrike` should be set to true based on this information.",
+    "tokens": {
+      "input": 10342,
+      "output": 1502,
+      "total": 11844
+    }
+  }
+}

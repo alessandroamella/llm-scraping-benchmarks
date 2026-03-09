@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-09-22 00:00:00",
+      "endDate": "2025-09-22 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6560,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.002546,
+      "outputCost": 0.0001725,
+      "thinkingCost": 0.0009195,
+      "cachedCost": 0,
+      "totalCost": 0.003638
+    },
+    "hash": "bf7ce2efef004726518d40f11a874bb2",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_generale_nazionale_lunedi_22_settembre_2025.html",
+    "thoughts": "**Strike Announcement Analysis**\n\nOkay, let's break this down. My primary goal is to determine if this content is announcing an upcoming strike and, if so, extract the relevant details in a valid JSON format. The title immediately suggests a strike: \"Linea Metropolitana: Avviso di sciopero generale nazionale lunedì 22 settembre 2025.\" \"Avviso di sciopero\" – that's a clear indicator. The date, September 22, 2025, is specified.\n\nNow, let's dive into the content. The description confirms it: \"Per il giorno 22 settembre 2025 la O.S. USB ha proclamato azione di sciopero generale nazionale\" – yes, definitely a strike. We've got the date: September 22, 2025. The location type, as indicated by \"sciopero generale nazionale,\" is NATIONAL. This is critical for filtering and routing this announcement appropriately in our system.\n\nThe constraints are clear: I need to generate valid JSON, only extract the data, and set `isStrike` to `true` with the extracted data. Let's build the `strikeData` object. The startDate is easy: \"2025-09-22 00:00:00,\" and the endDate must be the end of the day because the notice describes an action: \"23 ore per il personale viaggiante e 24 ore per tutto il restante personale\". That provides a valid end date of \"2025-09-22 23:59:59\". The `locationType` is NATIONAL. Finally, the \"guaranteed times\" are \"05:30-08:30\" and \"16:30-19:30.\"\n\nTherefore, based on the information provided, here's what I've got:\n\n*   `isStrike`: `true`\n*   `strikeData`:\n    *   `startDate`: \"2025-09-22 00:00:00\"\n    *   `endDate`: \"2025-09-22 23:59:59\"\n    *   `locationType`: \"NATIONAL\"\n    *   `guaranteedTimes`: [\"05:30-08:30\", \"16:30-19:30\"]\n\nNo location codes are needed, as this is a national event. The location type matches our enum. This looks good.\n\n\n",
+    "tokens": {
+      "input": 10184,
+      "output": 115,
+      "total": 10912
+    }
+  }
+}

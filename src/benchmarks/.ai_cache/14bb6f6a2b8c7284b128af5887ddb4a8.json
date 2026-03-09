@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-03 00:00:00",
+      "endDate": "2025-10-03 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21948,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000857,
+      "outputCost": 0.0005128,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0005985
+    },
+    "hash": "14bb6f6a2b8c7284b128af5887ddb4a8",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_generale_nazionale_di_24_ore_venerdi_03_ottobre_2025.html",
+    "thoughts": "**Extracting strike details**\n\nI need to output JSON following the strike_extraction schema. The announcement indicates a national 24-hour strike on October 3, 2025, suggesting we need to mark isStrike as true. I’ll include strikeData with the startDate and endDate formatted as 'yyyy-MM-dd HH:mm:ss'. For this, I’ll set startDate to 2025-10-03 00:00:00 and endDate to 2025-10-03 23:59:59. Since it’s a national strike, the LocationType will be NATIONAL.",
+    "tokens": {
+      "input": 1714,
+      "output": 1282,
+      "total": 2996
+    }
+  }
+}

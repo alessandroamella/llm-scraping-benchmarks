@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 10755,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00047975,
+      "outputCost": 0.0001332,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00061295
+    },
+    "hash": "6926caf300ab8f4766751d46300164c8",
+    "sourceFile": "sciopero_del_trasporto_pubblico_ha_aderito_il_195_del_personale_atac.html",
+    "thoughts": "**Formatting JSON for strike extraction**\n\nI need to output JSON according to the strike_extraction schema as instructed. The content states that 19.5% of Atac personnel in Rome participated in a public transport strike. It mentions recent details, with a participation rate of 19.5%. This indicates it's about a strike that already happened, meaning isStrike should be false. So, I’ll format the output as: { \"isStrike\": false }. Yes, that works!",
+    "tokens": {
+      "input": 9595,
+      "output": 333,
+      "total": 9928
+    }
+  }
+}

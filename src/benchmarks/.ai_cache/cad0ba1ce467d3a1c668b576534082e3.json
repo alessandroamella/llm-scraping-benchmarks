@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7762,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005605,
+      "outputCost": 0.0001708,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00022685
+    },
+    "hash": "cad0ba1ce467d3a1c668b576534082e3",
+    "sourceFile": "sciopero_del_trasporto_pubblico_metro_aperte_chiusa_la_termini_centocelle.html",
+    "thoughts": "**Determining strike status**\n\nI need to format the output as JSON, specifically for strike extraction. The message refers to a national public transport strike that is currently happening, with details about which metro lines are operating and which are closed. It clearly states it's an ongoing 24-hour strike, so I should decide that the status is ongoing. According to the instructions, since it's ongoing, I should set \"isStrike\" to false for the JSON output.",
+    "tokens": {
+      "input": 1121,
+      "output": 427,
+      "total": 1548
+    }
+  }
+}

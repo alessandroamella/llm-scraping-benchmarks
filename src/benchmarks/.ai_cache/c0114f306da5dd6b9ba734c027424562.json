@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-07-18 09:00:00",
+      "endDate": "2024-07-18 13:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8796,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00146175,
+      "outputCost": 0.0001395,
+      "thinkingCost": 0.001026,
+      "cachedCost": 0,
+      "totalCost": 0.00262725
+    },
+    "hash": "c0114f306da5dd6b9ba734c027424562",
+    "sourceFile": "strike-detail-gioved--18-luglio-dalle-9-alle-13-sciopero-del-per.html",
+    "thoughts": "**Analyzing the FERROVIENORD Strike Announcement**\n\nOkay, so I've received some input regarding an announcement about a FERROVIENORD strike. My immediate focus is extracting the essential information and structuring it as requested. I've identified the strike as taking place on Thursday, July 18, 2024, specifically between 09:00 and 13:00. This confirms it is an actual upcoming strike, so `isStrike` is definitely true.\n\nThe location is Lombardia, which I've inferred because FERROVIENORD operates within that region, and the input document itself doesn't explicitly mention it (Trenord is the public transport company of Lombardia, code \"03\"). I'm representing this as `locationType`: \"REGIONAL\" and `locationCodes`: [\"03\"]. I need to return the ISTAT code as requested, which is \"03\" for Lombardia.\n\nNow for the tricky part, the guaranteed service. The text says \"Non coinvolte le fasce di garanzia.\" This is a standard phrase, and in the context of transport strikes in Italy, it usually refers to guaranteed service during peak hours. In this case, the strike is confined to four hours. I am explicitly instructed to create a \"HH:mm-HH:mm\" formatted array in `guaranteedTimes` only if specified. The text *doesn't* provide an explicit timeframe. If I take \"Non coinvolte le fasce di garanzia\" at face value, I have to assume that the 'standard' guaranteed service does not apply, because this strike is only for four hours. The document itself does not provide any. So, I will **omit** the `guaranteedTimes` field since no specific guaranteed time slots are provided.\n\nThe final structure, then, will be `isStrike: true`, and the `strikeData` object containing the start and end dates, the regional code, and the type, which is regional.\n\nI believe I've extracted the data according to instructions, and omitted the `guaranteedTimes` field as requested. I'm ready to proceed with the output.\n\n\n",
+    "tokens": {
+      "input": 5847,
+      "output": 93,
+      "total": 6624
+    }
+  }
+}

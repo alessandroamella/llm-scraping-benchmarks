@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-10 19:32:00",
+      "endDate": "2025-01-10 23:32:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7444,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00023725,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.0005565,
+      "cachedCost": 0,
+      "totalCost": 0.00091675
+    },
+    "hash": "b197530b63434d253d7b7b35899bbedb",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_di_4_ore_giorno_10_gennaio_2025.html",
+    "thoughts": "**My Analysis of the Upcoming National Strike**\n\nOkay, here's the breakdown. The input clearly describes a national strike, a \"sciopero nazionale,\" set for January 10th, 2025. It's happening from 19:32 to 23:32, a four-hour window, which puts its context as January 5th. This is crucial for my data extraction.\n\nSince the strike is \"nazionale,\" the `locationType` will definitively be \"NATIONAL.\" This means, as per the rules I've been given, I *must* omit the `locationCodes` entirely. That's a key detail to get right.\n\nI need to flag this as a strike: `isStrike` is `true`. Now for the `strikeData`: I've got the `startDate` at \"2025-01-10 19:32:00\" and the `endDate` at \"2025-01-10 23:32:00\".\n\nFinally, I'm at the \"fasce di garanzia\" portion. While the document mentions guaranteed departure times, it doesn't actually give me clear time *ranges* for those guaranteed services. It's a list of last departures, not explicit time windows. The text states these guaranteed times are \"in relation to the bands of guarantee\", but doesn't define the ranges. Given that, and the requirement for explicit ranges, I will omit `guaranteedTimes` because I can't derive explicit time windows from this information. I'm going to omit the key for now. I need to ensure accuracy and avoid making assumptions.\n\n\n",
+    "tokens": {
+      "input": 949,
+      "output": 82,
+      "total": 1402
+    }
+  }
+}

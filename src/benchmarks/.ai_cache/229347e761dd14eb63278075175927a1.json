@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-03-22 19:40:00",
+      "endDate": "2025-03-22 23:40:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7987,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00249225,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.0011955,
+      "cachedCost": 0,
+      "totalCost": 0.00383625
+    },
+    "hash": "229347e761dd14eb63278075175927a1",
+    "sourceFile": "metropolitana_sciopero_del_22_marzo_2025.html",
+    "thoughts": "**Strike Information Extraction - EAV Case**\n\nOkay, here's the situation: I have some HTML content regarding a strike at EAV. My objective is to distill this into a specific JSON format, which I'll be referring to as the target format. I need to figure out if it's a strike announcement and, if so, extract the strike details as instructed. Let's start by defining `isStrike`. Based on the input, this is indeed an announcement of an upcoming strike, so `isStrike` is `true`.\n\nNow, for `strikeData`. I need the start and end dates/times, location specifics and guaranteed times. The title \"Linea Metropolitana - Avviso di sciopero di 4 ore del 22 marzo 2025\" and content clearly indicate a strike. The dates are easily extracted: March 22, 2025, and the duration is four hours. The text states \"dalle ore 19:40 alle ore 23:40\". So, I will extract `startDate` as \"2025-03-22 19:40:00\" and `endDate` as \"2025-03-22 23:40:00\".\n\nNext, location details. EAV is a company in Campania. Given this context, `locationType` should be \"REGIONAL\". Campania's ISTAT code is 15, so `locationCodes` will be [\"15\"].\n\nRegarding `guaranteedTimes`, the text contains a sentence: \"Di seguito vengono elencate le ultime e le prime partenze garantite...\". However, the text does not directly provide time ranges for *guaranteed service* (e.g., \"06:00-09:00\"), just departure times. Looking at the schema, I note that `guaranteedTimes` is optional. Since the text does not clearly define a service window I am unable to supply the information in the required \"HH:mm-HH:mm\" range format. I will omit `guaranteedTimes` from the output.\n\nSo, let me consolidate: `isStrike` is `true`. `strikeData` comprises: `startDate` \"2025-03-22 19:40:00\", `endDate` \"2025-03-22 23:40:00\", `locationType` \"REGIONAL\", and `locationCodes` [\"15\"]. Now, I'll double-check to ensure compliance with the format constraints: dates are correct, `locationType` is correct, and the ISTAT code is correct. The `guaranteedTimes` is optional. Great, I'm satisfied.\n\n\n",
+    "tokens": {
+      "input": 9969,
+      "output": 99,
+      "total": 10865
+    }
+  }
+}

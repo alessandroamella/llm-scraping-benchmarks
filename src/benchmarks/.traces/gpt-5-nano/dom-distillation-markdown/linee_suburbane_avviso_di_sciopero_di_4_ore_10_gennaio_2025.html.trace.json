@@ -1,15 +1,23 @@
 {
-  "timestamp": "2026-03-09T13:31:26.229Z",
-  "isCacheHit": true,
+  "timestamp": "2026-03-09T14:37:34.763Z",
+  "isCacheHit": false,
   "request": {
     "sourceName": "EAV",
     "fileName": "linee_suburbane_avviso_di_sciopero_di_4_ore_10_gennaio_2025.html",
     "model": "gpt-5-nano",
     "strategy": "dom-distillation-markdown",
-    "useLenientSchema": true,
+    "useLenientSchema": false,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"EAV\" (the public transport company of Campania (15)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: Linee Suburbane: Avviso di sciopero di 4 ore, venerdì 10 gennaio 2025 - EAV srl\n\n* * *\n\n## Linee Suburbane: Avviso di sciopero di 4 ore, venerdì 10 gennaio 2025\n\nData:  \n**5 Gennaio 2025**\n\nSi comunica che per il giorno 10 Gennaio 2025 la O.S. CONF.A.I.L. ha proclamato uno sciopero nazionale di 4 ore, dalle ore 19:32 alle ore 23:32, avente la seguente motivazione: “Problematiche relative al Trasporto Pubblico Locale”\n\nDurante l’ultima proclamazione di sciopero delle citate OO.SS., la percentuale di adesione è stata del 15,5 % (sciopero di 4 ore del giorno 23 ottobre 2024)\n\nDi seguito vengono elencate le ultime e le prime partenze garantite in relazione alle fasce di garanzia.\n\nDurante l’orario di sciopero, l’effettuazione delle corse è subordinata al numero di lavoratori aderenti allo sciopero.\n\nULTIME PARTENZE GARANTITE PRIMA DELLO SCIOPERO\n\nda Napoli per Piedimonte treno 7872 delle 19:03\n\nda Piedimonte per Napoli treno 7873 delle ore 17:27\n\nda Piedimonte per Caserta RFI treno 7875 delle 18:50\n\nIl treno 7878 delle ore 20:30 da Napoli per Piedimonte Matese verrà effettuato in quanto garantito in caso di sciopero.\n\nSulla Linea NAPOLI- BENEVENTO sarà garantito il servizio automobilistico sostitutivo come da programma feriale.  \nIl servizio è effettuato dalla società D’AGOSTINO TOURS.\n\n**Categoria:** [Trasporto pubblico](https://www.eavsrl.it/categoria-disservizio/trasporto-pubblico/)\n\n**Area:** [Campania](https://www.eavsrl.it/area/campania/)"
   },
   "response": {
+    "rawOutput": {
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2025-01-10 19:32:00",
+        "endDate": "2025-01-10 23:32:00",
+        "locationType": "NATIONAL"
+      }
+    },
     "parsedData": {
       "isStrike": true,
       "strikeData": {
@@ -19,17 +27,18 @@
       }
     },
     "usage": {
-      "input": 1274,
-      "output": 1752,
-      "total": 3026
+      "input": 1360,
+      "output": 1458,
+      "total": 2818
     },
     "costUsd": {
-      "inputCost": 0.0000637,
-      "outputCost": 0.0007008,
+      "inputCost": 0.000068,
+      "outputCost": 0.0005832,
       "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.0007645
+      "totalCost": 0.0006512
     },
-    "durationMs": 23927
+    "durationMs": 19253,
+    "thoughts": "**Deciding on strike details**\n\nI need to determine if the document is announcing a new or upcoming strike. It clearly states a national strike is planned for January 10, 2025, from 19:32 to 23:32, proclaimed by O.S. CONF.A.I.L. It looks like this is indeed an announcement for a future strike, so I can set isStrike to true. The date format required for startDate and endDate is \"yyyy-MM-dd HH:mm:ss,\" and the locationType should be \"NATIONAL\" with locationCodes set explicitly to null."
   }
 }

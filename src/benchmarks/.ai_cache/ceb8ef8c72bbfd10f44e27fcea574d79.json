@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8425,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000482,
+      "outputCost": 0.0001328,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0006148
+    },
+    "hash": "ceb8ef8c72bbfd10f44e27fcea574d79",
+    "sourceFile": "sciopero_del_trasporto_pubblico_aperte_le_metropolitane_e_la_termini_centocelle.html",
+    "thoughts": "**Determining strike status**\n\nI need to output JSON according to the strike_extraction schema. I see a document titled \"Sciopero del trasporto pubblico,\" indicating that an ongoing strike is currently in effect as of the date provided, 09/12/2025. It clearly states \"È in corso lo sciopero,\" which means it's not an upcoming strike but an ongoing one. Thus, I can decide that isStrike should be false, resulting in the output: {\"isStrike\": false}.",
+    "tokens": {
+      "input": 9640,
+      "output": 332,
+      "total": 9972
+    }
+  }
+}

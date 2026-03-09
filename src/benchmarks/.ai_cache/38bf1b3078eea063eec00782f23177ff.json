@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:01:00",
+      "endDate": "2025-12-12 23:59:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "04",
+        "05"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6639,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00357,
+      "outputCost": 0.000159,
+      "thinkingCost": 0.001092,
+      "cachedCost": 0,
+      "totalCost": 0.004821
+    },
+    "hash": "38bf1b3078eea063eec00782f23177ff",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-12-12-sciopero-del-personale-di-sad-.html",
+    "thoughts": "**Strike Analysis & JSON Formatting**\n\nOkay, let's break this down. My task here is pretty straightforward: I need to analyze this HTML content and pull out strike information, specifically focusing on dates, times, and locations. The goal is to determine if a strike is happening and then, crucially, to extract the relevant details into a single, valid JSON object. We are only interested in a single JSON output.\n\nFirst, I see the headline, \"SCIOPERO DEL PERSONALE DI SAD E TRENTINO TRASPORTI,\" which translates to a strike of personnel from SAD and Trentino Trasporti. The content specifies two strikes: one for SAD personnel and another for Trentino Trasporti, both occurring on December 12, 2025. It also mentions the regions: Trentino-Alto Adige and Veneto.\n\nI'm noting that the prompts indicate that if a strike is indicated, I need to represent all the data. Here the strikes cover different periods but occur on the same day. Since I must return a single JSON, I have to represent the combined strike duration. I need to aggregate this strike data.\n\nAfter looking at the specific strike times, I know I must combine them into a single range. This means that I'll represent the aggregated range from 00:01 to 23:59 on December 12, 2025.\n\nBased on the information, I can determine that `isStrike` is `true`. Now, for the `strikeData`:\n\n*   `startDate`: Based on the earliest start time for both strikes, this will be \"2025-12-12 00:01:00\".\n*   `endDate`: Based on the latest end time for both strikes, this will be \"2025-12-12 23:59:00\".\n*   `locationType`: Since both strikes are regional, I'll set this to \"REGIONAL\".\n*   `locationCodes`: Based on the \"Regione\" field, the location codes will be \"04\" for Trentino-Alto Adige and \"05\" for Veneto. This will be represented as `[\"04\", \"05\"]`.\n*   `guaranteedTimes`: The provided text doesn't specify any guaranteed times, so I'll omit this field.\n\nI will double-check each component is in the correct format as per the instructions, but I think I've got it. I'm ready to output the single, parseable JSON object!\n\n\n",
+    "tokens": {
+      "input": 14280,
+      "output": 106,
+      "total": 15114
+    }
+  }
+}

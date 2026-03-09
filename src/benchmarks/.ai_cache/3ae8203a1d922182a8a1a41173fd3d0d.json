@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-07-23 09:00:00",
+      "endDate": "2025-07-23 11:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 30331,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003612,
+      "outputCost": 0.0007784,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0011396
+    },
+    "hash": "3ae8203a1d922182a8a1a41173fd3d0d",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_2_ore_mercoledi_23_luglio_2025.html",
+    "thoughts": "**Clarifying location codes and times**\n\nI need to ensure that location codes are using the correct 2-digit ISTAT codes for regions, like \"15\" for Campania. The example indicates that the location type should be marked as \"REGIONAL\" since the strike refers to a regional company, EAV srl. I’ll stick with \"REGIONAL\" and use the code [\"15\"].  \n\nFor the \"guaranteedTimes\" field, it’s important to follow the format given, specifying time ranges for services before and after the strike.",
+    "tokens": {
+      "input": 7224,
+      "output": 1946,
+      "total": 9170
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9641,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0028755,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.0011235,
+      "cachedCost": 0,
+      "totalCost": 0.0041835
+    },
+    "hash": "757e6df944ebcae35852a3dd3e4d70d2",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_generale_nazionale_di_venerdi_12_dicembre_2025.html",
+    "thoughts": "**Strike Information Extraction: A Mental Walkthrough**\n\nOkay, so I've got this task: to pull strike information from some HTML content and put it into JSON format. The key is to determine if it's an upcoming strike (`isStrike`). If it is, I need to extract `startDate`, `endDate`, `locationType`, `locationCodes`, and `guaranteedTimes`.\n\nLet's look at the example. The title is \"Linee Flegree: Avviso di sciopero generale nazionale di venerdì 12 dicembre 2025 - EAV srl\" and the text is \"Per il giorno 12 dicembre 2025 la O.S. CGIL ha proclamato azione di sciopero generale nazionale...\". The text clearly announces a strike. The date is December 12th, 2025. The phrase \"sciopero generale nazionale\" confirms it's a national strike. The announcement mentions guaranteed service times: \"05:30 alle ore 8:30\" and \"16:30 alle ore 19:30\".\n\nTherefore, `isStrike` is definitely `true`.\n\nNow, for the data. The date is straightforward: December 12th, 2025. Since the text says \"Per il giorno 12 dicembre 2025,\" it implies the entire day. I need to define a *range* though. Rather than assume arbitrary times, I'll define a reasonable range based on the *day* aspect of the announcement. If the announcement specified, say \"from 9:00am\", I could infer the rest of the day, but that's not present. So, I will set `startDate` to \"2025-12-12 00:00:00\" and `endDate` to \"2025-12-12 23:59:59\".\n\nThe `locationType` is \"NATIONAL,\" as indicated by \"sciopero generale *nazionale*\".\n\nThe `guaranteedTimes` are exactly as stated: [\"05:30-08:30\", \"16:30-19:30\"].\n\nSince this is a national strike, `locationCodes` aren't applicable, so I'll omit that one.\n\nSo, here's how I'll construct the JSON:\n\n*   `isStrike`: `true`\n*   `strikeData`:\n    *   `startDate`: \"2025-12-12 00:00:00\"\n    *   `endDate`: \"2025-12-12 23:59:59\"\n    *   `locationType`: \"NATIONAL\"\n    *   `guaranteedTimes`: [\"05:30-08:30\", \"16:30-19:30\"]\n    *   `locationCodes`: *Omitted (national strike)*\n\nAnd finally, package it all into a single JSON object. No comments needed, and it's all in a valid format. I'm all set.\n\n\n",
+    "tokens": {
+      "input": 11502,
+      "output": 123,
+      "total": 12374
+    }
+  }
+}

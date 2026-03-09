@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-28 08:20:00",
+      "endDate": "2025-01-28 12:20:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "08:20-12:20"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20538,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00035705,
+      "outputCost": 0.0005884,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00094545
+    },
+    "hash": "96104da1faaf36e7226208661e64a754",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_4_ore_martedi_28_gennaio_2025.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to format a JSON output based on a specified schema. The content shows it's announcing a new strike: \"Linee Suburbane\" has a notice for a 4-hour strike on January 28, 2025. It includes details like \"Data: 27 Gennaio 2025\" and the specific strike times from 08:20 to 12:20. Since this is an announcement for an upcoming strike, I'll set isStrike to true and extract the strikeData with the accurate start and end date format.",
+    "tokens": {
+      "input": 7141,
+      "output": 1471,
+      "total": 8612
+    }
+  }
+}

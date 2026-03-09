@@ -1,0 +1,36 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-03 00:00:00",
+      "endDate": "2025-10-03 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30], ",
+        "description"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22855,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00035165,
+      "outputCost": 0.0006968,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00104845
+    },
+    "hash": "9f0ba268f19b13dc4989a507c2700394",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_generale_nazionale_di_24_ore_venerdi_03_ottobre_2025.html",
+    "thoughts": "**Extracting strike data**\n\nI’m looking at formatting requirements for a JSON based on the strike_extraction format. The document indicates a general national strike for 24 hours on October 3, 2025, which means it’s an announcement for an upcoming strike, so I'd set isStrike to true. \n\nI need to extract information like start and end dates, location type, and guaranteed times. Since the strike lasts 24 hours, the start time will be October 3, 2025, at midnight, but I need to ensure clarity with the end time.",
+    "tokens": {
+      "input": 7033,
+      "output": 1742,
+      "total": 8775
+    }
+  }
+}

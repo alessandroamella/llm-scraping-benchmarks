@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-02 21:00:00",
+      "endDate": "2025-10-03 20:59:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8519,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000229,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.000756,
+      "cachedCost": 0,
+      "totalCost": 0.0011695
+    },
+    "hash": "d142cae54affbe22012080e0cb682f56",
+    "sourceFile": "locandina sciopero 2 3 ottobre.pdf",
+    "thoughts": "**Strike Information Extraction: A Mental Checklist**\n\nOkay, here's the breakdown. My task is crystal clear: pull the strike details from this text and package it as a neat JSON object. I've got a specific schema to follow, which is a good thing – keeps me focused. First and foremost, I need to confirm that this *is* a strike, which is straightforward in this case.\n\nNext, I'll need to extract the date and time elements and format them correctly. It's crucial they're in the `yyyy-MM-dd HH:mm:ss` format. I see the strike starts \"Dalle ore 21:00 di giovedì 2 ... ottobre 2025,\" so that's October 2nd, 2025 at 21:00:00.  The end is specified as \"... alle ore 20:59 di venerdì 3 ottobre 2025,\" translating to October 3rd, 2025 at 20:59:00. Got it.\n\nThe scope of this strike is \"SCIOPERO NAZIONALE\". The location is national, so I have to omit the location codes.\n\nNow, for the \"Guaranteed Times\". The text indicates: \"dalle ore 6:00 alle ore 9:00 e dalle ore 18:00 alle ore 21:00\". That translates precisely to `[\"06:00-09:00\", \"18:00-21:00\"]`.\n\nOkay, time to build the JSON. `isStrike` will be `true`, and the `strikeData` object will contain: `startDate`: \"2025-10-02 21:00:00\", `endDate`: \"2025-10-03 20:59:00\", `locationType`: \"NATIONAL\", and `guaranteedTimes`: `[\"06:00-09:00\", \"18:00-21:00\"]`. No location codes are needed because it's a national strike.\n\n\n",
+    "tokens": {
+      "input": 916,
+      "output": 123,
+      "total": 1543
+    }
+  }
+}

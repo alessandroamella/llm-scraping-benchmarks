@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7680,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005185,
+      "outputCost": 0.0001028,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00015465
+    },
+    "hash": "382680d20b51d704c3d0c41b3d9a347e",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_212.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to clarify whether this document is announcing a new strike or just providing participation updates. The title is \"Sciopero del trasporto pubblico, adesione personale Atac al 21,2%\" from July 7th, 2023, recently updated on the 8th. The content indicates a participation percentage of 21.2%, which confirms it's not about a new strike. Therefore, I’ll set isStrike to false and format the output as JSON: {\"isStrike\": false}. Let's deliver that!",
+    "tokens": {
+      "input": 1037,
+      "output": 257,
+      "total": 1294
+    }
+  }
+}

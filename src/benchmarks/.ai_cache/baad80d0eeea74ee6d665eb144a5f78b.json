@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-01-09 21:00:00",
+      "endDate": "2026-01-10 23:59:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "04",
+        "05"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 25970,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0007614,
+      "outputCost": 0.0009468,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0017082
+    },
+    "hash": "baad80d0eeea74ee6d665eb144a5f78b",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2026-1-9-sciopero-del-personale-di-sad---.html",
+    "thoughts": "**Determining location codes**\n\nI'm looking at the specified times: from 9:00 PM on January 9, 2026, to 8:59 PM on January 10, 2026. The location type should be \"REGIONAL\" as the text mentions \"Servizio: Regionale\" and \"Regione: Trentino Alto Adige, VENETO.\" \n\nFor the location codes, I need the two-digit ISTAT region codes. Trentino-Alto Adige corresponds to code \"04,\" and it seems like Veneto is \"11.\" I want to ensure I’m accurate with these codes!",
+    "tokens": {
+      "input": 15228,
+      "output": 2367,
+      "total": 17595
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24656,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007025,
+      "outputCost": 0.000598,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00066825
+    },
+    "hash": "f86f2374b52d694745a1065051c217bb",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_24h_venerdi_28_novembre_2025.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to evaluate if the content is announcing an upcoming strike, which appears to be the case. The Italian text states a 24-hour national strike on November 28, 2025. So I’ll mark isStrike as true. Then, I’ll extract necessary details for strikeData, like the start and end dates, location type, and location codes. While there are no explicit times mentioned, the strike duration of \"24h\" is clear. I'll format the dates as 'yyyy-MM-dd HH:mm:ss'.",
+    "tokens": {
+      "input": 1405,
+      "output": 1495,
+      "total": 2900
+    }
+  }
+}

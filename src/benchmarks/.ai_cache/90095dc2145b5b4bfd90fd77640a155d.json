@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-20 00:00:00",
+      "endDate": "2025-06-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 25850,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000612,
+      "outputCost": 0.0006036,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0006648
+    },
+    "hash": "90095dc2145b5b4bfd90fd77640a155d",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_24h_giorno_venerdi_20_giugno_2025.html",
+    "thoughts": "**Extracting strike details**\n\nI need to output JSON based on the strike extraction schema. The document indicates a new strike on June 20, 2025, which is confirmed by the text mentioning a 24-hour strike in line with a national action. It highlights the guaranteed service times, from 05:30-08:30 and 16:30-19:30, but notes that service depends on worker participation. So, it looks like this is a national strike, and the location code will be null.",
+    "tokens": {
+      "input": 1224,
+      "output": 1509,
+      "total": 2733
+    }
+  }
+}

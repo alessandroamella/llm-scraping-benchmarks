@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-01-09 21:00:00",
+      "endDate": "2026-01-10 21:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5770,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.003494,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.000618,
+      "cachedCost": 0.00019173,
+      "totalCost": 0.00442673
+    },
+    "hash": "d5f107507d4bc706ccecd382d9095463",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2026-1-9-sciopero-nazionale-del-trasporto.html",
+    "thoughts": "**Analyzing Strike Information from HTML**\n\nOkay, let's break this down. The task is clear: I need to pull strike information from this HTML and output it as JSON. The key fields are `isStrike` (boolean) and `strikeData` which is an object containing `startDate`, `endDate`, `locationType`, and potentially `locationCodes` or `guaranteedTimes`.\n\nThe HTML content appears to describe an upcoming strike. The title gives me a good starting point: \"SCIOPERO NAZIONALE DEL TRASPORTO FERROVIARIO,\" which translates to \"National Railway Transport Strike.\" Perfect!\n\nI've got the text \"Dalle ore 21:00 di venerdì 9 gennaio alle ore 21:00 di sabato 10 gennaio 2026 è stato indetto uno sciopero del personale del Gruppo FS Italiane, Italo e Trenord.\" I can translate this to: \"From 9 PM on Friday, January 9th to 9 PM on Saturday, January 10th, 2026, a strike has been called for the personnel of the FS Italiane Group, Italo, and Trenord.\"\n\nNow, let's parse the dates and times. \"Venerdì 9 gennaio 2026, 21:00\" translates directly to Friday, January 9, 2026, at 9 PM (2026-01-09 21:00:00). Similarly, \"Sabato 10 gennaio 2026, 21:00\" is Saturday, January 10, 2026, at 9 PM (2026-01-10 21:00:00).\n\nThe scope is clearly \"NAZIONALE\" (National), which is essential to determine the `locationType`. There's no mention of guaranteed times in the text, which is fine, as it's optional.\n\nSo, I can confidently set `isStrike` to `true` because it is *upcoming*. My `strikeData` object looks like this:\n\n*   `startDate`: \"2026-01-09 21:00:00\"\n*   `endDate`: \"2026-01-10 21:00:00\"\n*   `locationType`: \"NATIONAL\"\n*   `locationCodes`: No, omitted, as per the requirements for NATIONAL events.\n\nWith this, I've got everything I need to construct the correct JSON output. Done!\n\n\n",
+    "tokens": {
+      "input": 13976,
+      "output": 82,
+      "total": 14470
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 09:00:00",
+      "endDate": "2024-12-13 13:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8254,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.001974,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.0004785,
+      "cachedCost": 0,
+      "totalCost": 0.002601
+    },
+    "hash": "0b0d705d3753c527cebd95e6d32ebbe3",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_4_ore_del_13_dicembre_2024.html",
+    "thoughts": "**Analyzing the EAV Strike Notice**\n\nOkay, let's break this down. My primary task here is to analyze this EAV (Campania) strike notice and determine if it signifies an upcoming strike. If it does, I need to extract the relevant details and structure them into a valid JSON object according to a predefined schema. I need to be precise, as even the slightest error could lead to incorrect data representation.\n\nThe headline gives me a good starting point: \"Linee Vesuviane: Avviso di sciopero di 4 ore del 13 dicembre 2024\". Straightforward – it's a Linee Vesuviane notice and there is an announced strike.\n\nI see the date immediately: December 13, 2024. Next, the time frame: 09:00 to 13:00. These are the core parameters, and they must be accurately extracted.\n\nThe document states this is an *avviso* – a notice – so I can confidently mark `isStrike` as `true`. It's clearly a pre-emptive strike announcement.\n\nThe region is Campania (15). I’ll be sure to include this.\n\nNow, for guaranteed services. The document mentions \"prime partenze dopo lo sciopero\" (first departures after the strike) and \"ultime partenze prima dello sciopero\" (last departures before the strike), which indicates that specific train times are guaranteed. However, the schema might require me to report this as \"guaranteed time bands\" ranges like \"06:00-09:00\". However, it does not. Since there is no formal range like this, but just specific train times, I'll review if `guaranteedTimes` is optional. Since it is optional, I will not include a guaranteed time band, as this is more akin to an early morning/evening \"block\". Instead, these are very specific times, and that will be omitted.\n\nUltimately, I will aim to craft a JSON object capturing these key data points: the strike's occurrence, date, time, region, and, where applicable, any guaranteed services that are more generic, rather than specific.\n\n\n",
+    "tokens": {
+      "input": 7896,
+      "output": 99,
+      "total": 8314
+    }
+  }
+}

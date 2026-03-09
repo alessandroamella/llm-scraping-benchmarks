@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6478,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005245,
+      "outputCost": 0.0001268,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00017925
+    },
+    "hash": "f436a51cb222f112fdd3d7460541d928",
+    "sourceFile": "sciopero_trasporto_pubblico_mattinata_ha_aderito_222_personale_atac.html",
+    "thoughts": "**Evaluating strike information**\n\nI need to focus on extracting the right JSON format for the strike announcement. The Italian article talks about public transport participation in a strike, noting 22.2% of Atac staff participated in the morning. It seems like this is about a current or past strike rather than an announcement for a future one. So, it looks like I should set isStrike to false since it’s not about an upcoming strike. I'll return: {\"isStrike\": false}.",
+    "tokens": {
+      "input": 1049,
+      "output": 317,
+      "total": 1366
+    }
+  }
+}

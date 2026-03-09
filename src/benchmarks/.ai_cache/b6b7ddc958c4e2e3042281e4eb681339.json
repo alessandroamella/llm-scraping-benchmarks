@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:01:00",
+      "endDate": "2025-12-12 23:59:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "04",
+        "05"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6624,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0002405,
+      "outputCost": 0.000159,
+      "thinkingCost": 0.0006045,
+      "cachedCost": 0,
+      "totalCost": 0.001004
+    },
+    "hash": "b6b7ddc958c4e2e3042281e4eb681339",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-12-12-sciopero-del-personale-di-sad-.html",
+    "thoughts": "**Strike Announcement Analysis**\n\nOkay, let's break this down. My task is to verify if this input constitutes a strike announcement and then extract the key details into a structured format. The input is indeed a strike announcement; the language is clearly indicating an impending labor action for both SAD and Trentino Trasporti. I'm seeing it's scheduled for December 12th, 2025.\n\nI've gone through the checklist of constraints.  JSON format? Check. `isStrike` boolean? Check. Date format `yyyy-MM-dd HH:mm:ss`? Check.  Region codes (ISTAT 2-digit)? Yep, and I know Trentino-Alto Adige is 04 and Veneto is 05, so those are represented correctly. `locationType`? Present.  No extraneous text or comments to filter out. Good.\n\nThe announcement specifies different end times for each company, which requires careful handling given the schema constraints. SAD's strike ends at 21:00, while Trentino Trasporti's ends at 23:59 on the same day. Since I'm limited to a single `endDate` in the schema, I need to represent the broadest impact. Therefore, I'll take the end time for the latter, giving me an overall end time of 23:59:00. The start time is straightforward, 00:01:00 on the specified date.\n\nSo, here's my interpretation: Start: 2025-12-12 00:01:00. End: 2025-12-12 23:59:00. The location type would be \"REGIONAL,\" and the location codes would be a list containing both \"04\" and \"05.\" No guaranteed service times were explicitly mentioned in the input text, so I will mark that as None.\n\n\n",
+    "tokens": {
+      "input": 962,
+      "output": 106,
+      "total": 1471
+    }
+  }
+}

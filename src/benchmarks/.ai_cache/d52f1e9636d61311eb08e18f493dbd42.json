@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5061,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005175,
+      "outputCost": 0.0001112,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00016295
+    },
+    "hash": "d52f1e9636d61311eb08e18f493dbd42",
+    "sourceFile": "aggiornamento_sciopero_riaperta_stazione_ponte_lungo.html",
+    "thoughts": "**Processing strike information**\n\nI need to output JSON in the specified format for strike extraction. The document content is in Italian and is saying, \"Update on strike: Ponte Lungo station reopened.\" It provides a publication date and mentions that the station has reopened, indicating it’s not about an upcoming strike. Since it seems to be an update on a past strike situation, I’ll keep isStrike as false and ensure I format the JSON correctly without extra fields or whitespace.",
+    "tokens": {
+      "input": 1035,
+      "output": 278,
+      "total": 1313
+    }
+  }
+}

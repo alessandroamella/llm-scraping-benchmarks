@@ -1,0 +1,41 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-24 00:00:00",
+      "endDate": "2025-02-24 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:03-06:03",
+        "07:47-07:47",
+        "17:27-17:27",
+        "20:30-20:30",
+        "05:10-05:10",
+        "06:21-06:21",
+        "13:13-13:13",
+        "17:21-17:21"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21813,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006805,
+      "outputCost": 0.0007884,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00085645
+    },
+    "hash": "17887c62bd662c4c68280ae5c492de9a",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_24h_lunedi_24_febbraio_2025.html",
+    "thoughts": "**Extracting strike information**\n\nI need to output JSON for the strike extraction based on the specified schema. The document indicates an upcoming strike on February 24, 2025, announced by O.S. USB as a 24-hour national strike. It outlines the hours of guaranteed service during this period. The start date should be set to \"2025-02-24 00:00:00\" and the end date to \"2025-02-24 23:59:59\" to reflect the 24-hour duration correctly.",
+    "tokens": {
+      "input": 1361,
+      "output": 1971,
+      "total": 3332
+    }
+  }
+}

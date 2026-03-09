@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-09-22 00:00:00",
+      "endDate": "2025-09-22 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 17009,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003407,
+      "outputCost": 0.0007608,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0011015
+    },
+    "hash": "77656266a901405678942ba81b325dc6",
+    "sourceFile": "linee_automobilistiche_avviso_di_sciopero_generale_nazionale_lunedi_22_settembre_2025.html",
+    "thoughts": "**Determining strike details**\n\nI need to output JSON based on the defined strike extraction format. The document indicates a general national strike on September 22, 2025, which means isStrike should be true because it’s an announcement of an upcoming event. I need to extract details like start date, end date, location type, and any guaranteed times. However, I’m uncertain about the times, as it mentions 23 hours for traveling staff, which is a bit confusing.",
+    "tokens": {
+      "input": 6814,
+      "output": 1902,
+      "total": 8716
+    }
+  }
+}

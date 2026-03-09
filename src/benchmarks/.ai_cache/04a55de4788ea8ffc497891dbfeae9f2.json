@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-24 00:00:00",
+      "endDate": "2025-02-24 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 26094,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00053755,
+      "outputCost": 0.0007644,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00130195
+    },
+    "hash": "04a55de4788ea8ffc497891dbfeae9f2",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_24h_lunedi_24_febbraio_2025.html",
+    "thoughts": "**Setting strike parameters**\n\nI see that the content mentions a 24-hour strike scheduled for February 24, 2025. I need to set the `isStrike` to true and fill in the `strikeData`. The format for `startDate` needs to include the specific time and timezone, reflecting that the strike will last from midnight to 11:59 PM. The text indicates service guaranteed times, so I’ll ensure those are aligned correctly. I need to clarify the exact start and end times as well.",
+    "tokens": {
+      "input": 10751,
+      "output": 1911,
+      "total": 12662
+    }
+  }
+}

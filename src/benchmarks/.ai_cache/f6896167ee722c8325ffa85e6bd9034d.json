@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-28 00:00:00",
+      "endDate": "2025-01-28 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8625,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000158,
+      "outputCost": 0.0001395,
+      "thinkingCost": 0.001359,
+      "cachedCost": 0,
+      "totalCost": 0.0016565
+    },
+    "hash": "f6896167ee722c8325ffa85e6bd9034d",
+    "sourceFile": "eav_informa_sciopero_di_4_ore_del_28_01_2025.html",
+    "thoughts": "**Strike Analysis: EAV Srl Announcement**\n\nOkay, so I've received an EAV Informa update concerning a strike on January 28, 2025. My primary goal is to extract pertinent data about this strike and format it.\n\nThe source explicitly mentions a \"Sciopero di 4 ore del 28/01/2025.\" This is straightforward: It's a strike, that's certain, so `isStrike` is `true`. The text confirms the strike but notes that substitute bus services will *not* be affected. Regionally, this applies to Campania (code 15).\n\nNow to construct the `strikeData` object. I am careful because I need `startDate` and `endDate`. The text says \"Sciopero di 4 ore\". There's no specific start or end time. Since I'm missing time information, I have to be careful. The format I must use requires the `yyyy-MM-dd HH:mm:ss` format. I have to work within this constraint and use the full day if I can't find times. I am used to this.\n\nTherefore, for the start date, it is `2025-01-28 00:00:00`. Since there are only 4 hours, and no specified hours, I'm going to set an end date. Often when this situation occurs, I will represent the whole day. Thus, the end date will be `2025-01-28 23:59:59`. The schema also requires `locationType`, which is \"REGIONAL\" given the reference to Campania, and `locationCodes` is `[\"15\"]`. Since there are no guaranteed times specified, I'll omit that field. My understanding is that, if there's no specified time range, I can fill the whole day in.\n\nI've also re-confirmed against the provided JSON schema to ensure adherence to formatting rules and data types. My final output has to use that format.\n\n\n",
+    "tokens": {
+      "input": 632,
+      "output": 93,
+      "total": 1631
+    }
+  }
+}

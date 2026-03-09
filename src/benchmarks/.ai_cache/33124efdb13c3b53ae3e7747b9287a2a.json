@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4722,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0001455,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000252,
+      "cachedCost": 0,
+      "totalCost": 0.0004125
+    },
+    "hash": "33124efdb13c3b53ae3e7747b9287a2a",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_279.html",
+    "thoughts": "**Analyzing the Public Transport Strike Information**\n\nOkay, so I've got this news article detailing the participation rate in an Atac public transport strike in Rome: 27.9%. My immediate task is to figure out if this is a heads-up about a *potential* strike, or if it's reporting on the *actual* level of participation *after* the strike has occurred. I need to nail down whether this is a pre-strike announcement or a post-event analysis.\n\nBased on my established rules, if the information details \"adherence\" or \"participation\" (like the word \"adesione\" here), it's looking back – it's reporting on something that *already happened*. The article explicitly states, \"L’adesione del personale Atac allo sciopero del trasporto pubblico di oggi è stata pari al 27,9%.\" That \"è stata\" (was) pretty much seals the deal. It's retrospective. Therefore, I can confidently set `isStrike` to `false`.\n\nSo, the output is `{\"isStrike\": false}`. Case closed. This isn't about an upcoming strike; it's a post-event report.\n\n\n",
+    "tokens": {
+      "input": 582,
+      "output": 10,
+      "total": 760
+    }
+  }
+}

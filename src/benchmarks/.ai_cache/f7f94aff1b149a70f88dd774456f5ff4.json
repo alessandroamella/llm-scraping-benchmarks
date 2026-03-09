@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-01-09 21:00:00",
+      "endDate": "2026-01-10 21:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8320,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00022875,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.0009735,
+      "cachedCost": 0,
+      "totalCost": 0.00138675
+    },
+    "hash": "f7f94aff1b149a70f88dd774456f5ff4",
+    "sourceFile": "Locandina sciopero 9 10 gennaio 2026.pdf",
+    "thoughts": "**Strike Announcement Analysis**\n\nOkay, let's break this down. My task is to analyze this text and determine if it's a strike announcement. If it is, I need to extract the relevant details and format them into a single JSON object. The input text is: \"SCIOPERO NAZIONALE DEL TRASPORTO FERROVIARIO PERSONALE DEL GRUPPO FS E TRENORD Dalle ore 21:00 di venerdì 9 alle ore 21:00 di sabato 10 gennaio 2026...\"\n\nFirst, the key phrase \"SCIOPERO NAZIONALE\" tells me immediately that we have a national strike, so `isStrike` is definitely `true`. Next, I'll extract the start and end dates from \"Dalle ore 21:00 di venerdì 9 alle ore 21:00 di sabato 10 gennaio 2026\". Converting these to the desired `yyyy-MM-dd HH:mm:ss` format, I get a `startDate` of \"2026-01-09 21:00:00\" and an `endDate` of \"2026-01-10 21:00:00\".\n\nThe scope is clearly \"NAZIONALE\" (National), so `locationType` will be \"NATIONAL.\" Now, for the guaranteed services, the text mentions \"feriali dalle ore 6:00 alle ore 9:00 e dalle ore 18:00 alle ore 21:00\". Since the strike spans Friday and Saturday, those times apply. So, the `guaranteedTimes` should be [\"06:00-09:00\", \"18:00-21:00\"].\n\nFinally, because it's a national strike, I don't need to include `locationCodes`.\n\nTherefore, the final output JSON should contain: `isStrike: true` and `strikeData` with all the collected information. I've successfully identified all the required fields:  `startDate`, `endDate`, `locationType`, and `guaranteedTimes`, and all are in the expected formats.\n\n\n",
+    "tokens": {
+      "input": 915,
+      "output": 123,
+      "total": 1687
+    }
+  }
+}

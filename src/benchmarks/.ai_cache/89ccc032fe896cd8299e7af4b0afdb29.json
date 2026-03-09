@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7781,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00055,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.000621,
+      "cachedCost": 0,
+      "totalCost": 0.001381
+    },
+    "hash": "89ccc032fe896cd8299e7af4b0afdb29",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_24_ore_venerdi_13_dicembre_2024.html",
+    "thoughts": "**Analyzing the Vesuviane Strike Announcement**\n\nOkay, let's break this down. My initial source is an announcement regarding a 24-hour strike affecting the EAV \"Linee Vesuviane\" on December 13th, 2024. The location is specifically Campania, which is region code \"15,\" so I can represent the location data as `locationCodes`: `[\"15\"]`, with a `locationType` of `REGIONAL`.\n\nThis is confirmed as a strike. I've got the essential information: the `isStrike` boolean is `true`. The strike's duration covers the entire day; therefore, `startDate` is \"2024-12-13 00:00:00\" and the `endDate` is \"2024-12-13 23:59:59\" This date format is standard, so I can comfortably parse and work with it. The notification explicitly mentions guaranteed service times. The guaranteed times are \"05:30 alle ore 08:30\" and \"16:30 alle ore 19:30.\" I need to capture that as `guaranteedTimes` as an array: `[\"05:30-08:30\", \"16:30-19:30\"]`. And of course I must validate that they match the regular expression  `^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]-(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$`.\n\n\n",
+    "tokens": {
+      "input": 2200,
+      "output": 140,
+      "total": 2754
+    }
+  }
+}

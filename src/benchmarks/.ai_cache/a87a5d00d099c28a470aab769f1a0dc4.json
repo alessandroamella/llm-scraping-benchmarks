@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 09:00:00",
+      "endDate": "2024-12-13 13:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8855,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00192175,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.000987,
+      "cachedCost": 0,
+      "totalCost": 0.00303175
+    },
+    "hash": "a87a5d00d099c28a470aab769f1a0dc4",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_4_ore_del_13_dicembre_2024.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, here's the deal. My task is to extract the relevant strike information from this text and present it in a strict JSON format. No room for errors, so let's be precise. The input is an EAV announcement about a strike on December 13, 2024. The core of my goal is to determine if this is an upcoming strike and, if so, give the specifics: start/end dates, location, etc. The output has to be a very particular JSON format, no comments allowed, with a specified date format (`yyyy-MM-dd HH:mm:ss`) and following the predetermined schema.\n\nAlright, here's what I've got: The headline reads \"Linee Suburbane: Avviso di sciopero di 4 ore del 13 dicembre 2024\" which translates to \"Suburban Lines: Notice of 4-hour strike on December 13, 2024.\" The content reads something like \"the national general strike of 24 hours proclaimed for the day December 13, 2024... has been reduced to 4 hours, from 09:00 to 13:00.\" Okay, even though it's a *reduced* strike, it's definitely an upcoming strike. The announcement confirms the timing. So, `isStrike` is definitely `true`.\n\nNow for the details. The start time is 2024-12-13 09:00:00. The end time is 2024-12-13 13:00:00. Now for the location. It says \"sciopero generale nazionale,\" which means \"national general strike.\" I need to be careful here... Schema says if `locationType` is `NATIONAL`, `locationCodes` MUST BE OMITTED. Hold on, let's re-read the sentence. Yep, it states the strike is a reduction of the \"national general strike\". So, `locationType` is definitely \"NATIONAL\".\n\nOne more re-reading of the prompt... right, it says \"Analyze the following content regarding a possible strike from \"EAV\" (the public transport company of Campania (15))\". The strike is national, meaning I should set the `locationType` as \"NATIONAL\".\n\nSo, to recap, I need:\n\n*   `isStrike`: true\n*   `strikeData`:\n    *   `startDate`: \"2024-12-13 09:00:00\"\n    *   `endDate`: \"2024-12-13 13:00:00\"\n    *   `locationType`: \"NATIONAL\"\n\n    *   `guaranteedTimes`: The text mentions the start/end times of the strike but not guaranteed time intervals. Since it has to be an array of \"HH:mm-HH:mm\" I will omit it.\n\nThat should be the JSON structure I produce. That's it, I think I have all the details.\n\n\n",
+    "tokens": {
+      "input": 7687,
+      "output": 82,
+      "total": 8427
+    }
+  }
+}

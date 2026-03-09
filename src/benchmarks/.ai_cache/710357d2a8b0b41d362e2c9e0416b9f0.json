@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8460,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0004826,
+      "outputCost": 0.0001448,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0006274
+    },
+    "hash": "710357d2a8b0b41d362e2c9e0416b9f0",
+    "sourceFile": "sciopero_trasporto_pubblico_attive_linee_della_metropolitana.html",
+    "thoughts": "**Determining strike status**\n\nI need to output JSON based on the information I've got from the content, which is in Italian. The document mentions \"Sciopero del trasporto pubblico\" and indicates it's an ongoing strike with real-time updates. It also states that services are running without limitations. So, since this is clearly describing an ongoing strike, I realize I should set `isStrike` to false based on the instructions. I’ll go with the output: `{\"isStrike\": false}`.",
+    "tokens": {
+      "input": 9652,
+      "output": 362,
+      "total": 10014
+    }
+  }
+}

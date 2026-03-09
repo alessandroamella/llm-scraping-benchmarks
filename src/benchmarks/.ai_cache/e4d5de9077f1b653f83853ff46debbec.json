@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-20 00:00:00",
+      "endDate": "2025-06-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 16346,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007035,
+      "outputCost": 0.0004848,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00055515
+    },
+    "hash": "e4d5de9077f1b653f83853ff46debbec",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_24h_venerdi_20_giugno_2025.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to output JSON indicating whether there's a strike, which will be true. The strike data needs information like start date, end date, location type, and guaranteed service times. The announcement states there’s a national 24-hour strike on June 20, 2025, proclaimed by USB. It mentions guaranteed service between 5:30-8:30 AM and 4:30-7:30 PM. Since it’s a nationwide strike, it's important to categorize the location as national.",
+    "tokens": {
+      "input": 1407,
+      "output": 1212,
+      "total": 2619
+    }
+  }
+}

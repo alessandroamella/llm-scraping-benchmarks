@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-01-09 21:00:00",
+      "endDate": "2026-01-10 21:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 16910,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000573,
+      "outputCost": 0.0004204,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0004777
+    },
+    "hash": "721c474e16b9640234085f30cc2e772b",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2026-1-9-sciopero-nazionale-del-trasporto.html",
+    "thoughts": "**Extracting strike data**\n\nI'm looking at a piece of content in Italian regarding a national strike announcement: \"SCIOPERO NAZIONALE DEL TRASPORTO FERROVIARIO,\" set for January 9-10, 2026. The specifics say it's from 9 PM Friday to 9 PM Saturday. Since it's clearly announcing a strike, I’ll mark isStrike as true. Now, I need to extract the necessary data: start and end dates, location type, location codes, and guaranteed times, confirming it aligns with the national standard.",
+    "tokens": {
+      "input": 1146,
+      "output": 1051,
+      "total": 2197
+    }
+  }
+}

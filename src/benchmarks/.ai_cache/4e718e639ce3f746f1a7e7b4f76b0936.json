@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-09-06 03:00:00",
+      "endDate": "2023-09-07 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8638,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00239525,
+      "outputCost": 0.000189,
+      "thinkingCost": 0.0009015,
+      "cachedCost": 0,
+      "totalCost": 0.00348575
+    },
+    "hash": "4e718e639ce3f746f1a7e7b4f76b0936",
+    "sourceFile": "strike-detail-mercoled--6-settembre--sciopero-dei-treni-regional.html",
+    "thoughts": "**Analyzing the Trenord Strike Announcement**\n\nOkay, let's break this down. I've got an HTML snippet from `trenord.it` here. My objective is crystal clear: figure out if this is a strike announcement and, if so, pull out the key details in a clean JSON format. The crucial thing is the timing; I need to differentiate between an actual upcoming strike versus cancellations, participation details, or real-time status updates. In this case, \"isStrike: true\" is only valid for *upcoming* strikes.\n\nLooking at the content, the title immediately gives it away: \"6 settembre, sciopero dei treni regionali\" (September 6th, regional train strike). Perfect. Digging deeper into the text, it explicitly states: \"Dalle ore 3 di mercoledì 6 alle ore 2 di giovedì 7 settembre le organizzazioni sindacali... hanno indetto uno sciopero\" – the strike is from 3 AM Wednesday, September 6th to 2 AM Thursday, September 7th. That's a good start. The text mentions that it was written on September 4, 2023.\n\nI've got a definite date, September 6th. The meta data tells me the document was published on Monday 04/09/2023. The guaranteed times are also listed: \"Negli orari 6-9 e 18-21\", which translates to 6-9 AM and 6-9 PM. The location is Trenord, and it's regional, specifically for the Lombardia region (code 03).\n\nSo, is it an *upcoming* strike? Yes, at the time the information was published on September 4, it *was* an upcoming strike, confirmed! That's what I needed.\n\nNow, let's formulate the JSON payload:\n\n*   `startDate`: 2023-09-06 03:00:00 (Wednesday, 3 AM)\n*   `endDate`: 2023-09-07 02:00:00 (Thursday, 2 AM)\n*   `locationType`: REGIONAL\n*   `locationCodes`: \\[\"03\"] (Lombardia's code)\n*   `guaranteedTimes`: \\[\"06:00-09:00\", \"18:00-21:00\"]\n\nAnd, the crucial conclusion: `isStrike` = true.\n\nFinally, I'll run through the JSON schema compliance checks to make sure everything's in order: The dates are in the correct `yyyy-MM-dd HH:mm:ss` format; the `locationType` matches the enum; `locationCodes` is an array with the correct code \"03\"; the guaranteed times are formatted as `HH:mm-HH:mm`. Everything checks out.\n\n\n",
+    "tokens": {
+      "input": 9581,
+      "output": 126,
+      "total": 10308
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-28 08:20:00",
+      "endDate": "2025-01-28 12:20:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "08:20-12:20"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19274,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00009005,
+      "outputCost": 0.0005004,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00059045
+    },
+    "hash": "87244f1e1aff1bbf505f81e7e0e4e939",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_4_ore_martedi_28_gennaio_2025.html",
+    "thoughts": "**Determining strike data**\n\nI need to output JSON according to a specific schema. The content mentions an upcoming strike in Italian, indicating a true “isStrike” status. It's set for January 28, 2025, from 08:20 to 12:20, motivated by safety concerns. I’ll extract details for \"strikeData\" like startDate, endDate, and locationType. The strike starts on 2025-01-28 at 08:20:00 and ends at 12:20:00. I note \"sciopero aziendale,\" so the locationType needs clarification: should it be REGIONAL or NATIONAL?",
+    "tokens": {
+      "input": 1801,
+      "output": 1251,
+      "total": 3052
+    }
+  }
+}

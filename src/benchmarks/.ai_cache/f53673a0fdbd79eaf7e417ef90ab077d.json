@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-09-22 00:00:00",
+      "endDate": "2025-09-22 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5675,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00036025,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.0006015,
+      "cachedCost": 0,
+      "totalCost": 0.00114625
+    },
+    "hash": "f53673a0fdbd79eaf7e417ef90ab077d",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_di_24h_giorno_22_settembre_2025.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, here's the deal. I've just processed an announcement, specifically \"Avviso di sciopero generale nazionale lunedì 22 settembre 2025,\" which, as my parsing confirms, is a national strike declaration. EAV Campania is the involved company, but the scope is definitely national. The announcement explicitly states a strike for September 22, 2025, lasting pretty much the entire day – 23 out of 24 hours. They're guaranteeing some service windows, between \"05:30-08:30\" and \"16:30-19:30\".\n\nI need to properly structure this information to be machine-readable. So, `isStrike` is definitely `true`. For the strike details, I'm setting `strikeData`: `startDate` is 2025-09-22 00:00:00 and `endDate` is 2025-09-22 23:59:59 - I standardized those to indicate a full day strike, of course. `locationType` is set to \"NATIONAL\" and, as expected, because it's a national strike, I don't need any `locationCodes`. Guaranteed times are listed in `guaranteedTimes` as [\"05:30-08:30\", \"16:30-19:30\"]. That should properly reflect this strike in a machine-readable format. I've validated that the date formats are correct and that the structure fits what I need.\n\n\n",
+    "tokens": {
+      "input": 1441,
+      "output": 123,
+      "total": 1965
+    }
+  }
+}

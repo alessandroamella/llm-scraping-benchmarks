@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6588,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00262475,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000291,
+      "cachedCost": 0,
+      "totalCost": 0.00293075
+    },
+    "hash": "78b96fdb81f218583f983a16d0a84954",
+    "sourceFile": "sciopero_adesione_personale_atac_185.html",
+    "thoughts": "**Analyzing the Text for a Strike Announcement**\n\nOkay, let's break this down. My task is to determine if this text announces an *upcoming* strike. The input is \"Sciopero, adesione personale Atac al 18,5% - Roma Servizi per la Mobilità\", along with a publication date of 17/11/2023, and a statement: \"L’adesione complessiva del personale Atac allo sciopero di oggi è stata pari al 18,5%.\"\n\nRight away, the phrasing \"sciopero di oggi\" – *today's* strike – is a key indicator. The text explicitly refers to a strike that *has already taken place*. Furthermore, the 17/11/2023 publication date confirms it’s reporting on a past event. It's quantifying the level of \"adesione,\" or participation, which strongly suggests that the strike is over and we're seeing post-event analysis.\n\nTherefore, because the text details adhesion to a completed strike, I must set the `isStrike` variable to `false`. This isn't an announcement, it's a post-mortem.\n\n\n",
+    "tokens": {
+      "input": 10499,
+      "output": 10,
+      "total": 10703
+    }
+  }
+}

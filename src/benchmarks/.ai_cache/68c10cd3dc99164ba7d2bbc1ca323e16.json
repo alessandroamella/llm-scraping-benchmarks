@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4548,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00014825,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0002745,
+      "cachedCost": 0,
+      "totalCost": 0.00043775
+    },
+    "hash": "68c10cd3dc99164ba7d2bbc1ca323e16",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_191.html",
+    "thoughts": "**Analyzing the Reported Strike Participation**\n\nOkay, here's what I'm thinking. I've been given some content: \"Sciopero del trasporto pubblico, adesione personale Atac al 19,1%... L’adesione del personale Atac allo sciopero del trasporto pubblico di oggi, rilevata in mattinata, è stata pari al 19,1%.\" Let's break this down from a data perspective.\n\nFirst, I need to understand if this is *predictive* - announcing a future strike - or *descriptive* - reporting on participation in an existing or completed strike. The key here is the word \"adesione\" (participation) and the phrase \"di oggi\" (today). Since they're talking about *participation* that has been *measured* \"today,\" it's clear this is not a heads-up about an upcoming disruption. It's a report on what *already* happened. Therefore, I can confidently set my `isStrike` variable to `false`. This is post-event data.\n\n\n",
+    "tokens": {
+      "input": 593,
+      "output": 10,
+      "total": 786
+    }
+  }
+}

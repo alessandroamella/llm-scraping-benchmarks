@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6226,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000509,
+      "outputCost": 0.0000888,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0001397
+    },
+    "hash": "d31e79217ce4ed6e24bd0f84832f2fa8",
+    "sourceFile": "sciopero_generale_adesione_personale_atac_al_259.html",
+    "thoughts": "**Formatting JSON response**\n\nI need to prepare a JSON output based on the strike extraction requirements. The information is about a general strike participation, not about announcing a new one, with a stated attendance of 25.9%. Thus, I conclude that \"isStrike\" should be false. \n\nI’ll make sure to adhere strictly to the guidelines and avoid any extra fields. The JSON will simply be:\n{\"isStrike\": false} \n\nI’ll ensure to follow the exact formatting without any commentary.",
+    "tokens": {
+      "input": 1018,
+      "output": 222,
+      "total": 1240
+    }
+  }
+}

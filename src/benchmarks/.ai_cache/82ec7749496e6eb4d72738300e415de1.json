@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-03-19 09:00:00",
+      "endDate": "2025-03-19 17:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7069,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00138875,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.000858,
+      "cachedCost": 0,
+      "totalCost": 0.00236975
+    },
+    "hash": "82ec7749496e6eb4d72738300e415de1",
+    "sourceFile": "strike-detail-mercoled--19-marzo-dalle-ore-9-alle-ore-17-scioper.html",
+    "thoughts": "**My Analysis of the Strike Information**\n\nOkay, let's break this down. My task is clear: I need to extract strike information from the provided text and present it as a single JSON object. The constraints are straightforward, and I need to adhere to them precisely. First, I need a boolean `isStrike` field. Then, if it's a strike, I extract several details: `startDate`, `endDate`, `locationType`, `locationCodes`, and potentially `guaranteedTimes`. The date format must be 'yyyy-MM-dd HH:mm:ss', time ranges for guarantees as 'HH:mm-HH:mm', and location codes are 2-digit ISTAT codes *only* if the strike is regional; national strikes omit this. Critically, the output *must* be valid JSON; no extraneous text is allowed.\n\nLooking at the text, \"Mercoledì 19 marzo dalle ore 9 alle ore 17 Sciopero nazionale del trasporto ferroviario,\" I see it's an announcement about a national rail strike. Based on the header, and context of the article being dated \"lunedì 17/03/2025\" the date of the strike must be in 2025. \"Mercoledì 19 marzo\" confirms the day and date, and the time is clearly from 09:00 to 17:00. This is definitely a strike, so `isStrike` is true.\n\nLet's start populating the fields. `isStrike`: `true`. The `startDate` is \"2025-03-19 09:00:00\". `endDate` is \"2025-03-19 17:00:00\". The location is \"nazionale,\" so `locationType` is \"NATIONAL\". Since it's national, I omit `locationCodes`.\n\nThe trickier part is the `guaranteedTimes`. The text mentions that trains departing *before* 9:00 will arrive by 10:00, and no specific return time is given, but it seems operations will also resume after 17:00. However, the instructions want time ranges in the format \"HH:mm-HH:mm\". The provided text doesn't explicitly provide the standard Italian guarantee windows, which are usually defined by law (typically 06-09 and 18-21). While the text *implies* service is available outside the strike period, I can't definitively create a `guaranteedTimes` array in the requested format from the given information. To be absolutely compliant, I'll omit this field.\n\nTherefore, the final output will be a JSON object containing the `isStrike`, `startDate`, `endDate`, and `locationType`.\n\n\n",
+    "tokens": {
+      "input": 5555,
+      "output": 82,
+      "total": 6209
+    }
+  }
+}

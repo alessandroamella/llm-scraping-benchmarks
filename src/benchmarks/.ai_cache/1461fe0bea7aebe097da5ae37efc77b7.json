@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-05-11 00:00:00",
+      "endDate": "2025-05-11 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9562,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00261275,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.000837,
+      "cachedCost": 0,
+      "totalCost": 0.00365975
+    },
+    "hash": "1461fe0bea7aebe097da5ae37efc77b7",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_24h_domenica_11_maggio_2025.html",
+    "thoughts": "**Analyzing the EAV Strike Announcement**\n\nOkay, so I've got this webpage from EAV, which I need to analyze. My main goal here is straightforward: figure out if this is an upcoming strike and, if it is, extract the relevant details into a clean JSON format. I'm focusing on those key elements: date, duration, location, and any guaranteed service times.\n\nFirst things first, the title, \"Linee Vesuviane: Avviso di Sciopero 24h domenica 11 maggio 2025,\" and the body text confirm it: the Or.S.A. union has called for a strike on May 11th, 2025. It's a full 24-hour strike. Now, since it's a 24-hour strike, I'll be pretty safe in assuming it covers the entire day, from midnight to just before the next midnight. I'll need to define it as starting at 00:00:00 and ending at 23:59:59.\n\nThe location is pretty clear; EAV operates in Campania. So, I need to get the ISTAT code for that region, which is 15. The provided text indicates that guaranteed times are from 05:30 to 08:30 and 16:30 to 19:30.\n\nNow, let's put it all together into that JSON format I need. Based on the information, here's the data structure I'm defining:\n\n*   `isStrike`: `true`\n*   `startDate`: `\"2025-05-11 00:00:00\"`\n*   `endDate`: `\"2025-05-11 23:59:59\"`\n*   `locationType`: `\"REGIONAL\"`\n*   `locationCodes`: `[\"15\"]`\n*   `guaranteedTimes`: `[\"05:30-08:30\", \"16:30-19:30\"]`\n\nThis looks clean and complete; I can validate that as a valid JSON object. There are no comments, no extra irrelevant text, which helps for automation. Looks like I have everything I need.\n\n\n",
+    "tokens": {
+      "input": 10451,
+      "output": 140,
+      "total": 11149
+    }
+  }
+}

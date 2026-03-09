@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-01-13 00:00:00",
+      "endDate": "2026-01-13 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 25484,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00052175,
+      "outputCost": 0.0005948,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00111655
+    },
+    "hash": "0f89f2283da8588f5ed2ab02715ed652",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2026-1-13-sciopero-nazionale-del-trasport.html",
+    "thoughts": "**Extracting strike data**\n\nThe \"In vigore\" date is January 13, 2026, and while the page may be published earlier, I can't rely solely on current information. It includes a note about a national strike, so I should set `isStrike` to true. I need to extract the strike data. The start date is unclear, but given the minimal service hours from 6:00-9:00 and 18:00-21:00, I’ll assume `startDate` is January 13, 2026, at midnight and `endDate` is later that day.",
+    "tokens": {
+      "input": 10435,
+      "output": 1487,
+      "total": 11922
+    }
+  }
+}

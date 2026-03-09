@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5576,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00048015,
+      "outputCost": 0.0001432,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00062335
+    },
+    "hash": "09da3910cfe5af87ffa79dbddd8abeaa",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_174.html",
+    "thoughts": "**Determining strike status**\n\nI need to output JSON according to the schema for the content provided in Italian. The document discusses \"Sciopero del trasporto pubblico, adesione personale Atac al 17,4%,\" and it was published on 15/12/2023. This page refers to the participation rate for an old national strike, not an upcoming one. Since this document does not announce a new strike, I'll mark isStrike as false according to the user's instruction about historical information.",
+    "tokens": {
+      "input": 9603,
+      "output": 358,
+      "total": 9961
+    }
+  }
+}

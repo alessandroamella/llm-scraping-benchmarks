@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21561,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000677,
+      "outputCost": 0.000486,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0005537
+    },
+    "hash": "880cd4cb7703617b2cb3c76f931b724d",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_generale_di_24h_per_venerdi_12_dicembre_2025.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to format a JSON response according to the specified schema for a strike extraction. The content is in Italian and announces a 24-hour general strike for December 12, 2025, by O.S. CGIL. The guaranteed service windows are between 05:30-08:30 and 16:30-19:30. It seems clear this is about an upcoming strike, with the start time set for December 12, 2025, from 00:00 to 24:00. So, I’ll set \"isStrike\" to true.",
+    "tokens": {
+      "input": 1354,
+      "output": 1215,
+      "total": 2569
+    }
+  }
+}

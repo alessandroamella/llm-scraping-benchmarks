@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8223,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00048065,
+      "outputCost": 0.0001552,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00063585
+    },
+    "hash": "3466c74389e73bad17aa541e7c77ba4e",
+    "sourceFile": "sciopero_trasporto_pubblico_mattinata_ha_aderito_222_personale_atac.html",
+    "thoughts": "**Processing strike data**\n\nI’m working on outputting JSON for a strike extraction schema and the content is in Italian. The header states that 22.2% of Atac personnel participated in a public transport strike this morning, dated 09/10/2023. It’s clear this report is about a strike that already occurred, not one that's upcoming. The guidelines specify that if the report concerns participation in a past strike, I should set isStrike to false. So, isStrike is indeed false.",
+    "tokens": {
+      "input": 9613,
+      "output": 388,
+      "total": 10001
+    }
+  }
+}

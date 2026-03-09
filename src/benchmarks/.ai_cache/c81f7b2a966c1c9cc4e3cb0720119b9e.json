@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 09:00:00",
+      "endDate": "2024-12-13 13:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 16385,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00034545,
+      "outputCost": 0.000652,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00099745
+    },
+    "hash": "c81f7b2a966c1c9cc4e3cb0720119b9e",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_di_4_ore_del_13_dicembre_2024.html",
+    "thoughts": "**Extracting strike announcement details**\n\nI need to format the specified content in JSON, focusing on the Italian text announcing a four-hour strike on December 13, 2024. It informs that this is a national strike shortened to four hours, running from 09:00 to 13:00. It concludes by noting that services won't be guaranteed during this time. So, yes, it's clear that this is an announcement for an upcoming strike. I’ll ensure the JSON reflects that correctly.",
+    "tokens": {
+      "input": 6909,
+      "output": 1630,
+      "total": 8539
+    }
+  }
+}

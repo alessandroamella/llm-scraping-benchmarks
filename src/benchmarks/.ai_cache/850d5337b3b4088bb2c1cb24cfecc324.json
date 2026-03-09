@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-24 00:00:00",
+      "endDate": "2025-02-24 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7304,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00243825,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.0008535,
+      "cachedCost": 0,
+      "totalCost": 0.00347625
+    },
+    "hash": "850d5337b3b4088bb2c1cb24cfecc324",
+    "sourceFile": "eav_autolinee_avviso_di_sciopero_di_24_ore_lunedi_24_febbraio_2025.html",
+    "thoughts": "**Analyzing the EAV Strike Announcement**\n\nOkay, here's what I'm thinking as I process this EAV strike announcement. First, I have some HTML content, and my primary goal is to determine if this document is announcing a strike and, if so, extract specific details in the requested JSON format. The schema is clear: `isStrike`, and if true, then `strikeData` with `startDate`, `endDate`, `locationType`, `locationCodes` (only if regional), and `guaranteedTimes`.\n\nThe title clearly indicates a strike: \"EAV Autolinee - Avviso di sciopero...\".  The text confirms it; it mentions a strike for February 24, 2025. It also specifies \"sciopero nazionale\" (national strike), which is key. The text also includes the guaranteed times: \"dalle ore 05:30 alle ore 8:30 e dalle ore 16:30 alle ore 19:30\".\n\nTherefore, I'm confident that `isStrike` should be `true`.  The date is the 24th of February, 2025. Because it's a 24-hour strike, I'll set the `startDate` to 2025-02-24 00:00:00 and `endDate` to 2025-02-24 23:59:59. Given that \"sciopero nazionale\" is present, the `locationType` is definitely \"NATIONAL\". Now, since it's a national strike, I don't need `locationCodes` at all! I have to be careful with that detail, given the schema requirements.\n\nFinally, regarding the guaranteed times, I have to format them as specified in the schema. That translates to: `guaranteedTimes`: [\"05:30-08:30\", \"16:30-19:30\"].\n\nI've carefully extracted all the details, paying particular attention to the \"national\" scope, and formatted them according to the given requirements. All the data points fit into the schema and the JSON is valid. I'm ready to move on.\n\n\n",
+    "tokens": {
+      "input": 9753,
+      "output": 123,
+      "total": 10445
+    }
+  }
+}

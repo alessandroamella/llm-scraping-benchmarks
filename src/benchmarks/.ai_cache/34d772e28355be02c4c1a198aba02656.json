@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-20 00:00:00",
+      "endDate": "2025-06-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 27793,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003885,
+      "outputCost": 0.0007564,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0011449
+    },
+    "hash": "34d772e28355be02c4c1a198aba02656",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_24h_venerdi_20_giugno_2025.html",
+    "thoughts": "**Extracting strike data**\n\nI need to output JSON according to the `strike_extraction` schema, which includes fields like `isStrike` and `strikeData` if applicable. The document is an announcement for a 24-hour strike on June 20, 2025, affecting Linee Flegree, Linee Vesuviane, and Metropolitana. It notes service hours and guarantees, so `isStrike` should be true. I must gather `strikeData` like start and end dates, location types, and guaranteed times for the strike announcement.",
+    "tokens": {
+      "input": 7770,
+      "output": 1891,
+      "total": 9661
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 12693,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00022775,
+      "outputCost": 0.000189,
+      "thinkingCost": 0.000768,
+      "cachedCost": 0,
+      "totalCost": 0.00118475
+    },
+    "hash": "719dbcf59286ed0d50dae8278a53cd8b",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_di_24_ore_del_13_dicembre_2024_aggiornamento.html",
+    "thoughts": "**Strike Analysis: Servizio Autolinee - December 13, 2024**\n\nAlright, let's break this down. The input clearly states \"Servizio Autolinee: Avviso di sciopero di 24 ore del 13 dicembre 2024.\" My immediate goal is to confirm if this is a new strike announcement.\n\nThe title contains the key date: December 13th, 2024. Analyzing the text, particularly the phrase \"lo sciopero proclamato per domani 13 dicembre torna ad essere di 24 ore,\" confirms this is indeed an announcement about an *upcoming* strike for tomorrow, which is the 13th. The mention of it *returning* to 24 hours suggests there may have been a change or discussion about its duration.\n\nGiven the context of Autolinee (bus services), it's likely regional, and the text specifically mentions Campania. I double-checked; yes, Campania's ISTAT code is 15. The duration, 24 hours, is standard for Italian transport strikes and will likely cover the entire service day, from 00:00:00 to 23:59:59 on the 13th. The guaranteed times are detailed as \"dalle ore 05:30 alle ore 08:30 e dalle ore 16:30 alle ore 19:30\".\n\nTherefore, I'm confident in extracting the following:\n\n*   `isStrike`: true\n*   `startDate`: 2024-12-13 00:00:00\n*   `endDate`: 2024-12-13 23:59:59\n*   `locationType`: \"REGIONAL\"\n*   `locationCodes`: [\"15\"]\n*   `guaranteedTimes`: [\"05:30-08:30\", \"16:30-19:30\"]\n\nAll the extracted data appears to be in the correct format and logically consistent based on my knowledge of Italian transport and strike announcements. The date format (yyyy-MM-dd HH:mm:ss) is fine. \"REGIONAL\" is the correct classification for the area, and \"15\" accurately represents Campania. The guaranteed times have been parsed correctly. So, all good.\n\n\n",
+    "tokens": {
+      "input": 911,
+      "output": 126,
+      "total": 1549
+    }
+  }
+}

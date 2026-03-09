@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-27 21:00:00",
+      "endDate": "2025-11-28 21:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5365,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00283375,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.0005775,
+      "cachedCost": 0,
+      "totalCost": 0.00353425
+    },
+    "hash": "eabec69efaca7063aba8bb4b915bb412",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-11-27-sciopero-nazionale-del-traspor.html",
+    "thoughts": "**My Analysis of the Strike Information**\n\nOkay, let's break this down. My task is crystal clear: I need to extract strike information from the given text and output it as clean, parsable JSON. No extraneous text, no comments – just the data. The core condition is the `isStrike` boolean; if it's `true`, then I absolutely must include the `strikeData` object. Date format has to be 'yyyy-MM-dd HH:mm:ss', which is easily handled.\n\nThe input is an announcement: \"SCIOPERO NAZIONALE DEL TRASPORTO FERROVIARIO,\" which screams \"National Railway Strike\" to me, and the specific dates are also provided: \"Dalle ore 21:00 di giovedì 27 novembre alle ore 21:00 di venerdì 28 novembre 2025.\"\n\nNow for the extraction. I see it starts at 21:00 on Thursday, November 27th, 2025, and ends at 21:00 on Friday, November 28th, 2025. That gives me:\n\n*   `startDate`: 2025-11-27 21:00:00\n*   `endDate`: 2025-11-28 21:00:00\n\nThe text explicitly mentions \"SCIOPERO NAZIONALE,\" therefore the `locationType` is definitely \"NATIONAL.\" There's nothing in the text about guaranteed service times, so that will remain null for now.\n\nGiven that, I'm confident `isStrike` should be `true`.\n\nNow let's build the `strikeData` object, based on the above information:\n\n*   `startDate`: \"2025-11-27 21:00:00\"\n*   `endDate`: \"2025-11-28 21:00:00\"\n*   `locationType`: \"NATIONAL\"\n*   `isStrike`: true\n\nDoes this match the schema I defined at the start? Yes. Is it valid JSON? Absolutely. Are the strings double-quoted, and the dates formatted correctly? Yes, and yes. Excellent. This should be a clean, valid output.\n\n\n",
+    "tokens": {
+      "input": 11335,
+      "output": 82,
+      "total": 11802
+    }
+  }
+}

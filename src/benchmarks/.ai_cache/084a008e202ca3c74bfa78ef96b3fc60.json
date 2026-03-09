@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-20 00:00:00",
+      "endDate": "2025-06-20 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8267,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00257225,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.0008235,
+      "cachedCost": 0,
+      "totalCost": 0.00360575
+    },
+    "hash": "084a008e202ca3c74bfa78ef96b3fc60",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_24h_venerdi_20_giugno_2025.html",
+    "thoughts": "**Strike Analysis: EAV Campania - June 20, 2025**\n\nOkay, let's break this down. My task is clear: identify and characterize a potential strike announcement for the EAV company in Campania. The input is an HTML content, which I've processed to extract relevant information. The core of this is a strike set for \"venerdì 20 giugno 2025,\" that's Friday, June 20th, 2025. It's explicitly described as a 24-hour strike.\n\nTherefore, `isStrike` is undeniably `true`. Now, for the critical details: `strikeData`. The start date, `startDate`, will be `2025-06-20 00:00:00`. The \"24 hours\" duration implies a full day of disruption. And, therefore, the end date, `endDate`, is `2025-06-20 23:59:59`. That feels solid, given the 24-hour time-span. The location is REGIONAL, coded as \"15\" for Campania. I double-check and am satisfied that this is accurate. The guaranteed service windows are specified as \"05:30-08:30\" and \"16:30-19:30\".\n\nThe format for `startDate` and `endDate` must be `yyyy-MM-dd HH:mm:ss`. The `locationType` is REGIONAL, and `locationCodes` is `[\"15\"]`. The guaranteed times, `guaranteedTimes`, are represented by `[\"05:30-08:30\", \"16:30-19:30\"]`.\n\nTo ensure accuracy, the date format \"venerdì 20 giugno 2025\" is confirmed, and the 24-hour duration dictates the start time at midnight and end time at 11:59 PM. All things considered, I've got a solid assessment of the impending strike.\n\n\n",
+    "tokens": {
+      "input": 10289,
+      "output": 140,
+      "total": 10978
+    }
+  }
+}
