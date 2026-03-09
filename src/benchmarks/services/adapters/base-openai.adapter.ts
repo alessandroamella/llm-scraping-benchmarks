@@ -66,13 +66,6 @@ export abstract class BaseOpenAiAdapter extends BaseAiAdapter {
     // Inject schema prompt
     const enrichedPrompt = `${prompt}\n\nRespond with a valid JSON object matching this schema: ${schemaString}`;
 
-    // before sending, debug print the enriched prompt if it contains a specific marker (e.g., "fileName" in options)
-    if (options.fileName) {
-      console.debug(
-        `Enriched prompt for file ${options.fileName}:\n${enrichedPrompt}`,
-      );
-    }
-
     const completion = await this.client.chat.completions.create({
       model: this.model,
       messages: [{ role: 'user', content: enrichedPrompt }],

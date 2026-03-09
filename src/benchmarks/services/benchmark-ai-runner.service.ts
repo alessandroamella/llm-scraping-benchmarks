@@ -148,6 +148,21 @@ export class BenchmarkAiRunnerService implements OnModuleInit {
     }
   }
 
+  private getCompanyContext(company: Company): string {
+    switch (company) {
+      case 'Trenord':
+        return 'the public transport company of Lombardia (03)';
+      case 'Trenitalia TPER':
+        return 'the public transport company of Emilia-Romagna (08)';
+      case 'EAV':
+        return 'the public transport company of Campania (15)';
+      case 'ATAC':
+        return 'the public transport company of Rome, Lazio (12)';
+      case 'Trenitalia':
+        return "Italy's national railway operator";
+    }
+  }
+
   // --- Main Entry Point ---
 
   async parseWithAi(
@@ -166,9 +181,12 @@ export class BenchmarkAiRunnerService implements OnModuleInit {
     );
     const adapter = this.getAdapter(model);
 
+    // Get the geographic context to help the LLM infer the right region code
+    const companyContext = this.getCompanyContext(sourceName);
+
     const getPromptFirstPart = (_provider: ProviderName) =>
       `You are a precise data extraction algorithm.
-Analyze the following content regarding a strike from "${sourceName}".
+Analyze the following content regarding a possible strike from "${sourceName}" (${companyContext}).
 
 IMPORTANT INSTRUCTIONS:
 1. Decide if this document is actually announcing a new/upcoming strike.
