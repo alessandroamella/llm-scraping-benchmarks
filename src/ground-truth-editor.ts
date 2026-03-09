@@ -5,17 +5,18 @@ import { PDFParse } from 'pdf-parse';
 import TurndownService from 'turndown';
 import { gfm } from 'turndown-plugin-gfm';
 
-// Load existing ground truth
-import { groundTruth as initialGroundTruth } from './benchmarks/data/ground-truth';
-
 // ⚠️ CHANGE THIS if your scraped HTML/PDF files are in a different directory
 const RAW_FILES_BASE_DIR = path.join(process.cwd(), 'benchmarks/data');
 const GROUND_TRUTH_PATH = path.join(
   process.cwd(),
-  './benchmarks/data/ground-truth-NEW.ts',
+  './benchmarks/data/ground-truth.json',
 );
 
-const inMemoryData = { ...initialGroundTruth };
+// Load existing ground truth from JSON
+// ignore ts error
+// @ts-expect-error
+const groundTruthJson = await Bun.file(GROUND_TRUTH_PATH).json();
+const inMemoryData = groundTruthJson;
 
 // ==========================================
 // 1. Extraction Logic (Copied from your service)
@@ -213,17 +214,11 @@ const server = Bun.serve({
 
         inMemoryData[company][filename] = data;
 
-        // Write back to ground-truth.ts file
-        const tsContent = `import { BenchmarkStrike } from '../schemas/benchmark-strike.schema';
-
-export type Company = keyof typeof groundTruth;
-
-/**
- * Map file names to their ground truth data for benchmark tests.
- */
-export const groundTruth = ${JSON.stringify(inMemoryData, null, 2)} satisfies Record<string, Record<string, BenchmarkStrike>>;
-`;
-        await Bun.write(GROUND_TRUTH_PATH, tsContent);
+        // Write back to ground-truth.json file
+        await Bun.write(
+          GROUND_TRUTH_PATH,
+          JSON.stringify(inMemoryData, null, 2),
+        );
         return Response.json({ success: true });
       },
     },

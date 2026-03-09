@@ -1,7 +1,5 @@
 # Web Scraping & LLMs - Benchmarks
 
-Made with [Bun](https://bun.sh/).
-
 ### To install dependencies:
 
 ```bash

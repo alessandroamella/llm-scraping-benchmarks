@@ -137,6 +137,31 @@ export class BenchmarkAiRunnerService implements OnModuleInit {
       const safeFileName = fileName.replace(/[^a-zA-Z0-9.-]/g, '_');
       const tracePath = path.join(dir, `${safeFileName}.trace.json`);
 
+      // Check if file already exists and compare (ignoring timestamp)
+      if (fs.existsSync(tracePath)) {
+        try {
+          const existingTrace: AiTrace = JSON.parse(
+            await readFile(tracePath, 'utf-8'),
+          );
+
+          // Compare traces without timestamp
+          const { timestamp: _, ...currentTrace } = trace;
+          const { timestamp: __, ...existingTraceWithoutTimestamp } =
+            existingTrace;
+
+          if (
+            JSON.stringify(currentTrace) ===
+            JSON.stringify(existingTraceWithoutTimestamp)
+          ) {
+            // Only difference is timestamp, skip write
+            return;
+          }
+        } catch (e) {
+          this.logger.warn('Failed to read existing trace for comparison', e);
+          // Continue and overwrite if we can't read/compare
+        }
+      }
+
       // Fire and forget write
       fs.promises
         .writeFile(tracePath, JSON.stringify(trace, null, 2))
@@ -192,6 +217,7 @@ IMPORTANT INSTRUCTIONS:
 1. Decide if this document is actually announcing a new/upcoming strike.
    - If it is a cancellation/revocation of a strike, set isStrike to false.
    - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.
+   - If it is providing real-time updates about an ongoing strike (e.g., "the metro is currently closed due to a strike"), set isStrike to false.
    - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.
    - ONLY set isStrike to true if it is an announcement of an upcoming strike.
 
