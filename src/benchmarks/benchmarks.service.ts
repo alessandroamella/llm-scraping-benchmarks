@@ -14,7 +14,9 @@ import { EnvsService } from '@/envs/envs.service';
 import { type Company, groundTruth } from './data/ground-truth';
 import { PreProcessingStrategy } from './definitions/pre-processing-strategy.type';
 import {
+  AiParserMetadata,
   IStrikeParser,
+  isAiParserMetadata,
   ParseOptions,
   ParserMetadata,
   ParserResponse,
@@ -78,7 +80,7 @@ class ConfigurableAiParser implements IStrikeParser {
 }
 
 // Define the shape of the saved report
-type BenchmarkResultDetail = ParserMetadata & {
+type BenchmarkResultDetail = Omit<ParserMetadata, 'thoughts'> & {
   file: string;
   source: Company;
   parser: string;
@@ -129,7 +131,7 @@ export class BenchmarksService implements OnModuleInit {
   private readonly includeManualInSuite = false;
   private readonly generateChaosDatasetFlag = false;
 
-  private readonly customReportName = 'remove_PROVINCE_type';
+  private readonly customReportName = 'remove_PROVINCE_and_better_ATAC_prompt';
   // private readonly disabledChecks: string[] = ['locationType', 'locationCodes'];
   private readonly disabledChecks: string[] = [];
 
@@ -212,19 +214,36 @@ export class BenchmarksService implements OnModuleInit {
   }
 
   private async confirmCustomReportName(): Promise<void> {
-    return new Promise((resolve) => {
-      const rl = readline.createInterface({
-        input: process.stdin,
-        output: process.stdout,
-      });
-      rl.question(
-        chalk.bold.cyan('Press ENTER to confirm and continue: '),
-        () => {
-          rl.close();
+    const TIMEOUT_MS = 30_000;
+
+    let rl: readline.Interface | null = null;
+
+    return Promise.race([
+      new Promise<void>((resolve) => {
+        rl = readline.createInterface({
+          input: process.stdin,
+          output: process.stdout,
+        });
+        rl.question(
+          chalk.bold.cyan('Press ENTER to confirm and continue: '),
+          () => {
+            rl?.close();
+            resolve();
+          },
+        );
+      }),
+      new Promise<void>((resolve) => {
+        setTimeout(() => {
+          rl?.close();
+          this.logger.warn(
+            chalk.bold.yellowBright(
+              `No input received after ${TIMEOUT_MS / 1000}s, continuing automatically...`,
+            ),
+          );
           resolve();
-        },
-      );
-    });
+        }, TIMEOUT_MS);
+      }),
+    ]);
   }
 
   async runAllBenchmarks() {
@@ -643,6 +662,10 @@ export class BenchmarksService implements OnModuleInit {
                 if (comparison.isExactMatch) parserResult.perfect++;
               }
 
+              // Extract thoughts so they don't bloat the final JSON report
+              const metadata = response.metadata as AiParserMetadata;
+              const { thoughts, ...cleanMetadata } = metadata;
+
               // Record Detail
               details.push({
                 file,
@@ -654,7 +677,7 @@ export class BenchmarksService implements OnModuleInit {
                 precision: comparison.precision,
                 recall: comparison.recall,
                 f1: comparison.f1,
-                ...response.metadata,
+                ...cleanMetadata,
                 durationMs: Math.round(duration),
                 parserType: parser.parserType,
               });
@@ -742,7 +765,7 @@ export class BenchmarksService implements OnModuleInit {
       const parserDetails = details.filter((d) => d.parser === name);
       const totalCost = parserDetails.reduce(
         (sum, d) =>
-          sum + ('costUsd' in d && d.costUsd ? d.costUsd.totalCost : 0),
+          sum + ((isAiParserMetadata(d) && d.costUsd?.totalCost) || 0),
         0,
       );
 

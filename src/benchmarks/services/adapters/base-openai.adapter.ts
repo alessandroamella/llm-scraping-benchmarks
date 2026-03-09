@@ -72,7 +72,11 @@ export abstract class BaseOpenAiAdapter extends BaseAiAdapter {
       response_format: { type: 'json_object' },
     });
 
-    const content = completion.choices[0]?.message?.content || '{}';
+    const message = completion.choices[0]?.message;
+    const content = message?.content || '{}';
+
+    // biome-ignore lint/suspicious/noExplicitAny: DeepSeek passes reasoning in this undocumented field via the OpenAI SDK
+    const thoughts = (message as any)?.reasoning_content || undefined;
 
     try {
       const parsed = JSON.parse(jsonrepair(content));
@@ -90,6 +94,7 @@ export abstract class BaseOpenAiAdapter extends BaseAiAdapter {
           output: completion.usage?.completion_tokens ?? 0,
           total: completion.usage?.total_tokens ?? 0,
         },
+        thoughts, // Return the thoughts so they trickle up
       };
       // biome-ignore lint/suspicious/noExplicitAny: raw LLM outputs can be very flexible, and we want to capture them in the trace for debugging, even if they don't match our expected schema
     } catch (error: any) {

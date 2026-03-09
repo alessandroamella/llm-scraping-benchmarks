@@ -110,7 +110,14 @@ export interface AiParserMetadata extends BaseParserMetadata {
     total?: number;
   };
   costUsd?: AiCostUsdBreakdown;
+  thoughts?: string;
 }
+
+export const isAiParserMetadata = (
+  metadata: ParserMetadata,
+): metadata is AiParserMetadata => {
+  return metadata.parserType === 'ai';
+};
 
 export type ParserMetadata = ManualParserMetadata | AiParserMetadata;
 

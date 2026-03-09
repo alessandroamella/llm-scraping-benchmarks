@@ -308,6 +308,7 @@ Input Content (Pre-processing: ${preProcessingStrategy}):
           usage: (cached.metadata as AiParserMetadata).tokens,
           costUsd: (cached.metadata as AiParserMetadata).costUsd,
           durationMs: cached.metadata.durationMs ?? 0,
+          thoughts: (cached.metadata as AiParserMetadata).thoughts, // Restore thoughts from cache
         };
         this.saveTrace(trace);
 
@@ -375,6 +376,7 @@ Input Content (Pre-processing: ${preProcessingStrategy}):
           model,
           costUsd: costBreakdown,
           hash,
+          thoughts: result.thoughts, // Save thoughts to the cache envelope
           tokens: {
             input: result.usage.input,
             output: result.usage.output,
