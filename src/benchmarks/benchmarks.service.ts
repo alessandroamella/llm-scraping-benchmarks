@@ -19,7 +19,6 @@ import {
   ParserResponse,
   SupportedModel,
 } from './definitions/strike-parser.interface';
-import { PreComputedFileParser } from './parsers/precomputed-file-parser';
 import { TrenordManualParser } from './parsers/trenord/trenord-manual.parser';
 import { BenchmarkStrike } from './schemas/benchmark-strike.schema';
 import { BenchmarkAiRunnerService } from './services/benchmark-ai-runner.service';
@@ -133,7 +132,6 @@ export class BenchmarksService implements OnModuleInit {
   // private readonly disabledChecks: string[] = [];
 
   // --- NEW FLAGS ---
-  private readonly syntheticDataCount = 0; // Number of synthetic files per company (0 to disable)
   private readonly enableResilienceSuite = false; // Toggle Resilience Suite
   // -----------------
   private readonly baseDir = path.join(process.cwd(), 'src/benchmarks/data');
@@ -211,12 +209,6 @@ export class BenchmarksService implements OnModuleInit {
       fs.mkdirSync(this.resultsDir, { recursive: true });
     }
 
-    if (this.syntheticDataCount > 0) {
-      throw new Error(
-        'Professor: "do not use synthetic data for the benchmark, you could manipulate it in your favor" => set syntheticDataCount to 0!!',
-      );
-    }
-
     if (this.customReportName) {
       this.logger.warn(
         chalk.bold.yellowBright(
@@ -251,15 +243,6 @@ export class BenchmarksService implements OnModuleInit {
     if (this.generateChaosDatasetFlag) {
       this.generateChaosDataset();
     }
-
-    // --- LOAD SYNTHETIC DATA ---
-    const trenordSynthetic =
-      this.syntheticDataCount > 0 ? this.loadSyntheticData('Trenord') : {};
-    const trenitaliaSynthetic =
-      this.syntheticDataCount > 0 ? this.loadSyntheticData('Trenitalia') : {};
-    const atacSynthetic =
-      this.syntheticDataCount > 0 ? this.loadSyntheticData('ATAC') : {};
-    // ---------------------------
 
     // Define the Matrix of Tests
     const baseStrategies: PreProcessingStrategy[] = [
@@ -414,14 +397,7 @@ export class BenchmarksService implements OnModuleInit {
     const summaryStats: Record<string, SummaryStats> = {};
 
     // Suite 1: Trenord (Standard)
-    const resultsTrenord = await this.runSuite(
-      'Trenord',
-      trenordParsers,
-      undefined,
-      undefined,
-      undefined,
-      trenordSynthetic,
-    );
+    const resultsTrenord = await this.runSuite('Trenord', trenordParsers);
     this.mergeStats(summaryStats, resultsTrenord.stats, '');
     allDetails.push(...resultsTrenord.details);
 
@@ -442,24 +418,15 @@ export class BenchmarksService implements OnModuleInit {
     const resultsTrenitalia = await this.runSuite(
       'Trenitalia',
       trenitaliaParsers,
-      undefined,
-      undefined,
-      undefined,
-      trenitaliaSynthetic,
     );
     this.mergeStats(summaryStats, resultsTrenitalia.stats, '');
     allDetails.push(...resultsTrenitalia.details);
 
     // Suite: ATAC
-    const resultsAtac = await this.runSuite(
-      'ATAC',
-      atacParsers,
-      undefined,
-      undefined,
-      undefined,
-      atacSynthetic,
-      ['guaranteedTimes'],
-    );
+    const resultsAtac = await this.runSuite('ATAC', atacParsers, {
+      customSuiteName: 'ATAC (No location checks)',
+      disabledChecksOverride: ['guaranteedTimes'],
+    });
     this.mergeStats(summaryStats, resultsAtac.stats, '');
     allDetails.push(...resultsAtac.details);
 
@@ -514,9 +481,10 @@ export class BenchmarksService implements OnModuleInit {
       const resultsChaos = await this.runSuite(
         'Trenord', // Usa ground truth di Trenord
         resilienceParsers,
-        'Trenord Resilience (Chaos DOM)',
-        undefined, // nessun filtro data
-        this.trenordMessedDir,
+        {
+          customSuiteName: 'Trenord Resilience (Chaos DOM)',
+          directoryOverride: this.trenordMessedDir,
+        },
       );
 
       this.mergeStats(summaryStats, resultsChaos.stats, ' [CHAOS]');
@@ -530,62 +498,6 @@ export class BenchmarksService implements OnModuleInit {
 
     // Save Final Report
     this.saveReport(summaryStats, allDetails);
-  }
-
-  // --- NEW METHOD TO LOAD AI MOCK DATA ---
-  private loadSyntheticData(company: Company): Record<string, BenchmarkStrike> {
-    const aiDir = path.join(this.baseDir, company, 'ai_strikes');
-    if (!fs.existsSync(aiDir)) return {};
-
-    const syntheticData: Record<string, BenchmarkStrike> = {};
-    let count = 0;
-
-    // Get all batch directories (sorted for deterministic selection)
-    const batches = fs
-      .readdirSync(aiDir)
-      .filter((f) => fs.statSync(path.join(aiDir, f)).isDirectory())
-      .sort()
-      .reverse(); // Start with latest batch
-
-    for (const batch of batches) {
-      if (count >= this.syntheticDataCount) break;
-
-      const truthPath = path.join(aiDir, batch, 'ground-truth.json');
-      if (!fs.existsSync(truthPath)) continue;
-
-      try {
-        const batchTruth = JSON.parse(
-          fs.readFileSync(truthPath, 'utf-8'),
-        ) as Record<string, BenchmarkStrike>;
-
-        // Sort filenames for deterministic selection
-        const sortedFilenames = Object.keys(batchTruth).sort();
-        for (const filename of sortedFilenames) {
-          if (count >= this.syntheticDataCount) break;
-
-          const strikeData = batchTruth[filename];
-          // Skip undefined entries
-          if (!strikeData) continue;
-          // Key must be relative to company dir so fs.readFile works later
-          // e.g., "ai_strikes/batch_X/filename.html"
-          const relativePath = path.join('ai_strikes', batch, filename);
-          syntheticData[relativePath] = strikeData;
-          count++;
-        }
-      } catch (e) {
-        this.logger.warn(
-          `Failed to load synthetic data from ${batch} for ${company}`,
-          e,
-        );
-      }
-    }
-
-    this.logger.log(
-      chalk.blue(
-        `Loaded ${count} synthetic files for ${company} from ${batches.length} batches.`,
-      ),
-    );
-    return syntheticData;
   }
   // ---------------------------------------
 
@@ -622,29 +534,28 @@ export class BenchmarksService implements OnModuleInit {
   private async runSuite(
     company: Company,
     parsers: IStrikeParser[],
-    customSuiteName?: string,
-    filterFn?: (file: string, expected: BenchmarkStrike) => boolean,
-    directoryOverride?: string,
-    extraGroundTruth?: Record<string, BenchmarkStrike>,
-    disabledChecksOverride?: string[],
+    opts?: {
+      customSuiteName?: string;
+      filterFn?: (file: string, expected: BenchmarkStrike) => boolean;
+      directoryOverride?: string;
+      disabledChecksOverride?: string[];
+    },
   ) {
-    const suiteLabel = customSuiteName || company;
+    const suiteLabel = opts?.customSuiteName || company;
     this.logger.log(chalk.blue.bold(`--- Running Suite: ${suiteLabel} ---`));
 
     // Merge class-level disabled checks with the override (if any)
     const effectiveDisabledChecks = union(
       this.disabledChecks,
-      disabledChecksOverride || [],
+      opts?.disabledChecksOverride || [],
     );
 
     // Usa directoryOverride se presente, altrimenti la default
-    const companyDir = directoryOverride || path.join(this.baseDir, company);
+    const companyDir =
+      opts?.directoryOverride || path.join(this.baseDir, company);
 
     // Merge static ground truth with synthetic data
-    const truthData = {
-      ...(groundTruth[company] || {}),
-      ...(extraGroundTruth || {}),
-    };
+    const truthData = groundTruth[company];
 
     if (Object.keys(truthData).length === 0) {
       this.logger.error(`No ground truth found for ${company}`);
@@ -691,7 +602,7 @@ export class BenchmarksService implements OnModuleInit {
       const expected = truthData[file as keyof typeof truthData];
 
       // Applica il filtro se fornito
-      if (filterFn && !filterFn(file, expected)) {
+      if (opts?.filterFn && !opts.filterFn(file, expected)) {
         return [];
       }
 
@@ -707,15 +618,6 @@ export class BenchmarksService implements OnModuleInit {
       const fileContent = fs.readFileSync(filePath, isPdf ? 'binary' : 'utf-8');
 
       return parsers.flatMap((parser) => {
-        // Skip PreComputed parsers for synthetic (AI) data files
-        // because we don't have pre-processed .md files for them.
-        if (
-          file.includes('ai_strikes') &&
-          parser instanceof PreComputedFileParser
-        ) {
-          return [];
-        }
-
         return [
           limit(async () => {
             // Give the event loop 5ms to breathe
