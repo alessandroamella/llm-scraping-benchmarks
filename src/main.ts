@@ -18,7 +18,7 @@ async function bootstrap() {
 
   const benchmarksService = app.get(BenchmarksService);
 
-  console.log('🚀 Avvio del framework di Benchmark...');
+  console.log('Avvio del framework di benchmark...');
 
   // Esegui i benchmark (assumendo che tu voglia triggerarli manualmente,
   // oppure togli runAllBenchmarks() da onModuleInit e chiamalo esplicitamente qui)
