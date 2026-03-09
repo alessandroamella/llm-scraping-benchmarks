@@ -877,3 +877,67 @@ else:
     print(
         "⚠️ Nessuna differenza/errore trovato nel JSON per generare il grafico degli errori per campo."
     )
+
+# --- STAMPA A CONSOLE: TOP 10 FILE PEGGIORI (WORST 10 PARSED FILES) ---
+print("\n" + "!" * 80)
+print(f"{'RANK':<5} | {'AVG F1':<8} | {'ERRS':<5} | {'FILE / SOURCE'}")
+print("-" * 80)
+
+file_stats = {}
+
+# Raccogliamo i dati per ogni singolo file valutato
+for d in data.get("details", []):
+    parser_name = d.get("parser", "")
+
+    # Ignoriamo i parser manuali e CHAOS per valutare la difficoltà intrinseca del file
+    if "Manual" in parser_name or "CHAOS" in parser_name:
+        continue
+
+    filename = d.get("file", "Sconosciuto")
+    f1 = d.get("f1", 0)
+    source = d.get("source", "Sconosciuta")
+    differences = d.get("differences", [])
+
+    if filename not in file_stats:
+        file_stats[filename] = {
+            "source": source,
+            "f1_sum": 0.0,
+            "count": 0,
+            "total_differences": 0,
+        }
+
+    file_stats[filename]["f1_sum"] += f1
+    file_stats[filename]["count"] += 1
+    file_stats[filename]["total_differences"] += len(differences)
+
+if file_stats:
+    # Calcoliamo la media dell'F1-score per ogni file
+    processed_list = []
+    for filename, stats in file_stats.items():
+        avg_f1 = stats["f1_sum"] / stats["count"] if stats["count"] > 0 else 0
+        processed_list.append(
+            {
+                "filename": filename,
+                "source": stats["source"],
+                "avg_f1": avg_f1,
+                "total_errs": stats["total_differences"],
+            }
+        )
+
+    # Ordiniamo: F1 più basso per primo, poi per numero di errori decrescente
+    worst_10 = sorted(processed_list, key=lambda x: (x["avg_f1"], -x["total_errs"]))[
+        :10
+    ]
+
+    for i, item in enumerate(worst_10, 1):
+        # Tronca il nome del file se troppo lungo per la console
+        display_name = (
+            (item["filename"]) if len(item["filename"]) > 47 else item["filename"]
+        )
+        print(
+            f"#{i:<4} | {item['avg_f1']:<8.4f} | {item['total_errs']:<5} | {display_name} ({item['source']})"
+        )
+
+    print("!" * 80 + "\n")
+else:
+    print("⚠️ Nessun dato trovato per generare la classifica dei file peggiori.")
