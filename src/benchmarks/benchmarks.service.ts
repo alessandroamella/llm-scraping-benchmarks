@@ -173,37 +173,6 @@ export class BenchmarksService implements OnModuleInit {
   //   'Trenitalia/mineru-html',
   // );
 
-  // private readonly jinaFileMap: Record<string, string> = {
-  //   'strike-detail-domenica-16-novembre-dalle-ore-10-alle-ore-18-scio.html':
-  //     'sciopero-16-novembre.md',
-  //   'strike-detail-gioved--14-dicembre-dalle-ore-9-alle-ore-17-sciope.html':
-  //     '14-dicembre-sciopero-dei-treni-regionali.md',
-  //   'strike-detail-gioved--18-luglio-dalle-9-alle-13-sciopero-del-per.html':
-  //     'giovedi-18-luglio-sciopero-del-personale-ferrovienord.md',
-  //   'strike-detail-luned--16-giugno-sciopero-dei-treni-regionali.html':
-  //     'sciopero-16-giugno.md',
-  //   'strike-detail-mercoled--19-marzo-dalle-ore-9-alle-ore-17-scioper.html':
-  //     'sciopero-nazionale-19-marzo.md',
-  //   'strike-detail-mercoled--5-febbraio-sciopero-dei-treni-regionali.html':
-  //     '5-febbraio-sciopero.md',
-  //   'strike-detail-mercoled--6-settembre--sciopero-dei-treni-regional.html':
-  //     '6-settembre-sciopero-dei-treni-regionali.md',
-  //   'strike-detail-sciopero-del-trasporto-ferroviario-luned--30-sette.html':
-  //     'sciopero-30-settembre.md',
-  //   'strike-detail-sciopero-nazionale-17-novembre-ore-9-13-personale-.html':
-  //     'sciopero-nazionale-17-novembre-ore-9-13-personale-trenord-non-coinvolto.md',
-  //   'strike-detail-sciopero-uiltrasporti-e-orsa-domenica-16-giugno--p.html':
-  //     'sciopero-uiltrasporti-e-orsa-domenica-16-giugno.md',
-  //   'strike-detail-venerd--12-dicembre-da-mezzanotte-alle-21-sciopero.html':
-  //     'sciopero-12-dicembre.md',
-  //   'strike-detail-venerd--29-novembre-dalle-9-alle-13-sciopero-gener.html':
-  //     'sciopero-29-novembre.md',
-  //   'strike-detail-venerd--29-novembre-revocato-sciopero-ferrovienord.html':
-  //     'revoca-sciopero-29-novembre.md',
-  //   'strike-detail-venerd--8-novembre-sciopero-del-personale-ferrovie.html':
-  //     'sciopero-8-novembre.md',
-  // };
-
   async onModuleInit() {
     if (!fs.existsSync(this.resultsDir)) {
       fs.mkdirSync(this.resultsDir, { recursive: true });
@@ -254,12 +223,9 @@ export class BenchmarksService implements OnModuleInit {
     ];
 
     const models = [
-      // 'gpt-5-mini',
       'gpt-5-nano',
       'meta-llama/llama-4-scout-17b-16e-instruct',
-      // 'gemini-2.5-flash',
-      'gemini-2.5-flash-lite',
-      'gemini-3-flash-preview',
+      'gemini-3.1-flash-lite-preview',
       'deepseek-chat',
     ] satisfies SupportedModel[];
 
@@ -312,7 +278,7 @@ export class BenchmarksService implements OnModuleInit {
       //     'Trenord',
       //     model,
       //     this.trenordJinaDir,
-      //     (f) => this.jinaFileMap[f],
+      //     (f) => jinaFileMap[f],
       //   ),
       // );
     }
@@ -440,7 +406,7 @@ export class BenchmarksService implements OnModuleInit {
 
       // parser per questa suite:
       // manuale (ci si aspetta che fallisca)
-      // AI (ci si aspetta che sopravviva) - Usiamo un modello veloce/economico come gemini-2.5-flash
+      // AI (ci si aspetta che sopravviva) - Usiamo un modello veloce/economico
       const resilienceParsers: IStrikeParser[] = [
         this.trenordManual,
         new ConfigurableAiParser(
@@ -563,7 +529,6 @@ export class BenchmarksService implements OnModuleInit {
     }
 
     // Get all HTML files in the directory
-    // Note: You might want to filter for .html files
     const files = Object.keys(truthData);
 
     // Print file number for this suite

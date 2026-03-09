@@ -89,6 +89,15 @@ export class BenchmarkAiRunnerService implements OnModuleInit {
 
   onModuleInit() {
     if (this.manualConfirmationEnabled) {
+      if (this.envsService.get('PARSER_QUEUE_MAX_CONCURRENT') > 1) {
+        // Error, we can only do manual confirmation with a concurrency of 1, else multiple threads will try to take the TTY input
+        this.logger.error(
+          chalk.red.bold(
+            'MANUAL_CONFIRMATION_ENABLED cannot be true if PARSER_QUEUE_MAX_CONCURRENT is greater than 1. Please set PARSER_QUEUE_MAX_CONCURRENT to 1 in your .env file.',
+          ),
+        );
+        process.exit(1);
+      }
       this.logger.log(
         chalk.green.bold(
           '\nManual confirmation ENABLED. You will be prompted before each AI call.\n',
