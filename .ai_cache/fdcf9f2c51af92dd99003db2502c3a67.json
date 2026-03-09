@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3340,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00018225,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0002265,
+      "cachedCost": 0,
+      "totalCost": 0.00042375
+    },
+    "hash": "fdcf9f2c51af92dd99003db2502c3a67",
+    "sourceFile": "strike-detail-venerd--29-novembre-revocato-sciopero-ferrovienord.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, so I've got an input: a notice about something happening on November 29th. My goal here, obviously, is to figure out if this is a strike announcement, and crucially, if it is a cancellation or the announcement of a strike. I'm working under a few specific constraints, namely that whatever I produce has to be valid JSON, nothing more, nothing less, and that I need to set the flag `isStrike` to false if it's a cancellation.\n\nAlright, let's look at the wording. \"Venerdì 29 novembre revocato sciopero FERROVIENORD\". The key word here is \"revocato.\" I know my Italian, and \"revocato\" clearly means \"revoked\" or \"cancelled.\" It's directly linked to the strike (\"sciopero\"). Therefore, this *is* a cancellation notice. My process tells me to make `isStrike` false in this scenario, and to render the result as JSON. So, I need to output `{\"isStrike\": false}`.\n\n\n",
+    "tokens": {
+      "input": 729,
+      "output": 10,
+      "total": 890
+    }
+  }
+}

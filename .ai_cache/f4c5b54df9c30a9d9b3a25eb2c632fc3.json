@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3979,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0037185,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0004365,
+      "cachedCost": 0,
+      "totalCost": 0.00417
+    },
+    "hash": "f4c5b54df9c30a9d9b3a25eb2c632fc3",
+    "sourceFile": "sciopero_nazionale_trasporto_pubblico_adesione_personale_atac_al_274.html",
+    "thoughts": "**Analyzing the Content: Strike Announcement Detection**\n\nOkay, here's the deal. I need to determine if this text announces an upcoming strike. The instructions are pretty clear: if it's not a strike announcement (meaning a cancellation, participation information *after* the fact, or even a live update), I need to return `isStrike: false`. Conversely, if it *is* a strike announcement, I have to return `isStrike: true` and fill in the `strikeData` accordingly. Everything has to be packaged into a single JSON object, and I must stick to the given schema.\n\nThe title is \"Sciopero nazionale trasporto pubblico, adesione personale Atac al 27,4% - Roma Servizi per la Mobilità,\" and the text reads, \"L’adesione del personale Atac allo sciopero nazionale del trasporto pubblico, rilevata in mattinata, è stata pari al 27,4%\". The context I was given is that this is a post-strike report of participation rates. Additionally, the date is March 9, 2026.\n\nI'm reading \"adesione... è stata pari al 27,4%\" – which translates to \"participation... was equal to 27.4%.\" The past tense \"was\" tells me this is a *report* of an event that has already occurred. This clearly indicates that this content isn't announcing an upcoming strike, it's reporting on the participation *in* one.\n\nTherefore, `isStrike` is definitely `false`.\n\n\n",
+    "tokens": {
+      "input": 14874,
+      "output": 10,
+      "total": 15175
+    }
+  }
+}

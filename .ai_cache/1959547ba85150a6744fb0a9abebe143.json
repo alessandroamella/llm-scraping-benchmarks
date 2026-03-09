@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3404,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0037005,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0003015,
+      "cachedCost": 0,
+      "totalCost": 0.004017
+    },
+    "hash": "1959547ba85150a6744fb0a9abebe143",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_195.html",
+    "thoughts": "**Analyzing the Public Transport Strike Update**\n\nOkay, so I've got this piece of text – seems to be an article about a public transport strike. The title, \"Sciopero del trasporto pubblico, adesione personale Atac al 19,5% - Roma Servizi per la Mobilità,\" pretty much lays it out: it's about a strike (sciopero) in Rome involving the Atac personnel.\n\nThe actual content is concise: \"L’adesione del personale Atac allo sciopero dei trasporto pubblico, rilevata a metà mattinata, è stata pari al 19,5%.\" Essentially, they're reporting the participation rate, at 19.5%, as measured mid-morning. The date is 18/09/2023.\n\nGiven the instructions, it's clear this isn't an *announcement* of a strike. The use of \"adesione\" (participation) and the fact they're *reporting* the rate implies the event already happened. They're not saying a strike *will* occur; they're quantifying the *effect* of a strike. It's a retrospective update.\n\nTherefore, `isStrike` is set to `false`. It's an informational report on the *outcome* of the strike, not a notice that it's going to happen.\n\n\n",
+    "tokens": {
+      "input": 14802,
+      "output": 10,
+      "total": 15013
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-11-08 00:00:00",
+      "endDate": "2024-11-08 23:59:59",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 30563,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00068085,
+      "outputCost": 0.0010604,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00174125
+    },
+    "hash": "708f5cdafd4206ef5891c5e7fe81e5c6",
+    "sourceFile": "venerdi_8_novembre_sciopero_nazionale_del_trasporto_pubblico_servizio_a_rischio_per_24_ore.html",
+    "thoughts": "**Extracting strike information**\n\nI need to output JSON according to the strike_extraction schema and determine if the document announces a new or upcoming strike. The content describes a national strike in Italy on Friday, November 8, which affects public transport services for 24 hours. The strike announcement is from the unions Cgil, Cisl, Uil, Ugl, and Faisa Cisal, and it indicates partial service during specific hours. I’ll structure that into the required JSON format.",
+    "tokens": {
+      "input": 13617,
+      "output": 2651,
+      "total": 16268
+    }
+  }
+}

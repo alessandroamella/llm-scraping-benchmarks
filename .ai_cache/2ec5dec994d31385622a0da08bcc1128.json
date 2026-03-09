@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:01:00",
+      "endDate": "2025-12-12 21:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5442,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00019075,
+      "outputCost": 0.0001335,
+      "thinkingCost": 0.0008175,
+      "cachedCost": 0,
+      "totalCost": 0.00114175
+    },
+    "hash": "2ec5dec994d31385622a0da08bcc1128",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-12-12-sciopero-nazionale-del-traspor.html",
+    "thoughts": "**Strike Analysis and JSON Output**\n\nOkay, let's break this down. My task is to verify if this text describes an upcoming strike and, if so, format the information into a JSON structure based on the provided schema. The input is pretty straightforward: it's announcing a \"SCIOPERO NAZIONALE DEL TRASPORTO FERROVIARIO\" – a national railway strike – scheduled for December 12, 2025.\n\nFirst, the criteria. National strike? Check. Specific date: December 12, 2025? Check. Timeframe: 00:01 to 21:00 on that date? Check. Yep, it's definitely an upcoming strike.\n\nNow, to extract the relevant data: The date is unambiguously Friday, December 12, 2025. The start time is 00:01, which converts neatly to \"2025-12-12 00:01:00\". The end time is 21:00, or \"2025-12-12 21:00:00\". The strike is identified as \"Nazionale,\" meaning it is \"National\" in scope.  Guaranteed times? No, that information isn't present in the text, so that field will be null, or omitted to stay concise.\n\nFinally, let's assemble the JSON output. We've got `isStrike: true`. The `strikeData` object needs the `startDate`, which is \"2025-12-12 00:01:00\", and the `endDate`, which is \"2025-12-12 21:00:00\". The `locationType` is \"NATIONAL,\" and since there are no location codes provided in the text, `locationCodes` should be set to null.\n\nLet me double-check the date formats: yyyy-MM-dd HH:mm:ss for both start and end dates. Looks correct. And the `locationType`? \"NATIONAL\" is the right translation.\n\nPutting it all together, the finalized JSON is:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-12-12 00:01:00\",\n    \"endDate\": \"2025-12-12 21:00:00\",\n    \"locationType\": \"NATIONAL\",\n    \"locationCodes\": null\n  }\n}\n```\n\nThis is the output, matching the schema.\n\n\n",
+    "tokens": {
+      "input": 763,
+      "output": 89,
+      "total": 1397
+    }
+  }
+}

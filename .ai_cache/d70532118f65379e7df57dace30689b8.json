@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-11-29 09:00:00",
+      "endDate": "2024-11-29 13:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6044,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00036625,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.0006945,
+      "cachedCost": 0,
+      "totalCost": 0.00120925
+    },
+    "hash": "d70532118f65379e7df57dace30689b8",
+    "sourceFile": "strike-detail-venerd--29-novembre-dalle-9-alle-13-sciopero-gener.html",
+    "thoughts": "**Analyzing the FERROVIENORD Strike Announcement**\n\nOkay, so I've got this announcement about a general strike scheduled for the FERROVIENORD network. Let's break this down. The key thing is that it's an announcement of a strike, which means `isStrike: true`. It's going to happen on Friday, November 29th, 2024, from 09:00 to 13:00. The strike impacts the Lombardia region, which the data codes as \"03\", making it a `REGIONAL` strike.\n\nNow, for the structured data: I need to define `strikeData`. The `startDate` is \"2024-11-29 09:00:00\" and the `endDate` is \"2024-11-29 13:00:00\". The `locationType` is definitely `REGIONAL`, with `locationCodes` being [\"03\"].\n\nRegarding \"guaranteedTimes\", the text indicates that trains *departing* before 09:00 will run, but it doesn't specify protected guaranteed intervals as is common in these announcements, nor does it list specific commuter times. The prompt does not mention \"guaranteed intervals\". Therefore, based on the prompt’s definition of \"guaranteedTimes\" as \"Time ranges during which service is guaranteed\", I'm not going to include a specific guaranteed time range. The relevant text is \"viaggeranno i treni con orario di partenza dalla stazione di origine entro le ore 9\", which means trains starting before 09:00. This is not a time range, so I will omit the information about guaranteed times. It is implicitly \"before 09:00\" but I am not going to include it.\n\nSo, in summary:\n\n*   `isStrike`: true\n*   `strikeData`:\n    *   `startDate`: \"2024-11-29 09:00:00\"\n    *   `endDate`: \"2024-11-29 13:00:00\"\n    *   `locationType`: \"REGIONAL\"\n    *   `locationCodes`: [\"03\"]\n\n\n",
+    "tokens": {
+      "input": 1465,
+      "output": 99,
+      "total": 2027
+    }
+  }
+}

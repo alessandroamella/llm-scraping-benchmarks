@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20709,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007525,
+      "outputCost": 0.000748,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00082325
+    },
+    "hash": "0303e4b3e6446c36dbd1a2c18efaaa55",
+    "sourceFile": "sciopero_generale_nazionale_domani_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Processing strike announcement**\n\nI need to output JSON according to the schema based on the Italian content about a general national strike tomorrow, impacting transport including Atac in Rome. It seems like it's an official announcement saying the strike will last for 24 hours. I should set `isStrike` to true and provide `strikeData`. I'll need to fill in the `startDate` and `endDate` in the required format. The article mentions service will be regular until 8:30 and from 17:00 to 20:00, so I should note these guaranteed service times.",
+    "tokens": {
+      "input": 1505,
+      "output": 1870,
+      "total": 3375
+    }
+  }
+}

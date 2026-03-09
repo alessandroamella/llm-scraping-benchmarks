@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 50821,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000786,
+      "outputCost": 0.0016136,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0016922
+    },
+    "hash": "2af590b1c6542b9310feb3af35a2b1dd",
+    "sourceFile": "venerd_7_luglio_trasporto_pubblico_rischio_sciopero_nazionale_24_ore_della_faisa_confail.html",
+    "thoughts": "**Processing strike announcement**\n\nI need to output JSON indicating whether there is a strike, which will be true here. The content discusses a potential national strike on Friday, July 7, by Faisa Confail, indicating a risk to public transport. It highlights the situation in Rome, mentioning that services will be regular until certain times but warns of disruptions. Given this, I can confirm that isStrike should be set to true, capturing the essence of the upcoming strike announcement.",
+    "tokens": {
+      "input": 1572,
+      "output": 4034,
+      "total": 5606
+    }
+  }
+}

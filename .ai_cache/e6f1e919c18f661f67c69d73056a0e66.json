@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 26963,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007475,
+      "outputCost": 0.0009056,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00098035
+    },
+    "hash": "e6f1e919c18f661f67c69d73056a0e66",
+    "sourceFile": "venerd_16_dicembre_sciopero_generale_regionale_trasporto_pubblico_rischio_20_24.html",
+    "thoughts": "**Analyzing upcoming strike announcement**\n\nI need to output JSON according to the set schema and figure out if this document is announcing a new strike. The content is in Italian and indicates a general strike on December 16, affecting public transport from 20:00 to 24:00. It confirms that it’s an official announcement about an upcoming strike. From this, I can conclude that `isStrike` should be true, and I need to extract details like start and end dates, though the year isn't specified.",
+    "tokens": {
+      "input": 1495,
+      "output": 2264,
+      "total": 3759
+    }
+  }
+}

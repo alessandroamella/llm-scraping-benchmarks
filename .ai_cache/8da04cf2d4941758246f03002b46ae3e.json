@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3124,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0002045,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0001755,
+      "cachedCost": 0,
+      "totalCost": 0.000395
+    },
+    "hash": "8da04cf2d4941758246f03002b46ae3e",
+    "sourceFile": "sciopero_trasporto_pubblico_metro_aperte_chiusa_termini_centocelle.html",
+    "thoughts": "**Analyzing the Strike Information**\n\nOkay, the task is straightforward: I need to determine if this document is *announcing* a strike. The input is a webpage, and it seems to be about a strike that has *already* happened, because it's dated 2022. I need to be precise, as this data will likely inform automated systems.\n\nThe text \"È in corso lo sciopero...\" jumped out at me. A quick translation tells me it means \"The strike is ongoing/in progress.\" That's the key. This sentence describes an *existing* situation, not a future one. It's providing real-time updates, essentially.\n\nMy decision is clear: this isn't an *announcement* of a strike; it's a report. My criteria for identifying an \"upcoming\" strike isn't met. I needed to check a constraint, if it's providing real-time updates about an ongoing strike, this needs to be flagged. Therefore, `isStrike` should be set to `false`. That should be the correct output.\n\n\n",
+    "tokens": {
+      "input": 818,
+      "output": 10,
+      "total": 945
+    }
+  }
+}

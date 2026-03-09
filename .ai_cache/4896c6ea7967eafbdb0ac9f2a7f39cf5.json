@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 15960,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008335,
+      "outputCost": 0.0007204,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00080375
+    },
+    "hash": "4896c6ea7967eafbdb0ac9f2a7f39cf5",
+    "sourceFile": "trasporto_pubblico_domani_sciopero_8_ore_sulla_rete_atac.html",
+    "thoughts": "**Determining strike data**\n\nI need to create a JSON output that includes whether there's a strike and possibly some related strike data. The content is in Italian, announcing an upcoming 8-hour strike on the Atac network tomorrow. The details indicate the hours from 8:30 to 16:30. However, since it only says \"tomorrow,\" I need to decide how to fill in the date since no specific date is given. The date format required is 'yyyy-MM-dd HH:mm:ss'.",
+    "tokens": {
+      "input": 1667,
+      "output": 1801,
+      "total": 3468
+    }
+  }
+}

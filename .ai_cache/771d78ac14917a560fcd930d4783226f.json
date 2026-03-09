@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-05-11 00:00:00",
+      "endDate": "2025-05-11 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5491,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00023,
+      "outputCost": 0.0001605,
+      "thinkingCost": 0.0008505,
+      "cachedCost": 0,
+      "totalCost": 0.001241
+    },
+    "hash": "771d78ac14917a560fcd930d4783226f",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_24h_domenica_11_maggio_2025.html",
+    "thoughts": "**Strike Analysis Summary**\n\nOkay, let's break this down. My task is to determine if this input describes an upcoming strike, and if so, to output the information in a specific JSON format. The company is EAV, located in Campania (region code 15), and the desired output is a valid JSON object conforming to the given schema.\n\nReading the input, the title immediately jumps out: \"Linee Suburbane: avviso di sciopero 24h domenica 11 maggio 2025.\" \"Avviso di sciopero\" *is* an announcement of a strike. The announcement date is May 6, 2025, with the strike scheduled for May 11, 2025. It's a 24-hour strike, organized by Or.S.A., a corporate/company strike (\"sciopero aziendale\") within the Campania region, which means it should be categorized as \"REGIONAL\". Guaranteed times aren't specified in the text.\n\nTherefore, `isStrike` is definitely true. The `startDate` is clearly May 11, 2025, starting at 00:00:00, and since it’s a 24-hour strike, the `endDate` is May 11, 2025, 23:59:59. For `locationType`, it's REGIONAL, as the strike affects Campania and EAV. The `locationCodes` is just the regional code for Campania, \"15.\" Since no guaranteed times were mentioned, `guaranteedTimes` will be absent.\n\nThe final JSON object will include: `isStrike: true`, `startDate`: \"2025-05-11 00:00:00\", `endDate`: \"2025-05-11 23:59:59\", `locationType`: \"REGIONAL\", and `locationCodes`: [\"15\"]. Now, according to the schema I should return an object.\n\n\n",
+    "tokens": {
+      "input": 920,
+      "output": 107,
+      "total": 1594
+    }
+  }
+}

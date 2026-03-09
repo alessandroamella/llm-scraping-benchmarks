@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-01-16 08:30:00",
+      "endDate": "2023-01-16 12:30:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21293,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006,
+      "outputCost": 0.0006788,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0007388
+    },
+    "hash": "bd251445ff4f50b768d934a1c04db279",
+    "sourceFile": "luned_16_gennaio_sciopero_atac_4_ore_servizio_rischio_830_1230.html",
+    "thoughts": "**Extracting strike data**\n\nI need to output JSON based on the provided content about an upcoming strike. The document clearly states there's a strike announced for Monday, January 16, lasting 4 hours from 8:30 AM to 12:30 PM. It mentions the union involved, Faisa-Cisal, and outlines that this affects the Atac network. \n\nSo, it's evident that the announcement is valid and confirms we're dealing with a strike. Now, I must gather the specific data points such as dates, location type, and other relevant details.",
+    "tokens": {
+      "input": 1200,
+      "output": 1697,
+      "total": 2897
+    }
+  }
+}

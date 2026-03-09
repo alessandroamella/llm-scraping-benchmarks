@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5655,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00025775,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.0008745,
+      "cachedCost": 0,
+      "totalCost": 0.00134225
+    },
+    "hash": "21b3b52185f66d549262a7ce87045cf8",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_di_24_ore_del_13_dicembre_2024_aggiornamento.html",
+    "thoughts": "**Analyzing the EAV Strike Announcement**\n\nOkay, let's break this down systematically. I'm looking at an announcement from EAV, which, if my understanding is correct, operates in Campania, region code 15. The title clearly indicates a \"Servizio Autolinee: Avviso di sciopero,\" meaning a strike notice for bus services, specifically for December 13th, 2024.\n\nThe announcement states a 24-hour strike, which is straightforward. It explicitly mentions guaranteed service bands, from 05:30 to 08:30 and 16:30 to 19:30. That's key for operational planning. Given the 24-hour timeframe, and the presence of service at the beginning and end of the day, I'm going to assume, as per standard interpretations, that the strike covers the entire operational day, starting at 00:00:00 and ending at 23:59:59 on December 13th, 2024. This matches the standard definition of a 24-hour strike.\n\nThe strike's scope is regional; given EAV's location, the \"15\" likely signifies Campania. It seems to pertain to their transport services. I'm inferring the following structured data from this information:\n\n*   `isStrike`: true\n*   `strikeData`:\n    *   `startDate`: \"2024-12-13 00:00:00\"\n    *   `endDate`: \"2024-12-13 23:59:59\"\n    *   `locationType`: \"REGIONAL\"\n    *   `locationCodes`: [\"15\"]\n    *   `guaranteedTimes`: [\"05:30-08:30\", \"16:30-19:30\"]\n\nI've verified the data's format and validity (dates, location type, codes, guaranteed times); I'm confident in the derived information. This allows for clear representation in our systems.\n\n\n",
+    "tokens": {
+      "input": 1031,
+      "output": 140,
+      "total": 1754
+    }
+  }
+}

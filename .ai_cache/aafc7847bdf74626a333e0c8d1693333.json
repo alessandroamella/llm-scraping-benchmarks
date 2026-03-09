@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-10-21 08:30:00",
+      "endDate": "2022-10-21 12:30:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "08:30-12:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 25072,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000612,
+      "outputCost": 0.0008212,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008824
+    },
+    "hash": "aafc7847bdf74626a333e0c8d1693333",
+    "sourceFile": "venerd_prossimo_bus_della_roma_tpl_rischio_830_1230_sciopero_usb.html",
+    "thoughts": "**Extracting strike data**\n\nIt looks like there's an upcoming strike risk based on the announcement, indicating potential disruptions. So, it seems like I need to confirm that isStrike is true. I'll extract the relevant strike data, including startDate, endDate, and location details. The dates mention \"Venerdì 21 ottobre,\" and the published date is October 18, 2022. I can confirm that Friday, October 21, 2022, is accurate, setting startDate for 2022-10-21 at 08:30:00 and endDate at 12:30:00.",
+    "tokens": {
+      "input": 1224,
+      "output": 2053,
+      "total": 3277
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-16 03:00:00",
+      "endDate": "2025-06-17 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4463,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0003065,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.000435,
+      "cachedCost": 0,
+      "totalCost": 0.0009515
+    },
+    "hash": "7f5e8432d364e3b2fdd0ac553f1e3a4c",
+    "sourceFile": "strike-detail-luned--16-giugno-sciopero-dei-treni-regionali.html",
+    "thoughts": "**Analyzing the Trenord Strike Information**\n\nOkay, so I'm looking at this information regarding a Trenord train strike in Lombardia. My analysis of this data is straightforward, given my expertise in data structuring and transportation systems. Let's see...\n\nI need to represent this strike as a JSON object. First, I have the strike details: the strike is scheduled for Monday, June 16, 2025. It starts at 03:00 and goes until 02:00 the next day, June 17, 2025, which gives me start and end dates. The location is Trenord, and specifically covers the Lombardia region, which is identified by code \"03.\" Important to note are the guaranteed service times: 06:00 to 09:00 and 18:00 to 21:00. These are key for travelers.\n\nTherefore, here's how I'd construct the JSON object:\n\nI'll start with `isStrike: true` to indicate this is indeed a strike. The meat of the information goes under `strikeData`, which will hold the start and end dates in the correct ISO format: `startDate: \"2025-06-16 03:00:00\"` and `endDate: \"2025-06-17 02:00:00\"`. Next, I will define the `locationType` as \"REGIONAL,\" and the `locationCodes` will be an array containing [\"03\"], representing Lombardia. Finally, I will include the `guaranteedTimes` as an array: `[\"06:00-09:00\", \"18:00-21:00\"]`. This information should be clear and easily consumable for any system.\n\n\n",
+    "tokens": {
+      "input": 1226,
+      "output": 140,
+      "total": 1656
+    }
+  }
+}

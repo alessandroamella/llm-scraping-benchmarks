@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4321,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.003762,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0003255,
+      "cachedCost": 0,
+      "totalCost": 0.0041025
+    },
+    "hash": "c62e9c5558820048e45fb1986d54859e",
+    "sourceFile": "sciopero_del_trasporto_pubblico_aperte_le_metropolitane_e_la_ferrovia_termini_centocelle.html",
+    "thoughts": "**Analyzing the Strike Information**\n\nOkay, my task is pretty straightforward: I need to figure out if this text from \"Roma Servizi per la Mobilità\" signals an *upcoming* strike. The input is a webpage snippet, and my output needs to be a JSON object with `isStrike` (a boolean) and potentially some strike details.\n\nLooking at the text, the key phrases are: \"È in corso lo sciopero nazionale del trasporto pubblico che si concluderà alle 12,30\" (The national public transport strike is underway and will end at 12:30.) and \"Aggiornato il: 10/01/2025\" (Updated on: 10/01/2025).\n\nThe phrase \"È in corso\" immediately jumps out at me. This clearly indicates that the strike is *already happening*. The \"Updated on\" date confirms that this information is current with the strike. Since the text describes a strike *in progress* on the date provided, it's not announcing a future event. Therefore, the most accurate conclusion is that `isStrike` should be `false`. I can return the JSON object: `{\"isStrike\": false}`.\n\n\n",
+    "tokens": {
+      "input": 15048,
+      "output": 10,
+      "total": 15275
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9512,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006697,
+      "outputCost": 0.0001924,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008621
+    },
+    "hash": "2ef6d89bfecd19e758372f8a2c8178b0",
+    "sourceFile": "sciopero_trasporto_pubblico_chiusa_metro_c_aperte_linee_bb1.html",
+    "thoughts": "**Processing strike announcement**\n\nI need to output JSON according to the strike_extraction schema. The core content indicates a strike announcement regarding public transport in Rome, specifying that metro line C is closed, while lines A and B/B1 are open. The document dates suggest it's an ongoing situation, stating the strike will end at 12:30. Therefore, it's not announcing a new strike. According to the instructions, I should set isStrike to false since it’s describing an ongoing strike.",
+    "tokens": {
+      "input": 13394,
+      "output": 481,
+      "total": 13875
+    }
+  }
+}

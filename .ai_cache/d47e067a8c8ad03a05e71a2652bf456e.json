@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-03-19 09:00:00",
+      "endDate": "2025-03-19 17:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 30110,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000799,
+      "outputCost": 0.0010472,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0011271
+    },
+    "hash": "d47e067a8c8ad03a05e71a2652bf456e",
+    "sourceFile": "strike-detail-mercoled--19-marzo-dalle-ore-9-alle-ore-17-scioper.html",
+    "thoughts": "**Determining strike details**\n\nI need to output JSON according to the strike extraction schema. The document talks about an upcoming national strike in Italy happening on Wednesday, March 19th, announced on March 17th. It’s from 9 AM to 5 PM and will impact various transportation services. Given that this is a national strike, I can confirm that `isStrike` should be true, and I’ll ensure to format the strike details with the correct date and time structure.",
+    "tokens": {
+      "input": 1598,
+      "output": 2618,
+      "total": 4216
+    }
+  }
+}

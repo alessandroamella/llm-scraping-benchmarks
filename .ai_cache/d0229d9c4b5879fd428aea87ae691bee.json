@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 25562,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000575,
+      "outputCost": 0.0010952,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0011527
+    },
+    "hash": "d0229d9c4b5879fd428aea87ae691bee",
+    "sourceFile": "eav_informa_sciopero_di_4_ore_del_28_01_2025.html",
+    "thoughts": "**Deciding on strike announcement**\n\nI need to determine if this document is announcing an upcoming strike. It clearly states \"Sciopero di 4 ore del 28/01/2025,\" which means a 4-hour strike on January 28, 2025. The note about substitute buses suggests preparation for that day. I should mark `isStrike` as true since it is indeed an announcement. I noted that the document doesn’t specify exact start or end times for the strike. I might have to deduce those later if possible.",
+    "tokens": {
+      "input": 1150,
+      "output": 2738,
+      "total": 3888
+    }
+  }
+}

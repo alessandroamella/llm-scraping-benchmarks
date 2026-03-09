@@ -1,43 +1,40 @@
 {
-  "timestamp": "2026-03-09T18:48:41.725Z",
+  "timestamp": "2026-03-09T19:16:06.320Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "ATAC",
     "fileName": "venerd_20_maggio_sciopero_24_ore_trasporto_pubblico_rischio.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "mineru-html",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"ATAC\" (the public transport company of Rome, Lazio (12)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: mineru-html):\n<html lang=\"it-IT\" prefix=\"og: https://ogp.me/ns#\"><body class=\"wp-singular comunicato-template-default single single-comunicato postid-10875 wp-embed-responsive wp-theme-hello-elementor wp-child-theme-hello-elementor-child hello-elementor-default elementor-default elementor-kit-12678 elementor-page-15972\">\n<div class=\"elementor elementor-15972 elementor-location-single post-10875 comunicato type-comunicato status-publish hentry\" data-elementor-id=\"15972\" data-elementor-post-type=\"elementor_library\" data-elementor-type=\"single-page\" data-rocket-location-hash=\"378080e96f0d626e7c6c9ad6012608ec\">\n<div class=\"elementor-element elementor-element-6ee3468 e-flex e-con-boxed e-con e-parent\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"6ee3468\" data-settings='{\"background_background\":\"classic\"}'>\n<div class=\"e-con-inner\">\n<div class=\"elementor-element elementor-element-6945d4c e-con-full e-flex e-con e-child\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"6945d4c\">\n<div class=\"elementor-element elementor-element-da182fa e-con-full e-flex e-con e-child\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"da182fa\">\n<div class=\"elementor-element elementor-element-aff84d2 elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading\" data-e-type=\"widget\" data-element_type=\"widget\" data-id=\"aff84d2\" data-widget_type=\"theme-post-title.default\">\n<div class=\"elementor-widget-container\">\n<h1 class=\"elementor-heading-title elementor-size-default\" _item_id=\"1\">Venerdì 20 maggio sciopero di 24 ore. Trasporto pubblico a rischio</h1> </div>\n</div>\n</div>\n</div>\n</div>\n</div>\n<div class=\"elementor-element elementor-element-32c51eb e-flex e-con-boxed e-con e-parent\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"32c51eb\" data-rocket-location-hash=\"66daadf289c41592d316e571051fc202\">\n<div class=\"e-con-inner\">\n<div class=\"elementor-element elementor-element-7a3d033 e-con-full e-flex e-con e-child\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"7a3d033\" id=\"main-content\">\n<div class=\"elementor-element elementor-element-723d484 elementor-widget elementor-widget-theme-post-content\" data-e-type=\"widget\" data-element_type=\"widget\" data-id=\"723d484\" data-widget_type=\"theme-post-content.default\">\n<div class=\"elementor-widget-container\">\n<p _item_id=\"3\">Venerdì 20 maggio trasporto pubblico a rischio per l’adesione dei sindacati Cub Trasporti, Cobas e Usb Lavoro Privato allo sciopero generale nazionale di 24 ore dei settori pubblici e privati. A Roma l’agitazione interesserà la rete Atac (bus, tram, metropolitana, ferrovie concesse) e le linee periferiche gestite dalla Roma Tpl. Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.</p>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</body></html>"
   },
   "response": {
     "parsedData": {
       "isStrike": true,
       "strikeData": {
-        "startDate": "2022-05-20 00:00:00",
-        "endDate": "2022-05-20 23:59:59",
-        "locationType": "REGIONAL",
-        "locationCodes": [
-          "12"
-        ],
+        "startDate": "2024-05-20 00:00:00",
+        "endDate": "2024-05-20 23:59:59",
+        "locationType": "NATIONAL",
         "guaranteedTimes": [
-          "05:30-08:30",
+          "00:00-08:30",
           "17:00-20:00"
         ]
       }
     },
     "usage": {
       "input": 1455,
-      "output": 140,
-      "total": 2134
+      "output": 131,
+      "total": 2337
     },
     "costUsd": {
       "inputCost": 0.00036375,
-      "outputCost": 0.00021,
-      "thinkingCost": 0.0008085,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.0011265,
       "cachedCost": 0,
-      "totalCost": 0.00138225
+      "totalCost": 0.00168675
     },
-    "durationMs": 5945,
-    "thoughts": "**Strike Information Extraction - My Thought Process**\n\nOkay, here's the deal. I need to process this HTML content and pull out information about a potential strike, but the output *must* be parseable JSON. My goal is to extract the details if it's indeed an upcoming strike.\n\nFirst, I see the phrase \"Venerdì 20 maggio sciopero di 24 ore.\" That translates to \"Friday, May 20, 24-hour strike.\" Good start. Then, \"adesione dei sindacati... allo sciopero generale nazionale di 24 ore dei settori pubblici e privati\" confirms this is a national strike affecting both public and private sectors. \"A Roma l’agitazione interesserà la rete Atac...\" tells me Rome (Lazio) is affected, and \"Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20\" provides the guaranteed service times: 05:30-08:30 and 17:00-20:00. These guaranteed hours imply a 24-hour strike (00:00-23:59).\n\nNow, the critical question: is this an announcement of an *upcoming* strike? Yes, I'm pretty sure it is.\n\nThe date is \"Venerdì 20 maggio\". The issue is the year is not specified. Considering the instruction \"Date and time in format yyyy-MM-dd HH:mm:ss\", I need a year. The HTML snippet doesn't give me any clues about the year, so in a standard extraction task, I would use either the current year, or assume a date.\n\nNow, wait... the text specifies the day as \"Venerdì\" (Friday). So, looking at the dates in the calendar, May 20th, 2024 is a Monday, May 20th, 2023 is a Saturday, and May 20th, 2022 was a Friday. I'll use 2022-05-20 as the most likely reference date, since it aligns with the day of the week, or I will use 2024-05-20. The year must be provided. For compliance, let's use 2022-05-20.\n\n\n"
+    "durationMs": 6730,
+    "thoughts": "**Analyzing the ATAC Strike Announcement**\n\nOkay, so I'm processing this ATAC strike announcement. First off, it's scheduled for Friday, May 20th. Crucially, the year isn't specified, but given the context of a typical announcement, I'm going to assume it's for 2024, or the current year if it is applicable. The prompt is requesting a date format as `yyyy-MM-dd`, and without any indication otherwise, I should include the year.\n\nThe announcement states it's a 24-hour strike. However, there are guaranteed service times: \"regolare fino alle 8,30 e dalle 17 alle 20\". This translates to service being guaranteed between 00:00-08:30 and 17:00-20:00. This is unusual, as a standard 24-hour strike usually implies complete disruption. The language confirms the service *will* be regular during those times, so the strike is in the gaps.\n\nI need to confirm the scope. \"Sciopero generale nazionale\" indicates it's a *national* strike. Therefore, `locationType` is definitely \"NATIONAL\". No specific location codes are necessary.\n\nBased on this information, I can now construct the strike data:\n\n*   `isStrike`: true.\n*   `strikeData`:\n    *   `startDate`: \"2024-05-20 00:00:00\" (Assuming 2024).\n    *   `endDate`: \"2024-05-20 23:59:59\".\n    *   `locationType`: \"NATIONAL\".\n    *   `locationCodes`: null.\n    *   `guaranteedTimes`: [\"00:00-08:30\", \"17:00-20:00\"].\n\nSo, that should cover all the necessary parameters, assuming the year is inferred as 2024. This is an announcement for an *upcoming* event, and now I have a good handle on the relevant parameters.\n\n\n"
   }
 }

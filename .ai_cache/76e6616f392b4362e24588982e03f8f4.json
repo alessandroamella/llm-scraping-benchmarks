@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-03-29 00:00:00",
+      "endDate": "2022-03-29 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 23217,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000605,
+      "outputCost": 0.0009716,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0010321
+    },
+    "hash": "76e6616f392b4362e24588982e03f8f4",
+    "sourceFile": "martedi_29_marzo_sciopera_24_ore_trasporto_pubblico_servizio_rischio.html",
+    "thoughts": "**Processing strike announcement**\n\nI need to output JSON according to the strike_extraction schema. The document is announcing an upcoming strike for public transport in Italy on Tuesday, March 29, 2022, lasting 24 hours. It reports the service will be at risk due to a strike by Atac workers. While the strike is set for that date, the content mentions it was updated earlier in January 2023. So, I'll ensure to format this information accurately.",
+    "tokens": {
+      "input": 1210,
+      "output": 2429,
+      "total": 3639
+    }
+  }
+}

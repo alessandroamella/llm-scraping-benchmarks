@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-09 00:00:00",
+      "endDate": "2025-12-09 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6111,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000187,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.0009,
+      "cachedCost": 0,
+      "totalCost": 0.001297
+    },
+    "hash": "149c72da59ebfd4890f01af835c68d4f",
+    "sourceFile": "martedi_9_dicembre_sciopero_del_trasporto_pubblico_possibili_stop_per_24_ore.html",
+    "thoughts": "**Strike Information Extraction - My Thought Process**\n\nOkay, let's break this down. The task is to pull strike information from this text, and I need to structure it into a JSON object. The target is ATAC, operating in Rome (region 12). The text describes a strike on \"Martedì 9 dicembre,\" and the publication date is December 4th, 2025. That means the strike is upcoming, on December 9th, 2025.\n\nThe text specifies a 24-hour strike, and it's happening in Rome, which is in region 12 (Lazio). Now, the crucial part: the guaranteed service times. The text says service will be regular \"fino alle 8,30\" and \"dalle 17 alle 20.\" I need to translate this into a standard format. That's essentially 00:00 to 08:30 and 17:00 to 20:00, which are likely the guaranteed service windows.\n\nTherefore, since the strike is for the entire day of the 9th, the start is 2025-12-09 00:00:00, and the end is 2025-12-09 23:59:59. This gives me everything I need. Now, to structure the JSON:\n\n*   `isStrike`: true (because the text explicitly states a strike)\n*   `strikeData`:\n    *   `startDate`: \"2025-12-09 00:00:00\"\n    *   `endDate`: \"2025-12-09 23:59:59\"\n    *   `locationType`: \"REGIONAL\" (Rome is within Lazio, which is the region 12)\n    *   `locationCodes`: \\[\"12\"] (region code for Lazio)\n    *   `guaranteedTimes`: \\[\"00:00-08:30\", \"17:00-20:00\"] (as extracted from the text, using the \"fino alle\" and \"dalle\" conventions for the guaranteed periods.)\n\nAnd I've got a format check. Done.\n\n\n",
+    "tokens": {
+      "input": 748,
+      "output": 140,
+      "total": 1488
+    }
+  }
+}

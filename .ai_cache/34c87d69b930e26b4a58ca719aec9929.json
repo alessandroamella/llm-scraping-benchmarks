@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-12-15 00:00:00",
+      "endDate": "2023-12-15 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19010,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006025,
+      "outputCost": 0.0007772,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00083745
+    },
+    "hash": "34c87d69b930e26b4a58ca719aec9929",
+    "sourceFile": "venerd_sciopero_nazionale_trasporto_pubblico_servizio_rischio.html",
+    "thoughts": "**Extracting strike information**\n\nI need to produce JSON based on the strike_extraction schema. The document seems to announce an upcoming strike, specifically for December 15, a national public transport strike in Italy. The content indicates services will be at risk, meaning we can mark it as an upcoming strike. So, I'll ensure to set isStrike to true and fill in details like start and end dates, location types, and guaranteed times based on the provided information.",
+    "tokens": {
+      "input": 1205,
+      "output": 1943,
+      "total": 3148
+    }
+  }
+}

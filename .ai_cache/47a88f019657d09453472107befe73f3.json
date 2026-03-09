@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-10 00:00:00",
+      "endDate": "2025-10-10 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 11003,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00373075,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.0011235,
+      "cachedCost": 0,
+      "totalCost": 0.00506425
+    },
+    "hash": "47a88f019657d09453472107befe73f3",
+    "sourceFile": "venerdi_10_sciopero_del_trasporto_pubblico_rete_atac_a_rischio.html",
+    "thoughts": "**Strike Analysis: Rome Atac - October 10, 2025**\n\nOkay, let's break this down. My source is the \"Roma Servizi per la Mobilità\" website, specifically the \"Venerdì 10 sciopero del trasporto pubblico, rete Atac a rischio\" entry. The publication date is mentioned as October 4, 2025 – so this is forward-looking. The core information is a planned transport strike, involving Atac, scheduled for Friday, October 10th, 2025. It's a combined 24-hour and 4-hour strike, interesting.\n\nThe text specifies guaranteed service windows: 00:00 to 08:30 and 17:00 to 20:00. Those are the times when service is *guaranteed* to be running, which means the strike effectively disables service outside of those blocks. So, the strike is confirmed. Given the 24-hour nature, the strike technically runs the full day of October 10th. The start and end times are inferred from the guaranteed service information, with the format aligning to the standard `YYYY-MM-DD HH:MM:SS`.\n\nBased on the data and the guaranteed times, my derived strike details are:\n\n*   The strike is active.\n*   The start date and time are: `2025-10-10 00:00:00`.\n*   The end date and time are: `2025-10-10 23:59:59`.\n*   The location type is \"REGIONAL\".\n*   The region code is \"12\" (Lazio).\n*   Guaranteed service times are: \"00:00-08:30\" and \"17:00-20:00\".\n\nNow, let's create the JSON as requested. I need to make sure I am returning a single JSON object.\n\n```json\n{\n    \"isStrike\": true,\n    \"strikeData\": {\n        \"startDate\": \"2025-10-10 00:00:00\",\n        \"endDate\": \"2025-10-10 23:59:59\",\n        \"locationType\": \"REGIONAL\",\n        \"locationCodes\": [\n            \"12\"\n        ],\n        \"guaranteedTimes\": [\n            \"00:00-08:30\",\n            \"17:00-20:00\"\n        ]\n    }\n}\n```\n\n\n",
+    "tokens": {
+      "input": 14923,
+      "output": 140,
+      "total": 15812
+    }
+  }
+}

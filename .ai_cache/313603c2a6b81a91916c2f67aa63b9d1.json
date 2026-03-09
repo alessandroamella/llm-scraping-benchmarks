@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-16 03:00:00",
+      "endDate": "2025-06-17 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4302,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00033225,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.0006555,
+      "cachedCost": 0,
+      "totalCost": 0.00119775
+    },
+    "hash": "313603c2a6b81a91916c2f67aa63b9d1",
+    "sourceFile": "strike-detail-luned--16-giugno-sciopero-dei-treni-regionali.html",
+    "thoughts": "**Analyzing the Trenord Strike Information**\n\nOkay, let's break down this data. I've received information from Trenord (specifically for the Lombardia region, code \"03\") regarding a planned strike. The source is a PDF titled \"Lunedì 16 giugno sciopero dei treni regionali\" – a regional train strike for Monday, June 16th.\n\nBased on the URL, and my understanding of the data, this is for June 16th, **2025**. The strike is organized by ORSA, and the strike will begin at 03:00 on June 16th and end at 02:00 on June 17th.\n\nThe scope of this strike encompasses regional, suburban, and airport connections within the Lombardia region. Crucially, there are guaranteed service periods: 06:00-09:00 and 18:00-21:00. This is important for determining the impact.\n\nI need to structure this data into a usable JSON format. I need to make sure the data includes `isStrike`, and `strikeData`. I need to convert it into a well formatted data object so that I can store it in the system. The dates must follow the `yyyy-MM-dd HH:mm:ss` format. I must make sure that `locationCodes` is an array of strings representing ISTAT codes, and that the `guaranteedTimes` are also formatted as an array of strings. This looks like a complete and well-defined data input regarding this strike event.\n\n\n",
+    "tokens": {
+      "input": 1329,
+      "output": 140,
+      "total": 1906
+    }
+  }
+}

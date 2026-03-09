@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9020,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000604,
+      "outputCost": 0.0001628,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002232
+    },
+    "hash": "0b39993d9fe877f72aa73fd5f66c540e",
+    "sourceFile": "sciopero_trasporto_pubblico_chiuse_metro_b1_c_aperte_linea_b_ferrovia_termini_centocelle.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to respond using the JSON format according to the strike_extraction schema. The content mentions a public transport strike in Rome, indicating it’s currently happening. The phrase \"È in corso lo sciopero di 24 ore\" means \"a 24-hour strike is underway,\" which shows it’s not an upcoming strike announcement but an ongoing one. According to the instructions, I should set isStrike to false since this is a real-time update and not a future event.",
+    "tokens": {
+      "input": 1208,
+      "output": 407,
+      "total": 1615
+    }
+  }
+}

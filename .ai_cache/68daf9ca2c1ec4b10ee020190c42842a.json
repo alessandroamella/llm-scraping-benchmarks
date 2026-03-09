@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4891,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007575,
+      "outputCost": 0.000154,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00022975
+    },
+    "hash": "68daf9ca2c1ec4b10ee020190c42842a",
+    "sourceFile": "sciopero_trasporto_pubblico_chiuse_metro_c_attiva_b.html",
+    "thoughts": "**Evaluating strike extraction format**\n\nI need to output JSON according to the strike extraction format. The article, titled \"Sciopero del trasporto pubblico, chiuse metro A e C, attiva la B,\" reports on an ongoing public transport strike in Italy. It states that the strike will finish by 12:30, and offers real-time updates on Metro A and C being closed while Metro B is active. Since this is about an ongoing strike, I’ll set isStrike to false, confirming it's not a new or upcoming strike.",
+    "tokens": {
+      "input": 1515,
+      "output": 385,
+      "total": 1900
+    }
+  }
+}

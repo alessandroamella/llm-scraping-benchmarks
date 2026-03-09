@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9301,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006025,
+      "outputCost": 0.0002024,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00026265
+    },
+    "hash": "46be95ec435a41336d7101f06f4df966",
+    "sourceFile": "sciopero_trasporto_pubblico_aperte_metropolitane.html",
+    "thoughts": "**Confirming strike status**\n\nI need to determine the strike status based on the instructions: if it’s ongoing, `isStrike` should be false, and that's the case here. The content describes an ongoing public transport strike but doesn’t require additional details like location or guaranteed times. I’ll output a simple JSON object: `{\"isStrike\": false}`. It’s important to make sure the formatting is plain JSON. I’ve confirmed everything matches up, so I’ll keep it minimal.",
+    "tokens": {
+      "input": 1205,
+      "output": 506,
+      "total": 1711
+    }
+  }
+}

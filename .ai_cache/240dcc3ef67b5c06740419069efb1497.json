@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-03 00:00:00",
+      "endDate": "2025-10-03 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4093,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00031325,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.0005295,
+      "cachedCost": 0,
+      "totalCost": 0.00103925
+    },
+    "hash": "240dcc3ef67b5c06740419069efb1497",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_generale_nazionale_di_24_ore_venerdi_03_ottobre_2025.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, here's the breakdown of this strike notification. Immediately, I see it's an announcement for a national general strike. The key piece of information is the start date: **October 3, 2025**. It's a full 24-hour strike, from midnight to just before midnight that day, and that's critical for planning. The company referenced, EAV (Campania, 15), is specifically mentioned; I'll need to remember that this pertains to their operations.\n\nMy internal checks confirm: `isStrike: true`, and the `startDate` and `endDate` are correctly parsed and stored. The location type is correctly categorized as \"NATIONAL\" and consequently the `locationCodes` is `null`. I confirm the strike times. The guaranteed service bands are there: 05:30-08:30 and 16:30-19:30. These times are crucial to note, because the `guaranteedTimes` tell me which parts of the day will *likely* see normal operations.\n\nThe announcement itself confirms everything; It appears to be a formal announcement. The JSON structure is as expected, with the `isStrike` flag set to true, and nested strike data, as my system is designed to parse. All data is correctly captured and categorized.\n\n\n",
+    "tokens": {
+      "input": 1253,
+      "output": 131,
+      "total": 1737
+    }
+  }
+}

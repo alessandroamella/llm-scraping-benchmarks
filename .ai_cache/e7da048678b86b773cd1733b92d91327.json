@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 09:00:00",
+      "endDate": "2024-12-13 13:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6246,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00027925,
+      "outputCost": 0.0001335,
+      "thinkingCost": 0.000885,
+      "cachedCost": 0,
+      "totalCost": 0.00129775
+    },
+    "hash": "e7da048678b86b773cd1733b92d91327",
+    "sourceFile": "linea_metropolitana_avvisi_di_sciopero_di_4_ore_del_13_dicembre_2024.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, my primary goal here is to figure out if this text confirms an upcoming strike. Let's break it down methodically. First, I see the core information: a strike is scheduled for December 13, 2024. That's a definite \"yes\" on the \"upcoming strike\" check.\n\nThe text specifies a 4-hour strike, from 09:00 to 13:00, impacting EAV services in the Campania region. Crucially, it clarifies this is a *reduced* national strike (\"sciopero generale nazionale\") brought down to four hours by ministerial decree.\n\nNow, let's address the key constraints. The date and time are clearly stated, so those fields are easily filled. The \"locationType\" is interesting. While it's a *national* strike by its initial definition, it's specifically affecting a *regional* entity, EAV, operating in Campania. My first instinct is to classify it as NATIONAL because of the phrase \"sciopero generale nazionale\", but that's potentially misleading. In the end, because the scope is regional, I'll go with NATIONAL, because it's a national strike scaled down to the regional scope.\n\nRegarding location codes, since it’s a national strike, I need to represent that the strike spans a large geographic area. Thus, `locationCodes` should be `null` because it represents the scope of the strike's area. If I were representing it from the perspective of the company EAV, I'd specify Campania.\n\nFinally, the text mentions \"guaranteed departures,\" which I need to think about. The prompt is asking for *guaranteed* times, but the text outlines last departures *before* the strike and first departures *after* the strike. I think it is trying to specify times outside of the strike, but the prompt is asking about the opposite, so I will omit this information.\n\nIn conclusion: This is a confirmed strike.\n\n*   `isStrike`: true\n*   `startDate`: \"2024-12-13 09:00:00\"\n*   `endDate`: \"2024-12-13 13:00:00\"\n*   `locationType`: \"NATIONAL\"\n*   `locationCodes`: null\n\n\n",
+    "tokens": {
+      "input": 1117,
+      "output": 89,
+      "total": 1796
+    }
+  }
+}

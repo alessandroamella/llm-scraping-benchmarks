@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-11-29 09:00:00",
+      "endDate": "2024-11-29 13:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5153,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00035825,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.000468,
+      "cachedCost": 0,
+      "totalCost": 0.00097475
+    },
+    "hash": "9fac5a6569c4c094bd472a21b53c6295",
+    "sourceFile": "strike-detail-venerd--29-novembre-dalle-9-alle-13-sciopero-gener.html",
+    "thoughts": "**Analyzing the Trenord Strike Announcement**\n\nOkay, so I've got this Trenord announcement about a strike to process. First things first, it's a general strike affecting the FERROVIENORD network. Based on the standard cadence of announcements, I'm going to assume this is for November 29th, 2024. The strike duration is clearly from 09:00 to 13:00. This is pretty straightforward information.\n\nMy task now is to extract this data and structure it into a JSON object adhering to the specified schema. Let's break it down: `isStrike` is definitely `true`. The `startDate` is easy: \"2024-11-29 09:00:00\" and the `endDate` is \"2024-11-29 13:00:00\". The affected `locationType` is clearly \"REGIONAL\", since it's the Lombardia region, which is denoted with the location code \"03\". Therefore, I'll set the `locationCodes` array to `[\"03\"]`.\n\nNow, the trickier part: `guaranteedTimes`. The announcement mentions trains *departing* before 09:00 will run, but it doesn't give me any specific intervals or \"guaranteed slots\" which is what I'd expect to see. Since the schema requests `guaranteedTimes` but there are no specific guarantees stated, I'm going to omit this field. Best to err on the side of caution and avoid making assumptions based on incomplete data. I'm going to return an empty string to denote no information, to be compliant with the schema, rather than guess and potentially misinterpret the announcement. That's it, that's all the pertinent info I need. I'm ready to assemble the JSON object.\n\n\n",
+    "tokens": {
+      "input": 1433,
+      "output": 99,
+      "total": 1844
+    }
+  }
+}

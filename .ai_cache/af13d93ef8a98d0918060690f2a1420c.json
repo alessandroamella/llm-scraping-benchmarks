@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-03 00:00:00",
+      "endDate": "2025-10-03 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18516,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000821,
+      "outputCost": 0.0006024,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0006845
+    },
+    "hash": "af13d93ef8a98d0918060690f2a1420c",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_generale_nazionale_di_24_ore_venerdi_03_ottobre_2025.html",
+    "thoughts": "**Clarifying parameters**\n\nThe instruction specifies 24 hours without explicitly defining the time frame from 00:00 to 23:59. I’ll set the endDate as 2025-10-03 23:59:59 to cover the full day. It seems like the locationType should be \"NATIONAL\" since it's a national strike rather than regional. The schema indicates that location codes can be omitted for national strikes, meaning I'm setting locationType to \"NATIONAL\" and keeping locationCodes null.",
+    "tokens": {
+      "input": 1642,
+      "output": 1506,
+      "total": 3148
+    }
+  }
+}

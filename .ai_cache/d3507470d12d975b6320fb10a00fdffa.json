@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-05-11 00:00:00",
+      "endDate": "2025-05-11 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24251,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006535,
+      "outputCost": 0.0008056,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00087095
+    },
+    "hash": "d3507470d12d975b6320fb10a00fdffa",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_24h_domenica_11_maggio_2025.html",
+    "thoughts": "**Clarifying date formats**\n\nIt looks like the dates in the instruction should be in ISO 8601 format for the strikeData, with startDate and endDate specified as \"yyyy-MM-dd HH:mm:ss.\" The content mentions 24 hours on Sunday, May 11, 2025, so I think startDate would be 2025-05-11 00:00:00 and endDate at 2025-05-11 23:59:59. However, there’s ambiguity in the times mentioned for the guaranteedTimes arrays. I need to verify whether to include or omit them based on the instructions.",
+    "tokens": {
+      "input": 1307,
+      "output": 2014,
+      "total": 3321
+    }
+  }
+}

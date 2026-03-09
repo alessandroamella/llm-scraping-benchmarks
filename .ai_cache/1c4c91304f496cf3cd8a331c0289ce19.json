@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4787,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00062925,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.000732,
+      "cachedCost": 0,
+      "totalCost": 0.00155775
+    },
+    "hash": "1c4c91304f496cf3cd8a331c0289ce19",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_generale_nazionale_di_venerdi_12_dicembre_2025.html",
+    "thoughts": "**Analyzing the EAV Strike Announcement**\n\nOkay, so I've got this notification from EAV – the Campania public transport authority – announcing a general national strike. Right away, my analytical brain kicks in. The critical piece of information here is the strike date: **December 12th, 2025**. It's a general strike, which immediately tells me it's likely a 24-hour event, though I'll always confirm that assumption.\n\nLooking closer, I'm noting the structured data: `isStrike: true` – confirming the obvious, and then the `strikeData` object.  The `startDate` and `endDate` are both set to December 12th, 2025, from midnight to just before midnight, aligning with the \"general\" implication. The `locationType` is `NATIONAL`, which is important for scope. The `locationCodes` are `null`, which makes sense for a national event. Most importantly, I see the `guaranteedTimes`: \"05:30-08:30\" and \"16:30-19:30\".  That tells me these are the operating windows for essential services.\n\nSo, in summary, I'm processing a brand-new, nationwide strike planned for December 12, 2025. It's a full-day event, impacting all of Italy, with reduced service available during the two time windows mentioned earlier. My immediate next step is checking for any related information and potentially cross-referencing this data with other sources to see if there are additional details or official communications.\n\n\n",
+    "tokens": {
+      "input": 2517,
+      "output": 131,
+      "total": 3136
+    }
+  }
+}

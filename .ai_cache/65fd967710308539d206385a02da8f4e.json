@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 09:00:00",
+      "endDate": "2024-12-13 13:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 25358,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000849,
+      "outputCost": 0.0008352,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0009201
+    },
+    "hash": "65fd967710308539d206385a02da8f4e",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_di_4_ore_del_13_dicembre_2024.html",
+    "thoughts": "**Evaluating departure codes and times**\n\nI’m examining the schema for location codes, recognizing that it should be an array of strings or null. Since the location type is national, I'll set \"locationCodes\" to null.  \n\nFor \"guaranteedTimes,\" the documentation mentions guaranteed departures. I’m trying to determine if these are related to a national strike, specified under \"fasce di garanzia.\" The times listed indicate the last guaranteed departures before the strike, but I need to consider the format. It’s essential to have those times as \"HH:mm-HH:mm\" when applicable.",
+    "tokens": {
+      "input": 1698,
+      "output": 2088,
+      "total": 3786
+    }
+  }
+}

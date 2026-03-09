@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-03-10 20:00:00",
+      "endDate": "2026-03-11 00:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7977,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0037585,
+      "outputCost": 0.0001395,
+      "thinkingCost": 0.000852,
+      "cachedCost": 0,
+      "totalCost": 0.00475
+    },
+    "hash": "042d6d8faad539411af51ab01f80af89",
+    "sourceFile": "domani_sciopero_serale_di_4_ore_a_rischio_i_bus_del_deposito_magliana.html",
+    "thoughts": "**Strike Analysis: Rome - Magliana Depot**\n\nOkay, let's break this down. My task is to determine if this text announces a strike and, if so, to extract the relevant data and format it into a valid JSON object. The input is a text about a 4-hour strike, and I need to structure the output according to the specified schema, taking into account the date and time format constraints.\n\nThe text reads, \"Domani sciopero serale di 4 ore. A rischio i bus del deposito Magliana\".  Right away, I see \"sciopero\" which means \"strike\", so `isStrike` is definitely `true`.\n\nNow, let's extract the strike details. The text explicitly mentions a \"4-hour strike\" (\"4 ore\") \"tomorrow evening\" (\"domani sera\") that affects the \"Magliana depot\". The published date is March 9th, 2026. Therefore, \"tomorrow\" (\"domani\") is March 10th, 2026.\n\nThe text specifies the strike is from \"20 alle 24\" – that's 20:00 to 24:00 (8 PM to midnight). This gives me the `startDate` and `endDate`. Since the format requires 'yyyy-MM-dd HH:mm:ss', `startDate` is \"2026-03-10 20:00:00\". For the end date, the text states \"24:00\" which is midnight and four hours from 20:00, hence \"2026-03-10 23:59:59\" or \"2026-03-11 00:00:00\" is a sensible choice for `endDate`. I'll confirm which to use based on the context in the JSON schema.\n\n\"Magliana\" is a depot in Rome, which falls under Lazio (code \"12\").  Therefore, the `locationType` is \"REGIONAL\", and the `locationCodes` should be `[\"12\"]`.\n\nThe text doesn't mention any \"guaranteed times,\" so I won't include that field.\n\nBased on all of this, here's how I'll construct the JSON output. I will use \"2026-03-10 23:59:59\" for `endDate`.\n\n\n",
+    "tokens": {
+      "input": 15034,
+      "output": 93,
+      "total": 15695
+    }
+  }
+}

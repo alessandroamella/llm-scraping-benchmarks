@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-09-06 03:00:00",
+      "endDate": "2023-09-07 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5310,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00030775,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.0007725,
+      "cachedCost": 0,
+      "totalCost": 0.00129025
+    },
+    "hash": "d2329325057efa912af7e803e784e621",
+    "sourceFile": "strike-detail-mercoled--6-settembre--sciopero-dei-treni-regional.html",
+    "thoughts": "**Strike Analysis Summary**\n\nOkay, let's break this down. The primary task is clear: determine if the input constitutes a strike and, if so, format the relevant data into a valid JSON object. I need to be precise here, ensuring the output adheres to the specified constraints.\n\nThe input is news regarding a Trenord strike in the Lombardia region (\"03\") starting September 6, 2023. Let's start with the key parameters. I need to generate `isStrike`, `strikeData`.\n\nThe provided information confirms a strike; thus, `isStrike` will be `true`. Now, for the `strikeData` object. I will extract the following specifics:\n\n*   **Start Date**: Wednesday, September 6, 2023, 03:00. This translates to \"2023-09-06 03:00:00\".\n*   **End Date**: Thursday, September 7, 2023, 02:00, which becomes \"2023-09-07 02:00:00\".\n*   **Location Type**: The strike is regional within Lombardia, so \"REGIONAL\" makes sense.\n*   **Location Codes**: The relevant code for Lombardia is \"03,\" so `locationCodes` should contain `[\"03\"]`.\n*   **Guaranteed Times**: There are guaranteed service windows: 06:00-09:00 and 18:00-21:00. These become `[\"06:00-09:00\", \"18:00-21:00\"]`.\n\nNow, the crucial step: assemble the JSON object. I'll need to guarantee the output adheres to these rules:\n\n*   Valid JSON format.\n*   No comments.\n*   No extraneous text.\n*   All strings correctly double-quoted.\n\nTherefore, my final generated JSON output should look like this (as shown above):\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2023-09-06 03:00:00\",\n    \"endDate\": \"2023-09-07 02:00:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"03\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n```\nThis should satisfy all the requirements.\n\n\n",
+    "tokens": {
+      "input": 1231,
+      "output": 140,
+      "total": 1886
+    }
+  }
+}

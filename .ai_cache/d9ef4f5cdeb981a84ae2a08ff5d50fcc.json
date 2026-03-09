@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-03-22 19:40:00",
+      "endDate": "2025-03-22 23:40:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5247,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00028,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.0007365,
+      "cachedCost": 0,
+      "totalCost": 0.001165
+    },
+    "hash": "d9ef4f5cdeb981a84ae2a08ff5d50fcc",
+    "sourceFile": "suburbane_sciopero_del_22_marzo_2025.html",
+    "thoughts": "**My Analysis of the Strike Information**\n\nOkay, my primary goal here is to pull out the relevant details about this strike from the provided text. Let's see... the text clearly describes an *upcoming* strike. The company involved is EAV, which, in this context, is located in the Campania region, code \"15\". The text says, \"Linee Suburbane - Avviso di sciopero di 4 ore del 22 marzo 2025.\"\n\nNow, for the specifics. The strike is scheduled for March 22nd, 2025, lasting four hours, from 19:40 to 23:40. So, I have `startDate` as \"2025-03-22 19:40:00\" and `endDate` as \"2025-03-22 23:40:00\".\n\nThe location is EAV, which translates to a `locationType` of \"REGIONAL\", and the region code is \"15\" for Campania.\n\nThe crucial point about guaranteed services is next. The text mentions \"Di seguito vengono elencate le ultime e le prime partenze garantite in relazione alle fasce di garanzia,\" but it doesn't give a traditional time range like \"06:00-09:00\". Instead, it lists specific train departures. Since the schema expects an array of time ranges `HH:mm-HH:mm`, and I don't have a time range, it's safer and correct to omit the `guaranteedTimes` field. The schema says that it's optional, and the text only mentions specific trains, not time ranges.\n\nTherefore, my structure is: `isStrike`: true, `startDate`: \"2025-03-22 19:40:00\", `endDate`: \"2025-03-22 23:40:00\", `locationType`: \"REGIONAL\", `locationCodes`: [\"15\"], `guaranteedTimes`: omitted. I will double-check the date/time format to ensure it's `yyyy-MM-dd HH:mm:ss`. Yes, it's correct. Also the location code (\"15\") is for the Campania region. Excellent, I think I have extracted all the necessary details.\n\n\n",
+    "tokens": {
+      "input": 1120,
+      "output": 99,
+      "total": 1710
+    }
+  }
+}

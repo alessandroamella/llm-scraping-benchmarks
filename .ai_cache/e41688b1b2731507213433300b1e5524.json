@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8729,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000731,
+      "outputCost": 0.0001888,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002619
+    },
+    "hash": "e41688b1b2731507213433300b1e5524",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_144.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to format the output as JSON following the required schema. The Italian content mentions a public transport strike and indicates current participation rates from Atac staff. Phrases like \"oggi\" mean it's about a strike that’s happening today, and the participation rate is at 14.4%. So this is not an announcement for an upcoming strike; it’s a report on current participation. Therefore, I’ll mark isStrike as false. The document title reinforces this context.",
+    "tokens": {
+      "input": 1462,
+      "output": 472,
+      "total": 1934
+    }
+  }
+}

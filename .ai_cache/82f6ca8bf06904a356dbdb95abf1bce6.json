@@ -1,0 +1,39 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:01:00",
+      "endDate": "2025-12-12 23:59:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "04",
+        "05"
+      ],
+      "guaranteedTimes": [
+        "00:01-21:00",
+        "00:01-23:59"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22629,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000766,
+      "outputCost": 0.0011232,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0011998
+    },
+    "hash": "82f6ca8bf06904a356dbdb95abf1bce6",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-12-12-sciopero-del-personale-di-sad-.html",
+    "thoughts": "**Evaluating strike data**\n\nI need to output JSON specifying whether there's a strike happening for SAD and Trentino Trasporti personnel on December 12, 2025. The content indicates that they've called a strike for this day. Since this date is in the future, it confirms we're dealing with an upcoming strike. Therefore, I'll set isStrike to true and record the start and end times for that day as per the provided format.",
+    "tokens": {
+      "input": 1532,
+      "output": 2808,
+      "total": 4340
+    }
+  }
+}

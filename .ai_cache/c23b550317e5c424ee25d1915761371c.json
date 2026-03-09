@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3904,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0018845,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000225,
+      "cachedCost": 0,
+      "totalCost": 0.0021245
+    },
+    "hash": "c23b550317e5c424ee25d1915761371c",
+    "sourceFile": "strike-detail-venerd--29-novembre-revocato-sciopero-ferrovienord.html",
+    "thoughts": "**Analyzing the Trenord News**\n\nOkay, so I just received this input from Trenord: \"Venerdì 29 novembre revocato sciopero FERROVIENORD.\" My primary goal is to decipher whether this is a strike announcement or a cancellation of a previously announced strike. I need to return a valid JSON object according to a specific schema.\n\nLet's break it down: \"revocato\" clearly indicates a *revocation* or cancellation. Therefore, this message is confirming that a strike has been cancelled. Following the provided instructions, if it's a cancellation, the `isStrike` key must be set to `false`.\n\nGiven this analysis, I'm confident in setting `isStrike` to `false`. Since this is a simple \"no strike\" scenario, and based on the constraints, I will only include `isStrike: false` in the final JSON output.\n\n\n",
+    "tokens": {
+      "input": 7538,
+      "output": 10,
+      "total": 7698
+    }
+  }
+}

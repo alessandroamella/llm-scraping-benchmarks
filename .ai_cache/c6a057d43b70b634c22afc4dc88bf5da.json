@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8733,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00067575,
+      "outputCost": 0.0002008,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00087655
+    },
+    "hash": "c6a057d43b70b634c22afc4dc88bf5da",
+    "sourceFile": "sciopero_nazionale_trasporto_chiuse_metro_bb1_linea_c_corso_lavori_prolungamento_colosseo.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to output JSON according to the schema. The content clearly states there’s a national transport strike affecting metro lines A, B/B1, and ongoing work on Line C. It’s mentioned that the strike started on October 5, 2024, with public transportation being disrupted. I realize this is not announcing a new strike but providing real-time updates about the current situation. So, I'm concluding that the document describes an ongoing strike rather than a new announcement.",
+    "tokens": {
+      "input": 13515,
+      "output": 502,
+      "total": 14017
+    }
+  }
+}

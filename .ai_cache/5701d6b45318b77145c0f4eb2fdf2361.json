@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4921,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007775,
+      "outputCost": 0.0001004,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00017815
+    },
+    "hash": "5701d6b45318b77145c0f4eb2fdf2361",
+    "sourceFile": "sciopero_del_trasporto_pubblico_aperte_le_metropolitane_2.html",
+    "thoughts": "**Determining strike information**\n\nI need to make sure I output JSON in the specified format. The document talks about an ongoing public transport strike, specifically saying that metros are open. It's clear that it's not announcing an upcoming strike, but rather providing updates on an existing 24-hour general strike. So, based on that, I’ll correctly set \"isStrike\" to false. The final output will simply be: {\"isStrike\": false}.",
+    "tokens": {
+      "input": 1555,
+      "output": 251,
+      "total": 1806
+    }
+  }
+}

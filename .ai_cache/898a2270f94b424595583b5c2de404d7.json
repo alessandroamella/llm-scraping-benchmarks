@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-07-07 00:00:00",
+      "endDate": "2023-07-07 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7838,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00036125,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.0014775,
+      "cachedCost": 0,
+      "totalCost": 0.00203525
+    },
+    "hash": "898a2270f94b424595583b5c2de404d7",
+    "sourceFile": "venerd_7_luglio_trasporto_pubblico_rischio_sciopero_nazionale_24_ore_della_faisa_confail.html",
+    "thoughts": "**Strike Analysis: Faisa Confail National Strike - July 7th**\n\nOkay, let's break this down. My task is to determine if this input constitutes a strike announcement and, if so, to extract the relevant strike data based on the provided JSON schema. The input is a webpage stating a Faisa Confail national strike for Friday, July 7th. It's in Italian, but I can handle that.\n\nFirst, I need to confirm if it *is* a strike. The text clearly states \"Sciopero nazionale di 24 ore della Faisa Confail\" – a 24-hour national strike. So, `isStrike` is definitely `true`.\n\nNow, for the data extraction. The schema requires `strikeData` when `isStrike` is true. Let's start with the date. It's Friday, July 7th. The year is not explicitly stated. My usual practice is to assume the current year if it's missing (unless there is an explicit instruction otherwise). Since July 7th, 2023, was a Friday, I'll go with that, bearing in mind the date format required is `YYYY-MM-DD`. So, `startDate` is \"2023-07-07 00:00:00\" and `endDate` is \"2023-07-07 23:59:59\". The strike is \"nazionale,\" so `locationType` will be \"NATIONAL\" and `locationCodes` will be `null`.\n\nNext, the guaranteed times. The text states \"Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" (Service will be regular until 08:30 and from 17:00 to 20:00). So, I need to interpret these ranges as guaranteed service times. The initial interpretation would be [\"00:00-08:30\", \"17:00-20:00\"]. The text implies that the service will be normal during these hours. Since it is a 24h strike, the guaranteed times are typically in the morning and evening, the provided ranges, are likely correct. Therefore, the final `strikeData` should be:\n\n*   `startDate`: \"2023-07-07 00:00:00\"\n*   `endDate`: \"2023-07-07 23:59:59\"\n*   `locationType`: \"NATIONAL\"\n*   `locationCodes`: `null`\n*   `guaranteedTimes`: [\"00:00-08:30\", \"17:00-20:00\"]\n\nLooks like I've got a complete and accurate extraction, adhering to the schema.\n\n\n",
+    "tokens": {
+      "input": 1445,
+      "output": 131,
+      "total": 2561
+    }
+  }
+}

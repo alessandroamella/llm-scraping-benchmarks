@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-20 00:00:00",
+      "endDate": "2025-06-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 23064,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006755,
+      "outputCost": 0.0006072,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00067475
+    },
+    "hash": "3b9c017c37901edde7bab2d78e337bb1",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_24h_giorno_venerdi_20_giugno_2025.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to output JSON according to the required schema. The document is clearly announcing an upcoming strike, stating that the USB union has proclaimed a 24-hour strike for June 20, 2025, specifying guaranteed times from 05:30 to 08:30 and 16:30 to 19:30. Since it's labeled as an announcement for that date, it confirms that yes, this is indeed indicating a forthcoming strike. So, isStrike = true.",
+    "tokens": {
+      "input": 1351,
+      "output": 1518,
+      "total": 2869
+    }
+  }
+}

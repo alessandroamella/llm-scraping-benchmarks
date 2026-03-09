@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3941,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0037015,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0004125,
+      "cachedCost": 0,
+      "totalCost": 0.004129
+    },
+    "hash": "6608e884b78d4060e0dfcaa7f5bf58f2",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_212.html",
+    "thoughts": "**My Analysis of the Strike Information**\n\nOkay, let me break this down. My goal here is to extract strike information and return it as a single JSON object, adhering to the `isStrike` (boolean) and `strikeData` schema. The ultimate objective is to determine if this is an *upcoming* strike.\n\nI've got the title: \"Sciopero del trasporto pubblico, adesione personale Atac al 21,2% - Roma Servizi per la Mobilità\" and content: \"L’adesione complessiva del personale Atac allo sciopero del trasporto pubblico, rilevata a metà mattinata, è stata pari al 21,2%.\" along with publication dates of 07/07/2023 and an update on 08/07/2023. Given my expertise, it's clear the content is reporting *after* or during the strike has occurred, specifically detailing the level of participation (\"adesione\").\n\nThe prompt is quite explicit: \"If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\" This content perfectly describes a report of participation after or during a strike. Therefore, the most accurate representation of this information within the required format is:\n\n*   `isStrike`: `false`\n\nThe final output will be a JSON object incorporating this value.\n\n\n",
+    "tokens": {
+      "input": 14806,
+      "output": 10,
+      "total": 15091
+    }
+  }
+}

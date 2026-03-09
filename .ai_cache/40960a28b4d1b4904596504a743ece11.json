@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8060,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0002235,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.000957,
+      "cachedCost": 0,
+      "totalCost": 0.001377
+    },
+    "hash": "40960a28b4d1b4904596504a743ece11",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-12-12-sciopero-nazionale-personale-a.html",
+    "thoughts": "**Analyzing Strike Information for JSON Output**\n\nOkay, let's break this down. My task is clear: I need to analyze this text and produce a JSON output that adheres to a predefined schema. The input is an announcement about a national strike involving bus personnel (Trenitalia, I'm assuming). My primary goal is to determine if a strike is confirmed and, if so, extract relevant details like the start and end dates, the affected location, and any guaranteed service times.\n\nThe page title itself, \"SCIOPERO NAZIONALE PERSONALE AUTOFERROTRANVIERI,\" immediately flags \"NATIONAL\" and \"STRIKE.\" The text confirms, \"In vigore: 12 DICEMBRE 2025\" and the content says, \"Il giorno venerdì 12 dicembre 2025... è stato indetto uno sciopero di 24 ore...\" This clearly indicates an upcoming strike. So, `isStrike` is definitely `true`.\n\nNow, for the strike details. The date is December 12, 2025. It's a 24-hour strike. This translates to a start time of \"2025-12-12 00:00:00\" and an end time of \"2025-12-12 23:59:59.\" The scope is explicitly stated as \"sciopero generale,\" which confirms \"NATIONAL\" as the `locationType`. Since it's national, I don't need `locationCodes`; that field should be `null`. The guaranteed times are stated as \"dalle ore 6.00 alle ore 9.00 e dalle ore 18.00 alle ore 21.00\", so I'll translate that to [\"06:00-09:00\", \"18:00-21:00\"].\n\nTherefore, I have:\n*   `isStrike`: `true`\n*   `startDate`: \"2025-12-12 00:00:00\"\n*   `endDate`: \"2025-12-12 23:59:59\"\n*   `locationType`: \"NATIONAL\"\n*   `locationCodes`: `null`\n*   `guaranteedTimes`: [\"06:00-09:00\", \"18:00-21:00\"]\n\nI also checked to confirm that the start/end dates for a 24 hour strike on Dec 12, 2025 should be 00:00:00 to 23:59:59 on the same date.\n\nFinally, I need to ensure the JSON is valid. Is it well-formed? No comments, no control tokens, a single object, or an array? Yes, it's ready. The structure I have constructed is now ready to be rendered to the user.\n\n\n",
+    "tokens": {
+      "input": 894,
+      "output": 131,
+      "total": 1663
+    }
+  }
+}

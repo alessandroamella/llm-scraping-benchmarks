@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-11-29 09:00:00",
+      "endDate": "2024-11-29 13:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4470,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.002044,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.000552,
+      "cachedCost": 0,
+      "totalCost": 0.0027445
+    },
+    "hash": "429066b5678a4893506a6f832852726e",
+    "sourceFile": "strike-detail-venerd--29-novembre-dalle-9-alle-13-sciopero-gener.html",
+    "thoughts": "**Analyzing Trenord Strike Information**\n\nOkay, so the user wants me to pull strike information from this text about a Trenord strike. My goal is a JSON object, so I need to translate the text into the correct fields.\n\nFirst, the document explicitly states there *is* a strike (\"sciopero generale\"), so `isStrike` is definitely `true`.\n\nNext, the date and time are straightforward: \"Venerdì 29 novembre dalle 9 alle 13\" translates to a `startDate` of \"2024-11-29 09:00:00\" and an `endDate` of \"2024-11-29 13:00:00\".\n\nNow, for the location. \"Rete Ferrovienord\" implies the strike impacts the regional network within the Lombardia region. I should set the `locationType` to \"REGIONAL\" and use \"03\" for the `locationCodes`, as that is the standard region code.\n\nFinally, the text mentions that trains that depart *before* 9 am will travel. The prompt wants me to leave out \"guaranteedTimes\" if the time windows are not explicitly given. This isn't a *guaranteed* window (like 6-9 AM), but a rule, so I'll omit this field entirely from my output, as directed.\n\nTherefore, the final output JSON should look like this:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-11-29 09:00:00\",\n    \"endDate\": \"2024-11-29 13:00:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"03\"]\n  }\n}\n```\n\n\n",
+    "tokens": {
+      "input": 8176,
+      "output": 99,
+      "total": 8643
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-09-30 03:00:00",
+      "endDate": "2024-10-01 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4289,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000318,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.000567,
+      "cachedCost": 0,
+      "totalCost": 0.001095
+    },
+    "hash": "36d939b1098c3d4291ee7c9bb516d8e6",
+    "sourceFile": "strike-detail-sciopero-del-trasporto-ferroviario-luned--30-sette.html",
+    "thoughts": "**Analyzing the Trenord Strike Information**\n\nOkay, let's break this down. First, the source is Trenord, specifically for the Lombardia region, identified by the code \"03.\" The core message is clear: there's a railway strike, and it's happening on Monday, September 30th. I need to make sure I present this with a standardized date format, so I'll render the year as 2024, if no specific year is given.\n\nThe strike kicks off at 03:00 on September 30th and runs until 02:00 on October 1st. Important to note are the guaranteed service times: between 06:00 and 09:00, and again from 18:00 to 21:00. This is crucial for any travel planning.\n\nFrom a data perspective, I'm confirming that the required strike data components are present: `startDate`, `endDate`, and `locationType`. The `locationCodes` is also correctly formatted as an array of strings, containing the single code \"03\" for Lombardia. The data is all clean and ready to go. Everything's structured according to the JSON schema, so it's a solid data entry.\n\n\n",
+    "tokens": {
+      "input": 1272,
+      "output": 140,
+      "total": 1790
+    }
+  }
+}

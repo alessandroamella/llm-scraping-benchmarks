@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-20 00:00:00",
+      "endDate": "2025-06-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 29819,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00067815,
+      "outputCost": 0.0008364,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00151455
+    },
+    "hash": "c0eba41b15fc68c6df487179d0ae272e",
+    "sourceFile": "venerdi_20_giugno_sciopero_generale_nazionale_di_usb_cub_e_sgb_a_roma_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to figure out if this document is announcing an upcoming strike, and it definitely looks like it is. The title mentions a general national strike for June 20th, and the details confirm it with the transportation services being at risk. The publication and update dates suggest it's timely. So yeah, I'm confident that I should set `isStrike` to true and extract the strike data, including start and end dates with times.",
+    "tokens": {
+      "input": 13563,
+      "output": 2091,
+      "total": 15654
+    }
+  }
+}

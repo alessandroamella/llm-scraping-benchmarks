@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-06-16 03:00:00",
+      "endDate": "2024-06-17 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5471,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00027775,
+      "outputCost": 0.0001605,
+      "thinkingCost": 0.0007335,
+      "cachedCost": 0,
+      "totalCost": 0.00117175
+    },
+    "hash": "2ed8bb865a75796bf2cc4f767458cf8b",
+    "sourceFile": "strike-detail-sciopero-uiltrasporti-e-orsa-domenica-16-giugno--p.html",
+    "thoughts": "**Strike Analysis: Trenord - June 16th**\n\nOkay, let's break this down. My task is to definitively determine if this text announces an upcoming strike, specifically targeting Trenord (Lombardia, region code \"03\"), and output the result as a single JSON object. The input clearly states \"Sciopero Uiltrasporti e ORSA domenica 16 giugno\" (Strike Uiltrasporti and ORSA Sunday June 16) and specifies the timeframe: \"Dalle ore 3 di domenica 16 giugno alle ore 2 di lunedì 17 giugno\" (From 03:00 Sunday June 16 to 02:00 Monday June 17). The location is confirmed as Lombardia (Region \"03\"). Importantly, the text notes \"non sono attuabili fasce di garanzia\" (no guaranteed service times).\n\nSo, is it a strike? Absolutely, the text explicitly uses the word \"sciopero\". The start date is June 16th at 03:00, and the end date is June 17th at 02:00. Given the date, and lack of a year, I infer the year is 2024. The location is regional, covering region \"03\" (Lombardia). Since the text says no guaranteed service times, `guaranteedTimes` should be null.\n\nNow, let's construct the JSON object. Based on my analysis, I'm confident in:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-06-16 03:00:00\",\n    \"endDate\": \"2024-06-17 02:00:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"03\"],\n    \"guaranteedTimes\": null\n  }\n}\n```\n\nI've checked: It's valid JSON, no comments, a single object, and all the formats are correct. It satisfies all requirements. Final answer, confirmed.\n\n\n",
+    "tokens": {
+      "input": 1111,
+      "output": 107,
+      "total": 1707
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8417,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005845,
+      "outputCost": 0.0001672,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00022565
+    },
+    "hash": "6274b951bd425db4c5586fa1036e5646",
+    "sourceFile": "sciopero_trasporto_pubblico_chiusa_metro.html",
+    "thoughts": "**Determining strike status**\n\nI need to figure out how to output JSON in the specified format regarding whether this document is announcing a new or ongoing strike. The content indicates an ongoing strike with mentions of a 24-hour national strike currently happening. Based on the instructions, it seems like I should set `isStrike` to `false` since it's about real-time updates regarding the ongoing strike, not announcing a new one.",
+    "tokens": {
+      "input": 1169,
+      "output": 418,
+      "total": 1587
+    }
+  }
+}

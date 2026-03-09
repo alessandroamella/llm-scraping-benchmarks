@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7291,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007295,
+      "outputCost": 0.0001388,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00021175
+    },
+    "hash": "ea6cc0d5362682dd0f304f7783f4616a",
+    "sourceFile": "sciopero_nazionale_trasporto_pubblico_ha_aderito_101_personale_atac.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to determine if this document is announcing a new or upcoming strike based on the Italian content. It mentions the attendance of 10.1% of ATAC staff, indicating it's reporting on a strike that already occurred, not one that's coming up. So, since it doesn’t announce an upcoming strike, I’ll set **isStrike** to false and output the JSON as { \"isStrike\": false }. There’s no need for any additional strike data.",
+    "tokens": {
+      "input": 1459,
+      "output": 347,
+      "total": 1806
+    }
+  }
+}

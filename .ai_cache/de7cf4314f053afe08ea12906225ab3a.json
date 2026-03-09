@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-16 10:00:00",
+      "endDate": "2025-11-16 17:59:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "08",
+        "07",
+        "03",
+        "01",
+        "05"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21177,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007245,
+      "outputCost": 0.0006048,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00067725
+    },
+    "hash": "de7cf4314f053afe08ea12906225ab3a",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-11-16-sciopero-del-personale-di-tren.html",
+    "thoughts": "**Determining regional strike locations**\n\nI’m starting with the details here: the strike is set for November 16, 2025, from 10:00 AM to 5:59 PM. It mentions that service may change, with cancellations in Lombardia and surrounding regions. The \"note region-adjust\" points to regions like Emilia Romagna, Liguria, Lombardia, Piemonte, and Veneto. So, I think I’m leaning toward classifying this as a regional strike. I should set the location type to REGIONAL and include the corresponding location codes for those regions.",
+    "tokens": {
+      "input": 1449,
+      "output": 1512,
+      "total": 2961
+    }
+  }
+}

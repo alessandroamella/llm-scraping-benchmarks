@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-04-11 20:00:00",
+      "endDate": "2024-04-12 00:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 27822,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000601,
+      "outputCost": 0.0009796,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0010397
+    },
+    "hash": "7194ba84f1c49babee0f8cf3d3521c0b",
+    "sourceFile": "gioved_11_aprile_sciopero_nazionale_trasporto_pubblico_rischio_20_24.html",
+    "thoughts": "**Clarifying date formats**\n\nThe instructions specify that location codes are either 2-digit ISTAT for regions or omitted for national strikes, and if national, the location type should be \"NATIONAL.\" I see that for the date times, the format must be 'yyyy-MM-dd HH:mm:ss'. However, I realize that using 24:00 isn't valid; it might be better to use 00:00 the next day. ISO 8601 doesn't support 24:00, and the example sticks to the required format without it.",
+    "tokens": {
+      "input": 1202,
+      "output": 2449,
+      "total": 3651
+    }
+  }
+}

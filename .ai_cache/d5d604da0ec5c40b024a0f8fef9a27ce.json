@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-07-18 09:00:00",
+      "endDate": "2024-07-18 13:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19992,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000943,
+      "outputCost": 0.0006652,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0007595
+    },
+    "hash": "d5d604da0ec5c40b024a0f8fef9a27ce",
+    "sourceFile": "strike-detail-gioved--18-luglio-dalle-9-alle-13-sciopero-del-per.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to confirm if this document announces a new strike. The content is in Italian and specifies that on Thursday, July 18, from 9 AM to 1 PM, there will be a strike affecting the Ferrovienord personnel, not Trenord staff. It's clear that this strike will affect services, with potential cancellations on some lines. Given this information, I conclude that it is indeed an upcoming strike, so I’ll set isStrike to true and extract necessary strike data accordingly.",
+    "tokens": {
+      "input": 1886,
+      "output": 1663,
+      "total": 3549
+    }
+  }
+}

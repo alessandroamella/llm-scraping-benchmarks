@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-12-02 00:00:00",
+      "endDate": "2022-12-02 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 38521,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006755,
+      "outputCost": 0.0011472,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0018227
+    },
+    "hash": "241892801f064f2aab907d5d602c0077",
+    "sourceFile": "venerd_2_dicembre_sciopero_generale_nazionale_24_ore_rischio_trasporto_pubblico_romano.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to output JSON according to the schema. The document seems to announce a strike that took place on December 2, 2022. The title and content indicate this is about a 24-hour national general strike, which affects public transport in Rome. However, there's a mismatch with the \"Published Time\" from 2026 in the GPT prompt, while the content refers to dates in 2022. The page included multiple publication and update dates related to the strike details.",
+    "tokens": {
+      "input": 13510,
+      "output": 2868,
+      "total": 16378
+    }
+  }
+}

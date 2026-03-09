@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3272,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00032625,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000216,
+      "cachedCost": 0,
+      "totalCost": 0.00055725
+    },
+    "hash": "7dcb2a1716d5229f56b7b86a3b410275",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_144.html",
+    "thoughts": "**Analyzing the Atac Strike Data**\n\nOkay, let's break down this input. The text explicitly states, \"participation of today,\" meaning this isn't a strike *announcement*, but rather a report on current or past participation. The numbers represent the *response* to the strike action. So, my initial goal of determining if this was an *announcement* is quickly resolved. The phrases \"adesione...di oggi\" and \"participation...of today\" clearly signal that this is data related to an event already in progress or completed. Therefore, I can confidently set my `isStrike` flag to false. This is post-event information, focusing on the percentage of Atac personnel who participated in the strike today.\n\n\n",
+    "tokens": {
+      "input": 1305,
+      "output": 10,
+      "total": 1459
+    }
+  }
+}

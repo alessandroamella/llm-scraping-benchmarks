@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "04",
+        "05"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 25623,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000783,
+      "outputCost": 0.000766,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008443
+    },
+    "hash": "405f2ad25fea7e51660137fd1626c99e",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-11-28-sciopero-del-personale-di-sad-.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to figure out if the document is announcing an upcoming strike. It states \"SCIOPERO ... In vigore: 28 NOVEMBRE 2025,\" indicating a strike on November 28, 2025, from 00:00 to 23:59. This indicates it's an upcoming strike. The text mentions \"Regione: Trentino Alto Adige, VENETO\" and affects \"Imprese: SAD, TT– Trentino Trasporti,\" confirming it's a regional strike. So, I can conclude the location type is regional, and it’s focused on the specified timeframe.",
+    "tokens": {
+      "input": 1566,
+      "output": 1915,
+      "total": 3481
+    }
+  }
+}

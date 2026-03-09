@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-02-17 00:00:00",
+      "endDate": "2023-02-17 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22254,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00067205,
+      "outputCost": 0.0008164,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00148845
+    },
+    "hash": "c579991f69c6aebff7751bc00599b208",
+    "sourceFile": "venerd_17_febbraio_sciopero_nazionale_usb_24_ore_trasporto_pubblico_rischio.html",
+    "thoughts": "**Interpreting service times**\n\nIt looks like the guaranteed service times might be from 00:00 to 08:30 and then from 17:00 to 20:00. But there's a bit of confusion since it doesn't specify a guaranteed time beyond 8:30. The information suggests it's a national strike affecting regional networks. So, based on this, I think I should categorize the location type as \"NATIONAL\" and ensure any location codes are set to null for national strikes.",
+    "tokens": {
+      "input": 13441,
+      "output": 2041,
+      "total": 15482
+    }
+  }
+}

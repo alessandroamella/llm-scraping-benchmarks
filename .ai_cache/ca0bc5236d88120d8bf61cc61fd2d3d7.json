@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6853,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006095,
+      "outputCost": 0.0001532,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00021415
+    },
+    "hash": "ca0bc5236d88120d8bf61cc61fd2d3d7",
+    "sourceFile": "sciopero_21_marzo_metropolitane.html",
+    "thoughts": "**Determining strike status**\n\nI need to output JSON following the strike_extraction schema to see if this document announces a new or upcoming strike. The content is in Italian, titled \"Sciopero del trasporto pubblico. Aperte le metropolitane,\" published on March 21, 2025. It states that a 24-hour national public transport strike is currently happening. It provides updates about various transport statuses, so this is not an upcoming strike announcement. Therefore, isStrike should be set to false.",
+    "tokens": {
+      "input": 1219,
+      "output": 383,
+      "total": 1602
+    }
+  }
+}

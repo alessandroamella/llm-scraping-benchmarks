@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18097,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000777,
+      "outputCost": 0.000644,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0007217
+    },
+    "hash": "2fa9352710cc6e0a088d93abb7053c5a",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_generale_di_24h_per_venerdi_12_dicembre_2025.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to output JSON following a specific schema. The document is in Italian and announces a 24-hour general strike for December 12, 2025, proclaimed by the O.S. CGIL. It clearly states that this strike affects both rail and road services, detailing guaranteed service times. Since it mentions a future date, yes, this is indeed an upcoming strike announcement. I'll make sure to format the information accurately in JSON according to the schema.",
+    "tokens": {
+      "input": 1554,
+      "output": 1610,
+      "total": 3164
+    }
+  }
+}

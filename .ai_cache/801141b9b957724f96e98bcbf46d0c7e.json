@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4792,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00374325,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0005115,
+      "cachedCost": 0,
+      "totalCost": 0.00426975
+    },
+    "hash": "801141b9b957724f96e98bcbf46d0c7e",
+    "sourceFile": "venerd_20_maggio_sciopero_24_ore_trasporto_pubblico_rischio.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, here's the deal. My task is to figure out if this document from \"Roma Servizi per la Mobilità\" is announcing an *upcoming* strike. The input is a web page, and I need to return valid JSON. If it's not a strike announcement, it's `isStrike: false`; if it is, I return `isStrike: true` with strike details.\n\nSo, I start by looking at the title: \"Venerdì 20 maggio sciopero di 24 ore. Trasporto pubblico a rischio\". It clearly mentions a 24-hour strike on \"Venerdì 20 maggio,\" which is Friday, May 20th. Now, the key here is the *timing*. The document says it was \"Pubblicato il: 13/05/2022 - Aggiornato il: 25/01/2023.\" It was an announcement from 2022. The system context states that the current time is Mon, 09 Mar 2026.\n\nI see that the date referenced in the article, \"Venerdì 20 maggio,\" is clearly in the past. Even though there is a \"published\" and \"updated\" date, the date mentioned is the date of the event. The most important thing here is that this document describes an *old* event. The instruction is very clear: I should ONLY set `isStrike` to `true` if it's an announcement of an *upcoming* strike. Since this is an old announcement from 2022, it's not an announcement of an *upcoming* strike in 2026. Therefore, I'm going to set `isStrike` to `false`.\n\n\n",
+    "tokens": {
+      "input": 14973,
+      "output": 10,
+      "total": 15324
+    }
+  }
+}

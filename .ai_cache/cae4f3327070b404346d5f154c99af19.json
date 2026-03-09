@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3156,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00032575,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0002505,
+      "cachedCost": 0,
+      "totalCost": 0.00059125
+    },
+    "hash": "cae4f3327070b404346d5f154c99af19",
+    "sourceFile": "sciopero_del_trasporto_pubblico_adesione_personale_atac_al_273.html",
+    "thoughts": "**Analyzing the Italian Public Transport Strike Announcement**\n\nOkay, let's break this down. My input is \"Sciopero del Trasporto pubblico, adesione personale Atac al 27,3%\" / \"L’adesione del personale Atac allo sciopero del trasporto pubblico, rilevata in mattinata, è stata pari al 27,3%.\" My task is to figure out if this is announcing a *future* strike. The instructions are straightforward: if the text describes participation (\"adesione\") in a strike that *already* happened, then `isStrike` should be `false`.\n\nLooking closely, the key phrase is \"rilevata in mattinata, è stata pari al 27,3%\". \"Rilevata in mattinata\" (measured this morning) clearly indicates that this is a report on *participation*, not a call to action or a notice about a strike's start. It’s a retrospective analysis of an event that has already occurred. Thus, the logical conclusion is `isStrike: false`. Simple enough.\n\n\n",
+    "tokens": {
+      "input": 1303,
+      "output": 10,
+      "total": 1480
+    }
+  }
+}

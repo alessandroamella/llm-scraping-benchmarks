@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-07-24 08:30:00",
+      "endDate": "2023-07-24 12:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24072,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006711,
+      "outputCost": 0.000592,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0012631
+    },
+    "hash": "3a20a13d913403ee09125078ef52cb39",
+    "sourceFile": "luned_24_luglio_sciopero_nazionale_tpl_roma_servizio_rischio_830_1230.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to output JSON following the strike_extraction schema. The content is in Italian and indicates a national strike for public transport on Monday, July 24, with service disruptions in Rome from 8:30 AM to 12:30 PM. The page's status shows it was published and updated on July 19. It is definitely an announcement for an upcoming four-hour strike affecting the Atac network. So, I've confirmed it's a legitimate strike announcement.",
+    "tokens": {
+      "input": 13422,
+      "output": 1480,
+      "total": 14902
+    }
+  }
+}

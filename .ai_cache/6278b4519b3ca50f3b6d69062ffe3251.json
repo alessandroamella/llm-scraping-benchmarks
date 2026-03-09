@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 27441,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005645,
+      "outputCost": 0.000794,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00085045
+    },
+    "hash": "6278b4519b3ca50f3b6d69062ffe3251",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-11-24-sciopero-24-novembre-personale.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to format my output as JSON following the schema for strike extraction. The document is in Italian and mentions a strike on November 24 for railway management staff. The phrase translates to \"a strike has been called,\" which makes it ambiguous since it can refer to either an upcoming or past event. Since I can't tell if it's upcoming or has already happened, I have to be careful with the `isStrike` boolean and `strikeData`.",
+    "tokens": {
+      "input": 1129,
+      "output": 1985,
+      "total": 3114
+    }
+  }
+}

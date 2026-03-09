@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 2709,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00032325,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0002445,
+      "cachedCost": 0,
+      "totalCost": 0.00058275
+    },
+    "hash": "f1bbf5e783625ace1ae181bcab2ac58f",
+    "sourceFile": "sciopero_adesione_personale_atac_185.html",
+    "thoughts": "**Analyzing the Atac Strike Report**\n\nOkay, so I've got this webpage title: \"Sciopero, adesione personale Atac al 18,5%,\" and the body text states \"L’adesione complessiva del personale Atac allo sciopero di oggi è stata pari al 18,5%.\" My immediate task is to determine if this is an *announcement* of a future strike or a *report* on a strike that's already happening.\n\nThe key phrase here is \"adesione ... allo sciopero *di oggi*.\" That \"di oggi\" – \"of today\" – is the crucial linguistic marker. The word \"adesione,\" or \"participation,\" would be relevant if the strike had already happened (or was ongoing). This phrase clearly indicates that the article is discussing participation in a strike that has either concluded or is currently underway. It's not an *announcement* about a strike scheduled for a later date. Therefore, I can confidently set `isStrike` to `false`. The task is complete.\n\n\n",
+    "tokens": {
+      "input": 1293,
+      "output": 10,
+      "total": 1466
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-16 03:00:00",
+      "endDate": "2025-06-17 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24093,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008015,
+      "outputCost": 0.0006628,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00074295
+    },
+    "hash": "6e433c1e5d1464110a32998198522098",
+    "sourceFile": "strike-detail-luned--16-giugno-sciopero-dei-treni-regionali.html",
+    "thoughts": "**Determining strike details**\n\nI see that there’s a regional strike in Lombardia, so isStrike should be true since it’s an announcement for an upcoming strike. I need to fill in the strike data with details like start date, end date, location type, location codes, and guaranteed times. The content is in Italian, and based on the context, I’ll set the start date as \"2025-06-16 03:00:00\" and the end date as \"2025-06-17 02:00:00.\"",
+    "tokens": {
+      "input": 1603,
+      "output": 1657,
+      "total": 3260
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 10377,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00065945,
+      "outputCost": 0.0001764,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00083585
+    },
+    "hash": "cea1fdac5a8ace0eb151e1bb5ff7a45b",
+    "sourceFile": "sciopero_trasporto_pubblico_chiusa_metro.html",
+    "thoughts": "**Analyzing strike information**\n\nI need to output JSON based on the content I analyzed. The page states there's an ongoing 24-hour public transport strike in Rome, confirming that it's not an announcement for an upcoming strike. Since it clearly indicates that the strike is currently happening, I'll set \"isStrike\" to false, following the instructions accurately. Therefore, the correct output will be: {\"isStrike\": false}. I’m ensuring to clarify that it’s not about an upcoming event!",
+    "tokens": {
+      "input": 13189,
+      "output": 441,
+      "total": 13630
+    }
+  }
+}

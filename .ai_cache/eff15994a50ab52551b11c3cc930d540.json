@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-09-09 08:30:00",
+      "endDate": "2024-09-09 16:30:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5701,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0003435,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.000735,
+      "cachedCost": 0,
+      "totalCost": 0.001227
+    },
+    "hash": "eff15994a50ab52551b11c3cc930d540",
+    "sourceFile": "luned_9_settembre_sciopero_nazionale_trasporto_pubblico_servizio_rischio.html",
+    "thoughts": "**Analyzing the ATAC Strike Announcement**\n\nOkay, so I've got this announcement about an ATAC public transport strike in Rome, scheduled for \"Lunedì 9 settembre.\" Alright, I'll need to translate that to \"Monday, September 9th.\" Since there's no year explicitly given, I'm going to assume it's the upcoming one, so 2024. The text says \"sciopero nazionale,\" but it's clearly focusing on the impact in Rome with those specific times, 8:30 to 16:30. Now, I have to think about the schema. The schema requires me to specify a `locationType` of either NATIONAL or REGIONAL. Even though it's a \"national strike,\" the announcement *is* specific to Rome and ATAC. So I should use the regional code \"12\" for Lazio. So, while it *is* a national strike, I need to represent it in the context of the ATAC announcement. Therefore, I will define this as REGIONAL, and include the Lazio code.\n\nLet's put this together for the data I need to process:\n\n*   `isStrike`: true\n*   `startDate`: \"2024-09-09 08:30:00\"\n*   `endDate`: \"2024-09-09 16:30:00\"\n*   `locationType`: \"REGIONAL\"\n*   `locationCodes`: [\"12\"]\n\nThat JSON should be valid, and the `startDate` and `endDate` are correctly formatted as yyyy-MM-dd HH:mm:ss. I've set the `locationType` to REGIONAL and included the \"12\" Lazio location code. I'm all set.\n\n\n",
+    "tokens": {
+      "input": 1374,
+      "output": 99,
+      "total": 1963
+    }
+  }
+}

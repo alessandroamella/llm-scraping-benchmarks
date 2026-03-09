@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-28 00:00:00",
+      "endDate": "2025-01-28 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5834,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00018925,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.0010305,
+      "cachedCost": 0,
+      "totalCost": 0.00136825
+    },
+    "hash": "c8697d6a7bb1a97eff20b5c050a8ff65",
+    "sourceFile": "eav_informa_sciopero_di_4_ore_del_28_01_2025.html",
+    "thoughts": "**Strike Analysis: EAV Announcement**\n\nOkay, let's break this down. My task is to definitively classify the input \"EAV Informa: Sciopero di 4 ore del 28/01/2025\" as a strike announcement and extract its key details. The \"EAV Informa\" indicates this relates to EAV, the public transport system in Campania. The core text, \"Sciopero di 4 ore del 28/01/2025,\" is quite explicit. \"Sciopero\" is Italian for strike, \"4 ore\" means four hours, and the date is crystal clear: January 28th, 2025.\n\nSo, yes, it's a strike announcement. Now, for the details. I have the date: 2025-01-28. The duration is stated as four hours. The location is implied to be Campania due to the EAV context.\n\nThe most interesting part is that the text doesn't specify the exact start and end times. The prompt requires a format, `yyyy-MM-dd HH:mm:ss`. Since the information is missing, I can't leave it blank. According to the prompt, if the specific hours are not specified, it's omitted. But the schema has a format. I have to find a workaround. I could infer a general time, but that's risky, and the instructions are clear: omit if not specified. I can't omit the date! I'll need to represent the whole day. So, as a placeholder, I'll use 00:00:00 for the date. It should be 2025-01-28 00:00:00. This is the best approach without any additional information.\n\n\n",
+    "tokens": {
+      "input": 757,
+      "output": 99,
+      "total": 1543
+    }
+  }
+}

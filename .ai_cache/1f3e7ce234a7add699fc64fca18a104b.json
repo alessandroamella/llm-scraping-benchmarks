@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4929,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00028975,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.0006375,
+      "cachedCost": 0,
+      "totalCost": 0.00112375
+    },
+    "hash": "1f3e7ce234a7add699fc64fca18a104b",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_generale_di_24h_per_venerdi_12_dicembre_2025.html",
+    "thoughts": "**My Analysis of the Strike Information**\n\nAlright, let's get down to brass tacks. My task is to meticulously extract the key strike information from the text provided and format it as a clean, parseable JSON object. No extraneous commentary; just the facts. Based on the announcement, this is definitely a strike – confirmed by the keyword \"sciopero.\"\n\nFirst, I need to define the strike criteria. The critical flag is `isStrike`, and it's definitely `true` in this instance given the clear announcement of an upcoming \"sciopero generale.\" I'll need `startDate`, `endDate`, `locationType`, potentially `locationCodes` if applicable, and any `guaranteedTimes`.\n\nThe input data tells me this is related to EAV (Campania), but that's a red herring. It's a \"24h general strike\" on \"venerdì 12 dicembre 2025\" and is identified as \"nazionale\".\n\nGiven that it's a 24-hour strike spanning December 12, 2025, I will infer a start time of 00:00:00 and an end time of 23:59:59. Therefore, I will set `startDate` to \"2025-12-12 00:00:00\" and `endDate` to \"2025-12-12 23:59:59\". The strike is declared as \"nazionale,\" which translates directly to a `locationType` of \"NATIONAL\". Since it is national, I won't have to populate `locationCodes`, and will set this to `null`. Finally, the provided \"guaranteed times\" are \"05:30-08:30\" and \"16:30-19:30\". I'll format these into a list and store them in the `guaranteedTimes` field.\n\n\n",
+    "tokens": {
+      "input": 1159,
+      "output": 131,
+      "total": 1715
+    }
+  }
+}

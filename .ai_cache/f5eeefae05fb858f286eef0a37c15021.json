@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7234,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000731,
+      "outputCost": 0.000124,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0001971
+    },
+    "hash": "f5eeefae05fb858f286eef0a37c15021",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_191.html",
+    "thoughts": "**Outputting strike data in JSON**\n\nI need to output JSON according to the strike_extraction schema, focusing on fields like isStrike and possibly strikeData. The content is in Italian, referring to public transport strike participation by Atac staff at 19.1%. Since it’s historical data about a strike that has already occurred today, I’ll set isStrike to false. The final JSON output will be: {\"isStrike\": false}. I should ensure everything aligns correctly.",
+    "tokens": {
+      "input": 1462,
+      "output": 310,
+      "total": 1772
+    }
+  }
+}

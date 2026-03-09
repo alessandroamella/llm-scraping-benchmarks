@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-28 08:20:00",
+      "endDate": "2025-01-28 12:20:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 25191,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000968,
+      "outputCost": 0.000942,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0010388
+    },
+    "hash": "7f88414752068b3566e1751274bd4799",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_di_4_ore_martedi_28_gennaio_2025.html",
+    "thoughts": "**Determining location type for strike**\n\nI'm thinking about the \"Linee Flegree\" network, which belongs to EAV S.r.l in the Naples area. The strike seems to be company-level, so it wouldn't be national. Instead, it might imply a regional classification, given that EAV operates within the Campania region.\n\nSince it's focused on EAV's specific areas, like Montesanto and Bagnoli, I'll likely categorize this as \"REGIONAL\" and possibly use \"15,\" the ISTAT code for Campania.",
+    "tokens": {
+      "input": 1936,
+      "output": 2355,
+      "total": 4291
+    }
+  }
+}

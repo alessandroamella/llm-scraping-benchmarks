@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7529,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006633,
+      "outputCost": 0.0001644,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008277
+    },
+    "hash": "48d8c3db2b0689acc370c686ca284a53",
+    "sourceFile": "sciopero_trasporto_pubblico_ha_aderito_246_personale_atac.html",
+    "thoughts": "**Processing strike information**\n\nThe content talks about \"Sciopero del trasporto pubblico,\" but it doesn’t provide dates for a new strike. It does mention a date, \"Aggiornato il: 25/01/2023,\" which is older. According to the instructions, I need to conclude that isStrike should be false. This indicates that it’s a report on an earlier strike’s participation, not an ongoing one. Therefore, I'll output the properly formatted JSON: {\"isStrike\": false}.",
+    "tokens": {
+      "input": 13266,
+      "output": 411,
+      "total": 13677
+    }
+  }
+}

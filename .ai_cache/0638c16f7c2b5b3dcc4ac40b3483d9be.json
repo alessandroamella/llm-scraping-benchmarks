@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 31216,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000857,
+      "outputCost": 0.000662,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0007477
+    },
+    "hash": "0638c16f7c2b5b3dcc4ac40b3483d9be",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_di_24_ore_venerdi_13_dicembre_2024_aggiornamento.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to determine if this document is announcing an upcoming strike. The content mentions a 24-hour strike on December 13, 2024. It refers to a decision from TAR del Lazio regarding suspending a previous order from the Ministry of Transport. So, there's a restart of the strike duration from an initial 4 hours back to 24. Since it clearly states the strike is for tomorrow, December 13, it confirms that yes, it's announcing an upcoming strike. Therefore, isStrike should be true.",
+    "tokens": {
+      "input": 1714,
+      "output": 1655,
+      "total": 3369
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-09-22 00:00:00",
+      "endDate": "2025-09-22 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6774,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00034,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.001032,
+      "cachedCost": 0,
+      "totalCost": 0.0015685
+    },
+    "hash": "8c48b3aab9c2828bed65430cfe5f8e69",
+    "sourceFile": "lunedi_22_settembre_sciopero_nazionale_di_24_ore_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Strike Information Extraction - My Thought Process**\n\nOkay, here's what I'm thinking. The task is to pull strike information from this HTML and spit out a JSON object. No problem, I do this all the time. Let's start with the headline and body - that's our context. \"Lunedì 22 settembre sciopero nazionale di 24 ore. Trasporto pubblico a rischio\". Alright, so Monday, September 22nd, national strike, 24 hours. The body confirms this.\n\nNow, for the juicy bits. The date is obviously September 22nd. Let's assume the upcoming year. Quick calendar check... looks like September 22nd is a Monday in 2025, so we're good to go with that. The duration is explicitly 24 hours. The strike is \"nazionale,\" so we'll treat it as a national event.\n\nThe tricky part is the guaranteed service windows. The text says \"sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" That sounds like \"regular until 8:30\" and \"from 17:00 to 20:00\". So that's the non-strike window. Let's make sure we get this right. The strike will run for the full 24 hours, therefore start at 00:00 and end at 23:59 on the same day.\n\nAlright, so the `startDate` should be \"2025-09-22 00:00:00\" and the `endDate` \"2025-09-22 23:59:59\". The `locationType` is \"NATIONAL,\" and `locationCodes` is `null`. We need to include the guaranteed service windows, those are important for users. I'll translate that into the correct format. The `guaranteedTimes` should be [\"00:00-08:30\", \"17:00-20:00\"].\n\nFinally, to confirm, we set `isStrike` to `true`. And there we have it, a JSON object ready to go.\n\n\n",
+    "tokens": {
+      "input": 1360,
+      "output": 131,
+      "total": 2179
+    }
+  }
+}

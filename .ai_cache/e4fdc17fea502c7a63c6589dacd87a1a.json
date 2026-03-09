@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-01-24 00:00:00",
+      "endDate": "2024-01-24 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7239,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00034825,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.00105,
+      "cachedCost": 0,
+      "totalCost": 0.00159475
+    },
+    "hash": "e4fdc17fea502c7a63c6589dacd87a1a",
+    "sourceFile": "sciopero_nazionale_24_gennaio_trasporto_pubblico_rischio.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, here's the breakdown of this text. My primary goal here is to determine if this HTML snippet describes a strike. The text explicitly mentions \"Sciopero nazionale,\" which immediately flags it as a potential strike announcement. Let's see...\n\nI can see from the text: \"Sciopero nazionale: il 24 gennaio trasporto pubblico a rischio... sciopero nazionale di 24 ore... A Roma l’agitazione interesserà le reti... servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" The core content confirms a national strike (\"sciopero nazionale\") set for January 24th (\"il 24 gennaio\"). It's a 24-hour strike. The details include that the strike specifically affects public transport, and it will involve the networks of Rome.\n\nThe timeframe is straightforward: the start date is January 24th, 2024. Being a full 24-hour strike, the end date is also January 24th, 2024. Therefore, I'm setting the start date to \"2024-01-24 00:00:00\" and the end date to \"2024-01-24 23:59:59\". The strike's scope is clearly \"NATIONAL,\" as indicated by \"Sciopero nazionale.\"\n\nNow, regarding guaranteed service. The text says service is \"regolare fino alle 8,30 e dalle 17 alle 20.\" That is a guaranteed service window from 00:00 to 08:30 and from 17:00 to 20:00.\n\nI now need to construct a JSON-formatted output based on what I have determined. The schema requires the following: `isStrike` (boolean), `strikeData` (if true), `startDate` (yyyy-MM-dd HH:mm:ss), `endDate` (yyyy-MM-dd HH:mm:ss), `locationType` (NATIONAL), `locationCodes` (null), and `guaranteedTimes` ([\"00:00-08:30\", \"17:00-20:00\"]). So, let's assemble that. Based on the analysis, I've got:\n\n*   `isStrike`: true\n*   `startDate`: \"2024-01-24 00:00:00\"\n*   `endDate`: \"2024-01-24 23:59:59\"\n*   `locationType`: \"NATIONAL\"\n*   `locationCodes`: null\n*   `guaranteedTimes`: [\"00:00-08:30\", \"17:00-20:00\"]\n\nIt's National. I'm confident in the data. All good.\n\n\n",
+    "tokens": {
+      "input": 1393,
+      "output": 131,
+      "total": 2224
+    }
+  }
+}

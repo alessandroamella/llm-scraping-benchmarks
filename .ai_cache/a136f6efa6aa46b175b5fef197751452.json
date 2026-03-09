@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-10 19:32:00",
+      "endDate": "2025-01-10 23:32:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5549,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00027125,
+      "outputCost": 0.000147,
+      "thinkingCost": 0.0008565,
+      "cachedCost": 0,
+      "totalCost": 0.00127475
+    },
+    "hash": "a136f6efa6aa46b175b5fef197751452",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_di_4_ore10_gennaio_2025.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, the user wants me to determine if the provided text signals an impending strike and to extract relevant details. The input indicates a strike is planned. Let's break this down systematically.\n\nFirst, I see the text clearly announces an upcoming strike. The company is EAV (Campania, code 15), but more importantly, the announcement explicitly states, \"Si comunica che per il giorno 10 Gennaio 2025 la O.S. CONF.A.I.L. ha proclamato uno sciopero nazionale di 4 ore, dalle ore 19:32 alle ore 23:32\". This is a definitive strike announcement.\n\nThe critical pieces of information are: January 10, 2025; a duration of 4 hours; from 19:32 to 23:32. The text explicitly defines this as a *national* strike (\"sciopero nazionale\"). Although the context mentions Campania, the scope is clearly national as stated in the text. Therefore, the `locationType` is `NATIONAL`, and because it's national, the `locationCodes` should be `null`.\n\nNow, regarding \"guaranteed times\". The text does mention \"ULTIME PARTENZE GARANTITE PRIMA DELLO SCIOPERO\", but these are specific departure times and not a guaranteed time *range*, or the \"fasce di garanzia\". The schema is expecting ranges. Since the text doesn't explicitly provide the \"fasce di garanzia\" that is common with Italian transport strikes, I'll set `guaranteedTimes` to `null`.\n\nSo, the summary of this announcement looks like:\n\n*   `isStrike`: `true`\n*   `strikeData`:\n    *   `startDate`: \"2025-01-10 19:32:00\"\n    *   `endDate`: \"2025-01-10 23:32:00\"\n    *   `locationType`: \"NATIONAL\"\n    *   `locationCodes`: `null`\n    *   `guaranteedTimes`: `null`\n\n\n",
+    "tokens": {
+      "input": 1085,
+      "output": 98,
+      "total": 1754
+    }
+  }
+}

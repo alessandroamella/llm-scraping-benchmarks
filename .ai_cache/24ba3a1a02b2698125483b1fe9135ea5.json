@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-12-15 00:00:00",
+      "endDate": "2023-12-15 23:59:59",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21513,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000608,
+      "outputCost": 0.0008148,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008756
+    },
+    "hash": "24ba3a1a02b2698125483b1fe9135ea5",
+    "sourceFile": "trasporto_pubblico_sciopero_nazionale_differito_15_dicembre.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to output JSON in accordance with the strike_extraction schema. The document refers to a national strike that has been postponed to December 15, which is definitely an announcement of an upcoming event relative to the article's date. The content mentions that the strike affects the Atac network in Rome and lasts for 24 hours. Since this is a notice of a postponed strike, I’ll set isStrike to true.",
+    "tokens": {
+      "input": 1216,
+      "output": 2037,
+      "total": 3253
+    }
+  }
+}

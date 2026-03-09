@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-03 00:00:00",
+      "endDate": "2025-10-03 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 10180,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00370675,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.001173,
+      "cachedCost": 0,
+      "totalCost": 0.00507625
+    },
+    "hash": "08d140d9973ab45edd20f031f5a1a641",
+    "sourceFile": "sciopero_generale_nazionale_domani_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Strike Detection and Data Extraction**\n\nOkay, let's break this down. My task is to determine if this document announces a strike and, if so, to extract the relevant data and format it as valid JSON according to the provided schema. The input is HTML-converted text from \"Roma Servizi per la Mobilità\" and, from a quick look, it seems strike-related.\n\nThe text reads \"Sciopero generale nazionale, domani trasporto pubblico a rischio\" – a national general strike, and public transport is at risk \"domani,\" or \"tomorrow.\" \"Pubblicato il: 02/10/2025\" gives us the publication date. Since the strike is \"domani,\" the strike date must be October 3rd, 2025. That's straightforward.\n\nThe text indicates a \"sciopero generale nazionale di 24 ore,\" a 24-hour national strike. The guaranteed times are listed as \"regolare fino alle 8,30 e dalle 17 alle 20\". This means transport is regular until 8:30 am and then from 5 pm to 8 pm, implying disruptions during the rest of the day.\n\nSo, the strike data looks like this:\n\n*   `isStrike`: true.  Definitely a strike.\n*   `strikeData`:\n    *   `startDate`:  2025-10-03 00:00:00 (since it's a 24-hour strike)\n    *   `endDate`: 2025-10-03 23:59:59 (same logic)\n    *   `locationType`: \"NATIONAL\" (the text specifies \"nazionale\")\n    *   `locationCodes`: null (national strikes don't require specific location codes, the whole country is affected)\n    *   `guaranteedTimes`: I need to be exact here.  The text says \"regolare fino alle 8,30 e dalle 17 alle 20\". That means: [\"00:00-08:30\", \"17:00-20:00\"] (I am assuming that 00:00 means the beginning of the day). This is standard for Italian public transport strikes.\n\nI have to be very precise when it comes to time formats, to be very certain about the meaning of the Italian text in relation to those times. \"Domani\" on 02/10/2025 definitely means 03/10/2025. I think I'm good to go!\n\n\n",
+    "tokens": {
+      "input": 14827,
+      "output": 131,
+      "total": 15740
+    }
+  }
+}

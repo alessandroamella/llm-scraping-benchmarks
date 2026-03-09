@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7775,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007525,
+      "outputCost": 0.0001264,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00020165
+    },
+    "hash": "c9d473b914422cbcbe4377447233428c",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_209.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to determine if the document is announcing a new or upcoming strike. It's Italian text stating, \"Sciopero del trasporto pubblico, adesione personale Atac al 20,9%,\" which translates to a participation rate for a strike that already occurred. It isn’t announcing an upcoming strike, but providing details about a past event. Following the instructions clearly, since it's just participation data and not a cancellation or revocation, I’ll set `isStrike` to false. \n\nSo the output will be `{\"isStrike\": false}`.",
+    "tokens": {
+      "input": 1505,
+      "output": 316,
+      "total": 1821
+    }
+  }
+}

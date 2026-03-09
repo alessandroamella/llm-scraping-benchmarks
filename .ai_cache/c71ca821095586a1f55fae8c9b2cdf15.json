@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5430,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00025775,
+      "outputCost": 0.000189,
+      "thinkingCost": 0.0008595,
+      "cachedCost": 0,
+      "totalCost": 0.00130625
+    },
+    "hash": "c71ca821095586a1f55fae8c9b2cdf15",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_di_24_ore_del_13_dicembre_2024_aggiornamento.html",
+    "thoughts": "**Processing the EAV Strike Announcement**\n\nOkay, let's see. I've got an announcement from EAV about a strike happening on December 13, 2024. The task is to parse this into a specific JSON format, which I'm familiar with. The instructions are pretty clear.\n\nFirst, I need to confirm if it's an upcoming strike; yes, it is. The date is December 13, 2024. A 24-hour strike, I know this, starts at the beginning of the service and ends at the end of the service. I'll translate that to `startDate` as \"2024-12-13 00:00:00\" and `endDate` as \"2024-12-13 23:59:59\".\n\nThe location is EAV, which I recall is in Campania, coded as \"15\" according to the location type. This makes the `locationType` \"REGIONAL\", and `locationCodes` is `[\"15\"]`.\n\nFinally, the instructions specify the guaranteed service times. The provided times are: \"05:30-08:30\" and \"16:30-19:30\".\n\nPutting it all together, here's the JSON I'll construct:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-13 00:00:00\",\n    \"endDate\": \"2024-12-13 23:59:59\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\n      \"15\"\n    ],\n    \"guaranteedTimes\": [\n      \"05:30-08:30\",\n      \"16:30-19:30\"\n    ]\n  }\n}\n```\n\nNow, I need to check the JSON for validity, that’s done. No comments required, and since this is a single strike entry, I'm returning the object directly as per schema.\n\n\n",
+    "tokens": {
+      "input": 1031,
+      "output": 126,
+      "total": 1730
+    }
+  }
+}

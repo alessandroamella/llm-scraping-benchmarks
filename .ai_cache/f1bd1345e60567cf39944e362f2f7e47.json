@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-03-21 00:00:00",
+      "endDate": "2025-03-21 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5272,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00020125,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.000636,
+      "cachedCost": 0,
+      "totalCost": 0.00103375
+    },
+    "hash": "f1bd1345e60567cf39944e362f2f7e47",
+    "sourceFile": "venerdi_21_marzo_sciopero_nazionale_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Analyzing the Public Transport Strike Announcement**\n\nOkay, so I've got this public transport announcement from Roma Servizi per la Mobilità / ATAC. Let me break this down systematically. The core of the information is clear: there's a nationwide strike – a \"sciopero nazionale\" – planned for Friday, March 21st, 2025. It's a full 24-hour event, which of course, makes this a significant disruption.\n\nMy primary takeaway is that this is a *definitive* \"isStrike: true\" situation. The *startDate* is 2025-03-21 00:00:00, and the *endDate* is 2025-03-21 23:59:59. It is vital to note, that this will impact all of Italy, and so the `locationType` should be \"NATIONAL,\" there will be no regional, or other specific `locationCodes` given.\n\nHowever, there's some nuance. The announcement clarifies that *guaranteed times* exist, or rather, periods during which regular service will still be available. The message \"Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20\" means that the guaranteed times are from 00:00 to 08:30 in the morning, and from 17:00 to 20:00 in the evening, this will be critical information for anyone relying on public transport that day. I will store this data as `guaranteedTimes`: [\"00:00-08:30\", \"17:00-20:00\"].\n\n\n",
+    "tokens": {
+      "input": 805,
+      "output": 131,
+      "total": 1360
+    }
+  }
+}

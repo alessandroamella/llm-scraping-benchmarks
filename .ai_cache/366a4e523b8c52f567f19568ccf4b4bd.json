@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-09-04 08:30:00",
+      "endDate": "2025-09-04 12:30:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20292,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000617,
+      "outputCost": 0.00066,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0007217
+    },
+    "hash": "366a4e523b8c52f567f19568ccf4b4bd",
+    "sourceFile": "rete_atac_giovedi_4_settembre_sciopero_dalle_830_alle_1230_possibili_disagi.html",
+    "thoughts": "**Processing transport strike announcement**\n\nI need to output the JSON according to the format requested. The input talks about a transport strike in Rome on Thursday, September 4, 2025, from 8:30 AM to 12:30 PM, affecting the Atac network. The union involved is Sul, and it's clear that this is a planned event. Since the announcement includes a date, I'm confirming that I have the dates right: startDate will be \"2025-09-04 08:30:00\" and endDate \"2025-09-04 12:30:00.\"",
+    "tokens": {
+      "input": 1234,
+      "output": 1650,
+      "total": 2884
+    }
+  }
+}

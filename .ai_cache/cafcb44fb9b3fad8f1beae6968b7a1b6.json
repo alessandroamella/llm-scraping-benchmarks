@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9801,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000624,
+      "outputCost": 0.0002124,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002748
+    },
+    "hash": "cafcb44fb9b3fad8f1beae6968b7a1b6",
+    "sourceFile": "sciopero_trasporto_pubblico_metro_aperte_chiusa_termini_centocelle.html",
+    "thoughts": "**Evaluating strike announcement format**\n\nI need to format the JSON in strike_extraction style for the public transport strike from January 2022. The document states there's an ongoing strike and even gives an end time. I should determine if it's announcing a new strike or providing updates about an existing one. Since it mentions the strike is currently happening and will conclude at 12:30, I’d set the isStrike to false, indicating it’s about an ongoing situation, not a new event.",
+    "tokens": {
+      "input": 1248,
+      "output": 531,
+      "total": 1779
+    }
+  }
+}

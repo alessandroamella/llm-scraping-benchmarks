@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18968,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006636,
+      "outputCost": 0.000632,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0012956
+    },
+    "hash": "320c09c3b6b19016a9f7e965d11fb731",
+    "sourceFile": "roma_servizi_mobilit_domani_attivit_rischio_sciopero.html",
+    "thoughts": "**Considering strike details**\n\nIt looks like the details for the strike aren't specific on the date window, just saying \"tomorrow\" relative to publication. Plus, no start and end times are provided. The text indicates possible strike risks but doesn’t give exact timing. We could consider setting the start and end dates to null based on the schema since it allows for either strings or null values. Since \"isStrike\" is true, though, we’ll need to supply at least some data.",
+    "tokens": {
+      "input": 13272,
+      "output": 1580,
+      "total": 14852
+    }
+  }
+}

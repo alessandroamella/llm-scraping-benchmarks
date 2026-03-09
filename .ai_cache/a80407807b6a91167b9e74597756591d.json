@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:01:00",
+      "endDate": "2025-12-12 23:59:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "04",
+        "05"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5603,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00030575,
+      "outputCost": 0.0001455,
+      "thinkingCost": 0.00075,
+      "cachedCost": 0,
+      "totalCost": 0.00120125
+    },
+    "hash": "a80407807b6a91167b9e74597756591d",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-12-12-sciopero-del-personale-di-sad-.html",
+    "thoughts": "**Strike Analysis and Data Structuring**\n\nOkay, let's break this down. My task is to analyze this input and determine if it's an announcement about a strike. If so, I need to extract the pertinent details and format them into a JSON object according to the provided schema. The prompt requests a *single* JSON array, but the schema actually defines a single object format, so I'll follow the schema and return an object.\n\nFirst, I see the phrase \"SCIOPERO DEL PERSONALE\" which clearly indicates a strike. Excellent. Now for the details. I have two distinct strike events: one for SAD personnel and another for Trentino Trasporti, both occurring on December 12, 2025. The SAD strike runs from 00:01 to 21:00, while the Trentino Trasporti strike extends to 23:59 on the same date. The regions involved are Trentino Alto Adige (04) and Veneto (05).\n\nThe schema specifies `isStrike` with a corresponding `strikeData` section to be returned. Since there are effectively two separate time windows and two sets of employees, I need to figure out the best way to represent this in the format specified. The prompt indicates to return a single JSON object.\n\nConsidering that the intent is to highlight a single strike across two company's and multiple regions, and I need to adhere to the requested single JSON object format, I'll take a broad view: The strike covers the entirety of December 12, 2025, starting at 00:01 and ending at 23:59. The affected regions are Trentino Alto Adige and Veneto. The `locationType` should be \"REGIONAL.\" The date format needs to be yyyy-MM-dd HH:mm:ss as per the constraint. So, I will set: Start: 2025-12-12 00:01:00, End: 2025-12-12 23:59:00. Location: [\"04\", \"05\"].\n\n\n",
+    "tokens": {
+      "input": 1223,
+      "output": 97,
+      "total": 1820
+    }
+  }
+}

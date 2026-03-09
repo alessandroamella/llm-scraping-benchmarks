@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-11-29 00:00:00",
+      "endDate": "2024-11-29 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 26128,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005945,
+      "outputCost": 0.0007944,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00085385
+    },
+    "hash": "d010fea2b4d943ec1655875640661b7c",
+    "sourceFile": "venerdi_29_novembre_sciopero_generale_nazionale_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Determining strike data**\n\nI need to output JSON for the strike extraction. The document indicates an upcoming national strike on Friday, November 29, which is affecting public transport in Rome for 24 hours. The service will be regular until 8:30 and again from 5 PM to 8 PM. So, I can confirm that isStrike is true and I’ll need to construct the strikeData fields: startDate, endDate, locationType, locationCodes array, and guaranteedTimes based on this information.",
+    "tokens": {
+      "input": 1189,
+      "output": 1986,
+      "total": 3175
+    }
+  }
+}

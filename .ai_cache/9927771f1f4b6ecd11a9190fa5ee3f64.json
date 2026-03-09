@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-07-23 09:00:00",
+      "endDate": "2025-07-23 11:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "09:00-11:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22334,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000836,
+      "outputCost": 0.0007176,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008012
+    },
+    "hash": "9927771f1f4b6ecd11a9190fa5ee3f64",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_di_2_ore_mercoledi_23_luglio_2025.html",
+    "thoughts": "**Deciding on a strike announcement**\n\nI need to determine if this document is announcing a new or upcoming strike. The text is in Italian, mentioning a two-hour strike set for July 23, 2025, starting at 09:00 and ending at 11:00. Since it explicitly proclaims a strike, I can conclude that it is indeed an upcoming strike compared to today’s date, July 22, 2025. So, I’ll set isStrike as true and extract the start and end dates in the correct format.",
+    "tokens": {
+      "input": 1672,
+      "output": 1794,
+      "total": 3466
+    }
+  }
+}

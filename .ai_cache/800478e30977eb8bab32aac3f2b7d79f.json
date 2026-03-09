@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-16 09:00:00",
+      "endDate": "2025-11-16 18:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20253,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00036275,
+      "outputCost": 0.0006616,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00102435
+    },
+    "hash": "800478e30977eb8bab32aac3f2b7d79f",
+    "sourceFile": "strike-detail-domenica-16-novembre-dalle-ore-10-alle-ore-18-scio.html",
+    "thoughts": "**Processing strike announcement**\n\nI need to format the information about the upcoming train strike in Lombardy into JSON. The document mentions that from 10 AM to 6 PM on November 16, 2025, there will be a strike organized by ORSA. There are potential impacts on regional, suburban, and long-distance train services, plus airport connections. I should ensure the date is correctly noted as 2025-11-16 and check the strike's expected duration from the header and details given.",
+    "tokens": {
+      "input": 7255,
+      "output": 1654,
+      "total": 8909
+    }
+  }
+}

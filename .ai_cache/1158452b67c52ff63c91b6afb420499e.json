@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3981,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00018975,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000408,
+      "cachedCost": 0,
+      "totalCost": 0.00061275
+    },
+    "hash": "1158452b67c52ff63c91b6afb420499e",
+    "sourceFile": "sciopero_trasporto_pubblico_aperte_metropolitane_possibili_riduzioni_bus_tram.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, here's the deal. My task is to determine if this input text is announcing an *upcoming* strike, specifically regarding ATAC/Roma services (Lazio, 12). The rules are pretty straightforward: if it's an announcement of a future strike, `isStrike` is true. If it's a cancellation, participation info, or a real-time status update, then it's false. The output needs to be a JSON object adhering to the schema.\n\nLooking at the text: \"Sciopero del trasporto pubblico, aperte le metropolitane. Possibili riduzioni per bus e tram... status: 1 È un corso lo sciopero... which will end at 12:30\" (translation: Public transport strike in progress, metros are open. Possible reductions for buses and trams... Status: 1, a strike is in progress). The key phrase here is \"in corso,\" meaning \"in progress.\" It also specifies an end time, 12:30. This isn't an *announcement* of a strike; this is a real-time status update about an *ongoing* strike. The text is providing information about the current situation, with details like metro operations and possible disruptions to buses and trams.\n\nRemembering the instructions: \"If it is providing real-time updates about an ongoing strike... set isStrike to false.\" Since the text clearly describes an in-progress strike, and gives updates on how the strike affects services, I have to conclude that `isStrike` should be `false`.\n\n\n",
+    "tokens": {
+      "input": 759,
+      "output": 10,
+      "total": 1041
+    }
+  }
+}

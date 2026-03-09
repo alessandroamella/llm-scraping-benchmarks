@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4590,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000375,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.000621,
+      "cachedCost": 0,
+      "totalCost": 0.0011925
+    },
+    "hash": "f42d262f7336b81182668b16758366aa",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_24_ore_di_venerdi_28_novembre_2025.html",
+    "thoughts": "**Strike Analysis: EAV (Campania) - November 28, 2025**\n\nOkay, let's break this down. EAV (Campania) has issued a notice. The core takeaway here is a national general strike, *sciopero generale nazionale*, declared by USB. It's set for Friday, November 28, 2025, and it's a full 24-hour affair. That's straightforward enough – `isStrike: true`.\n\nI need to nail down the precise start and end times for this. Since it's a 24-hour strike, the `startDate` is clearly 2025-11-28 00:00:00. The `endDate` should be 2025-11-28 23:59:59. This avoids any ambiguity about timing; ending the day before midnight.\n\nThe scope is *national*, so `locationType` will be \"NATIONAL\" and, as instructed, there are no specific location codes provided, so `locationCodes` remains `null`.\n\nFinally, they've stipulated guaranteed service periods, which I need to record. Those are the protected time slots: \"05:30-08:30\" and \"16:30-19:30\".  I'll store these in the `guaranteedTimes` array as [\"05:30-08:30\", \"16:30-19:30\"].\n\nSo to be explicit in my own summary:\n\n*   `startDate`: \"2025-11-28 00:00:00\"\n*   `endDate`: \"2025-11-28 23:59:59\"\n*   `locationType`: \"NATIONAL\"\n*   `locationCodes`: null\n*   `guaranteedTimes`: [\"05:30-08:30\", \"16:30-19:30\"]\n\n\n",
+    "tokens": {
+      "input": 1500,
+      "output": 131,
+      "total": 2045
+    }
+  }
+}

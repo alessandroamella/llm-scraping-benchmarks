@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-07-04 08:30:00",
+      "endDate": "2024-07-04 16:30:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 25433,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000587,
+      "outputCost": 0.0010668,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0011255
+    },
+    "hash": "08067d416c823cb0649ec9a62289afe8",
+    "sourceFile": "trasporto_pubblico_domani_sciopero_8_ore_sulla_rete_atac.html",
+    "thoughts": "**Extracting strike data**\n\nIt seems there's a strike announced for tomorrow, from 8:30 to 16:30, so isStrike must be true. I need to extract the strike data in the required format.\n\nThe start and end dates need to be in ISO format (\"yyyy-MM-dd HH:mm:ss\"). It's a regional strike since it's for the Atac network in the Lazio region. The information from the prompt indicates it's specific to Rome's municipal transport, which aligns with the regional designation.",
+    "tokens": {
+      "input": 1174,
+      "output": 2667,
+      "total": 3841
+    }
+  }
+}

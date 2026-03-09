@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-07-18 09:00:00",
+      "endDate": "2024-07-18 13:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5257,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000354,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.0010185,
+      "cachedCost": 0,
+      "totalCost": 0.001521
+    },
+    "hash": "562f9efa821206dffe9c8b1bec8d94ae",
+    "sourceFile": "strike-detail-gioved--18-luglio-dalle-9-alle-13-sciopero-del-per.html",
+    "thoughts": "**Analyzing the FERROVIENORD Strike Announcement**\n\nOkay, so I'm processing information about a strike affecting FERROVIENORD personnel, scheduled for July 18, 2024. The crucial timeframe is from 09:00 to 13:00. Importantly, and this needs to be very clear, while the strike is by FERROVIENORD staff, the impact is on the service that operates on FERROVIENORD infrastructure within the Lombardia region (code 03).\n\nThe key takeaway is this: **yes, it's a strike.**\n\nI've got the precise start and end times: July 18, 2024, at 09:00, running until 13:00 on the same day. It is Regional, Lombardia (03).\n\nThe text explicitly states \"Non coinvolte le fasce di garanzia\" which means we have to interpret what this means in this context. It's not a full-day, public transport, strike. It means no *standard* peak-hour service guarantees apply here. However, trains that start *before* 9 AM on the FERROVIENORD network will arrive to their destinations.\n\nTherefore, because this is not a full-day strike, there are no 'guaranteed times' to provide in the usual way (like, 06:00-09:00 and 18:00-21:00). I'm confident in omitting the 'guaranteedTimes' field from the output because this information doesn't fall into the category that would be expected.\n\n\n",
+    "tokens": {
+      "input": 1416,
+      "output": 99,
+      "total": 2194
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-07-23 09:00:00",
+      "endDate": "2025-07-23 11:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4691,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000373,
+      "outputCost": 0.0001335,
+      "thinkingCost": 0.000675,
+      "cachedCost": 0,
+      "totalCost": 0.0011815
+    },
+    "hash": "3094e88851e23970b705ae0a6785b96c",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_di_2_ore_giorno_23_luglio_2025.html",
+    "thoughts": "**Analyzing the EAV srl Strike Announcement**\n\nOkay, let's break this down. The source is EAV srl in Campania, Italy – good to know for context. The core information is a \"sciopero nazionale di 2 ore,\" a national strike lasting two hours. The date is July 23, 2025, from 09:00 to 11:00. Clear enough. We're dealing with a confirmed strike, which is indicated by the fact that the text explicitly states \"strike\" and it is an announcement of an *upcoming* strike. I'll translate that into my structured format.\n\nSo, `isStrike` is definitely `true`. Now, for the `strikeData`: `startDate` is \"2025-07-23 09:00:00\" and the `endDate` is \"2025-07-23 11:00:00.\" Given that the strike is described as \"nazionale,\" meaning national, the `locationType` is going to be \"NATIONAL\" and, logically, the `locationCodes` field is `null`.\n\nThere is no mention of guaranteed service times in the format \"06:00-09:00\", or in any format. I need to be careful here – although departures before and after are mentioned, a specific range isn't given. I'll omit the `guaranteedTimes` field entirely, it's not present.\n\nFinal structure, I’ll represent the information, as requested, in JSON format.\n\n\n",
+    "tokens": {
+      "input": 1492,
+      "output": 89,
+      "total": 2031
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6885,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000057,
+      "outputCost": 0.0001892,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002462
+    },
+    "hash": "16e9543df5c5b04198259695043c00ad",
+    "sourceFile": "sciopero_nazionale_trasporto_pubblico_adesione_personale_atac_al_274.html",
+    "thoughts": "**Analyzing strike information**\n\nI need to determine if this document is announcing a new or upcoming strike. It’s not; instead, it discusses participation in a strike that has already happened. Therefore, isStrike should be false. The title mentions a national strike with a participation rate, indicating the strike has occurred, but no dates are given. Since the instructions specify that we should return false for participation in past strikes, the output will be {\"isStrike\": false}. This aligns with the required JSON schema.",
+    "tokens": {
+      "input": 1140,
+      "output": 473,
+      "total": 1613
+    }
+  }
+}

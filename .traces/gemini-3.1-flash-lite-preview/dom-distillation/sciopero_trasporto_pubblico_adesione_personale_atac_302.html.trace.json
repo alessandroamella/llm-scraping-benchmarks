@@ -1,36 +1,31 @@
 {
-  "timestamp": "2026-03-09T02:02:56.043Z",
-  "isCacheHit": false,
+  "timestamp": "2026-03-09T19:16:04.706Z",
+  "isCacheHit": true,
   "request": {
     "sourceName": "ATAC",
     "fileName": "sciopero_trasporto_pubblico_adesione_personale_atac_302.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "dom-distillation",
     "useLenientSchema": true,
-    "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a strike from \"ATAC\".\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), 2-letter for provinces (e.g., \"MI\" for Milan), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGION\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"> <h3>Context Metadata</h3> <ul><li>Page Title: Sciopero del trasporto pubblico, adesione personale Atac al 30,2% - Roma Servizi per la Mobilità</li></ul> </div><hr/><div> <div> <div> <div> <div> <div> </div> </div> </div> <div> <div> <div> <div> <h1>Sciopero del trasporto pubblico, adesione personale Atac al 30,2%</h1> </div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div><p>Pubblicato il: 16/12/2021 - Aggiornato il: 16/02/2022</p></div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div> <span> </span> </div> </div> </div> <div> <div> <div></div> </div> </div> <div> <div> <p>L’adesione del personale Atac allo sciopero del trasporto pubblico, rilevata in mattinata, è stata pari al 30,2%</p> </div> </div> </div> </div> </div> </div>"
+    "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"ATAC\" (the public transport company of Rome, Lazio (12)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"> <h3>Context Metadata</h3> <ul><li>Page Title: Sciopero del trasporto pubblico, adesione personale Atac al 30,2% - Roma Servizi per la Mobilità</li></ul> </div><hr/><div> <div> <div> <div> <div> <div> </div> </div> </div> <div> <div> <div> <div> <h1>Sciopero del trasporto pubblico, adesione personale Atac al 30,2%</h1> </div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div><p>Pubblicato il: 16/12/2021 - Aggiornato il: 16/02/2022</p></div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div> <span> </span> </div> </div> </div> <div> <div> <div></div> </div> </div> <div> <div> <p>L’adesione del personale Atac allo sciopero del trasporto pubblico, rilevata in mattinata, è stata pari al 30,2%</p> </div> </div> </div> </div> </div> </div>"
   },
   "response": {
-    "rawOutput": {
-      "isStrike": false
-    },
     "parsedData": {
       "isStrike": false
     },
     "usage": {
-      "input": 683,
+      "input": 718,
       "output": 10,
-      "cached": 0,
-      "thinking": 180,
-      "total": 873
+      "total": 880
     },
     "costUsd": {
-      "inputCost": 0.00017075,
+      "inputCost": 0.0001795,
       "outputCost": 0.000015,
-      "thinkingCost": 0.00027,
+      "thinkingCost": 0.000228,
       "cachedCost": 0,
-      "totalCost": 0.00045575
+      "totalCost": 0.0004225
     },
-    "durationMs": 3069,
-    "thoughts": "**Analyzing the Transit Strike Report**\n\nOkay, so I've got this piece of text: \"Sciopero del trasporto pubblico, adesione personale Atac al 30,2% - Roma Servizi per la Mobilità\". It's a report on a transit strike, apparently concerning Atac personnel in Rome. My initial goal is to figure out if this is an announcement about a future strike, or a report on one that's already in progress or has concluded.\n\nRight, let's break it down. The key phrase here seems to be \"adesione del personale\" - \"participation of personnel.\" It states that the \"participation... was equal to 30.2%\". The phrase \"rilevata in mattinata, è stata pari\" (detected in the morning, was equal to) really nails this down. This confirms that the data refers to a strike that *has already happened*. It's a statement of *how many* people participated, not a warning of disruption.\n\nTherefore, because this is just an information report, I'm setting `isStrike` to `false`.\n\n\n"
+    "durationMs": 3218,
+    "thoughts": "**Analyzing Strike-Related Information**\n\nOkay, let's break this down. My task is to figure out if this excerpt is announcing a *future* strike. The input is a web page excerpt with the title \"Sciopero del trasporto pubblico, adesione personale Atac al 30,2%\". Right away, I see \"adesione,\" meaning participation or adherence, and the percentage \"30,2%.\" That's a key clue. I need to determine if this is news *about* a strike, or if it is *the announcement of a future event*.\n\nThe key is the word \"adesione\" here, and after considering the other information I am now quite certain this is a report on the *outcome* of a strike. It is reporting on the participation *after* an event that already transpired (\"30,2%\"). Therefore, since this *isn't* an announcement of an upcoming work stoppage, I need to flag this as such. So, I will set `isStrike` to `false`. The output format requested is JSON, so I'll be ready to present the structured response accordingly.\n\n\n"
   }
 }

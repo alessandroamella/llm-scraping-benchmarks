@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-20 00:00:00",
+      "endDate": "2025-06-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 27048,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008345,
+      "outputCost": 0.0007284,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00081185
+    },
+    "hash": "b62116ad1fcd90e8a21bb51374212c96",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_24h_venerdi_20_giugno_2025.html",
+    "thoughts": "**Clarifying location codes and dates**\n\nI'm working on the \"locationCodes\" property. It states that it should be null for the NATIONAL type or if unspecified. So, I need to set locationCodes to null when using NATIONAL. For a REGIONAL example, I see it includes location codes like [\"12\"]. \n\nNext, I need to determine the start and end dates for a 24-hour strike on June 20, 2025. According to the article, the startDate should be \"2025-06-20 00:00:00\" and the endDate could be \"2025-06-21 00:00:00\" for a full day's boundary.",
+    "tokens": {
+      "input": 1669,
+      "output": 1821,
+      "total": 3490
+    }
+  }
+}

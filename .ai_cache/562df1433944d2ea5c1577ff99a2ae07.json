@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-03-29 00:00:00",
+      "endDate": "2026-03-29 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "09"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 27511,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00067115,
+      "outputCost": 0.0011344,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00180555
+    },
+    "hash": "562df1433944d2ea5c1577ff99a2ae07",
+    "sourceFile": "martedi_29_marzo_sciopera_24_ore_trasporto_pubblico_servizio_rischio.html",
+    "thoughts": "**Assessing upcoming strike announcement**\n\nI need to format a JSON output per the strike_extraction schema. Looking at the provided content, the title suggests a public transport strike announced for Tuesday, March 29. The details indicate it will be a 24-hour strike involving Atac workers, with specific service times. However, I have to determine the year, as the title mentions \"2026.\" So, that gives us a clear upcoming strike on March 29, 2026. Let's proceed with structuring the JSON.",
+    "tokens": {
+      "input": 13423,
+      "output": 2836,
+      "total": 16259
+    }
+  }
+}

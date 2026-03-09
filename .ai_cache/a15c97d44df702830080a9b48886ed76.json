@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5550,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00034575,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.0007605,
+      "cachedCost": 0,
+      "totalCost": 0.00130275
+    },
+    "hash": "a15c97d44df702830080a9b48886ed76",
+    "sourceFile": "strike-detail-venerd--12-dicembre-da-mezzanotte-alle-21-sciopero.html",
+    "thoughts": "**Strike Analysis: Trenord (Lombardia - 03)**\n\nOkay, here's what I've got from the Trenord source. It looks like we have a national strike planned for Friday, December 12th, 2025. The core of the disruption runs from midnight to 9 PM, so that's \"2025-12-12 00:00:00\" to \"2025-12-12 21:00:00\". They're also saying there could be further impacts on the FERROVIENORD network from 9 PM until midnight, extending the possible disruption to \"2025-12-12 23:59:59\". So, the total strike window is the full day, practically speaking.\n\nThe location is explicitly \"NATIONAL,\" so no specific codes are needed. And importantly, we have the guaranteed service windows – \"06:00-09:00\" and \"18:00-21:00\". That's critical for planning around the impact on services. It's a `isStrike: true` situation, and everything's pretty well-defined for data extraction.\n\n\n",
+    "tokens": {
+      "input": 1383,
+      "output": 131,
+      "total": 2021
+    }
+  }
+}

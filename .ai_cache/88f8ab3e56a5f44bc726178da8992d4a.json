@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3195,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00017825,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0003195,
+      "cachedCost": 0,
+      "totalCost": 0.00051275
+    },
+    "hash": "88f8ab3e56a5f44bc726178da8992d4a",
+    "sourceFile": "sciopero_generale_nazionale_adesione_personale_atac_al_26.html",
+    "thoughts": "**Analyzing the Input for a Strike Announcement**\n\nOkay, here's the deal. I need to determine if this input indicates an *upcoming* strike. The text says: \"Sciopero generale nazionale, adesione personale Atac al 26%.\" That translates roughly to \"National general strike, Atac staff participation at 26%.\"\n\nMy task is to look for \"adesione,\" which means participation. The input also mentions \"oggi\" which means \"today\". The critical instruction is this: if it's about *upcoming*, then `isStrike` is true. If it's about *participation* in a strike that *already happened*, then `isStrike` is false.\n\nThe text goes on: \"L’adesione complessiva del personale Atac allo sciopero generale nazionale di oggi... è stata del 26 per cento.\" – \"The overall participation of Atac staff in today's national general strike... was 26 percent.\" Aha! The phrasing clearly indicates that the strike *already happened* and this is a report on the *participation* rate, not an announcement.\n\nTherefore, because this is a report on participation after the strike, `isStrike` must be set to `false`. That's it, case closed.\n\n\n",
+    "tokens": {
+      "input": 713,
+      "output": 10,
+      "total": 936
+    }
+  }
+}

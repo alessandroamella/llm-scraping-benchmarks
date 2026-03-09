@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-03-08 00:00:00",
+      "endDate": "2022-03-08 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6275,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00019625,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.000972,
+      "cachedCost": 0,
+      "totalCost": 0.00137825
+    },
+    "hash": "b227253ad65d2890620861d27a528b6a",
+    "sourceFile": "martedi_8_marzo_sciopero_generale_24_ore_rischio_trasporto_pubblico.html",
+    "thoughts": "**Strike Analysis & Data Extraction**\n\nOkay, let's break this down. My task is to analyze this input and determine if it's an announcement about an upcoming strike, and if so, to extract the relevant details. The input is \"Martedi 8 marzo sciopero generale di 24 ore.\" The rules are pretty straightforward: return `isStrike: false` if it's not a strike, otherwise `isStrike: true` and the `strikeData`. It needs to be valid JSON, no extra fluff. Date formats for start and end need to be 'yyyy-MM-dd HH:mm:ss'. The `locationType` is either REGIONAL or NATIONAL, the location codes are strings representing regional codes, and the `guaranteedTimes` are in \"HH:mm-HH:mm\" format.\n\nRight, so the content clearly indicates a 24-hour general strike on Tuesday, March 8th. The surrounding context implies the year is 2022. That's simple enough. So, the start date should be \"2022-03-08 00:00:00\" and the end date \"2022-03-08 23:59:59.\" The provided information says \"Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" That translates to service as usual until 8:30 in the morning and from 5 pm to 8 pm. These are the guaranteed times, mapping these to: \"00:00-08:30\" and \"17:00-20:00.\"\n\nThe location is Rome, which maps to Lazio, location code \"12.\" Considering the content \"sciopero generale\" (general strike), the location type will be \"REGIONAL.\"\n\nTherefore, the final output would be:\n\n`{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2022-03-08 00:00:00\",\n    \"endDate\": \"2022-03-08 23:59:59\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\n      \"12\"\n    ],\n    \"guaranteedTimes\": [\n      \"00:00-08:30\",\n      \"17:00-20:00\"\n    ]\n  }\n}`\n\n\n",
+    "tokens": {
+      "input": 785,
+      "output": 140,
+      "total": 1573
+    }
+  }
+}

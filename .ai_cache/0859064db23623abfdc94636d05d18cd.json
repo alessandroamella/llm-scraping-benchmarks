@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 11647,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006704,
+      "outputCost": 0.0003212,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0009916
+    },
+    "hash": "0859064db23623abfdc94636d05d18cd",
+    "sourceFile": "sciopero_24_febbraio2025_stato_del_servizio.html",
+    "thoughts": "**Analyzing strike status**\n\nI need to determine if the document is announcing a new or upcoming strike. It looks like it's providing a status update for an ongoing strike that started on February 24, 2025. The \"Published Time\" shows March 9, 2026, but the content relates to events from February 2025, making it historical. The instruction indicates that we should set `isStrike` to false for updates about past strikes. So, in this case, `isStrike` should be false, and I’ll output `{\"isStrike\": false}`.",
+    "tokens": {
+      "input": 13408,
+      "output": 803,
+      "total": 14211
+    }
+  }
+}

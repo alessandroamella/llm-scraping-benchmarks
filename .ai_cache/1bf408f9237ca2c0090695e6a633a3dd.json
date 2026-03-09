@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-12-14 09:00:00",
+      "endDate": "2023-12-14 17:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4908,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00027475,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.000675,
+      "cachedCost": 0,
+      "totalCost": 0.00109825
+    },
+    "hash": "1bf408f9237ca2c0090695e6a633a3dd",
+    "sourceFile": "strike-detail-gioved--14-dicembre-dalle-ore-9-alle-ore-17-sciope.html",
+    "thoughts": "**Strike Analysis: Trenord Regional Service (Lombardia)**\n\nOkay, let's break this down. The primary task is to confirm if this text announces an upcoming strike. The target is Trenord, specifically their regional services in Lombardia (region code \"03\"). The text itself, dated December 12th, 2023, states \"Giovedì 14 dicembre dalle ore 9 alle ore 17 sciopero dei treni regionali\" which translates to \"Thursday, December 14th, from 9 AM to 5 PM, regional train strike.\"\n\nTherefore, **isStrike** is definitively `True`.\n\nFrom this information, I can extract the strike details:\n\n*   **startDate**: \"2023-12-14 09:00:00\"\n*   **endDate**: \"2023-12-14 17:00:00\"\n*   **locationType**: \"REGIONAL\"\n*   **locationCodes**: \\[\"03\"] (Lombardia)\n\nWhile the text mentions that trains departing their origin station *before* 9 AM and arriving *before* 10 AM will be running, this doesn't explicitly guarantee a typical \"peak hour\" window.  Hence, I'm omitting a `guaranteedTimes` parameter because the usual peak window guarantee isn't there. We know that services after 9:00 AM are disrupted, and that services before 9:00 AM are expected to operate as normal.\n\nSo, the strike data I'm storing is:\n\n*   **isStrike**: `true`\n*   **strikeData**:\n    *   **startDate**: \"2023-12-14 09:00:00\"\n    *   **endDate**: \"2023-12-14 17:00:00\"\n    *   **locationType**: \"REGIONAL\"\n    *   **locationCodes**: [\"03\"]\n\n\n",
+    "tokens": {
+      "input": 1099,
+      "output": 99,
+      "total": 1648
+    }
+  }
+}

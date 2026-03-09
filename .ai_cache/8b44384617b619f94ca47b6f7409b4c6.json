@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 30726,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008195,
+      "outputCost": 0.0009516,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00103355
+    },
+    "hash": "8b44384617b619f94ca47b6f7409b4c6",
+    "sourceFile": "venerdi_8_novembre_sciopero_nazionale_del_trasporto_pubblico_servizio_a_rischio_per_24_ore.html",
+    "thoughts": "**Extracting strike data**\n\nI need to output JSON in the specified strike_extraction format. The content mentions an Italian national transport strike on \"Venerdì 8 novembre,\" indicating a 24-hour service risk. It seems that Rome's Atac/network will only provide essential services from 8:30 to 17:00 and 20:00. This is indeed a pre-announcement for an upcoming strike, so I will set isStrike to true and extract the necessary strikeData, including the start and end dates in the right format.",
+    "tokens": {
+      "input": 1639,
+      "output": 2379,
+      "total": 4018
+    }
+  }
+}

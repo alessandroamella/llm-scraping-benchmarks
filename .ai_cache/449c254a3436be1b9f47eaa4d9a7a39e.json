@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21782,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000761,
+      "outputCost": 0.0009292,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0010053
+    },
+    "hash": "449c254a3436be1b9f47eaa4d9a7a39e",
+    "sourceFile": "luned_9_ottobre_sciopero_nazionale_trasporto_pubblico_possibili_disagi_24_ore.html",
+    "thoughts": "**Extracting strike announcement data**\n\nI need to ensure that the output is in JSON format according to the schema. The content is in Italian, and the title translates to an announcement about a transport strike on October 9, indicating possible disruptions for 24 hours. The body elaborates on disruptions in public transport due to the strike declared by the Usb union. I confirm that this is a strike announcement, so I’ll set `isStrike = true` and extract the necessary data, including start and end dates in the specified format.",
+    "tokens": {
+      "input": 1522,
+      "output": 2323,
+      "total": 3845
+    }
+  }
+}

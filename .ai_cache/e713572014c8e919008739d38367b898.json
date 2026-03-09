@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7824,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000596,
+      "outputCost": 0.0001308,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0001904
+    },
+    "hash": "e713572014c8e919008739d38367b898",
+    "sourceFile": "sciopero_trasporto_pubblico_aperta_metro_b_chiuse_c.html",
+    "thoughts": "**Outputting JSON for strike status**\n\nI need to output JSON based on the strike extraction schema. I see the content is in Italian and the page title mentions public transport strikes. The information indicates an ongoing nationwide strike that will finish at 13:00. Since the instructions say to set `isStrike` to false for ongoing strikes, I will make sure to provide exactly that in the desired format. The final output will be:\n\n{\n  \"isStrike\": false\n}",
+    "tokens": {
+      "input": 1192,
+      "output": 327,
+      "total": 1519
+    }
+  }
+}

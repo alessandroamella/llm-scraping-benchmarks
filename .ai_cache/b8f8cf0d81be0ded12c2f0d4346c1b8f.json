@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6251,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000627,
+      "outputCost": 0.0001508,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002135
+    },
+    "hash": "b8f8cf0d81be0ded12c2f0d4346c1b8f",
+    "sourceFile": "sciopero_trasporto_pubblico_aperte_metropolitane_bb1_c.html",
+    "thoughts": "**Processing strike update**\n\nThe content mentions a public transport strike lasting 24 hours. So, it indicates that the strike is currently ongoing, and according to the instructions, I should set \"isStrike\" to false for matters like cancellation or participation in a past strike. Since this is a real-time update regarding the ongoing strike, I conclude that \"isStrike\" should indeed be false. Therefore, the appropriate output as a JSON object is: {\"isStrike\": false}. I'll get that delivered now!",
+    "tokens": {
+      "input": 1254,
+      "output": 377,
+      "total": 1631
+    }
+  }
+}

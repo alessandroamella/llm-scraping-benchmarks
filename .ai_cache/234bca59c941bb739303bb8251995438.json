@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3653,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000326,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000384,
+      "cachedCost": 0,
+      "totalCost": 0.000725
+    },
+    "hash": "234bca59c941bb739303bb8251995438",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_191.html",
+    "thoughts": "**Analyzing the Atac Strike Report**\n\nOkay, so I've got this webpage about a strike within the Atac public transport system in Rome. The title immediately gives it away: \"Sciopero del trasporto pubblico, adesione personale Atac al 19,1%\". And the content confirms it: \"L’adesione del personale Atac allo sciopero del trasporto pubblico di oggi, rilevata in mattinata, è stata pari al 19,1%.\"\n\nMy task is to determine if this document describes an *upcoming* strike. The crucial word here is \"adesione\" (participation). The article explicitly states that it's discussing the *participation* of staff *in today's* strike – \"di oggi.\" It's not an announcement or a notice of a future event. It's a snapshot, a report on what's happening *right now*, or what *has* happened. The 19.1% figure is the key data point.\n\nTherefore, because this is a report on *participation*, which indicates that the strike is either ongoing or has already taken place, the `isStrike` flag needs to be set to `false`. This is not an announcement, but an after-the-fact report on its occurrence.\n\n\n",
+    "tokens": {
+      "input": 1304,
+      "output": 10,
+      "total": 1570
+    }
+  }
+}

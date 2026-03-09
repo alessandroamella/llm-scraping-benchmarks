@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7486,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005755,
+      "outputCost": 0.0001388,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00019635
+    },
+    "hash": "e5b2c8f37877715160b49745f974dd6c",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_212.html",
+    "thoughts": "**Analyzing strike information**\n\nI need to determine if this document is announcing a new or upcoming strike. The content mentions \"Sciopero del trasporto pubblico\" and an adhesion rate of 21.2%. From the provided context, it seems more about a past strike rather than a future one. The updates indicate it's an article about the adhesion to an existing strike. Therefore, I conclude that \"isStrike\" should be false, and I'll prepare the JSON response accordingly: {\"isStrike\": false}.",
+    "tokens": {
+      "input": 1151,
+      "output": 347,
+      "total": 1498
+    }
+  }
+}

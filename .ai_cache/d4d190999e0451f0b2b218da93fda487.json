@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-07-18 09:00:00",
+      "endDate": "2024-07-18 13:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5385,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00034825,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.0009225,
+      "cachedCost": 0,
+      "totalCost": 0.00141925
+    },
+    "hash": "d4d190999e0451f0b2b218da93fda487",
+    "sourceFile": "strike-detail-gioved--18-luglio-dalle-9-alle-13-sciopero-del-per.html",
+    "thoughts": "**Strike Analysis for FERROVIENORD - July 18th**\n\nOkay, let's break this down. It looks like we have a strike announcement concerning FERROVIENORD staff on July 18th, 2024, from 09:00 to 13:00. Importantly, this isn't a direct Trenord strike; it's a strike affecting the infrastructure manager, FERROVIENORD. This still has a significant impact on service, though. The location is FERROVIENORD's infrastructure, which, as we know, is primarily in Lombardia – location code \"03\", confirmed.\n\nThe critical piece is that this is indeed a strike (\"isStrike\": true). The dates and times are clear: July 18th, starting at 09:00 and ending at 13:00. The location is regional, Lombardia (\"03\").\n\nNow, the guarantee window. The text explicitly states, \"Non coinvolte le fasce di garanzia.\" This is key! This means that NO guaranteed times are in effect during this strike window. So, my initial JSON structure is fine; the `guaranteedTimes` should either be omitted or, ideally, represented as `null`.\n\nSo, the strike data will be:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-07-18 09:00:00\",\n    \"endDate\": \"2024-07-18 13:00:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"03\"]\n  }\n}\n```\n\n\n",
+    "tokens": {
+      "input": 1393,
+      "output": 99,
+      "total": 2107
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8169,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008045,
+      "outputCost": 0.0001624,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00024285
+    },
+    "hash": "c6124dfce87b5d25145dbbcf626c4d22",
+    "sourceFile": "sciopero_del_trasporto_pubblico_chiuse_le_metropolitane_e_la_ferrovia_termini_centocelle_2.html",
+    "thoughts": "**Analyzing strike data**\n\nI need to output JSON indicating whether there's a strike, specifying true or false for isStrike. According to the content, which is in Italian, the title states there's a public transport strike with metro lines closed. The body explains that the national public transport strike is ongoing in Rome. The instructions clarify that I should only set isStrike to true for future announcements, so in this case, I’ll set isStrike to false since it’s real-time information.",
+    "tokens": {
+      "input": 1609,
+      "output": 406,
+      "total": 2015
+    }
+  }
+}

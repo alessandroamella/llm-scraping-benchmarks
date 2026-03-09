@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5012,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000602,
+      "outputCost": 0.0001696,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002298
+    },
+    "hash": "e5e4d9314a6465a54c668bb291a34ede",
+    "sourceFile": "sciopero_trasporto_pubblico_chiusa_metro_aperte_b_c_termini_centocelle.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to output JSON according to the strike extraction schema. The document is about a public transport strike, stating the status of various metro lines in Rome. It clearly mentions that an ongoing national strike is happening. However, the instructions say to set isStrike to true only for announcements about upcoming strikes. Since it's already in progress, isStrike should be false. So, it's confirmed: this document isn't announcing an upcoming strike.",
+    "tokens": {
+      "input": 1204,
+      "output": 424,
+      "total": 1628
+    }
+  }
+}

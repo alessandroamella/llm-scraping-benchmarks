@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-07-18 08:30:00",
+      "endDate": "2024-07-18 12:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5180,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00020275,
+      "outputCost": 0.0001335,
+      "thinkingCost": 0.000651,
+      "cachedCost": 0,
+      "totalCost": 0.00098725
+    },
+    "hash": "d975ad13dccfc27aefe55db103b62f7e",
+    "sourceFile": "trasporto_pubblico_gioved_sciopero_nazionale_830_1230_servizio_rischio.html",
+    "thoughts": "**Strike Announcement Analysis: A Quick Diagnostic**\n\nOkay, let's break this down. My primary task is to identify and process strike announcements, and this one's pretty straightforward. The input text is concise: \"Trasporto pubblico, giovedì sciopero nazionale dalle 8,30 alle 12,30. Servizio a rischio.\" My initial parsing focuses on the key elements – date, time, scope, and potential impact.\n\nRight away, I see \"giovedì\" (Thursday), which, considering the publication date of July 12, 2024, I'm inferring means July 18th, 2024. The time frame is clear: 8:30 to 12:30. \"Sciopero nazionale\" immediately flags this as a national strike, which simplifies the location determination. No need to look for specific codes, and with that I immediately know the scope, the time and the date.\n\nNow, translating this into a structured JSON output is the critical step. I'll need to set `isStrike` to `true`, of course. Then, I can construct the `strikeData` object. I am inferring the `startDate` to be \"2024-07-18 08:30:00\" and `endDate` to be \"2024-07-18 12:30:00\" based on my parsing. The `locationType` is definitely \"NATIONAL,\" as indicated by the text. Since it's national, `locationCodes` is `null`. I did not see any guaranteed times specified in the text, so I would have to set that to \"Not specified in text\" or null, depending on the requirements of the code, as the output.\n\nFinally, I need to validate the structure. Based on the rules of my program: Is it valid JSON? Check. No extraneous comments? Check. No control tokens interfering with the core data? Check. All fields are present and correctly formatted? Check. Done. I've successfully extracted the essential information and formatted it appropriately. Ready to proceed.\n\n\n",
+    "tokens": {
+      "input": 811,
+      "output": 89,
+      "total": 1334
+    }
+  }
+}

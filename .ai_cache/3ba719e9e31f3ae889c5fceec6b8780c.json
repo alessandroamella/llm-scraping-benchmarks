@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-11-07 00:00:00",
+      "endDate": "2024-11-07 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6663,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0037055,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.0009405,
+      "cachedCost": 0,
+      "totalCost": 0.0047945
+    },
+    "hash": "3ba719e9e31f3ae889c5fceec6b8780c",
+    "sourceFile": "roma_servizi_mobilit_domani_attivit_rischio_sciopero.html",
+    "thoughts": "**Strike Analysis: Roma Servizi per la Mobilità**\n\nOkay, let's break this down. My goal is to determine if this text indicates an upcoming strike, and if so, extract the necessary information for the schema. The text mentions \"Domani, per lo sciopero...\" – so that's a clear yes, there *is* a strike being announced. The company is Roma Servizi per la Mobilità, which is often associated with ATAC, the Rome public transit system. However, based on the text \"A rischio il regolare funzionamento dello sportello al pubblico... e del contact center 0657003\" it appears to be limited to the customer service aspects, not a general transit strike.\n\nThe publication date is 23/10/2024 and it was updated on 06/11/2024. The crucial piece of information is \"Domani,\" meaning \"tomorrow.\" This is where it gets a little tricky. We don't have a *specific* calendar date for the strike itself, only that it's \"tomorrow\" relative to the update date. Since the update date is 06/11/2024, I'm going to infer that the strike is on 07/11/2024, or tomorrow from the date of update. However, this is inferential. I will also have to mark this in the analysis as potentially needing further clarification. The schema asks for both `startDate` and `endDate`. Since this is a very short-notice thing I am going to make `endDate` equal `startDate`. The location is Rome (Lazio), with code \"12\". I have confirmed that this is an \"upcoming strike\". It's a strike, that is `isStrike` is true.\n\nSo, I need to format this information and handle the ambiguity around the specific date carefully. The location is Rome, with code \"12\". I need to be sure to indicate that the strike is for the customer service operation and not a general transit strike.\n\n\n",
+    "tokens": {
+      "input": 14822,
+      "output": 99,
+      "total": 15548
+    }
+  }
+}

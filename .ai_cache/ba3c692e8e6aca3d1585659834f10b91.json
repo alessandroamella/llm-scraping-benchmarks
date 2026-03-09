@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9647,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00065815,
+      "outputCost": 0.0001944,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00085255
+    },
+    "hash": "ba3c692e8e6aca3d1585659834f10b91",
+    "sourceFile": "sciopero_21_marzo_metropolitane.html",
+    "thoughts": "**Determining strike status**\n\nI need to check if the document is about a new or upcoming strike announcement. The content discusses an ongoing public transport strike in Rome announced on March 9, 2026, indicating it's a 24-hour strike with the metro operational status provided. Since this is an ongoing strike and not an upcoming announcement, I’ll set `isStrike` to false according to the instructions—it should only be true for future strike announcements.",
+    "tokens": {
+      "input": 13163,
+      "output": 486,
+      "total": 13649
+    }
+  }
+}

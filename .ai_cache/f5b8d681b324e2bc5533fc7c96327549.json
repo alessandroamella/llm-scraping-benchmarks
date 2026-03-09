@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-03-10 09:00:00",
+      "endDate": "2026-03-10 13:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24629,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000904,
+      "outputCost": 0.0008616,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.000952
+    },
+    "hash": "f5b8d681b324e2bc5533fc7c96327549",
+    "sourceFile": "sciopero_generale_nazionale.html",
+    "thoughts": "**Determining strike announcement**\n\nI'm figuring out if the document is announcing an upcoming strike, and the content is in Italian. It states there's a national general strike tomorrow, set for four hours, from 9 to 13, due to a government ordinance. This indicates that yes, there is an upcoming strike. I'll need to extract the relevant details like start date and end date while ensuring they follow the required format. However, the document does not specify the actual date.",
+    "tokens": {
+      "input": 1808,
+      "output": 2154,
+      "total": 3962
+    }
+  }
+}

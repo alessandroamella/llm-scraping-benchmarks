@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 13509,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00065835,
+      "outputCost": 0.0001912,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00084955
+    },
+    "hash": "58ea383b878782a092d0f656337a5b7f",
+    "sourceFile": "sciopero_attive_metro_b_chiusa_c.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI’m tasked with outputting JSON in the specified strike extraction format. The document titled \"Sciopero, attive metro A e B, chiusa la C - Roma Servizi per la Mobilità\" suggests it discusses a strike. The translation indicates metro lines A and B are active while C is closed. The publication date shows that this is about an ongoing national strike as of November 17, 2023. So, if it's an ongoing strike, I should set isStrike to false.",
+    "tokens": {
+      "input": 13167,
+      "output": 478,
+      "total": 13645
+    }
+  }
+}

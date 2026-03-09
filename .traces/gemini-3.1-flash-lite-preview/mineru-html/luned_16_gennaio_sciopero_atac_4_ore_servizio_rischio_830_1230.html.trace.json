@@ -1,15 +1,26 @@
 {
-  "timestamp": "2026-03-09T18:48:42.165Z",
-  "isCacheHit": true,
+  "timestamp": "2026-03-09T19:07:37.728Z",
+  "isCacheHit": false,
   "request": {
     "sourceName": "ATAC",
     "fileName": "luned_16_gennaio_sciopero_atac_4_ore_servizio_rischio_830_1230.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "mineru-html",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"ATAC\" (the public transport company of Rome, Lazio (12)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: mineru-html):\n<html lang=\"it-IT\" prefix=\"og: https://ogp.me/ns#\"><body class=\"wp-singular comunicato-template-default single single-comunicato postid-10946 wp-embed-responsive wp-theme-hello-elementor wp-child-theme-hello-elementor-child hello-elementor-default elementor-default elementor-kit-12678 elementor-page-15972\">\n<div class=\"elementor elementor-15972 elementor-location-single post-10946 comunicato type-comunicato status-publish hentry\" data-elementor-id=\"15972\" data-elementor-post-type=\"elementor_library\" data-elementor-type=\"single-page\">\n<div class=\"elementor-element elementor-element-6ee3468 e-flex e-con-boxed e-con e-parent\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"6ee3468\" data-settings='{\"background_background\":\"classic\"}'>\n<div class=\"e-con-inner\">\n<div class=\"elementor-element elementor-element-6945d4c e-con-full e-flex e-con e-child\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"6945d4c\">\n<div class=\"elementor-element elementor-element-da182fa e-con-full e-flex e-con e-child\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"da182fa\">\n<div class=\"elementor-element elementor-element-aff84d2 elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading\" data-e-type=\"widget\" data-element_type=\"widget\" data-id=\"aff84d2\" data-widget_type=\"theme-post-title.default\">\n<div class=\"elementor-widget-container\">\n<h1 class=\"elementor-heading-title elementor-size-default\" _item_id=\"1\">Lunedì 16 gennaio sciopero Atac di 4 ore. Servizio a rischio dalle 8,30 alle 12,30</h1> </div>\n</div>\n</div>\n</div>\n</div>\n</div>\n<div class=\"elementor-element elementor-element-32c51eb e-flex e-con-boxed e-con e-parent\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"32c51eb\">\n<div class=\"e-con-inner\">\n<div class=\"elementor-element elementor-element-7a3d033 e-con-full e-flex e-con e-child\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"7a3d033\" id=\"main-content\">\n<div class=\"elementor-element elementor-element-723d484 elementor-widget elementor-widget-theme-post-content\" data-e-type=\"widget\" data-element_type=\"widget\" data-id=\"723d484\" data-widget_type=\"theme-post-content.default\">\n<div class=\"elementor-widget-container\">\n<p _item_id=\"3\">status: 1 Lunedì 16 gennaio trasporto pubblico romano rischio per lo sciopero di 4 ore, dalle 8,30 alle 12,30, proclamato dal sindacato Faisa-Cisal. L’agitazione interesserà la rete Atac. Non saranno coinvolti i bus periferici gestiti dalla Roma Tpl.</p>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</body></html>"
   },
   "response": {
+    "rawOutput": {
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2023-01-16 08:30:00",
+        "endDate": "2023-01-16 12:30:00",
+        "locationType": "REGIONAL",
+        "locationCodes": [
+          "12"
+        ]
+      }
+    },
     "parsedData": {
       "isStrike": true,
       "strikeData": {
@@ -24,16 +35,18 @@
     "usage": {
       "input": 1356,
       "output": 99,
-      "total": 1826
+      "cached": 0,
+      "thinking": 806,
+      "total": 2261
     },
     "costUsd": {
       "inputCost": 0.000339,
       "outputCost": 0.0001485,
-      "thinkingCost": 0.0005565,
+      "thinkingCost": 0.001209,
       "cachedCost": 0,
-      "totalCost": 0.001044
+      "totalCost": 0.0016965
     },
-    "durationMs": 5056,
-    "thoughts": "**My Analysis of the Atac Strike Announcement**\n\nOkay, here's what I've got. The input is an announcement about a planned Atac strike. First, I need to extract the date, which is crucial for scheduling and communication. The text says \"Lunedì 16 gennaio\". I need to convert this to the yyyy-MM-dd format the system expects. There's no year given, which is a bit annoying. I’ll make an educated guess and assume it's for 2023 – that seems most likely given the prompt and typical data I've seen in similar situations, but I'll make a mental note to check if there's any context I've missed. So that gives me 2023-01-16.\n\nNext, the time is from 08:30 to 12:30, a nice, clean four-hour strike window. The location is Atac, which I already know is Rome, Lazio (ISTAT code 12, according to my knowledge). The text explicitly says it's a strike that has been \"proclamato,\" meaning it's upcoming.\n\nNow, the instructions also mention \"guaranteed times\". The strike times themselves are clearly defined as from 08:30 to 12:30. In similar announcements, I know this often implies \"fasce di garanzia\" (guaranteed service windows), before or after the strike. However, the text doesn't *explicitly* list them, only stating the strike times themselves. Since the instruction says \"extract the strike details... guaranteed times\", and since the text doesn't specifically mention guaranteed times, I will omit those and only specify the strike duration. I have extracted everything I can without adding information that isn't provided.\n\n\n"
+    "durationMs": 9471,
+    "thoughts": "**Strike Analysis & Data Structuring**\n\nOkay, let's break this down. My task is clear: I need to analyze this snippet of web content about an Atac strike in Rome (Lazio) and structure the data in a specific JSON format. I see the key information immediately. \"Lunedì 16 gennaio sciopero Atac di 4 ore. Servizio a rischio dalle 8,30 alle 12,30.\"  Right, a strike is happening.\n\nFirst, I extract the core details. It's for Atac, the public transport in Rome, which is in Lazio, code \"12\". The strike is on Monday, January 16th – I'll assume the current year is 2023 for now, unless explicitly stated otherwise, or context changes the year. The strike is for four hours, from 8:30 AM to 12:30 PM. The text explicitly states that service is \"at risk\" during this window, confirming the strike period, but no guaranteed times are explicitly mentioned.\n\nI need to confirm all key details:\n*   `isStrike` is clearly `true`.\n*   `startDate` should be \"2023-01-16 08:30:00\" and `endDate` \"2023-01-16 12:30:00\". The date format adheres to the required `yyyy-MM-dd HH:mm:ss`.\n*   The `locationType` is definitely \"REGIONAL,\" and the `locationCodes` is \"12\" to match the Lazio region code.\n\nI need to carefully review my schema for constraints:\n*   The output *must* be valid JSON.\n*   No comments or extraneous text are allowed.\n\nFinally, I have to ensure the data is complete and accurate. The phrase \"servizio a rischio dalle 8,30 alle 12,30\" (service at risk from 8:30 to 12:30) confirms that the entire strike period and the absence of guaranteed service details. Therefore, I will exclude any guaranteed times in the output.\n\n\n"
   }
 }

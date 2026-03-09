@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8868,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006735,
+      "outputCost": 0.0002112,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008847
+    },
+    "hash": "589caec9702038d1d9a98699426972c8",
+    "sourceFile": "venerdi_trasporto_pubblico_regolarmente_servizio_sciopero_nazionale_usb_rinviato_9_ottobre.html",
+    "thoughts": "**Interpreting transport strike information**\n\nI need to format the analysis output in JSON according to the strike_extraction schema. The title indicates that public transport in Italy is running normally, despite a strike being postponed to October 9. The lengthy content also reflects that this is a revocation of the previously planned strike set for September 29. Clearly, the document isn't announcing a new strike but rather a cancellation. So, I'll set isStrike to false in the output.",
+    "tokens": {
+      "input": 13470,
+      "output": 528,
+      "total": 13998
+    }
+  }
+}

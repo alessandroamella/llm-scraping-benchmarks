@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5907,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007275,
+      "outputCost": 0.0001476,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00022035
+    },
+    "hash": "1ca4bebb074c3985fce027f3bff2b174",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_186.html",
+    "thoughts": "**Classifying the strike status**\n\nI'm focusing on whether to classify \"isStrike.\" The title is in Italian, discussing public transport strike participation at 18.6%. The body indicates that this refers to a morning report about a strike that has already occurred, not an upcoming one. Since this is an update after the event, \"isStrike\" should be false. I’ll make sure the final output reflects that accurately, formatted as {\"isStrike\": false}.",
+    "tokens": {
+      "input": 1455,
+      "output": 369,
+      "total": 1824
+    }
+  }
+}

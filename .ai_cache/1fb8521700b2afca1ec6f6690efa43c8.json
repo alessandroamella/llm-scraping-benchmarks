@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7276,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006677,
+      "outputCost": 0.000176,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008437
+    },
+    "hash": "1fb8521700b2afca1ec6f6690efa43c8",
+    "sourceFile": "sciopero_trasporto_pubblico_chiuse_metro_c_termini_centocelle.html",
+    "thoughts": "**Determining strike information**\n\nI need to output data in JSON format according to the specifications. The content mentions an ongoing public transport strike, specifically noting that metro lines A and C are closed in Rome. The update indicates that this event is from February 2022 and mentions it’s currently ongoing. Since this does not announce a new or upcoming strike, I'll set isStrike to false. I want to ensure I interpret this correctly!",
+    "tokens": {
+      "input": 13354,
+      "output": 440,
+      "total": 13794
+    }
+  }
+}

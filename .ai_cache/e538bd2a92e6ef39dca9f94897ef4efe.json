@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 21:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5529,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0003435,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.000834,
+      "cachedCost": 0,
+      "totalCost": 0.001374
+    },
+    "hash": "e538bd2a92e6ef39dca9f94897ef4efe",
+    "sourceFile": "strike-detail-venerd--12-dicembre-da-mezzanotte-alle-21-sciopero.html",
+    "thoughts": "**Analyzing Trenord Strike Information**\n\nAlright, let's break this down. My task is to analyze this Trenord strike information and extract the details, specifically if it's an *upcoming* strike. The text says \"Venerdì 12 dicembre da mezzanotte alle 21 sciopero nazionale\" (Friday, Dec 12, from midnight to 9 PM). Crucially, the date of *this* information is December 11, 2025, which makes this an *upcoming* strike – bingo!\n\nNow for the details. It's a \"sciopero nazionale,\" a national strike, so that's key. The start is 2025-12-12 00:00:00, and the end is 2025-12-12 21:00:00. Note the text does mention that there could be further effects on FERROVIENORD lines until midnight, but the main strike duration is what's important here. Let me confirm: \"Da mezzanotte alle 21 di venerdì 12 dicembre... sono possibili ulteriori ripercussioni fra le ore 21 e la mezzanotte\". Confirmed.\n\nWe also have \"guaranteed times,\" which are \"06:00-09:00\" and \"18:00-21:00.\" Important for service planning. Since it's a \"sciopero nazionale\" -- and the instructions said to set the location to \"NATIONAL\" for national strikes -- the `locationType` should be \"NATIONAL.\" The strike will impact Trenord, or more accurately, the region of Lombardia (03), but the location code should be null.\n\nTherefore, the `strikeData` structure is:\n\n*   `startDate`: \"2025-12-12 00:00:00\"\n*   `endDate`: \"2025-12-12 21:00:00\"\n*   `locationType`: \"NATIONAL\"\n*   `locationCodes`: null\n*   `guaranteedTimes`: \\[\"06:00-09:00\", \"18:00-21:00\"]\n\nLooks like the format is spot-on. We have everything we need.\n\n\n",
+    "tokens": {
+      "input": 1374,
+      "output": 131,
+      "total": 2061
+    }
+  }
+}

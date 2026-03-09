@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7638,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007365,
+      "outputCost": 0.000142,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00021565
+    },
+    "hash": "547948c3ef5f102059d1a27069d4d9bb",
+    "sourceFile": "sciopero_generale_nazionale_adesione_personale_atac_al_26.html",
+    "thoughts": "**Evaluating strike information**\n\nI need to output JSON in the strike_extraction format, but first, I must determine if the document is announcing a new or upcoming strike. The content is in Italian, and the title indicates the participation of Atac staff in a general strike at 26%. It mentions that this participation was measured in the morning, indicating the strike already occurred today. So, isStrike should be false, as it relates to participation after the event, not an upcoming announcement.",
+    "tokens": {
+      "input": 1473,
+      "output": 355,
+      "total": 1828
+    }
+  }
+}

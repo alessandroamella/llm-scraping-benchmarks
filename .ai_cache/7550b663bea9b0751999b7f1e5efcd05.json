@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-01-09 21:00:00",
+      "endDate": "2026-01-10 23:59:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "04",
+        "05"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4890,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000285,
+      "outputCost": 0.0001695,
+      "thinkingCost": 0.0008325,
+      "cachedCost": 0,
+      "totalCost": 0.001287
+    },
+    "hash": "7550b663bea9b0751999b7f1e5efcd05",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2026-1-9-sciopero-del-personale-di-sad---.html",
+    "thoughts": "**Strike Announcement Analysis**\n\nOkay, so I've received an announcement about an upcoming strike. My primary task is to extract the key information and format it correctly into JSON. Let's break this down:\n\nFirst, I see the announcement concerns a strike involving SAD and Trentino Trasporti personnel. The strike has specific dates: SAD's strike is from 2026-01-09 21:00:00 to 2026-01-10 20:59:00, and Trentino Trasporti's strike is from 2026-01-10 00:01:00 to 2026-01-10 23:59:00. Combining these, the overall strike period is from 2026-01-09 21:00:00 to 2026-01-10 23:59:00. It impacts the Trentino-Alto Adige (04) and Veneto (05) regions, and the location type is REGIONAL. There are no guaranteed times specified.\n\nNow, I'm generating a strike data structure. The initial assessment is `isStrike: true`. The extracted data should reside within the `strikeData` object. I am double-checking to ensure these things are covered:\n\n*   The `startDate` is the earliest start, or \"2026-01-09 21:00:00\".\n*   The `endDate` is the last end, or \"2026-01-10 23:59:00\".\n*   `locationType`: \"REGIONAL\".\n*   `locationCodes`: Contains the region codes, [\"04\", \"05\"].\n*   `guaranteedTimes`: Should be `null` since none are listed.\n\nFinally, I'm verifying the input, matching formats, and following guidelines to ensure that this outputs a valid JSON.\n\n\n",
+    "tokens": {
+      "input": 1140,
+      "output": 113,
+      "total": 1808
+    }
+  }
+}

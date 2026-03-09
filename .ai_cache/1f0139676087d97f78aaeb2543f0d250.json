@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8102,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005685,
+      "outputCost": 0.000186,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00024285
+    },
+    "hash": "1f0139676087d97f78aaeb2543f0d250",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_279.html",
+    "thoughts": "**Clarifying strike status**\n\nThe instructions clarify that if the information is about a strike that has already occurred, I should set isStrike to false. So, I conclude that isStrike is false. I notice the page mentions “oggi,” possibly relating to July 18, 2024, but the update date is November 6, 2024. Contextually, the focus is on participation, so the output is simply a JSON object: {\"isStrike\": false}. I'll ensure to format it correctly and avoid extra commentary.",
+    "tokens": {
+      "input": 1137,
+      "output": 465,
+      "total": 1602
+    }
+  }
+}

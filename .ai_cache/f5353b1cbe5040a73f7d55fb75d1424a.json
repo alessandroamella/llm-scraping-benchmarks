@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-16 03:00:00",
+      "endDate": "2025-06-17 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5283,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0003065,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.00084,
+      "cachedCost": 0,
+      "totalCost": 0.0013565
+    },
+    "hash": "f5353b1cbe5040a73f7d55fb75d1424a",
+    "sourceFile": "strike-detail-luned--16-giugno-sciopero-dei-treni-regionali.html",
+    "thoughts": "**Strike Analysis: Trenord - Lombardia**\n\nOkay, let's break this down methodically. My task is to analyze this text to determine if it describes a strike announcement. The condition is clear: If it *is* an announcement, `isStrike` will be true and I need to extract the relevant details.\n\nThe input provides the following specifics: The organization is Trenord (in Lombardia, region code \"03\"). The title is a dead giveaway: \"Lunedì 16 giugno sciopero dei treni regionali\" (Monday June 16, regional train strike). The news date is June 13, 2025. The strike itself is scheduled for June 16, 2025, to June 17, 2025, starting from \"Dalle ore 3 di lunedì 16 alle ore 2 di martedì 17 giugno\" (3 AM Monday June 16 to 2 AM Tuesday June 17). Guaranteed times are \"06:00-09:00\" and \"18:00-21:00\". Crucially, this affects the region: Regional (Lombardia, \"03\").\n\nTherefore, `isStrike` is clearly true. Now, I need to extract the core strike details.\n\n*   `startDate` is \"2025-06-16 03:00:00\"\n*   `endDate` is \"2025-06-17 02:00:00\"\n*   `locationType` is \"REGIONAL\"\n*   `locationCodes` is [\"03\"] (Lombardia)\n*   `guaranteedTimes` are [\"06:00-09:00\", \"18:00-21:00\"]\n\nThese parameters are all structured and validated. `isStrike` is confirmed as true. The `strikeData` confirms the formatting of each data element: the `startDate`, `endDate` and `guaranteedTimes` all match their designated patterns, and the `locationType` and `locationCodes` all conform to the enum and schema.\n\nThis is a well-defined strike announcement, and I've successfully extracted and validated the key information for further processing.\n\n\n",
+    "tokens": {
+      "input": 1226,
+      "output": 140,
+      "total": 1926
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6558,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006619,
+      "outputCost": 0.0001736,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008355
+    },
+    "hash": "0d6462857b5cc15148412dfa3f7ebf1f",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_154.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to evaluate if the document is announcing a new upcoming strike, which is in Italian. The title refers to a public transport strike and mentions that Atac employees had a 15.4% participation rate. The status shows it was published and updated on July 24, 2023. This suggests it discusses a strike that has already occurred rather than announcing a future one. Therefore, it seems I should set isStrike to false since it’s just informational.",
+    "tokens": {
+      "input": 13238,
+      "output": 434,
+      "total": 13672
+    }
+  }
+}

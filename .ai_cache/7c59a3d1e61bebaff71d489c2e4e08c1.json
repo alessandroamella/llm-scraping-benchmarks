@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4087,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00017875,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000276,
+      "cachedCost": 0,
+      "totalCost": 0.00046975
+    },
+    "hash": "7c59a3d1e61bebaff71d489c2e4e08c1",
+    "sourceFile": "sciopero_nazionale_adesione_personale_atac_al_237.html",
+    "thoughts": "**Analyzing the Strike Document**\n\nOkay, let's break this down. My task is clear: determine if this document signals an *upcoming* strike. The input text is \"Sciopero nazionale, adesione personale Atac al 23,7%.\" My initial read suggests something strike-related, but I need to be precise.\n\nI analyze the content, specifically, \"L’adesione complessiva del personale Atac allo sciopero nazionale di oggi... è stata del 23,7%.\" Ah, the key phrase is \"oggi,\" meaning \"today.\" The text refers to the *participation* (\"adesione\") in a national strike *today*. The 23.7% is the participation rate. This isn't an announcement of a future event; it's a report on one that already occurred.\n\nTherefore, because this documents relates to the participation in a *past* event, and not a future planned one, I must conclude that the document does *not* announce an upcoming strike. The logical requirement states that if the document details participation in a strike that already happened, the `isStrike` flag must be set to `false`. So, I'm setting the `isStrike` flag to `false`.\n\n\n",
+    "tokens": {
+      "input": 715,
+      "output": 10,
+      "total": 909
+    }
+  }
+}

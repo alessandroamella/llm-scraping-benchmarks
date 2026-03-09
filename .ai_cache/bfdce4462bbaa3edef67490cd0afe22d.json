@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7435,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000572,
+      "outputCost": 0.0001544,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002116
+    },
+    "hash": "bfdce4462bbaa3edef67490cd0afe22d",
+    "sourceFile": "sciopero_trasporto_pubblico_ha_aderito_135_personale_atac.html",
+    "thoughts": "**Interpreting strike information**\n\nI need to output JSON according to the strike_extraction schema. First, I have to determine whether the document refers to a new or upcoming strike. The content mentions a public transport strike in Italy, noting a participation rate of 13.5% on December 8, 2023, for an event that happened earlier. Since this isn’t announcing a future strike, I’ll set isStrike to false and generate the JSON output:  \n{ \"isStrike\": false }",
+    "tokens": {
+      "input": 1144,
+      "output": 386,
+      "total": 1530
+    }
+  }
+}

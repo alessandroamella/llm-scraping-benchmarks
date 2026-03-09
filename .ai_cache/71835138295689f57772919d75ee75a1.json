@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-05-02 08:30:00",
+      "endDate": "2023-05-02 12:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5269,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0003385,
+      "outputCost": 0.0001335,
+      "thinkingCost": 0.0008385,
+      "cachedCost": 0,
+      "totalCost": 0.0013105
+    },
+    "hash": "71835138295689f57772919d75ee75a1",
+    "sourceFile": "martedi_2_maggio_sciopero_nazionale_4_ore_trasporto_pubblico_romano_rischio.html",
+    "thoughts": "**Strike Alert for Rome's Public Transport**\n\nOkay, so I've got this alert from ATAC, the public transport company in Rome, and it's flagged a potential disruption. Let's break this down. The core information is that there's a national strike scheduled for Tuesday, May 2nd. It says \"Martedi 2 maggio\" – and quick sanity check, yes, May 2nd, 2023 was a Tuesday, so that's the date we're working with.\n\nThe strike's duration is four hours, from 08:30 to 12:30. The text explicitly states that this agitation will affect the \"rete Atac\", meaning the ATAC network in Rome. The location is \"nazionale,\" which translates to national, so the effect is nationwide, though this specific notice only mentions Rome. There are no guaranteed times specified.\n\nNow, to structure this data properly, I need to represent this in JSON format, adhering to the given date and time conventions (yyyy-MM-dd HH:mm:ss). I need to make a note here, for accuracy, that the location codes are null, given the location of the strike being national.\n\nTherefore, the strike data should look like this:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2023-05-02 08:30:00\",\n    \"endDate\": \"2023-05-02 12:30:00\",\n    \"locationType\": \"NATIONAL\",\n    \"locationCodes\": null\n  }\n}\n```\n\n\n",
+    "tokens": {
+      "input": 1354,
+      "output": 89,
+      "total": 2002
+    }
+  }
+}

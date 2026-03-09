@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8580,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006699,
+      "outputCost": 0.0002048,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008747
+    },
+    "hash": "91ba3bbff0a8fbf2692702455fbe479e",
+    "sourceFile": "sciopero_generale_adesione_personale_atac_al_259.html",
+    "thoughts": "**Analyzing strike participation**\n\nI need to carefully consider the user's request to output JSON in a specific format. The content refers to a general strike and mentions the participation rate of Atac personnel being 25.9%. However, it's important to note that this information is about a strike that already occurred, not an upcoming one. Since the instructions indicate that if it's about participation in a strike that has already happened, I should set isStrike to false. So, that’s what I’ll do!",
+    "tokens": {
+      "input": 13398,
+      "output": 512,
+      "total": 13910
+    }
+  }
+}

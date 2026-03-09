@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-11-29 09:00:00",
+      "endDate": "2024-11-29 13:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6514,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0002065,
+      "outputCost": 0.0001335,
+      "thinkingCost": 0.000768,
+      "cachedCost": 0,
+      "totalCost": 0.001108
+    },
+    "hash": "fab5157d12fe61db225acbc7048a28bb",
+    "sourceFile": "sciopero_generale_nazionale.html",
+    "thoughts": "**Strike Analysis Summary**\n\nOkay, let's break this down. The primary task is clear: determine if the input represents a strike announcement. I see the input: \"Domani sciopero generale nazionale. Per i trasporti stop dalle 9 alle 13 - Roma Servizi per la Mobilità,\" with a publication date of 28/11/2024. The presence of \"Domani\" immediately implies the strike is scheduled for 29/11/2024.\n\nThe text explicitly mentions a \"sciopero generale nazionale\" – a general national strike affecting the transport sector, specifically from 09:00 to 13:00. While \"Roma Servizi per la Mobilità\" suggests a Rome focus, the phrasing explicitly states a *national* strike.\n\nI've got the essential criteria now: `isStrike` is definitely true. The `startDate` is 2024-11-29 09:00:00 and the `endDate` is 2024-11-29 13:00:00. Here's where the logic gets interesting: even though \"Roma\" is mentioned, the explicit language of \"sciopero generale nazionale\" demands a `locationType` of \"NATIONAL\". As the prompt notes, if `locationType` is \"NATIONAL\", then `locationCodes` needs to be `null`. No guaranteed times are mentioned, so that field is irrelevant.\n\nSo, to summarize my findings: `isStrike`: true, and the extracted strike data is as follows: `startDate`: \"2024-11-29 09:00:00\", `endDate`: \"2024-11-29 13:00:00\", `locationType`: \"NATIONAL\", `locationCodes`: null. The key to the correct output is understanding the impact of the modifier \"generale nazionale\" on the location information.\n\n\n",
+    "tokens": {
+      "input": 826,
+      "output": 89,
+      "total": 1427
+    }
+  }
+}

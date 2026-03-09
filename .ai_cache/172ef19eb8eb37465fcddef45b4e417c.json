@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-05 03:00:00",
+      "endDate": "2025-02-06 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19765,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000803,
+      "outputCost": 0.0004852,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0005655
+    },
+    "hash": "172ef19eb8eb37465fcddef45b4e417c",
+    "sourceFile": "strike-detail-mercoled--5-febbraio-sciopero-dei-treni-regionali.html",
+    "thoughts": "**Identifying upcoming strike announcement**\n\nI need to format the information about a strike in JSON according to the schema. The document confirms an upcoming strike from 3 AM on Wednesday, February 5, until 2 AM on Thursday, February 6. It mentions that the union ORSA has called for the strike, impacting regional train services, and outlines that there may be variations and cancellations. Given that the date indicates it's future relative to the current date, it's definitely announcing an upcoming event.",
+    "tokens": {
+      "input": 1606,
+      "output": 1213,
+      "total": 2819
+    }
+  }
+}

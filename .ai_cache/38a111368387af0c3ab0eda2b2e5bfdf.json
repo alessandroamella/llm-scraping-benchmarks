@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-10-05 00:00:00",
+      "endDate": "2024-10-05 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21534,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006712,
+      "outputCost": 0.000722,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0013932
+    },
+    "hash": "38a111368387af0c3ab0eda2b2e5bfdf",
+    "sourceFile": "trasporto_pubblico_sabato_5_ottobre_sciopero_nazionale_24_ore_servizio_rischio.html",
+    "thoughts": "**Determining strike date and time**\n\nI see that I need to specify the startDate and endDate in the required format. The document mentions an upcoming strike on \"Saturday Oct 5.\" However, it doesn't specify exact times, so I’m thinking to set the startDate to 2024-10-05 00:00:00 and the endDate to 2024-10-05 23:59:59. This aligns with a possible 24-hour strike duration, even if not explicitly detailed in the article. The instructions are clear; I’ll stick with this format.",
+    "tokens": {
+      "input": 13424,
+      "output": 1805,
+      "total": 15229
+    }
+  }
+}

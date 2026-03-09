@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-12-07 09:00:00",
+      "endDate": "2023-12-07 13:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "09:00-13:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20532,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007745,
+      "outputCost": 0.0007552,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00083265
+    },
+    "hash": "c791b30372702c916c04fd893e72d82b",
+    "sourceFile": "gioved_sciopero_regionale_4_ore_trasporto_pubblico_rischio.html",
+    "thoughts": "**Extracting strike details**\n\nI'm acting as a data extraction algorithm to determine if this document announces an upcoming strike. The Italian text indicates a 4-hour regional strike on Thursday, December 7, affecting public transport. The announcement gives specific times, stating it will run from 9 AM to 1 PM, organized by Faisa Cisal, and mentions its impact on the Rome ATAC network. Since it's a clear announcement of an upcoming strike, I should set isStrike to true and extract the start date.",
+    "tokens": {
+      "input": 1549,
+      "output": 1888,
+      "total": 3437
+    }
+  }
+}

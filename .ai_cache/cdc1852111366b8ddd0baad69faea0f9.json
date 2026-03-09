@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-02-25 00:00:00",
+      "endDate": "2022-02-25 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7697,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000351,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.001308,
+      "cachedCost": 0,
+      "totalCost": 0.0018555
+    },
+    "hash": "cdc1852111366b8ddd0baad69faea0f9",
+    "sourceFile": "trasporto_pubblico_venerdi_25_febbraio_sciopero_nazionale_24_ore.html",
+    "thoughts": "**Analyzing the ATAC Strike Information**\n\nOkay, so I'm looking at this announcement from ATAC, the Rome public transport company. It's about a national strike on Friday, February 25th. The text says \"24-hour national strike,\" which initially makes it sound like the entire day. But reading further, the specific impact on ATAC in Rome is clarified. It describes strike windows: 8:30 AM to 5:00 PM and then 8:00 PM until the end of service.\n\nThe source doesn't provide the year, but since it's a Friday, February 25th in 2022 is the only logical assumption and will assume 2022. That's fine.\n\nGiven these windows, I can deduce the guaranteed service times. The service *will* run from the beginning of the day until 8:30 AM, then again from 5:00 PM to 8:00 PM. The text implies a 24-hour strike, I need to figure out the startDate and endDate. Start date is February 25th, 2022 at 00:00:00 and End date is February 25th, 2022 at 23:59:59.\n\nThe location is tricky. It's a *national* strike, but the information is *specific* to Rome. Since the strike itself is national, I can classify the location as \"NATIONAL\". The locationCodes are null, which makes sense for a national scope.\n\nSo, taking the format: The final strike data will include:\n\n*   **isStrike**: true\n*   **strikeData**:\n    *   **startDate**: \"2022-02-25 00:00:00\"\n    *   **endDate**: \"2022-02-25 23:59:59\"\n    *   **locationType**: \"NATIONAL\"\n    *   **locationCodes**: null\n    *   **guaranteedTimes**: \\[\"00:00-08:30\", \"17:00-20:00\"]\n\nIt seems correct now.\n\n\n",
+    "tokens": {
+      "input": 1404,
+      "output": 131,
+      "total": 2407
+    }
+  }
+}

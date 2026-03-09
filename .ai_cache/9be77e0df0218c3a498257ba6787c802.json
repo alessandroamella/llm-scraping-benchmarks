@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 26160,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006535,
+      "outputCost": 0.00099,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00105535
+    },
+    "hash": "9be77e0df0218c3a498257ba6787c802",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-12-12-sciopero-nazionale-personale-a.html",
+    "thoughts": "**Evaluating strike announcement dates**\n\nI'm looking at the event date, which says it's on December 12, 2025. But since it's now 2026, this date is in the past. The document seems to announce a 24-hour strike starting on December 12, 2025. So, it's possible the strike has already occurred. The instructions clarify that if it's about cancellation or providing info about a past strike, then I should set isStrike to false. That seems straightforward!",
+    "tokens": {
+      "input": 1307,
+      "output": 2475,
+      "total": 3782
+    }
+  }
+}

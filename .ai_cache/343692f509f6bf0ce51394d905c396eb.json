@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-07-23 09:00:00",
+      "endDate": "2025-07-23 11:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "09:00-11:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 17593,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000947,
+      "outputCost": 0.0006036,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0006983
+    },
+    "hash": "343692f509f6bf0ce51394d905c396eb",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_di_2_ore_giorno_23_luglio_2025.html",
+    "thoughts": "**Processing strike announcement**\n\nI'm focusing on extracting data from the Italian article regarding an upcoming strike. The article clearly announces a national strike for July 23, 2025, from 09:00 to 11:00, indicating that this is indeed in the future, relative to the article's date of July 22, 2025. Therefore, we confirm isStrike as true. I need to fill in the strikeData, including startDate, endDate, locationType, locationCodes, and guaranteedTimes. Let's ensure all details are accurately captured!",
+    "tokens": {
+      "input": 1894,
+      "output": 1509,
+      "total": 3403
+    }
+  }
+}

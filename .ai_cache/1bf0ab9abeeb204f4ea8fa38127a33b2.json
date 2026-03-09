@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4909,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00375525,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000303,
+      "cachedCost": 0,
+      "totalCost": 0.00407325
+    },
+    "hash": "1bf0ab9abeeb204f4ea8fa38127a33b2",
+    "sourceFile": "sciopero_generale_aperte_metro_a_e_b_la_situazione_sulla_rete_romana.html",
+    "thoughts": "**Analyzing Strike Information from Input Text**\n\nOkay, so the task is pretty straightforward: I need to pull out strike information and format it as JSON. The key here is the `isStrike` field. I need to flag it as \"True\" *only* if the text announces an *upcoming* strike. Let's see... the input is \"Sciopero generale, aperte metro A e B. La situazione sulla rete romana\" (General strike, metro A and B open. The situation on the Roman network).\n\nAlright, I need to dig into the content to find out if it's an announcement or an update. Examining the text, it says: \"È in corso lo sciopero generale nazionale che coinvolge anche il trasporto pubblico\" (The national general strike involving public transport is *underway*). Hmm, the phrase \"è in corso\" – \"is underway\" – that's a crucial clue. This isn't an announcement; it's a real-time status update about the metro lines *during* the strike. So the information presented is the current situation, not a heads-up that one is scheduled.\n\nTherefore, despite the presence of the word \"sciopero\" (strike), this is not an *upcoming* strike announcement. The `isStrike` field needs to be set to \"false.\"\n\n\n",
+    "tokens": {
+      "input": 15021,
+      "output": 10,
+      "total": 15233
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-02-17 00:00:00",
+      "endDate": "2023-02-17 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6415,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0003415,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.0011505,
+      "cachedCost": 0,
+      "totalCost": 0.0016885
+    },
+    "hash": "3a16a9e895a08c959c33064b0047769a",
+    "sourceFile": "venerd_17_febbraio_sciopero_nazionale_usb_24_ore_trasporto_pubblico_rischio.html",
+    "thoughts": "**Strike Analysis: ATAC (Rome) - February 17, 2023**\n\nOkay, let's break this down. The core input is an announcement regarding a 24-hour national strike impacting ATAC in Rome. My initial instinct is to pin down the date - since no year is given, I need to make an informed assumption. Looking at the day of the week, February 17th, 2023 was a Friday, so I'll go with that as the most logical and current applicable year.\n\nThe strike is scheduled for a full 24 hours, starting at midnight (00:00:00) on February 17th, 2023 and ending just before midnight the same day (23:59:59). Since the strike is national scope, the `locationType` should be \"NATIONAL\" and `locationCodes` should be null.\n\nNow, the crucial aspect is the service guarantees. The text clearly states \"servizio regolare fino alle 8,30 e dalle 17 alle 20\". This means there will be regular service until 8:30 am and again from 5:00 pm (17:00) until 8:00 pm (20:00). Therefore, the `guaranteedTimes` should be `[\"00:00-08:30\", \"17:00-20:00\"]`. I have verified the format, dates, times and the scope. Now I have verified this against the schema.\n\nSo, overall, this data is now formatted for a standardized data set as a strike that spans the whole day, with the specified guarantees to service.\n\n\n",
+    "tokens": {
+      "input": 1366,
+      "output": 131,
+      "total": 2264
+    }
+  }
+}

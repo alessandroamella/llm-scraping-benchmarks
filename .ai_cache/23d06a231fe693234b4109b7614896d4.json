@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-24 00:00:00",
+      "endDate": "2025-02-24 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24799,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006325,
+      "outputCost": 0.0008752,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00093845
+    },
+    "hash": "23d06a231fe693234b4109b7614896d4",
+    "sourceFile": "lunedi_24_febbraio_sciopero_nazionale_del_trasporto_pubblico_possibili_disagi.html",
+    "thoughts": "**Extracting strike data**\n\nI need to extract strike data, specifically start and end dates in the 'yyyy-MM-dd HH:mm:ss' format. The text mentions a date of \"Lunedì 24 febbraio,\" which is February 24, 2025. The article notes a \"sciopero nazionale di 24 ore,\" but it doesn't specify an exact start time. Usually, a 24-hour strike would run from 00:00 to 24:00 local time. I can assume startDate as 2025-02-24 00:00:00 and endDate as 2025-02-24 23:59:59. Also, I should note the guaranteed service times mentioned.",
+    "tokens": {
+      "input": 1265,
+      "output": 2188,
+      "total": 3453
+    }
+  }
+}

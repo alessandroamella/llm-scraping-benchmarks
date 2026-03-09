@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-07-23 09:00:00",
+      "endDate": "2025-07-23 11:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5123,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000323,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.000735,
+      "cachedCost": 0,
+      "totalCost": 0.0012065
+    },
+    "hash": "43c9c02a8512c20103f67cf4b7d03092",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_di_2_ore_mercoledi_23_luglio_2025.html",
+    "thoughts": "**Strike Analysis: EAV (Campania)**\n\nOkay, let's break this down. The company involved is EAV, operating in the Campania region (that's code 15, I remember that). The document is a strike *announcement*, published on July 22, 2025, and it's for a strike happening tomorrow, Wednesday, July 23, 2025. It's a two-hour corporate-level strike, which likely translates to a regional impact given EAV's scope. The strike will run from 09:00 to 11:00.\n\nTherefore, `isStrike` is definitely true. The strike data is straightforward. The `startDate` is 2025-07-23 09:00:00 and the `endDate` is 2025-07-23 11:00:00. Location type should be marked as \"REGIONAL\" and the `locationCodes` is definitely [\"15\"] for Campania. The text doesn't mention *guaranteed* service periods, just potentially affected departures at certain times. I need to make sure I represent this correctly, either by using null or omitting the `guaranteedTimes` field, as there are no \"guaranteed time ranges\".\n\nThis isn't a cancellation, it isn't participation info, and it's not a real-time update; it's a *notification* of an *upcoming* strike. The analysis is pretty clear cut. Now I need to decide how to handle the lack of guaranteed departure times in the data structure.\n\n\n",
+    "tokens": {
+      "input": 1292,
+      "output": 99,
+      "total": 1881
+    }
+  }
+}

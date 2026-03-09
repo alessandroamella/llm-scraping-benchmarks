@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-09-22 00:00:00",
+      "endDate": "2025-09-22 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5016,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00040775,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.0008475,
+      "cachedCost": 0,
+      "totalCost": 0.00145175
+    },
+    "hash": "cbaed10ae1f44d6cc5b8951a033e1415",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_di_24h_giorno_22_settembre_2025.html",
+    "thoughts": "**Analyzing Strike Information for EAV**\n\nOkay, so the user wants me to pull out strike information from this text related to EAV, which is located in the Campania region (code 15). I need to generate a JSON object that indicates whether there's a strike (`isStrike`: boolean) and, if so, details about it (`strikeData`: object).\n\nThe input is \"Linee Flegree: Avviso di sciopero generale nazionale lunedì 22 settembre 2025\" and \"Il giorno 22 settembre 2025... sciopero generale nazionale\". The goal is to provide a valid, parseable JSON object with specific data formats. Specifically, the `startDate` and `endDate` need to be in `yyyy-MM-dd HH:mm:ss` format. `locationType` should be either `REGIONAL` or `NATIONAL`, and `locationCodes` should contain the two-digit region code or `null` for a national strike. The `guaranteedTimes` must be an array of \"HH:mm-HH:mm\" strings.\n\nFrom the text, I've identified the strike as a \"generale nazionale\" (general national) strike on September 22, 2025. It's a 24-hour strike. The guaranteed times are 05:30-08:30 and 16:30-19:30. Therefore, I can define:\n\n*   `isStrike`: `true`\n*   `startDate`: `2025-09-22 00:00:00` (since it's a general strike across the whole day)\n*   `endDate`: `2025-09-22 23:59:59`\n*   `locationType`: `\"NATIONAL\"`\n*   `locationCodes`: `null` (because it's a national strike)\n*   `guaranteedTimes`: `[\"05:30-08:30\", \"16:30-19:30\"]`\n\nThis gives me the final structure of the JSON object that can be made.\n\n\n",
+    "tokens": {
+      "input": 1631,
+      "output": 131,
+      "total": 2327
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3810,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00019425,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000381,
+      "cachedCost": 0,
+      "totalCost": 0.00059025
+    },
+    "hash": "95342641917c56c09c00338215a976a7",
+    "sourceFile": "sciopero_trasporto_pubblico_attive_linee_della_metropolitana.html",
+    "thoughts": "**Analyzing the Strike Information**\n\nOkay, here's the situation. My task is to figure out if this input signals a *future* strike, or is just reporting on one that's *already* happening. I'm given some content, a web page snippet about a strike for \"ATAC,\" which I understand is in Rome/Lazio. The end goal is to output a JSON object according to a specific schema. The critical rule is this: if the content describes a strike *in progress*, `isStrike` needs to be `false`.\n\nLooking at the content, I see the page title is \"Sciopero del trasporto pubblico: attive le linee della metropolitana - Roma Servizi per la Mobilità,\" which translates roughly to \"Public transport strike: metro lines active - Rome Mobility Services.\" That title already points towards a current situation.\n\nThen I get into the body of the text. It contains \"status: 1 È in corso lo sciopero di 24 ore del trasporto pubblico...\" That, right there, is the key phrase! It explicitly states \"is in course/ongoing\" the 24-hour public transport strike. Plus, the snippet mentions active services on the Metro lines and buses. This confirms that this is a *real-time update* about a strike in progress. Therefore, it's not an announcement of a future event.\n\nGiven all of that, the `isStrike` field in my JSON output *must* be `false`. And because this is an update on an ongoing strike, I need to *omit* the `strikeData` field from the output altogether (per the instructions).\n\n\n",
+    "tokens": {
+      "input": 777,
+      "output": 10,
+      "total": 1041
+    }
+  }
+}

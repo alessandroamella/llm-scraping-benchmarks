@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-09-16 08:30:00",
+      "endDate": "2022-09-16 16:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5138,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0003675,
+      "outputCost": 0.0001335,
+      "thinkingCost": 0.000648,
+      "cachedCost": 0,
+      "totalCost": 0.001149
+    },
+    "hash": "25872278e0c9acda1e168fd0913507ff",
+    "sourceFile": "venerd_16_settembre_sciopero_nazionale_8_ore_trasporto_pubblico_romano_rischio.html",
+    "thoughts": "**Strike Analysis: Italian Public Transport**\n\nOkay, here's what I've got. The input indicates a strike happening on \"Venerdì 16 settembre,\" which translates to Friday, September 16th. My initial thought is to assume the current year unless I find contradictory evidence.  Based on my knowledge, I'll go with 2022, as Friday Sep 16, 2022 fits. I'll need to double-check that year if any other data comes up.\n\nThe strike's duration is 8 hours, from \"dalle 8,30 alle 16,30\" (08:30 to 16:30). That tells me I need to parse the start and end times to the correct format.\n\nThe scope is \"sciopero nazionale,\" meaning a national strike. \"Trasporto pubblico romano\" is mentioned. Although this text implies the strike is focused on Rome (Lazio, code 12), the key is the strike is \"nazionale.\" Since it's a *national* strike, the `locationType` is definitely \"NATIONAL\", and `locationCodes` should be `null` based on the specifications. I need to make sure that logic is correctly applied.\n\nTherefore, here's my breakdown:\n\n*   `isStrike`: `true`\n*   `startDate`: \"2022-09-16 08:30:00\"\n*   `endDate`: \"2022-09-16 16:30:00\"\n*   `locationType`: \"NATIONAL\"\n*   `locationCodes`: `null` (because `locationType` is \"NATIONAL\").\n\nI am now certain to check the instructions for this final output.\n\n\n",
+    "tokens": {
+      "input": 1470,
+      "output": 89,
+      "total": 1991
+    }
+  }
+}

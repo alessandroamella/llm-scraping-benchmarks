@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3239,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0001945,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0002565,
+      "cachedCost": 0,
+      "totalCost": 0.000466
+    },
+    "hash": "fbe4162886e2196dd0a988a1a63db861",
+    "sourceFile": "sciopero_trasporto_pubblico_chiusa_roma_lido_funzione_resto_della_rete.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, the task is pretty straightforward: I need to analyze this input and determine if it's *announcing* a strike or just reporting on one that's already in progress. The input's a snippet from a webpage, describing a public transport strike. Let's see... the text says \"È in corso lo sciopero del trasporto pubblico che si concluderà alle 12,30.\"  Right, it's explicitly stating that the strike is *in progress* and even provides a time it'll end. That means this is a *real-time status update*, not an announcement of a future strike. The instructions are clear: if it's about an ongoing strike, then `isStrike` should be `false`. So, according to the schema I need to return:\n\n```json\n{ \"isStrike\": false }\n```\n\nThat's it, simple enough.\n\n\n",
+    "tokens": {
+      "input": 778,
+      "output": 10,
+      "total": 959
+    }
+  }
+}

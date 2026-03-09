@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-16 03:00:00",
+      "endDate": "2025-06-17 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 30271,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008265,
+      "outputCost": 0.0007612,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00084385
+    },
+    "hash": "0951f0b01fac8456588a7157558373ca",
+    "sourceFile": "strike-detail-luned--16-giugno-sciopero-dei-treni-regionali.html",
+    "thoughts": "**Clarifying transportation details**\n\nI need to set the end datetime for June 17, 2025, in the format 'yyyy-MM-dd HH:mm:ss'. I’m seeing that \"2025-06-16 03:00:00\" and \"2025-06-17 02:00:00\" fit that structure. The location type here is \"REGIONAL\" because it's about a strike that affects Lombardy, which includes suburban transit like the Malpensa Express. So I'll use locationCodes as [\"03\"] for Lombardy based on those instructions.",
+    "tokens": {
+      "input": 1653,
+      "output": 1903,
+      "total": 3556
+    }
+  }
+}

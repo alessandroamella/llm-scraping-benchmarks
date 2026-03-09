@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-03-19 09:00:00",
+      "endDate": "2025-03-19 17:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22949,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007685,
+      "outputCost": 0.0008344,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00091125
+    },
+    "hash": "4524b9f730d7e7bde608f269566075b9",
+    "sourceFile": "strike-detail-mercoled--19-marzo-dalle-ore-9-alle-ore-17-scioper.html",
+    "thoughts": "**Deciding on strike data**\n\nI need to output JSON based on the strike_extraction schema. First, I must determine if the document is announcing a new or upcoming strike. The Italian article discusses a national rail transportation strike on March 19. It includes groups involved and mentions service impact, indicating it's an upcoming event. I need to set isStrike to true. The start and end dates need to be formatted as 'yyyy-MM-dd HH:mm:ss', using the provided information from the link suggesting the year is 2025.",
+    "tokens": {
+      "input": 1537,
+      "output": 2086,
+      "total": 3623
+    }
+  }
+}

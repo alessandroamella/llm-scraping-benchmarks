@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-09T02:11:19.666Z",
+  "timestamp": "2026-03-09T19:15:42.059Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "EAV",
@@ -7,7 +7,7 @@
     "model": "gpt-5-nano",
     "strategy": "dom-distillation",
     "useLenientSchema": true,
-    "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a strike from \"EAV\".\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), 2-letter for provinces (e.g., \"MI\" for Milan), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGION\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"> <h3>Context Metadata</h3> <ul><li>Page Title: Linea Metropolitana - Avviso di sciopero di 4 ore del 22 marzo 2025 - EAV srl</li></ul> </div><hr/><article> <section> <div> <div> <div> <h2> Linea Metropolitana – Avviso di sciopero di 4 ore del 22 marzo 2025 </h2> </div> </div> </div> <div> <div> <p> <small>Data: </small><br> <small><strong>17 Marzo 2025</strong></small> </p> </div> </div> </section> <section> <div> <div> <div> </div> </div> <div> <div> <section> <p>Si comunica che per il giorno 22 marzo 2025 la O.S. OR.S.A. ha proclamato uno sciopero aziendale di 4 ore, dalle ore 19:40 alle ore 23:40, avente le seguenti motivazioni: problematiche organizzazione aziendale.</p> <p>Durante l’ultima proclamazione di sciopero della citata O.S., la percentuale di adesione è stata del 11.94% (scioperi di 24 e 4 ore del giorno 5 ottobre 2024)</p> <p>Di seguito vengono elencate le ultime e le prime partenze garantite in relazione alle fasce di garanzia.</p> <p>Durante l’orario di sciopero, l’effettuazione delle corse è subordinata al numero di lavoratori aderenti allo sciopero.</p> <p>Ultime partenze prima dello sciopero:</p> <ul> <li>da Aversa per Piscinola&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 19:30</li> <li>da Piscinola&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; per Aversa&nbsp; &nbsp; &nbsp;19:15</li> </ul> <div> <div> <p><b>Categoria:&nbsp;</b><a href=\"https://www.eavsrl.it/categoria-disservizio/trasporto-pubblico/\">Trasporto pubblico</a></p> <p><b>Area:&nbsp;</b><a href=\"https://www.eavsrl.it/area/m1-piscinola-giugliano-aversa-napoli/\">M1 - Piscinola-Giugliano-Aversa-Napoli</a></p> </div> </div> <div></div> </section> </div> </div> </div> </section> </article>"
+    "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"EAV\" (the public transport company of Campania (15)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"> <h3>Context Metadata</h3> <ul><li>Page Title: Linea Metropolitana - Avviso di sciopero di 4 ore del 22 marzo 2025 - EAV srl</li></ul> </div><hr/><article> <section> <div> <div> <div> <h2> Linea Metropolitana – Avviso di sciopero di 4 ore del 22 marzo 2025 </h2> </div> </div> </div> <div> <div> <p> <small>Data: </small><br> <small><strong>17 Marzo 2025</strong></small> </p> </div> </div> </section> <section> <div> <div> <div> </div> </div> <div> <div> <section> <p>Si comunica che per il giorno 22 marzo 2025 la O.S. OR.S.A. ha proclamato uno sciopero aziendale di 4 ore, dalle ore 19:40 alle ore 23:40, avente le seguenti motivazioni: problematiche organizzazione aziendale.</p> <p>Durante l’ultima proclamazione di sciopero della citata O.S., la percentuale di adesione è stata del 11.94% (scioperi di 24 e 4 ore del giorno 5 ottobre 2024)</p> <p>Di seguito vengono elencate le ultime e le prime partenze garantite in relazione alle fasce di garanzia.</p> <p>Durante l’orario di sciopero, l’effettuazione delle corse è subordinata al numero di lavoratori aderenti allo sciopero.</p> <p>Ultime partenze prima dello sciopero:</p> <ul> <li>da Aversa per Piscinola&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 19:30</li> <li>da Piscinola&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; per Aversa&nbsp; &nbsp; &nbsp;19:15</li> </ul> <div> <div> <p><b>Categoria:&nbsp;</b><a href=\"https://www.eavsrl.it/categoria-disservizio/trasporto-pubblico/\">Trasporto pubblico</a></p> <p><b>Area:&nbsp;</b><a href=\"https://www.eavsrl.it/area/m1-piscinola-giugliano-aversa-napoli/\">M1 - Piscinola-Giugliano-Aversa-Napoli</a></p> </div> </div> <div></div> </section> </div> </div> </div> </section> </article>"
   },
   "response": {
     "parsedData": {
@@ -15,24 +15,25 @@
       "strikeData": {
         "startDate": "2025-03-22 19:40:00",
         "endDate": "2025-03-22 23:40:00",
-        "locationType": "REGION",
+        "locationType": "REGIONAL",
         "locationCodes": [
           "15"
         ]
       }
     },
     "usage": {
-      "input": 1405,
-      "output": 1754,
-      "total": 3159
+      "input": 1415,
+      "output": 1460,
+      "total": 2875
     },
     "costUsd": {
-      "inputCost": 0.00007025,
-      "outputCost": 0.0007016,
+      "inputCost": 0.00007075,
+      "outputCost": 0.000584,
       "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.00077185
+      "totalCost": 0.00065475
     },
-    "durationMs": 11668
+    "durationMs": 21097,
+    "thoughts": "**Producing strike announcement JSON**\n\nI need to create a JSON object based on the strike_extraction schema. The content mentions a 4-hour strike on March 22, 2025, starting at 19:40. Since it’s clearly an announcement about an upcoming strike, I'll set `isStrike` to true. For the `strikeData`, I'll format the start and end dates according to ‘yyyy-MM-dd HH:mm:ss’, which will be 2025-03-22 19:40:00 to 2025-03-22 23:40:00."
   }
 }

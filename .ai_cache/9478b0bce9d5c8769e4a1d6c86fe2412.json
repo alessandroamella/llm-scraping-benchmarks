@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-01-12 03:00:00",
+      "endDate": "2026-01-13 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "08",
+        "07",
+        "03",
+        "01",
+        "05"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 15585,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006495,
+      "outputCost": 0.0007232,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00078815
+    },
+    "hash": "9478b0bce9d5c8769e4a1d6c86fe2412",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2026-1-12-sciopero-del-personale-di-treno.html",
+    "thoughts": "**Confirming JSON Structure**\n\nI need to make sure the times are in a 24-hour format, such as 03:00 and 02:00. I'm considering month names like \"gennaio\" for January in different languages. The date format has to be consistent— \"12 gennaio 2026\" or \"martedì 13 gennaio 2026.\" \n\nThe JSON must be precisely structured: the \"strikeData\" should have \"startDate\" and \"endDate\" as strings, specifying \"locationType\" as \"REGIONAL\" and citing the \"locationCodes\" in array form. Let's finalize that JSON!",
+    "tokens": {
+      "input": 1299,
+      "output": 1808,
+      "total": 3107
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-11-17 09:00:00",
+      "endDate": "2023-11-17 13:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "09:00-10:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 16713,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003868,
+      "outputCost": 0.000612,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0009988
+    },
+    "hash": "c07ecf536e51e1bab32011e1d543568d",
+    "sourceFile": "strike-detail-sciopero-nazionale-17-novembre-ore-9-13-personale-.html",
+    "thoughts": "**Extracting strike data**\n\nI need to output JSON based on the schema. The document is about an upcoming national strike in Italy, scheduled for November 17 from 9 AM to 1 PM. Although Trenord staff are not involved, they might be affected by the infrastructure managers, FERROVIENORD and RFI. The content confirms it is indeed a strike announcement, so I'll set `isStrike` to true. I'll also extract necessary details like start date, end date, and location type.",
+    "tokens": {
+      "input": 7736,
+      "output": 1530,
+      "total": 9266
+    }
+  }
+}

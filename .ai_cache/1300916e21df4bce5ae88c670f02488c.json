@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-05-20 00:00:00",
+      "endDate": "2022-05-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 25360,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000609,
+      "outputCost": 0.0009976,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0010585
+    },
+    "hash": "1300916e21df4bce5ae88c670f02488c",
+    "sourceFile": "venerd_20_maggio_sciopero_24_ore_trasporto_pubblico_rischio.html",
+    "thoughts": "**Interpreting strike announcement**\n\nI see this as an announcement for a 24-hour general national strike. The instructions confirm that if it's an upcoming strike, then “isStrike” should be true, which it is. The article provides times for regular service prior to the strike. It mentions \"Venerdì 20 maggio,\" but I need to confirm the year. Since the article was published on 2022-05-13, I deduce that the correct date for the strike is May 20, 2022. So, I’ll extract the start and end dates accordingly.",
+    "tokens": {
+      "input": 1218,
+      "output": 2494,
+      "total": 3712
+    }
+  }
+}

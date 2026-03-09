@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6789,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007385,
+      "outputCost": 0.0001576,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00023145
+    },
+    "hash": "2e5f1d53f3e58fbd8442dd2d5e46a0bb",
+    "sourceFile": "sciopero_del_trasporto_pubblico_adesione_personale_atac_al_532.html",
+    "thoughts": "**Analyzing strike participation data**\n\nI need to output JSON based on the schema from strike_extraction. The content in Italian discusses \"Sciopero del trasporto pubblico\" and states that participation among Atac staff was at 53.2%. It emphasizes participation in a past strike rather than announcing a new one, as no specific dates or times are given. The instruction is clear: since this is about participation in a strike that already happened, I'll set isStrike to false. The output should be: { \"isStrike\": false }.",
+    "tokens": {
+      "input": 1477,
+      "output": 394,
+      "total": 1871
+    }
+  }
+}

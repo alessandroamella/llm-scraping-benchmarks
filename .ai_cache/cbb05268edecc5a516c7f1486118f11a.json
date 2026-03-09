@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-20 00:00:00",
+      "endDate": "2025-06-20 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4332,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00050875,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.000606,
+      "cachedCost": 0,
+      "totalCost": 0.00132475
+    },
+    "hash": "cbb05268edecc5a516c7f1486118f11a",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_24h_venerdi_20_giugno_2025.html",
+    "thoughts": "**Analyzing the Linee Flegree Strike Announcement**\n\nOkay, so I've just processed an announcement about a 24-hour strike on the Linee Flegree, and my internal system is already parsing the details. First, the core info: it's a strike, running for a full day – Friday, June 20th, 2025. It's related to EAV, which I've got coded as location \"15\" and I know is the Campania public transport company.\n\nThe system flagged it as an upcoming strike, `isStrike`: true, that's good. Now, let's look at the structured data I've extracted. The strike period is clearly defined from midnight to just before midnight that day – 2025-06-20 00:00:00 to 2025-06-20 23:59:59. The `locationType` is flagged as \"REGIONAL,\" which makes perfect sense given it pertains to a regional public transport entity (EAV). The `locationCodes` confirms this with [\"15\"], the relevant code for EAV. Crucially, I've got the guaranteed service bands: 05:30 to 08:30 and 16:30 to 19:30. These are the periods when services should be maintained, even during the strike, and those will be important for riders to know. The strike data is useful to generate contextual information for those travelling, and to alert of potential disruption.\n\n\n",
+    "tokens": {
+      "input": 2035,
+      "output": 140,
+      "total": 2579
+    }
+  }
+}

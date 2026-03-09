@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4676,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00018,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000312,
+      "cachedCost": 0,
+      "totalCost": 0.000507
+    },
+    "hash": "a07d26c1ed4e83378b9b037087dae87b",
+    "sourceFile": "sciopero_del_trasporto_pubblico_adesione_personale_atac_al_218.html",
+    "thoughts": "**Analyzing the \"Strike\" Input**\n\nOkay, let's break this down. My task is to determine if this input is announcing an *upcoming* strike. The content I'm given is in Italian, but the context is clear: \"Sciopero del trasporto pubblico... Adesione...\". The key is understanding that it's talking about *participation* in an existing strike. The phrase \"rilevata in mattinata\" (detected this morning) and \"è stata pari\" (was equal) tell me the event *has already happened*.\n\nThe instructions are clear: if it announces an *upcoming* strike, `isStrike` is true. If it describes participation, cancellation, or the current status, `isStrike` is false. This input is firmly in the second category. It's quantifying the level of participation in a strike that is already underway or has concluded. Therefore, `isStrike` must be false. Since it's not a strike *announcement*, a `strikeData` field isn't necessary. Final decision: `isStrike = false`.\n\n\n",
+    "tokens": {
+      "input": 720,
+      "output": 10,
+      "total": 938
+    }
+  }
+}

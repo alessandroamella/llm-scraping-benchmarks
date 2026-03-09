@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-20 00:00:00",
+      "endDate": "2025-06-20 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5774,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00032675,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.000768,
+      "cachedCost": 0,
+      "totalCost": 0.00130475
+    },
+    "hash": "ac1824c762e550012ec2abf9656ad13e",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_24h_venerdi_20_giugno_2025.html",
+    "thoughts": "**Strike Analysis: EAV Campania (Code 15) - June 20, 2025**\n\nOkay, let's break this down. My task is clear: I need to determine if this document announces a strike, and if so, extract the relevant data in JSON format. The company is EAV (Campania, code 15) - that's important for the location coding. The title \"Linea Metropolitana\" suggests we're dealing with the metro service specifically, even if it's part of a broader national strike.\n\nThe text clearly states a strike is planned for June 20, 2025 – \"sciopero 24h venerdì 20 giugno 2025\". The announcement mentions \"O.S. USB\" has proclaimed a 24-hour strike. That's a definite \"yes\" on `isStrike: true`. Now, to populate the `strikeData`.\n\nThe strike runs for a full 24 hours on June 20, 2025. That's from midnight to 11:59:59 PM. I'll represent that as \"2025-06-20 00:00:00\" for `startDate` and \"2025-06-20 23:59:59\" for `endDate`. The key here is the *location*. While it's a national strike *to which EAV is subscribing*, it affects a specific regional service: EAV's metro line in Campania. So, I need to flag it as `locationType: \"REGIONAL\"` and use the Campania ISTAT code, \"15\", in `locationCodes`.\n\nFinally, the guaranteed service times are explicitly provided: 05:30-08:30 and 16:30-19:30. These need to be formatted correctly as strings within the `guaranteedTimes` array. The output will be:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-06-20 00:00:00\",\n    \"endDate\": \"2025-06-20 23:59:59\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"15\"],\n    \"guaranteedTimes\": [\"05:30-08:30\", \"16:30-19:30\"]\n  }\n}\n```\nThat should be a complete and accurate representation of the strike information.\n\n\n",
+    "tokens": {
+      "input": 1307,
+      "output": 140,
+      "total": 1959
+    }
+  }
+}

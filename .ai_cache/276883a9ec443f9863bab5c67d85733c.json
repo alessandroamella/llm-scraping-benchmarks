@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-04-11 20:00:00",
+      "endDate": "2024-04-12 00:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 35584,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00067285,
+      "outputCost": 0.0011108,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00178365
+    },
+    "hash": "276883a9ec443f9863bab5c67d85733c",
+    "sourceFile": "gioved_11_aprile_sciopero_nazionale_trasporto_pubblico_rischio_20_24.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI'm working on outputting JSON according to the extraction spec. I need to confirm if the document is announcing an upcoming strike. The content mentions a national strike happening on Thursday, April 11, from 20:00 to 24:00. It's clearly indicated as a strike by multiple unions, and given that the date is approaching, it fits the criteria for an \"upcoming strike.\" So, I can confirm this is indeed about a national strike.",
+    "tokens": {
+      "input": 13457,
+      "output": 2777,
+      "total": 16234
+    }
+  }
+}

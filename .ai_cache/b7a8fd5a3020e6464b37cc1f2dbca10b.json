@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8750,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00067295,
+      "outputCost": 0.0001712,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00084415
+    },
+    "hash": "b7a8fd5a3020e6464b37cc1f2dbca10b",
+    "sourceFile": "sciopero_del_trasporto_pubblico_aperte_le_metropolitane_2.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to determine if the document is announcing a new or upcoming strike. The title indicates there’s a public transport strike mentioned, but the date published is from 2025, stating it's an ongoing situation. It clearly indicates an ongoing strike and not an upcoming one. Therefore, based on instructions, since this is not an announcement of a future strike, I’ll set “isStrike” to false and output {\"isStrike\": false}. There’s no need for strike data.",
+    "tokens": {
+      "input": 13459,
+      "output": 428,
+      "total": 13887
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24507,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00012375,
+      "outputCost": 0.0006356,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00075935
+    },
+    "hash": "75b261b0de36af3ebc79d25aeb81d8bb",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_24_h_venerdi_12_dicembre_2025.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to output JSON data regarding a strike announcement. The article discusses a 24-hour general national strike set for December 12, 2025. It appears to be a proclamation by CGIL that affects both rail and road services and includes guaranteed service times. So, isStrike should be true. For the strike details, I’ll set the start and end dates as ISO format for the full day on December 12, 2025, typically starting at midnight.",
+    "tokens": {
+      "input": 2475,
+      "output": 1589,
+      "total": 4064
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-01-08 09:01:00",
+      "endDate": "2026-01-08 17:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "07"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5514,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00022575,
+      "outputCost": 0.0001605,
+      "thinkingCost": 0.000729,
+      "cachedCost": 0,
+      "totalCost": 0.00111525
+    },
+    "hash": "bb75ca845c24cbe5c556d7a30b04df31",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2026-1-8-sciopero-del-personale-mobile-in.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, here's the breakdown of this HTML input. My task is to determine if this is a strike announcement, and if so, extract the relevant strike data. I'm focusing specifically on upcoming strikes, and I have very specific rules to follow for the `isStrike` boolean and the various data points. The date format needs to be `yyyy-MM-dd HH:mm:ss`, the location type is either \"REGIONAL\" or \"NATIONAL,\" and location codes are 2-digit ISTAT codes in an array. Guaranteed times are formatted as an array of \"HH:mm-HH:mm\" strings.\n\nLet me see… the title is \"SCIOPERO DEL PERSONALE MOBILE INTERCITY DI GENOVA DI TRENITALIA.\" The region is LIGURIA, and the date is \"giovedì 8 gennaio 2026.\" The time is \"Dalle ore 9:01 alle ore 17:00.\" Contextually, this is an upcoming announcement of a strike.\n\nAlright, based on the information provided, it's definitely a strike announcement.  So, `isStrike` is true.\n\nLet's extract the data now. `startDate` is 2026-01-08 09:01:00, and `endDate` is 2026-01-08 17:00:00. Given that the region is LIGURIA, I'll set `locationType` to \"REGIONAL\". The ISTAT code for Liguria is \"07\", so `locationCodes` is [\"07\"]. The guaranteed times are not specified, so they will be null.\n\nTherefore, `strikeData` should be:\n*   `startDate`: \"2026-01-08 09:01:00\"\n*   `endDate`: \"2026-01-08 17:00:00\"\n*   `locationType`: \"REGIONAL\"\n*   `locationCodes`: [\"07\"]\n*   `guaranteedTimes`: null\n\nExcellent, the resultant data is valid JSON. There's no extraneous text, and it matches the defined schema perfectly.\n\n\n",
+    "tokens": {
+      "input": 903,
+      "output": 107,
+      "total": 1496
+    }
+  }
+}

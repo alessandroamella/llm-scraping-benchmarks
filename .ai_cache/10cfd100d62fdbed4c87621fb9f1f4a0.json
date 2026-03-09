@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-11-27 00:00:00",
+      "endDate": "2023-11-27 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 28904,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006035,
+      "outputCost": 0.0008868,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00094715
+    },
+    "hash": "10cfd100d62fdbed4c87621fb9f1f4a0",
+    "sourceFile": "luned_27_novembre_sciopero_nazionale_trasporto_pubblico_possibili_disagi.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to create a JSON output for a strike declaration, which includes an isStrike boolean and possibly strikeData. The content is in Italian and announces a national public transport strike on November 27, lasting 24 hours, as declared by unions. It details potential disruptions and mentions that services will be regular until certain times. Since it's clearly announcing an upcoming strike, I'll set isStrike to true.",
+    "tokens": {
+      "input": 1207,
+      "output": 2217,
+      "total": 3424
+    }
+  }
+}

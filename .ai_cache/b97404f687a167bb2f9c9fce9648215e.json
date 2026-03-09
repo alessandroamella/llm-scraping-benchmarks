@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 12126,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005725,
+      "outputCost": 0.0003336,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00039085
+    },
+    "hash": "b97404f687a167bb2f9c9fce9648215e",
+    "sourceFile": "sciopero_del_trasporto_pubblico_ha_aderito_il_195_del_personale_atac.html",
+    "thoughts": "**Evaluating strike information**\n\nI need to create a JSON output based on the strike information. The content indicates a public transport strike where 19.5% of staff adhered, but the strike is described as happening \"today,\" not for the future. Therefore, it’s clear this isn’t an upcoming strike. My conclusion for isStrike should be false. \n\nI’ll format the JSON accordingly:  \n{ \"isStrike\": false }  \nNow I need to ensure it matches the expected schema accurately.",
+    "tokens": {
+      "input": 1145,
+      "output": 834,
+      "total": 1979
+    }
+  }
+}

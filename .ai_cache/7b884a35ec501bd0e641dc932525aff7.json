@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-20 00:00:00",
+      "endDate": "2025-06-20 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5148,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00036125,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.000435,
+      "cachedCost": 0,
+      "totalCost": 0.00100625
+    },
+    "hash": "7b884a35ec501bd0e641dc932525aff7",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_24_h_venerdi_20_giugno_2025.html",
+    "thoughts": "**Analyzing the EAV Strike Announcement**\n\nOkay, so EAV, that's Campania's regional transport provider (region code 15), is announcing a strike. This is solid information for my analysis. The announcement is for a 24-hour strike, scheduled for June 20th, 2025. That date is crucial, and I've got the exact start and end times, essentially the whole day of June 20th. I'm noting the \"isStrike\": true flag – confirms it. Good, got the \"startDate\": \"2025-06-20 00:00:00\" and \"endDate\": \"2025-06-20 23:59:59\" (or likely 2025-06-21 00:00:00). Region type is \"REGIONAL\" and, as expected, the location code is \"15\" confirming the location within Campania. Crucially, they're specifying guaranteed service times. That's key, I see \"guaranteedTimes\": [\"05:30-08:30\", \"16:30-19:30\"]. Those are the windows where transport *will* be running. Now, I have all the data points I need to assess potential disruptions and model the regional impact for transportation services.\n\n\n",
+    "tokens": {
+      "input": 1445,
+      "output": 140,
+      "total": 1875
+    }
+  }
+}

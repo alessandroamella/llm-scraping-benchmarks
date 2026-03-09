@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-10-05 00:00:00",
+      "endDate": "2024-10-05 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 38880,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006,
+      "outputCost": 0.001198,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.001258
+    },
+    "hash": "b76a4d31867a01f0f1e9cd8c007b0654",
+    "sourceFile": "trasporto_pubblico_sabato_5_ottobre_sciopero_nazionale_24_ore_servizio_rischio.html",
+    "thoughts": "**Extracting strike information**\n\nI'm working on outputting JSON based on the strike extraction format. I need to determine if the document announces a new strike. The content specifies an upcoming nationwide strike in Italy on October 5, 2024, affecting public transport. It mentions that services will run normally until certain hours and confirms that this is indeed an announcement for an upcoming strike, so `isStrike` should be true. Now, I need to extract the start and end dates in the correct format for October 5.",
+    "tokens": {
+      "input": 1200,
+      "output": 2995,
+      "total": 4195
+    }
+  }
+}

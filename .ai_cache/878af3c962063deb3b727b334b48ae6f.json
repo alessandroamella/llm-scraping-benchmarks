@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 09:00:00",
+      "endDate": "2024-12-13 13:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18953,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008175,
+      "outputCost": 0.0005704,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00065215
+    },
+    "hash": "878af3c962063deb3b727b334b48ae6f",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_4_ore_del_13_dicembre_2024.html",
+    "thoughts": "**Formatting time specifications**\n\nThe format requires 'yyyy-MM-dd HH:mm:ss', so I need to use examples like \"2024-12-13 09:00:00\" and \"2024-12-13 13:00:00.\"  \n\nRegarding \"guaranteedTimes,\" it should be an array of time ranges indicating guaranteed service. The article mentions conditions during the strike, but there are no specific guaranteed times listed. So, if there aren't any specified, we'll omit \"guaranteedTimes.\" Also, the locationType needs to be \"NATIONAL\" since the strike is a national event.",
+    "tokens": {
+      "input": 1635,
+      "output": 1426,
+      "total": 3061
+    }
+  }
+}

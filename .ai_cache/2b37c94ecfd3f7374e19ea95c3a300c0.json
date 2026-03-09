@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 21:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 30133,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008595,
+      "outputCost": 0.0008972,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00098315
+    },
+    "hash": "2b37c94ecfd3f7374e19ea95c3a300c0",
+    "sourceFile": "strike-detail-venerd--12-dicembre-da-mezzanotte-alle-21-sciopero.html",
+    "thoughts": "**Deciding on strike announcement**\n\nI need to output JSON according to the schema. First, I have to determine if this document is about an upcoming strike. It’s in Italian, and the heading indicates a national strike happening on Friday, December 12, from midnight to 9 PM. It mentions potential impacts on regional and airport services. They specify guaranteed service times, and since it seems to be an announcement for that date, I'll consider it an upcoming strike announcement.",
+    "tokens": {
+      "input": 1719,
+      "output": 2243,
+      "total": 3962
+    }
+  }
+}

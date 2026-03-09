@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-07-07 00:00:00",
+      "endDate": "2023-07-07 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 10564,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.003784,
+      "outputCost": 0.000138,
+      "thinkingCost": 0.001692,
+      "cachedCost": 0,
+      "totalCost": 0.005614
+    },
+    "hash": "e2fecc3c4a1e1baab0e9a543b2bd3047",
+    "sourceFile": "venerd_7_luglio_trasporto_pubblico_rischio_sciopero_nazionale_24_ore_della_faisa_confail.html",
+    "thoughts": "**Strike Announcement Analysis and Data Extraction**\n\nOkay, let's break this down. My objective here is to determine if this input text is a strike announcement and, if so, to extract the relevant data. The input is web page content about a strike on Friday, July 7th. I've got a predefined data structure for strike information, so let's populate it.\n\nFirst, I see the title: \"Venerdì 7 luglio trasporto pubblico a rischio. Sciopero nazionale di 24 ore della Faisa Confail - Roma Servizi per la Mobilità\". Perfect, that's a clear indicator. The text confirms it: \"Venerdì 7 luglio trasporto pubblico a rischio per lo sciopero nazionale di 24 ore indetto dal sindacato Faisa Confail.\" Strike, check.\n\nThe date is in the title, July 7th. The document was published on 30/06/2023. Okay, assuming the year is 2023, the date is clear. Now for the details. It's a 24-hour strike, as explicitly stated. The location is \"nazionale\" which I understand means \"NATIONAL.\"\n\nNow the tricky part: the guaranteed services. The text mentions \"fino alle 8,30 e dalle 17 alle 20.\" Standard Italian transit strike rules! Typically means 05:30-08:30 and 17:00-20:00. I need to be exact here, checking \"fino alle 8,30\" (up to 08:30) and \"dalle 17 alle 20\" (from 17:00 to 20:00) against the standard notation.\n\nThe date is definitely 2023-07-07. So, the `startDate` is 2023-07-07 00:00:00, and the `endDate` is 2023-07-07 23:59:59 because it is a 24-hour strike. The `locationType` is NATIONAL, and no regional codes are specified, thus `locationCodes` is null. The guaranteed times are [\"05:30-08:30\", \"17:00-20:00\"] given the standard Italian transport guidelines.\n\nTherefore:\n\n*   `isStrike`: true\n*   `strikeData`:\n    *   `startDate`: \"2023-07-07 00:00:00\"\n    *   `endDate`: \"2023-07-07 23:59:59\"\n    *   `locationType`: \"NATIONAL\"\n    *   `locationCodes`: null\n    *   `guaranteedTimes`: [\"05:30-08:30\", \"17:00-20:00\"]\n\nI will look again at the phrase \"fino alle 8,30\", which means up to 8:30, and the phrase \"dalle 17 alle 20\" (from 17:00 to 20:00). So, to clarify, the guaranteed service times are 05:30-08:30 and 17:00-20:00. This confirms what I understood. I need to make sure I am explicit about that.\n\nLet's do a quick double-check on the year. The document was published in 2023, and July 7th, 2023, was indeed a Friday, which is consistent with \"Venerdì 7 luglio.\"\n\nFinally, I have to ensure JSON compliance. No comments, no newlines/tabs, must be valid JSON. That's a must in any production code, obviously.\n\n\n",
+    "tokens": {
+      "input": 15136,
+      "output": 92,
+      "total": 16356
+    }
+  }
+}

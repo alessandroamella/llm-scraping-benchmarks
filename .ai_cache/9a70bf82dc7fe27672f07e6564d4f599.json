@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-03 00:00:00",
+      "endDate": "2025-10-03 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6533,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000189,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.0010605,
+      "cachedCost": 0,
+      "totalCost": 0.001446
+    },
+    "hash": "9a70bf82dc7fe27672f07e6564d4f599",
+    "sourceFile": "sciopero_generale_nazionale_domani_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Strike Analysis: National Transport Strike - Rome (ATAC)**\n\nOkay, let's break this down. My task is to determine if this input constitutes a strike announcement and, if so, extract the relevant details. The input is: \"Sciopero generale nazionale, domani trasporto pubblico a rischio... 24 ore... Roma... regolare fino alle 8,30 e dalle 17 alle 20.\" The published date is 02/10/2025, and \"domani\" indicates the strike is scheduled for 03/10/2025. That's straightforward.\n\nThe text clearly indicates a \"Sciopero generale nazionale\" – a national strike. The duration is specified as \"24 ore,\" which I'll interpret as a full 24-hour period, starting and ending at midnight. Now, the key is interpreting the guaranteed times. It states \"regolare fino alle 8,30 e dalle 17 alle 20.\" Initially, I assumed \"fino alle 8,30\" meant the service was guaranteed until that time, starting a strike after 8:30. But, rereading the text carefully, I see \"il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20\". This means the service IS regular during those windows. This is important: the strike does *not* begin at 08:30. It will begin at 00:00. The guaranteed times are from 00:00-08:30 and 17:00-20:00.\n\nTherefore, `isStrike` is true. Here's what I've got for `strikeData`:\n\n*   `startDate`: \"2025-10-03 00:00:00\". Because it is a 24-hour strike and the text says \"24 ore\", then it begins at 00:00.\n*   `endDate`: \"2025-10-03 23:59:59\"\n*   `locationType`: \"NATIONAL\"\n*   `locationCodes`: `null` (this aligns with the schema; it's national, not specific codes)\n*   `guaranteedTimes`: [\"00:00-08:30\", \"17:00-20:00\"].\n\nJust verifying again, the phrasing \"Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20\" confirms the interpretation of guaranteed windows. All seems correct.\n\n\n",
+    "tokens": {
+      "input": 756,
+      "output": 131,
+      "total": 1594
+    }
+  }
+}

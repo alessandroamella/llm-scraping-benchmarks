@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8761,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00066085,
+      "outputCost": 0.0001636,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00082445
+    },
+    "hash": "ca3c5904bda847375551ade6ebd399cd",
+    "sourceFile": "aggiornamento_sciopero_riaperta_stazione_ponte_lungo.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to output JSON according to the strike_extraction schema. The content discusses \"Aggiornamento sciopero: riaperta stazione Ponte Lungo - Roma Servizi per la Mobilità.\" However, this seems to be an update regarding a situation that has already occurred, rather than an announcement about a future strike. It’s indicating that the Ponte Lungo station has reopened, which does not meet the criteria for an upcoming strike announcement. So, I should mark it accordingly.",
+    "tokens": {
+      "input": 13217,
+      "output": 409,
+      "total": 13626
+    }
+  }
+}

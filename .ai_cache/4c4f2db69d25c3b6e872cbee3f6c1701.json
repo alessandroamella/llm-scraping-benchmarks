@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8227,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000569,
+      "outputCost": 0.000136,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0001929
+    },
+    "hash": "4c4f2db69d25c3b6e872cbee3f6c1701",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_22.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to format the output in JSON according to the strike extraction schema. The document is in Italian and discusses a public transport strike, mentioning that ATAC personnel adhesion is at 22%. Although it provides a participation rate, it's not announcing a new or upcoming strike. Since the focus is on past participation, I'll set isStrike to false. So the final output will be: {\"isStrike\": false}. There's no additional strike data to include.",
+    "tokens": {
+      "input": 1138,
+      "output": 340,
+      "total": 1478
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 09:00:00",
+      "endDate": "2024-12-13 13:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 17673,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000709,
+      "outputCost": 0.0005384,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0006093
+    },
+    "hash": "52fdc436d632a3d172af4ac3ceca9595",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_di_4_ore_del_13_dicembre_2024.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to format a JSON output based on the content about a strike happening on December 13, 2024. The message indicates that there's a reduced general strike from 09:00 to 13:00, so I'll determine that isStrike is true. \n\nNow, the locationType mentions \"nazionale,\" so I suspect this should be set as NATIONAL in the JSON. But if it’s not clearly specified, I should consider using null. I’ll clarify that in the JSON format, adjusting if needed.",
+    "tokens": {
+      "input": 1418,
+      "output": 1346,
+      "total": 2764
+    }
+  }
+}

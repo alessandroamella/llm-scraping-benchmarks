@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-07-18 08:30:00",
+      "endDate": "2024-07-18 12:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 27599,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00009345,
+      "outputCost": 0.0010244,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00111785
+    },
+    "hash": "cb2f1c785b07fc44439f88059a0801b1",
+    "sourceFile": "trasporto_pubblico_gioved_sciopero_nazionale_830_1230_servizio_rischio.html",
+    "thoughts": "**Extracting strike details**\n\nI need to output JSON based on a specific schema about a strike announcement. The content is in Italian and states there's a national strike on Thursday, from 8:30 to 12:30, affecting public transport. It's confirmed that the strike lasts four hours. However, the year isn’t mentioned, so I'll consider it could be the current year. I must extract details like startDate, endDate, locationType, locationCodes, and guaranteedTimes, using \"NATIONAL\" for locationType or possibly null.",
+    "tokens": {
+      "input": 1869,
+      "output": 2561,
+      "total": 4430
+    }
+  }
+}

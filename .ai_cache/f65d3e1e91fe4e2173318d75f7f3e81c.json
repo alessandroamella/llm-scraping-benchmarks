@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-10-20 00:00:00",
+      "endDate": "2023-10-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6526,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000339,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.000903,
+      "cachedCost": 0,
+      "totalCost": 0.0014385
+    },
+    "hash": "f65d3e1e91fe4e2173318d75f7f3e81c",
+    "sourceFile": "venerd_20_ottobre_sciopero_generale_nazionale_trasporto_pubblico_rischio.html",
+    "thoughts": "**Strike Analysis for ATAC - National Strike on October 20, 2023**\n\nOkay, here's what I'm processing. I've got a strike announcement centered on ATAC, and the key piece of information is the date: \"Venerdì 20 ottobre\" – which, considering typical strike patterns and context, I'm inferring is October 20th, 2023. Let's lock that in as the reference point. The announcement states a \"sciopero generale nazionale,\" so this is a national-level event. The participating unions are Cub, Sgb, Adl, and Sicobas.\n\nThe crux of the matter is the service disruption. The text clearly states, \"Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" This means, service will be normal until 8:30 AM and again from 5:00 PM to 8:00 PM. So, the strike window is effectively from 8:30 AM to 5:00 PM. The text explicitly calls this a 24-hour strike, so let's start it at midnight on October 20th and end it at 11:59:59 PM on the same day.\n\nTherefore, the strike details are as follows: It's a true strike (isStrike: true), with a start date of \"2023-10-20 00:00:00\" and an end date of \"2023-10-20 23:59:59\". The strike's scope is National (locationType: \"NATIONAL\"), and I don't see any specific location codes (locationCodes: null). And, based on the text \"fino alle 8,30 e dalle 17 alle 20\", I need to represent the guaranteed service times as: \"00:00-08:30\", \"17:00-20:00\".\n\n\n",
+    "tokens": {
+      "input": 1356,
+      "output": 131,
+      "total": 2089
+    }
+  }
+}

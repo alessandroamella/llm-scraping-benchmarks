@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3237,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0001775,
+      "outputCost": 0.000009,
+      "thinkingCost": 0.0002295,
+      "cachedCost": 0,
+      "totalCost": 0.000416
+    },
+    "hash": "7d5acf20de71cd5c1faeed3c542f6a47",
+    "sourceFile": "sciopero_adesione_personale_atac_185.html",
+    "thoughts": "**Analyzing Strike Participation Data**\n\nOkay, here's what I've got. The input content is \"Sciopero, adesione personale Atac al 18,5%\". My primary goal here is to determine whether this indicates a *future* strike or reports on a strike that's *already* occurred. I immediately jump into content analysis. The key phrase \"L’adesione complessiva del personale Atac allo sciopero di oggi è stata pari al 18,5%\" gives it away. The use of \"è stata\" (was) and \"oggi\" (today) clearly places this in the past tense. This isn't an *announcement* of a strike; it's a *retrospective* report on participation in a strike that has already concluded. The date here is November 17, 2023. My instructions state that if the information is about participation ('adesione') in a *past* strike, then I must set `isStrike` to false. And, so I will. Therefore, `isStrike` = false. Case closed.\n\n\n",
+    "tokens": {
+      "input": 710,
+      "output": 6,
+      "total": 869
+    }
+  }
+}

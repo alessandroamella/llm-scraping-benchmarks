@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-10-05 00:00:00",
+      "endDate": "2024-10-06 00:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 33711,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000089,
+      "outputCost": 0.0011216,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0012106
+    },
+    "hash": "0079c78817cf786661bd5fae7d08b865",
+    "sourceFile": "trasporto_pubblico_sabato_5_ottobre_sciopero_nazionale_24_ore_servizio_rischio.html",
+    "thoughts": "**Determining strike data**\n\nI need to extract details for strike data like startDate, endDate, locationType, etc. The content mentions \"Sabato 5 ottobre,\" but no year is specified. The required format is 'yyyy-MM-dd HH:mm:ss', and I’m unsure which year to use. Given that only the day and month are provided, I wonder if I should use the current year of 2026. However, since that's a guess, it might be safer to leave the dates null, considering the schema requires strings.",
+    "tokens": {
+      "input": 1780,
+      "output": 2804,
+      "total": 4584
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-11-17 09:00:00",
+      "endDate": "2023-11-17 13:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6665,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00028175,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.000978,
+      "cachedCost": 0,
+      "totalCost": 0.00138275
+    },
+    "hash": "f4b6ba482b79b38e107e1d96bd3470ba",
+    "sourceFile": "strike-detail-sciopero-nazionale-17-novembre-ore-9-13-personale-.html",
+    "thoughts": "**Strike Information Extraction - My Thought Process**\n\nOkay, let's break this down. My primary goal is to extract strike information from this text. The core question: is this an *announcement* of an *upcoming* strike? That's the deciding factor for `isStrike = true`.\n\nI see \"Sciopero Nazionale 17 novembre ore 9-13 personale Trenord non coinvolto\" which translates to \"National Strike Nov 17, 9 AM - 1 PM, Trenord personnel not involved.\" At first glance, it seems straightforward.\n\nHowever, a closer look is needed. The text explicitly states that \"Il personale di Trenord non è coinvolto... l'eventuale adesione... potrà ripercuotersi anche sul servizio offerto da Trenord\" – Trenord personnel are *not* directly striking, but there might be an impact on Trenord services due to the strike. It also mentions a national strike on November 17, 2023, affecting the infrastructure (RFI/Ferrovienord) which might impact Trenord's services.\n\nThe instructions are clear: *only* set `isStrike` to true if it's an announcement of an *upcoming* strike. I'd argue this *is* an announcement of a strike. It's not *directly* a Trenord strike, but it's announcing an *upcoming* national strike affecting the infrastructure they use, with possible service disruptions. This fits the criteria. `isStrike` will be set to `true`.\n\nNow, let's populate the strike data.\n\n*   `startDate` is November 17, 2023. Time is 09:00:00.\n*   `endDate` is November 17, 2023. Time is 13:00:00.\n*   `locationType` is definitely \"NATIONAL\" because the text clearly states \"Sciopero Nazionale\".\n*   Regarding `locationCodes`, the instructions say to OMIT it for \"NATIONAL\".\n*   For `guaranteedTimes`, the text says \"saranno garantiti i treni con orario di partenza entro le ore 9 e arrivo alla destinazione finale entro le ore 10.\" This suggests trains leaving by 09:00 and arriving by 10:00 are guaranteed. This does not fit the format for a window during which the service is guaranteed. As the instructions specify \"Time ranges during which service is guaranteed (e.g., \"06:00-09:00\")\", I will OMIT `guaranteedTimes`.\n\nSo, the strike data is:\n\n*   `startDate`: \"2023-11-17 09:00:00\"\n*   `endDate`: \"2023-11-17 13:00:00\"\n*   `locationType`: \"NATIONAL\"\n\nEverything seems logical and consistent with the instructions.\n\n\n",
+    "tokens": {
+      "input": 1127,
+      "output": 82,
+      "total": 1861
+    }
+  }
+}

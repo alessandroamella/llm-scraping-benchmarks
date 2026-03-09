@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3328,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0003615,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000336,
+      "cachedCost": 0,
+      "totalCost": 0.0007125
+    },
+    "hash": "1759b8d3ddd107b75a339a8c0156afa0",
+    "sourceFile": "sciopero_generale_aperte_le_metropolitane_e_la_ferrovia_termini_centocelle.html",
+    "thoughts": "**Analyzing the ATAC Strike Announcement**\n\nOkay, let's break down this ATAC update. The source is clearly the Rome public transport authority, and the title \"Sciopero generale, aperte le metropolitane e la ferrovia Termini-Centocelle\" – which, roughly translated, is \"General strike, subways and Termini-Centocelle railway open\" – is the key here. The primary goal is to determine if this is a heads-up about a future strike, or a real-time report on a strike that's already happening.\n\nThe text itself, specifically \"È in corso lo sciopero...\" (\"The strike is underway…\"), is definitive. It’s not forecasting a strike; it's confirming the strike *is* in progress. The document then goes on to outline the status of specific services within the network. Since this is giving us the *current* state of affairs, this rules out an announcement of a future event.\n\nTherefore, `isStrike` is unequivocally `false`. This is a real-time situational report during the strike.\n\n\n",
+    "tokens": {
+      "input": 1446,
+      "output": 10,
+      "total": 1680
+    }
+  }
+}

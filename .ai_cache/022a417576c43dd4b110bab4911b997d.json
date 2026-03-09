@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5690,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.003745,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0004125,
+      "cachedCost": 0,
+      "totalCost": 0.0041725
+    },
+    "hash": "022a417576c43dd4b110bab4911b997d",
+    "sourceFile": "sciopero_del_trasporto_pubblico_attive_le_metropolitane_e_la_termini_centocelle.html",
+    "thoughts": "**Analyzing the Text: Strike Announcement or Real-Time Update?**\n\nOkay, let's break this down. My primary question is whether this provided text is actually announcing a strike, or if it's giving me real-time updates about a strike that's already underway. The context is crucial for properly processing this.\n\nFirst, I see the title: \"Sciopero del trasporto pubblico: attive le metropolitane e la Termini-Centocelle - Roma Servizi per la Mobilità,\" which translates to something like \"Public transport strike: metro and Termini-Centocelle active - Rome Mobility Services.\" The body text immediately confirms \"È in corso lo sciopero del trasporto pubblico che interessa la rete Atac,\" meaning \"A public transport strike is ongoing, affecting the Atac network.\" That's a strong indicator. Then, I see content detailing the status of different lines; Metro A, B/B1, C, and Termini-Centocelle are stated as \"active,\" while surface transport is facing \"potential reductions.\"\n\nNow, looking deeper, the key phrase \"È in corso lo sciopero\" (the strike is currently ongoing) indicates that it's *already* happening. I recall from the instructions that if it's providing *real-time updates about an ongoing strike*, I need to set `isStrike` to `false`. Since the document details the *current status*, it's likely that it's an update, not an announcement.\n\nTherefore, because this text describes the status of various lines *during* a strike, rather than announcing its commencement, I should return `isStrike: false`.\n\n\n",
+    "tokens": {
+      "input": 14980,
+      "output": 10,
+      "total": 15265
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-03 00:00:00",
+      "endDate": "2025-10-03 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22297,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005895,
+      "outputCost": 0.0010036,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00106255
+    },
+    "hash": "b48c131a30aba624e2f7259ff2e5bb35",
+    "sourceFile": "sciopero_generale_nazionale_domani_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Extracting strike information**\n\nI need to format the information in JSON according to the strike_extraction schema. The article announces a national general strike affecting public transport, mentioned as taking place tomorrow, which indicates it’s upcoming. The strike spans 24 hours, beginning from 3/10/2025. The announcement specifies a focus on the Atac network and private bus operators, with regular service expected until 8:30 AM and again from 5 PM to 8 PM.",
+    "tokens": {
+      "input": 1179,
+      "output": 2509,
+      "total": 3688
+    }
+  }
+}

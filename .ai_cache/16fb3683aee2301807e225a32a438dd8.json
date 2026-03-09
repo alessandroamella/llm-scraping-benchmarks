@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5257,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000061,
+      "outputCost": 0.000126,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.000187
+    },
+    "hash": "16fb3683aee2301807e225a32a438dd8",
+    "sourceFile": "sciopero_trasporto_pubblico_aperte_metropolitane_situazione_sulla_rete_15.html",
+    "thoughts": "**Preparing output for strike status**\n\nThe prompt indicates that I need to output a specific JSON object if there's no strike. So, I’ll prepare that final response without any strike data. The instructions clarify that I should only set \"isStrike\" to true if it's about an upcoming strike, which it's not in this case. Therefore, my output will simply be: \n\n{\"isStrike\": false}\n\nLet’s provide that as my final answer!",
+    "tokens": {
+      "input": 1220,
+      "output": 315,
+      "total": 1535
+    }
+  }
+}

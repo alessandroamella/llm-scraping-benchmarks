@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 2918,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00017875,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000276,
+      "cachedCost": 0,
+      "totalCost": 0.00046975
+    },
+    "hash": "e97333600136d8124cb6f507301ea389",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_154.html",
+    "thoughts": "**Analyzing Strike Information**\n\nOkay, let me break this down. I've got an article, \"Sciopero del trasporto pubblico, adesione personale Atac al 15,4% - Roma Servizi per la Mobilità.\" The initial information is the participation rate of 15.4%. My goal here is to determine if this is an *announcement* of a strike that's coming, or a report on one that's *already* happened. The constraint I'm working under is: if it's just reporting on participation after the fact, the `isStrike` flag has to be `false`.\n\nNow, looking closer at the phrase \"...adesione personale Atac al 15,4%,\" the use of \"adesione\" (participation) strongly suggests it's reporting *after* the strike took place. It’s talking about how many people *participated*. This strongly indicates a post-event report, not a pre-event announcement. Therefore, my conclusion is that `isStrike` should definitely be set to `false`.\n\n\n",
+    "tokens": {
+      "input": 715,
+      "output": 10,
+      "total": 909
+    }
+  }
+}

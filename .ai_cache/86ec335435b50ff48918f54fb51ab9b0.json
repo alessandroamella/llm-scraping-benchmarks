@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-09-04 08:30:00",
+      "endDate": "2025-09-04 12:30:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "08:30-12:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 30047,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007735,
+      "outputCost": 0.0010092,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00108655
+    },
+    "hash": "86ec335435b50ff48918f54fb51ab9b0",
+    "sourceFile": "rete_atac_giovedi_4_settembre_sciopero_dalle_830_alle_1230_possibili_disagi.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to figure out if the document is announcing an upcoming strike based on the content. It mentions a strike in Italy on Thursday, September 4, lasting from 8:30 to 12:30. That's a clear indication that there’s an upcoming strike, so isStrike should be true. \n\nI need to extract the strike data, but the date lacks a year. Since the content likely refers to 2024, I'll need to decide on this year to complete the ISO format accurately. It's tricky, but better to avoid guessing!",
+    "tokens": {
+      "input": 1547,
+      "output": 2523,
+      "total": 4070
+    }
+  }
+}

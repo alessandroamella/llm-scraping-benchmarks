@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-09-09 08:30:00",
+      "endDate": "2024-09-09 16:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6472,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00374775,
+      "outputCost": 0.0001335,
+      "thinkingCost": 0.000936,
+      "cachedCost": 0,
+      "totalCost": 0.00481725
+    },
+    "hash": "b21154ff23fa24be00065fa33cd08c25",
+    "sourceFile": "luned_9_settembre_sciopero_nazionale_trasporto_pubblico_servizio_rischio.html",
+    "thoughts": "**Strike Analysis: September 9th National Public Transport Strike**\n\nOkay, let's break this down. The source is \"Roma Servizi per la Mobilità,\" so it's directly related to ATAC, the transport authority in Rome (Lazio region, code 12). The key is the announcement: a national public transport strike on Monday, September 9th, 2024. The text specifies, \"Lunedì 9 settembre sciopero nazionale... A Roma l’agitazione durerà dalle 8,30 alle 16,30,\" so that's the trigger. This confirms a strike, and I've got the date: September 9th, 2024.\n\nThe strike's duration in Rome is from 8:30 AM to 4:30 PM. The text explicitly mentions \"sciopero nazionale,\" so the `locationType` is definitely \"NATIONAL.\" Now, about the location code... the schema documentation is clear: when `locationType` is \"NATIONAL,\" `locationCodes` should be `null`. That's important. I need to make sure I don't misinterpret the context.\n\nI'm confident this is the data structure:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-09-09 08:30:00\",\n    \"endDate\": \"2024-09-09 16:30:00\",\n    \"locationType\": \"NATIONAL\",\n    \"locationCodes\": null\n  }\n}\n```\n\nAlthough the context mentions ATAC in Rome, and I know it applies there, the announcement is specifically about a national strike. The data structure reflects this, and I've double-checked that the `locationCodes` is set to null, which is correct for a \"NATIONAL\" scope based on the schema. No ambiguity there. I should note the guaranteed times are not mentioned in this particular extract.\n\n\n",
+    "tokens": {
+      "input": 14991,
+      "output": 89,
+      "total": 15704
+    }
+  }
+}

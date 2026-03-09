@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5121,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00034325,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0003315,
+      "cachedCost": 0,
+      "totalCost": 0.00068975
+    },
+    "hash": "db38f767d055510a01677ce6fd40447e",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_209.html",
+    "thoughts": "**Analyzing the ATAC Document: Strike Identification**\n\nOkay, so I've been given some HTML from ATAC, presumably about a potential strike. My goal here is to determine whether this document is announcing an *upcoming* strike or if it's reporting on one that's already in progress or has concluded. Let's see... the title jumps out immediately: \"Sciopero del trasporto pubblico, adesione personale Atac al 20,9%\" – \"Public transport strike, Atac staff participation at 20.9%.\" That \"adesione\" (participation) bit is key. The body text echoes this: \"L’adesione del personale Atac allo sciopero del trasporto pubblico, rilevata in mattinata, è stata pari al 20,9%\" – \"Atac staff participation in the public transport strike, detected in the morning, was 20.9%.\"\n\nHmm. It sounds like they're *measuring* participation. The use of \"was\" and \"detected in the morning\" strongly suggests we're dealing with an existing strike, not a pre-announcement. If it were a pre-announcement, you'd expect to see phrases like \"will be\" or \"planned for\". The 20.9% participation figure is interesting in itself, but it solidifies that this document is more about the *outcome* of a strike. Therefore, this isn't an announcement of an upcoming work stoppage. Based on my analysis, I'll set `isStrike` to `false`.\n\n\n",
+    "tokens": {
+      "input": 1373,
+      "output": 10,
+      "total": 1604
+    }
+  }
+}

@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-03-09T18:43:53.011Z",
+  "timestamp": "2026-03-09T19:15:39.446Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "Trenord",
     "fileName": "strike-detail-gioved--14-dicembre-dalle-ore-9-alle-ore-17-sciope.html",
     "model": "gpt-5-nano",
     "strategy": "mineru-html",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"Trenord\" (the public transport company of Lombardia (03)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: mineru-html):\n<html class=\"no-js\" dir=\"ltr\" lang=\"it\"><body> <div id=\"main\"> <div class=\"container-fluid grid-margin container-foglia-news\"> <div class=\"container\"> <div class=\"container-fluid containers\"> <div class=\"container-sticky stickem-container\"> <div class=\"content\"> <div class=\"container-content grid-margin\"> <div class=\"col-l\"> <div class=\"text align-middle\"> <h1 class=\"uppercase\" _item_id=\"101\"> <b> Giovedì 14 dicembre dalle ore 9 alle ore 17 sciopero dei treni regionali </b> </h1> </div> <div class=\"frame frame-default frame-type-trenordtheme_simpletextmedia frame-layout-0\" id=\"c13744\"> <div class=\"container-fluid container-text-image\"> <div class=\"row grid-margin\"> <div class=\"container-content col-l\"> <div class=\"text align-middle\"> <h4 _item_id=\"103\"><strong>Informazioni in tempo reale sulla circolazione su trenord.it e App</strong></h4> <p _item_id=\"104\">Giovedì 14 dicembre dalle ore 9 alle ore 17 è in programma uno sciopero proclamato da alcune sigle sindacali, che potrà avere ripercussioni sulla circolazione dei treni regionali, suburbani, sui servizi di Lunga Percorrenza di Trenord e sui collegamenti aeroportuali Malpensa Express e S50 Malpensa Aeroporto-Bellinzona.</p> <p _item_id=\"105\">La mattina viaggeranno i treni con orario di partenza dalla stazione di origine corsa prima delle ore 9 e arrivo a destinazione finale entro le ore 10.</p> <p _item_id=\"106\">Per garantire il collegamento con l’Aeroporto Internazionale di Malpensa, saranno previsti autobus sostitutivi senza fermate intermedie per le corse non effettuate sui collegamenti Malpensa Aeroporto - Milano Cadorna (partenza e arrivo in Via Paleocapa 1) e S50 Malpensa Aeroporto - Stabio.</p> <p _item_id=\"107\">Informazioni in tempo reale sulla circolazione saranno disponibili sulle pagine di ogni linea della App e del sito Trenord.</p> <p _item_id=\"108\">Durante lo sciopero e alla ripresa del servizio, si invitano i passeggeri a prestare attenzione ad annunci sonori e monitor di stazione.</p> <p _item_id=\"109\">­</p> <p _item_id=\"110\"><a href=\"/fileadmin/contenuti/TRENORD/3-News/Trenord_Informa/Comunicati_stampa/2023/Trenord_231212_CS_Sciopero14.pdf\">Comunicato stampa sciopero 14 dicembre 2023</a></p> </div> </div> </div> </div> </div> </div> </div> </div> </div> </div> </div> </div> </div> </body></html>"
   },
   "response": {
@@ -18,25 +18,22 @@
         "locationType": "REGIONAL",
         "locationCodes": [
           "03"
-        ],
-        "guaranteedTimes": [
-          "00:00-10:00"
         ]
       }
     },
     "usage": {
-      "input": 1574,
-      "output": 3831,
-      "total": 5405
+      "input": 1488,
+      "output": 2653,
+      "total": 4141
     },
     "costUsd": {
-      "inputCost": 0.0000787,
-      "outputCost": 0.0015324,
+      "inputCost": 0.0000744,
+      "outputCost": 0.0010612,
       "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.0016111
+      "totalCost": 0.0011356
     },
-    "durationMs": 53876,
-    "thoughts": "**Extracting strike information**\n\nI need to format the information into JSON using the `strike_extraction` schema, with `isStrike` set to true because there’s a clearly stated strike on December 14 from 9 AM to 5 PM for regional trains. The announcement mentions updates on circulation through their website and app. I should include the start date and time in the output, but since the year isn't mentioned, I’m deciding to use 2023, as the content is presumably from this year."
+    "durationMs": 23902,
+    "thoughts": "**Extracting strike details**\n\nI'm confirming that there's an announcement for an upcoming strike, so `isStrike` should be true. Now, I need to extract the strike dates. The dates must follow the format \"yyyy-MM-dd HH:mm:ss.\" The document calls out \"Comunicato stampa sciopero 14 dicembre 2023,\" meaning the strike is on December 14, 2023, which is indeed a Thursday. I'll set `startDate` to \"2023-12-14 09:00:00\" and `endDate` to \"2023-12-14 17:00:00.\" Also, locationType will be \"REGIONAL\" since it's about regional train services. Lastly, I need the relevant location codes."
   }
 }

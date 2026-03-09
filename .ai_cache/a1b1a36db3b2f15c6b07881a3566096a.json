@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7059,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000575,
+      "outputCost": 0.0001672,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002247
+    },
+    "hash": "a1b1a36db3b2f15c6b07881a3566096a",
+    "sourceFile": "aggiornamento_sciopero_riaperta_stazione_ponte_lungo.html",
+    "thoughts": "**Analyzing strike status update**\n\nI need to create a JSON output with an `isStrike` boolean and possibly `strikeData` if it’s true. The content pertains to an update about a public transport strike in Rome, specifically for the Ponte Lungo station. The title mentions the station has reopened, indicating the strike is not currently affecting services. Therefore, `isStrike` should be false since this is an update on a previously occurred strike, not an upcoming one.",
+    "tokens": {
+      "input": 1150,
+      "output": 418,
+      "total": 1568
+    }
+  }
+}

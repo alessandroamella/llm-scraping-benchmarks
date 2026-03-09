@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-05 03:00:00",
+      "endDate": "2025-02-06 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24853,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003682,
+      "outputCost": 0.0005824,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0009506
+    },
+    "hash": "9e276d8d3fc31e0c809acc0a9c25bf75",
+    "sourceFile": "strike-detail-mercoled--5-febbraio-sciopero-dei-treni-regionali.html",
+    "thoughts": "**Extracting strike details**\n\nI need to output JSON according to the specified schema. It looks like the document is announcing an upcoming strike, based on the Italian content. It mentions \"Mercoledì 5 febbraio sciopero dei treni regionali,\" meaning there's a strike on Wednesday, February 5, affecting regional trains. The strike will be from 3 AM on February 5 to 2 AM on February 6, with guaranteed service times noted. So, isStrike should be true, and I need to gather the relevant strike data.",
+    "tokens": {
+      "input": 7364,
+      "output": 1456,
+      "total": 8820
+    }
+  }
+}

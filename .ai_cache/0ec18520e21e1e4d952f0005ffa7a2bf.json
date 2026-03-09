@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5989,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00374375,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000396,
+      "cachedCost": 0,
+      "totalCost": 0.00415475
+    },
+    "hash": "0ec18520e21e1e4d952f0005ffa7a2bf",
+    "sourceFile": "sciopero_del_trasporto_pubblico_ha_aderito_il_195_del_personale_atac.html",
+    "thoughts": "**Analyzing the Input for a Strike Announcement**\n\nOkay, the task is clear: I need to figure out if this text is announcing an upcoming strike. My constraints are simple but specific. If it's a cancellation, a participation report, or a real-time update, it's not a strike announcement, and I return `isStrike: false`. Conversely, if it’s an announcement about a *future* strike, I'll return `isStrike: true` and fill in that `strikeData` object.\n\nNow, let's break down this Italian text. The title immediately gives me a clue: \"Public transport strike, 19.5% of Atac staff participated.\" The content reinforces this. It says, \"Total adhesion of Atac personnel to today's strike, recorded in the morning, was 19.5%.\" \"Today's strike\" is the key here. This isn't about *planning* a strike; it's a report about a strike that is *already underway* or has *already happened*. The mention of participation percentage confirms this is a report on the strike, not a pre-strike announcement.\n\nTherefore, given the information, I can confidently state that this is not an announcement of an upcoming strike. I'll set `isStrike: false`. Now to return that data in the correct JSON format.\n\n\n",
+    "tokens": {
+      "input": 14975,
+      "output": 10,
+      "total": 15249
+    }
+  }
+}

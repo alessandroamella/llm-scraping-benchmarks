@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-03-09T18:43:52.974Z",
+  "timestamp": "2026-03-09T19:15:39.185Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "Trenord",
     "fileName": "strike-detail-sciopero-del-trasporto-ferroviario-luned--30-sette.html",
     "model": "gpt-5-nano",
     "strategy": "mineru-html",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"Trenord\" (the public transport company of Lombardia (03)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: mineru-html):\n<html class=\"no-js\" dir=\"ltr\" lang=\"it\"><body> <div id=\"main\"> <div class=\"container-fluid grid-margin container-foglia-news\"> <div class=\"container\"> <div class=\"container-fluid containers\"> <div class=\"container-sticky stickem-container\"> <div class=\"content\"> <div class=\"container-content grid-margin\"> <div class=\"col-l\"> <div class=\"text align-middle\"> <h1 class=\"uppercase\" _item_id=\"101\"> <b> Sciopero del trasporto ferroviario lunedì 30 settembre </b> </h1> </div> <div class=\"frame frame-default frame-type-trenordtheme_simpletextmedia frame-layout-0\" id=\"c15757\"> <div class=\"container-fluid container-text-image\"> <div class=\"row grid-margin\"> <div class=\"container-content col-l\"> <div class=\"text align-middle\"> <h4 _item_id=\"103\">\n<strong>L’agitazione indetta da ORSA e Uiltrasporti </strong><strong>dalle ore 3 del 30 settembre alle ore 2 del 1° ottobre</strong>\n</h4> <h4 _item_id=\"104\"><strong>Si invitano i passeggeri a consultare su trenord.it l’elenco dei treni garantiti negli orari 6-9 e 18-21, con particolare attenzione alle corse serali</strong></h4> <p _item_id=\"105\">Dalle ore 3 di lunedì 30 settembre alle ore 2 di martedì 1° ottobre le organizzazioni sindacali ORSA e Uiltrasporti hanno indetto uno sciopero che, per l’intera giornata di lunedì, avrà ripercussioni sulla circolazione dei treni regionali, suburbani e dei collegamenti aeroportuali Malpensa Express e S50 Malpensa Aeroporto-Bellinzona. Le corse subiranno variazioni e cancellazioni.</p> <p _item_id=\"106\">Negli orari 6-9 e 18-21 circoleranno i treni indicati nella lista delle corse garantite, disponibile su trenord.it. <strong>Si invitano i passeggeri a consultare l’elenco prima di mettersi in viaggio nella giornata di lunedì, con particolare attenzione alle corse serali per il rientro</strong>.</p> <p _item_id=\"107\">In particolare, la mattina viaggeranno i convogli con orario di partenza dalla stazione di origine dopo le 6 e arrivo alla destinazione finale entro le 9. Nella fascia pomeridiana, circoleranno quelli con partenza prevista dopo le 18 e con arrivo entro le 21.</p> <p _item_id=\"108\">Tutte le altre corse previste da orario non potranno essere garantite.</p> <p _item_id=\"109\">Saranno previsti autobus sostitutivi, senza fermate intermedie, per le corse non effettuate tra Milano Cadorna (da via Paleocapa, 1) e Malpensa Aeroporto e tra Busto FS e Malpensa Aeroporto.</p> <p _item_id=\"110\">Le informazioni sulla circolazione saranno disponibili sulle pagine di ogni linea della App e del sito Trenord.</p> <p _item_id=\"111\">Si invitano i passeggeri a prestare attenzione ad annunci sonori e monitor di stazione.</p> </div> </div> </div> </div> </div> </div> </div> </div> </div> </div> </div> </div> </div> </body></html>"
   },
   "response": {
@@ -26,18 +26,18 @@
       }
     },
     "usage": {
-      "input": 1696,
-      "output": 1718,
-      "total": 3414
+      "input": 1610,
+      "output": 1729,
+      "total": 3339
     },
     "costUsd": {
-      "inputCost": 0.0000848,
-      "outputCost": 0.0006872,
+      "inputCost": 0.0000805,
+      "outputCost": 0.0006916,
       "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.000772
+      "totalCost": 0.0007721
     },
-    "durationMs": 21406,
-    "thoughts": "**Analyzing strike announcement**\n\nI need to determine if a document announces an upcoming strike based on the provided Italian content. It states there’s a strike starting at 3:00 AM on September 30, lasting until 2:00 AM on October 1. It appears to be nationwide, impacting various transport services like regional and suburban trains. The location type is ambiguous, but since it mentions a general timeline without being region-specific, I’m considering it as potentially national."
+    "durationMs": 17111,
+    "thoughts": "**Determining strike details**\n\nI need to assess if the document is announcing a new strike. It's in Italian and mentions \"Sciopero del trasporto ferroviario lunedì 30 settembre,\" indicating an upcoming strike from Monday, September 30 at 3:00 AM to Tuesday, October 1 at 2:00 AM. This involves specific union actions from ORSA and Uiltrasporti. The strike pertains to lines in Lombardy, with reference codes indicating local services. If confirmed as a strike, I should extract the start and end dates in the required format."
   }
 }

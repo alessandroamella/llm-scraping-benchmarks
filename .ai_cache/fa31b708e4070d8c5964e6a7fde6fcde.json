@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9388,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00011695,
+      "outputCost": 0.0001892,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00030615
+    },
+    "hash": "fa31b708e4070d8c5964e6a7fde6fcde",
+    "sourceFile": "sciopero_21_marzo_metropolitane.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to determine if this document is about an upcoming strike announcement. The content is in Italian and is discussing an ongoing 24-hour public transport strike. So, it's clear that it's not an upcoming strike. The instruction is to set isStrike to true only for announcements of future strikes, which means here, it should be false. I’ll output it as {\"isStrike\": false}. Double-checking confirms this understanding.",
+    "tokens": {
+      "input": 2339,
+      "output": 473,
+      "total": 2812
+    }
+  }
+}

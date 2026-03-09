@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4916,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0036995,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0004845,
+      "cachedCost": 0,
+      "totalCost": 0.004199
+    },
+    "hash": "9b1e8fb974f69cecf0ec03d95f129c6b",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_385.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, here's the deal. My task is to determine if this document indicates a *forthcoming* strike. The input is a web page from \"Roma Servizi per la Mobilità,\" titled \"Sciopero del trasporto pubblico, adesione personale Atac al 38,5%\". The request is for a JSON output with `isStrike` (boolean) and potentially some `strikeData`.\n\nThe title is pretty clear: \"Public transport strike, 38.5% Atac staff adherence.\" I need to determine if this is a *future* strike, or one that has *already* occurred. The crucial phrase here is \"L’adesione del personale Atac allo sciopero del trasporto pubblico, rilevata in mattinata, è stata pari al 38,5%.\" This tells me that the staff adherence was *detected* this morning, indicating that the strike is either ongoing or has already happened. The document is reporting *participation* numbers, not announcing a future event.\n\nThe date information is also relevant: Published on February 25, 2022, and updated on April 11, 2023. These dates aren't useful in determining whether the event will happen.\n\nBased on the instructions, which state \"If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false,\" I'm confident that `isStrike` should be `false`. This report is informative, but not an *announcement*.\n\n\n",
+    "tokens": {
+      "input": 14798,
+      "output": 10,
+      "total": 15131
+    }
+  }
+}

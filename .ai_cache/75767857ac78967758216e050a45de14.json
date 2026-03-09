@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-12-02 00:00:00",
+      "endDate": "2022-12-02 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8051,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00020075,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.001143,
+      "cachedCost": 0,
+      "totalCost": 0.00154025
+    },
+    "hash": "75767857ac78967758216e050a45de14",
+    "sourceFile": "venerd_2_dicembre_sciopero_generale_nazionale_24_ore_rischio_trasporto_pubblico_romano.html",
+    "thoughts": "**Strike Analysis - Italian Input**\n\nOkay, let's break this down. The input clearly indicates a strike, so `isStrike` is definitely `true`. The text, \"Venerdì 2 dicembre sciopero generale nazionale di 24 ore. A rischio anche il trasporto pubblico romano,\" is pretty straightforward. First, I need to parse the date. \"Venerdì 2 dicembre\" is Friday, December 2nd. Based on the publication date (25/11/2022) I can assume the year is 2022. That translates to `2022-12-02`.\n\nA \"24 ore\" strike means the whole day, so the `startDate` is `2022-12-02 00:00:00` and the `endDate` is `2022-12-02 23:59:59`. The location is \"nazionale,\" which I'll represent as `NATIONAL` for `locationType` and set `locationCodes` to `null` since there are no specific codes.\n\nNow, the crucial part: those guaranteed times. The text says \"Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" That translates to service guaranteed *until* 08:30 and *from* 17:00 to 20:00. This is standard strike terminology for transport services, so I'll create `guaranteedTimes` as an array: `[\"00:00-08:30\", \"17:00-20:00\"]`. I will store them as strings, in the correct format.\n\nSo, here's the data structure I'm building, taking into account how strike data is properly structured:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2022-12-02 00:00:00\",\n    \"endDate\": \"2022-12-02 23:59:59\",\n    \"locationType\": \"NATIONAL\",\n    \"locationCodes\": null,\n    \"guaranteedTimes\": [\"00:00-08:30\", \"17:00-20:00\"]\n  }\n}\n```\n\nNo need for comments, it's all clearly articulated, and the format is valid JSON. I've double-checked the quotes and everything seems accurate. Let's send this back.\n\n\n",
+    "tokens": {
+      "input": 803,
+      "output": 131,
+      "total": 1696
+    }
+  }
+}

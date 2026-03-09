@@ -1,36 +1,31 @@
 {
-  "timestamp": "2026-03-09T02:02:58.298Z",
-  "isCacheHit": false,
+  "timestamp": "2026-03-09T19:16:05.449Z",
+  "isCacheHit": true,
   "request": {
     "sourceName": "ATAC",
     "fileName": "sciopero_trasporto_pubblico_chiuse_metro_c_termini_centocelle.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "dom-distillation",
     "useLenientSchema": true,
-    "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a strike from \"ATAC\".\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), 2-letter for provinces (e.g., \"MI\" for Milan), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGION\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"> <h3>Context Metadata</h3> <ul><li>Page Title: Sciopero del trasporto pubblico, chiuse metro A e C e Termini-Centocelle - Roma Servizi per la Mobilità</li></ul> </div><hr/><div> <div> <div> <div> <div> <div> </div> </div> </div> <div> <div> <div> <div> <h1>Sciopero del trasporto pubblico, chiuse metro A e C e Termini-Centocelle</h1> </div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div><p>Pubblicato il: 25/02/2022 - Aggiornato il: 11/04/2023</p></div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div> <span> </span> </div> </div> </div> <div> <div> <div></div> </div> </div> <div> <div> <p>È in corso lo sciopero nazionale di 24 ore del trasporto pubblico. Ecco la situazione sulla rete romana: Metro A: chiusa Metro B/B1: regolare Metro C: chiusa Ferrovia Roma-Lido: regolare Ferrovia Roma-Viterbo metropolitano e regionale: regolare Termini-Centocelle: chiusa Bus e tram: possibili riduzioni di corse e/o sospensione di linee</p> </div> </div> </div> </div> </div> </div>"
+    "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"ATAC\" (the public transport company of Rome, Lazio (12)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"> <h3>Context Metadata</h3> <ul><li>Page Title: Sciopero del trasporto pubblico, chiuse metro A e C e Termini-Centocelle - Roma Servizi per la Mobilità</li></ul> </div><hr/><div> <div> <div> <div> <div> <div> </div> </div> </div> <div> <div> <div> <div> <h1>Sciopero del trasporto pubblico, chiuse metro A e C e Termini-Centocelle</h1> </div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div><p>Pubblicato il: 25/02/2022 - Aggiornato il: 11/04/2023</p></div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div> <span> </span> </div> </div> </div> <div> <div> <div></div> </div> </div> <div> <div> <p>È in corso lo sciopero nazionale di 24 ore del trasporto pubblico. Ecco la situazione sulla rete romana: Metro A: chiusa Metro B/B1: regolare Metro C: chiusa Ferrovia Roma-Lido: regolare Ferrovia Roma-Viterbo metropolitano e regionale: regolare Termini-Centocelle: chiusa Bus e tram: possibili riduzioni di corse e/o sospensione di linee</p> </div> </div> </div> </div> </div> </div>"
   },
   "response": {
-    "rawOutput": {
-      "isStrike": false
-    },
     "parsedData": {
       "isStrike": false
     },
     "usage": {
-      "input": 742,
-      "output": 10,
-      "cached": 0,
-      "thinking": 168,
-      "total": 920
+      "input": 777,
+      "output": 6,
+      "total": 919
     },
     "costUsd": {
-      "inputCost": 0.0001855,
-      "outputCost": 0.000015,
-      "thinkingCost": 0.000252,
+      "inputCost": 0.00019425,
+      "outputCost": 0.000009,
+      "thinkingCost": 0.000204,
       "cachedCost": 0,
-      "totalCost": 0.0004525
+      "totalCost": 0.00040725
     },
-    "durationMs": 2798,
-    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, here's the deal. My task is to figure out if this text is announcing a *future* strike or describing one that's *currently* happening. It looks like \"È in corso lo sciopero nazionale di 24 ore del trasporto pubblico\" translates to \"A national 24-hour public transport strike is in progress.\" The key phrase here is \"**in corso**\" - it's happening *right now*. The text also provides details about specific lines, like Metro A, B, and C, implying it's a real-time service update. This isn't an announcement of something to come; it's a report on the current situation. Therefore, based on this direct, real-time wording, I am confident in setting `isStrike` to *false*. This isn't an announcement of an upcoming strike, it is a notice about a strike that is already underway.\n\n\n"
+    "durationMs": 2986,
+    "thoughts": "**Analyzing the Real-Time Strike Situation**\n\nOkay, so I've received some input: \"Sciopero del trasporto pubblico, chiuse metro A e C e Termini-Centocelle\". It's pretty straightforward, indicating a public transport strike. The accompanying body text explicitly states \"È in corso lo sciopero nazionale di 24 ore del trasporto pubblico\" which means this is an active strike with current service updates.\n\nCrucially, the instructions tell me that if the content is giving *real-time* details about an *ongoing* strike, I should set `isStrike` to `false`. Since the body explicitly describes the current state – closed metros, etc. – and uses the phrase \"È in corso,\" it's giving me those real-time updates.\n\nTherefore, following the logic, I need to set `isStrike` to `false` because the input is reporting on the *effects* of the strike in real time, rather than just stating that a strike *is* happening. That's a key distinction.\n\n\n"
   }
 }

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 2864,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0003255,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0003165,
+      "cachedCost": 0,
+      "totalCost": 0.000657
+    },
+    "hash": "68487508d00d90829fc431186445e7f2",
+    "sourceFile": "sciopero_generale_adesione_personale_atac_179.html",
+    "thoughts": "**Analyzing the Atac Strike Report**\n\nOkay, so I've got this webpage about an Atac strike in Rome. The title \"Sciopero generale, adesione personale Atac al 17,9%\" tells me it's a general strike, and that 17.9% of Atac staff participated. The content itself, \"L’adesione complessiva del personale Atac allo sciopero generale di oggi, rilevata in mattinata, è stata del 17,9 per cento,\" confirms this participation rate was measured this morning.\n\nBased on this, my primary takeaway is that this document is *reporting* on a strike that is *in progress* or has *already occurred*. It's not an announcement or a heads-up about an *upcoming* strike. The text is describing past or current events. Therefore, since I'm concerned with discerning whether this is a notice of a future strike event, I should set `isStrike` to `false`. That is the correct logic based on the presented information.\n\n\n",
+    "tokens": {
+      "input": 1302,
+      "output": 10,
+      "total": 1523
+    }
+  }
+}

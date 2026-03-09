@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-16 03:00:00",
+      "endDate": "2025-06-17 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 32403,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008445,
+      "outputCost": 0.0011008,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00118525
+    },
+    "hash": "f2ed3b28b94ba872f171304dcb2ab1ad",
+    "sourceFile": "strike-detail-luned--16-giugno-sciopero-dei-treni-regionali.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to output a JSON format as per the specified schema while deciding if this document relates to an upcoming strike. The content discusses a strike on Monday, June 16, called by the ORSA union, which runs from 3:00 AM Monday until 2:00 AM Tuesday. It confirms that there will be disruptions on regional connections for the entire day, but guarantees service during certain times. Therefore, this is clearly an upcoming strike announcement with relevant details like the date range and location type.",
+    "tokens": {
+      "input": 1689,
+      "output": 2752,
+      "total": 4441
+    }
+  }
+}

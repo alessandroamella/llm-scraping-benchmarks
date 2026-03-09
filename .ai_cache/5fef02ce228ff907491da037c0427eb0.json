@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5514,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00032725,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.0008085,
+      "cachedCost": 0,
+      "totalCost": 0.00134575
+    },
+    "hash": "5fef02ce228ff907491da037c0427eb0",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_di_24_ore_venerdi_13_dicembre_2024_aggiornamento.html",
+    "thoughts": "**Strike Analysis and JSON Output**\n\nOkay, let's break this down. My task is to analyze this text and determine if it describes a strike, specifically regarding EAV in Campania (Italy), and then format the information into a valid JSON object according to the provided schema. The input is an announcement: \"lo sciopero proclamato per domani 13 dicembre torna ad essere di 24 ore.\" That's clear; it's confirming a strike. The target date is Friday, December 13, 2024.\n\nNow, let's interpret the details for the JSON output. The phrase \"24 ore\" indicates a full-day strike, so it should start at 00:00:00 on December 13th, 2024, and end at 23:59:59 on the same day. The location is EAV, which I need to translate to the appropriate location code: \"15\" for Campania. The guaranteed times are explicitly mentioned as \"05:30-08:30\" and \"16:30-19:30\".\n\nBased on these details, I must construct a JSON object. I've got to ensure it adheres precisely to the schema, which is key. From the schema specification, I see the output must be a JSON object, so I will ensure that is what I create, even though the prompt suggested a possible JSON array. The object will contain:\n\n*   `isStrike`: `true` (since the text confirms a strike).\n*   `strikeData`: An object with the following elements:\n    *   `startDate`: \"2024-12-13 00:00:00\"\n    *   `endDate`: \"2024-12-13 23:59:59\"\n    *   `locationType`: \"REGIONAL\"\n    *   `locationCodes`: `[\"15\"]`\n    *   `guaranteedTimes`: `[\"05:30-08:30\", \"16:30-19:30\"]`\n\nI will now verify that all the keys are spelled correctly, data types are correct, and date/time formats are as requested. I'm ready to output the final JSON.\n\n\n",
+    "tokens": {
+      "input": 1309,
+      "output": 140,
+      "total": 1988
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-09-22 00:00:00",
+      "endDate": "2025-09-22 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 17959,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00013215,
+      "outputCost": 0.0005996,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00073175
+    },
+    "hash": "ff7fa2484853986348d4d5227f16bd8d",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_generale_nazionale_lunedi_22_settembre_2025.html",
+    "thoughts": "**Determining strike announcement data**\n\nI need to output JSON based on the specified format. The document mentions a national strike on September 22, 2025, proclaimed by USB, and the context is EAV in Campania. It looks like a strike announcement since it provides details like guaranteed service hours and other relevant info. So, I’ll set isStrike to true. I must also include startDate and endDate in strikeData for this upcoming strike notice.",
+    "tokens": {
+      "input": 2643,
+      "output": 1499,
+      "total": 4142
+    }
+  }
+}

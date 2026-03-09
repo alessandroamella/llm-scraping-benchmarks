@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6801,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000966,
+      "outputCost": 0.0001688,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002654
+    },
+    "hash": "81507cd498bbb0ca39c01b5eb22ed75a",
+    "sourceFile": "sciopero_nazionale_tpl_chiuse_metro_ferrovia_termini_centocelle.html",
+    "thoughts": "**Finalizing JSON output**\n\nI'm checking if the document indicates an upcoming strike or if it's already happening. The title suggests a current strike regarding public transport in Italy, while the body confirms that it's ongoing and will end at 16:30. It’s clear that this is a real-time update about an active situation, so I’ll set isStrike to false, as instructed. Therefore, I’ll output: { \"isStrike\": false }. That seems correct!",
+    "tokens": {
+      "input": 1932,
+      "output": 422,
+      "total": 2354
+    }
+  }
+}

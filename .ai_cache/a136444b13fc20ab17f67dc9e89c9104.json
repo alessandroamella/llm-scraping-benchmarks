@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-03-19 09:00:00",
+      "endDate": "2025-03-19 17:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6431,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0002835,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.0010605,
+      "cachedCost": 0,
+      "totalCost": 0.001467
+    },
+    "hash": "a136444b13fc20ab17f67dc9e89c9104",
+    "sourceFile": "strike-detail-mercoled--19-marzo-dalle-ore-9-alle-ore-17-scioper.html",
+    "thoughts": "**Strike Analysis: Italian Rail Strike Announcement**\n\nOkay, let's break this down. My task is to identify and extract information from strike announcements. This specific text describes a future strike, so I'll need to pull out the relevant details.\n\nFirst, I see the source title is \"Mercoledì 19 marzo dalle ore 9 alle ore 17 Sciopero nazionale del trasporto ferroviario\". The news date is March 17th, 2025, and the announcement clearly states a national railway strike will occur on Wednesday, March 19th, from 9 AM to 5 PM. My `isStrike` flag will be set to `true` as it's a clear announcement.\n\nThis is a **national strike** (\"Sciopero nazionale\"), so the `locationType` is definitely \"NATIONAL.\" I don't need any `locationCodes` since it's a nationwide event. The text mentions Trenord (Lombardia - 03), but since it's a national strike, I don't need to specify that this company is involved.\n\nNow, about the guaranteed service: the text implies that morning trains departing before 9:00 AM and arriving by 10:00 AM are guaranteed. I would like to include the `guaranteedTimes` slot, and the rule is consistent with other Italian rail strikes, where \"guaranteed\" slots are commonly from 06:00 to 09:00 and 18:00 to 21:00. This text is saying that the trains arriving by 10 are guaranteed, and not during a specific time period. I'll omit `guaranteedTimes` to be safe and avoid misrepresentation. The prompt specifies a time *range*, so I'll leave it out.\n\nMy schema checks are next.\n\n*   `isStrike`: This will be `true`.\n*   `strikeData`:\n    *   `startDate`: Will be \"2025-03-19 09:00:00\".\n    *   `endDate`: Will be \"2025-03-19 17:00:00\".\n    *   `locationType`: Will be \"NATIONAL\".\n\nYes, this is an upcoming strike, announced on March 17, 2025, for an event on March 19, 2025. This should be a fairly straightforward extraction.\n\n\n",
+    "tokens": {
+      "input": 1134,
+      "output": 82,
+      "total": 1923
+    }
+  }
+}

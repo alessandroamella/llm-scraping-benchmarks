@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-09-22 00:00:00",
+      "endDate": "2025-09-22 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4090,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000302,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.0006615,
+      "cachedCost": 0,
+      "totalCost": 0.00116
+    },
+    "hash": "7cb1752c9a928fe0f95fe61c64eab8ed",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_generale_nazionale_lunedi_22_settembre_2025.html",
+    "thoughts": "**Analyzing the General National Strike Announcement**\n\nOkay, so I'm processing information about a \"sciopero generale nazionale,\" a general national strike, set for September 22, 2025. USB is the announcing organization. I need to note the details accurately for my analysis. Let's break this down.\n\nFirstly, it's definitely a strike, `isStrike`: true. It's national, affecting all locations within Italy, `locationType`: \"NATIONAL\", which also means `locationCodes` is `null`, making sense. The dates are critical: the strike starts on September 22, 2025, from midnight, `startDate`: 2025-09-22 00:00:00, and lasts until the end of that day, essentially making it a 24-hour strike for most, `endDate`: 2025-09-22 23:59:59, though travel/circulating staff will experience a 23-hour strike, as per the initial information. The guaranteed service times are 05:30-08:30 and 16:30-19:30, `guaranteedTimes`: [\"05:30-08:30\", \"16:30-19:30\"]. EAV in Campania is reporting it, and the information is correctly formatted in JSON, with no extraneous text. I have verified all the essential details and ensured they are accurate.\n\n\n",
+    "tokens": {
+      "input": 1208,
+      "output": 131,
+      "total": 1780
+    }
+  }
+}

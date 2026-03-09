@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-04-11 20:00:00",
+      "endDate": "2024-04-12 00:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6696,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0003405,
+      "outputCost": 0.0001335,
+      "thinkingCost": 0.000948,
+      "cachedCost": 0,
+      "totalCost": 0.001422
+    },
+    "hash": "10bee9bf7c2663de61d553fd942beda3",
+    "sourceFile": "gioved_11_aprile_sciopero_nazionale_trasporto_pubblico_rischio_20_24.html",
+    "thoughts": "**Analyzing Strike Information from HTML**\n\nOkay, here's the breakdown. My task is to extract strike information from this HTML snippet and structure it according to a predefined schema. The goal is to determine if a strike is upcoming and, if so, capture the essential details.\n\nThe provided HTML says \"Giovedì 11 aprile sciopero nazionale. Trasporto pubblico a rischio dalle 20 alle 24.\" Right away, I see \"11 aprile,\" indicating a strike on April 11th. \"Dalle 20 alle 24\" tells me the time frame is from 20:00 (8 PM) to 24:00 (midnight). That is the end of the day, so that would be 00:00:00 of the next day. The word \"nazionale\" means this is a national strike. The schema expects a year, and since one isn't explicitly mentioned, the standard for this type of task is to assume the current year, 2024. Actually, the example in the prompt is 2024, confirming my approach.\n\nSo, let's map this to the schema. The strike starts on April 11th, so I'll create `startDate` as \"2024-04-11 20:00:00.\" Since the end time is midnight, which would be interpreted as the start of the next day, and I am instructed to use the end of day, I will set `endDate` to \"2024-04-12 00:00:00.\" The `locationType` is NATIONAL, and the `locationCodes` field is null because it's a national strike. The text doesn't mention any guaranteed times, so that will be omitted.\n\nTherefore, the final output needs to reflect that this is indeed a strike (`isStrike: true`). The detailed strike information (`strikeData`) includes:\n\n*   `startDate`: \"2024-04-11 20:00:00\"\n*   `endDate`: \"2024-04-12 00:00:00\"\n*   `locationType`: \"NATIONAL\"\n*   `locationCodes`: null\n\nEssentially, I've taken the raw text, interpreted the implicit information (like the year), and mapped everything to the required data structure.\n\n\n",
+    "tokens": {
+      "input": 1362,
+      "output": 89,
+      "total": 2083
+    }
+  }
+}

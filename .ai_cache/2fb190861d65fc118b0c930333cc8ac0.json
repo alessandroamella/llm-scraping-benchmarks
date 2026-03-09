@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3744,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00017825,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000291,
+      "cachedCost": 0,
+      "totalCost": 0.00048425
+    },
+    "hash": "2fb190861d65fc118b0c930333cc8ac0",
+    "sourceFile": "sciopero_generale_nazionale_adesione_personale_atac_23.html",
+    "thoughts": "**Analyzing the Atac Strike Report**\n\nOkay, so I've got this piece of information: \"Sciopero generale nazionale, adesione personale Atac al 23% - Roma Servizi per la Mobilità.\" Right off the bat, I need to figure out if this is an announcement of a *new* strike, or just a report on one that's already happened. That's the key question here.\n\nThe title itself indicates \"adesione,\" or participation, of Atac personnel. The content goes on to specify that this participation was 23%. Immediately, the language \"è stata pari al 23%\" – past tense – jumps out at me. It's describing *what happened* in terms of participation. Based on the instructions, if the text is simply reporting the *outcome* or participation percentage of an already-concluded event, I should mark `isStrike` as false. That's the only logical conclusion, given the temporal context. This is a post-event report, not a pre-emptive strike warning. Therefore, `isStrike` is definitively `false`.\n\n\n",
+    "tokens": {
+      "input": 713,
+      "output": 10,
+      "total": 917
+    }
+  }
+}

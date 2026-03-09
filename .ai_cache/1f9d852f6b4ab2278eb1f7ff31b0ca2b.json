@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-10 08:30:00",
+      "endDate": "2025-01-10 12:30:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6712,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0037565,
+      "outputCost": 0.0001605,
+      "thinkingCost": 0.0007905,
+      "cachedCost": 0,
+      "totalCost": 0.0047075
+    },
+    "hash": "1f9d852f6b4ab2278eb1f7ff31b0ca2b",
+    "sourceFile": "trasporto_pubblico_venerdi_10_gennaio_sciopero_nazionale_di_4_ore.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, let's break this down. My task is clear: determine if this text constitutes a strike announcement for ATAC in Rome and then structure the information into a JSON object. The primary criteria is that it *must* be an explicit announcement of an upcoming strike.\n\nI'm seeing a title: \"Trasporto pubblico, venerdì 10 gennaio sciopero nazionale di 4 ore\" - \"Public transport, Friday January 10th, national strike of 4 hours.\" The content confirms this; it states public transport will be \"a rischio\" – \"at risk\" – due to a national strike lasting four hours, from 8:30 to 12:30. The date, January 10th, is clearly mentioned as upcoming, and the context strongly suggests it is the strike date. I must assume the current year is 2024, and therefore the mentioned date is from the coming year 2025. It also provides the time: 08:30 to 12:30. The location, \"nazionale\", implies this affects multiple locations. But since ATAC is the specified company, it must directly affect Lazio, or Rome.\n\nTherefore, `isStrike` is definitely `true`.\n\nNow, for the `strikeData`. I need to extract the date, time, and location information and format everything correctly. The `startDate` is clearly 2025-01-10 08:30:00, and the `endDate` is 2025-01-10 12:30:00.\n\nThe `locationType` is a bit of a nuanced call. While the strike is \"nazionale\" – national – it impacts public transport specifically, including Rome. The prompt mentions location code \"12\" for Lazio (Rome). Therefore, I'll go with \"REGIONAL\" and set the `locationCodes` to [\"12\"].\n\nThe text doesn't provide *explicit* guaranteed times. So, I will set `guaranteedTimes` to `null` (or simply omit the field).\n\nThus, my constructed JSON will be:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-01-10 08:30:00\",\n    \"endDate\": \"2025-01-10 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": null\n  }\n}\n```\n\n\n",
+    "tokens": {
+      "input": 15026,
+      "output": 107,
+      "total": 15660
+    }
+  }
+}

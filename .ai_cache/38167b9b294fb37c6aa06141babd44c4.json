@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-01-24 00:00:00",
+      "endDate": "2024-01-24 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5410,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00371425,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.000666,
+      "cachedCost": 0,
+      "totalCost": 0.00457675
+    },
+    "hash": "38167b9b294fb37c6aa06141babd44c4",
+    "sourceFile": "sciopero_nazionale_24_gennaio_trasporto_pubblico_rischio.html",
+    "thoughts": "**Strike Announcement Analysis**\n\nOkay, let's see, the task is to figure out if this document is announcing a strike. The input is \"Sciopero nazionale: il 24 gennaio trasporto pubblico a rischio - Roma Servizi per la Mobilità.\" Right away, the \"sciopero nazionale\" part is promising.\n\nLet's break down the content. We've got a \"sciopero nazionale di 24 ore\" on Wednesday, January 24th, proclaimed by various unions. Sounds like a strike for sure. The content confirms it's a strike affecting public transport in Rome (\"a Roma l'agitazione interesserà...\"). The text also provides specific operators affected (Atac, RomaTpl, etc.). Looks like a go.\n\nI need to extract the information as JSON. So, first, `isStrike` is definitely `true`. The strike date is clearly January 24th, 2024. Considering it's a 24-hour strike, I'll set the `startDate` to `2024-01-24 00:00:00` and the `endDate` to `2024-01-24 23:59:59` to cover the full day. The text refers to it as a \"national strike\" so `locationType` should be \"NATIONAL,\" overriding the mention of Rome. Since it's national, the `locationCodes` will be `null`.\n\nNow, the tricky part – the guaranteed service times. The text says service is \"regolare fino alle 8,30 e dalle 17 alle 20.\" That translates to \"00:00-08:30\" and \"17:00-20:00\". These are the guaranteed time windows. So, `guaranteedTimes` should be `[\"00:00-08:30\", \"17:00-20:00\"]`.\n\n\n",
+    "tokens": {
+      "input": 14857,
+      "output": 131,
+      "total": 15432
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7447,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00066785,
+      "outputCost": 0.0001736,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00084145
+    },
+    "hash": "0f6dc16fcccce63f620964e459e04594",
+    "sourceFile": "sciopero_trasporto_pubblico_mattinata_ha_aderito_222_personale_atac.html",
+    "thoughts": "**Evaluating strike information**\n\nI need to output JSON based on the strike extraction schema to see if this document announces a new or upcoming strike. The content is in Italian and mentions a public transport strike, specifically noting a 22.2% participation rate from Atac personnel this morning. Since it's discussing a strike that has already happened and not one that is upcoming, I’ll determine that \"isStrike\" should be false.",
+    "tokens": {
+      "input": 13357,
+      "output": 434,
+      "total": 13791
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-06-16 03:00:00",
+      "endDate": "2024-06-17 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 13504,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000767,
+      "outputCost": 0.0004612,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0005379
+    },
+    "hash": "a01a25996803a02ba62605ef06a1b288",
+    "sourceFile": "strike-detail-sciopero-uiltrasporti-e-orsa-domenica-16-giugno--p.html",
+    "thoughts": "**Evaluating train service details**\n\nI’m looking into the regional train service in Lombardy from June 16 to June 17, 2024. The content mentions issues with the service on regional lines, especially with the S50 line to Malpensa Airport. I should set the location type as REGIONAL and the location code to \"03\" for Lombardia. Since they indicate no minimum guaranteed service, it seems I should omit the guaranteed times, as there aren’t any specified.",
+    "tokens": {
+      "input": 1534,
+      "output": 1153,
+      "total": 2687
+    }
+  }
+}

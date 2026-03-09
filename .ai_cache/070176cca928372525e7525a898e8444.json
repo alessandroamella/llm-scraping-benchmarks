@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7222,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000763,
+      "outputCost": 0.0001684,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002447
+    },
+    "hash": "070176cca928372525e7525a898e8444",
+    "sourceFile": "sciopero_trasporto_pubblico_aperte_metropolitane.html",
+    "thoughts": "**Clarifying strike status**\n\nThe user instruction indicates that I should only set isStrike to true if it's an announcement about an upcoming strike. So, isStrike should actually be false for this case. We have to be careful not to misclassify it since this content refers to an ongoing 24-hour strike. Therefore, the correct output is: {\"isStrike\": false}. I'll ensure it's formatted precisely as a JSON object without any extra commentary. Let's finalize it as: {\"isStrike\": false}.",
+    "tokens": {
+      "input": 1526,
+      "output": 421,
+      "total": 1947
+    }
+  }
+}

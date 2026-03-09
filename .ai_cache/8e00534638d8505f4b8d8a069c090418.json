@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-02-04 08:30:00",
+      "endDate": "2022-02-04 12:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7702,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00019425,
+      "outputCost": 0.0001335,
+      "thinkingCost": 0.0008265,
+      "cachedCost": 0,
+      "totalCost": 0.00115425
+    },
+    "hash": "8e00534638d8505f4b8d8a069c090418",
+    "sourceFile": "4_febbraio_sciopera_4_ore_sindacato_usb_trasporto_pubblico_rischio.html",
+    "thoughts": "**Strike Analysis: A Concise Review**\n\nOkay, let's break this down. My primary task here is to analyze this text and identify strike information, specifically if there's an upcoming strike and, if so, extract relevant data in a strict JSON format. The schema is non-negotiable, and I need to adhere to it precisely.\n\nThe headline immediately flags my attention: \"Il 4 febbraio sciopera 4 ore il sindacato Usb. Trasporto pubblico a rischio\" – February 4th, a 4-hour strike by the Usb union, putting public transport at risk. The text confirms the strike: \"Venerdì 4 febbraio trasporto pubblico a rischio per lo sciopero nazionale di 4 ore indetto dal sindacato Usb.\" The strike is on February 4th, lasting 4 hours.\n\nNow for the details. The strike duration is from 08:30 to 12:30. The scope is described as \"nazionale\", meaning national. Rome (Lazio, code \"12\") is mentioned as being affected, but the strike scope is national and therefore \"locationCodes\" must be null.\n\nThus, the data extraction is straightforward: `isStrike` is true. The `startDate` is 2022-02-04 08:30:00, and the `endDate` is 2022-02-04 12:30:00. Given the \"nazionale\" descriptor, `locationType` becomes \"NATIONAL\", and `locationCodes` is `null`. Crucially, \"guaranteedTimes\" are not explicitly mentioned so I won't include them. The dates and times are already in the correct format.\n\nThe final JSON output should therefore be:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2022-02-04 08:30:00\",\n    \"endDate\": \"2022-02-04 12:30:00\",\n    \"locationType\": \"NATIONAL\",\n    \"locationCodes\": null\n  }\n}\n```\n\nThe analysis is complete, and the data is formatted accurately.\n\n\n",
+    "tokens": {
+      "input": 777,
+      "output": 89,
+      "total": 1417
+    }
+  }
+}

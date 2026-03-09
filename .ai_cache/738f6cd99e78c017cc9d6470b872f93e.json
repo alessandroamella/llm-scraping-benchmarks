@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9160,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00066295,
+      "outputCost": 0.000194,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00085695
+    },
+    "hash": "738f6cd99e78c017cc9d6470b872f93e",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_361.html",
+    "thoughts": "**Analyzing strike participation data**\n\nI need to output JSON that indicates if there’s a strike happening or not, with associated details if it is true. The article is about the participation of Atac staff in a public transport strike, showing a participation rate of 36.1%. This information is dated September 9, 2024, but it seems to be reporting on current participation rather than announcing a new strike. So, I should mark \"isStrike\" as false and avoid including any strike data.",
+    "tokens": {
+      "input": 13259,
+      "output": 485,
+      "total": 13744
+    }
+  }
+}

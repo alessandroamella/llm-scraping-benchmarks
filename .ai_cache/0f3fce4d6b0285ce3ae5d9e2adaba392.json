@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-03 00:00:00",
+      "endDate": "2025-10-03 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5635,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0002745,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.0007875,
+      "cachedCost": 0,
+      "totalCost": 0.0012585
+    },
+    "hash": "0f3fce4d6b0285ce3ae5d9e2adaba392",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_generale_nazionale_di_venerdi_03_ottobre_2025.html",
+    "thoughts": "**Strike Analysis and Data Extraction**\n\nOkay, let's break this down. My task is to verify if this input describes an upcoming strike and then neatly extract the pertinent details. The input is a text about a national strike scheduled for October 3rd, 2025. It's an \"Avviso di sciopero generale nazionale,\" which confirms it's an announcement. The text explicitly mentions a national general strike (\"sciopero generale nazionale\") on that date.\n\nThe core information is pretty straightforward: the strike lasts 24 hours, so that's a full day, from 00:00:00 to 23:59:59 on October 3rd, 2025. The location is *national*, despite the Campania reference in the preamble. Since it is a *national* strike, the `locationCodes` field needs to be null; that's important to differentiate from a regional event. There are guaranteed service times: 05:30-08:30 and 16:30-19:30.\n\nI need to structure this data into a valid JSON object. My mental model is solidifying. So, `isStrike` is true. Here’s how I'll represent the `strikeData`: `startDate` is \"2025-10-03 00:00:00,\" `endDate` is \"2025-10-03 23:59:59,\" `locationType` is \"NATIONAL,\" `locationCodes` is `null` (crucial for a national strike), and `guaranteedTimes` will be the array [\"05:30-08:30\", \"16:30-19:30\"]. The JSON needs to be clean, no comments, and correctly formatted, of course. Everything checks out, and that's the output I'll use.\n\n\n",
+    "tokens": {
+      "input": 1098,
+      "output": 131,
+      "total": 1754
+    }
+  }
+}

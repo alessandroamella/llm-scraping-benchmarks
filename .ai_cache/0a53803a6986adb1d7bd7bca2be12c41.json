@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 16128,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000588,
+      "outputCost": 0.0004876,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0005464
+    },
+    "hash": "0a53803a6986adb1d7bd7bca2be12c41",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_generale_nazionale_di_24_ore_venerdi_28_novembre_2025.html",
+    "thoughts": "**Extracting strike data**\n\nI need to output JSON that includes an `isStrike` boolean and possibly `strikeData` if it's true. I’m parsing some Italian content that announces a general strike for 24 hours on November 28, 2025. It lists guaranteed service hours, and since it is an upcoming strike, `isStrike` should be set to true. I also need to extract details like startDate, endDate, and locationType, ensuring they're in the right format.",
+    "tokens": {
+      "input": 1176,
+      "output": 1219,
+      "total": 2395
+    }
+  }
+}

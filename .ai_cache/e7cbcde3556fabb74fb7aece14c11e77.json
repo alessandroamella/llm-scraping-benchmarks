@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-12-02 00:00:00",
+      "endDate": "2022-12-02 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 10136,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00034475,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.0013125,
+      "cachedCost": 0,
+      "totalCost": 0.00185375
+    },
+    "hash": "e7cbcde3556fabb74fb7aece14c11e77",
+    "sourceFile": "venerd_2_dicembre_sciopero_generale_nazionale_24_ore_rischio_trasporto_pubblico_romano.html",
+    "thoughts": "**Analyzing the Atac Strike Announcement**\n\nOkay, so I'm looking at this announcement about a strike impacting public transport in Rome (Atac). The core of it is \"Venerdì 2 dicembre sciopero generale nazionale di 24 ore,\" which translates to a national 24-hour strike on Friday, December 2nd.\n\nThe critical pieces of information jump out immediately: the strike's a *national* one, which means it has a wider scope than just Rome, even if Atac is the immediate target here. The date is December 2nd. The text doesn't specify a year, but for context, if this is current, 2022. I can confirm the year with the fact that December 2nd, 2022 was a Friday. I will be sure to add that to the date. Let's see, the schema I'm using specifies a `yyyy-MM-dd HH:mm:ss` format. So, based on the text I'll render the strike: 2022-12-02 00:00:00 to 2022-12-02 23:59:59.\n\nThe announcement mentions guaranteed service times, which are typical with Italian transit strikes. It says service will be \"regolare fino alle 8,30 e dalle 17 alle 20.\" This translates to the service being normal until 8:30 AM and then between 5:00 PM and 8:00 PM. So, I will extract those guaranteed times as [00:00-08:30] and [17:00-20:00] for `guaranteedTimes`. The full strike data is `isStrike: true`, `locationType`: \"NATIONAL\", `locationCodes`: null (since it's national). The dates are correct too: startDate of \"2022-12-02 00:00:00\" and an endDate of \"2022-12-02 23:59:59\". I've correctly inferred the data based on the text and the prompt's request.\n\n\n",
+    "tokens": {
+      "input": 1379,
+      "output": 131,
+      "total": 2385
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3428,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0003245,
+      "outputCost": 0.000009,
+      "thinkingCost": 0.0003045,
+      "cachedCost": 0,
+      "totalCost": 0.000638
+    },
+    "hash": "a4995f5946aba04be63253f5fed0c8a1",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_385.html",
+    "thoughts": "**Analyzing the ATAC Strike Announcement**\n\nOkay, let's break this down. My source material is an ATAC announcement page, specifically titled \"Sciopero del trasporto pubblico, adesione personale Atac al 38,5%\". The key piece of information here is the reported staff participation: \"L’adesione del personale Atac allo sciopero del trasporto pubblico, rilevata in mattinata, è stata pari al 38,5%\". My task is to determine whether this announcement signals an *upcoming* strike.\n\nThe crucial point in my analysis is the past-tense phrasing. The text specifies that the participation rate was \"recorded this morning\". This clearly indicates that the strike has *already occurred*. The announcement is reporting on the participation level *during* the strike, not previewing a future event. Therefore, my conclusion is definitive: this *is not* an announcement for an upcoming strike.\n\nTherefore, `isStrike` is `false`.\n\nThe final output is `{\"isStrike\": false}`.\n\n\n",
+    "tokens": {
+      "input": 1298,
+      "output": 6,
+      "total": 1507
+    }
+  }
+}

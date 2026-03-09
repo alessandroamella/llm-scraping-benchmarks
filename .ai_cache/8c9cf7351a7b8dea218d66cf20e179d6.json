@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "04",
+        "05"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20365,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008465,
+      "outputCost": 0.0005728,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00065745
+    },
+    "hash": "8c9cf7351a7b8dea218d66cf20e179d6",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-11-28-sciopero-del-personale-di-sad-.html",
+    "thoughts": "**Formatting strike announcement data**\n\nI need to output JSON with an indicator for whether there’s a strike or not. The content describes an upcoming strike announcement for SAD and Trentino Trasporti on November 28, 2025, from 00:00 to 23:59. So yes, isStrike should be true. I’ll extract the strikeData: startDate should be formatted as 2025-11-28 00:00:00, and endDate is 2025-11-28 23:59:00. As for locationType, I conclude it’s REGIONAL since the note mentions \"Servizio: Regionale.\"",
+    "tokens": {
+      "input": 1693,
+      "output": 1432,
+      "total": 3125
+    }
+  }
+}

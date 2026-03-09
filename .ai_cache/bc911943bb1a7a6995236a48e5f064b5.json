@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-04 08:30:00",
+      "endDate": "2025-02-04 12:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6032,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0003565,
+      "outputCost": 0.0001335,
+      "thinkingCost": 0.0009945,
+      "cachedCost": 0,
+      "totalCost": 0.0014845
+    },
+    "hash": "bc911943bb1a7a6995236a48e5f064b5",
+    "sourceFile": "4_febbraio_sciopera_4_ore_sindacato_usb_trasporto_pubblico_rischio.html",
+    "thoughts": "**Strike Identification and Data Extraction**\n\nOkay, let's break this down. My task is to determine if this document announces a strike and, if so, to extract the relevant data. The content is an announcement from ATAC about a 4-hour strike, so *isStrike* will be `true`.\n\nNow, for the details. The strike date is explicitly given as February 4th. The prompt mentions \"Venerdì 4 febbraio\", suggesting it's the next upcoming occurrence. Without a specific year, my default is typically the next possible one, which in this context means 2025. I should be more precise, normally. The start time is 08:30:00, and the end time is 12:30:00.\n\nThe location is described as affecting \"A Roma saranno interessate la rete Atac...\", so, given this is national and doesn't explicitly limit itself to the Lazio code of 12, the *locationType* is definitely `NATIONAL` and `locationCodes` is `null`.\n\nThe strike is described as a \"sciopero nazionale di 4 ore\", which explicitly states that it's a *national* strike. This means my locationType will be `NATIONAL`.\n\nNow, about *guaranteedTimes*. The text doesn't mention specific guaranteed service windows, so I'll leave that field out.\n\nTherefore, the strike data will be:\n\n*   *startDate*: \"2025-02-04 08:30:00\"\n*   *endDate*: \"2025-02-04 12:30:00\"\n*   *locationType*: \"NATIONAL\"\n*   *locationCodes*: null\n\nSo, in summary: `isStrike` is `true`, and `strikeData` contains the structured strike information described above.\n\n\n",
+    "tokens": {
+      "input": 1426,
+      "output": 89,
+      "total": 2178
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-02-17 00:00:00",
+      "endDate": "2023-02-18 00:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 38020,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000758,
+      "outputCost": 0.0013012,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.001377
+    },
+    "hash": "54c4369183c61c2ff076bc1ad660a073",
+    "sourceFile": "venerd_17_febbraio_sciopero_nazionale_usb_24_ore_trasporto_pubblico_rischio.html",
+    "thoughts": "**Processing strike announcement**\n\nI need to output JSON based on the strike extraction. The content is Italian, announcing a national 24-hour strike on February 17 by USB, impacting public transport, specifically the Atac network and Roma Tpl lines. The service will be regular until 8:30 AM and again from 5 PM to 8 PM. It mentions real-time updates available on romamobilita.it. So, this document clearly indicates an upcoming strike announcement.",
+    "tokens": {
+      "input": 1516,
+      "output": 3253,
+      "total": 4769
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-20 00:00:00",
+      "endDate": "2025-06-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 29901,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000601,
+      "outputCost": 0.0008448,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0009049
+    },
+    "hash": "ed119f385a28f2679c3c3e048ae3e1e2",
+    "sourceFile": "venerdi_20_giugno_sciopero_generale_nazionale_di_usb_cub_e_sgb_a_roma_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to format my output as JSON and check if this is a strike announcement. The article discusses a general strike in Italy scheduled for June 20, 2025. It states that public transport will be at risk in Rome due to this strike, with services guaranteed until certain hours. Since this is an announcement about a single-day nationwide strike, I can confirm that “isStrike” should be set to true.",
+    "tokens": {
+      "input": 1202,
+      "output": 2112,
+      "total": 3314
+    }
+  }
+}

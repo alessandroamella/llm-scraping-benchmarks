@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6852,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007615,
+      "outputCost": 0.0001232,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00019935
+    },
+    "hash": "f81a79dc3869272664df8a6df7e88d2e",
+    "sourceFile": "sciopero_del_trasporto_pubblico_aperte_le_metropolitane_e_la_termini_centocelle.html",
+    "thoughts": "**Evaluating strike status**\n\nI need to output JSON based on the details of this document regarding a strike announcement. The Italian content indicates there is currently an ongoing public transport strike, but it specifies that subways are still operational. The phrase \"È in corso lo sciopero\" confirms this is not a new or upcoming strike. Therefore, I should set isStrike to false. The output will simply be {\"isStrike\": false} since no strikeData is required.",
+    "tokens": {
+      "input": 1523,
+      "output": 308,
+      "total": 1831
+    }
+  }
+}

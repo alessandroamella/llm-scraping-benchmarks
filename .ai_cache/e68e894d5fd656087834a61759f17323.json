@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-09-30 03:00:00",
+      "endDate": "2024-10-01 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18676,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000819,
+      "outputCost": 0.0006648,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0007467
+    },
+    "hash": "e68e894d5fd656087834a61759f17323",
+    "sourceFile": "strike-detail-sciopero-del-trasporto-ferroviario-luned--30-sette.html",
+    "thoughts": "**Analyzing strike data**\n\nI see that the text is about a strike affecting the \"trasporto ferroviario\" in the Lombardy region, mentioning places like Milano Cadorna and Malpensa, which confirms it’s regional. The instruction is to set \"isStrike\" to true for the announcement and provide strike data with specific dates. The start date is September 30, 2024, at 03:00 and the end date is October 1, 2024, at 02:00. I'll format those dates as per the requirement.",
+    "tokens": {
+      "input": 1638,
+      "output": 1662,
+      "total": 3300
+    }
+  }
+}

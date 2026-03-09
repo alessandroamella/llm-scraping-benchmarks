@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-05-20 00:00:00",
+      "endDate": "2022-05-20 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 32392,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006699,
+      "outputCost": 0.0011272,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0017971
+    },
+    "hash": "963ab37962a74349d86b98b87b78b582",
+    "sourceFile": "venerd_20_maggio_sciopero_24_ore_trasporto_pubblico_rischio.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to format the provided content into JSON. The user mentions a 24-hour strike on May 20, but notes the article is from 2022. The published date is March 9, 2026, which might complicate things. The details indicate this relates to a general strike, with public transport at risk due to syndicates' participation. I must clarify if this is a new strike announcement or a reference to the past event. Let's figure that out!",
+    "tokens": {
+      "input": 13398,
+      "output": 2818,
+      "total": 16216
+    }
+  }
+}

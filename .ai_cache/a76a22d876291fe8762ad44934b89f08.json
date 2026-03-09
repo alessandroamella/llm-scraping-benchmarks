@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-03-08 00:00:00",
+      "endDate": "2023-03-08 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 30363,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006742,
+      "outputCost": 0.0011716,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0018458
+    },
+    "hash": "a76a22d876291fe8762ad44934b89f08",
+    "sourceFile": "mercoled_8_marzo_sciopero_nazionale_cub_trasporto_pubblico_rischio_24_ore.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to determine if the document is about an upcoming strike. The content mentions a national strike by the Cub union on March 8, which is suggesting it’s relevant to 2023 since the title reflects that.\n\nHowever, I'm seeing a confusing “Published Time” indicating 2026. It’s unclear if that’s an error or part of a pre-processing note. I’ll have to clarify this discrepancy before proceeding with the output in the required JSON format.",
+    "tokens": {
+      "input": 13484,
+      "output": 2929,
+      "total": 16413
+    }
+  }
+}

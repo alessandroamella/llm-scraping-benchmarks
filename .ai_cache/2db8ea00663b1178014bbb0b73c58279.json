@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4569,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000305,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000345,
+      "cachedCost": 0,
+      "totalCost": 0.000665
+    },
+    "hash": "2db8ea00663b1178014bbb0b73c58279",
+    "sourceFile": "eav_informa_servizio_automobilistico_integrativo_vico_equense_monte_faito_3.html",
+    "thoughts": "**Analyzing the EAV Announcement**\n\nOkay, let's break this down. My task is to definitively determine if this EAV announcement signals a strike. The target here is EAV, specifically in Campania, referencing their line 15. The core condition is straightforward: isStrike = true or false. If it's *not* a strike, it's false; if it *is* a strike, I need to flag it as true and also extract the relevant strike data.\n\nI've got the content. The title, \"EAV Informa – Servizio automobilistico integrativo Vico Equense-Monte Faito,\" and the text itself are quite clear. It's about a substitute bus service, triggered by a cable car interruption on the Vico Equense-Monte Faito line. The immediate red flag: there's absolutely no mention of a strike, no hints of \"sciopero,\" \"agitazione sindacale,\" or anything remotely related to labor disputes. I've scanned for keywords and contextual clues - nothing.\n\nBased on this analysis, the conclusion is clear. This is not a strike announcement. Therefore, `isStrike` is definitely false. Case closed.\n\n\n",
+    "tokens": {
+      "input": 1220,
+      "output": 10,
+      "total": 1460
+    }
+  }
+}

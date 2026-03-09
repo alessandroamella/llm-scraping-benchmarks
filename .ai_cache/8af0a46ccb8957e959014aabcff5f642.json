@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-11-17 09:00:00",
+      "endDate": "2023-11-17 13:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "09:00-10:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 17567,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007495,
+      "outputCost": 0.0006428,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00071775
+    },
+    "hash": "8af0a46ccb8957e959014aabcff5f642",
+    "sourceFile": "strike-detail-sciopero-nazionale-17-novembre-ore-9-13-personale-.html",
+    "thoughts": "**Interpreting strike notification**\n\nI see there’s a strike announcement on Friday, November 17, from 9 AM to 1 PM. It seems Trenord staff aren’t involved, but infrastructure companies might adhere to it, potentially affecting Trenord's services. I should definitely set the strike status to true since this is an announcement about an upcoming strike, not a cancellation or real-time update. I need to prepare the start date in the 'yyyy-MM-dd HH:mm:ss' format.",
+    "tokens": {
+      "input": 1499,
+      "output": 1607,
+      "total": 3106
+    }
+  }
+}

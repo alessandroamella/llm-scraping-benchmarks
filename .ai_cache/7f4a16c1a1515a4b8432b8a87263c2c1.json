@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-09-22 00:00:00",
+      "endDate": "2025-09-22 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5345,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0003075,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.000738,
+      "cachedCost": 0,
+      "totalCost": 0.001242
+    },
+    "hash": "7f4a16c1a1515a4b8432b8a87263c2c1",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_generale_nazionale_lunedi_22_settembre_2025.html",
+    "thoughts": "**Strike Analysis: EAV Public Transport - September 22, 2025**\n\nOkay, let's break this down. We have an announcement, straight from EAV (Ente Autonomo Volturno), regarding a general national strike called by USB. The key is to get this coded correctly, especially the date/time specifics.\n\nFirstly, yes, it's definitely a strike. We're looking at a full-blown national event. The critical piece is the timing. It's a 23-hour strike for travel staff, and a 24-hour strike for other staff. Standard convention says that a 24-hour strike, beginning at midnight, should be defined as starting at 00:00:00 and ending at 23:59:59. This handles the '23 ore' for travel staff correctly too. So, the start date is September 22, 2025, 00:00:00, and the end date is September 22, 2025, 23:59:59. This has to be the most accurate rendering.\n\nSince this is a *general* national strike, it's affecting EAV, but it's not geographically limited. So, the location type is NATIONAL, not specifically Campania or any specific codes. This impacts how our system can handle the data.\n\nCrucially, the guaranteed service times are 05:30-08:30 and 16:30-19:30. These need to be accounted for.\n\nNow, we can assemble the structured data. I'm going to set `isStrike` to `true`. And then populate the `strikeData` object with the dates, the location type, and the guaranteed times. `locationCodes` is `null` because it's national.\n\nThe key fields are `startDate`, `endDate`, `locationType`, and `guaranteedTimes`. The boolean for `isStrike` is also essential. This structure is what we need to get to the correct result.\n\n\n",
+    "tokens": {
+      "input": 1230,
+      "output": 131,
+      "total": 1853
+    }
+  }
+}

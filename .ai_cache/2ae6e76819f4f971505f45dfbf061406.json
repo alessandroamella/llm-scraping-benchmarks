@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3740,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000369,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0003345,
+      "cachedCost": 0,
+      "totalCost": 0.0007185
+    },
+    "hash": "2ae6e76819f4f971505f45dfbf061406",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_279.html",
+    "thoughts": "**Analyzing Strike Information**\n\nOkay, so I've been given some HTML content. My primary objective here is to figure out if this text is announcing a *future* strike (in which case, `isStrike` should be `true`) or if it's just reporting on a strike that's *already* occurred (meaning `isStrike` should be `false`). Straightforward.\n\nLet's dive in. The title is \"Sciopero del trasporto pubblico, adesione personale Atac al 27,9%\" – \"Public transport strike, Atac staff adherence at 27.9%\".  The content itself states: \"L’adesione del personale Atac allo sciopero del trasporto pubblico di oggi è stata pari al 27,9%.\" – \"The participation of Atac staff in today's public transport strike was 27.9%.\"\n\nHmm. The crucial phrase here is \"di oggi\" and \"è stata\" - \"today\" and \"was\". The Italian grammar makes it very clear: this isn't about an upcoming strike. This text is *describing* participation in a strike that *already happened*. The use of the past tense (\"è stata\") coupled with \"today\" makes it definitive.\n\nAlright, so the instruction says: \"If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\" Based on my analysis, that's exactly what this text is doing. Therefore, my output should be:  `{ \"isStrike\": false }`. Case closed.\n\n\n",
+    "tokens": {
+      "input": 1476,
+      "output": 10,
+      "total": 1709
+    }
+  }
+}

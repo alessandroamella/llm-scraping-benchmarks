@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6231,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006652,
+      "outputCost": 0.0001808,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.000846
+    },
+    "hash": "1c6be487c660c26fffbcd9a15daecca7",
+    "sourceFile": "sciopero_trasporto_pubblico_chiuse_metro_c_attiva_b.html",
+    "thoughts": "**Setting strike status**\n\nI’m looking at the instructions regarding canceling or information about a strike. If it’s about a canceled or past strike, I should set isStrike to false. Since this content is from 2022, I’ll definitely set it to false. I need to make sure I’m interpreting this correctly, so my final output will just be the JSON object: {\"isStrike\": false}. I'll keep things straightforward and stick to the required format.",
+    "tokens": {
+      "input": 13304,
+      "output": 452,
+      "total": 13756
+    }
+  }
+}

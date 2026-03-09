@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7689,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007285,
+      "outputCost": 0.0001072,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00018005
+    },
+    "hash": "b02236ee3577de6b989412186f1cba31",
+    "sourceFile": "sciopero_trasporto_pubblico_ha_aderito_246_personale_atac.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to figure out if this document is announcing an upcoming strike. The title suggests a public transport strike where 24.6% of Atac staff participated. The content mentions that this participation occurred this morning, indicating it’s reporting on something that has already happened instead of announcing a new strike. Therefore, I conclude that \"isStrike\" should be false, and I’ll prepare the JSON response accordingly, including only the required field.",
+    "tokens": {
+      "input": 1457,
+      "output": 268,
+      "total": 1725
+    }
+  }
+}

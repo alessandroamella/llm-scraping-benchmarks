@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9531,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007535,
+      "outputCost": 0.000214,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00028935
+    },
+    "hash": "7c1886744fd1dca87d840c40cdde8fef",
+    "sourceFile": "sciopero_trasporto_pubblico_chiusa_metro_c.html",
+    "thoughts": "**Processing strike information**\n\nI need to output the data as JSON based on the strike extraction specifications. The title refers to a public transport strike, indicating that Metro C is closed. The content mentions that the national strike is ongoing and set to conclude at 12:30 PM, along with specific information about other metro lines and possible service reductions. Since the strike is currently happening, I’ll set the isStrike flag to false, as it's a real-time update.",
+    "tokens": {
+      "input": 1507,
+      "output": 535,
+      "total": 2042
+    }
+  }
+}

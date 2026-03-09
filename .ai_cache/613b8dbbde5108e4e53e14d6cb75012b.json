@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22052,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000881,
+      "outputCost": 0.0006608,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0007489
+    },
+    "hash": "613b8dbbde5108e4e53e14d6cb75012b",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_24_ore_del_13_dicembre_2024_aggiornamento.html",
+    "thoughts": "**Extracting strike data**\n\nI need to output JSON according to the strike_extraction schema to determine if this document announces a new upcoming strike. The article details a 24-hour strike on December 13, 2024, and indicates that it's an update following a decision by TAR Lazio. The phrase \"domani 13 dicembre\" confirms it’s about an upcoming strike relative to December 12, 2024, making isStrike true. Now I need to extract the start and end dates, but the exact hours aren't specified.",
+    "tokens": {
+      "input": 1762,
+      "output": 1652,
+      "total": 3414
+    }
+  }
+}

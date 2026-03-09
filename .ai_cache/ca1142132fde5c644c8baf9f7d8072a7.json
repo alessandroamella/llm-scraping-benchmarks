@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-12-07 09:00:00",
+      "endDate": "2023-12-07 13:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18431,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00066555,
+      "outputCost": 0.000598,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00126355
+    },
+    "hash": "ca1142132fde5c644c8baf9f7d8072a7",
+    "sourceFile": "gioved_sciopero_regionale_4_ore_trasporto_pubblico_rischio.html",
+    "thoughts": "**Extracting strike data**\n\nI’m analyzing this page, which appears to be announcing a strike scheduled for December 7, 2023. The content hints at a public transport strike lasting from 9:00 to 13:00. Since this is indeed an upcoming strike, I’ll mark the isStrike as true. I'll also extract relevant fields: startDate and endDate in the required format. It’s a regional strike, so the LocationType is REGIONAL and locationCodes should be [\"12\"] for Lazio, but I need to confirm if \"12\" corresponds to Lazio.",
+    "tokens": {
+      "input": 13311,
+      "output": 1495,
+      "total": 14806
+    }
+  }
+}

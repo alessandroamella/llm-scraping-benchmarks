@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8492,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000602,
+      "outputCost": 0.0001228,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.000183
+    },
+    "hash": "b874800e85c0870aa0445f4f79ff2f9e",
+    "sourceFile": "strike-detail-venerd--29-novembre-revocato-sciopero-ferrovienord.html",
+    "thoughts": "**Generating JSON for strike data**\n\nI need to create a JSON output indicating whether there's a strike based on the Italian content. The message says the strike scheduled for November 29 has been revoked, which means I need to set `isStrike` to false. The instruction is clear: no need for additional data since it's a cancellation. So, the correct output will simply be `{\"isStrike\": false}` without any extra text. I'll make sure to format it precisely as required!",
+    "tokens": {
+      "input": 1204,
+      "output": 307,
+      "total": 1511
+    }
+  }
+}

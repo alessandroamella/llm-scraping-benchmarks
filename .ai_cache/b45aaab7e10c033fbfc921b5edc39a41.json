@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5968,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00369925,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000342,
+      "cachedCost": 0,
+      "totalCost": 0.00405625
+    },
+    "hash": "b45aaab7e10c033fbfc921b5edc39a41",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_209.html",
+    "thoughts": "**Analyzing for an Upcoming Strike Announcement**\n\nOkay, let's break this down. My task is clear: I need to analyze this text to determine if it's announcing an *upcoming* strike. The output *must* be valid JSON and adhere to the provided schema with `isStrike` and `strikeData` fields. Crucially, I'm only setting `isStrike` to true if this is about an *upcoming* strike.\n\nThe input text is \"Sciopero del trasporto pubblico, adesione personale Atac al 20,9% - Roma Servizi per la Mobilità\" (published 29/03/2022).  Now, let's look at the critical part: \"L’adesione del personale Atac allo sciopero del trasporto pubblico, rilevata in mattinata, è stata pari al 20,9%\". Okay, that phrase \"rilevata in mattinata\" (measured in the morning) is the key.  This describes participation *during* an event.\n\nTherefore, because this describes participation in a strike that *has already happened*, I'm going to set `isStrike` to `false`. There's no indication here of a future event.\n\n\n",
+    "tokens": {
+      "input": 14797,
+      "output": 10,
+      "total": 15035
+    }
+  }
+}

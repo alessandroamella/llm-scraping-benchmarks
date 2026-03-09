@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-12-15 00:00:00",
+      "endDate": "2023-12-15 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6766,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0037195,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.0011235,
+      "cachedCost": 0,
+      "totalCost": 0.0050395
+    },
+    "hash": "f17c3dac20357c0a4b2a8d434cc3cf89",
+    "sourceFile": "trasporto_pubblico_sciopero_nazionale_differito_15_dicembre.html",
+    "thoughts": "**Strike Analysis: \"Trasporto pubblico, sciopero nazionale differito al 15 dicembre\"**\n\nOkay, let's break this down. My primary task is to determine if this text announces a *new or upcoming* strike. The input is a web page from Roma Servizi per la Mobilità, and the headline is promising. Let's see...\n\nThe title clearly states \"national transport strike deferred to December 15th.\" The text confirms it.  It was originally planned for November 27th, but has been *deferred* to December 15th.  Since it is the 25th of November, December 15th is, in fact, upcoming, making this a relevant announcement. Excellent.\n\nNow, let's structure this into the required JSON format. The strike is definitely happening, so `isStrike` is `true`.  Based on the publication date (25/11/2023) and the strike date (15/12/2023), that looks good.\n\nNow for the `strikeData`. I'll set the `startDate` to \"2023-12-15 00:00:00\" and the `endDate` to \"2023-12-15 23:59:59,\" assuming a full-day strike as is typical, and I need to note that assumption. The strike is \"national,\" so `locationType` will be \"NATIONAL,\" and therefore, `locationCodes` will be `null`. The text also tells me about guaranteed service times: \"Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" I will translate that to the correct format as `guaranteedTimes`: `[\"00:00-08:30\", \"17:00-20:00\"]`. The formatting of the dates and times checks out, as does the 24-hour format.\n\nTherefore:\n\n`isStrike`: `true`\n\n`strikeData`:\n `{ \"startDate\": \"2023-12-15 00:00:00\", \"endDate\": \"2023-12-15 23:59:59\", \"locationType\": \"NATIONAL\", \"locationCodes\": null, \"guaranteedTimes\": [\"00:00-08:30\", \"17:00-20:00\"] }`\n\nThat should be the structured output. Done.\n\n\n",
+    "tokens": {
+      "input": 14878,
+      "output": 131,
+      "total": 15758
+    }
+  }
+}

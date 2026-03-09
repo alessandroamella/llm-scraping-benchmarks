@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-07-18 09:00:00",
+      "endDate": "2024-07-18 13:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24916,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003912,
+      "outputCost": 0.0006152,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0010064
+    },
+    "hash": "67c1d88e1c8f354bc3528a9425900677",
+    "sourceFile": "strike-detail-gioved--18-luglio-dalle-9-alle-13-sciopero-del-per.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to produce JSON as per the specified schema for strike extraction, focusing on whether there’s an ongoing strike. The content is in Italian, discussing a strike by FERROVIENORD staff scheduled for Thursday, July 18, from 9 to 13. The phrase reveals that this is indeed an announcement of an upcoming strike, indicating that isStrike should be true. I’ll also note that this strike affects certain lines and may cause disruptions.",
+    "tokens": {
+      "input": 7824,
+      "output": 1538,
+      "total": 9362
+    }
+  }
+}

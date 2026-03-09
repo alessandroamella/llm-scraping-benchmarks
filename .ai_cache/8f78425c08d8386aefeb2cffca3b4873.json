@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 2517,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00020925,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0002025,
+      "cachedCost": 0,
+      "totalCost": 0.00042675
+    },
+    "hash": "8f78425c08d8386aefeb2cffca3b4873",
+    "sourceFile": "sciopero_nazionale_trasporto_chiuse_metro_bb1_linea_c_corso_lavori_prolungamento_colosseo.html",
+    "thoughts": "**Real-Time Transport Update: Analyzing Strike Information**\n\nOkay, so I've just processed some incoming data: \"Sciopero nazionale del trasporto, chiuse metro A e B/B1. Linea C: in corso lavori per prolungamento a Colosseo\". My first step is to distill the core information: a national transport strike is underway. It's explicitly a 24-hour event, which is the immediate crucial detail. This is definitely a real-time update on a developing situation.\n\nGiven that it's *ongoing*, and I'm receiving real-time updates, the internal logic dictates that I should set `isStrike` to `false`. The presence of real-time updates inherently suggests this is *not* a static, concluded event. I'm actively monitoring and reporting on it. I need to continually receive this kind of information to accurately reflect the state of the strike.\n\n\n",
+    "tokens": {
+      "input": 837,
+      "output": 10,
+      "total": 982
+    }
+  }
+}

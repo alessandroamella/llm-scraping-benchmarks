@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8292,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006724,
+      "outputCost": 0.0001644,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008368
+    },
+    "hash": "5124a012f58fe6197c428641c3407742",
+    "sourceFile": "sciopero_trasporto_pubblico_chiusa_metro_aperte_b_c_termini_centocelle.html",
+    "thoughts": "**Determining strike status**\n\nI need to output JSON according to the strike_extraction schema. The given content is about an ongoing strike: \"Sciopero del trasporto pubblico,\" with updates showing the situation of the transport network. Since it’s not a new or upcoming strike but rather ongoing service updates, I'll set \"isStrike\" to false. The instruction makes it clear that I shouldn't extract any upcoming strike data, so the final answer will just be {\"isStrike\": false}.",
+    "tokens": {
+      "input": 13448,
+      "output": 411,
+      "total": 13859
+    }
+  }
+}

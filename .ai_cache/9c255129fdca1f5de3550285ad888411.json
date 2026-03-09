@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9258,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00066475,
+      "outputCost": 0.00019,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00085475
+    },
+    "hash": "9c255129fdca1f5de3550285ad888411",
+    "sourceFile": "sciopero_trasporto_pubblico_attive_metropolitane_termini_centocelle.html",
+    "thoughts": "**Determining strike status**\n\nI need to output JSON using the specified schema for strike extraction. The document discusses an ongoing strike in public transport that started before 04/09/2025, and it clearly states, “È in corso lo sciopero,\" which means it's currently happening and will end at 12:30. The user’s instruction states I should only set isStrike to true for upcoming strikes. In this case, since it's ongoing, I'll set isStrike to false.",
+    "tokens": {
+      "input": 13295,
+      "output": 475,
+      "total": 13770
+    }
+  }
+}

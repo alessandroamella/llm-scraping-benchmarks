@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-09-06 03:00:00",
+      "endDate": "2023-09-07 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20636,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00037425,
+      "outputCost": 0.0005224,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00089665
+    },
+    "hash": "71eb0ece97e2663ae2f7da8b677936ef",
+    "sourceFile": "strike-detail-mercoled--6-settembre--sciopero-dei-treni-regional.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to format the output as JSON based on the required schema. I'm analyzing the document for an announcement about a new or upcoming strike. The content mentions \"6 settembre, sciopero dei treni regionali,\" indicating a strike on September 6, 2023. It indeed announces a strike set to occur from 3 AM on September 6 until 2 AM on September 7. Since the date is relative to today being September 4, it's confirmed as an upcoming strike.",
+    "tokens": {
+      "input": 7485,
+      "output": 1306,
+      "total": 8791
+    }
+  }
+}

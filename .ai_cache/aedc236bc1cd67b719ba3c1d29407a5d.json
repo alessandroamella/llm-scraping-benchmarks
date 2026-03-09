@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 2755,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000182,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.00018,
+      "cachedCost": 0,
+      "totalCost": 0.000377
+    },
+    "hash": "aedc236bc1cd67b719ba3c1d29407a5d",
+    "sourceFile": "sciopero_tpl_mattinata_adesione_personale_atac_233.html",
+    "thoughts": "**Analyzing the Strike Participation Report**\n\nOkay, so I'm looking at this snippet: \"Sciopero del Tpl, in mattinata adesione personale Atac al 23,3%.\" Right away, I see \"Sciopero del Tpl,\" meaning it's about a public transport strike. Then, \"adesione personale Atac al 23,3%\" gives me the percentage of participation among Atac staff. The context tells me this is about a strike that has already occurred, dated 06/05/2024.\n\nNow, I need to check the instruction: \"If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\" Hmm, all this is doing is reporting the *participation rate*. It's not *announcing* a strike, or asking if one *will* occur. So, my conclusion: this snippet is only providing information about an existing strike's participation. Following the instruction, I'll set the variable `isStrike` to `false`.\n\n\n",
+    "tokens": {
+      "input": 728,
+      "output": 10,
+      "total": 858
+    }
+  }
+}

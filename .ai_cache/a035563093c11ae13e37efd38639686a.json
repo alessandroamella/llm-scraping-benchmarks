@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-07-23 09:00:00",
+      "endDate": "2025-07-23 11:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 30322,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006345,
+      "outputCost": 0.000926,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00098945
+    },
+    "hash": "a035563093c11ae13e37efd38639686a",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_di_2_ore_mercoledi_23_luglio_2025.html",
+    "thoughts": "**Formatting strike notice**\n\nI need to create a JSON output with an \"isStrike\" boolean and potentially some strike data. The content is Italian and mentions that there will be a strike on \"mercoledì 23 luglio 2025\" from 09:00 to 11:00. So, I need to mark \"isStrike\" as true. I'll also ensure the date is in the 'yyyy-MM-dd HH:mm:ss' format for clarity, and the guaranteed times must follow the 'HH:mm-HH:mm' structure without seconds included. Let's get this formatted correctly!",
+    "tokens": {
+      "input": 1269,
+      "output": 2315,
+      "total": 3584
+    }
+  }
+}

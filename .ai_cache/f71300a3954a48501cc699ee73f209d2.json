@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7285,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005665,
+      "outputCost": 0.0001348,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00019145
+    },
+    "hash": "f71300a3954a48501cc699ee73f209d2",
+    "sourceFile": "sciopero_generale_nazionale_adesione_del_personale_atac_al_182.html",
+    "thoughts": "**Determining strike status**\n\nI'm analyzing the provided text to see if it announces an upcoming strike. The content indicates participation rates for a national general strike and specifies that this information is about an event that has already occurred. Since it mentions \"adesione\" (participation) and \"questa mattina\" (this morning), I conclude that it’s not an announcement for a future strike. Therefore, I'll set \"isStrike\" to false and format the output accordingly. \n\n{ \"isStrike\": false }",
+    "tokens": {
+      "input": 1133,
+      "output": 337,
+      "total": 1470
+    }
+  }
+}

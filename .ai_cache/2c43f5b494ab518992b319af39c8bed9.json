@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-16 03:00:00",
+      "endDate": "2025-06-17 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4815,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.001971,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.0006345,
+      "cachedCost": 0,
+      "totalCost": 0.0028155
+    },
+    "hash": "2c43f5b494ab518992b319af39c8bed9",
+    "sourceFile": "strike-detail-luned--16-giugno-sciopero-dei-treni-regionali.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, here's the breakdown of this task. I need to determine if the given text announces an upcoming strike for Trenord. The input is a news release about a strike on June 16, 2025. My primary goal is to return a parseable JSON object that follows a predefined schema. I need to make sure I don't include any extraneous comments or text in the output.\n\nThe text reads, \"Lunedì 16 giugno sciopero dei treni regionali\" and \"Dalle ore 3 di lunedì 16 alle ore 2 di martedì 17 giugno\". Based on this information, the location is Trenord, and the region code is \"03\" (which I know signifies Lombardia). The release also specifies guaranteed times: \"06:00-09:00\" and \"18:00-21:00\". So this is an official announcement.\n\nGiven all this, I'm confident that a strike is being announced. Now, I need to construct the JSON output: `isStrike` will be `true`. The `strikeData` object needs to contain the `startDate` which is \"2025-06-16 03:00:00\", the `endDate` which is \"2025-06-17 02:00:00\", `locationType` which is \"REGIONAL\", the `locationCodes` which will be an array containing \"03\". Finally, `guaranteedTimes` which is the array containing \"06:00-09:00\" and \"18:00-21:00\".\n\nI'll double-check the dates and make sure the format is 'yyyy-MM-dd HH:mm:ss'. The location code \"03\" correctly represents Lombardia. I'll verify the guaranteed times format is an array of strings like 'HH:mm-HH:mm'. With everything checked, the schema requirements are met.\n\n\n",
+    "tokens": {
+      "input": 7884,
+      "output": 140,
+      "total": 8447
+    }
+  }
+}

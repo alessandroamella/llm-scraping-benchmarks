@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3233,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000182,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000357,
+      "cachedCost": 0,
+      "totalCost": 0.000554
+    },
+    "hash": "316c17e80ada5523d34182ab7562590e",
+    "sourceFile": "sospeso_sciopero_atac_16_gennaio_servizio_sar_regolare.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, here's the deal. My primary task is clear: I need to determine if this input text indicates an upcoming strike. The input is a web page snippet, and the title translates to \"The Atac strike on January 16th has been suspended. Service will be regular\". My output must be a JSON object, and I need to adhere to the given schema: `isStrike` is either `true` or `false`, and if it's a strike (`true`), then I have to populate some `strikeData`.\n\nNow, let's break down the content. The snippet *explicitly* states that the \"Atac strike on January 16th has been suspended.\" Furthermore, it confirms that \"Monday, January 16, public transport [will be] regularly in service.\" The language here is very clear. It's a *cancellation* notice, not an announcement.\n\nTherefore, `isStrike` must be `false`. My final JSON output is then:\n\n```json\n{\"isStrike\": false}\n```\n\n\n",
+    "tokens": {
+      "input": 728,
+      "output": 10,
+      "total": 976
+    }
+  }
+}

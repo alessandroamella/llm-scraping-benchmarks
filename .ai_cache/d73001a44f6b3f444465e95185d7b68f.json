@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3220,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00035175,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0002115,
+      "cachedCost": 0,
+      "totalCost": 0.00057825
+    },
+    "hash": "d73001a44f6b3f444465e95185d7b68f",
+    "sourceFile": "sciopero_del_trasporto_pubblico_metro_aperte_chiusa_la_termini_centocelle.html",
+    "thoughts": "**Analyzing ATAC's Strike Information**\n\nOkay, so I've been given this HTML content pulled from the ATAC website. My immediate goal is to figure out if this is an announcement about an *upcoming* strike. That's the core question here. Let's see... I'll dive into the content and parse it.\n\nAlright, a quick scan reveals \"E’ in corso lo sciopero nazionale di 24 del trasporto pubblico.\" Hmm, \"in corso\" – that means \"in progress.\" Not a future event. Then there's \"Ecco la situazione sulla rete romana...\" which is definitely a status update, a real-time report. Combining the first snippet with the second, it's clear this is a live report on an *ongoing* strike, not a pre-emptive warning.\n\nSo, based on that analysis of the Italian text, I'm confident in my conclusion. The `isStrike` flag should be set to `false`. This isn't an announcement, it's a current-situation report.\n\n\n",
+    "tokens": {
+      "input": 1407,
+      "output": 10,
+      "total": 1558
+    }
+  }
+}

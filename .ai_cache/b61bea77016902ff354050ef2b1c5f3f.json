@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-03-21 00:00:00",
+      "endDate": "2025-03-21 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 28179,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000614,
+      "outputCost": 0.0010344,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0010958
+    },
+    "hash": "b61bea77016902ff354050ef2b1c5f3f",
+    "sourceFile": "venerdi_21_marzo_sciopero_nazionale_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Analyzing strike data extraction**\n\nThe instruction states to set `isStrike` to true only for upcoming strike announcements, and this definitely qualifies. So, `isStrike = true.` Next, I need to extract the `strikeData`. \n\nIt seems this is a national strike since the page mentions \"sciopero nazionale.\" Therefore, the `locationType` should be set to \"NATIONAL.\" The guidelines indicate that location codes should be null for national strikes, so I'll omit them or set them as null accordingly. This aligns with the schema requirements.",
+    "tokens": {
+      "input": 1228,
+      "output": 2586,
+      "total": 3814
+    }
+  }
+}

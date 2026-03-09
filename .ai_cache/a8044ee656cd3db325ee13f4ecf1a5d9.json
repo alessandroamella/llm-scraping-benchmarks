@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 09:00:00",
+      "endDate": "2024-12-13 13:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7129,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0037175,
+      "outputCost": 0.0001395,
+      "thinkingCost": 0.0008985,
+      "cachedCost": 0,
+      "totalCost": 0.0047555
+    },
+    "hash": "a8044ee656cd3db325ee13f4ecf1a5d9",
+    "sourceFile": "news_media_comunicati_sciopero_generale_13_dicembre.html",
+    "thoughts": "**Strike Analysis Summary**\n\nOkay, let's break this down. The task is to determine if the text describes a strike announcement and, if so, extract specific strike details in JSON format.\n\nFirst, I see the text explicitly states \"sciopero generale\" (general strike) on Friday, December 13th. That's a strong indicator. Further confirmation comes from \"trasporto pubblico a rischio per lo sciopero generale nazionale.\"  Yes, definitely a strike.\n\nNow, to format the data: `isStrike` is clearly `true`. The `startDate` is December 13, 2024, at 09:00. The `endDate` is the same day, at 13:00.\n\nRegarding `locationType`, while the text mentions a *national* general strike, it also specifically refers to Rome (\"A Roma la protesta coinvolgerà la rete Atac...\"). The prompt requests strike details regarding Rome, therefore for this specific context, the scope is regional. In the output, I'll set `locationType` to \"REGIONAL\" and `locationCodes` to [\"12\"] - which should be the Italian administrative code for Rome. I should note that the strike *is* national; however, since the scope asked for in the prompt relates to Rome, this is appropriate.\n\nFinally, `guaranteedTimes`. The text mentions a defined timeframe for the strike - from 09:00 to 13:00. While transport strikes in Italy usually have guaranteed service slots, the text doesn't *explicitly* list those. Since I don't have explicit information on guaranteed times, I will omit `guaranteedTimes` from the output. The fact that the strike itself is limited to 4 hours could be interpreted as a form of guarantee itself.\n\nHere's the JSON structure I'll generate:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-13 09:00:00\",\n    \"endDate\": \"2024-12-13 13:00:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"]\n  }\n}\n```\n\n\n",
+    "tokens": {
+      "input": 14870,
+      "output": 93,
+      "total": 15562
+    }
+  }
+}

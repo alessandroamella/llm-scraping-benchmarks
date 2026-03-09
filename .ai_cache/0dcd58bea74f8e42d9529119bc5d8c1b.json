@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-07-23 09:00:00",
+      "endDate": "2025-07-23 11:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 27777,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000808,
+      "outputCost": 0.000834,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0009148
+    },
+    "hash": "0dcd58bea74f8e42d9529119bc5d8c1b",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_2_ore_mercoledi_23_luglio_2025.html",
+    "thoughts": "**Extracting upcoming strike data**\n\nI need to follow the JSON schema for the strike extraction. The content I have is about a strike on July 23, 2025, announced on July 22, 2025. This means it's an upcoming strike. According to the instructions, since it’s an announcement of an upcoming strike, isStrike should be true. I also need to format the strike data with the start and end times as 24-hour timestamps: start time at 09:00 and end time at 11:00 on the same date.",
+    "tokens": {
+      "input": 1616,
+      "output": 2085,
+      "total": 3701
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-10 00:00:00",
+      "endDate": "2025-10-10 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7442,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000351,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.0008895,
+      "cachedCost": 0,
+      "totalCost": 0.0014505
+    },
+    "hash": "9e43c0b0931dd425ce93294a92c9a737",
+    "sourceFile": "venerdi_10_sciopero_del_trasporto_pubblico_rete_atac_a_rischio.html",
+    "thoughts": "**Processing the Rome Public Transport Strike Information**\n\nOkay, let's break this down. My input is a text about a public transport strike in Rome, specifically affecting the ATAC network. The text states \"Venerdì 10 ottobre trasporto pubblico a rischio per gli scioperi di 24 e 4 ore indetti dai sindacati Sul, Usb e Orsa.\" So, Friday, October 10th. I'll standardize the year to 2025, since that's the next upcoming Friday on that date.\n\nThe strike is for 24 hours and also a 4-hour event. The text says \"interesseranno la sola rete Atac,\" so the location is Rome/Lazio region, which I will encode as \"12\". The guaranteed times are \"regolare fino alle 8,30 e dalle 17 alle 20\". That means public transport will be regular until 8:30 AM and then from 5:00 PM to 8:00 PM.\n\nNow for formatting. I'll set:\n\n*   `startDate`: \"2025-10-10 00:00:00\". A 24-hour strike, I'll assume the strike is starting at the start of the day.\n*   `endDate`: \"2025-10-10 23:59:59\". A 24-hour strike implies it runs until the end of the day.\n*   `isStrike`: `true`. Obviously.\n*   `locationType`: \"REGIONAL\". Since the strike is specific to the ATAC network, covering the region.\n*   `locationCodes`: `[\"12\"]`. I will use the \"12\" code to denote the Lazio region.\n*   `guaranteedTimes`: `[\"00:00-08:30\", \"17:00-20:00\"]`. The text said \"fino alle 8,30\" (up to 8:30) and \"dalle 17 alle 20\" (from 17 to 20).\n\nSo, in summary:\n\n*   `startDate`: \"2025-10-10 00:00:00\"\n*   `endDate`: \"2025-10-10 23:59:59\"\n*   `locationType`: \"REGIONAL\"\n*   `locationCodes`: `[\"12\"]`\n*   `guaranteedTimes`: `[\"00:00-08:30\", \"17:00-20:00\"]`\n\nThis looks solid. The year 2025 is implicit and correct, given the lack of specific context within the input. I will need to verify if the strike is 24 or 4 hours, and adjust my dates accordingly. But, I am set.\n\n\n",
+    "tokens": {
+      "input": 1404,
+      "output": 140,
+      "total": 2137
+    }
+  }
+}

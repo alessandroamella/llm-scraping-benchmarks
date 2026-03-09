@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 17726,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007145,
+      "outputCost": 0.0006496,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00072105
+    },
+    "hash": "a9c47b13ebe854d1d5b1390c673b8531",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_di_24_ore_del_13_dicembre_2024_aggiornamento.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to determine if this document announces an upcoming strike. The content indicates a 24-hour strike on December 13, 2024. It mentions that the strike is an update and is confirmed due to a decision from TAR Lazio. There are guaranteed service times listed. I conclude that this document does announce a new strike and will fill the JSON with `isStrike` set to true. The start and end dates will be formatted accordingly.",
+    "tokens": {
+      "input": 1429,
+      "output": 1624,
+      "total": 3053
+    }
+  }
+}

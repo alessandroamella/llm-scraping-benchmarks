@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-01-14 08:30:00",
+      "endDate": "2022-01-14 12:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5478,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0002005,
+      "outputCost": 0.0001335,
+      "thinkingCost": 0.000825,
+      "cachedCost": 0,
+      "totalCost": 0.001159
+    },
+    "hash": "e4fc0bd077eedff9a5ee0dfe4c8f3d6e",
+    "sourceFile": "venerdi_14_gennaio_sciopero_nazionale_4_ore_trasporto_pubblico_rischio.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, here's the deal. My task is to take this text about a potential strike and boil it down into a clean JSON object based on the schema provided. It's a bit of a straightforward process, but let's make sure we get it right.\n\nFirst, I see the text mentions a \"4-hour national strike\" happening on Friday, January 14, 2022. The important part is that the text itself is an *announcement*, so I should assess it as one. The specific time mentioned is from 08:30 to 12:30. \"Sciopero nazionale\" is the key phrase that tells me this is a national strike.\n\nNow, let's start constructing the JSON. I'm going to set `isStrike` to `true` because it is an announcement of an *upcoming* strike. Even though it is past, the *document* is an announcement.\n\nNext, the `startDate` is \"2022-01-14 08:30:00\" and the `endDate` is \"2022-01-14 12:30:00\" – simple enough. Since the strike is national, `locationType` is definitely \"NATIONAL\", and `locationCodes` is `null` (because there aren't specific regional codes). There's no info regarding \"guaranteedTimes\", so I will omit this entry from my JSON. I'm not dealing with cancellations, participation details, or real-time updates here, it's just a simple strike announcement.\n\nThe JSON output will look something like this:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2022-01-14 08:30:00\",\n    \"endDate\": \"2022-01-14 12:30:00\",\n    \"locationType\": \"NATIONAL\",\n    \"locationCodes\": null\n  }\n}\n```\n\nThat should satisfy all the constraints.\n\n\n",
+    "tokens": {
+      "input": 802,
+      "output": 89,
+      "total": 1441
+    }
+  }
+}

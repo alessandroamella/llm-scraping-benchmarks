@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6233,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000567,
+      "outputCost": 0.0001832,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002399
+    },
+    "hash": "adac45bcc9569557143039d8c17473ee",
+    "sourceFile": "sciopero_nazionale_adesione_personale_atac_al_237.html",
+    "thoughts": "**Evaluating strike status**\n\nI’m determining that `isStrike` should be set to false based on the instruction that deals with strikes. It specifies that if the information is about a cancellation or a past event, `isStrike` should be false. I've confirmed that there’s no ongoing strike with the given text stating it’s about today’s participation. So, I’ll output just the required JSON with no extra details. The final answer should be:  \n\n{\"isStrike\": false}",
+    "tokens": {
+      "input": 1134,
+      "output": 458,
+      "total": 1592
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6578,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000731,
+      "outputCost": 0.0001612,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002343
+    },
+    "hash": "be770d11acfbae9aa345e44c2da0e893",
+    "sourceFile": "sciopero_tpl_mattinata_adesione_personale_atac_233.html",
+    "thoughts": "**Processing strike announcement**\n\nI need to output JSON following the strike_extraction schema. The content in Italian signals it's reporting on a participation rate for an existing strike, specifically mentioning a 23.3% participation of Atac staff. It's not about an upcoming strike but rather one that occurred in the morning. Based on the instruction, I’ll set isStrike to false. So, I’ll generate the JSON with isStrike as false. It’s important to be precise here!",
+    "tokens": {
+      "input": 1462,
+      "output": 403,
+      "total": 1865
+    }
+  }
+}

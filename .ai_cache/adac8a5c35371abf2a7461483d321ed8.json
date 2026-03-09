@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-01-24 00:00:00",
+      "endDate": "2024-01-24 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 31846,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000772,
+      "outputCost": 0.0010504,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0011276
+    },
+    "hash": "adac8a5c35371abf2a7461483d321ed8",
+    "sourceFile": "sciopero_nazionale_24_gennaio_trasporto_pubblico_rischio.html",
+    "thoughts": "**Determining strike announcement**\n\nI'm considering the JSON output according to the strike_extraction schema. The content in Italian indicates that there's an upcoming national strike on January 24, affecting public transport. It mentions the service will be Normal until 8:30 AM and again from 5 PM to 8 PM. Given this, isStrike should be true since it's an announcement. I need to note the dates and convert them to the 'yyyy-MM-dd HH:mm:ss' format for startDate and endDate.",
+    "tokens": {
+      "input": 1544,
+      "output": 2626,
+      "total": 4170
+    }
+  }
+}

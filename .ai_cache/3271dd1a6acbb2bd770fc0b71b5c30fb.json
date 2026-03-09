@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-11-08 00:00:00",
+      "endDate": "2024-11-08 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6267,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0003785,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.0010185,
+      "cachedCost": 0,
+      "totalCost": 0.0015935
+    },
+    "hash": "3271dd1a6acbb2bd770fc0b71b5c30fb",
+    "sourceFile": "venerdi_8_novembre_sciopero_nazionale_del_trasporto_pubblico_servizio_a_rischio_per_24_ore.html",
+    "thoughts": "**Analyzing the Public Transport Strike Announcement**\n\nOkay, so I've got this information about a national public transport strike. Right off the bat, it's a 24-hour strike on Friday, November 8th. I can assume the current year is the relevant one, so that's November 8th, 2024. The crucial detail here is that it's \"Sciopero nazionale,\" so I need to mark this as a national event. My immediate thought is to flag the strike by setting `isStrike: true`.\n\nI need to nail down the start and end times for this. Since it's a full 24-hour strike, I'll set the `startDate` to \"2024-11-08 00:00:00\" and the `endDate` to \"2024-11-08 23:59:59\". No need for specific location codes here, given it's national, so I'll set `locationType` to \"NATIONAL\" and `locationCodes` to null.\n\nNow, for the guaranteed service times. The text mentions \"dall'inizio del servizio diurno alle 8.30\" and \"17 alle 20\". I need to convert these into \"HH:mm-HH:mm\" format. Although \"dall'inizio del servizio diurno\" suggests the service usually starts earlier than midnight, I need to represent the slot according to the provided format and I'll use \"00:00-08:30\" and \"17:00-20:00\" respectively. I'll put these in an array `guaranteedTimes`: [\"00:00-08:30\", \"17:00-20:00\"].\n\nFinally, I'll quickly double-check: `isStrike: true`, `startDate`: \"2024-11-08 00:00:00\", `endDate`: \"2024-11-08 23:59:59\", `locationType`: \"NATIONAL\", `locationCodes`: null, and `guaranteedTimes`: [\"00:00-08:30\", \"17:00-20:00\"]. Looks like I've got everything covered. This should be ready to input into the system.\n\n\n",
+    "tokens": {
+      "input": 1514,
+      "output": 131,
+      "total": 2324
+    }
+  }
+}

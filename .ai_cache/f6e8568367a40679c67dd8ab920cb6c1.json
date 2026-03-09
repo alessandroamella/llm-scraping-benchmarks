@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 10886,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00066885,
+      "outputCost": 0.0002444,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00091325
+    },
+    "hash": "f6e8568367a40679c67dd8ab920cb6c1",
+    "sourceFile": "sciopero_trasporto_pubblico_aperte_metropolitane_bb1_c.html",
+    "thoughts": "**Analyzing strike status**\n\nI need to output JSON related to a public transport strike status. The title suggests a strike in Rome, with certain metro lines open. The critical section states there's a 24-hour strike underway, detailing the current situation with line statuses. Metro A has some closed stations, while Metro B/B1 and C are operating regularly. Given the information, it certainly indicates there is an ongoing strike at present. I'll structure the JSON accordingly, marking `isStrike` as true and including relevant `strikeData`.",
+    "tokens": {
+      "input": 13377,
+      "output": 611,
+      "total": 13988
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-12-15 00:00:00",
+      "endDate": "2023-12-15 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7515,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00371925,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.0012285,
+      "cachedCost": 0,
+      "totalCost": 0.00514425
+    },
+    "hash": "66b692ac224f04090262b48abbdcd71e",
+    "sourceFile": "venerd_sciopero_nazionale_trasporto_pubblico_servizio_rischio.html",
+    "thoughts": "**Strike Announcement Analysis and Data Extraction**\n\nOkay, let's break this down. My task is clear: I need to analyze this text, which appears to be a markdown-like representation of a webpage from \"Roma Servizi per la Mobilità,\" and determine if it announces a strike. If it does, I must extract the relevant data and return it in a specific JSON format, adhering to the provided schema. The output MUST be a JSON object (or array of objects if multiple strikes are present).\n\nFirst, I see the document title: \"Venerdì sciopero nazionale del trasporto pubblico. Servizio a rischio\". That's a strong indicator, with \"sciopero\" (strike) right there. The content excerpt confirms this: \"Venerdì 15 dicembre trasporto pubblico a rischio per lo sciopero nazionale\". It's a national strike (\"sciopero nazionale\") and the date is explicitly given as \"Venerdì 15 dicembre.\" Based on the metadata indicating a publication date in December 2023, that translates to December 15, 2023.\n\nThe text also provides the strike's duration: \"24 ore\" and indicates it involves the ATAC network in Rome, as per the context. Crucially, the text specifies guaranteed times (\"servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20\"), which is essential to include.\n\nNow, let's assemble the strike data based on the schema.\n\n*   `isStrike`: Definitely true.\n*   `strikeData`:\n    *   `startDate`: Based on the \"24 ore\" and the specific date, I'll set this as \"2023-12-15 00:00:00\" assuming it starts at midnight, though a more precise time might require additional context.\n    *   `endDate`: This will be \"2023-12-15 23:59:59\" to represent the full day.\n    *   `locationType`: It is a \"NATIONAL\" strike per the text.\n    *   `locationCodes`: Null, as the schema dictates for a national strike.\n    *   `guaranteedTimes`: The text gives two guaranteed time windows. So, `\"00:00-08:30\"` and `\"17:00-20:00\"`\n\nFinally, I need to confirm the output requirements: JSON format, using double quotes, and with a valid structure. Confirmed, and the output is:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2023-12-15 00:00:00\",\n    \"endDate\": \"2023-12-15 23:59:59\",\n    \"locationType\": \"NATIONAL\",\n    \"locationCodes\": null,\n    \"guaranteedTimes\": [\"00:00-08:30\", \"17:00-20:00\"]\n  }\n}\n```\n\nThis JSON object is complete and ready.\n\n\n",
+    "tokens": {
+      "input": 14877,
+      "output": 131,
+      "total": 15827
+    }
+  }
+}

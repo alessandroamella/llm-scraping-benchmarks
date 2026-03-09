@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-12-16 20:00:00",
+      "endDate": "2022-12-16 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "20:00-23:59"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 28640,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000592,
+      "outputCost": 0.0009236,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0009828
+    },
+    "hash": "02a2615c925e99b57f1875bda1620615",
+    "sourceFile": "venerd_16_dicembre_sciopero_generale_regionale_trasporto_pubblico_rischio_20_24.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI'm looking to output according to the strike_extraction schema. The document mentions a strike on Friday, December 16, with a status of \"1,\" indicating risk to public transport from 20:00 to 24:00 for a regional general strike organized by Filt Cgil and Uiltrasporti. This content clearly announces an upcoming strike rather than a cancellation or an ongoing situation. The strike is planned, and I’d classify it as true—indicating a confirmed event.",
+    "tokens": {
+      "input": 1184,
+      "output": 2309,
+      "total": 3493
+    }
+  }
+}

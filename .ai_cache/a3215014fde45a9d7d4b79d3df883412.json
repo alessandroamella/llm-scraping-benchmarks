@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4637,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000661,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.000555,
+      "cachedCost": 0,
+      "totalCost": 0.0014125
+    },
+    "hash": "a3215014fde45a9d7d4b79d3df883412",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_generale_nazionale_di_24_ore_di_venerdi_28_novembre_2025.html",
+    "thoughts": "**My Analysis of Strike Information**\n\nOkay, let's break this down. The core task is clear: I need to extract strike information from the provided text and structure it as JSON. I know this is straightforward, but it's important to be methodical.\n\nFirst, the input is an announcement of a 24-hour national general strike on November 28, 2025. The crucial element here is identifying an *upcoming* strike. The `isStrike` field will be `true` because of that announcement.\n\nNext, I have the details. The `startDate` is obviously 2025-11-28 00:00:00 and the `endDate` needs to reflect the 24-hour duration, so it is 2025-11-28 23:59:59 (although 2025-11-29 00:00:00 would also be valid). I'll use the former, as it's cleaner.\n\nThe text specifies a \"national general strike\", which means `locationType` should be `NATIONAL` and, consequently, `locationCodes` will be `null`. The strike is national, not confined to specific codes.\n\nNow, for the guaranteed service times. The provided text indicates service will be guaranteed between 05:30 and 08:30, and again from 16:30 to 19:30. These are the `guaranteedTimes` I'll need to capture as strings within an array.\n\nFinally, the page title provides context: \"Linee Flegree: Avviso di sciopero generale nazionale di 24 ore di venerdì 28 novembre 2025.\" This confirms the nature and the date of the strike, but the textual data is the most important. The main text itself confirms the details – the general announcement, the date, and the duration.\n\nIn essence, I will be pulling all of these components into a single JSON object.\n\n\n",
+    "tokens": {
+      "input": 2644,
+      "output": 131,
+      "total": 3145
+    }
+  }
+}

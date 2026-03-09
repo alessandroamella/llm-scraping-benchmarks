@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-10 08:30:00",
+      "endDate": "2025-01-10 12:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 16848,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000599,
+      "outputCost": 0.0005288,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0005887
+    },
+    "hash": "c22c82468c7e3f8ab4ca5cab1ab9c6be",
+    "sourceFile": "trasporto_pubblico_venerdi_10_gennaio_sciopero_nazionale_di_4_ore.html",
+    "thoughts": "**Extracting strike data**\n\nI need to output JSON according to the strike_extraction schema. This document is in Italian, stating there's an upcoming national strike affecting public transport for 4 hours on January 10, 2025, from 8:30 AM to 12:30 PM. Since it announces a future event as of January 5/7, I conclude that isStrike should be true. I must extract the strikeData, ensuring the startDate and endDate are formatted as 'yyyy-MM-dd HH:mm:ss'.",
+    "tokens": {
+      "input": 1198,
+      "output": 1322,
+      "total": 2520
+    }
+  }
+}

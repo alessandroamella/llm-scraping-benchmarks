@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7742,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006135,
+      "outputCost": 0.0001884,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00024975
+    },
+    "hash": "ff77ec61d4de7dd76f4a4b014bea1bd8",
+    "sourceFile": "sciopero_trasporto_pubblico_chiuse_metro_c_termini_centocelle_0.html",
+    "thoughts": "**Determining strike status**\n\nI need to output JSON based on the specified schema. The content indicates there’s a public transport strike happening now, which means it’s not an announcement for an upcoming strike. The details show that Metro C and Termini-Centocelle are closed, and it provides real-time updates about service status. Since it's an ongoing situation, \"isStrike\" should be set to false. My output will be: {\"isStrike\": false}.",
+    "tokens": {
+      "input": 1227,
+      "output": 471,
+      "total": 1698
+    }
+  }
+}

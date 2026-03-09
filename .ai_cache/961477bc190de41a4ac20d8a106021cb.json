@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:01:00",
+      "endDate": "2025-12-12 21:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19839,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000613,
+      "outputCost": 0.0005796,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0006409
+    },
+    "hash": "961477bc190de41a4ac20d8a106021cb",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-12-12-sciopero-nazionale-del-traspor.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to output JSON in the correct strike extraction format, including fields for isStrike and strikeData. The content is in Italian and confirms a nationwide rail transport strike titled \"SCIOPERO NAZIONALE DEL TRASPORTO FERROVIARIO.\" It mentions details such as service types, the cause being the strike, and the involved companies.\n\nThe text clearly states that the strike is scheduled from 00:01 to 21:00 on Friday, December 12, 2025. This means isStrike should be true. I’ll also extract startDate and endDate in the required format.",
+    "tokens": {
+      "input": 1226,
+      "output": 1449,
+      "total": 2675
+    }
+  }
+}

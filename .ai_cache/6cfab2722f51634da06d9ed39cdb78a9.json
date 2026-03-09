@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5242,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000591,
+      "outputCost": 0.0001068,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0001659
+    },
+    "hash": "6cfab2722f51634da06d9ed39cdb78a9",
+    "sourceFile": "sciopero_trasporto_pubblico_attive_metropolitane_termini_centocelle.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to output JSON based on whether the document announces a new or upcoming strike. The title suggests it's about an ongoing public transport strike, and the text confirms it's in progress, ending at 12:30. Since this is a real-time update, not an announcement, `isStrike` should be false. I just want to ensure the formatting is precise, without any extra text or spaces, leading to the final output: `{\"isStrike\": false}`.",
+    "tokens": {
+      "input": 1182,
+      "output": 267,
+      "total": 1449
+    }
+  }
+}

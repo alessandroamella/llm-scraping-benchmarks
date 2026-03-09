@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 21:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 27693,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003733,
+      "outputCost": 0.0004592,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008325
+    },
+    "hash": "27276ca7ecaee5e7405db641a32196a4",
+    "sourceFile": "strike-detail-venerd--12-dicembre-da-mezzanotte-alle-21-sciopero.html",
+    "thoughts": "**Extracting strike announcement details**\n\nI need to check if this document announces a new strike. The content mentions \"Friday, December 12, from midnight to 9 PM national strike,\" and there's a date at the bottom stating \"Thursday 11/12/2025.\" That indicates it's an official Trenord notice regarding a national strike set for December 12, with specified guaranteed times for train service. It mentions potential cancellations and variations, indicating it's indeed an announcement about an upcoming strike.",
+    "tokens": {
+      "input": 7466,
+      "output": 1148,
+      "total": 8614
+    }
+  }
+}

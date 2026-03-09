@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-09 00:00:00",
+      "endDate": "2025-12-09 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7429,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00374525,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.001047,
+      "cachedCost": 0,
+      "totalCost": 0.00500225
+    },
+    "hash": "da1605f8577d1d319da6a544cf9b6b07",
+    "sourceFile": "martedi_9_dicembre_sciopero_del_trasporto_pubblico_possibili_stop_per_24_ore.html",
+    "thoughts": "**Strike Detection and Data Extraction**\n\nOkay, let's break this down. The task is to determine if the provided text indicates a strike, and if so, to extract the relevant strike data in a specific JSON format. I see a couple of Italian phrases here. Let me parse these.\n\nFirst, I need to analyze the content: \"Martedì 9 dicembre sciopero del trasporto pubblico. Possibili stop per 24 ore\", \"Martedì 9 dicembre trasporto pubblico a rischio per lo sciopero di 24 ore indetto dal sindacato Sul.\" and \"Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" The key phrases here are \"sciopero\" (strike) and \"24 ore\" (24 hours). This strongly suggests a strike is indeed taking place. Therefore `isStrike` will be `true`.\n\nNow, onto the strike details. I can extract the date \"Martedì 9 dicembre\". The publication date, \"04/12/2025\" and update date \"04/12/2025\", will establish the strike year as 2025. Combining this with the Italian format, I'll calculate the start date as 2025-12-09 00:00:00 and the end date as 2025-12-09 23:59:59 based on the 24-hour duration.\n\nThe location is described as \"trasporto pubblico\" or public transport. I'll need to establish the region. Since \"Atac\" is mentioned, and from my knowledge, Atac is the public transport company for Rome, I can confidently identify the location as Rome in the Lazio region, which I will represent with a `locationType` of \"REGIONAL\" and a `locationCode` of \"12\".\n\nNow the guaranteed service times. The text states \"Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20\". This means that the service *will* be running from midnight to 08:30 (00:00-08:30) and from 17:00 to 20:00. These are the guaranteed periods.\n\nFinally, I need to construct the JSON output:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-12-09 00:00:00\",\n    \"endDate\": \"2025-12-09 23:59:59\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\n      \"12\"\n    ],\n    \"guaranteedTimes\": [\n      \"00:00-08:30\",\n      \"17:00-20:00\"\n    ]\n  }\n}\n```\n\nI'll validate this JSON for correct syntax and the format will be checked to be free of control characters. All the pieces seem to be in place.\n\n\n",
+    "tokens": {
+      "input": 14981,
+      "output": 140,
+      "total": 15819
+    }
+  }
+}

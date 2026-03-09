@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4224,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00369,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0002835,
+      "cachedCost": 0,
+      "totalCost": 0.0039885
+    },
+    "hash": "64c7769ef7d1d6e4843f27210f3f6081",
+    "sourceFile": "aggiornamento_sciopero_riaperta_stazione_ponte_lungo.html",
+    "thoughts": "**Analyzing Strike Information from the Provided Content**\n\nOkay, let's break this down. My primary goal here is to determine if the given content signals an *upcoming* strike. The content's title, \"Aggiornamento sciopero: riaperta stazione Ponte Lungo - Roma Servizi per la Mobilità,\" and the text itself, \"Sciopero del trasporto pubblico: riaperta stazione Ponte Lungo sulla metro A. L’aggiornamento in tempo reale della situazione si può consultare sui siti romamobilita.it e atac.roma.it,\" point towards a situation *related* to a strike, specifically a station reopening. The publication date of 07/12/2023 is also a factor, but not primary.\n\nCrucially, the criteria I'm using defines `isStrike` as true only for *announcements* of strikes. This content is clearly a real-time update—a status report indicating a station has *reopened*. It's a post-strike or during-strike update, not a heads-up about an *impending* work stoppage. I need to be precise, and this isn't an announcement. Therefore, my definitive determination is that `isStrike` is false.\n\n\n",
+    "tokens": {
+      "input": 14760,
+      "output": 10,
+      "total": 14959
+    }
+  }
+}

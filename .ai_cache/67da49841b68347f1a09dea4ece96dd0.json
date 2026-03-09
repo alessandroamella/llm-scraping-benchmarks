@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9575,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000575,
+      "outputCost": 0.0002028,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002603
+    },
+    "hash": "67da49841b68347f1a09dea4ece96dd0",
+    "sourceFile": "sciopero_tpl_mattinata_adesione_personale_atac_233.html",
+    "thoughts": "**Clarifying strike data**\n\nI need to make sure I understand the instructions correctly: I should set \"isStrike\" to true only if there’s an announcement of an upcoming strike. In this case, it’s about participation in a strike that has already happened, so \"isStrike\" is false. The content mentions \"adesione personale Atac al 23,3%\" which indicates it’s not a future strike announcement. The final output should simply be: {\"isStrike\": false}. I'll be careful with formatting and no extra commentary.",
+    "tokens": {
+      "input": 1150,
+      "output": 507,
+      "total": 1657
+    }
+  }
+}

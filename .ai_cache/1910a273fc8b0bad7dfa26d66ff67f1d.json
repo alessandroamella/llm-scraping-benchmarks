@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-11-17 09:00:00",
+      "endDate": "2023-11-17 13:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5977,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.002087,
+      "outputCost": 0.000147,
+      "thinkingCost": 0.000879,
+      "cachedCost": 0,
+      "totalCost": 0.003113
+    },
+    "hash": "1910a273fc8b0bad7dfa26d66ff67f1d",
+    "sourceFile": "strike-detail-sciopero-nazionale-17-novembre-ore-9-13-personale-.html",
+    "thoughts": "**Analyzing the Trenord Strike Notice**\n\nOkay, let's break this down. My input is a Trenord article concerning a strike on November 17, 2023. My goal is to determine if it's an announcement of an *upcoming* strike and extract the relevant details. The critical phrase is \"Sciopero Nazionale 17 novembre ore 9-13 personale Trenord non coinvolto,\" which translates to \"National strike Nov 17, 9-13, Trenord personnel not involved.\"\n\nInitially, I see this isn't a strike *by* Trenord personnel, which might seem like a point against classifying it as a strike announcement. However, the text clearly highlights that a strike affecting FERROVIORD and RFI, the infrastructure managers, *will* impact Trenord's service. The notice explicitly warns passengers about potential service disruptions.\n\nSo, the question becomes: does a notice about *external* events that *directly* impact service count as a strike announcement? The instructions seem to require it *be* a strike, but in this context, it's essentially a strike notice because Trenord is informing their customers about service interruptions. Based on the instructions: \"ONLY set isStrike to true if it is an announcement of an upcoming strike.\"\n\nRight, re-reading the instructions clarifies this. This document *is* a warning of disruptions due to a strike, even if it's not a strike *of* Trenord personnel. Therefore, it *is* a strike notice.\n\nNow, for the details. The date is November 17, 2023, the time is 09:00 to 13:00. The location is described as a \"National strike.\" Regarding \"guaranteed times,\" the notice mentions that trains departing before 9 am and arriving before 10 am will be guaranteed. It doesn't present any standard windows or time-specific guaranteed ranges (like 06:00-09:00). So, while they're assuring some trains, there are no specific guarantees as a commuter-time period, so I'll set *guaranteedTimes* to null.\n\nHere's my refined output:\n\n*   `isStrike`: true\n*   `startDate`: \"2023-11-17 09:00:00\"\n*   `endDate`: \"2023-11-17 13:00:00\"\n*   `locationType`: \"NATIONAL\"\n*   `locationCodes`: null\n*   `guaranteedTimes`: null\n\n\n",
+    "tokens": {
+      "input": 8348,
+      "output": 98,
+      "total": 9032
+    }
+  }
+}

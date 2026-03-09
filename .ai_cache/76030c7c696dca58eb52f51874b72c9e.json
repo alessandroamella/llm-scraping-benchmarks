@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4330,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00032475,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000282,
+      "cachedCost": 0,
+      "totalCost": 0.00062175
+    },
+    "hash": "76030c7c696dca58eb52f51874b72c9e",
+    "sourceFile": "sciopero_nazionale_adesione_personale_atac_al_237.html",
+    "thoughts": "**Analyzing the ATAC Strike Announcement**\n\nOkay, let's break this down. My initial input is an ATAC announcement. It's stating \"Sciopero nazionale, adesione personale Atac al 23,7%\" – a national strike with 23.7% staff participation. The key here is the use of \"adesione\" (participation). My goal is to determine if this is an announcement *about* an impending strike or if it's reporting on one that's already occurred.\n\nThe actual text clarifies: \"L’adesione complessiva del personale Atac allo sciopero nazionale di oggi, rilevata in mattinata, è stata del 23,7%.\" This is a report on *today's* participation, \"rilevata in mattinata\" (detected this morning). This usage of 'adesione' clearly indicates a retrospective report on employee participation in an *already-happened* strike. There's no implication of a *future* action.\n\nTherefore, given the context and framing, I'm setting `isStrike` to `false`. This is a post-event report. The announcement details the percentage of staff who took part in a completed strike, not a pre-emptive warning.\n\n\n",
+    "tokens": {
+      "input": 1299,
+      "output": 10,
+      "total": 1497
+    }
+  }
+}

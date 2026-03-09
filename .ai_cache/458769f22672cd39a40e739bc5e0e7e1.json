@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4477,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0003335,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000636,
+      "cachedCost": 0,
+      "totalCost": 0.0009845
+    },
+    "hash": "458769f22672cd39a40e739bc5e0e7e1",
+    "sourceFile": "venerdi_trasporto_pubblico_regolarmente_servizio_sciopero_nazionale_usb_rinviato_9_ottobre.html",
+    "thoughts": "**Analysis of ATAC Public Transport Announcement**\n\nOkay, let's break this down. This information comes directly from ATAC, the Rome public transport authority. The title itself, \"Friday public transport regularly in service. National USB strike postponed to October 9,\" immediately grabs my attention. The primary concern here, for the user base, is the service for this coming Friday.\n\nThe key takeaway is that the planned strike for this Friday, September 29th, is *cancelled*. The USB union has pushed it back to October 9th. The notice indicates the October 9th strike will last for 24 hours, but specifics on start and end times are absent. This is important: while they are mentioning a future strike, the *main* purpose of this document is to clarify that regular service will be running this Friday.\n\nFollowing the provided instruction - \"If it is a cancellation/revocation... set isStrike to false\" - I will tag this as `isStrike: false`. Although a strike *is* planned, this notice's primary function is to communicate the lack of a strike on the original date. We could *infer* a strike on October 9th, but I need more details to accurately categorize that as a full strike announcement. The document doesn't provide the complete start and end times I usually need for strike categorization.\n\n\n",
+    "tokens": {
+      "input": 1334,
+      "output": 10,
+      "total": 1768
+    }
+  }
+}

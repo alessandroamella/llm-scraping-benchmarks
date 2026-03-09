@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-07-18 09:00:00",
+      "endDate": "2024-07-18 13:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4306,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000354,
+      "outputCost": 0.0001605,
+      "thinkingCost": 0.0006405,
+      "cachedCost": 0,
+      "totalCost": 0.001155
+    },
+    "hash": "746728ca1118f119173143c01f688f57",
+    "sourceFile": "strike-detail-gioved--18-luglio-dalle-9-alle-13-sciopero-del-per.html",
+    "thoughts": "**Analyzing the FERROVIENORD Strike in Lombardia**\n\nOkay, let's break this down. My source is Trenord, specifically concerning the Lombardia region (code \"03\"). I've got information on a planned strike affecting FERROVIENORD infrastructure. The strike is scheduled for Thursday, July 18th, 2024, specifically from 9:00 AM to 1:00 PM. This is definitely an *upcoming* strike – not a cancellation notice or real-time update. Crucially, there are **no guaranteed service times** mentioned during this period. The text explicitly states that the strike \"non coinvolge le fasce di garanzia,\" indicating they are not applicable, or active during this specific action.\n\nEssentially, I've got a confirmed four-hour strike impacting regional train lines in Lombardia, and I need to flag this, as it will cause disruption during those times. The data confirms the start and end times, the regional scope, and the lack of guaranteed service, as expected. I will record the guaranteed times to be `null` in the system, as the information implies none are active or applicable. This is all clearly for the Ferroviord lines in Lombardia, as this announcement will clearly outline.\n\n\n",
+    "tokens": {
+      "input": 1416,
+      "output": 107,
+      "total": 1950
+    }
+  }
+}

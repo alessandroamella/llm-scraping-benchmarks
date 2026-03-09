@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 09:00:00",
+      "endDate": "2024-12-13 13:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5617,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00019825,
+      "outputCost": 0.0001335,
+      "thinkingCost": 0.0006435,
+      "cachedCost": 0,
+      "totalCost": 0.00097525
+    },
+    "hash": "c039bcfc508d0e6af1d7db8fee562872",
+    "sourceFile": "news_media_comunicati_sciopero_generale_13_dicembre.html",
+    "thoughts": "**Strike Analysis & Data Extraction**\n\nOkay, so I've got this public transport announcement – looks like it's from Roma Servizi per la Mobilità or ATAC – and it's announcing a strike. Right, let's break this down systematically. The key information is that there's a strike (\"sciopero\"). It's scheduled for \"Venerdì 13 dicembre,\" so Friday, December 13th, 2024. The date is easily inferred from the announcement's publication date: December 12th, 2024, given that the announced strike is the very next day.\n\nThe duration is stated as \"dalle 9 alle 13,\" meaning from 9:00 to 13:00 (1 PM). The crucial detail, however, is that it's a \"sciopero generale nazionale,\" a national general strike. While the announcement mentions Rome (\"A Roma la protesta coinvolgerà la rete Atac...\"), the \"national\" scope dictates that this affects the whole nation, not just Rome or Lazio.\n\nTherefore:\n\n*   `isStrike`: definitely true.\n*   `startDate`: 2024-12-13 09:00:00 (derived from the date and time).\n*   `endDate`: 2024-12-13 13:00:00 (also derived from the announced time).\n*   `locationType`: \"NATIONAL\" – this is the key differentiator from a local strike.\n*   `locationCodes`: Null – because it's national, we don't need a specific location code.\n*   `guaranteedTimes`: Not explicitly mentioned in the text, so I'm omitting that value.\n\nI've got a valid JSON structure now:\n\n```json\n{\n  \"isStrike\": true,\n  \"startDate\": \"2024-12-13 09:00:00\",\n  \"endDate\": \"2024-12-13 13:00:00\",\n  \"locationType\": \"NATIONAL\",\n  \"locationCodes\": null\n}\n```\n\n\n",
+    "tokens": {
+      "input": 793,
+      "output": 89,
+      "total": 1311
+    }
+  }
+}

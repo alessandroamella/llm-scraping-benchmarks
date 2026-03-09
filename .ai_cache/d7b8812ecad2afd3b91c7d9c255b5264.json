@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-11-29 00:00:00",
+      "endDate": "2024-11-29 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 27428,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007525,
+      "outputCost": 0.000866,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00094125
+    },
+    "hash": "d7b8812ecad2afd3b91c7d9c255b5264",
+    "sourceFile": "venerdi_29_novembre_sciopero_generale_nazionale_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Determining strike dates**\n\nThe content states that the strike is a 24-hour event on Friday, November 29. I'm thinking the start date would be at 00:00 on that day and end at 23:59:59 the same day. They require the date format 'yyyy-MM-dd HH:mm:ss' which includes seconds. However, the year is unknown. Should I just select a plausible year like 2024? Or is it okay to set the year to null? I'm not entirely sure!",
+    "tokens": {
+      "input": 1505,
+      "output": 2165,
+      "total": 3670
+    }
+  }
+}

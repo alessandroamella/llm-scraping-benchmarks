@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-04-28 08:30:00",
+      "endDate": "2022-04-28 12:30:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "08:30-12:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21182,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000756,
+      "outputCost": 0.000762,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008376
+    },
+    "hash": "fb02aabc4c8270df92602ad9f0473ba0",
+    "sourceFile": "sciopero_trasporto_pubblico_gioved_28_servizio_rischio_830_1230.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to confirm if we're looking at a strike announcement, based on provided Italian content. The information says there's a public transport strike on Thursday, April 28, from 8:30 to 12:30. It is indeed announcing a nationwide 4-hour strike. However, there's no year specified, which raises ambiguity; it could likely be from 2024, but I can't assume that. So, I need to format the date appropriately to 'yyyy-MM-dd HH:mm:ss'.",
+    "tokens": {
+      "input": 1512,
+      "output": 1905,
+      "total": 3417
+    }
+  }
+}

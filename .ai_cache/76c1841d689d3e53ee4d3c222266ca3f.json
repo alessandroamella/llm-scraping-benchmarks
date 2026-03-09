@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4560,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000181,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0004365,
+      "cachedCost": 0,
+      "totalCost": 0.0006325
+    },
+    "hash": "76c1841d689d3e53ee4d3c222266ca3f",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_361.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, here's the deal. My task is to figure out if this document is announcing a *future* strike. The input is a snippet from a web page, and my job is to produce a JSON object conforming to a specific schema. I need to remember that even though the instructions mention multiple JSON outputs, I should return a single JSON array, even though the schema calls for a single object. I'll adhere to the schema's format.\n\nI'm given these sentences: \"Sciopero del trasporto pubblico, adesione del personale Atac al 36,1%\" and \"L’adesione complessiva del personale Atac allo sciopero del trasporto pubblico, rilevata in mattinata, è stata pari al 36,1%\". Immediately, I see the phrase \"adesione\" which refers to participation, and the tense is past: \"è stata pari al\" (was equal to). This strongly suggests the strike already *happened*. The numbers, specifically \"36,1%\", are participation statistics, not predictions.\n\nTherefore, applying the rule: If the text is *only* reporting participation after the fact, I must set `isStrike` to `false`. So, I'll go ahead and set `isStrike`: false.\n\n\n",
+    "tokens": {
+      "input": 724,
+      "output": 10,
+      "total": 1025
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8659,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006696,
+      "outputCost": 0.0002076,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008772
+    },
+    "hash": "b5e8e804fbd619302d84025bb8f9f28e",
+    "sourceFile": "sciopero_trasporto_pubblico_chiusa_roma_lido_funzione_resto_della_rete.html",
+    "thoughts": "**Evaluating isStrike status**\n\nI’m looking at the instruction that says isStrike should only be set to true for announcements of upcoming strikes. Since the information references an ongoing strike from June 17, 2022, I realize it should be false. Therefore, I’ll output JSON following the schema given, which indicates no strike data needs to be included. The final output will simply be: {\"isStrike\": false}, ensuring I exclude any extra commentary.",
+    "tokens": {
+      "input": 13392,
+      "output": 519,
+      "total": 13911
+    }
+  }
+}

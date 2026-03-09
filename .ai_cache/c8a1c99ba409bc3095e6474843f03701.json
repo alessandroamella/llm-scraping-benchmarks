@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-20 00:00:00",
+      "endDate": "2025-06-20 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4953,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000242,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.0005385,
+      "cachedCost": 0,
+      "totalCost": 0.0009905
+    },
+    "hash": "c8a1c99ba409bc3095e6474843f03701",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_24h_giorno_venerdi_20_giugno_2025.html",
+    "thoughts": "**Analyzing the EAV srl Strike in Campania**\n\nOkay, so I've got this data from EAV srl regarding a strike that's going to hit Campania. Let me break it down. It looks like \"O.S. USB ha proclamato azione di sciopero per adesione a sciopero nazionale di 24 ore\". Translation: The USB union has declared a strike in support of a 24-hour national strike. That means we're dealing with a full day of potential disruption. Specifically, it's set for Friday, June 20th, 2025. Based on the 24-hour duration without a specified time range, I'm inferring the strike will run from midnight on the 20th to just before midnight on the same day – the standard for 24-hour events, unless otherwise stated.\n\nNow, the good news (sort of): we have guaranteed service windows. The critical times I need to account for are 05:30 to 08:30 and 16:30 to 19:30. These are the times when service should be running. This is important information to incorporate into any system that relies on transportation updates.\n\nThe location is definitively Campania, specifically EAV's network. And I've got the location code as \"15\", which is handy for quick referencing in my databases.\n\nFinally, I've got the structured data points: `isStrike: true`, indicating a strike is confirmed. The `strikeData` object provides the start and end dates formatted as \"2025-06-20 00:00:00\" and \"2025-06-20 23:59:59\" respectively, with a `locationType` of \"REGIONAL\", and location code as  [\"15\"], and the guaranteed times as [\"05:30-08:30\", \"16:30-19:30\"]. This gives me a clear and concise snapshot of the situation. I need to make sure this is properly flagged in the system and that real-time updates are reflected as the situation evolves.\n\n\n",
+    "tokens": {
+      "input": 968,
+      "output": 140,
+      "total": 1467
+    }
+  }
+}

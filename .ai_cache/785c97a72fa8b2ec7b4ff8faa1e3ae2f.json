@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-03 00:00:00",
+      "endDate": "2025-10-03 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21115,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000624,
+      "outputCost": 0.000598,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0006604
+    },
+    "hash": "785c97a72fa8b2ec7b4ff8faa1e3ae2f",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_generale_nazionale_di_24_ore_venerdi_03_ottobre_2025.html",
+    "thoughts": "**Extracting strike announcement data**\n\nI need to output JSON based on the strike_extraction schema. The document highlights that a national 24-hour strike is announced for October 3, 2025, proclaimed by CGIL and USB, linked to the Gaza war. It will affect both rail and road services. The guaranteed success times are specified. Since this is indeed an upcoming strike announcement, I'll set isStrike to true and include the necessary strike data, such as start and end dates, along with location and time information.",
+    "tokens": {
+      "input": 1248,
+      "output": 1495,
+      "total": 2743
+    }
+  }
+}

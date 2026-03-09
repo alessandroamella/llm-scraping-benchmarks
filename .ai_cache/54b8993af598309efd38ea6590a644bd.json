@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21625,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000628,
+      "outputCost": 0.0006264,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0006892
+    },
+    "hash": "54b8993af598309efd38ea6590a644bd",
+    "sourceFile": "linee_automobilistiche_avviso_di_sciopero_generale_di_24h_per_venerdi_12_dicembre_2025.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to format the information according to the strike extraction schema. The content indicates a general strike announcement for December 12, 2025, affecting EAV srl. The CGIL has proclaimed this 24-hour national strike. There are guaranteed service time slots listed, which typically continue during strikes. Given that this message pertains to a future date, I conclude that it is indeed a strike announcement and will mark isStrike as true.",
+    "tokens": {
+      "input": 1256,
+      "output": 1566,
+      "total": 2822
+    }
+  }
+}

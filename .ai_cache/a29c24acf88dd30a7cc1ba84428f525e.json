@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-09-16 08:30:00",
+      "endDate": "2022-09-16 16:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8391,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000204,
+      "outputCost": 0.0001335,
+      "thinkingCost": 0.000603,
+      "cachedCost": 0,
+      "totalCost": 0.0009405
+    },
+    "hash": "a29c24acf88dd30a7cc1ba84428f525e",
+    "sourceFile": "venerd_16_settembre_sciopero_nazionale_8_ore_trasporto_pubblico_romano_rischio.html",
+    "thoughts": "**Analyzing the Upcoming National Strike**\n\nOkay, let's break this down. My source indicates an 8-hour national strike scheduled for Friday, September 16th. Given the publication date, that would be September 16th, 2022. The text specifically mentions \"Trasporto pubblico romano\" (Roman public transport), so I need to factor in the potential impact on Atac/Roma Tpl services. The strike will last for 8 hours. Based on the timestamp information given, it runs from 08:30 to 16:30.\n\nNow, let's extract the key data points in a structured format. I'm going to set `isStrike` to `true` given that the article explicitly announces one. The `startDate` is clearly \"2022-09-16 08:30:00\" and the `endDate` is \"2022-09-16 16:30:00\". Since the scope is \"sciopero nazionale,\" the `locationType` is set to \"NATIONAL\", and, as this is a national strike, `locationCodes` is left as `null`.\n\nFinally, just to ensure that the data is clean, I'll confirm that the output is in JSON format, dates are in the correct `yyyy-MM-dd HH:mm:ss` string format, the `locationType` uses valid values (REGIONAL/NATIONAL), and the property types are consistent with what I would expect. All checks out, which is good.\n\n\n",
+    "tokens": {
+      "input": 816,
+      "output": 89,
+      "total": 1307
+    }
+  }
+}

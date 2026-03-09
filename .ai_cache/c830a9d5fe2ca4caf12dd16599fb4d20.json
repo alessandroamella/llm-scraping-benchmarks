@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 2696,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00032725,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0001875,
+      "cachedCost": 0,
+      "totalCost": 0.00052975
+    },
+    "hash": "c830a9d5fe2ca4caf12dd16599fb4d20",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_174.html",
+    "thoughts": "**Analyzing the ATAC Strike Announcement**\n\nOkay, so I'm looking at this announcement from ATAC. It's reporting on the participation rate, the *adesione*, of staff in a strike that *already occurred* – the use of the past tense \"è stata pari\" clearly indicates that. The instructions I have specify that if the content is solely about reporting post-strike participation, then the `isStrike` flag needs to be set to `false`. Looking at the title, \"Sciopero del trasporto pubblico, adesione personale Atac al 17,4%\" *unequivocally* confirms this is a post-event report on participation. No question about it. Therefore, based on the information and instructions provided, I need to set `isStrike` to `false`.\n\n\n",
+    "tokens": {
+      "input": 1309,
+      "output": 10,
+      "total": 1444
+    }
+  }
+}

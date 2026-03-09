@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4025,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00033975,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0003225,
+      "cachedCost": 0,
+      "totalCost": 0.00067725
+    },
+    "hash": "c634afdc101a50f59800b8a5e30cdc3c",
+    "sourceFile": "sciopero_del_trasporto_pubblico_aperte_le_metropolitane_e_la_termini_centocelle.html",
+    "thoughts": "**Analyzing the ATAC Strike Notification**\n\nOkay, so I've got an ATAC notification here, regarding transport in Rome. The title immediately tells me it's about a public transport strike, but surprisingly, the metro and Termini-Centocelle line are open – interesting. The body text confirms that the strike is already underway, presenting a real-time status update. Crucially, the text says \"È in corso lo sciopero\" – the strike *is ongoing*. This isn't a heads-up about a future strike; it's a report on the current situation. The system's instructions tell me to set `isStrike` to `false` when receiving real-time updates like this. So, considering the strike is happening, but parts of the system are operational at the moment, I'd say that `isStrike` should be `false`.\n\n\n",
+    "tokens": {
+      "input": 1359,
+      "output": 10,
+      "total": 1584
+    }
+  }
+}

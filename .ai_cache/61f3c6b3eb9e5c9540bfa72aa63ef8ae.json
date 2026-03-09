@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-01-08 09:01:00",
+      "endDate": "2026-01-08 17:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "07"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18304,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000589,
+      "outputCost": 0.0007676,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008265
+    },
+    "hash": "61f3c6b3eb9e5c9540bfa72aa63ef8ae",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2026-1-8-sciopero-del-personale-mobile-in.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to output JSON that indicates whether there’s a strike happening, with relevant strike data if it’s true. The text in Italian discusses a strike announcement for Trenitalia in Genova on January 8, 2026, from 9:01 AM to 5:00 PM. It clearly states, \"è stato indetto uno sciopero,\" confirming it’s indeed an upcoming strike. Therefore, I need to extract the strike data, including the start and end date in the format 'yyyy-MM-dd HH:mm:ss'.",
+    "tokens": {
+      "input": 1178,
+      "output": 1919,
+      "total": 3097
+    }
+  }
+}

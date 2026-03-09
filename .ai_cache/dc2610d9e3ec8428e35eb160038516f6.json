@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3638,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00375025,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000273,
+      "cachedCost": 0,
+      "totalCost": 0.00403825
+    },
+    "hash": "dc2610d9e3ec8428e35eb160038516f6",
+    "sourceFile": "sciopero_del_trasporto_pubblico_adesione_personale_atac_al_532.html",
+    "thoughts": "**Analyzing the Public Transport Strike Report**\n\nOkay, so I'm looking at this report about the Atac public transport strike in Rome. The title immediately gives it away: \"Public transport strike, Atac staff participation at 53.2% - Roma Servizi per la Mobilità.\" Right, so it's all about *how many* people participated, not about the *strike itself* being announced. The text explicitly says, \"The overall participation of Atac staff in the public transport strike, observed this morning, was 53.2%.\" \n\nThe focus is clearly on the *outcome* of a strike that's already underway or has concluded, not its initiation. Therefore, I need to set `isStrike` to `false` because the report is purely informative about participation *in* an existing strike event.\n\n\n",
+    "tokens": {
+      "input": 15001,
+      "output": 10,
+      "total": 15193
+    }
+  }
+}

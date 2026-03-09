@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6739,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0001182,
+      "outputCost": 0.0001328,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.000251
+    },
+    "hash": "f735cb726f7ae4c16c700bfa4a94d073",
+    "sourceFile": "sciopero_nazionale_trasporto_chiuse_metro_bb1_linea_c_corso_lavori_prolungamento_colosseo.html",
+    "thoughts": "**Analyzing strike status**\n\nI need to output a JSON format according to specifications. The document is in Italian and talks about a current national transport strike, indicating that metro A and B/B1 are closed. Line C is also mentioned with ongoing work for an extension to Colosseo. The text states that a 24-hour national transport strike is happening now, detailing the situation in Rome. Since it's reporting on an ongoing strike, \"isStrike\" should be false, not true.",
+    "tokens": {
+      "input": 2364,
+      "output": 332,
+      "total": 2696
+    }
+  }
+}

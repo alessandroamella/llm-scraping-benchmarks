@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7856,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005735,
+      "outputCost": 0.0001228,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00018015
+    },
+    "hash": "e3df4e8ebae1270d344db5dab0be6819",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_191.html",
+    "thoughts": "**Evaluating strike announcement data**\n\nI need to figure out if the document is announcing a new or upcoming strike. It's talking about a public transport strike with 19.1% participation from Atac personnel today. So, it’s reporting on today's participation, not a future strike. That means, according to the schema, isStrike should be false. The final JSON will be concise: {\"isStrike\": false}. There's no need for a strikeData field since it's a post-publication update about attendance.",
+    "tokens": {
+      "input": 1147,
+      "output": 307,
+      "total": 1454
+    }
+  }
+}

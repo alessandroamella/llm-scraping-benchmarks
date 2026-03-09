@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-01-09 21:00:00",
+      "endDate": "2026-01-10 21:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5014,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00019475,
+      "outputCost": 0.000147,
+      "thinkingCost": 0.0006435,
+      "cachedCost": 0,
+      "totalCost": 0.00098525
+    },
+    "hash": "1e4693fd4fc65480a5e680035e080e1b",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2026-1-9-sciopero-nazionale-del-trasporto.html",
+    "thoughts": "**Strike Announcement Analysis**\n\nOkay, let's break this down. My primary task is to confirm if this input constitutes a strike announcement and then structure the information according to a predefined JSON schema. The input string, \"SCIOPERO NAZIONALE DEL TRASPORTO FERROVIARIO\", immediately flags it as a potential strike – the Italian word \"sciopero\" is a dead giveaway.\n\nThe provided data clearly confirms this: dates are given as \"9-10 January 2026\", and the time frame is from 21:00 on January 9th to 21:00 on January 10th. The phrase \"NAZIONALE\" indicates a national scope. Therefore, *isStrike* is undeniably `true`.\n\nNow to the JSON structure. I need to extract the relevant details for the *strikeData* object.  I've got a title: \"SCIOPERO NAZIONALE DEL TRASPORTO FERROVIARIO\" (National railway transport strike). I must format those dates and times properly: `startDate` becomes \"2026-01-09 21:00:00\", and `endDate` becomes \"2026-01-10 21:00:00\". The scope, \"NAZIONALE\", translates directly to `locationType` of \"NATIONAL\". Since there are no specific location codes mentioned, `locationCodes` should be `null`. Finally, there's no mention of guaranteed service times, so `guaranteedTimes` will also be `null`.  That completes the extraction and structuring, forming a valid JSON payload.\n\n\n",
+    "tokens": {
+      "input": 779,
+      "output": 98,
+      "total": 1306
+    }
+  }
+}

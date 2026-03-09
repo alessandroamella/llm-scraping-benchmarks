@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6708,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006545,
+      "outputCost": 0.0001184,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00018385
+    },
+    "hash": "640e6795869150f116a71850a83afb0c",
+    "sourceFile": "sciopero_24_febbraio2025_stato_del_servizio.html",
+    "thoughts": "**Processing strike information**\n\nI need to output JSON according to the strike_extraction schema. The document is about an ongoing strike, specifically the Italian article about public transport. It mentions that the national public transport strike is currently underway, with real-time updates on services like Metro A and B operating with reductions, while Metro C is closed. Since this indicates it's not an upcoming strike, I’ll set isStrike to false. My output will be:  \n{ \"isStrike\": false }",
+    "tokens": {
+      "input": 1309,
+      "output": 296,
+      "total": 1605
+    }
+  }
+}

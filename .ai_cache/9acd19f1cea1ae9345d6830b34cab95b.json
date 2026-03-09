@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4004,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00018175,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0003165,
+      "cachedCost": 0,
+      "totalCost": 0.00051325
+    },
+    "hash": "9acd19f1cea1ae9345d6830b34cab95b",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_313.html",
+    "thoughts": "**Analyzing Strike Indicators**\n\nOkay, let's break this down. My primary task is to determine if the provided input indicates an *upcoming* strike. The text provided is \"Sciopero del trasporto pubblico, adesione personale Atac al 31,3% - Roma Servizi per la Mobilità\" which translates to \"Public transport strike, Atac staff adherence at 31.3% - Roma Servizi per la Mobilità.\"\n\nNow, the crucial clue is in the detailed content analysis: \"L’adesione complessiva del personale Atac allo sciopero del trasporto pubblico di oggi... è stata pari al 31,3 per cento.\" The phrase \"è stata\" (was/has been) is the key. It's past tense! This tells me the information concerns *participation* in a strike that already occurred, not a strike that's scheduled. My conclusion is that this is a report on adherence, and not a strike announcement.\n\nTherefore, because this input *reports* on a *past* event, and doesn't *announce* a future one, I set the `isStrike` flag to `false`.\n\n```json\n{\n  \"isStrike\": false\n}\n```\n\n\n",
+    "tokens": {
+      "input": 727,
+      "output": 10,
+      "total": 948
+    }
+  }
+}

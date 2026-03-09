@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4969,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0002,
+      "outputCost": 0.000009,
+      "thinkingCost": 0.0002625,
+      "cachedCost": 0,
+      "totalCost": 0.0004715
+    },
+    "hash": "148f3a2d2838affbccb9b735cca3c4f0",
+    "sourceFile": "sciopero_trasporto_pubblico_chiusa_metro_c_aperte_linee_bb1.html",
+    "thoughts": "**Analyzing Potential Strike Announcements**\n\nOkay, here's the deal. My primary task is to determine whether the provided input constitutes an announcement of an *upcoming* strike. I need to be discerning, as it's easy to get tripped up by ongoing strikes or even post-strike reporting. I'm focusing on future disruption, not current or past events.\n\nSo, taking the examples provided, I see phrases like \"Sciopero del trasporto pubblico, chiusa la metro C, aperte linee A e B/B1\" and \"È in corso lo sciopero...\" (\"It is currently ongoing\"). The first one *could* be a strike, but could also be a strike that has started. The second phrase, however, is a clear indicator of an *ongoing* strike. Given my strict rules, I need to reject both cases. My logic dictates that I need to return a JSON object.\n\nThe parameters are: `isStrike` (boolean), and, crucially, `strikeData` only if `isStrike` is true. The rules clarify that any situation that isn't a *pre-strike announcement* results in `isStrike: false`. Specifically: any cancellation or revocation (that's a clear no), reporting on participation after the fact (irrelevant to future disruption), and, critically, real-time updates of an *ongoing* strike. These examples seem to fall under that last category. Therefore, based on the information I have, I am unable to declare that there is an *upcoming* strike. I must return `isStrike: false`.\n\n\n",
+    "tokens": {
+      "input": 800,
+      "output": 6,
+      "total": 981
+    }
+  }
+}

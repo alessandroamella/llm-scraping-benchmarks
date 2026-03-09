@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3947,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000324,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000273,
+      "cachedCost": 0,
+      "totalCost": 0.000612
+    },
+    "hash": "e688898fad5b7807c5c2254fe6fc2282",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_112.html",
+    "thoughts": "**Analyzing the ATAC Strike Announcement**\n\nOkay, so I'm looking at this announcement about an ATAC strike. The title, \"Sciopero del trasporto pubblico, adesione personale Atac all’11,2%\", is pretty straightforward: it's about a public transport strike and ATAC staff participation. The key piece of information is the reported participation rate, 11.2%.\n\nNow, the body text confirms this is about *past* participation. It states, \"L’adesione complessiva del personale Atac allo sciopero del trasporto pubblico di questa mattina è stata pari all’11,2%\" – literally, it tells us that participation *was* 11.2% this morning. That's a crucial point. Based on the instructions, which state that \"isStrike\" should be false for past participation information, cancellation notices, or real-time updates, I have to classify this as *not* an active strike event to be monitored in real-time. It's a post-event report. The system should correctly flag `isStrike` as `false`.\n\n\n",
+    "tokens": {
+      "input": 1296,
+      "output": 10,
+      "total": 1488
+    }
+  }
+}

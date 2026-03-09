@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 09:00:00",
+      "endDate": "2024-12-13 13:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "09:00-13:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18597,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000829,
+      "outputCost": 0.0008432,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0009261
+    },
+    "hash": "495ae3eecc4ab1069569e77e5cf6146b",
+    "sourceFile": "news_media_comunicati_sciopero_generale_13_dicembre.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to output JSON based on the schema in strike_extraction. The content is in Italian, announcing a general strike on Friday, December 13, from 9 to 1 PM, following a ministerial ordinance. It also states that public transport will be at risk due to this national strike declared by the Usb union. The ordinance has limited the agitation to 4 hours. So, yes, this does indicate an upcoming strike.",
+    "tokens": {
+      "input": 1658,
+      "output": 2108,
+      "total": 3766
+    }
+  }
+}

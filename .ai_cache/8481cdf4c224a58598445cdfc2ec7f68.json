@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 09:00:00",
+      "endDate": "2024-12-13 13:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4392,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00032175,
+      "outputCost": 0.000147,
+      "thinkingCost": 0.0005835,
+      "cachedCost": 0,
+      "totalCost": 0.00105225
+    },
+    "hash": "8481cdf4c224a58598445cdfc2ec7f68",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_di_4_ore_del_13_dicembre_2024.html",
+    "thoughts": "**Strike Announcement Analysis**\n\nOkay, so I'm looking at a strike announcement from EAV, which is the public transport company in Campania (region 15). The core of it is an \"Avviso di sciopero di 4 ore del 13 dicembre 2024\" – a notice about a 4-hour strike on December 13th, 2024. The crucial detail here is that it's a *reduced* strike; originally planned as a full 24-hour national event, but an injunction brought it down to just four hours, from 09:00 to 13:00. This is the official announcement, so `isStrike` is definitely `true`.\n\nI've got the start and end times nailed down: `startDate` is 2024-12-13 09:00:00, and `endDate` is 2024-12-13 13:00:00. Now, for location. While the text refers to a \"sciopero generale nazionale\" – a *national* general strike – the source is EAV in Campania. However, the instructions say to use the regional code if applicable, but omit for national strikes. It's a general national strike, so, I will go with `locationType`: \"NATIONAL\". And since it's national, `locationCodes` should be `null` – that's according to the schema.\n\nThe last part is `guaranteedTimes`. The document doesn't explicitly state the usual \"guaranteed intervals\" like \"06:00-09:00\" in the usual format. The document simply reports specific departure times. Since it doesn't give me any *ranges* of guaranteed service, I'll set `guaranteedTimes` to `null`.\n\n\n",
+    "tokens": {
+      "input": 1287,
+      "output": 98,
+      "total": 1774
+    }
+  }
+}

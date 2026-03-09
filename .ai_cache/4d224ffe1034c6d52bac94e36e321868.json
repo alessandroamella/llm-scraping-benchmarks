@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8180,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000635,
+      "outputCost": 0.0001456,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002091
+    },
+    "hash": "4d224ffe1034c6d52bac94e36e321868",
+    "sourceFile": "sciopero_nazionale_trasporto_chiuse_metro_bb1_linea_c_corso_lavori_prolungamento_colosseo.html",
+    "thoughts": "**Analyzing transport strike status**\n\nI need to format the output according to the JSON strike extraction guidelines. The document is announcing a 24-hour transport strike that's currently happening, so it's valid I instead mark isStrike as false. The content states: \"Sciopero nazionale del trasporto,\" indicating the ongoing status and updates on various transport services. It mentions that Metro lines A, B/B1, and C are closed due to ongoing works, confirming it's not about an upcoming strike.",
+    "tokens": {
+      "input": 1270,
+      "output": 364,
+      "total": 1634
+    }
+  }
+}

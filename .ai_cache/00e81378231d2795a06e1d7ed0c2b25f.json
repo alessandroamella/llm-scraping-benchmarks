@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-12-07 09:00:00",
+      "endDate": "2023-12-07 13:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6795,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000354,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.0010305,
+      "cachedCost": 0,
+      "totalCost": 0.001533
+    },
+    "hash": "00e81378231d2795a06e1d7ed0c2b25f",
+    "sourceFile": "gioved_sciopero_regionale_4_ore_trasporto_pubblico_rischio.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, here's the breakdown of this ATAC HTML. My task is straightforward: identify if this is a strike announcement and then structure the information into a JSON object according to the specified schema.\n\nFirst, I see the headline: \"Giovedì sciopero regionale di 4 ore, trasporto pubblico a rischio\" – definitely screams \"strike\". The content confirms it: \"Thursday, December 7th, public transport at risk due to a 4-hour strike from 9 AM to 1 PM, regionally called by the Faisa Cisal union.\" \"A Roma l’agitazione interesserà la rete Atac e i bus periferici della Roma Tpl\" means that Rome, specifically the ATAC network and peripheral buses of Roma TPL, are affected.\n\nSo, *isStrike*: true. That's a no-brainer.\n\nNow, let's nail down the specifics for the JSON structure. The *startDate* is Thursday, December 7th, 9:00 AM. I'll represent that as \"2023-12-07 09:00:00\" assuming the current year (which aligns with the example given). Similarly, the *endDate* is \"2023-12-07 13:00:00\". No guaranteed service times are mentioned, so I will omit this from the JSON object as the schema permits. *locationType* is clearly \"REGIONAL\", and the relevant *locationCodes* will be [\"12\"] because Rome is in Lazio.\n\nTherefore, the final JSON output will be a single object containing the `isStrike` boolean, and a `strikeData` object with the dates, location type, and location codes. The format is valid JSON, no comments, and adheres to the required structure. Here's how it would look:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2023-12-07 09:00:00\",\n    \"endDate\": \"2023-12-07 13:00:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"]\n  }\n}\n```\n\n\n",
+    "tokens": {
+      "input": 1416,
+      "output": 99,
+      "total": 2202
+    }
+  }
+}

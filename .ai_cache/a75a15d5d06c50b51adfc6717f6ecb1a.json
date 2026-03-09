@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-05-02 08:30:00",
+      "endDate": "2023-05-02 12:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6442,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00019375,
+      "outputCost": 0.0001335,
+      "thinkingCost": 0.000882,
+      "cachedCost": 0,
+      "totalCost": 0.00120925
+    },
+    "hash": "a75a15d5d06c50b51adfc6717f6ecb1a",
+    "sourceFile": "martedi_2_maggio_sciopero_nazionale_4_ore_trasporto_pubblico_romano_rischio.html",
+    "thoughts": "**Strike Analysis & Data Extraction**\n\nOkay, let's break this down. My task is to analyze this text and determine if it's announcing a strike, and if so, to extract the relevant data and format it into a JSON object adhering to a predefined schema. The input is a brief text about a strike in Rome on May 2nd, the output has to be in strict JSON.\n\nFirst, I need to establish whether it *is* an announcement of an upcoming strike. The text says \"Martedi 2 maggio sciopero nazionale di 4 ore\" (Tuesday, May 2nd, 4-hour national strike), so that's a clear \"yes\".  The context confirms it's an announcement for an upcoming event, specifically May 2nd.\n\nNow for the data extraction. I'll need to populate the JSON object with the following fields: `isStrike`, `strikeData` (containing `startDate`, `endDate`, `locationType`, `locationCodes`, and `guaranteedTimes`).\n\n*   `isStrike`:  I've already confirmed it, so it's `true`.\n*   `strikeData`:\n    *   `startDate`:  The text says \"dalle 8,30 alle 12,30\" (from 08:30 to 12:30). So, `startDate` is \"2023-05-02 08:30:00\".\n    *   `endDate`: Similarly, the `endDate` is \"2023-05-02 12:30:00\".\n    *   `locationType`: The text specifies a \"national strike\" and the output schema allows for `REGIONAL` or `NATIONAL`. While the impact is on Rome's public transport, it is a national strike and the schema indicates national supersedes regional scope. So, `locationType` should be \"NATIONAL\".\n    *   `locationCodes`:  The location is mentioned in relation to Rome (Lazio, code \"12\"). However, the text says the `locationCodes` should be `null` if the `locationType` is `NATIONAL`. Okay, I'll set it to `null`.\n    *   `guaranteedTimes`: The text doesn't mention any guaranteed service times, so this field will be absent or explicitly set to `null` if the schema requires it.\n\nSo, the resulting JSON should be structured as follows and be completely valid:\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2023-05-02 08:30:00\",\n    \"endDate\": \"2023-05-02 12:30:00\",\n    \"locationType\": \"NATIONAL\",\n    \"locationCodes\": null,\n    \"guaranteedTimes\": null\n  }\n}\n```\n\n\n",
+    "tokens": {
+      "input": 775,
+      "output": 89,
+      "total": 1452
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3030,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00019875,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0001695,
+      "cachedCost": 0,
+      "totalCost": 0.00038325
+    },
+    "hash": "772ff293f5ff06ede59f239ede67a5da",
+    "sourceFile": "sciopero_trasporto_pubblico_aperte_metropolitane_situazione_sulla_rete_15.html",
+    "thoughts": "**Analyzing the Strike Information**\n\nOkay, so I'm looking at this text, and it's describing some kind of service disruption, specifically a strike (\"È in corso lo sciopero\"). That's the key. But, it's *providing real-time updates*, like, \"metro A-B/B1... service active with possible reductions,\" and \"metro C: regular.\" The instructions explicitly state that if real-time updates are being provided *about* an ongoing strike, then `isStrike` needs to be set to `false`. Since this is giving me those real-time updates about the service's *status* during the strike, even with reductions, I have to go with the logic. Therefore, even though there's a strike, `isStrike` must be set to `false`.\n\n\n",
+    "tokens": {
+      "input": 795,
+      "output": 10,
+      "total": 918
+    }
+  }
+}

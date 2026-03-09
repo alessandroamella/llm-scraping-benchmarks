@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-03 00:00:00",
+      "endDate": "2025-10-03 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4745,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000572,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.0005955,
+      "cachedCost": 0,
+      "totalCost": 0.001364
+    },
+    "hash": "1fd37b3d8f51e5ed17fdd14e694aca5c",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_generale_nazionale_di_24_ore_venerdi_03_ottobre_2025.html",
+    "thoughts": "**Strike Analysis: EAV, Campania - October 3, 2025**\n\nOkay, let's break this down. My task is clear: I need to determine if this document announces a strike, and if so, pull out the critical strike data specifically related to the EAV in the Campania region (code 15). The document's title, \"Avviso di sciopero generale nazionale di 24 ore venerdì 03 ottobre 2025,\" is the key. The title's clear: it's a strike (\"sciopero\"), it's national (\"generale nazionale\"), and it's for 24 hours on October 3rd, 2025. Bingo! Strike identified. `isStrike`: true.\n\nNow, let's extract the strike specifics. The date is October 3rd, 2025, a full 24-hour strike. That means `startDate` is \"2025-10-03 00:00:00\" and `endDate` is \"2025-10-03 23:59:59\". The strike is national, meaning `locationType` is \"NATIONAL,\" and because it's national, the `locationCodes` should be null, as per the schema requirements. Looking further, the guaranteed service times are \"05:30-08:30\" and \"16:30-19:30.\" So, `guaranteedTimes` becomes [\"05:30-08:30\", \"16:30-19:30\"].\n\nFinally, let me double-check the formatting. `startDate` and `endDate` are in the correct \"yyyy-MM-dd HH:mm:ss\" format. The `locationType` is indeed \"NATIONAL\". The `guaranteedTimes` are in the \"HH:mm-HH:mm\" format. All checks out. This data is ready to be processed.\n\n\n",
+    "tokens": {
+      "input": 2288,
+      "output": 131,
+      "total": 2816
+    }
+  }
+}

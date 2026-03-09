@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-09 00:00:00",
+      "endDate": "2025-12-09 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 27512,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00067075,
+      "outputCost": 0.0009148,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00158555
+    },
+    "hash": "3e10b5707bddbc7fc961a1ccc9970296",
+    "sourceFile": "martedi_9_dicembre_sciopero_del_trasporto_pubblico_possibili_stop_per_24_ore.html",
+    "thoughts": "**Analyzing strike data**\n\nI need to fill in the strikeData with key details like startDate, endDate, locationType, locationCodes, and guaranteedTimes. The page mentions a 24-hour strike affecting public transportation. Service will be regular until 8:30 AM and again from 5 PM to 8 PM. The specific date is Tuesday, December 9, 2025, and I must ensure the dates are formatted correctly as 'yyyy-MM-dd HH:mm:ss'. I’m questioning what exactly the guaranteed times mean in this context.",
+    "tokens": {
+      "input": 13415,
+      "output": 2287,
+      "total": 15702
+    }
+  }
+}

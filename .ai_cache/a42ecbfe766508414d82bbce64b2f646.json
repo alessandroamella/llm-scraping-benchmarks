@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-13 08:30:00",
+      "endDate": "2025-10-13 12:30:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "08:30-12:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19328,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000985,
+      "outputCost": 0.00056,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0006585
+    },
+    "hash": "a42ecbfe766508414d82bbce64b2f646",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_4_ore_del_13_ottobre_2025.html",
+    "thoughts": "**Determining strike details**\n\nI need to create a JSON output based on the provided schema. First, I’m figuring out if \"isStrike\" should be true or false. The content is clearly about a strike in Italy, titled \"Linee Vesuviane: Avviso di sciopero di 4 ore del 13 ottobre 2025 - EAV srl.\" It indicates a strike on October 13, 2025, from 08:30 to 12:30. Since this confirms that there is an upcoming strike, I’ll set \"isStrike\" to true and prepare to fill in the \"strikeData\" with the correct date format.",
+    "tokens": {
+      "input": 1970,
+      "output": 1400,
+      "total": 3370
+    }
+  }
+}

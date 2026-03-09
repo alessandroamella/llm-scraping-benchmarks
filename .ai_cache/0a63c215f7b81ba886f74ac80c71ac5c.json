@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7685,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005755,
+      "outputCost": 0.0001308,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00018835
+    },
+    "hash": "0a63c215f7b81ba886f74ac80c71ac5c",
+    "sourceFile": "sospeso_sciopero_atac_16_gennaio_servizio_sar_regolare.html",
+    "thoughts": "**Determining strike announcement status**\n\nI need to output JSON in the specific strike_extraction format. The document presents a message in Italian about the suspension of an upcoming strike on January 16, meaning it's stating that services will continue normally. It specifies the status and indicates that the previous strike was called off. Since the document isn't announcing a new or upcoming strike but rather states a cancellation, I should set isStrike to false. So, the output will be: {\"isStrike\": false}.",
+    "tokens": {
+      "input": 1151,
+      "output": 327,
+      "total": 1478
+    }
+  }
+}

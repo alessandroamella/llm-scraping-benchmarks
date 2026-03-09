@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-24 00:00:00",
+      "endDate": "2025-02-24 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5882,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0005445,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.0009165,
+      "cachedCost": 0,
+      "totalCost": 0.0016575
+    },
+    "hash": "0975806cf3c6241a15eb27da61e80c1e",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_24_h_lunedi_24_febbraio_2025.html",
+    "thoughts": "**My Analysis of the EAV Strike Announcement**\n\nOkay, let's break this down. My objective is to extract information about a transport strike from an EAV announcement – specifically, this one regarding a strike on February 24, 2025. My target format is JSON.\n\nFirst, I've confirmed it's indeed a strike. The text explicitly uses \"sciopero\" (strike) and details the duration: \"24 h.\" The date is clear: February 24, 2025. The announcement includes guaranteed service times: \"dalle ore 05:30 alle ore 8:30 e dalle ore 16:30 alle ore 19:30.\"\n\nNow, for the key details. The duration is 24 hours. The date is February 24, 2025. The guaranteed times are as stated above. The location is Campania, and since EAV is the regional transport provider, that’s my key.\n\nThe tricky part is \"locationType.\" The announcement mentions \"sciopero nazionale\" (national strike), but it's *EAV* that's announcing it. The schema wants either \"NATIONAL\" or \"REGIONAL\". If NATIONAL, `locationCodes` should be null. If REGIONAL, `locationCodes` would be \"15\" (Campania's region code as the user specifically mentioned). However, the text explicitly refers to a *national* strike. Based on past experience with these announcements, I'm leaning toward defining the `locationType` as \"NATIONAL\" and consequently keeping `locationCodes` as null. It's a national strike, but EAV is detailing the *impact* on their services. Therefore, I will define it as `locationType` \"NATIONAL\" and `locationCodes` to null.\n\nSo, I'm structuring my JSON output like this:\n\n*   `isStrike`: true\n*   `startDate`: 2025-02-24 00:00:00 (I’m assuming the strike starts at midnight and ends at the end of that day, unless there are explicit details to change this assumption)\n*   `endDate`: 2025-02-24 23:59:59\n*   `locationType`: \"NATIONAL\"\n*   `locationCodes`: null\n*   `guaranteedTimes`: [\"05:30-08:30\", \"16:30-19:30\"]\n\nThis should provide a clean and accurate representation of the strike information.\n\n\n",
+    "tokens": {
+      "input": 2178,
+      "output": 131,
+      "total": 2920
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-12-14 09:00:00",
+      "endDate": "2023-12-14 17:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "09:00-10:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 31051,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003685,
+      "outputCost": 0.000886,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0012545
+    },
+    "hash": "b1d0b005f5b37851b5f04c986376cbc1",
+    "sourceFile": "strike-detail-gioved--14-dicembre-dalle-ore-9-alle-ore-17-sciope.html",
+    "thoughts": "**Analyzing strike details**\n\nIt looks like there's a strike scheduled on Thursday, December 14, from 9 AM to 5 PM, which will impact regional train circulation and services in Lombardy. I need to record the start and end dates, mark the location type as REGIONAL, and include the location codes. There are mentions of guaranteed services, specifically morning trains leaving before 9 AM and arriving by 10 AM, but no specific guaranteed times for other services are provided.",
+    "tokens": {
+      "input": 7370,
+      "output": 2215,
+      "total": 9585
+    }
+  }
+}

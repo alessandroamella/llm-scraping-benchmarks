@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-04-28 08:30:00",
+      "endDate": "2022-04-28 12:30:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "08:30-12:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22635,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000602,
+      "outputCost": 0.0006132,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0006734
+    },
+    "hash": "8b03e738c90e09e53d1250138d5b99d5",
+    "sourceFile": "sciopero_trasporto_pubblico_gioved_28_servizio_rischio_830_1230.html",
+    "thoughts": "**Extracting strike details**\n\nI need to output JSON that indicates if there’s a strike, with a boolean for isStrike and possibly some strikeData. The context seems to refer to a public transport strike happening on Thursday, April 28, from 8:30 to 12:30. Since it's a planned strike, isStrike should be true. I must also extract strikeData like startDate, endDate, locationType, and possibly locationCodes. Given that this is a national strike, locationCodes could be omitted.",
+    "tokens": {
+      "input": 1204,
+      "output": 1533,
+      "total": 2737
+    }
+  }
+}

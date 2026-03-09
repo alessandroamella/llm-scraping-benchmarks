@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-06-17 08:30:00",
+      "endDate": "2022-06-17 12:30:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5220,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00376575,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.000654,
+      "cachedCost": 0,
+      "totalCost": 0.00456825
+    },
+    "hash": "9c6a90ae2915ff4b35d6072421e1edda",
+    "sourceFile": "venerd_17_giugno_sciopero_4_ore_rete_atac_rischio_830_1230.html",
+    "thoughts": "**Strike Analysis: Atac, June 17th, 2022**\n\nAlright, let's break this down. My objective is clear: to determine if this text announces an upcoming strike. The content directly references a strike – a four-hour event scheduled for \"venerdì 17 giugno,\" which I've confirmed is Friday, June 17th. The time window is specified as 08:30 to 12:30. The company in question is Atac, operating in Rome (and therefore the Lazio region, which has ISTAT code 12).\n\nBased on this information, the answer is unequivocally yes, this is a strike announcement. Now, I need to extract the relevant data:\n\n*   **StartDate**: \"2022-06-17 08:30:00\". The publication date of \"10/06/2022\" clearly nails down the year.\n*   **EndDate**: \"2022-06-17 12:30:00\".\n*   **LocationType**: While it's technically a city-level strike (Atac serving Rome), given the allowed choices of \"REGIONAL\" or \"NATIONAL,\" \"REGIONAL\" is the more appropriate classification because it's localized to Lazio.\n*   **LocationCodes**:  The ISTAT code for Lazio is \"12,\" so that's what I'll use.\n*   **GuaranteedTimes**: The text doesn't provide any information on guaranteed services. The strike *is* the defined time period, so I won't include that in the JSON.\n\nTherefore:\n*   `isStrike`: true\n*   `strikeData`:\n    *   `startDate`: \"2022-06-17 08:30:00\"\n    *   `endDate`: \"2022-06-17 12:30:00\"\n    *   `locationType`: \"REGIONAL\"\n    *   `locationCodes`: [\"12\"]\n\nThe final step is to ensure that this extracted data is formatted correctly as valid JSON, with no extraneous text or control characters.\n\n\n",
+    "tokens": {
+      "input": 15063,
+      "output": 99,
+      "total": 15598
+    }
+  }
+}

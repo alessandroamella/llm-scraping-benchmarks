@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-09-22 00:00:00",
+      "endDate": "2025-09-22 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21831,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008005,
+      "outputCost": 0.000902,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00098205
+    },
+    "hash": "ced523f4e8c8ed6e1218b114df2004aa",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_generale_nazionale_lunedi_22_settembre_2025.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to determine if the document is announcing an upcoming strike based on the content in Italian. It mentions a general national strike on September 22, 2025, called by OS USB. The motivations include a protest against war, and it provides guarantee times for service on that day. Since this is indeed an announcement of a strike and not just participation, I conclude that isStrike should be true. I will proceed to extract the required strike data.",
+    "tokens": {
+      "input": 1601,
+      "output": 2255,
+      "total": 3856
+    }
+  }
+}

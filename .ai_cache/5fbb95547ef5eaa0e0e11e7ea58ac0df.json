@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5104,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0002995,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.0007155,
+      "cachedCost": 0,
+      "totalCost": 0.0012115
+    },
+    "hash": "5fbb95547ef5eaa0e0e11e7ea58ac0df",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_24h_venerdi_28_novembre_2025.html",
+    "thoughts": "**Strike Analysis: EAV Campania (15)**\n\nOkay, let's break this down. My task is to determine if this document signals a new or impending strike. The company in question is EAV, specifically related to the Campania region (code 15). The input is \"Linea Metropolitana: Avviso di sciopero 24h venerdì 28 novembre 2025.\"\n\nAlright, so the document explicitly states \"Avviso di sciopero 24h,\" which definitively means this *is* an announcement. The date is clearly indicated as November 28th, 2025. Considering today is November 23rd, 2025, yes, it's definitely an *upcoming* event.\n\nThe strike's duration is 24 hours. From this, I can derive the `startDate` as 2025-11-28 00:00:00, covering the typical start of a full-day service, and the `endDate` as 2025-11-28 23:59:59 (or possibly 00:00:00 the next day).\n\nThe scope is described as \"sciopero generale nazionale,\" which tells me this is a *national* strike. Therefore, `locationType` will be \"NATIONAL\" and, logically, there will be no specific location codes (`locationCodes` is `null`).\n\nThe document also provides guaranteed service times, specifically \"05:30-08:30\" and \"16:30-19:30.\" These will be stored as the `guaranteedTimes` list, as [\"05:30-08:30\", \"16:30-19:30\"].\n\nIn conclusion, I can confidently set `isStrike` to `true`. This allows for a clear record of the strike's characteristics: `startDate`: \"2025-11-28 00:00:00\", `endDate`: \"2025-11-28 23:59:59\", `locationType`: \"NATIONAL\", `locationCodes`: null, and `guaranteedTimes`: [\"05:30-08:30\", \"16:30-19:30\"]. This information will be vital for future analysis and decision-making.\n\n\n",
+    "tokens": {
+      "input": 1198,
+      "output": 131,
+      "total": 1806
+    }
+  }
+}

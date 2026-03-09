@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-05-11 00:00:00",
+      "endDate": "2025-05-11 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5339,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00037875,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.000867,
+      "cachedCost": 0,
+      "totalCost": 0.00145575
+    },
+    "hash": "0016760f1281cfcaa2e6d89e1e768cb8",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_24h_domenica_11_maggio_2025.html",
+    "thoughts": "**Strike Data Analysis for EAV (Campania)**\n\nOkay, here's the breakdown. The objective is to extract and structure the strike information for EAV, which I've confirmed operates within Campania (region \"15\"). The input string, \"Linee Vesuviane: Avviso di Sciopero 24h domenica 11 maggio 2025,\" is the key.\n\nFirst, I identified this as a strike (\"isStrike\": true) based on the text \"Avviso di Sciopero\". It's a 24-hour strike set for Sunday, May 11, 2025. That gives me the basic strike parameters.\n\nFrom the text, I inferred a standard start and end time for the 24-hour duration, resulting in a `startDate` of \"2025-05-11 00:00:00\" and an `endDate` of \"2025-05-11 23:59:59\". These are formatted according to the agreed upon yyyy-MM-dd HH:mm:ss format.\n\nThe strike's scope is regional; hence the `locationType` is \"REGIONAL\". Campania is represented by location code \"15,\" so I assigned that to `locationCodes`.\n\nThe input also explicitly mentions guaranteed service times: 05:30-08:30 and 16:30-19:30. These were placed directly into the `guaranteedTimes` array in the \"HH:mm-HH:mm\" format.\n\nFinally, I've constructed a clean JSON payload. I'm verifying that the date and time values are correctly interpreted, and the `locationCodes` is also accurate. The final JSON object should look exactly like this:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-05-11 00:00:00\",\n    \"endDate\": \"2025-05-11 23:59:59\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"15\"],\n    \"guaranteedTimes\": [\"05:30-08:30\", \"16:30-19:30\"]\n  }\n}\n```\n\n\n",
+    "tokens": {
+      "input": 1515,
+      "output": 140,
+      "total": 2233
+    }
+  }
+}

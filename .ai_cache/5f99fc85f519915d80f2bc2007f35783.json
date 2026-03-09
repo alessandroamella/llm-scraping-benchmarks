@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6717,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000566,
+      "outputCost": 0.0001356,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0001922
+    },
+    "hash": "5f99fc85f519915d80f2bc2007f35783",
+    "sourceFile": "sciopero_generale_adesione_personale_atac_al_259.html",
+    "thoughts": "**Outputting JSON correctly**\n\nI’m noticing that this data isn’t about current participation; it’s specifically about a strike that occurred earlier. So, my conclusion is that `isStrike` should be false. I’ll remember to format the output in strict JSON as required: `{\"isStrike\": false}`. It’s essential to avoid any additional text or unnecessary whitespace to keep it clean and professional. Alright, I’m ready to proceed with this!",
+    "tokens": {
+      "input": 1132,
+      "output": 339,
+      "total": 1471
+    }
+  }
+}

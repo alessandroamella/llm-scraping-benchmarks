@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-24 00:00:00",
+      "endDate": "2025-02-24 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7215,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0002115,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.0009735,
+      "cachedCost": 0,
+      "totalCost": 0.0013815
+    },
+    "hash": "b0dac29aa5d0eb138efe3e07922ad8a4",
+    "sourceFile": "lunedi_24_febbraio_sciopero_nazionale_del_trasporto_pubblico_possibili_disagi.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, let's break this down. My task is clear: determine if this text announces a strike and, if so, format the information into a JSON object adhering to a strict schema. The input is short, mentioning a \"Lunedì 24 febbraio\" strike for public transport. Given the provided schema, this seems straightforward, but I need to be precise.\n\nFirst, I note the provided date of publication is 18/02/2025. This means the strike date is the specified date, 24/02/2025. The text clearly indicates a strike, so `isStrike` will be `true`. The page title confirms this – \"Lunedì 24 febbraio sciopero nazionale del trasporto pubblico. Possibili disagi\". The strike is stated to be \"24 ore\" long. Also it is \"nazionale\" or national, so `locationType` should be \"NATIONAL\".\n\nNow, for the details. \"24 febbraio\" translates to the strike date, which, given the publication date, is 2025-02-24. Since it's a 24-hour strike, the `startDate` is 2025-02-24 00:00:00 and the `endDate` is 2025-02-24 23:59:59. `locationCodes` will be `null` because the strike is \"nazionale.\"\n\nThe text mentions \"fino alle 8,30\" and \"dalle 17 alle 20\", which translates to the guaranteed service windows. I need to format this correctly for `guaranteedTimes`, so I'll render that as [\"00:00-08:30\", \"17:00-20:00\"].\n\nFinally, even though the strike is national, the prompt mentions the service in Rome \"ATAC\". I need to keep that in mind. The `locationType` should be \"NATIONAL\".\n\nOkay, with all that in mind, I'm ready to craft the JSON output.\n\n\n",
+    "tokens": {
+      "input": 846,
+      "output": 131,
+      "total": 1626
+    }
+  }
+}

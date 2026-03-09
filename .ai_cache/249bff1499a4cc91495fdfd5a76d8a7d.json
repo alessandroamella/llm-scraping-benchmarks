@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-10-20 00:00:00",
+      "endDate": "2023-10-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 31105,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00066915,
+      "outputCost": 0.0009012,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00157035
+    },
+    "hash": "249bff1499a4cc91495fdfd5a76d8a7d",
+    "sourceFile": "venerd_20_ottobre_sciopero_generale_nazionale_trasporto_pubblico_rischio.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to output JSON based on the provided schema. The content is in Italian and clearly announces an upcoming strike on Friday, October 20. It states that public transport in Rome might be affected due to a general 24-hour strike. The text mentions specific timing—regular service will run until 8:30 AM, then again from 5 PM to 8 PM. So, it seems that we should recognize this as a strike announcement and format accordingly.",
+    "tokens": {
+      "input": 13383,
+      "output": 2253,
+      "total": 15636
+    }
+  }
+}

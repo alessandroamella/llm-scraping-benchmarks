@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3448,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00034425,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.00024,
+      "cachedCost": 0,
+      "totalCost": 0.00059925
+    },
+    "hash": "2dc411e15b8398e5bc7f1d6dc6ba7fcd",
+    "sourceFile": "sciopero_generale_aperte_metro_a_e_b_la_situazione_sulla_rete_romana.html",
+    "thoughts": "**Analyzing the ATAC Strike Update**\n\nOkay, so I'm looking at this update from ATAC regarding the Rome public transport situation. The source clearly states, \"È in corso lo sciopero generale nazionale...\" – the general national strike is *in progress*. This isn't a heads-up about a future strike, it's a real-time report on a strike that's happening *right now*. The instructions I've been given are pretty straightforward: if it's a real-time update on an *ongoing* strike, `isStrike` needs to be set to `false`. That makes perfect sense; the system probably uses `isStrike: true` for announcements about *upcoming* strike events.\n\nTherefore, my verdict is that `isStrike: false`. I need to ensure this is returned as a valid JSON object, adhering to the prompt's requirements of no extraneous comments or additional text. So, the output is as simple as it needs to be.\n\n\n",
+    "tokens": {
+      "input": 1377,
+      "output": 10,
+      "total": 1547
+    }
+  }
+}

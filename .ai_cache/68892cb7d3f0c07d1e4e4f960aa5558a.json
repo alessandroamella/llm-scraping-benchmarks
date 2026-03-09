@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-03-29 00:00:00",
+      "endDate": "2026-03-29 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6656,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0037555,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.000879,
+      "cachedCost": 0,
+      "totalCost": 0.0048445
+    },
+    "hash": "68892cb7d3f0c07d1e4e4f960aa5558a",
+    "sourceFile": "martedi_29_marzo_sciopera_24_ore_trasporto_pubblico_servizio_rischio.html",
+    "thoughts": "**Strike Announcement Analysis**\n\nOkay, let's break this down. My task is to determine if this text constitutes an announcement of a strike. I've got the text from \"Roma Servizi per la Mobilità,\" so it's likely related to public transport in the Rome area. First, I pulled out the key data points. The title itself gives it away: \"Martedì 29 marzo sciopera 24 ore il trasporto pubblico...\" - it screams strike.\n\nThe text confirms it: \"Martedì 29 marzo trasporto pubblico a rischio per lo sciopero di 24 ore indetto tra i lavoratori dell’Atac...\" Okay, confirmed. I need to nail down the specifics, though, for any kind of proper analysis.\n\nNow, the publication date threw me for a loop initially – 2022. But the instructions specifically say to treat this as an input for *today's date*, so, the prompt says the publication date is in the future. \"Published Time: Mon, 09 Mar 2026 09:26:42 GMT\" so, the strike date is March 29th, 2026. The duration is 24 hours. The location is Rome – ATAC confirms that.\n\nThe guaranteed service times are interesting. It says \"regolare fino alle 8,30\" which means service *is* running *until* 8:30 in the morning and \"dalle 17 alle 20\" means it's running between 5 pm and 8 pm. Generally, for a 24-hour strike, I would assume it's guaranteed from the start of the day until 8:30, then 5 pm to 8 pm again.\n\nSo, *isStrike* is definitely true. I've got all the data I need to structure a `strikeData` object:\n\n*   `startDate`: 2026-03-29 00:00:00 - standard start time for a 24-hour strike.\n*   `endDate`: 2026-03-29 23:59:59 - pretty straightforward.\n*   `locationType`: REGIONAL - since ATAC covers Rome and Lazio.\n*   `locationCodes`: I'll assign the region code of Lazio, here, for now: [\"12\"].\n*   `guaranteedTimes`: I can infer from the text that the guaranteed service will run from 00:00 to 08:30 and from 17:00 to 20:00.\n\nYep, that's everything. This is a solid strike announcement.\n\n\n",
+    "tokens": {
+      "input": 15022,
+      "output": 140,
+      "total": 15748
+    }
+  }
+}

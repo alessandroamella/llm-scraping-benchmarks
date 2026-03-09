@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-09T02:03:55.034Z",
+  "timestamp": "2026-03-09T19:12:04.050Z",
   "isCacheHit": false,
   "request": {
     "sourceName": "ATAC",
@@ -7,7 +7,7 @@
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "dom-distillation",
     "useLenientSchema": true,
-    "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a strike from \"ATAC\".\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), 2-letter for provinces (e.g., \"MI\" for Milan), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGION\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"> <h3>Context Metadata</h3> <ul><li>Page Title: Martedì 9 dicembre sciopero del trasporto pubblico. Possibili stop per 24 ore - Roma Servizi per la Mobilità</li></ul> </div><hr/><div> <div> <div> <div> <div> <div> </div> </div> </div> <div> <div> <div> <div> <h1>Martedì 9 dicembre sciopero del trasporto pubblico. Possibili stop per 24 ore</h1> </div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div><p>Pubblicato il: 04/12/2025 - Aggiornato il: 04/12/2025</p></div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div> <span> </span> </div> </div> </div> <div> <div> <div></div> </div> </div> <div> <div> <p>Martedì 9 dicembre trasporto pubblico a rischio per lo sciopero di 24 ore indetto dal sindacato Sul. L’agitazione interesserà la sola rete Atac. Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.</p> </div> </div> </div> </div> </div> </div>"
+    "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"ATAC\" (the public transport company of Rome, Lazio (12)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"> <h3>Context Metadata</h3> <ul><li>Page Title: Martedì 9 dicembre sciopero del trasporto pubblico. Possibili stop per 24 ore - Roma Servizi per la Mobilità</li></ul> </div><hr/><div> <div> <div> <div> <div> <div> </div> </div> </div> <div> <div> <div> <div> <h1>Martedì 9 dicembre sciopero del trasporto pubblico. Possibili stop per 24 ore</h1> </div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div><p>Pubblicato il: 04/12/2025 - Aggiornato il: 04/12/2025</p></div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div> <span> </span> </div> </div> </div> <div> <div> <div></div> </div> </div> <div> <div> <p>Martedì 9 dicembre trasporto pubblico a rischio per lo sciopero di 24 ore indetto dal sindacato Sul. L’agitazione interesserà la sola rete Atac. Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.</p> </div> </div> </div> </div> </div> </div>"
   },
   "response": {
     "rawOutput": {
@@ -15,9 +15,9 @@
       "strikeData": {
         "startDate": "2025-12-09 00:00:00",
         "endDate": "2025-12-09 23:59:59",
-        "locationType": "PROVINCE",
+        "locationType": "REGIONAL",
         "locationCodes": [
-          "RM"
+          "12"
         ],
         "guaranteedTimes": [
           "00:00-08:30",
@@ -30,9 +30,9 @@
       "strikeData": {
         "startDate": "2025-12-09 00:00:00",
         "endDate": "2025-12-09 23:59:59",
-        "locationType": "PROVINCE",
+        "locationType": "REGIONAL",
         "locationCodes": [
-          "RM"
+          "12"
         ],
         "guaranteedTimes": [
           "00:00-08:30",
@@ -41,20 +41,20 @@
       }
     },
     "usage": {
-      "input": 713,
+      "input": 748,
       "output": 140,
       "cached": 0,
-      "thinking": 771,
-      "total": 1624
+      "thinking": 600,
+      "total": 1488
     },
     "costUsd": {
-      "inputCost": 0.00017825,
+      "inputCost": 0.000187,
       "outputCost": 0.00021,
-      "thinkingCost": 0.0011565,
+      "thinkingCost": 0.0009,
       "cachedCost": 0,
-      "totalCost": 0.00154475
+      "totalCost": 0.001297
     },
-    "durationMs": 5656,
-    "thoughts": "**Strike Analysis: Rome, December 9th, 2025**\n\nOkay, let's break this down. My task is to definitively classify the input text as a strike announcement. The input, dated December 4th, 2025, clearly states a public transport strike (\"sciopero del trasporto pubblico\") set for \"Martedì 9 dicembre,\" that's Tuesday, December 9th, 2025. I've already confirmed the date is correct, I'm fairly certain of that. The announcement specifically mentions a 24-hour stoppage affecting the ATAC network. So, we're dealing with Rome (RM). The text explicitly mentions \"possibili stop per 24 ore,\" indicating disruptions.\n\nNow, the specifics. It's a full-day strike. The guaranteed service times are noted as \"regolare fino alle 8,30 e dalle 17 alle 20.\" That translates directly to regular service until 8:30 AM and then from 5:00 PM to 8:00 PM. I'll need to encode this information properly.\n\nI've determined that this is a confirmed strike. The start date, based on the text \"Martedì 9 dicembre,\" is set for December 9, 2025, starting at 00:00:00 (since it's a 24-hour strike and typically starts at the beginning of the day). Similarly, the end date is 2025-12-09 23:59:59. The location type is the province, with \"RM\" representing Rome. I had to double-check that; there's usually a standard for that sort of thing. Finally, the guaranteed service times are 00:00-08:30 and 17:00-20:00. This is pretty straightforward. I'm noting that the guaranteed times are explicitly stated as \"fino alle 8,30,\" so that means they start at the beginning of the service. I just need to translate this information into the structured JSON format:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-12-09 00:00:00\",\n    \"endDate\": \"2025-12-09 23:59:59\",\n    \"locationType\": \"PROVINCE\",\n    \"locationCodes\": [\"RM\"],\n    \"guaranteedTimes\": [\"00:00-08:30\", \"17:00-20:00\"]\n  }\n}\n```\n\nThat should be accurate.\n\n\n"
+    "durationMs": 6111,
+    "thoughts": "**Strike Information Extraction - My Thought Process**\n\nOkay, let's break this down. The task is to pull strike information from this text, and I need to structure it into a JSON object. The target is ATAC, operating in Rome (region 12). The text describes a strike on \"Martedì 9 dicembre,\" and the publication date is December 4th, 2025. That means the strike is upcoming, on December 9th, 2025.\n\nThe text specifies a 24-hour strike, and it's happening in Rome, which is in region 12 (Lazio). Now, the crucial part: the guaranteed service times. The text says service will be regular \"fino alle 8,30\" and \"dalle 17 alle 20.\" I need to translate this into a standard format. That's essentially 00:00 to 08:30 and 17:00 to 20:00, which are likely the guaranteed service windows.\n\nTherefore, since the strike is for the entire day of the 9th, the start is 2025-12-09 00:00:00, and the end is 2025-12-09 23:59:59. This gives me everything I need. Now, to structure the JSON:\n\n*   `isStrike`: true (because the text explicitly states a strike)\n*   `strikeData`:\n    *   `startDate`: \"2025-12-09 00:00:00\"\n    *   `endDate`: \"2025-12-09 23:59:59\"\n    *   `locationType`: \"REGIONAL\" (Rome is within Lazio, which is the region 12)\n    *   `locationCodes`: \\[\"12\"] (region code for Lazio)\n    *   `guaranteedTimes`: \\[\"00:00-08:30\", \"17:00-20:00\"] (as extracted from the text, using the \"fino alle\" and \"dalle\" conventions for the guaranteed periods.)\n\nAnd I've got a format check. Done.\n\n\n"
   }
 }

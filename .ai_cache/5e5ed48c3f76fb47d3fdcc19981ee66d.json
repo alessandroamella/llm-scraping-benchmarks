@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-10 19:32:00",
+      "endDate": "2025-01-10 23:32:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4761,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00028225,
+      "outputCost": 0.0001335,
+      "thinkingCost": 0.000591,
+      "cachedCost": 0,
+      "totalCost": 0.00100675
+    },
+    "hash": "5e5ed48c3f76fb47d3fdcc19981ee66d",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_di_4_ore_giorno_10_gennaio_2025.html",
+    "thoughts": "**Strike Data Extraction from Announcement**\n\nOkay, let's break this down. The task is to pull strike details from the text. The target is EAV in Campania. Right, I have an announcement regarding a strike, and it's scheduled for Friday, January 10th, 2025.\n\nSo, I need to extract the date, the duration, and the scope, and then format it all as JSON.\n\nFirst, the key details: the strike is on January 10, 2025. It's a national strike, which, in this context, translates to \"sciopero nazionale\". The specified duration is 4 hours, specifically from 19:32 to 23:32. And, just to be sure, I need to remember that Campania's region code is \"15\" – although, with a *national* strike, that code seems irrelevant, and in fact I will keep the location code `null`.\n\nNow, for the JSON structure. `isStrike` will be `true`, obviously. The core of the data is under `strikeData`. I'll need to generate a `startDate` and `endDate`, and I've double checked that the format is correct – `yyyy-MM-dd HH:mm:ss`. So, that's \"2025-01-10 19:32:00\" for the start and \"2025-01-10 23:32:00\" for the end. The `locationType` will be \"NATIONAL\" because the text specifically uses \"sciopero nazionale\". Given that this is a national strike, as instructed, the `locationCodes` will be set to `null`. I did not see any explicit definitions of guaranteed time windows mentioned in the text (like morning/evening rush), so I will either leave `guaranteedTimes` as null or simply omit it.\n\n\n",
+    "tokens": {
+      "input": 1129,
+      "output": 89,
+      "total": 1612
+    }
+  }
+}

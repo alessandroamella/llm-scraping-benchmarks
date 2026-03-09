@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7035,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006285,
+      "outputCost": 0.0001496,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00021245
+    },
+    "hash": "83924bfe13c7a1db0f67ec0511da38bc",
+    "sourceFile": "sciopero_generale_aperte_metro_a_e_b_la_situazione_sulla_rete_romana.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to follow a strict schema for outputting JSON. I'm looking at a document about a national strike related to public transport in Rome. It lists the current statuses of the metro lines and mentions ongoing updates.\n\nSince it states that the strike is currently happening and provides information about service status, I'm concluding that the \"isStrike\" should be false for a real-time update. So, my output will be: {\"isStrike\": false}.",
+    "tokens": {
+      "input": 1257,
+      "output": 374,
+      "total": 1631
+    }
+  }
+}

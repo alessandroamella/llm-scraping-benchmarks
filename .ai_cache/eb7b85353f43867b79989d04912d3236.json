@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-07-07 20:30:00",
+      "endDate": "2024-07-08 00:30:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "20:30-00:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 23629,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006695,
+      "outputCost": 0.0007208,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0013903
+    },
+    "hash": "eb7b85353f43867b79989d04912d3236",
+    "sourceFile": "trasporto_pubblico_domenica_7_luglio_sciopero_serale_4_ore.html",
+    "thoughts": "**Formatting time ranges**\n\nI'm looking at the times given in the format \"dalle 20,30 alle 0,30.\" This seems to represent 20:30 to 00:30, so I’ll convert it to \"20:30-00:30.\" The instruction specifies that the guaranteed times must be arrays of \"HH:mm-HH:mm,\" so the output will be [\"20:30-00:30\"]. However, there's a mismatch with the published time date (2026) and the event date (July 2024), which is actually in the past relative to 2026. I need to treat the content as provided, even though it's confusing.",
+    "tokens": {
+      "input": 13390,
+      "output": 1802,
+      "total": 15192
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-10-21 08:30:00",
+      "endDate": "2022-10-21 12:30:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6530,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00034475,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.0008445,
+      "cachedCost": 0,
+      "totalCost": 0.00133775
+    },
+    "hash": "4e002acc1262c684db9606b10ee9502c",
+    "sourceFile": "venerd_prossimo_bus_della_roma_tpl_rischio_830_1230_sciopero_usb.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, here's the breakdown of this strike information. The source is HTML content announcing a strike. Let's get the core data. The strike is scheduled for **Friday, October 21st**. Since \"Venerdì\" corresponds to October 21st of 2022, and the document doesn't give a specific year, I'm inferring 2022 as the date. The time window is from **08:30 to 12:30**.\n\nThe key players here are **USB and Roma Tpl**, which is crucial. This strike specifically targets the peripheral bus lines operated by Roma Tpl in the Rome area – the **Lazio region**. It's important to note that the announcement *explicitly* states that the strike **does *not*** affect services managed by ATAC. My focus needs to be solely on what's provided, not what I *think* should be there. It's a clear announcement of an upcoming strike, so `isStrike: true` makes sense.\n\nBased on the date and time, I'm constructing the start and end dates in the correct format: `startDate: \"2022-10-21 08:30:00\"` and `endDate: \"2022-10-21 12:30:00\"`. The location is defined as \"REGIONAL\" (Roma/Lazio), and I'll use the location code `[\"12\"]` based on my existing data standards. Regarding guaranteed times, no specific mention is made, which is typical for 4-hour strikes, particularly if they fall outside of peak hours, or if that data isn't provided.\n\nTo wrap this up, I'm refining the JSON structure to be clear and concise:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2022-10-21 08:30:00\",\n    \"endDate\": \"2022-10-21 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"]\n  }\n}\n```\n\nThe language specifies \"Venerdì prossimo\", but that would have meant to wait until the current Friday. However, the date given is \"Venerdì 21 ottobre\", so 2022 it is.\n\n\n",
+    "tokens": {
+      "input": 1379,
+      "output": 99,
+      "total": 2041
+    }
+  }
+}

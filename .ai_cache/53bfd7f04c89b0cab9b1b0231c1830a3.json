@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-01-13 00:00:00",
+      "endDate": "2026-01-13 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20817,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006715,
+      "outputCost": 0.0007116,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00077875
+    },
+    "hash": "53bfd7f04c89b0cab9b1b0231c1830a3",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2026-1-13-sciopero-nazionale-del-trasport.html",
+    "thoughts": "**Assessing strike information**\n\nI’m determining whether to set the isStrike variable to true based on whether it’s an announcement of an upcoming strike. The phrase “è stato indetto uno sciopero” indicates an upcoming strike set for January 13, 2026. It also mentions bus services and guarantees essential Trenitalia services during specific hours on weekdays. For the strikeData format, I need to use ISO 8601 for startDate and endDate, typically formatted as “yyyy-MM-dd HH:mm:ss.”",
+    "tokens": {
+      "input": 1343,
+      "output": 1779,
+      "total": 3122
+    }
+  }
+}

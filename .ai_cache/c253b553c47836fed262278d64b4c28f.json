@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-05-11 00:00:00",
+      "endDate": "2025-05-11 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 27476,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000912,
+      "outputCost": 0.0007352,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008264
+    },
+    "hash": "c253b553c47836fed262278d64b4c28f",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_24h_domenica_11_maggio_2025.html",
+    "thoughts": "**Clarifying date format for strike**\n\nI need to follow the instructions for the date format, which is \"yyyy-MM-dd HH:mm:ss.\" For the 24-hour strike on May 11, 2025, I can set the startDate to 2025-05-11 00:00:00 and the endDate to 2025-05-11 23:59:59 since it covers the entire day. The guaranteed times mentioned are \"05:30-08:30\" and \"16:30-19:30,\" which I'll format as an array of \"HH:mm-HH:mm.\" This should meet the requirements!",
+    "tokens": {
+      "input": 1824,
+      "output": 1838,
+      "total": 3662
+    }
+  }
+}

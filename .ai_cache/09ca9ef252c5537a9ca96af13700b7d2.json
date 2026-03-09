@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-11-29 09:00:00",
+      "endDate": "2024-11-29 13:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 29626,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008945,
+      "outputCost": 0.0010828,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00117225
+    },
+    "hash": "09ca9ef252c5537a9ca96af13700b7d2",
+    "sourceFile": "strike-detail-venerd--29-novembre-dalle-9-alle-13-sciopero-gener.html",
+    "thoughts": "**Evaluating date formatting**\n\nThe instruction suggests that I don't have to fill in the year if it's not specified, but I need a plausible year for the date format 'yyyy-MM-dd HH:mm:ss'. I can't just guess, though maybe setting the year as null could work. I see that the dataset expects dates to be parsed as upcoming events, like \"29 November\" linked to the article date. Since 29 November 2024 is indeed a Friday, I realize that 2024 would align with the requirement, but it’s past now. I wonder if using \"0000\" could be an alternative?",
+    "tokens": {
+      "input": 1789,
+      "output": 2707,
+      "total": 4496
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6669,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000758,
+      "outputCost": 0.000148,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002238
+    },
+    "hash": "9d1d6d7fe68ba8b07f46004e580d5717",
+    "sourceFile": "sciopero_trasporto_pubblico_chiuse_metro_c_termini_centocelle.html",
+    "thoughts": "**Analyzing transport strike details**\n\nI need to produce JSON based on the specified strike_extraction schema. The content is in Italian and announces a 24-hour national transport strike. It includes current information about various transport services, indicating that Metro A is closed, while others are operating normally.\n\nSince it's a real-time update and not about a future strike, I'll set isStrike to false. Thus, the output will be {\"isStrike\": false}. I'll also consider if there are any other relevant details to note.",
+    "tokens": {
+      "input": 1516,
+      "output": 370,
+      "total": 1886
+    }
+  }
+}

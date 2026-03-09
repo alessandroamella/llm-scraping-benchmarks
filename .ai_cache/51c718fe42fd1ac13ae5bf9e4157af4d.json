@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5855,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00019975,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.0008655,
+      "cachedCost": 0,
+      "totalCost": 0.00126175
+    },
+    "hash": "51c718fe42fd1ac13ae5bf9e4157af4d",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_generale_nazionale_di_24_ore_venerdi_28_novembre_2025.html",
+    "thoughts": "**Analyzing EAV Strike Information**\n\nOkay, let's break this down. My task is to analyze this strike announcement from EAV and distill it into a JSON format that matches the defined schema. The input is clear: a 24-hour national general strike is planned for November 28, 2025. That date is the key here.\n\nFirst, `isStrike` is unequivocally `true`. Now, the date and time details. Since it's a 24-hour strike, the `startDate` is \"2025-11-28 00:00:00\" and, consequently, the `endDate` is \"2025-11-28 23:59:59\". The location is explicitly stated as \"national\" so, `locationType` will be \"NATIONAL\" and `locationCodes` will be `null` because it's a nationwide event, not tied to specific codes.\n\nThe announcement also specifies guaranteed service times: \"dalle ore 05:30 alle ore 8:30 e dalle ore 16:30 alle ore 19:30\".  That translates directly to the `guaranteedTimes` array as [\"05:30-08:30\", \"16:30-19:30\"].\n\nSo the important data points are:\n\n*   `isStrike`: true\n*   `strikeData`:\n    *   `startDate`: \"2025-11-28 00:00:00\"\n    *   `endDate`: \"2025-11-28 23:59:59\"\n    *   `locationType`: \"NATIONAL\"\n    *   `locationCodes`: null\n    *   `guaranteedTimes`: [\"05:30-08:30\", \"16:30-19:30\"]\n\nI need to confirm all the formats are correct; yyyy-MM-dd HH:mm:ss for dates and times, and the guaranteed times are strings in the expected HH:mm-HH:mm format within an array. Good, that's straightforward. I need to make sure the output is pure JSON, parseable, and free of any control characters, as the specification demands. This is a new, upcoming strike, and that date is the key. Now, to structure the final JSON output.\n\n\n",
+    "tokens": {
+      "input": 799,
+      "output": 131,
+      "total": 1507
+    }
+  }
+}

@@ -130,17 +130,18 @@ export class BenchmarksService implements OnModuleInit {
   private readonly logger = new Logger(BenchmarksService.name);
 
   // Toggle this to run benchmarks
-  private readonly useLenientSchema = false;
+  private readonly useLenientSchema = true;
   private readonly includeManualInSuite = false;
   private readonly generateChaosDatasetFlag = false;
 
-  private readonly customReportName = 'slm_models_with_ATAC_dataset';
+  private readonly customReportName =
+    'slm_models_with_ATAC_dataset_and_basic_cleanup';
   // private readonly disabledChecks: string[] = ['locationType', 'locationCodes'];
   private readonly disabledChecks: string[] = [];
 
   // --- NEW FLAGS ---
   private readonly enableResilienceSuite = false; // Toggle Resilience Suite
-  private readonly enableAiSuites = false; // Toggle AI Suites
+  private readonly enableAiSuites = true; // Toggle AI Suites
   private readonly enableSlmSuites = true; // Toggle SLM Suites (MinerU and Jina)
   // -----------------
   private readonly baseDir = path.join(process.cwd(), 'data');
@@ -265,9 +266,9 @@ export class BenchmarksService implements OnModuleInit {
 
     // Define the Matrix of Tests
     const baseStrategies: PreProcessingStrategy[] = [
-      'html-to-markdown',
-      // 'basic-cleanup',
-      // 'dom-distillation',
+      // 'html-to-markdown',
+      'basic-cleanup',
+      'dom-distillation',
       // 'dom-distillation-markdown',
       // 'raw-html', // molto costoso, non abilitare
     ];

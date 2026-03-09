@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-16 03:00:00",
+      "endDate": "2025-06-17 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20402,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003681,
+      "outputCost": 0.00062,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0009881
+    },
+    "hash": "e23ddc51d1cd55162c219d85c8f2a898",
+    "sourceFile": "strike-detail-luned--16-giugno-sciopero-dei-treni-regionali.html",
+    "thoughts": "**Classifying upcoming strike announcement**\n\nI need to output JSON according to the specified schema. The title indicates an upcoming strike for trains, mentioning key details like the dates and the organization involved, ORSA. The notice specifies the timing from June 16 to June 17 and notes potential disruptions to services, which confirms that this is indeed announcing a new strike. The description comprehensively details the strike's impact on regional train services. So, I conclude it’s a valid strike announcement.",
+    "tokens": {
+      "input": 7362,
+      "output": 1550,
+      "total": 8912
+    }
+  }
+}

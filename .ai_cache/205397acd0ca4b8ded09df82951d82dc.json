@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-03-10 20:00:00",
+      "endDate": "2026-03-11 00:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "20:00-00:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22343,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00067005,
+      "outputCost": 0.0009256,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00159565
+    },
+    "hash": "205397acd0ca4b8ded09df82951d82dc",
+    "sourceFile": "domani_sciopero_serale_di_4_ore_a_rischio_i_bus_del_deposito_magliana.html",
+    "thoughts": "**Identifying a strike announcement**\n\nI need to figure out if the content is announcing a new or upcoming strike based on the article titled \"Tomorrow evening 4-hour strike. At risk the buses of Magliana depot.\" The published time is March 9, 2026. The title indicates a forthcoming strike, from 20:00 to 24:00. The body confirms it's a planned strike affecting specific bus lines due to a four-hour stoppage announced by the unions. So yes, it’s definitely an upcoming strike.",
+    "tokens": {
+      "input": 13401,
+      "output": 2314,
+      "total": 15715
+    }
+  }
+}

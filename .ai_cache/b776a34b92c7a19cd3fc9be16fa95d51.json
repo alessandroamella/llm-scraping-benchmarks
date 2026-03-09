@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4518,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00044675,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.000498,
+      "cachedCost": 0,
+      "totalCost": 0.00115475
+    },
+    "hash": "b776a34b92c7a19cd3fc9be16fa95d51",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_24_ore_del_13_dicembre_2024_aggiornamento.html",
+    "thoughts": "**Processing the EAV Strike Information**\n\nOkay, so I'm looking at this EAV notice regarding a strike. It's for December 13th, 2024, and it's confirmed to be a full 24-hour strike, reinstated to this duration thanks to that TAR Lazio decision. Right, so that means the entire day, from midnight to just before midnight, is affected. Since EAV is the public transport company for Campania, the location code is definitely \"15\".\n\nI need to make sure this is recorded accurately and I must use strict JSON format, which I'll be certain to do. I have to confirm the `startDate` is \"2024-12-13 00:00:00\" and the `endDate` is \"2024-12-13 23:59:59\". The location type is \"REGIONAL\" since it impacts the Campania region and location code \"15\". And finally, I have to ensure the guaranteed service times are listed as \"05:30-08:30\" and \"16:30-19:30\". I must double-check the time and date format is correct and double-check Campania's location code.\n\nHere's the JSON structure:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-13 00:00:00\",\n    \"endDate\": \"2024-12-13 23:59:59\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"15\"],\n    \"guaranteedTimes\": [\"05:30-08:30\", \"16:30-19:30\"]\n  }\n}\n```\n\n\n",
+    "tokens": {
+      "input": 1787,
+      "output": 140,
+      "total": 2259
+    }
+  }
+}

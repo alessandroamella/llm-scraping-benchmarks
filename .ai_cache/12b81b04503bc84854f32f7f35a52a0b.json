@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-03-08 00:00:00",
+      "endDate": "2025-03-08 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6486,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00034075,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.0010215,
+      "cachedCost": 0,
+      "totalCost": 0.00157225
+    },
+    "hash": "12b81b04503bc84854f32f7f35a52a0b",
+    "sourceFile": "martedi_8_marzo_sciopero_generale_24_ore_rischio_trasporto_pubblico.html",
+    "thoughts": "**Strike Analysis & Data Extraction**\n\nOkay, let's break this down. My primary task is to identify and extract strike information from this text. The content explicitly announces a strike, so `isStrike` is definitely `true`.\n\nI need to extract the date, duration, location, and guaranteed service times, formatting them appropriately. The text states: \"Martedi 8 marzo sciopero generale di 24 ore. A rischio anche il trasporto pubblico\". It mentions Rome, specifically \"trasporto pubblico romano,\" and I'm associating that with Lazio, code \"12\". Since no year is explicitly given, I'll default to the current year, 2025, but should probably build that into a future function to auto-update.\n\nThe date is clearly the 8th of March. The duration is 24 hours. The text says \"Martedi 8 marzo trasporto pubblico romano a rischio... Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" That implies guaranteed service *until* 8:30 and *between* 17:00 and 20:00. This is the crucial bit. Based on that information, the strike period is the whole day, starting at midnight on March 8th, 2025, and ending just before midnight on the same day.\n\nThe guaranteed service times need precise handling. \"Fino alle 8,30\" I will render as \"00:00-08:30\" and \"dalle 17 alle 20\" will be rendered as \"17:00-20:00\". These are the windows where service is *not* affected.\n\nSo, I will structure the output as JSON, with the following fields:\n\n*   `isStrike`: `true`\n*   `startDate`: `2025-03-08 00:00:00`\n*   `endDate`: `2025-03-08 23:59:59`\n*   `locationType`: `\"REGIONAL\"` (since it is regional transport for Rome, Lazio).\n*   `locationCodes`: `[\"12\"]`\n*   `guaranteedTimes`: `[\"00:00-08:30\", \"17:00-20:00\"]`\n\nThis covers the extracted data, and the specified date formats, all within the context provided. Ready to generate the final JSON output.\n\n\n",
+    "tokens": {
+      "input": 1363,
+      "output": 140,
+      "total": 2184
+    }
+  }
+}

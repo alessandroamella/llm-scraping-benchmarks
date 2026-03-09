@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-16 09:00:00",
+      "endDate": "2025-11-16 18:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "09:00-11:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18646,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000729,
+      "outputCost": 0.0006044,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0006773
+    },
+    "hash": "a7bcc9f09c7be8e5d9b67fcfdf4bcd3a",
+    "sourceFile": "strike-detail-domenica-16-novembre-dalle-ore-10-alle-ore-18-scio.html",
+    "thoughts": "**Extracting strike details**\n\nI need to determine if there are real-time updates for an ongoing strike. It seems like there aren't any false updates. The information indicates that this is actually an announcement of an upcoming strike on Sunday, November 16, 2025, from 9 AM to 6 PM. I’ll set the strike data's start and end date properly, format it to \"yyyy-MM-dd HH:mm:ss,\" so the start is 2025-11-16 09:00:00 and the end is 2025-11-16 18:00:00. It’s a REGIONAL strike in Lombardia, giving location codes as [\"03\"].",
+    "tokens": {
+      "input": 1458,
+      "output": 1511,
+      "total": 2969
+    }
+  }
+}

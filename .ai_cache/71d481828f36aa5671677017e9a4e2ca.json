@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4131,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00033525,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0003285,
+      "cachedCost": 0,
+      "totalCost": 0.00067875
+    },
+    "hash": "71d481828f36aa5671677017e9a4e2ca",
+    "sourceFile": "sciopero_generale_adesione_personale_atac_al_259.html",
+    "thoughts": "**Analyzing the Strike Announcement Input**\n\nOkay, let's break this down. My task is to determine whether the provided text constitutes an announcement of a *future* strike. The input is \"Sciopero generale, adesione personale Atac al 25,9%\" and \"L’adesione del personale Atac allo sciopero nazionale generale, rilevata in mattinata, è stata pari al 25,9%.\"\n\nFirst, I see the phrase \"Sciopero generale\" which immediately grabs my attention – that's \"general strike.\" The second sentence confirms this is about the participation rate. \"Adesione... pari al 25,9%\" translates to \"participation... equal to 25.9%.\" The inclusion of \"rilevata in mattinata\" (detected this morning) is critical. It signifies that the participation percentage has already been *measured*.\n\nTherefore, this isn't an *announcement* of an *upcoming* strike. It is reporting the *participation* in a strike that is either already underway or has concluded, based on the morning's data. My core reasoning path dictates that if the text only describes adesione to the sciopero, and doesn't explicitly state the sciopero will happen, my `isStrike` should be set to `false`. That's the correct conclusion.\n\n\n",
+    "tokens": {
+      "input": 1341,
+      "output": 10,
+      "total": 1570
+    }
+  }
+}

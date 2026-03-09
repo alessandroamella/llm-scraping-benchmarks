@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-11-29 00:00:00",
+      "endDate": "2024-11-29 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8175,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00374375,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.0012195,
+      "cachedCost": 0,
+      "totalCost": 0.00515975
+    },
+    "hash": "4884c0940862b90709ad5de6788221ea",
+    "sourceFile": "venerdi_29_novembre_sciopero_generale_nazionale_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Strike Analysis for ATAC Rome/Lazio**\n\nOkay, let's break this down. My target is an announcement about a potential strike affecting ATAC in Rome/Lazio. The input is a page from Roma Servizi per la Mobilità regarding a strike on Friday, November 29th. The title immediately flags it: \"Venerdì 29 novembre, sciopero generale nazionale. Trasporto pubblico a rischio\". Sounds like a strike alright.\n\nThe text confirms it: a 24-hour *national* strike (sciopero generale nazionale) declared by several unions is impacting the Roman public transport system – both Atac and private bus operators. The important bit is the service will be regular until 08:30 and between 17:00 and 20:00. Those are the guaranteed service times. The document was published on November 22nd, 2024.\n\nSo, *isStrike* is definitely true. The *startDate* is 2024-11-29 00:00:00 – a 24-hour strike, so *endDate* is 2024-11-29 23:59:59. Since it's a *national* strike, the *locationType* is \"NATIONAL\" and *locationCodes* remain `null`. Double-checking the guaranteed times... yes, \"fino alle 8,30\" translates to a guarantee from 00:00 to 08:30, and \"dalle 17 alle 20\" means from 17:00 to 20:00. This gives me *guaranteedTimes* of [\"00:00-08:30\", \"17:00-20:00\"].\n\nAlright, all the pieces are there. I'm confident in assembling the data now. Here's the finalized output:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-11-29 00:00:00\",\n    \"endDate\": \"2024-11-29 23:59:59\",\n    \"locationType\": \"NATIONAL\",\n    \"locationCodes\": null,\n    \"guaranteedTimes\": [\"00:00-08:30\", \"17:00-20:00\"]\n  }\n}\n```\n\n\n",
+    "tokens": {
+      "input": 14975,
+      "output": 131,
+      "total": 15919
+    }
+  }
+}

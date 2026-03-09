@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-11-17 09:00:00",
+      "endDate": "2023-11-17 13:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "09:00-10:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22900,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007925,
+      "outputCost": 0.0007176,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00079685
+    },
+    "hash": "63f9113dcd8b1475b121a2eb20f24fab",
+    "sourceFile": "strike-detail-sciopero-nazionale-17-novembre-ore-9-13-personale-.html",
+    "thoughts": "**Extracting strike information**\n\nI need to format the output in JSON according to the strike_extraction guidelines. The content discusses the national strike on November 17th from 9 AM to 1 PM, noting that Trenord personnel aren’t directly involved but could be indirectly affected. It mentions the possibility of adherence by staff from FERROVIENORD and RFI. There may be service limitations and cancellations, particularly for regional and suburban trains, with alternative bus connections for airport services. The information seems to pertain to a past event.",
+    "tokens": {
+      "input": 1585,
+      "output": 1794,
+      "total": 3379
+    }
+  }
+}

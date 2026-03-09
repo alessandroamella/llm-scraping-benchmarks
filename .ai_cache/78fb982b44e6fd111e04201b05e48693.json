@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 2502,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0001935,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0001875,
+      "cachedCost": 0,
+      "totalCost": 0.000396
+    },
+    "hash": "78fb982b44e6fd111e04201b05e48693",
+    "sourceFile": "sciopero_nazionale_tpl_chiuse_metro_ferrovia_termini_centocelle.html",
+    "thoughts": "**Analyzing the Transportation Strike Information**\n\nOkay, so I'm looking at this incoming text: \"È in corso lo sciopero nazionale del trasporto pubblico che si concluderà alle 16,30. Ecco la situazione sulla rete: chiuse le metro A, B/B1, C e la ferrovia Termini-Centocelle.\" Immediately, I recognize this as a real-time status update concerning a national public transportation strike. The phrase \"È in corso\" tells me it's actively happening. The system's instructions direct that, if the input is providing real-time updates regarding an ongoing strike, then `isStrike` should be set to `false`. Therefore, I must set the variable `isStrike` to `false`.\n\n\n",
+    "tokens": {
+      "input": 774,
+      "output": 10,
+      "total": 909
+    }
+  }
+}

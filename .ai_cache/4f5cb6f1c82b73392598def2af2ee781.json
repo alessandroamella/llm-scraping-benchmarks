@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-03-22 19:40:00",
+      "endDate": "2025-03-22 23:40:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4803,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0003745,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.000579,
+      "cachedCost": 0,
+      "totalCost": 0.001102
+    },
+    "hash": "4f5cb6f1c82b73392598def2af2ee781",
+    "sourceFile": "vesuviane_sciopero_del_22_marzo_2025.html",
+    "thoughts": "**Analyzing the EAV srl Strike Notice**\n\nOkay, so I've got this strike notice from EAV srl concerning the Linee Vesuviane. My initial focus is on the crucial details. The source is EAV srl, specifically from the Campania region (region code 15), that's where the Linee Vesuviane operate, that's key. The notice itself, of course, announces a 4-hour strike set for March 22nd, 2025, from 19:40 to 23:40. It's a company-wide strike (\"azienda\").\n\nI need to nail down the essential data points to properly structure this. I've noted the exact start and end times, ensuring the duration is precisely 4 hours as stated. The strike's scope is defined as \"REGIONAL\" since Linee Vesuviane is confined within the Campania region, which I will represent with location code \"15\" in the locationCodes array.\n\nRegarding guaranteed services, I see it mentions \"Ultime partenze garantite\" (last departures guaranteed), but there isn't a specific time window mentioned, nor a peak hour. My response schema demands a \"guaranteedTimes\" field as time ranges, and I must exclude any assumption of such time range. Given this, I will set this to \"null\" since it is not explicitly defined in the source, I will not make any assumptions.\n\nThe obvious isStrike boolean will be set to `true`. Finally, I need to make sure the startDate and endDate are correctly formatted as ISO timestamps. And, of course, the keys should match the required schema exactly, and I won't introduce any unnecessary comments or extra text. I'll make sure it's valid JSON.\n\n\n",
+    "tokens": {
+      "input": 1498,
+      "output": 99,
+      "total": 1983
+    }
+  }
+}

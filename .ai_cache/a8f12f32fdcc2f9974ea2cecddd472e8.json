@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22325,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005925,
+      "outputCost": 0.00073,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00078925
+    },
+    "hash": "a8f12f32fdcc2f9974ea2cecddd472e8",
+    "sourceFile": "sportello_al_pubblico_e_contact_center_di_rsm_servizi_non_attivi_causa_sciopero.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI'm noticing that this is indeed an announcement about an upcoming strike, which is also scheduled for tomorrow. The metadata indicates that services are inactive due to the strike. Based on the instructions, I need to set isStrike to true only if it's announcing a new strike. If it were about a cancellation or updates on an ongoing strike, I'd set isStrike to false. So, I’ll confirm it’s about an upcoming strike!",
+    "tokens": {
+      "input": 1185,
+      "output": 1825,
+      "total": 3010
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3974,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.003688,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0004335,
+      "cachedCost": 0,
+      "totalCost": 0.0041365
+    },
+    "hash": "48c4b60b67841e194ea9b79705b220fc",
+    "sourceFile": "sciopero_nazionale_adesione_personale_atac_al_237.html",
+    "thoughts": "**Strike Announcement Evaluation**\n\nOkay, let's see. My task is to determine if this input constitutes a strike *announcement*. I'm given content from \"Roma Servizi per la Mobilità,\" specifically a webpage titled \"Sciopero nazionale, adesione personale Atac al 23,7%.\" Alright, let's break this down.\n\nThe title itself, \"National strike, Atac staff participation at 23.7%,\" is a key indicator. Then, I dive into the body text: \"The overall participation of Atac personnel in today's national strike, measured this morning, was 23.7%.\" Hmm, \"today's strike\" and \"measured this morning\" are pretty explicit! It's clear this refers to a strike that *already happened*. The date of publication is also worth noting; the provided date is 22/09/2025 - this helps me to know that the strike has happened recently.\n\nMy criteria are simple: if the content is *reporting* on participation in a *past* strike, then it's not an announcement. It sounds like they're just giving us data about something that already occurred, not a heads-up about a future disruption.\n\nTherefore, my conclusion is straightforward: This is not an announcement. I'll return a JSON object with `isStrike: false`. Decision made.\n\n\n",
+    "tokens": {
+      "input": 14752,
+      "output": 10,
+      "total": 15051
+    }
+  }
+}

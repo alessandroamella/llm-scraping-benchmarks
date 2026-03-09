@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-12-15 00:00:00",
+      "endDate": "2023-12-15 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8013,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00034675,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.001485,
+      "cachedCost": 0,
+      "totalCost": 0.00204175
+    },
+    "hash": "b6f4fe2b90bb5316a40d229f870fa05a",
+    "sourceFile": "trasporto_pubblico_sciopero_nazionale_differito_15_dicembre.html",
+    "thoughts": "**Strike Analysis: Rome, December 15th**\n\nOkay, let's break this down. This information is sourced from public transport data concerning a strike. The text clearly states \"È stato rinviato a venerdì 15 dicembre lo sciopero nazionale...\" meaning it's a *postponed* strike, now scheduled for December 15th. The initial date was November 27th, and since it fell on a Monday, that places this in 2023 – that's crucial for the date formatting.\n\nThe text is specific about Rome (\"A Roma l’agitazione sarà...\"), referencing both Atac and the peripheral Roma Tpl network. Even though the strike is described as \"nazionale,\" the immediate impact as described in the text is *localized* to Rome. I will tag this as regional.\n\nThe critical pieces of information for the `strikeData` object are as follows: It's a 24-hour strike:\n\n*   `startDate`: 2023-12-15 00:00:00\n*   `endDate`: 2023-12-15 23:59:59\n*   `locationType`: \"REGIONAL\" (this is the key decision point, as the impact is local to the transit services in Rome, though \"nationale\" is used in the text).\n*   `locationCodes`: [\"12\"] (This is the Lazio region code).\n*   `guaranteedTimes`: [\"00:00-08:30\", \"17:00-20:00\"] (I double-checked to confirm the times are precisely what the text states).\n\nSo, the strike parameter is `isStrike`: true, and the extracted data above is `strikeData`. I believe the data is correct. The context of a strike involving Atac within Rome makes it logical to assign a `REGIONAL` location type, even with the national descriptor.\n\n\n",
+    "tokens": {
+      "input": 1387,
+      "output": 140,
+      "total": 2517
+    }
+  }
+}

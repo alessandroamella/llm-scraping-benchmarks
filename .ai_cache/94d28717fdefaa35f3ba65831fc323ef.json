@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-02-04 08:30:00",
+      "endDate": "2022-02-04 12:30:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "08:30-12:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22301,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006699,
+      "outputCost": 0.0005516,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0012215
+    },
+    "hash": "94d28717fdefaa35f3ba65831fc323ef",
+    "sourceFile": "4_febbraio_sciopera_4_ore_sindacato_usb_trasporto_pubblico_rischio.html",
+    "thoughts": "**Extracting strike details**\n\nIt looks like we've got an announcement for an upcoming strike in 2022, so isStrike should indeed be true. When we're extracting strikeData, the startDate and endDate need to be in 'yyyy-MM-dd HH:mm:ss' format.\n\nFor locationType, based on \"sciopero nazionale\", it should be marked as \"NATIONAL\", and locationCodes should be null since that's the case. The strike time in European format \"8,30 alle 12,30\" converts to \"08:30-12:30\". With guaranteedTimes set to [\"08:30-12:30\"], we still need to specify the full date including the year for the start and end dates.",
+    "tokens": {
+      "input": 13398,
+      "output": 1379,
+      "total": 14777
+    }
+  }
+}

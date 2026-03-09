@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-28 08:20:00",
+      "endDate": "2025-01-28 12:20:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4162,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00029225,
+      "outputCost": 0.0001605,
+      "thinkingCost": 0.000366,
+      "cachedCost": 0,
+      "totalCost": 0.00081875
+    },
+    "hash": "28223b0469108a1b089ed18a46d820fd",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_di_4_ore_martedi_28_gennaio_2025.html",
+    "thoughts": "**Strike Analysis Summary**\n\nOkay, let's break this down. My primary task is clear: determine if this document signals a strike. The document itself, \"Servizio Autolinee: Avviso di sciopero di 4 ore, martedì 28 gennaio 2025 - EAV srl,\" is the key. The phrase \"Avviso di sciopero\" is Italian for \"strike notice,\" so that answers the basic question immediately: yes, this is a strike announcement.\n\nNow, let's extract the relevant details. EAV, the company, operates in the Campania region, that's important for regional impact assessment. The strike is scheduled for Tuesday, January 28, 2025. Duration is 4 hours, and we have precise start and end times: 08:20 to 12:20. That timeframe gives me a good start in scheduling around the service disruptions.\n\nI need to structure this data for efficiency, so let's translate this into an actionable data structure. It looks like: `isStrike: true`, indicating a yes. Now the detailed strike data: `strikeData: { startDate: \"2025-01-28 08:20:00\", endDate: \"2025-01-28 12:20:00\", locationType: \"REGIONAL\", locationCodes: [\"15\"], guaranteedTimes: null }`. I see the start and end times are precisely formatted to an international standard. I will need to look up location code \"15\" to ensure my analysis is correct, but it looks like a regional code, which tells me the strike is regional in scope. Finally, I will note the guaranteed times are currently unknown, but could be added later.\n\n\n",
+    "tokens": {
+      "input": 1169,
+      "output": 107,
+      "total": 1520
+    }
+  }
+}

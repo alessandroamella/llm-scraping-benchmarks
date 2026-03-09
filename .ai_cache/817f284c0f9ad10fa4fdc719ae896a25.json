@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 10363,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0037215,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.0009885,
+      "cachedCost": 0,
+      "totalCost": 0.0049065
+    },
+    "hash": "817f284c0f9ad10fa4fdc719ae896a25",
+    "sourceFile": "news_media_comunicati_sciopero_generale_13_dicembre_240re.html",
+    "thoughts": "**Strike Analysis: A Concise Breakdown**\n\nOkay, let's break this down systematically. My task is to determine if this text announces a strike and, if so, extract the relevant strike data into a valid JSON object following the predefined schema.\n\nFirst, the text: \"Sciopero del trasporto pubblico, domani rischio stop per 24 ore.\" Immediately, \"Sciopero\" (strike) flags it as a strong possibility. The mention of \"24 ore\" confirms the duration.\n\nNext, I need to parse the details:\n\n*   **`isStrike`**: Definitely true. \"Sciopero\" is the key indicator.\n*   **`strikeData`**: This requires more digging.\n    *   **Date**: \"Domani\" (tomorrow) combined with a publication date of 12/12/2024 tells me the strike is on 13/12/2024.\n    *   **Duration**: 24 hours. A 24-hour strike, I would assume it covers the full day.\n    *   **Location**: The text states \"Sciopero generale nazionale.\" Thus, the `locationType` should be \"NATIONAL\".\n    *   **Guaranteed Times**: \"Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" This translates to regular service \"until 8:30\" and \"from 17 to 20\". So, `guaranteedTimes` should be [\"00:00-08:30\", \"17:00-20:00\"]. Remember that \"until 8:30\" indicates the time the service is guaranteed to be running *up to*, and therefore includes the beginning of that time.\n    *   **`startDate`**: \"2024-12-13 00:00:00\"\n    *   **`endDate`**: \"2024-12-13 23:59:59\"\n    *   **`locationCodes`**: Since it is a `NATIONAL` strike, it'll be `null`.\n\nTherefore, I'm confident in the following JSON output:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-13 00:00:00\",\n    \"endDate\": \"2024-12-13 23:59:59\",\n    \"locationType\": \"NATIONAL\",\n    \"locationCodes\": null,\n    \"guaranteedTimes\": [\"00:00-08:30\", \"17:00-20:00\"]\n  }\n}\n```\n\n\n",
+    "tokens": {
+      "input": 14886,
+      "output": 131,
+      "total": 15676
+    }
+  }
+}

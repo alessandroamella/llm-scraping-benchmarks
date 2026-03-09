@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-03-29 00:00:00",
+      "endDate": "2022-03-29 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7201,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000199,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.001134,
+      "cachedCost": 0,
+      "totalCost": 0.001543
+    },
+    "hash": "4b19c295d1a12ea5d38952da00f155cb",
+    "sourceFile": "martedi_29_marzo_sciopera_24_ore_trasporto_pubblico_servizio_rischio.html",
+    "thoughts": "**Strike Analysis: Rome Transport - March 29, 2022**\n\nOkay, let's break this down. My task is to determine if this text describes an upcoming strike, and if so, to extract the relevant strike information in JSON format. The core criteria is a boolean `isStrike` flag, and an associated `strikeData` object if `isStrike` is true. We're looking for *upcoming* strike announcements specifically, and anything related to cancellations, participation, real-time updates, or general service info should result in `isStrike: false`. The target region is Rome (Lazio, code \"12\").\n\nThe input text states, \"Martedì 29 marzo sciopera 24 ore il trasporto pubblico. Servizio a rischio\" and \"Martedì 29 marzo trasporto pubblico a rischio per lo sciopero di 24 ore indetto tra i lavoratori dell’Atac dal sindacato Faisa Cisal. L’agitazione interesserà l’intera rete Atac. Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" That sounds like a strike announcement.\n\nGiven the published date of March 24, 2022, and the event date of March 29th, I'm inferring the year is 2022. The announcement specifically mentions a 24-hour strike. A 24-hour strike in Rome typically begins at midnight and ends just before the next midnight, so let's pin down the start and end times.  That means the strike starts on 2022-03-29 00:00:00 and ends on 2022-03-29 23:59:59.  The location is Rome (Lazio, code \"12\").\n\nThe text also mentions guaranteed service times: \"fino alle 8,30 e dalle 17 alle 20.\" This translates to a guaranteed service window of \"00:00-08:30\" and a second window \"17:00-20:00\".\n\nNow, let's assemble the data.  Based on the announcement, the details point to an upcoming strike, so `isStrike` will be true. Here's what I've got:\n\n*   `isStrike`: `true`\n*   `startDate`: \"2022-03-29 00:00:00\"\n*   `endDate`: \"2022-03-29 23:59:59\"\n*   `locationType`: \"REGIONAL\"\n*   `locationCodes`: [\"12\"]\n*   `guaranteedTimes`: [\"00:00-08:30\", \"17:00-20:00\"]\n\nDoes this meet all the criteria? It *should* be valid JSON. The date format is correct, region code matches, and the guaranteed times are accurately extracted. Yep, it seems I've got a complete and accurate response. I'm ready to proceed.\n\n\n",
+    "tokens": {
+      "input": 796,
+      "output": 140,
+      "total": 1692
+    }
+  }
+}

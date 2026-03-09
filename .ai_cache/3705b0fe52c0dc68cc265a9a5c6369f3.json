@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-16 09:00:00",
+      "endDate": "2025-11-16 18:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6380,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0002755,
+      "outputCost": 0.0001395,
+      "thinkingCost": 0.0009885,
+      "cachedCost": 0,
+      "totalCost": 0.0014035
+    },
+    "hash": "3705b0fe52c0dc68cc265a9a5c6369f3",
+    "sourceFile": "strike-detail-domenica-16-novembre-dalle-ore-10-alle-ore-18-scio.html",
+    "thoughts": "**Strike Analysis - My Thought Process**\n\nOkay, here's how I'm approaching this. My task is to determine if the input content describes a future strike and, if so, to format the information into a specific JSON object. The JSON output needs to follow strict formatting rules: no control characters, no comments, and all keys and values enclosed in double quotes.\n\nBased on the content I've analyzed, yes, this is clearly an announcement for a strike. The title and body text are explicit. Let me break down how I'm deriving the specifics for the JSON:\n\n*   **Strike Identification:** The `isStrike` key will be `true`. That's the easy one.\n\n*   **Date and Time:** I need to extract the start and end dates/times. The text clearly states \"domenica 16 novembre\" with an implied year of 2025. So, the `startDate` will be \"2025-11-16 09:00:00\" (derived from \"Dalle ore 9\") and the `endDate` will be \"2025-11-16 18:00:00\" (derived from \"alle ore 18\").\n\n*   **Location:** The strike affects \"treni regionali in Lombardia,\" so the `locationType` is \"REGIONAL\". The location code for Lombardia is \"03,\" hence `locationCodes` is `[\"03\"]`.\n\n*   **Guaranteed Times:** Okay, this is where it gets a little nuanced. The instructions specify an array of time ranges for guaranteed service, like \"06:00-09:00\". The text discusses trains departing before 10 AM with arrival before 11AM. That's a *de facto* guarantee. However, Trenord strikes, on Sundays, don't always follow the typical weekday peak hour guarantees. Given that the instructions don't force a value, and the text describes *specific* guaranteed trains and I am not sure about the \"standard\" meaning of guaranteed times (maybe it is talking about scheduled guaranteed service slots), to be safe, I'll omit the `guaranteedTimes` key entirely. That fits the requirements and avoids potential misinterpretation.\n\nSo, the resulting JSON will be very straightforward.\n\n\n",
+    "tokens": {
+      "input": 1102,
+      "output": 93,
+      "total": 1854
+    }
+  }
+}

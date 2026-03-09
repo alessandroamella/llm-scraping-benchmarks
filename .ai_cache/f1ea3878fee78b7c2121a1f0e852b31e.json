@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 11181,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00066125,
+      "outputCost": 0.0002064,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00086765
+    },
+    "hash": "f1ea3878fee78b7c2121a1f0e852b31e",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_302.html",
+    "thoughts": "**Confirming strike status**\n\nI need to confirm that there isn't an upcoming strike. The data mentions some participation in a strike that occurred, but since the details point to it being historical with dates provided, I’ll clarify that it is indeed not relevant for the future. I’ll output the JSON with \"isStrike\" set to false, ensuring it's correctly formatted as a single line with no extra tokens or explanations. The final output will simply be: {\"isStrike\": false}.",
+    "tokens": {
+      "input": 13225,
+      "output": 516,
+      "total": 13741
+    }
+  }
+}

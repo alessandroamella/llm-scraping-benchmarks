@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-05-20 00:00:00",
+      "endDate": "2024-05-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6730,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00036375,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.0011265,
+      "cachedCost": 0,
+      "totalCost": 0.00168675
+    },
+    "hash": "b909c160467c3731584c21dd78af5997",
+    "sourceFile": "venerd_20_maggio_sciopero_24_ore_trasporto_pubblico_rischio.html",
+    "thoughts": "**Analyzing the ATAC Strike Announcement**\n\nOkay, so I'm processing this ATAC strike announcement. First off, it's scheduled for Friday, May 20th. Crucially, the year isn't specified, but given the context of a typical announcement, I'm going to assume it's for 2024, or the current year if it is applicable. The prompt is requesting a date format as `yyyy-MM-dd`, and without any indication otherwise, I should include the year.\n\nThe announcement states it's a 24-hour strike. However, there are guaranteed service times: \"regolare fino alle 8,30 e dalle 17 alle 20\". This translates to service being guaranteed between 00:00-08:30 and 17:00-20:00. This is unusual, as a standard 24-hour strike usually implies complete disruption. The language confirms the service *will* be regular during those times, so the strike is in the gaps.\n\nI need to confirm the scope. \"Sciopero generale nazionale\" indicates it's a *national* strike. Therefore, `locationType` is definitely \"NATIONAL\". No specific location codes are necessary.\n\nBased on this information, I can now construct the strike data:\n\n*   `isStrike`: true.\n*   `strikeData`:\n    *   `startDate`: \"2024-05-20 00:00:00\" (Assuming 2024).\n    *   `endDate`: \"2024-05-20 23:59:59\".\n    *   `locationType`: \"NATIONAL\".\n    *   `locationCodes`: null.\n    *   `guaranteedTimes`: [\"00:00-08:30\", \"17:00-20:00\"].\n\nSo, that should cover all the necessary parameters, assuming the year is inferred as 2024. This is an announcement for an *upcoming* event, and now I have a good handle on the relevant parameters.\n\n\n",
+    "tokens": {
+      "input": 1455,
+      "output": 131,
+      "total": 2337
+    }
+  }
+}

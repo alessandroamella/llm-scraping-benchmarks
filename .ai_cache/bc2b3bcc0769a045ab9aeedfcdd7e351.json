@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "04",
+        "05"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5216,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00034375,
+      "outputCost": 0.0001695,
+      "thinkingCost": 0.0004755,
+      "cachedCost": 0,
+      "totalCost": 0.00098875
+    },
+    "hash": "bc2b3bcc0769a045ab9aeedfcdd7e351",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-11-28-sciopero-del-personale-di-sad-.html",
+    "thoughts": "**Strike Information Extraction: A Mental Checklist**\n\nOkay, here's the deal. I need to pull strike information from this HTML and spit it out as clean JSON. The focus is precision: a parseable output, no comments, and strictly adhering to the specified schema. First things first: is it a strike? Yes, the announcement explicitly calls it a strike, happening on November 28, 2025.\n\nDate-wise, it's a full-day event, starting at midnight on the 28th and running until the end of that day. So that translates to a start date of \"2025-11-28 00:00:00\" and an end date of \"2025-11-28 23:59:00\".\n\nLocation-wise, it's regional, hitting \"Trentino Alto Adige, VENETO.\" I need to grab those location codes too - Trentino-Alto Adige is 04, and Veneto is 05. The location type is \"REGIONAL\".\n\nThe text mentions guaranteed times are available on digital channels, but they're not explicitly stated in the provided text. So, I will set `guaranteedTimes` to `null` or, preferably, omit it entirely from the JSON, per the specified schema, which is cleaner.\n\nNow, let's assemble the JSON structure. It has to be perfect, with all keys present and values enclosed in double quotes. Based on the analysis, I'll output something like this (or something functionally equivalent):\n\n```json\n{\n  \"isStrike\": true,\n  \"startDate\": \"2025-11-28 00:00:00\",\n  \"endDate\": \"2025-11-28 23:59:00\",\n  \"locationType\": \"REGIONAL\",\n  \"locationCodes\": [\"04\", \"05\"]\n}\n```\nOr, even better:\n\n```json\n{\n  \"isStrike\": true,\n  \"startDate\": \"2025-11-28 00:00:00\",\n  \"endDate\": \"2025-11-28 23:59:00\",\n  \"locationType\": \"REGIONAL\",\n  \"locationCodes\": [\"04\", \"05\"]\n}\n```\n\nThat should be precisely what is requested.\n\n\n",
+    "tokens": {
+      "input": 1375,
+      "output": 113,
+      "total": 1805
+    }
+  }
+}

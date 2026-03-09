@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3899,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007605,
+      "outputCost": 0.0001212,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00019725
+    },
+    "hash": "484bbc7350829fc428c0d06a2a5abdb1",
+    "sourceFile": "sciopero_trasporto_pubblico_attive_linee_della_metropolitana.html",
+    "thoughts": "**Providing strike status**\n\nI'm confirming that this content reports an ongoing strike, not one that's upcoming, so I need to set \"isStrike\" to false. I should focus on delivering the required JSON format accurately without any extra text. \n\nI'll finalize it as: \n\n{\"isStrike\": false}\n\nThis keeps everything clear and concise, just the way it should be!",
+    "tokens": {
+      "input": 1521,
+      "output": 303,
+      "total": 1824
+    }
+  }
+}

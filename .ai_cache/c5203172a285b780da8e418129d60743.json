@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4195,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00033975,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.0004245,
+      "cachedCost": 0,
+      "totalCost": 0.00096075
+    },
+    "hash": "c5203172a285b780da8e418129d60743",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_24h_per_venerdi_12_novembre_2025.html",
+    "thoughts": "**Analyzing the EAV Strike on December 12, 2025**\n\nOkay, let's break this down. EAV, the public transport provider for Campania (Region 15), is reporting a national general strike. The date is Friday, December 12th, 2025, and it's a full 24-hour event, starting at midnight and running until the end of the day.\n\nThe key takeaway is, unequivocally, that there *is* a strike. The data confirms this directly: `isStrike`: true.\n\nThe timeframe is precisely defined: `startDate` is midnight on the 12th, and `endDate` is 11:59:59 PM that same day. The strike's scope is confirmed to be national via `locationType`: NATIONAL. There are no specific location codes provided, which makes sense for a national event, so `locationCodes` is `null`.\n\nCrucially, they're specifying guaranteed service windows. The information highlights two periods where service *should* be operational: 05:30 to 08:30 and 16:30 to 19:30. These are the \"guaranteed times\" identified as: `guaranteedTimes`: [\"05:30-08:30\", \"16:30-19:30\"]. This is essential information to communicate to users, clearly delineating when they can reasonably expect transport to be available, and when service will be disrupted. This should be added to any advisory systems!\n\n\n",
+    "tokens": {
+      "input": 1359,
+      "output": 131,
+      "total": 1773
+    }
+  }
+}

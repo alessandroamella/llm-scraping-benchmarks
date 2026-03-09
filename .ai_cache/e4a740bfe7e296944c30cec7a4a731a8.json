@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4553,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00370975,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0002325,
+      "cachedCost": 0,
+      "totalCost": 0.00395725
+    },
+    "hash": "e4a740bfe7e296944c30cec7a4a731a8",
+    "sourceFile": "sospeso_sciopero_atac_16_gennaio_servizio_sar_regolare.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, so I've got this piece of text, \"Sospeso lo sciopero Atac del 16 gennaio. Il servizio sarà regolare.\" Right away, I see \"Sospeso\" and \"sciopero,\" meaning \"suspended\" and \"strike.\" My immediate goal is to figure out whether this is announcing a *potential* strike, or is saying the strike, that was planned, is now *cancelled*. I need to determine if I should set the `isStrike` flag to false, according to the instructions I have.\n\nAha! It's confirming that the strike of January 16th is *suspended*, and service will be regular. This is the key. The word \"suspended\" is the decisive factor. Therefore, this clearly indicates a cancellation of the planned action, and so `isStrike` is unambiguously `false`.\n\nNow I need to return this information as a JSON object, as requested. Easy enough.\n\n\n",
+    "tokens": {
+      "input": 14839,
+      "output": 10,
+      "total": 15004
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9614,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000796,
+      "outputCost": 0.0001932,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002728
+    },
+    "hash": "be7eb399efdf060c93eacfd46185bdf9",
+    "sourceFile": "comunicato_stampa_sciopero_trasporto_pubblico.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to output JSON in the correct schema. I'm looking at the content, which is in Italian about a public transport strike. The translation indicates it's about the participation rate of Atac staff at 53.2%. This information doesn’t signal an upcoming strike—it's discussing a current situation. Since there aren’t any explicit start dates or cancellations mentioned, I’ll conclude that isStrike should be false. Therefore, my output will be: {\"isStrike\": false}.",
+    "tokens": {
+      "input": 1592,
+      "output": 483,
+      "total": 2075
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3157,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0003245,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0001845,
+      "cachedCost": 0,
+      "totalCost": 0.000524
+    },
+    "hash": "16c76128094cc764c1128c4f5d9d2bd3",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_186.html",
+    "thoughts": "**Analyzing the Atac Strike Adhesion Announcement**\n\nOkay, so I've got this piece of input. It's an announcement about Atac personnel and their *adesione* – participation, in this case – in a strike. Crucially, the text is reporting *after* the strike has either concluded or is ongoing. It's not a heads-up about a future walkout. The specific number that jumps out is 18.6% adhesion.\n\nThe instructions are clear: if this is just *reporting* on strike participation that has *already occurred*, then I need to set the `isStrike` flag to `false`. That’s precisely the situation here. It's a post-event report, so the context is crucial here.\n\nTherefore, the correct output should be: `{\"isStrike\": false}`. Simple enough.\n\n\n",
+    "tokens": {
+      "input": 1298,
+      "output": 10,
+      "total": 1431
+    }
+  }
+}

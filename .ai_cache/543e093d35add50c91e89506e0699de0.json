@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 29449,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0001423,
+      "outputCost": 0.00083,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0009723
+    },
+    "hash": "543e093d35add50c91e89506e0699de0",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_24_ore_venerdi_13_dicembre_2024.html",
+    "thoughts": "**Extracting strike data**\n\nI need to output JSON based on the strike extraction schema for a strike announcement in Italian. The announcement states there will be a 24-hour strike on Friday, December 13, 2024, so isStrike should be true. \n\nI must extract the strikeData, specifying a startDate and endDate. Although it mentions it lasts 24 hours, I have to decide the start and end times for the format required. Typically, I’d set these from midnight to the end of the day, so should I go with 00:00:00 and 23:59:59?",
+    "tokens": {
+      "input": 2846,
+      "output": 2075,
+      "total": 4921
+    }
+  }
+}

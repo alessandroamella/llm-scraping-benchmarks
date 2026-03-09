@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6148,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000596,
+      "outputCost": 0.000156,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002156
+    },
+    "hash": "97982d7f0c5a5e1bc079374e783a94b0",
+    "sourceFile": "sciopero_nazionale_trasporto_pubblico_roma_aperte_metropolitane.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to check if the document I'm looking at is announcing a new or upcoming strike. The content mentions that there’s a national public transport strike happening in Rome, and it’s clearly stated as ongoing. Our rules specify that I should only set \"isStrike\" to true if it’s an announcement about an upcoming strike. Since this is an update about something already happening, I’ll set \"isStrike\" to false and output {\"isStrike\": false}.",
+    "tokens": {
+      "input": 1192,
+      "output": 390,
+      "total": 1582
+    }
+  }
+}

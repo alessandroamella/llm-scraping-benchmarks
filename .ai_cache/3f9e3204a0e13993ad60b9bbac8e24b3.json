@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-20 00:00:00",
+      "endDate": "2025-06-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5559,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00057825,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.000888,
+      "cachedCost": 0,
+      "totalCost": 0.00166275
+    },
+    "hash": "3f9e3204a0e13993ad60b9bbac8e24b3",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_24h_venerdi_20_giugno_2025.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, let's break this down. The task is clear: I need to determine if this EAV text announces a strike and, if so, extract the relevant details into a JSON object adhering to the specified schema.\n\nFirst, the text: \"Linee Vesuviane: Avviso di Sciopero 24h venerdì 20 giugno 2025\" and \"Per il giorno 20 giugno 2025 la O.S. USB ha proclamato azione di sciopero per adesione a sciopero nazionale di 24 ore...\". Clearly, this *is* a strike announcement. I can confirm `isStrike` is `true`.\n\nNow for the details. The strike is for a full 24 hours on June 20, 2025. That means `startDate` will be \"2025-06-20 00:00:00\" and, to cover the full day, `endDate` will be \"2025-06-20 23:59:59\".  The text mentions \"adesione a sciopero nazionale,\" so the `locationType` is \"NATIONAL,\" and thus `locationCodes` is `null`.\n\nFinally, regarding guaranteed service, the text states \"Servizio garantito dalle ore 05:30 alle ore 8:30 e dalle ore 16:30 alle ore 19:30\".  That gives us `guaranteedTimes` as `[\"05:30-08:30\", \"16:30-19:30\"]`.\n\nTherefore, the final output needs to be a JSON object structured as follows:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-06-20 00:00:00\",\n    \"endDate\": \"2025-06-20 23:59:59\",\n    \"locationType\": \"NATIONAL\",\n    \"locationCodes\": null,\n    \"guaranteedTimes\": [\"05:30-08:30\", \"16:30-19:30\"]\n  }\n}\n```\n\nI'll confirm that this is a valid JSON object, that it meets the schema requirements, and that there are no control tokens. Excellent, all constraints are satisfied.\n\n\n",
+    "tokens": {
+      "input": 2313,
+      "output": 131,
+      "total": 3036
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3641,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000324,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.00027,
+      "cachedCost": 0,
+      "totalCost": 0.000609
+    },
+    "hash": "f0a05e4a05d228310758a7db7a39c6b0",
+    "sourceFile": "sciopero_del_trasporto_pubblico_adesione_personale_atac_al_121.html",
+    "thoughts": "**Analyzing the ATAC Strike Announcement**\n\nOkay, so I've got this ATAC announcement: \"Sciopero del trasporto pubblico, adesione personale Atac al 12,1%\". The body confirms that the 12.1% is the *participation rate* for a public transport strike that occurred *this morning*. My task is to figure out if this is an upcoming strike announcement.\n\nBased on the Italian text, \"adesione\" (adherence/participation) is the key. The fact that they're reporting the percentage of participation for *this morning's* strike strongly suggests this is a *post*-strike update, reporting on how many employees participated. It's not a pre-strike warning.\n\nSince I am instructed to set `isStrike` to false if it's reporting participation in a strike that has already happened, the correct decision is clear. `isStrike` should be `false`. This is a report, not a warning.\n\n\n",
+    "tokens": {
+      "input": 1296,
+      "output": 10,
+      "total": 1486
+    }
+  }
+}

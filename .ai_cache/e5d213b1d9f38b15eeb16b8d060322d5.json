@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6371,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000058,
+      "outputCost": 0.0001408,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0001988
+    },
+    "hash": "e5d213b1d9f38b15eeb16b8d060322d5",
+    "sourceFile": "sciopero_del_trasporto_pubblico_la_situazione_sulla_rete.html",
+    "thoughts": "**Formatting JSON for updates**\n\nThe instruction specifies that if I'm providing real-time updates for the ongoing strike, I need to set `isStrike` to false. Okay, I’ll generate a JSON object that meets the \"strike_extraction\" format.  \n\nSo here, it will just look like this: `{\"isStrike\": false}`. No extras needed! I have to ensure the JSON is correct, as the system demands an object with `isStrike` as a boolean and possibly `strikeData`, but I’ll keep it simple with just `isStrike`.",
+    "tokens": {
+      "input": 1160,
+      "output": 352,
+      "total": 1512
+    }
+  }
+}

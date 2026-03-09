@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3379,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000344,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0001875,
+      "cachedCost": 0,
+      "totalCost": 0.0005465
+    },
+    "hash": "9d7614a4e5307544f50b422fd9dab04b",
+    "sourceFile": "sciopero_trasporto_pubblico_aperte_metropolitane_situazione_sulla_rete_15.html",
+    "thoughts": "**Analyzing the Document for Strike Information**\n\nOkay, my task here is straightforward: figure out if this document is announcing a *future* strike. I need to sift through the content and make a judgment. Let's see... the text mentions \"Sciopero del trasporto pubblico, aperte le metropolitane. La situazione sulla rete\" and \"È in corso lo sciopero del trasporto pubblico di 24 ore.\" Right, those phrases immediately jump out. I see \"È in corso,\" which translates to \"It is in progress.\" That's the key indicator. Since the document describes an *ongoing* strike, not a future one, I have to conclude this isn't an announcement of an *upcoming* event. Now, there's a constraint: if I'm dealing with real-time updates about a strike that's already happening, `isStrike` needs to be set to false. Therefore, based on the presence of the phrase \"È in corso,\" and my interpretation that this describes a strike in progress, the result is: `isStrike: false`.\n\n\n",
+    "tokens": {
+      "input": 1376,
+      "output": 10,
+      "total": 1511
+    }
+  }
+}

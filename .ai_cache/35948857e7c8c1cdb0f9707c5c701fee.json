@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-11-29 00:00:00",
+      "endDate": "2024-11-29 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8412,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00019275,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.001833,
+      "cachedCost": 0,
+      "totalCost": 0.00222225
+    },
+    "hash": "35948857e7c8c1cdb0f9707c5c701fee",
+    "sourceFile": "venerdi_29_novembre_sciopero_generale_nazionale_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Strike Analysis: Italian Transportation**\n\nOkay, here's what I'm thinking. The task is to identify if this text describes a strike, and if so, extract the relevant information in JSON format. The input is \"Venerdì 29 novembre, sciopero generale nazionale. Trasporto pubblico a rischio,\" which translates to \"Friday, November 29th, national general strike. Public transport at risk.\" Straight away, I see \"sciopero generale nazionale,\" meaning it's a national strike. Good.\n\nThe date is clearly November 29th, 2024. Duration is implied to be 24 hours given the context of a general strike. Now, the trickier part is the guaranteed service times. The text says \"Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20\" which indicates regular service *until* 8:30 AM and *from* 5 PM to 8 PM. Now, the standard guaranteed times for Rome strikes are usually 5:30 AM to 8:30 AM and 5 PM to 8 PM, but I need to be precise. The input text specifically states \"fino alle 8,30\" (until 08:30) and \"dalle 17 alle 20\" (from 17:00 to 20:00). So, to align with the text, the guaranteed times will be \"00:00-08:30\" and \"17:00-20:00\".\n\nTherefore, I confirm `isStrike` is true. The `startDate` is \"2024-11-29 00:00:00\" and the `endDate` is \"2024-11-29 23:59:59\". The `locationType` is \"NATIONAL,\" and I can set `locationCodes` to `null` given the national scope. For `guaranteedTimes`, I'll stick with \"00:00-08:30\" and \"17:00-20:00\" because that's what the text specifically indicates. \"fino alle 8,30\" = until 08:30. \"dalle 17 alle 20\" is from 17:00 to 20:00.\n\nFinal check... \"sciopero generale nazionale\" confirms NATIONAL. Everything is aligned with the schema. I'm ready to output the JSON now.\n\n\n",
+    "tokens": {
+      "input": 771,
+      "output": 131,
+      "total": 2124
+    }
+  }
+}

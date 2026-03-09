@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 09:00:00",
+      "endDate": "2024-12-13 13:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5083,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00025525,
+      "outputCost": 0.0001335,
+      "thinkingCost": 0.000726,
+      "cachedCost": 0,
+      "totalCost": 0.00111475
+    },
+    "hash": "f7f8324bbef947306c7a16ea8bca256a",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_di_4_ore_del_13_dicembre_2024.html",
+    "thoughts": "**Analyzing the EAV Strike Announcement**\n\nOkay, so I'm looking at this announcement regarding EAV, which is located in Campania (region 15). The core of this is a strike announcement, specifically a four-hour strike scheduled for December 13, 2024, from 09:00 to 13:00. This is a real, confirmed strike, not a hypothetical.\n\nLet's break this down further for data extraction. The most important thing is confirming it *is* a strike, which is true, with `isStrike: true`. The start and end dates are clear: `startDate`: \"2024-12-13 09:00:00\" and `endDate`: \"2024-12-13 13:00:00\". The date format is `yyyy-MM-dd HH:mm:ss`, confirmed.\n\nNow, the trickier part is the location. The text calls it a \"sciopero generale nazionale,\" a general national strike, even though it's affecting EAV, a regional company. I initially considered marking it as REGIONAL, but \"sciopero generale nazionale\" means it's a *national* strike impacting local services. So, I will classify it as `locationType`: \"NATIONAL\". It doesn't specify particular codes, and it is in fact a general strike, so `locationCodes`: null.\n\nRegarding guaranteed services, the announcement explicitly states \"Non sarà garantito il servizio durante l’orario di sciopero.\" This translates to \"The service will not be guaranteed during the strike hours.\"\n\nIn summary, I can confidently extract this data: `isStrike`: true, `strikeData`: `startDate`: \"2024-12-13 09:00:00\", `endDate`: \"2024-12-13 13:00:00\", `locationType`: \"NATIONAL\", and `locationCodes`: null. This is an announcement with a clear start and end date for a national strike affecting EAV services.\n\n\n",
+    "tokens": {
+      "input": 1021,
+      "output": 89,
+      "total": 1594
+    }
+  }
+}

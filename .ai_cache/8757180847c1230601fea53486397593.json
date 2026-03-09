@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-05 03:00:00",
+      "endDate": "2025-02-06 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22119,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000846,
+      "outputCost": 0.0006444,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.000729
+    },
+    "hash": "8757180847c1230601fea53486397593",
+    "sourceFile": "strike-detail-mercoled--5-febbraio-sciopero-dei-treni-regionali.html",
+    "thoughts": "**Filling strike data**\n\nI need to fill in the strike data with specific details. The start date is \"Dalle ore 3 di mercoledì 5 alle ore 2 di giovedì 6 febbraio,\" so I'll set it as 2025-02-05 03:00:00. The end date will be 2025-02-06 02:00:00. For location type, it looks like a REGIONAL strike since the content mentions impacts on regional, suburban, and airport services. The Lombardia region code is 03, which is needed for my input.",
+    "tokens": {
+      "input": 1692,
+      "output": 1611,
+      "total": 3303
+    }
+  }
+}

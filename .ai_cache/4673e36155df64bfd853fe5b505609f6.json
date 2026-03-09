@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3720,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0003275,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0003795,
+      "cachedCost": 0,
+      "totalCost": 0.000722
+    },
+    "hash": "4673e36155df64bfd853fe5b505609f6",
+    "sourceFile": "sciopero_trasporto_pubblico_mattinata_ha_aderito_222_personale_atac.html",
+    "thoughts": "**Analyzing the Strike Report**\n\nOkay, let's break this down. My input is a news snippet: \"Sciopero del trasporto pubblico, in mattinata ha aderito il 22,2% del personale Atac\" – right, a public transport strike with 22.2% Atac staff participation this morning. My primary goal, given my area of expertise, is to identify if this represents an *upcoming* strike announcement or something else. I need to figure out if I can flag this as a definite strike situation.\n\nThe instructions are clear: if this is about *participation*, whether it's an update during the strike or a report afterward, it's NOT an upcoming strike. Only an actual *announcement* counts.\n\nThe language is key. \"Ha aderito\" – past tense, \"has joined\" or \"participated\". That immediately signals this is about what's *already happened*. Then the expanded text confirms it: \"L’adesione complessiva del personale Atac allo sciopero... rilevata in mattinata, è stata pari al 22,2%.\" Translation: \"The overall participation of Atac staff in the public transport strike... detected in the morning, was equal to 22.2%.\" This definitively confirms it's a post-event report.\n\nTherefore, `isStrike` is false. This isn't an announcement; it's a reporting of the participation rate in an already ongoing strike. Time to move on to the next input.\n\n\n",
+    "tokens": {
+      "input": 1310,
+      "output": 10,
+      "total": 1573
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3919,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00370725,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0002385,
+      "cachedCost": 0,
+      "totalCost": 0.00396075
+    },
+    "hash": "7bfb367f59421e361b7231ab5fea4930",
+    "sourceFile": "sciopero_generale_nazionale_adesione_personale_atac_al_26.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, let's break this down. My objective is clear: determine if this document heralds an impending strike. The title, \"Sciopero generale nazionale, adesione personale Atac al 26%\" immediately suggests we're dealing with a general, national strike, with a reported participation rate. The core of the issue, however, will be understanding the temporal aspect.\n\nThe content analysis provides the critical insight. The summary indicates this isn't about *planning* a strike; it details the \"participation... of today\" implying that the strike has *already occurred*. The key phrase here is \"adesione ... di oggi, rilevata in mattinata.\" The dates are telling as well; it's *published* on December 13th, with a December 23rd update. This post-dates any hypothetical announcement of the strike and updates on its actual participation.\n\nTherefore, considering this detailed data and my expert understanding of strike announcements, my final conclusion is definitive: this is a retrospective *report* on a past strike, focusing on the participation rate. It's not a warning or an announcement.\n\nSo, the `isStrike` parameter is set to `false`.\n\n\n",
+    "tokens": {
+      "input": 14829,
+      "output": 10,
+      "total": 14998
+    }
+  }
+}

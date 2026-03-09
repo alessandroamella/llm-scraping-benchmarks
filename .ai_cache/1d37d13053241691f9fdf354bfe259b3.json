@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-28 08:20:00",
+      "endDate": "2025-01-28 12:20:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 33530,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0001175,
+      "outputCost": 0.0011176,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0012351
+    },
+    "hash": "1d37d13053241691f9fdf354bfe259b3",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_4_ore_martedi_28_gennaio_2025.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to output JSON data that includes `isStrike` and possibly `strikeData`. The content is in Italian and pertains to a strike announcement titled \"Linee Vesuviane: Avviso di sciopero di 4 ore.\" The strike is scheduled for January 28, 2025, from 08:20 to 12:20. It mentions the reasons related to workplace safety and notes that train services during the strike will depend on how many workers participate. This is an upcoming event relevant as of the article's date, January 27, 2025.",
+    "tokens": {
+      "input": 2350,
+      "output": 2794,
+      "total": 5144
+    }
+  }
+}

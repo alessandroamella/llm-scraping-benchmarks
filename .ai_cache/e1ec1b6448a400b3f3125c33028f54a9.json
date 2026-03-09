@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-20 00:00:00",
+      "endDate": "2025-06-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6794,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0038025,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.0010995,
+      "cachedCost": 0,
+      "totalCost": 0.0050985
+    },
+    "hash": "e1ec1b6448a400b3f3125c33028f54a9",
+    "sourceFile": "venerdi_20_giugno_sciopero_generale_nazionale_di_usb_cub_e_sgb_a_roma_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Strike Analysis: Italian Public Transport**\n\nOkay, let's break this down. My task is clear: I need to analyze this text and determine if it describes a strike, and if so, return a JSON object with the strike details. The format is critical: pure, valid JSON. I'm looking for `isStrike` (boolean), and if true, a `strikeData` object with specifics: `startDate`, `endDate`, `locationType`, `locationCodes`, and `guaranteedTimes`.\n\nAlright, the headline and content scream strike. \"Sciopero generale\" – general strike – and \"trasporto pubblico a rischio\" – public transport at risk – it's a strike, no doubt. The date is Friday, June 20th. Hold on, the footer says \"Pubblicato il: 13/06/2025,\" so the year is 2025. That gives me the date: 2025-06-20. The type is \"Nazionale,\" which means national, so `locationType` will be \"NATIONAL\" and no location codes are needed, thus `locationCodes` is `null`. It’s a 24-hour strike. The relevant text for guaranteed times is \"garantito fino alle 8,30 e dalle 17 alle 20.\" This translates to service being guaranteed until 8:30 and then from 17:00 to 20:00. These guaranteed times will go into a string array. So it's \"00:00-08:30\" and \"17:00-20:00\".\n\nNow, let's assemble the JSON object.\n\n*   `isStrike`: True\n*   `strikeData`:\n    *   `startDate`: \"2025-06-20 00:00:00\"\n    *   `endDate`: \"2025-06-20 23:59:59\"\n    *   `locationType`: \"NATIONAL\"\n    *   `locationCodes`: null\n    *   `guaranteedTimes`: \\[\"00:00-08:30\", \"17:00-20:00\"]\n\nI have validated all the fields and ensured it is a valid JSON object, now. Ready.\n\n\n",
+    "tokens": {
+      "input": 15210,
+      "output": 131,
+      "total": 16074
+    }
+  }
+}

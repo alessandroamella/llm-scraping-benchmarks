@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7020,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00012785,
+      "outputCost": 0.0001612,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00028905
+    },
+    "hash": "1a3349910ce0ee988291416ae2c2cdad",
+    "sourceFile": "sciopero_24_febbraio2025_stato_del_servizio.html",
+    "thoughts": "**Analyzing strike content**\n\nI need to determine if the document is announcing an upcoming strike from ATAC in Rome. If it’s about a cancellation or participation in a past strike, I should set isStrike to false. For real-time updates about the ongoing strike or service changes, that should also be false. It seems like the text indicates an ongoing strike, saying \"The national public transport strike is currently underway,\" which suggests I should not set isStrike to true.",
+    "tokens": {
+      "input": 2557,
+      "output": 403,
+      "total": 2960
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-09-20 00:00:00",
+      "endDate": "2024-09-21 00:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 31315,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007975,
+      "outputCost": 0.0015552,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00163495
+    },
+    "hash": "54744b9f16560a7afe44a0da7024c2fd",
+    "sourceFile": "venerd_20_settembre_sciopero_nazionale_24_ore_trasporto_pubblico_servizio_rischio.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to output JSON with an `isStrike` boolean, and include `strikeData` if it's true. The content is a news post in Italian about a national 24-hour public transport strike on September 20. The H1 clearly indicates it's a strike announcement. The body confirms that public transport will be at risk due to the strike called by various unions. It explains service windows, which further confirms that `isStrike` should indeed be true.",
+    "tokens": {
+      "input": 1595,
+      "output": 3888,
+      "total": 5483
+    }
+  }
+}

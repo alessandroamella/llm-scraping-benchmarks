@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-05 03:00:00",
+      "endDate": "2025-02-06 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5142,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0003305,
+      "outputCost": 0.000189,
+      "thinkingCost": 0.000561,
+      "cachedCost": 0,
+      "totalCost": 0.0010805
+    },
+    "hash": "52ec5cd151284c7eb8ce37c547e55ec2",
+    "sourceFile": "strike-detail-mercoled--5-febbraio-sciopero-dei-treni-regionali.html",
+    "thoughts": "**Strike Analysis of Trenord Announcement**\n\nOkay, let's break this down. My task is clear: I need to analyze this HTML content and determine if it describes an upcoming strike, and if so, extract the relevant data and format it into JSON.  The target parameters are `isStrike`, `strikeData` which will contain details like `startDate`, `endDate`, `locationType`, `locationCodes`, and `guaranteedTimes`. The input is centered around a Trenord announcement in Lombardia (code 03).\n\nThe announcement explicitly states: \"Mercoledì 5 febbraio sciopero dei treni regionali\" – so, *yes*, `isStrike` is definitely `true`.\n\nNow, for the data extraction. The announcement mentions the date: \"5 febbraio\" and the time range \"Dalle ore 3 di mercoledì 5 alle ore 2 di giovedì 6 febbraio\". Crucially, the web address \"2025/Trenord_250203\"  implies a 2025 date, so the start date is \"2025-02-05 03:00:00\" and the end date is \"2025-02-06 02:00:00\".\n\nThe location specifics are straightforward.  The company is Trenord, and it involves \"treni regionali\" in Lombardia, indicated by location code \"03\". Therefore, `locationType` is \"REGIONAL\", and `locationCodes` is [\"03\"].\n\nFinally, the guaranteed times: \"6-9 e 18-21\", which translates to `guaranteedTimes` as [\"06:00-09:00\", \"18:00-21:00\"].\n\nSo, to summarize in a structured format: I'm confident in the values. Now, I need to make sure the JSON output adheres precisely to the schema, with correct key names and data types to prevent any issues downstream in the integration pipeline.\n\n\n",
+    "tokens": {
+      "input": 1322,
+      "output": 126,
+      "total": 1822
+    }
+  }
+}

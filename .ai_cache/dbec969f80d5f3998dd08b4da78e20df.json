@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5786,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00044675,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.000945,
+      "cachedCost": 0,
+      "totalCost": 0.00160175
+    },
+    "hash": "dbec969f80d5f3998dd08b4da78e20df",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_24_ore_del_13_dicembre_2024_aggiornamento.html",
+    "thoughts": "**Strike Analysis: Linee Vesuviane, December 13, 2024**\n\nAlright, let's break this down. The source clearly indicates a confirmed, full 24-hour strike affecting the Linee Vesuviane on December 13th, 2024. EAV is the responsible entity, and we can confirm that this strike's impacting the Campania region, which corresponds to the ISTAT code \"15\". Initially there was some doubt, but it's now back on as a full day's worth.\n\nThe guaranteed service windows are specified as 05:30 to 08:30 and 16:30 to 19:30, which neatly frames the problem for the public. Considering it's a 24-hour strike, and given that most services start at 00:00, I'm setting the strike's duration as beginning at midnight and going until 23:59:59 on that day. So that's the full day.\n\nLet's quickly check this data against our schema: `isStrike` is true, obviously. `strikeData` is present, and contains the relevant information. `startDate` is \"2024-12-13 00:00:00\", properly formatted. `endDate` is set to \"2024-12-13 23:59:59\", also good. `locationType` is correctly identified as \"REGIONAL\". The `locationCodes` array confirms the focus on region \"15\". Finally, the `guaranteedTimes` are accurately represented as the expected strings \"05:30-08:30\" and \"16:30-19:30\". Everything is in order, and it's all clearly and correctly presented. The schema is followed perfectly.\n\n\n",
+    "tokens": {
+      "input": 1787,
+      "output": 140,
+      "total": 2557
+    }
+  }
+}

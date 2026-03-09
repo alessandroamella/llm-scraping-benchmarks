@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7612,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00066285,
+      "outputCost": 0.0001564,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00081925
+    },
+    "hash": "b463c1ae1364e547ab3e44fed2b21b60",
+    "sourceFile": "sospeso_sciopero_atac_16_gennaio_servizio_sar_regolare.html",
+    "thoughts": "**Formatting strike extraction**\n\nI need to output JSON according to the strike_extraction schema. The content is in Italian, with a title that translates to \"The Atac strike on January 16 suspended. Service will be regular.\" The body states the same, confirming that the strike is canceled, and service will be as usual. The important detail is that the cancellation means isStrike should be set to false. So, I'll carefully format this into the correct JSON structure for clarity!",
+    "tokens": {
+      "input": 13257,
+      "output": 391,
+      "total": 13648
+    }
+  }
+}

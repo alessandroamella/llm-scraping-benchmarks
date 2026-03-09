@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-07-23 09:00:00",
+      "endDate": "2025-07-23 11:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5013,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000469,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.000756,
+      "cachedCost": 0,
+      "totalCost": 0.0013735
+    },
+    "hash": "bd36348e8e7de9901fdc0bc7debc1f19",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_2_ore_mercoledi_23_luglio_2025.html",
+    "thoughts": "**Strike Alert: EAV (Campania, Code 15)**\n\nOkay, here's what I've got. I've just processed data regarding a strike impacting EAV, the public transport system in the Campania region, identified by code \"15\". The announcement confirms a two-hour company strike, or *sciopero aziendale*, set to occur on Wednesday, July 23rd, 2025. The strike window is from 09:00 to 11:00. This is pretty straightforward. I've successfully extracted the key details: strike status is true, with start and end times clearly defined as \"2025-07-23 09:00:00\" and \"2025-07-23 11:00:00\", respectively. Since EAV operates regionally within Campania, I'm classifying the location type as \"REGIONAL\" and associating it with the location code \"15\".\n\nThe announcement mentions \"first and last departures guaranteed\" but doesn't actually provide specific time bands. The text says it lists guaranteed departures, but doesn't state clear time intervals for \"fasce di garanzia\" as is typical. Therefore, I will not include the *guaranteedTimes* in the structured data I'm assembling, as it would be incomplete. I'll stick to what is clearly presented in the source.\n\nHere’s the structured data I'm building, ready for further processing:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-07-23 09:00:00\",\n    \"endDate\": \"2025-07-23 11:00:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"15\"]\n  }\n}\n```\n\n\n",
+    "tokens": {
+      "input": 1876,
+      "output": 99,
+      "total": 2479
+    }
+  }
+}

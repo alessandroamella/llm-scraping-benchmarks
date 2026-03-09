@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4250,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00378275,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000489,
+      "cachedCost": 0,
+      "totalCost": 0.00428675
+    },
+    "hash": "ff0fcf1a9497c7d989893440d168fb6c",
+    "sourceFile": "sciopero_generale_aperte_le_metropolitane_e_la_ferrovia_termini_centocelle.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, the user wants me to determine if this text is announcing an *upcoming* strike. I see they've given me text from \"Roma Servizi per la Mobilità\" discussing a strike, and my output needs to be a JSON object with an `isStrike` key. If it's *not* an announcement of an upcoming strike, I need to return `isStrike: false`. Otherwise, I need `isStrike: true` and then the `strikeData`.\n\nThe title is: \"Sciopero generale, aperte le metropolitane e la ferrovia Termini-Centocelle\" – \"General strike, subways and Termini-Centocelle railway are open.\" The content starts with: \"È in corso lo sciopero nazionale generale che coinvolge anche il trasporto pubblico. Ecco la situazione sulla rete romana...\" – \"The national general strike is *in progress* which also involves public transport. Here is the situation on the Roman network...\"\n\nAh, right, this is crucial. The text *explicitly* states \"È in corso\" – \"It is in progress.\" The instructions specifically say that if the text is providing a real-time update *about* an ongoing strike, like \"the metro is currently closed due to a strike,\" I should set `isStrike` to `false`. That's exactly what this is! It's giving a live update.\n\nSo, despite the title mentioning a \"general strike,\" the text itself is clearly describing a strike that is already *happening*. Therefore, the answer is no, it's not announcing an *upcoming* strike. I should set `isStrike` to `false`.\n\n\n",
+    "tokens": {
+      "input": 15131,
+      "output": 10,
+      "total": 15467
+    }
+  }
+}

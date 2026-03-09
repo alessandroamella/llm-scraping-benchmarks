@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-05-02 08:30:00",
+      "endDate": "2023-05-02 12:30:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "08:30-12:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 25791,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00067065,
+      "outputCost": 0.0005856,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00125625
+    },
+    "hash": "a5a5b8385c5ca1cfa0d7a0cb1e9d2df2",
+    "sourceFile": "martedi_2_maggio_sciopero_nazionale_4_ore_trasporto_pubblico_romano_rischio.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to generate JSON that matches the requirements. The content is about a national strike on May 2, lasting four hours from 8:30 AM to 12:30 PM in Rome, impacting public transport. The status is clear: public transport will be at risk during this time. I'll extract the start and end dates for the strike and set the `isStrike` value to true. I should also note the publication date for context.",
+    "tokens": {
+      "input": 13413,
+      "output": 1464,
+      "total": 14877
+    }
+  }
+}

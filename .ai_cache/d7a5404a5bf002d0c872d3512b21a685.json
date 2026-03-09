@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-10-21 08:30:00",
+      "endDate": "2022-10-21 12:30:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "08:30-12:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18575,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006746,
+      "outputCost": 0.0008088,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0014834
+    },
+    "hash": "d7a5404a5bf002d0c872d3512b21a685",
+    "sourceFile": "venerd_prossimo_bus_della_roma_tpl_rischio_830_1230_sciopero_usb.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to output JSON following the strike_extraction schema and check if the document announces a new or upcoming strike. The content is in Italian, indicating that next Friday, Roma Tpl buses will be at risk from 8:30 to 12:30 due to a USB strike. It mentions the date \"October 21, 2022,\" so it appears to reference a past event rather than something upcoming. It's crucial I keep this in mind as I structure the output!",
+    "tokens": {
+      "input": 13492,
+      "output": 2022,
+      "total": 15514
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-12-14 09:00:00",
+      "endDate": "2023-12-14 17:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "09:00-10:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 32535,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000736,
+      "outputCost": 0.0008964,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00097
+    },
+    "hash": "e66519a817caacd9b1a8888f57bfa0b6",
+    "sourceFile": "strike-detail-gioved--14-dicembre-dalle-ore-9-alle-ore-17-sciope.html",
+    "thoughts": "**Extracting strike information**\n\nI need to format the output as JSON according to the required schema, which includes a boolean for isStrike and strikeData only if true. The content indicates an upcoming strike on Thursday, December 14, from 9 AM to 5 PM, announced by some unions. Given the article's date is December 12, 2023, isStrike should be true. Now, I’ll extract the necessary strikeData, converting dates into the 'yyyy-MM-dd HH:mm:ss' format.",
+    "tokens": {
+      "input": 1472,
+      "output": 2241,
+      "total": 3713
+    }
+  }
+}

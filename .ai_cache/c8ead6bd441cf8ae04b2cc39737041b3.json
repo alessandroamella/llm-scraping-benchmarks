@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-10 00:00:00",
+      "endDate": "2025-10-11 00:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 28136,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00066755,
+      "outputCost": 0.0011628,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00183035
+    },
+    "hash": "c8ead6bd441cf8ae04b2cc39737041b3",
+    "sourceFile": "venerdi_10_sciopero_del_trasporto_pubblico_rete_atac_a_rischio.html",
+    "thoughts": "**Analyzing strike announcement**\n\nThe main title mentions a public transport strike on October 10, 2025, indicating it's announcing this upcoming event. The text outlines that the transport sector may be affected by strikes from the unions Sul, Usb, and Orsa. The information suggests this is indeed a future strike announcement. Based on this, I'll conclude that this document confirms an upcoming strike, which means isStrike = true. I need to extract details like start date, end date, location types, and guaranteed times.",
+    "tokens": {
+      "input": 13351,
+      "output": 2907,
+      "total": 16258
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4683,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005875,
+      "outputCost": 0.0001384,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00019715
+    },
+    "hash": "5692d8c3f4756f243b7661064e9fe5d9",
+    "sourceFile": "sciopero_attive_metro_b_chiusa_c.html",
+    "thoughts": "**Processing strike announcement**\n\nI need to respond with JSON according to the schema. The document is about an ongoing national strike based on the status, \"È in corso lo sciopero nazionale,\" meaning the strike is happening now, not announcing an upcoming strike.\n\nSince it's ongoing, per the instructions, I should set \"isStrike\" to false. I’ll output: { \"isStrike\": false }. I’ll double-check if any other fields are necessary for the JSON response.",
+    "tokens": {
+      "input": 1175,
+      "output": 346,
+      "total": 1521
+    }
+  }
+}

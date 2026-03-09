@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-10-21 08:30:00",
+      "endDate": "2022-10-21 12:30:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 38095,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007645,
+      "outputCost": 0.001468,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00154445
+    },
+    "hash": "4477a314ea2551772ae3b0754f3701d8",
+    "sourceFile": "venerd_prossimo_bus_della_roma_tpl_rischio_830_1230_sciopero_usb.html",
+    "thoughts": "**Analyzing upcoming strike details**\n\nThere's a potential strike on Friday from 8:30 to 12:30, primarily affecting peripheral lines related to the Roma Tpl consortium due to an announcement from the Usb union. The news states that this strike could risk bus services. It's important to set the isStrike variable true since this is indeed announcing an upcoming event. Atac lines appear unaffected, but I still need to gather the required data like start and end dates, location type, and location codes.",
+    "tokens": {
+      "input": 1529,
+      "output": 3670,
+      "total": 5199
+    }
+  }
+}

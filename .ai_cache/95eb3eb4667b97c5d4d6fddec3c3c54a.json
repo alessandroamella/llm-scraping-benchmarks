@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3371,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00368725,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0002265,
+      "cachedCost": 0,
+      "totalCost": 0.00392875
+    },
+    "hash": "95eb3eb4667b97c5d4d6fddec3c3c54a",
+    "sourceFile": "sciopero_generale_nazionale_adesione_personale_atac_23.html",
+    "thoughts": "**Analyzing Historical Strike Participation**\n\nOkay, here's the deal. I've just processed an article, the title of which suggests it's about a past national general strike and, specifically, the level of Atac personnel participation – the headline mentions \"adesione.\" The document's date is 2022, which tells me immediately this is reporting on a past event. I need to figure out if it describes an ongoing strike or just the outcome of a past one.\n\nLooking closer, the content confirms this is purely informational, just providing a breakdown of participation percentages for a strike that *already happened*. It's not advocating for any future action or detailing current strike activity. Based on this, I'm confident in setting the `isStrike` flag to `false`. This article is a report on historical data, not a call to action or a real-time strike update. My initial assessment is confirmed: it describes the aftermath, not the current state.\n\n\n",
+    "tokens": {
+      "input": 14749,
+      "output": 10,
+      "total": 14910
+    }
+  }
+}

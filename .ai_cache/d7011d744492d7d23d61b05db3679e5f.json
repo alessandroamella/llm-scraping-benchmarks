@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4241,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00026225,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.0004545,
+      "cachedCost": 0,
+      "totalCost": 0.00091325
+    },
+    "hash": "d7011d744492d7d23d61b05db3679e5f",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-11-28-sciopero-nazionale-personale-a.html",
+    "thoughts": "**Strike Analysis Confirmation**\n\nOkay, let's break this down. My task is clear: ascertain if this text announces an upcoming strike. The language is Italian, but the key terms jump out immediately. \"SCIOPERO NAZIONALE PERSONALE AUTOFERROTRANVIERI\" – that's a national strike of auto-rail personnel. No ambiguity there. It clearly states, \"Il giorno venerdì 28 novembre 2025... è stato indetto uno sciopero di 24 ore,\" meaning a 24-hour strike has been called for Friday, November 28th, 2025.\n\nThe \"NAZIONALE\" confirms the scope: it's national. I'm inferring the duration of 24 hours to be from midnight to midnight – that is, 00:00:00 to 23:59:59 on the specified date.\n\nFurther, I've got the guaranteed service times: \"dalle ore 6.00 alle ore 9.00 e dalle ore 18.00 alle ore 21.00.\" So, commuters are advised to expect services between 6 AM and 9 AM and between 6 PM and 9 PM, but be prepared for disruption outside those guaranteed windows.\n\nTherefore, `isStrike` is definitely `true`. I’ve extracted the precise `startDate` as 2025-11-28 00:00:00, the `endDate` as 2025-11-28 23:59:59, the `locationType` is confidently \"NATIONAL\" and the `guaranteedTimes` are [\"06:00-09:00\", \"18:00-21:00\"]. The analysis is complete; this is a confirmed national strike.\n\n\n",
+    "tokens": {
+      "input": 1049,
+      "output": 131,
+      "total": 1483
+    }
+  }
+}

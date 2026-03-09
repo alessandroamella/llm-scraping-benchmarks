@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-09-20 00:00:00",
+      "endDate": "2024-09-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24437,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006305,
+      "outputCost": 0.0009964,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00105945
+    },
+    "hash": "3dde00c8ffbecf3bbc08835de2c58c6a",
+    "sourceFile": "venerd_20_settembre_sciopero_nazionale_24_ore_trasporto_pubblico_servizio_rischio.html",
+    "thoughts": "**Formatting strike details**\n\nI need to extract strike details like startDate, endDate, locationType, locationCodes, and guaranteedTimes. The article mentions \"Venerdì 20 settembre\" without a year, but it seems to relate to the publication on 13/09/2024. So, I’ll use 2024-09-20 as the date.\n\nFor the strike, starting at 00:00:00 and ending at 23:59:59 on the same day should work for a national strike. I'll designate locationType as \"NATIONAL,\" following the guidelines!",
+    "tokens": {
+      "input": 1261,
+      "output": 2491,
+      "total": 3752
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 2818,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000179,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000213,
+      "cachedCost": 0,
+      "totalCost": 0.000407
+    },
+    "hash": "18a61417c949abea2932e5d6a7a9cdc5",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_112.html",
+    "thoughts": "**Analyzing the Strike Document**\n\nOkay, let's break this down. My objective is clear: determine if this document signals an *upcoming* strike. The core piece of text, \"Sciopero del trasporto pubblico, adesione personale Atac all’11,2%\" (Public transport strike, Atac staff participation at 11.2%), immediately grabs my attention. The keywords \"Sciopero\" and \"adesione\" (strike and participation) are strong indicators, but the context is crucial.\n\nI need to cross-reference that with the publication or update dates which appear to be from the 2022/2023 timeframe. Now, this is the key piece of information. The phrase \"participation at 11.2%\" signifies this event has already taken place. This data is documenting participation *after* the fact.\n\nTherefore, because this describes participation *in* an event, not a call for one, I must conclude this is *not* an announcement of a future strike. I have to assign `isStrike` to `false`. Since there is no indication of an upcoming strike, there’s no useful `strikeData` to extract. It’s a straightforward determination based on a careful reading of the provided information.\n\n\n",
+    "tokens": {
+      "input": 716,
+      "output": 10,
+      "total": 868
+    }
+  }
+}

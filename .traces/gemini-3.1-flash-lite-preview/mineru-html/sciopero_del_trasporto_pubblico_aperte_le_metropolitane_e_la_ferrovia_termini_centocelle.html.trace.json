@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-03-09T18:48:40.830Z",
+  "timestamp": "2026-03-09T19:15:48.183Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "ATAC",
     "fileName": "sciopero_del_trasporto_pubblico_aperte_le_metropolitane_e_la_ferrovia_termini_centocelle.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "mineru-html",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"ATAC\" (the public transport company of Rome, Lazio (12)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: mineru-html):\n<html lang=\"it-IT\" prefix=\"og: https://ogp.me/ns#\"><body class=\"wp-singular comunicato-template-default single single-comunicato postid-11173 wp-embed-responsive wp-theme-hello-elementor wp-child-theme-hello-elementor-child hello-elementor-default elementor-default elementor-kit-12678 elementor-page-15972\">\n<div class=\"elementor elementor-15972 elementor-location-single post-11173 comunicato type-comunicato status-publish hentry sezione-newsmedia\" data-elementor-id=\"15972\" data-elementor-post-type=\"elementor_library\" data-elementor-type=\"single-page\">\n<div class=\"elementor-element elementor-element-6ee3468 e-flex e-con-boxed e-con e-parent\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"6ee3468\" data-settings='{\"background_background\":\"classic\"}'>\n<div class=\"e-con-inner\">\n<div class=\"elementor-element elementor-element-6945d4c e-con-full e-flex e-con e-child\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"6945d4c\">\n<div class=\"elementor-element elementor-element-da182fa e-con-full e-flex e-con e-child\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"da182fa\">\n<div class=\"elementor-element elementor-element-aff84d2 elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading\" data-e-type=\"widget\" data-element_type=\"widget\" data-id=\"aff84d2\" data-widget_type=\"theme-post-title.default\">\n<div class=\"elementor-widget-container\">\n<h1 class=\"elementor-heading-title elementor-size-default\" _item_id=\"1\">Sciopero del trasporto pubblico, aperte le metropolitane e la ferrovia Termini-Centocelle</h1> </div>\n</div>\n</div>\n</div>\n</div>\n</div>\n<div class=\"elementor-element elementor-element-32c51eb e-flex e-con-boxed e-con e-parent\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"32c51eb\">\n<div class=\"e-con-inner\">\n<div class=\"elementor-element elementor-element-7a3d033 e-con-full e-flex e-con e-child\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"7a3d033\" id=\"main-content\">\n<div class=\"elementor-element elementor-element-723d484 elementor-widget elementor-widget-theme-post-content\" data-e-type=\"widget\" data-element_type=\"widget\" data-id=\"723d484\" data-widget_type=\"theme-post-content.default\">\n<div class=\"elementor-widget-container\">\n<p _item_id=\"3\">È in corso lo sciopero nazionale del trasporto pubblico che si concluderà alle 12,30. Ecco la situazione sulla rete romana.</p>\n<p _item_id=\"4\">-Metro A: prosegue servizio<br>-Metro B/B1: prosegue servizio<br>-Metro C: prosegue servizio<br>-Ferrotramvia Termini-Centocelle: prosegue servizio<br>-Bus e tram: possibili riduzioni di servizio </p>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</body></html>"
   },
   "response": {
@@ -16,16 +16,16 @@
     "usage": {
       "input": 1374,
       "output": 10,
-      "total": 1524
+      "total": 1610
     },
     "costUsd": {
       "inputCost": 0.0003435,
       "outputCost": 0.000015,
-      "thinkingCost": 0.00021,
+      "thinkingCost": 0.000339,
       "cachedCost": 0,
-      "totalCost": 0.0005685
+      "totalCost": 0.0006975
     },
-    "durationMs": 2838,
-    "thoughts": "**Analyzing the ATAC Strike Announcement**\n\nOkay, let's break this down. I've got an ATAC announcement here, and my task is clear: figure out if this is about an upcoming strike, and if so, grab the key details. However, there's a specific instruction to keep in mind: if it's *already* happening and giving real-time updates, I need to set `isStrike` to `false`.\n\nLooking at the content, it's pretty straightforward. The key phrase is \"È in corso lo sciopero nazionale\" – \"The national strike is in progress.\" That's not about a future event; it's a statement about a strike that's happening *right now*. Therefore, based on the instruction to treat this as an ongoing strike update, I have to set the `isStrike` variable to `false`. Simple enough.\n\n\n"
+    "durationMs": 5496,
+    "thoughts": "**Analyzing the ATAC Strike Announcement**\n\nOkay, let's break this down. My objective is clear: determine if this HTML content from Rome, regarding ATAC, announces an *upcoming* strike. The input is a snippet of HTML, and I need to parse it for strike-related information. The core condition is simple: if this describes a future strike, I extract details like start and end times, the affected area, and any guaranteed service periods. But if it's about a cancellation, an ongoing update, a real-time status, or information about a *past* strike, I immediately return `isStrike: false`.\n\nNow, looking at the actual text: \"È in corso lo sciopero nazionale del trasporto pubblico che si concluderà alle 12,30. Ecco la situazione sulla rete romana.\" (The national public transport strike is in progress and will end at 12:30. Here is the situation on the Roman network.)\n\nAh, this is straightforward. The phrase \"è in corso\" – \"is in progress\" – is the key. The text describes an active strike, currently underway, and nearing its conclusion. It's providing a real-time update. Therefore, this isn't an announcement of an upcoming strike, it's a status report of an *existing* event.\n\nConsequently, `isStrike` is definitively `false`. The task is complete.\n\n\n"
   }
 }

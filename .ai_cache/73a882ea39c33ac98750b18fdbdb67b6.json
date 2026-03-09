@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-01-24 00:00:00",
+      "endDate": "2024-01-24 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6222,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000202,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.0009015,
+      "cachedCost": 0,
+      "totalCost": 0.0013
+    },
+    "hash": "73a882ea39c33ac98750b18fdbdb67b6",
+    "sourceFile": "sciopero_nazionale_24_gennaio_trasporto_pubblico_rischio.html",
+    "thoughts": "**Analyzing the Rome Public Transport Strike Data**\n\nOkay, let's break this down. I've got some public transport information related to a national strike in Italy on January 24th, 2024. The source is clearly about a strike in Rome (Lazio, code \"12\"), though the strike itself is national, indicated by \"Sciopero nazionale\". The title confirms the strike date, and its duration is stated as 24 hours.\n\nThe provided text says \"Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20\", which translates to regular service guaranteed until 08:30 and from 17:00 to 20:00. This is crucial. I need to make sure I understand the guaranteed times correctly. That suggests the strike effectively runs from midnight on the 24th to just before midnight that same day, lasting the full 24 hours. Given the nature of these things in Italy, it's pretty standard practice for service guarantees to be at the start of the day and during the evening hours.\n\nSo, I'm interpreting this as:\n\n*   `isStrike`: definitely true.\n*   `startDate`: \"2024-01-24 00:00:00\".\n*   `endDate`: \"2024-01-24 23:59:59\".\n*   `locationType`: \"NATIONAL\" - Since it's a national strike, I don't need any location codes.\n*   `guaranteedTimes`: [\"00:00-08:30\", \"17:00-20:00\"].\n\nLet's represent this as a `strikeData` object. It should be good to go:\n\n*   `isStrike`: true\n*   `strikeData`:\n    *   `startDate`: \"2024-01-24 00:00:00\"\n    *   `endDate`: \"2024-01-24 23:59:59\"\n    *   `locationType`: \"NATIONAL\"\n    *   `locationCodes`: null\n    *   `guaranteedTimes`: [\"00:00-08:30\", \"17:00-20:00\"]\n\nI can check it now. The JSON format should be valid, and there are no extraneous comments or control tokens. It should be consistent with the expected schema. Looks good.\n\n\n",
+    "tokens": {
+      "input": 808,
+      "output": 131,
+      "total": 1540
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-09-29 00:00:00",
+      "endDate": "2023-09-29 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24095,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00066755,
+      "outputCost": 0.0007432,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00141075
+    },
+    "hash": "f4332e83d91f0d8c4239284971e20547",
+    "sourceFile": "venerd_29_settembre_sciopero_nazionale_trasporto_pubblico_possibili_disagi.html",
+    "thoughts": "**Interpreting service hours**\n\nI'm analyzing service hours based on the phrase \"fino alle 8,30,\" meaning service is regular until 8:30 AM. Then there's the phrase \"e dalle 17 alle 20,\" indicating regular service from 5 PM to 8 PM. These phrases suggest specific guaranteed service times, but not for the entire day. I interpret the guaranteed time as \"00:00-08:30\" and \"17:00-20:00.\" I need to double-check if this early window really counts as guaranteed service.",
+    "tokens": {
+      "input": 13351,
+      "output": 1858,
+      "total": 15209
+    }
+  }
+}

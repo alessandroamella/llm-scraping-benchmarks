@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3535,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0001975,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000237,
+      "cachedCost": 0,
+      "totalCost": 0.0004495
+    },
+    "hash": "70b8e696427af81c3f8fd836b3c2f17b",
+    "sourceFile": "funivia_del_faito_sospensione_temporanea_del_servizio_funiviario_dalle_ore_1105.html",
+    "thoughts": "**Analyzing the EAV Announcement**\n\nOkay, so I've got this announcement from EAV about the Funivia del Faito service being temporarily suspended. My initial goal is to figure out if this is actually a notice about a strike. It's a key requirement that any output be valid JSON, and specifically, that `isStrike` is only true for *upcoming* strikes. I'm also programmed to recognize weather-related closures, service suspensions, or real-time updates as *not* being strikes.\n\nNow, let's break down the input. The content explicitly states the suspension is due to adverse weather conditions on April 14, 2025. This should be straightforward. Given the weather-related reason, this is definitively *not* a strike.\n\nTherefore, the `isStrike` field should be set to `false`. That should be the definitive conclusion.\n\n\n",
+    "tokens": {
+      "input": 790,
+      "output": 10,
+      "total": 958
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7735,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006015,
+      "outputCost": 0.0001292,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00018935
+    },
+    "hash": "35cfa7c700b7d078f80db8e880d90ab8",
+    "sourceFile": "sciopero_trasporto_pubblico_attive_linee_della_metropolitana.html",
+    "thoughts": "**Analyzing strike notification**\n\nI need to follow the strict schema for outputting JSON related to a strike announcement. The document mentions an ongoing public transport strike, which indicates that it is not announcing a new strike. The status shows it’s an active situation with a 24-hour strike in progress. According to the instructions, since this is a real-time update about an ongoing strike, I should set isStrike to false, leading to an output of {\"isStrike\": false}.",
+    "tokens": {
+      "input": 1203,
+      "output": 323,
+      "total": 1526
+    }
+  }
+}

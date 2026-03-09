@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 09:00:00",
+      "endDate": "2024-12-13 13:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "09:00-13:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 17224,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006642,
+      "outputCost": 0.0005216,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0011858
+    },
+    "hash": "92e24f096874fb917b0a995ac9be7c8c",
+    "sourceFile": "news_media_comunicati_sciopero_generale_13_dicembre.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI’m looking at an upcoming strike with a publication date of December 12, 2024. It confirms that there’s indeed an announcement for a strike, so I'll mark isStrike as true. The strike details show it starting on December 13, 2024, from 9:00 AM to 1:00 PM. The timezone isn’t specified, so I’ll assume it’s local time. It’s for a national strike, so the locationType should be \"NATIONAL.\"",
+    "tokens": {
+      "input": 13284,
+      "output": 1304,
+      "total": 14588
+    }
+  }
+}

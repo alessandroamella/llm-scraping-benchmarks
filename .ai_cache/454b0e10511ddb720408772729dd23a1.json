@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-03 00:00:00",
+      "endDate": "2025-10-03 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5634,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000216,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.000915,
+      "cachedCost": 0,
+      "totalCost": 0.0013275
+    },
+    "hash": "454b0e10511ddb720408772729dd23a1",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_generale_nazionale_di_24_ore_venerdi_03_ottobre_2025.html",
+    "thoughts": "**Strike Data Analysis and JSON Extraction**\n\nOkay, let's break this down. My task is clear: I need to analyze this text snippet and distill the strike information into a clean JSON structure. First, I see \"Servizio Autolinee: Avviso di sciopero generale nazionale di 24 ore venerdì 03 ottobre 2025 - EAV srl.\" Alright, this immediately tells me it's a strike. I've got the date: October 3rd, 2025. Duration: 24 hours. The type is a national general strike.\n\nI initially thought EAV might indicate a regional strike in Campania, but the text explicitly states \"nazionale di 24 ore.\" That's the key. The strike is *national*. I must remember that. I see that there are guaranteed times, \"05:30-08:30 and 16:30-19:30\".\n\nSince the strike is on October 3, 2025, and it's a 24-hour event, I need to translate that into start and end times. The start date will be \"2025-10-03 00:00:00\", and the end date will be \"2025-10-03 23:59:59\". The format for the date and time is `yyyy-MM-dd HH:mm:ss`, of course.\n\nNow, to assemble the JSON structure. I know the general structure required has \"isStrike\", \"strikeData\", \"startDate\", \"endDate\", \"locationType\", \"locationCodes\", and \"guaranteedTimes\".\n\nGiven this is a national strike, `locationType` will be \"NATIONAL\" and `locationCodes` will be `null`. That aligns with the schema; that's good.\n\nMy final JSON output should be:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-10-03 00:00:00\",\n    \"endDate\": \"2025-10-03 23:59:59\",\n    \"locationType\": \"NATIONAL\",\n    \"locationCodes\": null,\n    \"guaranteedTimes\": [\"05:30-08:30\", \"16:30-19:30\"]\n  }\n}\n```\n\nOkay, the data is correctly structured and is ready for integration. I've double-checked the `locationType` and `locationCodes` given it's a *national* strike. Schema is followed. I think I'm good to go.\n\n\n",
+    "tokens": {
+      "input": 864,
+      "output": 131,
+      "total": 1605
+    }
+  }
+}

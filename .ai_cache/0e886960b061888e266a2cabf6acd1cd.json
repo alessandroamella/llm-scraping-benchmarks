@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-16 00:00:00",
+      "endDate": "2025-01-17 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5475,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00381025,
+      "outputCost": 0.0001395,
+      "thinkingCost": 0.0006465,
+      "cachedCost": 0,
+      "totalCost": 0.00459625
+    },
+    "hash": "0e886960b061888e266a2cabf6acd1cd",
+    "sourceFile": "sportello_al_pubblico_e_contact_center_di_rsm_giovedi_e_venerdi_possibili_disagi_per_uno_sciopero.html",
+    "thoughts": "**Strike Announcement Analysis**\n\nOkay, let's break this down. My task is to definitively determine if this text announces a strike and, if so, extract the relevant details in a clean JSON format. The input clearly points to a strike. I need to be precise, as incorrect interpretation could have real-world implications.\n\nThe title itself, \"Sportello al Pubblico e contact center di Rsm, giovedì e venerdì possibili disagi per uno sciopero\" (Public desk and contact center of RSM, Thursday and Friday possible disruptions for a strike), immediately signals potential disruption due to a strike. The text confirms this with, \"a causa dello sciopero proclamato, per l’intero turno, dal sindacato Usb.\" (\"because of the strike declared, for the entire shift, by the Usb union.\")\n\nSo, yes, it's definitely a strike announcement.\n\nNow, for the data extraction. The dates are straightforward: January 16th and 17th, 2025 – that’s Thursday and Friday. The company is Roma Servizi per la Mobilità (RSM). The disruption is stated to be \"per l’intero turno\" (for the entire shift). Since the text is vague, I will assume it means the entire working day. Therefore, the strike will span from the start of the 16th to the end of the 17th.\n\nThe location is Rome, which I will categorize as \"REGIONAL\" since it's within the Lazio region, and the corresponding location code is \"12\" for Lazio. Since no specific guaranteed times are mentioned in the text, I will omit the `guaranteedTimes` field.\n\nFinally, I will assemble the JSON output.\n\n\n",
+    "tokens": {
+      "input": 15241,
+      "output": 93,
+      "total": 15765
+    }
+  }
+}

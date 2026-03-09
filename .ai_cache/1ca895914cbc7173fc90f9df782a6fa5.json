@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6951,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0001885,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.001083,
+      "cachedCost": 0,
+      "totalCost": 0.001468
+    },
+    "hash": "1ca895914cbc7173fc90f9df782a6fa5",
+    "sourceFile": "news_media_comunicati_sciopero_generale_13_dicembre_240re.html",
+    "thoughts": "**Strike Analysis and Data Extraction**\n\nOkay, let's break this down. My task is to determine if the input content describes an upcoming strike and, if so, extract the relevant information in the specified JSON format. The key is to check if it's an *upcoming* strike, not a past or ongoing one.\n\nThe Italian text is the core. I see phrases like \"Sciopero del trasporto pubblico, domani rischio stop per 24 ore\" which clearly indicates a transportation strike is potentially planned. The publication date is 12/12/2024, and it mentions \"domani\" (tomorrow), a 24-hour strike. That's a strong indicator.\n\nThe text reads: \"Domani trasporto pubblico a rischio per lo sciopero generale nazionale di 24 ore...\" and \"A Roma l’agitazione coinvolgerà la rete Atac...\" and \"Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" This confirms it's a strike, specifies the duration, and mentions Rome, specifically Atac. The \"sciopero generale nazionale\" indicates it's a national strike.\n\nI need to map the information to the defined JSON schema. Since the strike starts \"tomorrow\" from the publication date of 12/12/2024, the `startDate` is 13/12/2024 00:00:00. Given it's a 24-hour strike, the `endDate` is 13/12/2024 23:59:59. The `locationType` is definitely \"NATIONAL\" because of \"sciopero generale nazionale\". No specific location codes are given, so `locationCodes` is `null`.\n\nNow, the tricky part – the guaranteed times. The text says service is \"regolare fino alle 8,30 e dalle 17 alle 20\". So, I'll translate that to `guaranteedTimes`: \"00:00-08:30\" and \"17:00-20:00\".\n\nTherefore:\n\n*   `isStrike`: true\n*   `startDate`: \"2024-12-13 00:00:00\"\n*   `endDate`: \"2024-12-13 23:59:59\"\n*   `locationType`: \"NATIONAL\"\n*   `locationCodes`: null\n*   `guaranteedTimes`: [\"00:00-08:30\", \"17:00-20:00\"]\n\nIt's a straightforward extraction, and I'm confident in these values.\n\n\n",
+    "tokens": {
+      "input": 754,
+      "output": 131,
+      "total": 1607
+    }
+  }
+}

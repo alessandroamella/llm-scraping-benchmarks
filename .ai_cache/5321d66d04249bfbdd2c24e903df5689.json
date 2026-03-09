@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8958,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006655,
+      "outputCost": 0.0002924,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0009579
+    },
+    "hash": "5321d66d04249bfbdd2c24e903df5689",
+    "sourceFile": "sciopero_nazionale_trasporto_pubblico_roma_aperte_metropolitane.html",
+    "thoughts": "**Producing JSON output**\n\nI need to format the information according to the strike extraction schema. The content I've analyzed is from an Italian page about a public transport strike in Rome, with a published time of March 9, 2026. The message includes the ongoing status of the strike and various updates, but there seems to be an inconsistency with dates, mentioning 2023 in some parts. I need to clarify this messiness to ensure the JSON output is accurate and follows the schema properly.",
+    "tokens": {
+      "input": 13310,
+      "output": 731,
+      "total": 14041
+    }
+  }
+}

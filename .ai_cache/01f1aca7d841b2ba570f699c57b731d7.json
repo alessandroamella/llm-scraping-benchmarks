@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-03-19 09:00:00",
+      "endDate": "2025-03-19 17:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 16894,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000756,
+      "outputCost": 0.0007336,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008092
+    },
+    "hash": "01f1aca7d841b2ba570f699c57b731d7",
+    "sourceFile": "strike-detail-mercoled--19-marzo-dalle-ore-9-alle-ore-17-scioper.html",
+    "thoughts": "**Analyzing strike details**\n\nI need to output JSON according to the schema for strike extraction, focusing on whether there's a strike happening and including related data if it’s true. The content is in Italian and discusses a national railway strike on Wednesday, March 19, from 9 AM to 5 PM. It mentions that there will be disruptions to train services and mentions organizations that declared the strike. The date mentioned is Monday, March 17, 2025, confirming that this is indeed an upcoming strike. Therefore, isStrike should be true.",
+    "tokens": {
+      "input": 1512,
+      "output": 1834,
+      "total": 3346
+    }
+  }
+}

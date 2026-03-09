@@ -1,18 +1,20 @@
 {
-  "timestamp": "2026-03-09T18:52:24.472Z",
+  "timestamp": "2026-03-09T19:11:41.546Z",
   "isCacheHit": false,
   "request": {
     "sourceName": "ATAC",
     "fileName": "domani_sciopero_serale_di_4_ore_a_rischio_i_bus_del_deposito_magliana.html",
     "model": "gpt-5-nano",
     "strategy": "mineru-html",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"ATAC\" (the public transport company of Rome, Lazio (12)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: mineru-html):\n<html lang=\"it-IT\" prefix=\"og: https://ogp.me/ns#\"><body class=\"wp-singular comunicato-template-default single single-comunicato postid-262444 wp-embed-responsive wp-theme-hello-elementor wp-child-theme-hello-elementor-child hello-elementor-default elementor-default elementor-kit-12678 elementor-page-15972\">\n<div class=\"elementor elementor-15972 elementor-location-single post-262444 comunicato type-comunicato status-publish hentry\" data-elementor-id=\"15972\" data-elementor-post-type=\"elementor_library\" data-elementor-type=\"single-page\">\n<div class=\"elementor-element elementor-element-6ee3468 e-flex e-con-boxed e-con e-parent\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"6ee3468\" data-settings='{\"background_background\":\"classic\"}'>\n<div class=\"e-con-inner\">\n<div class=\"elementor-element elementor-element-6945d4c e-con-full e-flex e-con e-child\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"6945d4c\">\n<div class=\"elementor-element elementor-element-da182fa e-con-full e-flex e-con e-child\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"da182fa\">\n<div class=\"elementor-element elementor-element-aff84d2 elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading\" data-e-type=\"widget\" data-element_type=\"widget\" data-id=\"aff84d2\" data-widget_type=\"theme-post-title.default\">\n<div class=\"elementor-widget-container\">\n<h1 class=\"elementor-heading-title elementor-size-default\" _item_id=\"1\">Domani sciopero serale di 4 ore. A rischio i bus del deposito Magliana</h1> </div>\n</div>\n</div>\n</div>\n</div>\n</div>\n<div class=\"elementor-element elementor-element-32c51eb e-flex e-con-boxed e-con e-parent\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"32c51eb\">\n<div class=\"e-con-inner\">\n<div class=\"elementor-element elementor-element-7a3d033 e-con-full e-flex e-con e-child\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"7a3d033\" id=\"main-content\">\n<div class=\"elementor-element elementor-element-723d484 elementor-widget elementor-widget-theme-post-content\" data-e-type=\"widget\" data-element_type=\"widget\" data-id=\"723d484\" data-widget_type=\"theme-post-content.default\">\n<div class=\"elementor-widget-container\">\n<p _item_id=\"3\">Domani sera rischio stop per alcune linee Atac a causa dello sciopero di quattro ore, dalle 20 alle 24, proclamato dai sindacati Orsa Tpl e Usb. L’agitazione interesserà solo ed esclusivamente i bus che fanno capo alla rimessa Magliana. <br>Ulteriori dettagli su atac.roma.it e romamobilita.it</p>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</body></html>"
   },
   "response": {
     "rawOutput": {
       "isStrike": true,
       "strikeData": {
+        "startDate": null,
+        "endDate": null,
         "locationType": "REGIONAL",
         "locationCodes": [
           "12"
@@ -23,30 +25,21 @@
       }
     },
     "parsedData": {
-      "isStrike": true,
-      "strikeData": {
-        "locationType": "REGIONAL",
-        "locationCodes": [
-          "12"
-        ],
-        "guaranteedTimes": [
-          "20:00-24:00"
-        ]
-      }
+      "isStrike": false
     },
     "usage": {
-      "input": 1591,
-      "output": 1956,
-      "total": 3547
+      "input": 1505,
+      "output": 1868,
+      "total": 3373
     },
     "costUsd": {
-      "inputCost": 0.00007955,
-      "outputCost": 0.0007824,
+      "inputCost": 0.00007525,
+      "outputCost": 0.0007472,
       "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.00086195
+      "totalCost": 0.00082245
     },
-    "durationMs": 22200,
-    "thoughts": "**Clarifying strike details**\n\nI’m looking at the times given—20 to 24 for a four-hour strike—which is affecting only buses from the Magliana depot. That suggests it's specific to that depot rather than a broader region. The strike data requires identifying location types as either \"NATIONAL\" or \"REGIONAL.\" If it’s just limited to that depot, I think it leans toward being regional. Since Magliana is in Rome, the Lazio region code is 12, so I'll probably categorize it as REGIONAL with locationCodes [\"12\"]."
+    "durationMs": 22224,
+    "thoughts": "**Interpreting strike announcement**\n\nI need to create a JSON output based on the given information. The document in Italian is clearly announcing a new strike: \"Domani sciopero serale di 4 ore\" translates to \"Tomorrow evening a 4-hour strike.\" It affects buses from the Magliana depot and is set for 20:00 to 24:00, as proclaimed by the unions. The details are further referenced on their websites, confirming that this is indeed an upcoming strike announcement."
   }
 }

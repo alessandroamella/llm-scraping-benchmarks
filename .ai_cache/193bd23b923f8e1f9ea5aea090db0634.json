@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3716,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.003709,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0003495,
+      "cachedCost": 0,
+      "totalCost": 0.0040735
+    },
+    "hash": "193bd23b923f8e1f9ea5aea090db0634",
+    "sourceFile": "sciopero_del_trasporto_pubblico_adesione_personale_atac_al_273.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, let's break this down. My task is to figure out if this text is *announcing* a strike. The title, \"Sciopero del Trasporto pubblico, adesione personale Atac al 27,3% - Roma Servizi per la Mobilità,\" immediately catches my attention. It translates to \"Public transport strike, Atac staff adherence at 27.3%.\" The body confirms this, stating the 27.3% adherence of Atac staff to the public transport strike.\n\nThe crucial detail here is the date information: \"Pubblicato il: 28/10/2024 - Aggiornato il: 31/10/2024\". Published on the 28th, updated on the 31st. This clearly indicates the document is a *report* about a strike, a *post-event analysis* of participation. The language, too, suggests this: it mentions adherence *to* the strike (which means it happened in the past).\n\nTherefore, based on my rule – \"If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false\" – I'm concluding that `isStrike` is `false`. This text is not an announcement; it's a post-mortem or, at most, an *update* on an already-occurring event.\n\n\n",
+    "tokens": {
+      "input": 14836,
+      "output": 10,
+      "total": 15079
+    }
+  }
+}

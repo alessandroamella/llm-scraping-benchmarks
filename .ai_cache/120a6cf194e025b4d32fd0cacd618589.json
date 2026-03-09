@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7256,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006634,
+      "outputCost": 0.0001464,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008098
+    },
+    "hash": "120a6cf194e025b4d32fd0cacd618589",
+    "sourceFile": "sciopero_del_trasporto_pubblico_aperte_le_metropolitane.html",
+    "thoughts": "**Assessing strike announcement**\n\nI need to determine if the content is about an upcoming strike announcement. The document from Roma Servizi per la Mobilità confirms there’s an ongoing strike, not a future one. It explicitly states \"È in corso lo sciopero\", meaning the strike is currently happening. Therefore, according to the instruction, I’ll set isStrike to false. I’ll prepare to output JSON with {\"isStrike\": false} and not include any additional data.",
+    "tokens": {
+      "input": 13268,
+      "output": 366,
+      "total": 13634
+    }
+  }
+}

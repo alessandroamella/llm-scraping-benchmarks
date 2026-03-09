@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-11-29 09:00:00",
+      "endDate": "2024-11-29 13:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "09:00-13:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18655,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00009745,
+      "outputCost": 0.0005244,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00062185
+    },
+    "hash": "c3b240681231306a55097600779d2268",
+    "sourceFile": "strike-detail-venerd--29-novembre-dalle-9-alle-13-sciopero-gener.html",
+    "thoughts": "**Formatting strike information**\n\nI'm focusing on outputting JSON according to the schema provided. The original message in Italian mentions a general strike happening on Friday, November 29, from 9 AM to 1 PM, affecting the Ferrovienord network. The article confirms that this is indeed an upcoming strike, even though Trenord's personnel aren't directly involved. I need to establish that since it's an upcoming strike announcement, I'll set the `isStrike` field to true.",
+    "tokens": {
+      "input": 1949,
+      "output": 1311,
+      "total": 3260
+    }
+  }
+}

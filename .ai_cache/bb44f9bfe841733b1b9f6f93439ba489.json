@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-10-09 00:00:00",
+      "endDate": "2023-10-09 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6250,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0003425,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.000927,
+      "cachedCost": 0,
+      "totalCost": 0.001466
+    },
+    "hash": "bb44f9bfe841733b1b9f6f93439ba489",
+    "sourceFile": "luned_9_ottobre_sciopero_nazionale_trasporto_pubblico_possibili_disagi_24_ore.html",
+    "thoughts": "**Strike Analysis - My Thought Process**\n\nOkay, let's break this down. The core task is to identify if the input text describes an upcoming strike and structure the information into a JSON format. I see the text states, \"Lunedì 9 ottobre sciopero nazionale del trasporto pubblico. Possibili disagi per 24 ore.\" Right away, \"sciopero\" (strike) jumps out, so that's a good start. I can immediately flag `isStrike` as `true`.\n\nNow for the details. It's a \"nazionale\" (national) strike affecting public transport for 24 hours. The date is \"Lunedì 9 ottobre,\" which, based on typical calendar patterns, is likely October 9th of this year. I'll make the assumption it's in 2023, or just assume the current year, and format the start date as \"2023-10-09 00:00:00\" and the end date as \"2023-10-09 23:59:59\" as specified. I'm going to make the location \"NATIONAL\". Since it's national, I can safely set `locationCodes` to `null`.\n\nThe trickier part is the guaranteed service times. The text says \"servizio garantito fino alle 8:30 e dalle 17 alle 20.\" The format should be \"HH:mm-HH:mm\" - so the `guaranteedTimes` should be [\"00:00-08:30\", \"17:00-20:00\"].\n\nJust to make sure I haven't missed anything, I'll quickly check the guaranteed times one more time. The text is very clear that service will be regular until 8:30 and from 17 to 20, which is perfectly captured by what I have. Alright, I'm confident in these values. Here's how I'll structure it:\n\n```json\n{\n  \"isStrike\": true,\n  \"startDate\": \"2023-10-09 00:00:00\",\n  \"endDate\": \"2023-10-09 23:59:59\",\n  \"locationType\": \"NATIONAL\",\n  \"locationCodes\": null,\n  \"guaranteedTimes\": [\"00:00-08:30\", \"17:00-20:00\"]\n}\n```\n\n\n",
+    "tokens": {
+      "input": 1370,
+      "output": 131,
+      "total": 2119
+    }
+  }
+}

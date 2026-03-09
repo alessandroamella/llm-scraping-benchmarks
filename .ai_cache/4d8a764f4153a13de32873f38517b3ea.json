@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 09:00:00",
+      "endDate": "2024-12-13 13:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5927,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00031,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.0007635,
+      "cachedCost": 0,
+      "totalCost": 0.001222
+    },
+    "hash": "4d8a764f4153a13de32873f38517b3ea",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_4_ore_del_13_dicembre_2024.html",
+    "thoughts": "**Analyzing the EAV Strike Announcement**\n\nOkay, let's break this down. I've got an announcement from EAV, the public transport company in Campania (Region 15), regarding a strike. The title is \"Linee Suburbane: Avviso di sciopero di 4 ore del 13 dicembre 2024,\" which tells me it's a strike affecting suburban lines, scheduled for December 13th, 2024.\n\nInitially, there was a mention of a 24-hour national general strike, but it has been shortened to 4 hours. Specifically, this EAV strike will be from 09:00 to 13:00 on December 13th, 2024. The task is to confirm if it's a strike, extract details, and format the information as a JSON object.\n\nSo, *is* it a strike? Yes, absolutely. The announcement clearly states a strike is happening.\n\nNow for the details:\n*   `isStrike`:  This is straightforward; it's `true`.\n*   `startDate`:  The strike begins at 09:00 on December 13th, 2024, so it's `2024-12-13 09:00:00`.\n*   `endDate`: The strike ends at 13:00 on the same day, making it `2024-12-13 13:00:00`.\n*   `locationType`: The text indicates a \"sciopero generale nazionale\" (national general strike). However, since this notice is specific to EAV, which operates within Campania, I'm classifying this as REGIONAL with code [\"15\"]. It's a national strike, but it's *about* a regional service, so REGIONAL is the right classification.\n*   `locationCodes`:  Because it's EAV in Campania, the location code is [\"15\"].\n*   `guaranteedTimes`: The text mentions \"fasce di garanzia,\" but it states that there's no adherence to it \"libero esercizio del diritto di sciopero senza il rispetto delle fasce di garanzia.\" Since these times aren't explicitly provided, I'll omit this field to avoid any potential misinterpretation.\n\nTherefore, here's how I'll structure the data:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-13 09:00:00\",\n    \"endDate\": \"2024-12-13 13:00:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"15\"]\n  }\n}\n```\n\nThat should be the completed data output.\n\n\n",
+    "tokens": {
+      "input": 1240,
+      "output": 99,
+      "total": 1848
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 21:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5357,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.001997,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.000804,
+      "cachedCost": 0,
+      "totalCost": 0.0029975
+    },
+    "hash": "b59da00bd04123a49b496c9db3dde200",
+    "sourceFile": "strike-detail-venerd--12-dicembre-da-mezzanotte-alle-21-sciopero.html",
+    "thoughts": "**Analyzing the Trenord Strike Announcement**\n\nOkay, let's break this down. The input is a Trenord announcement about a national strike on \"Venerdì 12 dicembre.\" The goal is to extract key strike information and return it as valid JSON, nothing less. I need to pull out `isStrike`, `startDate`, `endDate`, `locationType`, `locationCodes`, and `guaranteedTimes`.\n\nFirst, the text clearly indicates a strike; therefore, `isStrike` is `true`. The date is given as \"Venerdì 12 dicembre,\" and the associated publication date mentions Thursday 11/12/2025, thus I can infer that this refers to 2025. This makes `startDate` \"2025-12-12 00:00:00\". The text says \"da mezzanotte alle 21\", therefore `endDate` is \"2025-12-12 21:00:00\". The phrase \"sciopero nazionale\" indicates a `locationType` of \"NATIONAL,\" and since it's national, `locationCodes` is `null`. Finally, based on the strike information, the `guaranteedTimes` are [\"06:00-09:00\", \"18:00-21:00\"].\n\nPutting it all together, I can construct my JSON object:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-12-12 00:00:00\",\n    \"endDate\": \"2025-12-12 21:00:00\",\n    \"locationType\": \"NATIONAL\",\n    \"locationCodes\": null,\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n```\n\nNow, let's verify. Is this valid JSON? Yes, syntactically correct and well-formed. Are there any comments or control tokens? No. Does it match the required schema and have all the necessary fields? Absolutely. It looks like we have a clean and compliant data representation.\n\n\n",
+    "tokens": {
+      "input": 7988,
+      "output": 131,
+      "total": 8655
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-12-15 00:00:00",
+      "endDate": "2023-12-15 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 42880,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006661,
+      "outputCost": 0.0015008,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0021669
+    },
+    "hash": "b023996c0859b587958566562450a8cb",
+    "sourceFile": "venerd_sciopero_nazionale_trasporto_pubblico_servizio_rischio.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to format my output as JSON based on their schema. The document seems to announce an upcoming strike, as it mentions \"sciopero nazionale del trasporto pubblico\" and the content references a strike set for December 15, 2023. However, I notice that's an old announcement from December 2023 and the published time is actually in March 2026. It seems the title could indicate a recurring event related to past strikes. I'll clarify this discrepancy in my output.",
+    "tokens": {
+      "input": 13322,
+      "output": 3752,
+      "total": 17074
+    }
+  }
+}

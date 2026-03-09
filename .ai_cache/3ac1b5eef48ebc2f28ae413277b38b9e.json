@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-01-14 08:30:00",
+      "endDate": "2022-01-14 12:30:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "08:30-12:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22286,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006085,
+      "outputCost": 0.0006316,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00069245
+    },
+    "hash": "3ac1b5eef48ebc2f28ae413277b38b9e",
+    "sourceFile": "venerdi_14_gennaio_sciopero_nazionale_4_ore_trasporto_pubblico_rischio.html",
+    "thoughts": "**Converting strike details**\n\nI’m looking at an announcement for an upcoming strike on January 14, which falls on a Friday. It mentions the time from 08:30 to 12:30. I need to convert that to the proper format for the start and end times: 2022-01-14 08:30:00 and 2022-01-14 12:30:00. The strike is a national one, so the location type should be \"NATIONAL.\" However, I’m unsure whether to use \"REGIONAL\" or \"NATIONAL\" since the instructions are a bit confusing.",
+    "tokens": {
+      "input": 1217,
+      "output": 1579,
+      "total": 2796
+    }
+  }
+}

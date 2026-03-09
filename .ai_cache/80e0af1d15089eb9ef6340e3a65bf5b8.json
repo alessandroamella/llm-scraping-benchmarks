@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7545,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006614,
+      "outputCost": 0.000152,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008134
+    },
+    "hash": "80e0af1d15089eb9ef6340e3a65bf5b8",
+    "sourceFile": "sciopero_del_trasporto_pubblico_la_situazione_sulla_rete.html",
+    "thoughts": "**Formatting JSON for strike status**\n\nI need to make sure I output the JSON according to the specified schema. The page I'm looking at is about an ongoing public transportation strike in Rome, sharing the current status of various lines. The instruction says to set `isStrike` to true only for upcoming strikes, but since this situation is about a current strike happening, I should set `isStrike` to false. So, the final output should be `{ \"isStrike\": false }`.",
+    "tokens": {
+      "input": 13228,
+      "output": 380,
+      "total": 13608
+    }
+  }
+}

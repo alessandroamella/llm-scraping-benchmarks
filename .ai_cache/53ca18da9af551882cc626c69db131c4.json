@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-24 00:00:00",
+      "endDate": "2025-02-24 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4785,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00028875,
+      "outputCost": 0.0001605,
+      "thinkingCost": 0.0007305,
+      "cachedCost": 0,
+      "totalCost": 0.00117975
+    },
+    "hash": "53ca18da9af551882cc626c69db131c4",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_24h_lunedi_24_febbraio_2025.html",
+    "thoughts": "**My Analysis of the EAV Strike Announcement**\n\nOkay, let's break this down systematically. The input is an announcement regarding a 24-hour strike affecting the EAV network in the Campania region. My primary task is to extract the relevant details and construct a JSON object representing this strike.\n\nFirst, is this an upcoming strike? Yes, absolutely. The text clearly states a strike is planned.\n\nThe date is February 24, 2025. It's a full 24-hour strike, so the start time will be 00:00:00 and the end time will be 23:59:59 on that same day.\n\nThe location is EAV, which I know operates within the Campania region (code \"15\").\n\nNow, about the \"guaranteed times\". The text references \"fasce di garanzia\", but it doesn't actually *define* time ranges. It lists *specific* bus/train departures, which is different from the typical \"HH:mm-HH:mm\" guaranteed time ranges I'm used to seeing. The prompt requests an Array of time ranges which are not present, therefore, I will mark `guaranteedTimes` as null.\n\nTherefore, my final JSON object structure will look like this:\n\n*   `isStrike`: true\n*   `strikeData`:\n    *   `startDate`: \"2025-02-24 00:00:00\"\n    *   `endDate`: \"2025-02-24 23:59:59\"\n    *   `locationType`: \"REGIONAL\"\n    *   `locationCodes`: [\"15\"]\n    *   `guaranteedTimes`: null\n\n\n",
+    "tokens": {
+      "input": 1155,
+      "output": 107,
+      "total": 1749
+    }
+  }
+}

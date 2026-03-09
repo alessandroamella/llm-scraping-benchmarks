@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-11-27 00:00:00",
+      "endDate": "2023-11-27 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6625,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00019725,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.000777,
+      "cachedCost": 0,
+      "totalCost": 0.00117075
+    },
+    "hash": "0ba8213b2402fe8c89f0d1ec834505f1",
+    "sourceFile": "luned_27_novembre_sciopero_nazionale_trasporto_pubblico_possibili_disagi.html",
+    "thoughts": "**Strike Analysis: Italian Public Transport**\n\nOkay, let's break this down. My task is clear: I need to analyze this text and determine if it describes a strike, and if so, extract the relevant information into a structured JSON object. The input is in Italian, which is fine, I can handle that. I see the phrase \"sciopero nazionale\" which immediately flags it as a national strike. The text clearly states \"Lunedì 27 novembre sciopero nazionale del trasporto pubblico, possibili disagi\" and \"24 ore proclamato dai sindacati\", so strike confirmed.\n\nNow, I have to extract the specifics. \"Lunedì 27 novembre\" gives me the date: November 27, 2023. The \"24 ore\" indicates a full day strike, from 00:00 to 23:59:59 on that day. \"sciopero nazionale\" tells me this is a nationwide event, and I will set the location type to \"NATIONAL\". I note that Atac in Rome (Lazio: 12) is mentioned as affected, though this is not a location code.\n\nAh, there are also guaranteed times, typical for strikes in Italy: \"Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" This means service will be regular until 8:30 AM and again from 5 PM to 8 PM. I'll translate that to \"00:00-08:30\" and \"17:00-20:00\" and include them in the `guaranteedTimes` field.\n\nThe output will be a single JSON object. Here's what I'll construct:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2023-11-27 00:00:00\",\n    \"endDate\": \"2023-11-27 23:59:59\",\n    \"locationType\": \"NATIONAL\",\n    \"locationCodes\": null,\n    \"guaranteedTimes\": [\"00:00-08:30\", \"17:00-20:00\"]\n  }\n}\n```\n\nThat should be clean and parseable. I'm ready to proceed.\n\n\n",
+    "tokens": {
+      "input": 789,
+      "output": 131,
+      "total": 1438
+    }
+  }
+}

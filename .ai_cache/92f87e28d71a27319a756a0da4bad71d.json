@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5828,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007445,
+      "outputCost": 0.0001584,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00023285
+    },
+    "hash": "92f87e28d71a27319a756a0da4bad71d",
+    "sourceFile": "sciopero_trasporto_pubblico_aperte_metropolitane_ferrovie_concesse.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to format the output in JSON based on the strike_extraction schema. The text in Italian indicates, \"Public transport strike, metros and concessioned railways open,\" and further explains that the strike is currently happening and will end at 12:30. Since it's talking about an ongoing strike and not an upcoming one, I'd set the isStrike parameter as false. The instructions are clear that I should only indicate isStrike as true for future announcements.",
+    "tokens": {
+      "input": 1489,
+      "output": 396,
+      "total": 1885
+    }
+  }
+}

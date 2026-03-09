@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7023,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005695,
+      "outputCost": 0.0001888,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00024575
+    },
+    "hash": "b49b15fac9a76784dc9db986b7ce4c51",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_186.html",
+    "thoughts": "**Deciding strike status**\n\nI'm analyzing whether the document announces an upcoming strike. It actually reports on participation in a past strike, so I conclude that isStrike should be false. I need to ensure the output matches the required JSON format exactly. The provided date doesn't indicate a new strike, and since the article focuses on attendance, it definitely confirms there isn't an upcoming strike. So, I’ll settle on outputting: {\"isStrike\": false}.",
+    "tokens": {
+      "input": 1139,
+      "output": 472,
+      "total": 1611
+    }
+  }
+}

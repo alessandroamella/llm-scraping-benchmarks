@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-07-18 08:30:00",
+      "endDate": "2024-07-18 12:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5436,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0004635,
+      "outputCost": 0.0001335,
+      "thinkingCost": 0.000804,
+      "cachedCost": 0,
+      "totalCost": 0.001401
+    },
+    "hash": "7f47d6902f64347194cc4db32bdf824a",
+    "sourceFile": "trasporto_pubblico_gioved_sciopero_nazionale_830_1230_servizio_rischio.html",
+    "thoughts": "**Strike Analysis Summary**\n\nOkay, let's break this down. My task is to identify if the input text describes a strike and, if so, format the information into a specific JSON object. The text mentions a \"sciopero nazionale di 4 ore\" on \"Giovedì 18 luglio,\" from 08:30 to 12:30, and it's relevant to Rome (ATAC, RomaTpl).\n\nFirst, the key phrase \"sciopero nazionale\" immediately flags this as a strike. Now, to the date. The text only provides \"Giovedì 18 luglio,\" which requires me to figure out the year. The prompt doesn't explicitly state the year, but context is key here. Since the date format is `yyyy-MM-dd HH:mm:ss`, and, considering these tasks tend to refer to upcoming dates, 2024 is the most probable year. Checking, I see that July 18, 2024, was indeed a Thursday, so that checks out.\n\nThus, the strike starts at 08:30 on July 18, 2024, and ends at 12:30 on the same day. Since it is a \"sciopero nazionale,\" it's a national strike, so the location type is NATIONAL. Guaranteed times aren't mentioned.\n\nNow, let's construct the JSON. Based on the analysis, I'm confident that `isStrike` should be `true`. The `strikeData` object will contain:\n\n*   `startDate`: \"2024-07-18 08:30:00\"\n*   `endDate`: \"2024-07-18 12:30:00\"\n*   `locationType`: \"NATIONAL\"\n*   `locationCodes`: `null` (since this is national).\n\nI need to make sure the JSON is valid, contains no comments or control tokens, and follows the prescribed schema, which I'm confident it does. And the year is correct. I believe this covers all the requirements.\n\n\n",
+    "tokens": {
+      "input": 1854,
+      "output": 89,
+      "total": 2479
+    }
+  }
+}

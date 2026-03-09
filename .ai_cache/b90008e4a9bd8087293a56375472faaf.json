@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18846,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00009395,
+      "outputCost": 0.0004524,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00054635
+    },
+    "hash": "b90008e4a9bd8087293a56375472faaf",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_24_ore_di_venerdi_28_novembre_2025.html",
+    "thoughts": "**Determining strike announcement details**\n\nI need to output JSON following the specified schema. I’m checking if this is a strike announcement — and it looks like it is! The content is in Italian and states that there will be a nationwide 24-hour general strike on November 28, 2025, proclaimed by the O.S. USB. It also mentions guaranteed service windows. Since this is set in the future relative to the article date of November 23, 2025, I’ll mark isStrike as true and include the relevant dates in strikeData.",
+    "tokens": {
+      "input": 1879,
+      "output": 1131,
+      "total": 3010
+    }
+  }
+}

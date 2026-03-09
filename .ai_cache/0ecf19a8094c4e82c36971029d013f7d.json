@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-09-04 08:30:00",
+      "endDate": "2025-09-04 12:30:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "08:30-12:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20381,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006749,
+      "outputCost": 0.0004144,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0010893
+    },
+    "hash": "0ecf19a8094c4e82c36971029d013f7d",
+    "sourceFile": "rete_atac_giovedi_4_settembre_sciopero_dalle_830_alle_1230_possibili_disagi.html",
+    "thoughts": "**Deciding on strike announcement**\n\nI need to determine if the document announces an upcoming strike. The title clearly states there's a strike on Thursday, September 4, from 8:30 to 12:30. It mentions, \"giovedì 4 settembre sciopero dalle 8,30 alle 12,30,\" and the public transport will be at risk due to this four-hour strike initiated by the Sul union. It looks like this is indeed announcing an upcoming strike, so I should set isStrike to true. I'll gather the necessary strike data.",
+    "tokens": {
+      "input": 13498,
+      "output": 1036,
+      "total": 14534
+    }
+  }
+}

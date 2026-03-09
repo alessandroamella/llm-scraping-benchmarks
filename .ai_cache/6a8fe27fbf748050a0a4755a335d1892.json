@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4108,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00018225,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000165,
+      "cachedCost": 0,
+      "totalCost": 0.00036225
+    },
+    "hash": "6a8fe27fbf748050a0a4755a335d1892",
+    "sourceFile": "strike-detail-venerd--29-novembre-revocato-sciopero-ferrovienord.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, let's break this down. My objective is crystal clear: to determine if this document signals an impending strike. The input text, \"Venerdì 29 novembre revocato sciopero FERROVIENORD\", is the key piece of evidence.  I see \"revocato,\" which is the Italian word for \"revoked\" or \"cancelled.\"  Specifically, it mentions a strike originally scheduled for November 29th (from 9:00 to 13:00) that has been *revoked*. Given that this explicitly states a cancellation of the strike, the logical conclusion, from an expert standpoint, is that there *won't* be a strike.  Therefore, I'll set the `isStrike` flag to `false`. The output will be in JSON format to be easily parsed and integrated. The final output is:\n\n```json\n{\n  \"isStrike\": false\n}\n```\n\n\n",
+    "tokens": {
+      "input": 729,
+      "output": 10,
+      "total": 849
+    }
+  }
+}

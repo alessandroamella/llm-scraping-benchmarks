@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-03-09T18:51:47.005Z",
+  "timestamp": "2026-03-09T19:10:48.416Z",
   "isCacheHit": false,
   "request": {
     "sourceName": "ATAC",
     "fileName": "trasporto_pubblico_venerdi_10_gennaio_sciopero_nazionale_di_4_ore.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "mineru-html",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"ATAC\" (the public transport company of Rome, Lazio (12)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: mineru-html):\n<html lang=\"it-IT\" prefix=\"og: https://ogp.me/ns#\"><body class=\"wp-singular comunicato-template-default single single-comunicato postid-11171 wp-embed-responsive wp-theme-hello-elementor wp-child-theme-hello-elementor-child hello-elementor-default elementor-default elementor-kit-12678 elementor-page-15972\">\n<div class=\"elementor elementor-15972 elementor-location-single post-11171 comunicato type-comunicato status-publish hentry sezione-newsmedia visibilita-inevidenzasulblocconewseventsinhomepage\" data-elementor-id=\"15972\" data-elementor-post-type=\"elementor_library\" data-elementor-type=\"single-page\">\n<div class=\"elementor-element elementor-element-6ee3468 e-flex e-con-boxed e-con e-parent\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"6ee3468\" data-settings='{\"background_background\":\"classic\"}'>\n<div class=\"e-con-inner\">\n<div class=\"elementor-element elementor-element-6945d4c e-con-full e-flex e-con e-child\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"6945d4c\">\n<div class=\"elementor-element elementor-element-da182fa e-con-full e-flex e-con e-child\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"da182fa\">\n<div class=\"elementor-element elementor-element-aff84d2 elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading\" data-e-type=\"widget\" data-element_type=\"widget\" data-id=\"aff84d2\" data-widget_type=\"theme-post-title.default\">\n<div class=\"elementor-widget-container\">\n<h1 class=\"elementor-heading-title elementor-size-default\" _item_id=\"1\">Trasporto pubblico, venerdì 10 gennaio sciopero nazionale di 4 ore</h1> </div>\n</div>\n</div>\n</div>\n</div>\n</div>\n<div class=\"elementor-element elementor-element-32c51eb e-flex e-con-boxed e-con e-parent\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"32c51eb\">\n<div class=\"e-con-inner\">\n<div class=\"elementor-element elementor-element-7a3d033 e-con-full e-flex e-con e-child\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"7a3d033\" id=\"main-content\">\n<div class=\"elementor-element elementor-element-723d484 elementor-widget elementor-widget-theme-post-content\" data-e-type=\"widget\" data-element_type=\"widget\" data-id=\"723d484\" data-widget_type=\"theme-post-content.default\">\n<div class=\"elementor-widget-container\">\n<p _item_id=\"3\">Venerdì 10 gennaio trasporto pubblico a rischio per lo sciopero nazionale di 4 ore, dalle 8.30 alle 12.30, proclamato dal sindacato Faisa Confail. A Roma l’agitazione interesserà la rete Atac e le linee periferiche gestite da operatori privati. <br>Aggiornamenti su <a href=\"romamobilita.it\">romamobilita.it</a></p>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</body></html>"
   },
   "response": {
@@ -15,7 +15,8 @@
       "strikeData": {
         "startDate": "2025-01-10 08:30:00",
         "endDate": "2025-01-10 12:30:00",
-        "locationType": "NATIONAL"
+        "locationType": "NATIONAL",
+        "locationCodes": null
       }
     },
     "parsedData": {
@@ -28,19 +29,19 @@
     },
     "usage": {
       "input": 1384,
-      "output": 82,
+      "output": 89,
       "cached": 0,
-      "thinking": 528,
-      "total": 1994
+      "thinking": 426,
+      "total": 1899
     },
     "costUsd": {
       "inputCost": 0.000346,
-      "outputCost": 0.000123,
-      "thinkingCost": 0.000792,
+      "outputCost": 0.0001335,
+      "thinkingCost": 0.000639,
       "cachedCost": 0,
-      "totalCost": 0.001261
+      "totalCost": 0.0011185
     },
-    "durationMs": 5393,
-    "thoughts": "**Strike Analysis: January 10th, 2025 - National Public Transport Disruption**\n\nAlright, let's break this down. My source is this HTML snippet discussing a public transport strike. My objective is to determine if there's an upcoming strike and, if so, extract the crucial data points for the ATAC network (Rome/Lazio region).\n\nBased on the text, it’s a clear confirmation of an upcoming strike. The strike is titled \"Trasporto pubblico, venerdì 10 gennaio sciopero nazionale di 4 ore\". From the body of the text, \"Venerdì 10 gennaio trasporto pubblico a rischio per lo sciopero nazionale di 4 ore, dalle 8.30 alle 12.30, proclamato dal sindacato Faisa Confail. A Roma l’agitazione interesserà la rete Atac e le linee periferiche gestite da operatori privati,\" I've confirmed the strike details.\n\nSo, here's the distilled information: the strike is scheduled for **Friday, January 10th**. The date requires formatting, and since the text doesn't specify a year, I am inferring the next occurrence from the current context as 2025-01-10. This is the standard procedure. The strike will begin at **08:30:00** and conclude at **12:30:00**. The location is clearly stated as a national strike, which I'll denote as \"NATIONAL\". Guaranteed service times are not mentioned, and so I will omit this from the output.\n\nTherefore, the processed data will be:\n\n*   `isStrike`: true\n*   `strikeData`:\n    *   `startDate`: \"2025-01-10 08:30:00\"\n    *   `endDate`: \"2025-01-10 12:30:00\"\n    *   `locationType`: \"NATIONAL\"\n\nI've made sure to correctly identify it as a national strike and correctly omitted the `locationCodes` field, which isn't applicable at this level of granularity. And, yes, the date format is correct. That's all I need.\n\n\n"
+    "durationMs": 5456,
+    "thoughts": "**Analyzing the ATAC Strike Announcement**\n\nOkay, so I've got this notification from ATAC, the Rome public transport company. It's an announcement about a national strike – \"Trasporto pubblico, venerdì 10 gennaio sciopero nazionale di 4 ore\". Right off the bat, I need to parse the details accurately. Let's see...\n\nThe date is explicitly stated as Friday, January 10th. Given that the text doesn't specify a year, and assuming (standard procedure) to fill the gaps, it's referring to the current year, which is 2025. This strike is going to last for 4 hours.\n\nThe provided start and end times are clear: 8:30 AM to 12:30 PM on the 10th of January, 2025. The scope is \"Nazionale,\" which means it's national, affecting both ATAC and the private operators in Rome. I can confirm this is indeed a strike event. The data is nicely structured:\n\n*   `isStrike`: True.\n*   `strikeData`: I have start and end dates with `startDate`: \"2025-01-10 08:30:00\" and `endDate`: \"2025-01-10 12:30:00\".\n*   The `locationType` is correctly identified as \"NATIONAL\", and `locationCodes` is appropriately `null` given it's a national scope.\n\nI need to quickly confirm the format of the extracted data. Checking my format requirements: the `startDate` and `endDate` are both in 'yyyy-MM-dd HH:mm:ss' format, so that's good. The `locationType` matches the specified criteria (REGIONAL or NATIONAL), it's \"NATIONAL\" - perfect. Looks like the data is ready to be processed or stored. I have all the key pieces of information and it's all well-structured.\n\n\n"
   }
 }

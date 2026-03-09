@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7476,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00067725,
+      "outputCost": 0.0001648,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00084205
+    },
+    "hash": "e223ebd4294623393f171abaaa523a9b",
+    "sourceFile": "sciopero_trasporto_pubblico_chiuse_metro_b1_c_aperte_linea_b_ferrovia_termini_centocelle.html",
+    "thoughts": "**Deciding on strike extraction**\n\nI’m working on outputting JSON according to the strike extraction schema. The document discusses an ongoing public transport strike in Rome, with information about closures and updates. The date indicates it’s from September 2024, and since it states \"È in corso lo sciopero di 24 ore,\" that confirms it's happening now, not in the future. Based on guidelines, I'll set \"isStrike\" to false and prepare the output as {\"isStrike\": false}.",
+    "tokens": {
+      "input": 13545,
+      "output": 412,
+      "total": 13957
+    }
+  }
+}

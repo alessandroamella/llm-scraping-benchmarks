@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-24 00:00:00",
+      "endDate": "2025-02-24 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20791,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00012675,
+      "outputCost": 0.0007048,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00083155
+    },
+    "hash": "fb735e89c180e020dc2410af57bd2cff",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_24_h_lunedi_24_febbraio_2025.html",
+    "thoughts": "**Outputting strike information**\n\nI need to format a JSON output according to the required schema. The document is announcing a 24-hour national strike, set for February 24, 2025, and is confirmed to be upcoming. The content states that the USB OS has proclaimed this strike, and it provides specific service times. Therefore, I should indicate that the isStrike value is true. I also need to detail the startDate and endDate for the 24-hour period of the strike.",
+    "tokens": {
+      "input": 2535,
+      "output": 1762,
+      "total": 4297
+    }
+  }
+}

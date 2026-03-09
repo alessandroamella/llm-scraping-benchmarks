@@ -1,20 +1,20 @@
 {
-  "timestamp": "2026-03-09T18:48:41.728Z",
+  "timestamp": "2026-03-09T19:16:06.491Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "ATAC",
     "fileName": "venerd_17_giugno_sciopero_4_ore_rete_atac_rischio_830_1230.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "mineru-html",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"ATAC\" (the public transport company of Rome, Lazio (12)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: mineru-html):\n<html lang=\"it-IT\" prefix=\"og: https://ogp.me/ns#\"><body class=\"wp-singular comunicato-template-default single single-comunicato postid-10885 wp-embed-responsive wp-theme-hello-elementor wp-child-theme-hello-elementor-child hello-elementor-default elementor-default elementor-kit-12678 elementor-page-15972\">\n<div class=\"elementor elementor-15972 elementor-location-single post-10885 comunicato type-comunicato status-publish hentry\" data-elementor-id=\"15972\" data-elementor-post-type=\"elementor_library\" data-elementor-type=\"single-page\">\n<div class=\"elementor-element elementor-element-6ee3468 e-flex e-con-boxed e-con e-parent\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"6ee3468\" data-settings='{\"background_background\":\"classic\"}'>\n<div class=\"e-con-inner\">\n<div class=\"elementor-element elementor-element-6945d4c e-con-full e-flex e-con e-child\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"6945d4c\">\n<div class=\"elementor-element elementor-element-da182fa e-con-full e-flex e-con e-child\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"da182fa\">\n<div class=\"elementor-element elementor-element-aff84d2 elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading\" data-e-type=\"widget\" data-element_type=\"widget\" data-id=\"aff84d2\" data-widget_type=\"theme-post-title.default\">\n<div class=\"elementor-widget-container\">\n<h1 class=\"elementor-heading-title elementor-size-default\" _item_id=\"1\">Venerdì 17 giugno sciopero di 4 ore. Rete Atac a rischio dalle 8,30 alle 12,30</h1> </div>\n</div>\n</div>\n</div>\n</div>\n</div>\n<div class=\"elementor-element elementor-element-32c51eb e-flex e-con-boxed e-con e-parent\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"32c51eb\">\n<div class=\"e-con-inner\">\n<div class=\"elementor-element elementor-element-7a3d033 e-con-full e-flex e-con e-child\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"7a3d033\" id=\"main-content\">\n<div class=\"elementor-element elementor-element-723d484 elementor-widget elementor-widget-theme-post-content\" data-e-type=\"widget\" data-element_type=\"widget\" data-id=\"723d484\" data-widget_type=\"theme-post-content.default\">\n<div class=\"elementor-widget-container\">\n<p _item_id=\"3\">Venerdì 17 giugno trasporto pubblico romano a rischio per lo sciopero di 4 ore, dalle 8,30 alle 12,30, indetto tra i lavoratori Atac dai sindacati Usb e Orsa Tpl. L’agitazione riguarderà la sola rete Atac. Non saranno invece interessate le linee periferiche gestite dalla Roma Tpl. Aggiornamenti in tempo reale su romamobilita.it</p>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</body></html>"
   },
   "response": {
     "parsedData": {
       "isStrike": true,
       "strikeData": {
-        "startDate": "2022-06-17 08:30:00",
-        "endDate": "2022-06-17 12:30:00",
+        "startDate": "2024-06-17 08:30:00",
+        "endDate": "2024-06-17 12:30:00",
         "locationType": "REGIONAL",
         "locationCodes": [
           "12"
@@ -23,17 +23,17 @@
     },
     "usage": {
       "input": 1379,
-      "output": 93,
+      "output": 99,
       "total": 1959
     },
     "costUsd": {
       "inputCost": 0.00034475,
-      "outputCost": 0.0001395,
-      "thinkingCost": 0.0007305,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.0007215,
       "cachedCost": 0,
       "totalCost": 0.00121475
     },
-    "durationMs": 4533,
-    "thoughts": "**Analyzing the ATAC Strike Announcement**\n\nOkay, so I'm processing this information about an upcoming strike affecting the ATAC public transport network in Rome. The source is clearly ATAC, the transport authority, and the core event is a strike. The strike is scheduled for Friday, June 17th – I'll assume that's in 2022 because of the calendar match \"Venerdì 17 giugno\" – and it will last for four hours, from 08:30 to 12:30. That clarifies the timeframe.\n\nThe scope is the \"Rete Atac\", meaning the entire Atac network within Rome, which is located in the Lazio region, specifically identified by the code \"12\". The current status is an announcement of an upcoming strike.\n\nNow, let's nail down the constraints. It's all structured in JSON, which is straightforward. `isStrike` is set to `true`, confirming the nature of the event. The `startDate` is \"2022-06-17 08:30:00\" and the `endDate` is \"2022-06-17 12:30:00\" - all good there. The `locationType` is \"REGIONAL\" which makes sense, given the regional code \"12\". Finally, `locationCodes` includes [\"12\"] to specify the Lazio region. I am noting that guaranteed services are not mentioned explicitly. The \"dalle 8,30 alle 12,30\" suggests those are the strike times. All in all, this data provides the essential details.\n\n\n"
+    "durationMs": 6039,
+    "thoughts": "**Strike Analysis - ATAC (Rome)**\n\nOkay, let's break this down. My task is to determine if the input text represents a strike announcement. The target is ATAC in Rome (Lazio, code \"12\"). The text reads, \"Venerdì 17 giugno sciopero di 4 ore. Rete Atac a rischio dalle 8,30 alle 12,30.\" My analysis shows a clear strike announcement.\n\nI've extracted the core details. The date is Friday, June 17th. Since the year isn't explicitly stated, I'll need to infer the most logical one – I can handle this at the schema level if it's required (e.g., assuming the current or near future year, or formatting it as is without the year).  The text gives us a timeframe: 4 hours, from 08:30 to 12:30. This suggests regional strike action.\n\nConsidering the \"guaranteed times\" aspect, the text doesn't explicitly guarantee service outside the strike hours. In Rome, public transport usually has guarantees before 08:30 and after 12:30. Since the text specifies *only* these hours, I'll address this in the schema, maybe by omitting the 'guaranteed times' field, or setting it to `null`.\n\nTherefore, I'm confident in setting `isStrike` to `true`. My `strikeData` object looks like this:\n\n*   `startDate`: \"2024-06-17 08:30:00\"\n*   `endDate`: \"2024-06-17 12:30:00\"\n*   `locationType`: \"REGIONAL\"\n*   `locationCodes`: [\"12\"]\n\nThe year is assumed as 2024 as a placeholder. Finally, I will ensure that the resulting JSON is strictly valid, and that all keys align perfectly with the schema, with date format as `yyyy-MM-dd HH:mm:ss`.\n\n\n"
   }
 }

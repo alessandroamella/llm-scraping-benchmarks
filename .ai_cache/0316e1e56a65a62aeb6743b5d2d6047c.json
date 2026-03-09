@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 2509,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00018075,
+      "outputCost": 0.000009,
+      "thinkingCost": 0.000222,
+      "cachedCost": 0,
+      "totalCost": 0.00041175
+    },
+    "hash": "0316e1e56a65a62aeb6743b5d2d6047c",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_195.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, let's break this down. The task at hand is to determine if this document is announcing a *future* strike. The text I'm looking at says \"Sciopero del trasporto pubblico, adesione personale Atac al 19,5% - Roma Servizi per la Mobilità\" and then \"L’adesione del personale Atac allo sciopero dei trasporto pubblico, rilevata a metà mattinata, è stata pari al 19,5%\". Hmm, sounds like we are talking about *participation* in a strike by Atac personnel. Let's see... the text mentions that the participation was measured on 18/09/2023. Given that it's *reporting* participation percentages, and specifically uses past tense \"è stata\", it's pretty clear this refers to an event that has *already happened*. Therefore, this is a report on the strike participation, *not* an announcement of a strike to come. So, to be clear, `isStrike` is `false`.\n\n\n",
+    "tokens": {
+      "input": 723,
+      "output": 6,
+      "total": 877
+    }
+  }
+}

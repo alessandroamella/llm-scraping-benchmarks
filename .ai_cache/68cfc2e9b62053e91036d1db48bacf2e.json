@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9684,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00035095,
+      "outputCost": 0.0001912,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00054215
+    },
+    "hash": "68cfc2e9b62053e91036d1db48bacf2e",
+    "sourceFile": "strike-detail-venerd--29-novembre-revocato-sciopero-ferrovienord.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to produce JSON based on the content about a potential strike. The Italian text indicates that the strike scheduled for \"Friday, November 29\" has been canceled. I see the line \"revocato sciopero\" means the strike is revoked. Therefore, this isn't an announcement of a new strike, but rather a cancellation. Since it's canceled, I'll set the `isStrike` field to false. Also, this applies to a regional strike in Lombardia.",
+    "tokens": {
+      "input": 7019,
+      "output": 478,
+      "total": 7497
+    }
+  }
+}

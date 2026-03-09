@@ -1,15 +1,26 @@
 {
-  "timestamp": "2026-03-09T18:50:28.925Z",
-  "isCacheHit": true,
+  "timestamp": "2026-03-09T19:08:49.597Z",
+  "isCacheHit": false,
   "request": {
     "sourceName": "ATAC",
     "fileName": "gioved_sciopero_regionale_4_ore_trasporto_pubblico_rischio.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "mineru-html",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"ATAC\" (the public transport company of Rome, Lazio (12)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: mineru-html):\n<html lang=\"it-IT\" prefix=\"og: https://ogp.me/ns#\"><body class=\"wp-singular comunicato-template-default single single-comunicato postid-11052 wp-embed-responsive wp-theme-hello-elementor wp-child-theme-hello-elementor-child hello-elementor-default elementor-default elementor-kit-12678 elementor-page-15972\">\n<div class=\"elementor elementor-15972 elementor-location-single post-11052 comunicato type-comunicato status-publish hentry\" data-elementor-id=\"15972\" data-elementor-post-type=\"elementor_library\" data-elementor-type=\"single-page\" data-rocket-location-hash=\"43e2deeadc883cef647b9f36a2e9dcfe\">\n<div class=\"elementor-element elementor-element-6ee3468 e-flex e-con-boxed e-con e-parent\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"6ee3468\" data-settings='{\"background_background\":\"classic\"}'>\n<div class=\"e-con-inner\">\n<div class=\"elementor-element elementor-element-6945d4c e-con-full e-flex e-con e-child\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"6945d4c\">\n<div class=\"elementor-element elementor-element-da182fa e-con-full e-flex e-con e-child\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"da182fa\">\n<div class=\"elementor-element elementor-element-aff84d2 elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading\" data-e-type=\"widget\" data-element_type=\"widget\" data-id=\"aff84d2\" data-widget_type=\"theme-post-title.default\">\n<div class=\"elementor-widget-container\">\n<h1 class=\"elementor-heading-title elementor-size-default\" _item_id=\"1\">Giovedì sciopero regionale di 4 ore, trasporto pubblico a rischio</h1> </div>\n</div>\n</div>\n</div>\n</div>\n</div>\n<div class=\"elementor-element elementor-element-32c51eb e-flex e-con-boxed e-con e-parent\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"32c51eb\" data-rocket-location-hash=\"66daadf289c41592d316e571051fc202\">\n<div class=\"e-con-inner\">\n<div class=\"elementor-element elementor-element-7a3d033 e-con-full e-flex e-con e-child\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"7a3d033\" id=\"main-content\">\n<div class=\"elementor-element elementor-element-723d484 elementor-widget elementor-widget-theme-post-content\" data-e-type=\"widget\" data-element_type=\"widget\" data-id=\"723d484\" data-widget_type=\"theme-post-content.default\">\n<div class=\"elementor-widget-container\">\n<p _item_id=\"3\">status: 1 Giovedì 7 dicembre trasporto pubblico a rischio per lo sciopero di 4 ore, dalle 9 alle 13, indetto a livello regionale dal sindacato Faisa Cisal. A Roma l’agitazione interesserà la rete Atac e i bus periferici della Roma Tpl. Aggiornamenti in tempo reale su romamobilita.it</p>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</body></html>"
   },
   "response": {
+    "rawOutput": {
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2023-12-07 09:00:00",
+        "endDate": "2023-12-07 13:00:00",
+        "locationType": "REGIONAL",
+        "locationCodes": [
+          "12"
+        ]
+      }
+    },
     "parsedData": {
       "isStrike": true,
       "strikeData": {
@@ -24,16 +35,18 @@
     "usage": {
       "input": 1416,
       "output": 99,
-      "total": 2056
+      "cached": 0,
+      "thinking": 687,
+      "total": 2202
     },
     "costUsd": {
       "inputCost": 0.000354,
       "outputCost": 0.0001485,
-      "thinkingCost": 0.0008115,
+      "thinkingCost": 0.0010305,
       "cachedCost": 0,
-      "totalCost": 0.001314
+      "totalCost": 0.001533
     },
-    "durationMs": 6201,
-    "thoughts": "**Strike Analysis: \"Giovedì 7 dicembre\"**\n\nOkay, here's the breakdown of this strike announcement. My input text describes a strike scheduled for \"Giovedì 7 dicembre\" – that's December 7th. Since the input doesn't provide a specific year, I need to make an assumption. Given the day of the week, I'm going to assume this refers to December 7th, 2023.\n\nThe strike is regional, specifically affecting Lazio, or Rome. The company involved is ATAC, the Rome public transport provider. The strike duration is four hours, from 9:00 AM to 1:00 PM (9 alle 13).\n\nMy goal here is to extract the relevant strike data. This is definitely an upcoming strike. So, I need to create the `strikeData` object with the correct details.\n\nThe `isStrike` flag will be set to `true`.\n\nI've determined the start and end dates and times: `startDate` is \"2023-12-07 09:00:00\" and `endDate` is \"2023-12-07 13:00:00\".\n\nThe `locationType` is clearly \"REGIONAL\". The corresponding `locationCodes` should be an array of 2-digit ISTAT region codes. Rome/Lazio corresponds to the code \"12\". I need to make sure my logic can handle this. The constraint is satisfied.\n\nI've also checked the guarantee times. The text simply states the strike period is \"dalle 9 alle 13\". It doesn't mention any guaranteed service windows. I will omit `guaranteedTimes` from the output. I need to take this into account for how the output is presented.\n\nSo, the extracted data should be:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2023-12-07 09:00:00\",\n    \"endDate\": \"2023-12-07 13:00:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"]\n  }\n}\n```\n\n\n"
+    "durationMs": 6795,
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, here's the breakdown of this ATAC HTML. My task is straightforward: identify if this is a strike announcement and then structure the information into a JSON object according to the specified schema.\n\nFirst, I see the headline: \"Giovedì sciopero regionale di 4 ore, trasporto pubblico a rischio\" – definitely screams \"strike\". The content confirms it: \"Thursday, December 7th, public transport at risk due to a 4-hour strike from 9 AM to 1 PM, regionally called by the Faisa Cisal union.\" \"A Roma l’agitazione interesserà la rete Atac e i bus periferici della Roma Tpl\" means that Rome, specifically the ATAC network and peripheral buses of Roma TPL, are affected.\n\nSo, *isStrike*: true. That's a no-brainer.\n\nNow, let's nail down the specifics for the JSON structure. The *startDate* is Thursday, December 7th, 9:00 AM. I'll represent that as \"2023-12-07 09:00:00\" assuming the current year (which aligns with the example given). Similarly, the *endDate* is \"2023-12-07 13:00:00\". No guaranteed service times are mentioned, so I will omit this from the JSON object as the schema permits. *locationType* is clearly \"REGIONAL\", and the relevant *locationCodes* will be [\"12\"] because Rome is in Lazio.\n\nTherefore, the final JSON output will be a single object containing the `isStrike` boolean, and a `strikeData` object with the dates, location type, and location codes. The format is valid JSON, no comments, and adheres to the required structure. Here's how it would look:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2023-12-07 09:00:00\",\n    \"endDate\": \"2023-12-07 13:00:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"]\n  }\n}\n```\n\n\n"
   }
 }

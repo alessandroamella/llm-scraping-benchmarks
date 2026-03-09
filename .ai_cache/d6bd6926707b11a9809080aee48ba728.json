@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-05 03:00:00",
+      "endDate": "2025-02-06 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4734,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0003055,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.00057,
+      "cachedCost": 0,
+      "totalCost": 0.0010855
+    },
+    "hash": "d6bd6926707b11a9809080aee48ba728",
+    "sourceFile": "strike-detail-mercoled--5-febbraio-sciopero-dei-treni-regionali.html",
+    "thoughts": "**Analyzing Strike Information for Trenord (Lombardia)**\n\nOkay, here's what I've got. The task is to determine if this text announces an upcoming strike, specifically targeting Trenord (Lombardia, code \"03\"). The input is a news snippet about a strike scheduled for Wednesday, February 5, 2025. My output needs to be a strictly formatted JSON object, adhering to a pre-defined schema.\n\nI've got the text: \"Mercoledì 5 febbraio sciopero dei treni regionali\" (Wednesday, Feb 5 strike), and \"Dalle ore 3 di mercoledì 5 alle ore 2 di giovedì 6 febbraio l’organizzazione sindacale ORSA ha indetto uno sciopero\" (Start: 03:00, End: 02:00 next day). This clearly indicates a strike. The location is specified as Trenord, which handles regional transport in Lombardia. The text also mentions guaranteed service times: \"Negli orari 6-9 e 18-21\".\n\nBased on this, I'm confident that the answer is yes, a strike *is* announced. Now, I need to translate this information into the required JSON format. I need to make sure the keys are precisely as the schema dictates, the date/time format is correct (YYYY-MM-DD HH:mm:ss), and `locationCodes` is an array of strings.\n\nHere's the JSON structure I'm building:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-02-05 03:00:00\",\n    \"endDate\": \"2025-02-06 02:00:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"03\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n```\n\nI'll double-check everything one last time. Date/time formats, locations, guaranteed times, all look good. This should be a clean, valid response.\n\n\n",
+    "tokens": {
+      "input": 1222,
+      "output": 140,
+      "total": 1742
+    }
+  }
+}

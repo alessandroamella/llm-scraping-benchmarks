@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6157,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005705,
+      "outputCost": 0.0001464,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00020345
+    },
+    "hash": "e0ca7c74b1080f48126ae1b878ed2dcc",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_322.html",
+    "thoughts": "**Analyzing strike information**\n\nI need to output a JSON object regarding a strike situation, checking if it’s happening or not. The content is Italian and discusses the participation rate in a public transport strike, specifying that the participation was at 32.2%. Since this refers to a strike that has already occurred, not an upcoming one, I can conclude that \"isStrike\" should be set to false, and I won’t include any strikeData.",
+    "tokens": {
+      "input": 1141,
+      "output": 366,
+      "total": 1507
+    }
+  }
+}

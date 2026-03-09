@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-14 00:00:00",
+      "endDate": "2025-11-14 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7860,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.003759,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.0012735,
+      "cachedCost": 0,
+      "totalCost": 0.0052425
+    },
+    "hash": "40eb37756910da160a9d70e6dd03fb69",
+    "sourceFile": "trasporto_pubblico_venerdi_prossimo_sciopero_di_24_ore_servizio_a_rischio.html",
+    "thoughts": "**Strike Analysis & Data Extraction**\n\nOkay, let's break this down. My task is to determine if this content signals an upcoming strike and, if so, pull out the essential details.\n\nFirst, I analyze the content. The title, \"Trasporto pubblico, venerdì prossimo sciopero di 24 ore. Servizio a rischio\" (Public transport, next Friday 24-hour strike. Service at risk), and the body text confirm that, yes, there *is* a strike being announced. It specifies a 24-hour strike next Friday, November 14th. The strike is affecting the Atac network. Good.\n\nNow for the parameters. I know `isStrike` is `True` right away. The `startDate` needs to be set. I'm assuming that a 24-hour strike starts at midnight of the mentioned date, so I'll go with \"2025-11-14 00:00:00\". Assuming publication date 10/11/2025. Also the `endDate` needs setting. Since it's a 24-hour strike, I'll go with \"2025-11-14 23:59:59\". The strike is regional, concerning the Lazio region specifically, so I'll set `locationType` to \"REGIONAL\" and `locationCodes` to [\"12\"] - Lazio's code.\n\nThe text mentions guaranteed services: \"Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" That translates into \"guaranteedTimes\": [\"00:00-08:30\", \"17:00-20:00\"].\n\nI'm double-checking the dates now. This article was published on 10/11/2025, and mentions Friday 14 November 2025. This all fits together.\n\nFinally, let's assemble the JSON output. I will adhere to the specified output format:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-11-14 00:00:00\",\n    \"endDate\": \"2025-11-14 23:59:59\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"00:00-08:30\", \"17:00-20:00\"]\n  }\n}\n```\n\nNow, let me run a final check against the requirements. `isStrike` is boolean – check. I have `strikeData` – check. The date/time format is yyyy-MM-dd HH:mm:ss – check. Done.\n\n\n",
+    "tokens": {
+      "input": 15036,
+      "output": 140,
+      "total": 16025
+    }
+  }
+}

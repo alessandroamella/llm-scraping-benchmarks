@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4990,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000589,
+      "outputCost": 0.000094,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0001529
+    },
+    "hash": "afd874644ed1daa9739f5b970e8f00bc",
+    "sourceFile": "funivia_del_faito_sospensione_temporanea_del_servizio_funiviario_dalle_ore_1105.html",
+    "thoughts": "**Evaluating strike status**\n\nI need to follow the strike_extraction schema for this document related to Funivia del Faito. It's about a service suspension starting from 11:05 due to adverse weather. Since this isn't a labor strike, I determine isStrike to be false. The instructions clarify that if the content involves a cancellation or real-time service updates about an ongoing strike, we still set isStrike to false. So, my output will be:\n\n{\n  \"isStrike\": false\n}",
+    "tokens": {
+      "input": 1178,
+      "output": 235,
+      "total": 1413
+    }
+  }
+}

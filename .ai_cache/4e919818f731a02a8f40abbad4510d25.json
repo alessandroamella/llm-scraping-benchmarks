@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9969,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000745,
+      "outputCost": 0.000186,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002605
+    },
+    "hash": "4e919818f731a02a8f40abbad4510d25",
+    "sourceFile": "venerdi_trasporto_pubblico_regolarmente_servizio_sciopero_nazionale_usb_rinviato_9_ottobre.html",
+    "thoughts": "**Interpreting strike information**\n\nI need to output a JSON format according to the strike extraction requirements. From the content in Italian, the main title indicates that public transport will continue as normal, and the USB union has postponed the national strike to October 9. The body confirms that on September 29, public transport will be operational, and the strike initially planned for the next day is now rescheduled. So, the isStrike boolean will be false, and we won’t include strikeData.",
+    "tokens": {
+      "input": 1490,
+      "output": 465,
+      "total": 1955
+    }
+  }
+}

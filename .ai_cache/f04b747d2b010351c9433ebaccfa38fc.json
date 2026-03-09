@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3461,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00032675,
+      "outputCost": 0.000009,
+      "thinkingCost": 0.0003135,
+      "cachedCost": 0,
+      "totalCost": 0.00064925
+    },
+    "hash": "f04b747d2b010351c9433ebaccfa38fc",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_313.html",
+    "thoughts": "**Analyzing the Document: Strike Announcement Detection**\n\nOkay, here's the deal. My task is straightforward: figure out if this document is announcing a future strike. Let's dig in. I see the text: \"Sciopero del trasporto pubblico, adesione personale Atac al 31,3%\" which translates to \"Public transport strike, Atac staff participation at 31.3%\". The core content confirms this: \"L’adesione complessiva del personale Atac allo sciopero del trasporto pubblico di oggi, rilevata in mattinata, è stata pari al 31,3 per cento.\" It's talking about the *participation* (\"adesione\") in a strike *happening today*, with the morning figures.\n\nThis isn't an *announcement*. It's a report on what's *already* happening. I need to be precise here; I'm not seeing any indication of a *future* action. Based on that constraint, where I set `isStrike` to false if the document is only providing participation information for a strike that has already happened, I'm confidently setting `isStrike` to **false**. It's a past-tense situation, not a future one.\n\n\n",
+    "tokens": {
+      "input": 1307,
+      "output": 6,
+      "total": 1522
+    }
+  }
+}

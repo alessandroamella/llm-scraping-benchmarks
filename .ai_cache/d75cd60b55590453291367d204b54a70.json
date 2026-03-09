@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-10-09 00:00:00",
+      "endDate": "2023-10-09 23:59:59",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 26110,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005895,
+      "outputCost": 0.0011856,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00124455
+    },
+    "hash": "d75cd60b55590453291367d204b54a70",
+    "sourceFile": "venerdi_trasporto_pubblico_regolarmente_servizio_sciopero_nazionale_usb_rinviato_9_ottobre.html",
+    "thoughts": "**Determining strike announcement status**\n\nI need to output JSON according to the specified schema. The content mentions that public transport is operating regularly, as a national strike has been postponed to October 9. So, this indicates that although the strike was originally planned for the day after tomorrow, it's now rescheduled. I need to consider if this is announcing an upcoming strike since there's a new date. It definitely seems to be announcing an upcoming strike, but now for a later date.",
+    "tokens": {
+      "input": 1179,
+      "output": 2964,
+      "total": 4143
+    }
+  }
+}

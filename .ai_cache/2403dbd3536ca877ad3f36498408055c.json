@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3142,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00371975,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000213,
+      "cachedCost": 0,
+      "totalCost": 0.00394775
+    },
+    "hash": "2403dbd3536ca877ad3f36498408055c",
+    "sourceFile": "sciopero_generale_nazionale_adesione_del_personale_atac_al_182.html",
+    "thoughts": "**Analyzing Strike Participation Data**\n\nOkay, here's what I've got. The input content clearly states the outcome of a \"general national strike\"—specifically, the participation rate of Atac personnel at 18.2%. This is a direct report of a *result*, not a call to action or a live update. The key dates are the publication on 29/11/2024 and an update on 03/12/2024, which confirms it's a past event.\n\nMy instruction is quite precise: If this is purely reporting *after-the-fact participation*, then I set `isStrike` to `false`. That's exactly what this is. No ongoing strike, no present-tense reporting, just a data point reflecting a completed event. Therefore, the logical conclusion is to set `isStrike` to `false`. Simple as that.\n\n\n",
+    "tokens": {
+      "input": 14879,
+      "output": 10,
+      "total": 15031
+    }
+  }
+}

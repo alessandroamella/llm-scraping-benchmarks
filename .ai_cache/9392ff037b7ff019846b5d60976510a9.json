@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-02-17 00:00:00",
+      "endDate": "2023-02-17 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 31564,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006015,
+      "outputCost": 0.001132,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00119215
+    },
+    "hash": "9392ff037b7ff019846b5d60976510a9",
+    "sourceFile": "venerd_17_febbraio_sciopero_nazionale_usb_24_ore_trasporto_pubblico_rischio.html",
+    "thoughts": "**Determining upcoming strike status**\n\nI need to output JSON based on the strike extraction schema. The document is about an upcoming strike announcement in Italy, specifically mentioning a national 24-hour strike by the USB union on February 17. The title indicates potential disruption to public transport in Rome. It also mentions that services will be regular until 8:30 and then again from 17:00 to 20:00. Since this clearly states it’s an upcoming strike, I’ll categorize it as such.",
+    "tokens": {
+      "input": 1203,
+      "output": 2830,
+      "total": 4033
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:01:00",
+      "endDate": "2025-12-12 21:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24910,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005875,
+      "outputCost": 0.0008884,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00094715
+    },
+    "hash": "48e149a2bc25d8e1b25a88350cfa7a75",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-12-12-sciopero-nazionale-del-traspor.html",
+    "thoughts": "**Classifying a strike announcement**\n\nI need to decide if this is indeed a strike announcement. The input is in Italian and mentions a national strike for rail transport. It specifies that it's in force on December 12, 2025, from 00:01 to 21:00. It states that the strike may cause service modifications. Clearly, we should classify this as a true strike and create a strikeData output with the formatted start date as \"2025-12-12 00:01:00\".",
+    "tokens": {
+      "input": 1175,
+      "output": 2221,
+      "total": 3396
+    }
+  }
+}

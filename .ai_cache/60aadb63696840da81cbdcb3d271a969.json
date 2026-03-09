@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-07-04 08:30:00",
+      "endDate": "2024-07-04 16:30:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6810,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.003714,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.0010995,
+      "cachedCost": 0,
+      "totalCost": 0.004962
+    },
+    "hash": "60aadb63696840da81cbdcb3d271a969",
+    "sourceFile": "trasporto_pubblico_domani_sciopero_8_ore_sulla_rete_atac.html",
+    "thoughts": "**Analyzing the ATAC Strike Announcement**\n\nOkay, let's break this down. My task is clear: I need to analyze this text to determine if it describes an upcoming strike, and if so, return a JSON object with the strike details. The format must be strictly adhered to: JSON, with dates in `yyyy-MM-dd HH:mm:ss` format, location as a 2-digit ISTAT code (12 for Lazio), and guaranteed times as `HH:mm-HH:mm`. The key `isStrike` is absolute; no guessing on that one.\n\nFirst, I see the headline: \"Trasporto pubblico, domani sciopero di 8 ore sulla rete Atac\" (Public transport, tomorrow 8-hour strike on the Atac network). That's a strong indicator. Then I notice the publication details: \"Pubblicato il: 03/07/2024 - Aggiornato il: 06/11/2024\" (Published: 03/07/2024 - Updated: 06/11/2024). Ah, the text uses \"domani\" (tomorrow), which requires context to understand. I need to extract the specific information: duration, time, company, and date.\n\nThe strike details are present: It's an 8-hour strike from 08:30 to 16:30, and it involves the Atac network. Since the text says \"domani\", I need to infer a specific date. The publication date is 03/07/2024, so \"domani\" (tomorrow) would be 2024-07-04. The prompt requires start and end times in the `yyyy-MM-dd HH:mm:ss` format. So I'll infer the `startDate` is 2024-07-04 08:30:00 and the `endDate` is 2024-07-04 16:30:00.\n\nTherefore, this *is* a strike announcement. I have enough information to construct the JSON object, keeping in mind the strict format requirements.\n\n\n",
+    "tokens": {
+      "input": 14856,
+      "output": 99,
+      "total": 15688
+    }
+  }
+}

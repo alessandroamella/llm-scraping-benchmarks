@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-02-25 00:00:00",
+      "endDate": "2022-02-25 23:59:59",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 32416,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000619,
+      "outputCost": 0.001254,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0013159
+    },
+    "hash": "772082538a05fcfe54f3da99b40ce9e0",
+    "sourceFile": "trasporto_pubblico_venerdi_25_febbraio_sciopero_nazionale_24_ore.html",
+    "thoughts": "**Determining upcoming strike announcement**\n\nI need to analyze if the document announces a new or upcoming strike. The title of the Italian article mentions a 24-hour national strike on February 25. It details that various unions proclaimed this strike and that public transport will be at risk. Given these details, I can confirm this is indeed an announcement for an upcoming strike. So, I'll set isStrike to true and extract the necessary strike data like start date, end date, and location.",
+    "tokens": {
+      "input": 1238,
+      "output": 3135,
+      "total": 4373
+    }
+  }
+}

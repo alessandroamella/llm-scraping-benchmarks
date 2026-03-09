@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6963,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00066275,
+      "outputCost": 0.0001324,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00079515
+    },
+    "hash": "286849b1f1f1aac5b26b78638668f583",
+    "sourceFile": "sciopero_generale_nazionale_adesione_del_personale_atac_al_182.html",
+    "thoughts": "**Checking strike announcement**\n\nI need to confirm if the document is about an upcoming strike based on the provided content. It discusses the participation rate of Atac staff in a national strike that took place this morning, not one that's upcoming. Since it clearly states the strike has already occurred, I’ll determine that `isStrike` should be false. After double-checking the dates, I can confidently conclude that I’ll output: {\"isStrike\": false}.",
+    "tokens": {
+      "input": 13255,
+      "output": 331,
+      "total": 13586
+    }
+  }
+}

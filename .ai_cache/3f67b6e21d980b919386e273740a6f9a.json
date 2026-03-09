@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5580,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005695,
+      "outputCost": 0.0001752,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00023215
+    },
+    "hash": "3f67b6e21d980b919386e273740a6f9a",
+    "sourceFile": "sciopero_del_trasporto_pubblico_adesione_personale_atac_al_273.html",
+    "thoughts": "**Deciding on strike announcement**\n\nI need to output a JSON object according to the strike_extraction schema. The content mentions an Italian public transport strike with a staff attendance of 27.3%. The date indicates it's a news post reporting on attendance. It suggests participation in a strike that has already occurred, so it makes sense that I would set isStrike to false. The instructions are clear about this filter based on the information provided.",
+    "tokens": {
+      "input": 1139,
+      "output": 438,
+      "total": 1577
+    }
+  }
+}

@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-03-09T18:43:53.065Z",
+  "timestamp": "2026-03-09T19:15:45.361Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "Trenitalia",
     "fileName": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2026-1-9-sciopero-nazionale-del-trasporto.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "mineru-html",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"Trenitalia\" (Italy's national railway operator).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: mineru-html):\n<html lang=\"it\"><body data-language=\"it\">\n<div class=\"section-container section-container--fixed\">\n<div class=\"article\">\n<div>\n<h1 class=\"article--heading\" _item_id=\"2\">SCIOPERO NAZIONALE DEL TRASPORTO FERROVIARIO</h1>\n<div class=\"tabular-data-view--snapshot--notes\">\n<div class=\"note\" id=\"service-adjust\" _item_id=\"4\">\n       Servizio: \n       <strong>Alta Velocità, Lunga percorrenza, Regionale</strong>\n</div>\n<div class=\"note\" id=\"change-adjust\" _item_id=\"5\">\n       Causa Modifica: \n       <strong>Sciopero</strong>\n</div>\n<div class=\"note\" id=\"company-adjust\" _item_id=\"6\">\n       Impresa: \n       <strong>Gruppo FS Italiane, Italo Nuovo Trasporto Viaggiatori, Trenord</strong>\n</div>\n</div>\n</div>\n</div>\n</div>\n<div class=\"section-container section-container--fixed\">\n<div class=\"article\">\n<div class=\"text section\">\n<div class=\"article--text\">\n<p _item_id=\"7\"><b>Dalle ore 21:00 di venerdì 9 gennaio alle ore 21:00 di sabato 10 gennaio 2026</b> è stato indetto uno sciopero del personale del <b>Gruppo FS Italiane, Italo e Trenord.</b></p>\n<p _item_id=\"8\">Lo sciopero può comportare modifiche al servizio, <b>anche prima dell’inizio e dopo la sua conclusione.</b></p>\n<p _item_id=\"9\">Maggiori informazioni sui servizi garantiti in caso di sciopero sono disponibili sui canali digitali delle Imprese ferroviarie o presso il personale di assistenza clienti e le biglietterie.</p>\n</div>\n</div>\n</div>\n</div>\n</body></html>"
   },
   "response": {
@@ -20,17 +20,17 @@
     },
     "usage": {
       "input": 888,
-      "output": 82,
-      "total": 1244
+      "output": 89,
+      "total": 1517
     },
     "costUsd": {
       "inputCost": 0.000222,
-      "outputCost": 0.000123,
-      "thinkingCost": 0.000411,
+      "outputCost": 0.0001335,
+      "thinkingCost": 0.00081,
       "cachedCost": 0,
-      "totalCost": 0.000756
+      "totalCost": 0.0011655
     },
-    "durationMs": 10494,
-    "thoughts": "**Analyzing Strike Information for JSON Extraction**\n\nOkay, let's break this down. My objective is clear: I need to process this strike announcement and distill the relevant information into a specific JSON format. The core condition I need to adhere to is that `isStrike` should only be true when it's an announcement for an *upcoming* strike, and based on the provided announcement, I believe this criteria has been met. This is a strike announcement for Gruppo FS Italiane, Italo, and Trenord.\n\nThe critical data points are laid out. The strike's timeframe is \"Dalle ore 21:00 di venerdì 9 gennaio alle ore 21:00 di sabato 10 gennaio 2026,\" which needs to be parsed into a `startDate` and `endDate`. Using my expertise in parsing datetime strings, I’ll format this into \"2026-01-09 21:00:00\" for the start and \"2026-01-10 21:00:00\" for the end.\n\nThe announcement indicates the scope of the strike is \"SCIOPERO NAZIONALE\" (National). This will be represented as `locationType`: \"NATIONAL\". The `locationCodes` field is not relevant here and I'll omit it.\n\nFinally, the text mentions \"Maggiori informazioni sui servizi garantiti... sono disponibili sui canali digitali\". Since specific guaranteed times aren't explicitly provided within the text, I'll omit the `guaranteedTimes` field entirely from the resulting JSON.\n\nTherefore, my final JSON output will contain the following:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2026-01-09 21:00:00\",\n    \"endDate\": \"2026-01-10 21:00:00\",\n    \"locationType\": \"NATIONAL\"\n  }\n}\n```\n\n\n"
+    "durationMs": 6080,
+    "thoughts": "**Analyzing the Railway Strike Announcement**\n\nOkay, let's break this down. My task is to analyze this HTML content, which appears to be about a railway strike, and extract the relevant information to fit a specific JSON schema. I need to determine if it *is* a strike announcement and then pull out the specifics: start date, end date, location type (regional or national), location codes (if regional), and guaranteed service times (if present).\n\nThe input data is an HTML document, I'll need to parse it effectively. The text includes a heading: \"SCIOPERO NAZIONALE DEL TRASPORTO FERROVIARIO\" – \"National railway transport strike.\" That's a good start, confirming it's about a strike. Then there's a paragraph: \"Dalle ore 21:00 di venerdì 9 gennaio alle ore 21:00 di sabato 10 gennaio 2026 è stato indetto uno sciopero del personale del Gruppo FS Italiane, Italo e Trenord.\" This translates to \"From 21:00 on Friday, January 9th to 21:00 on Saturday, January 10th, 2026, a strike has been called by the personnel of the FS Italiane Group, Italo and Trenord.\"\n\nAlright, that settles it – it *is* an announcement for a national strike. Now, to extract the details for the JSON. The start date and time are Friday, January 9, 2026, at 21:00. In the required \"yyyy-MM-dd HH:mm:ss\" format, that's \"2026-01-09 21:00:00\". The end date and time are Saturday, January 10, 2026, at 21:00, which is \"2026-01-10 21:00:00\".\n\nThe scope is clearly \"NAZIONALE\" (National) from the heading and the text, so `locationType` will be \"NATIONAL\" and consequently, `locationCodes` will be `null`. The text doesn't explicitly mention any guaranteed service times, so that field will be omitted in the final JSON object.\n\nSo, here’s what I've got: `isStrike: true`, and the `strikeData` object with the start and end dates formatted correctly, the location type set to national, and location codes set to null.\n\n\n"
   }
 }

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5153,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007295,
+      "outputCost": 0.0001464,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00021935
+    },
+    "hash": "0e8ee196c9fa23760e70deba51f5fda1",
+    "sourceFile": "sciopero_generale_adesione_personale_atac_179.html",
+    "thoughts": "**Analyzing strike information**\n\nI need to format this content according to the strike_extraction schema. The headline is Italian, noting a general strike with Atac staff participation reported at 17.9%. The follow-up paragraph confirms this value relates to an event that happened earlier today — it’s not about an upcoming strike. Since it details participation and there’s no mention of cancellation or revocation, I’ll set isStrike to false and output: {\"isStrike\": false}.",
+    "tokens": {
+      "input": 1459,
+      "output": 366,
+      "total": 1825
+    }
+  }
+}

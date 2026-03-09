@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-11-27 00:00:00",
+      "endDate": "2023-11-27 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6976,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.003737,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.0011685,
+      "cachedCost": 0,
+      "totalCost": 0.005102
+    },
+    "hash": "6ee98d4857019c0907c856ad266f9a3d",
+    "sourceFile": "luned_27_novembre_sciopero_nazionale_trasporto_pubblico_possibili_disagi.html",
+    "thoughts": "**Strike Analysis Summary**\n\nOkay, let's break this down. My task is to determine if this \"Roma Servizi per la Mobilità\" document announces a strike and, if so, extract specific strike details in a valid JSON format. The input is a markdown page referencing a strike on Monday, November 27th. The key is to check `isStrike` (which I believe is true), and if it is, I need to grab the `startDate`, `endDate`, `locationType`, `locationCodes`, and `guaranteedTimes`.\n\nThe title clearly states \"Lunedì 27 novembre sciopero nazionale del trasporto pubblico, possibili disagi\" – that’s a yes to a strike announcement. Now for the specifics. The content mentions a national 24-hour strike. The relevant date is Monday, November 27th, 2023, based on the publish date of November 21st, 2023.\n\nGiven the 24-hour duration, `startDate` will be \"2023-11-27 00:00:00\" and `endDate` \"2023-11-27 23:59:59\". The phrase \"sciopero nazionale\" points to a `locationType` of \"NATIONAL\", and consequently, `locationCodes` should be `null` because it’s a national strike.\n\nThe excerpt mentions guaranteed service times: \"Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" This translates to regular service until 8:30 AM and from 5 PM to 8 PM. These are common Italian strike guaranteed times, so translating that to `guaranteedTimes`, I'll use the format required: [\"00:00-08:30\", \"17:00-20:00\"].\n\nSo, combining all the information, here’s my processed strike data:\n\n*   `startDate`: \"2023-11-27 00:00:00\"\n*   `endDate`: \"2023-11-27 23:59:59\"\n*   `locationType`: \"NATIONAL\"\n*   `locationCodes`: null\n*   `guaranteedTimes`: [\"00:00-08:30\", \"17:00-20:00\"]\n\n\n",
+    "tokens": {
+      "input": 14948,
+      "output": 131,
+      "total": 15858
+    }
+  }
+}

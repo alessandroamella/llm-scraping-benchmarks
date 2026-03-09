@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-30 20:00:00",
+      "endDate": "2025-10-31 00:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5326,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00019375,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.00072,
+      "cachedCost": 0,
+      "totalCost": 0.00106225
+    },
+    "hash": "1074f787a7306b4bb806b48fac5b38fe",
+    "sourceFile": "domani_sciopero_serale_di_4_ore_a_rischio_i_bus_del_deposito_magliana.html",
+    "thoughts": "**Analyzing the Upcoming Bus Strike**\n\nOkay, so I've got this announcement: \"Domani sciopero serale di 4 ore. A rischio i bus del deposito Magliana\". The publication date is October 29th, 2025, and it mentions an update on the 29th, meaning \"tomorrow\" is the 30th. This is a clear indicator of a strike, which I've marked as `isStrike: true`.\n\nI've extracted the key details to build the data structure I need. The strike is scheduled for four hours, starting tomorrow evening, October 30th, 2025, at 8 PM (20:00:00), and ending at midnight, which is technically the start of October 31st, 2025, at 00:00:00. No guaranteed services are mentioned. It's affecting buses specifically from the Magliana depot, so the scope is \"REGIONAL\" since this is Rome/Lazio (region 12) which is represented by `locationCodes`: [\"12\"].\n\nNow, let's put it all together to confirm the JSON structure before I finalize the data.  No comments and strict JSON format is required.\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-10-30 20:00:00\",\n    \"endDate\": \"2025-10-31 00:00:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"]\n  }\n}\n```\n\n\n",
+    "tokens": {
+      "input": 775,
+      "output": 99,
+      "total": 1354
+    }
+  }
+}

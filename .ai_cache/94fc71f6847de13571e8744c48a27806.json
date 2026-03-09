@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5506,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000751,
+      "outputCost": 0.0001272,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002023
+    },
+    "hash": "94fc71f6847de13571e8744c48a27806",
+    "sourceFile": "sciopero_generale_nazionale_adesione_personale_atac_23.html",
+    "thoughts": "**Setting strike participation data**\n\nThe instruction clarifies that if the information pertains to a strike that has already taken place, I should set `isStrike` to false. This seems to relate to a participation percentage for an earlier event. Therefore, I’ll ensure the JSON is precise and only return:\n\n{\"isStrike\": false}\n\nI'll focus on crafting the final answer without any additional information, keeping in mind that the system requires JSON only.",
+    "tokens": {
+      "input": 1502,
+      "output": 318,
+      "total": 1820
+    }
+  }
+}

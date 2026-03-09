@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-09-29 00:00:00",
+      "endDate": "2023-09-30 00:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 35117,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005955,
+      "outputCost": 0.0011464,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00120595
+    },
+    "hash": "e1febd84545b6cb3d95aa68a34207736",
+    "sourceFile": "venerd_29_settembre_sciopero_nazionale_trasporto_pubblico_possibili_disagi.html",
+    "thoughts": "**Considering guaranteed times**\n\nI’m thinking it might be better to set guaranteed times to [\"00:00-08:30\", \"17:00-20:00\"]. For the national strike, it looks like they meant a full 24 hours from 00:00 to 23:59 on the strike date. So during that time, I have regular service from 00:00 to 08:30 and again from 17:00 to 20:00. But from 08:30 to 17:00, service might not be guaranteed. I have to make sure these times are accurate for the strike date.",
+    "tokens": {
+      "input": 1191,
+      "output": 2866,
+      "total": 4057
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4498,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00369325,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0004995,
+      "cachedCost": 0,
+      "totalCost": 0.00420775
+    },
+    "hash": "161243219eed466bdc4755dbb258cfb2",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_302.html",
+    "thoughts": "**Analyzing Potential Strike Announcement**\n\nOkay, let's break this down. My task is clear: determine if this content represents an *announcement* of a future strike or something else related to a strike. The input text is \"Sciopero del trasporto pubblico, adesione personale Atac al 30,2% - Roma Servizi per la Mobilità.\" The system gave me some instructions. If it *isn't* a strike announcement – maybe it's a cancellation, participation info, a past event, or a real-time update – I need to return `{\"isStrike\": false}`. If it *is* an announcement, then I should produce valid JSON like `{\"isStrike\": true, \"strikeData\": { ... }}`\n\nNow, let's analyze the input. First, the title: \"Sciopero del trasporto pubblico, adesione personale Atac al 30,2%\". That roughly translates to \"Public transport strike, Atac staff adhesion at 30.2%.\" The text also states that \"L’adesione del personale Atac allo sciopero del trasporto pubblico, rilevata in mattinata, è stata pari al 30,2%\". That's key, indicating the participation of ATAC staff.Crucially, the published date is 16/12/2021. So, based on the content describing a *percentage of participation* and the dated publication, this clearly describes a strike that *already happened*. It's a post-event report, not an announcement. Therefore, the correct response is a JSON indicating it is *not* an announcement.\n\n```json\n{ \"isStrike\": false }\n```\n\n\n",
+    "tokens": {
+      "input": 14773,
+      "output": 10,
+      "total": 15116
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7880,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006671,
+      "outputCost": 0.0001848,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008519
+    },
+    "hash": "0240dc526c76dda7193b52a81379b296",
+    "sourceFile": "sciopero_sulla_rete_atac_chiuse_metro_ferrovia_termini_centocelle.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to check if the document is announcing a new strike based on the strike_extraction schema. The content’s in Italian and mentions an ongoing strike from Atac, indicating it will finish at 16:30. It says, \"È in corso lo sciopero,\" which translates to “the strike is ongoing.” It appears to be about an ongoing situation, not an upcoming strike, so I can’t set isStrike to true; it details the current strike instead.",
+    "tokens": {
+      "input": 13342,
+      "output": 462,
+      "total": 13804
+    }
+  }
+}

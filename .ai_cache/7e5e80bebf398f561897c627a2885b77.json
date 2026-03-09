@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-16 10:00:00",
+      "endDate": "2025-11-16 17:59:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "08",
+        "07",
+        "03",
+        "01",
+        "05"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5408,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00028,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.000774,
+      "cachedCost": 0,
+      "totalCost": 0.0012505
+    },
+    "hash": "7e5e80bebf398f561897c627a2885b77",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-11-16-sciopero-del-personale-di-tren.html",
+    "thoughts": "**Strike Analysis - Confirmed**\n\nOkay, here's what I've got. The input clearly indicates an upcoming strike. My analysis confirms this, and I've extracted all the relevant information.\n\nLet's break it down: The strike is scheduled for November 16th, 2025. Specifically, from 10:00 AM to 5:59 PM. I've verified that this is the correct date and time frame (\"Dalle ore 10:00 alle ore 17:59 di domenica 16 novembre 2025\").\n\nThe geographic scope is regional. The affected regions are specifically: Emilia Romagna, Liguria, Lombardia, Piemonte, and Veneto. I've double-checked my ISTAT codes and confirmed:\n\n*   Piemonte: 01\n*   Liguria: 07\n*   Lombardia: 03\n*   Veneto: 05\n*   Emilia Romagna: 08\n\nThe crucial aspect regarding guaranteed services is that \"Lo sciopero ricade in una fascia oraria senza treni garantiti.\" This means there are no guaranteed services during the strike period. I'll represent this with either an empty array `[]` or a `null` value for `guaranteedTimes`.\n\nSo, the strike data is:\n\n*   `startDate`: \"2025-11-16 10:00:00\"\n*   `endDate`: \"2025-11-16 17:59:00\"\n*   `locationType`: \"REGIONAL\"\n*   `locationCodes`: [\"08\", \"07\", \"03\", \"01\", \"05\"]\n*   `guaranteedTimes`: [] (or null).\n\nEverything checks out. I'm confident in this analysis.\n\n\n",
+    "tokens": {
+      "input": 1120,
+      "output": 131,
+      "total": 1767
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8551,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000729,
+      "outputCost": 0.0001828,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002557
+    },
+    "hash": "ebed28c64d09b7dc49b45a428b89682e",
+    "sourceFile": "sciopero_del_trasporto_pubblico_adesione_personale_atac_al_218.html",
+    "thoughts": "**Interpreting strike data**\n\nI need to create a JSON output based on the spec for strike extraction. It's about analyzing an Italian article discussing a public transport strike, which states that participation was at 21.8%. This is actually reporting the past participation rather than announcing a new strike. So, I’ll set `isStrike` to false because it’s about an event that already occurred, meaning there’s no need for `strikeData`. \n\nI’ll output:\n\n{\n  \"isStrike\": false\n}",
+    "tokens": {
+      "input": 1458,
+      "output": 457,
+      "total": 1915
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 30231,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000766,
+      "outputCost": 0.0011704,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.001247
+    },
+    "hash": "e169d31165a8cff69a21ae29466e3178",
+    "sourceFile": "martedi_9_dicembre_sciopero_del_trasporto_pubblico_possibili_stop_per_24_ore.html",
+    "thoughts": "**Analyzing strike information**\n\nI need to construct JSON according to the strike_extraction schema. The Italian content indicates a strike on Tuesday, December 9, lasting for 24 hours, organized by the Sul union. This affects the ATAC network and services will be regular until 8:30 AM and between 5 PM and 8 PM. It's clear that this is announcing an upcoming strike, so isStrike is true. Now, I need to determine the correct year for the date.",
+    "tokens": {
+      "input": 1532,
+      "output": 2926,
+      "total": 4458
+    }
+  }
+}

@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-03-09T18:51:43.400Z",
+  "timestamp": "2026-03-09T19:10:43.519Z",
   "isCacheHit": false,
   "request": {
     "sourceName": "ATAC",
     "fileName": "news_media_comunicati_sciopero_generale_13_dicembre.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "mineru-html",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"ATAC\" (the public transport company of Rome, Lazio (12)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: mineru-html):\n<html lang=\"it-IT\" prefix=\"og: https://ogp.me/ns#\"><body class=\"wp-singular comunicato-template-default single single-comunicato postid-11165 wp-embed-responsive wp-theme-hello-elementor wp-child-theme-hello-elementor-child hello-elementor-default elementor-default elementor-kit-12678 elementor-page-15972\">\n<div class=\"elementor elementor-15972 elementor-location-single post-11165 comunicato type-comunicato status-publish hentry sezione-newsmedia visibilita-inevidenza\" data-elementor-id=\"15972\" data-elementor-post-type=\"elementor_library\" data-elementor-type=\"single-page\">\n<div class=\"elementor-element elementor-element-6ee3468 e-flex e-con-boxed e-con e-parent\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"6ee3468\" data-settings='{\"background_background\":\"classic\"}'>\n<div class=\"e-con-inner\">\n<div class=\"elementor-element elementor-element-6945d4c e-con-full e-flex e-con e-child\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"6945d4c\">\n<div class=\"elementor-element elementor-element-da182fa e-con-full e-flex e-con e-child\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"da182fa\">\n<div class=\"elementor-element elementor-element-aff84d2 elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading\" data-e-type=\"widget\" data-element_type=\"widget\" data-id=\"aff84d2\" data-widget_type=\"theme-post-title.default\">\n<div class=\"elementor-widget-container\">\n<h1 class=\"elementor-heading-title elementor-size-default\" _item_id=\"1\">Sciopero generale, venerdì protesta dalle 9 alle 13 dopo ordinanza del ministero</h1> </div>\n</div>\n</div>\n</div>\n</div>\n</div>\n<div class=\"elementor-element elementor-element-32c51eb e-flex e-con-boxed e-con e-parent\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"32c51eb\">\n<div class=\"e-con-inner\">\n<div class=\"elementor-element elementor-element-7a3d033 e-con-full e-flex e-con e-child\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"7a3d033\" id=\"main-content\">\n<div class=\"elementor-element elementor-element-723d484 elementor-widget elementor-widget-theme-post-content\" data-e-type=\"widget\" data-element_type=\"widget\" data-id=\"723d484\" data-widget_type=\"theme-post-content.default\">\n<div class=\"elementor-widget-container\">\n<p _item_id=\"3\"><span style=\"-webkit-text-stroke-width:0px;background-color:rgb(255, 255, 255);color:rgb(34, 34, 34);display:inline !important;float:none;font-family:Arial, Helvetica, sans-serif;font-size:small;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;\">Venerdì 13 dicembre trasporto pubblico a rischio per lo sciopero generale nazionale proclamato dal sindacato Usb. Per effetto dell’ordinanza del ministero delle Infrastrutture e Trasporti l’agitazione è stata ridotta a 4 ore: dalle 9 alle 13. A Roma la protesta coinvolgerà la rete Atac e le linee periferiche gestite da operatori privati.</span></p>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</body></html>"
   },
   "response": {
@@ -15,7 +15,8 @@
       "strikeData": {
         "startDate": "2024-12-13 09:00:00",
         "endDate": "2024-12-13 13:00:00",
-        "locationType": "NATIONAL"
+        "locationType": "NATIONAL",
+        "locationCodes": null
       }
     },
     "parsedData": {
@@ -28,19 +29,19 @@
     },
     "usage": {
       "input": 1548,
-      "output": 82,
+      "output": 89,
       "cached": 0,
-      "thinking": 526,
-      "total": 2156
+      "thinking": 234,
+      "total": 1871
     },
     "costUsd": {
       "inputCost": 0.000387,
-      "outputCost": 0.000123,
-      "thinkingCost": 0.000789,
+      "outputCost": 0.0001335,
+      "thinkingCost": 0.000351,
       "cachedCost": 0,
-      "totalCost": 0.001299
+      "totalCost": 0.0008715
     },
-    "durationMs": 5606,
-    "thoughts": "**Analyzing the ATAC Strike Announcement**\n\nOkay, let's see. I've got a webpage announcing a strike – a \"Sciopero generale\" – related to ATAC, which I know is the public transportation company in Rome, code 12. The text clearly states it's for Friday, December 13th. The time frame given is from 9:00 AM to 1:00 PM.\n\nThe tricky part is figuring out the scope. It says \"sciopero generale nazionale,\" which indicates a national strike. Even though it specifically mentions ATAC in Rome, the \"nazionale\" descriptor takes precedence. We don't have enough data to determine if this impacts other regions as well, so I'll go with NATIONAL for the location.\n\nNow, let's nail down the specifics. The date is easily derived – \"Venerdì 13 dicembre\" points to Friday, December 13th, and assuming this is for the current year (which, given the context, I will assume is 2024), that checks out. The start time is 09:00, and the end time is 13:00. No problem there.\n\nAs for guaranteed times, it doesn't *explicitly* mention \"guaranteed times\" in the traditional sense, so I will omit this in the output. The snippet does say the strike is reduced to 4 hours. Normally, transport strikes have specific guaranteed slots, but the text isn't explicit here, so I won't infer something that's not directly stated.\n\nSo, here's my interpretation in JSON format:\n\n*   `isStrike`: true\n*   `strikeData`:\n    *   `startDate`: \"2024-12-13 09:00:00\"\n    *   `endDate`: \"2024-12-13 13:00:00\"\n    *   `locationType`: \"NATIONAL\"\n\n\n"
+    "durationMs": 4096,
+    "thoughts": "**Analyzing the Italian General Strike Data**\n\nOkay, let's break this down. The core topic here is a \"Sciopero generale\" – a general strike. The specifics are: it's being organized by USB (sindacato Usb), which is useful for context. The strike is scheduled for Friday, December 13th, from 09:00 to 13:00. Importantly, it's a \"Sciopero generale nazionale,\" meaning a national strike, with a specific mention of Roma/Atac, implying potential impact on public transport or city services.\n\nNow, to make this data usable, I need to represent it effectively. I need to extract the relevant information for the task. Let's make sure our constraints are met:\n\n`isStrike`: definitely true.\n\n`startDate`: I’m setting the date as 2024-12-13 09:00:00, assuming 2024 as the current year, which is a fair assumption given the context.\n\n`endDate`: 2024-12-13 13:00:00.\n\n`locationType`: This is a national strike, so that’s `NATIONAL`.\n\n`locationCodes`: Null is appropriate because it is national, not specific to any particular region code.\n\n\n"
   }
 }

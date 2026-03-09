@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8212,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005695,
+      "outputCost": 0.0001544,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00021135
+    },
+    "hash": "92e7fbf88cc39d1b4296c38e9bb310af",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_209.html",
+    "thoughts": "**Analyzing strike report**\n\nI need to respond with JSON according to the schema strike_extraction. The content talks about the public transport strike and the participation rate, which is reported as 20.9%. This indicates that the strike likely already occurred and is providing the adhesion rate rather than details about an upcoming strike. Therefore, based on the instructions, since it's just reporting on a past event, I'll set isStrike to false.",
+    "tokens": {
+      "input": 1139,
+      "output": 386,
+      "total": 1525
+    }
+  }
+}

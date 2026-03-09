@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-01-13 00:00:00",
+      "endDate": "2026-01-13 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20972,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006395,
+      "outputCost": 0.0006696,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00073355
+    },
+    "hash": "4c998da7ab9cd8410e1c12468ee59e2e",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2026-1-13-sciopero-nazionale-del-trasport.html",
+    "thoughts": "**Extracting strike details**\n\nThe content states it's effective starting January 13, 2026, likely announcing a strike on that date. I'll set isStrike to true. I need to extract the strike data's start and end times in \"yyyy-MM-dd HH:mm:ss\" format. Although it mentions a 24-hour strike, I need the exact start and end times. It lists essential services from 6:00 to 9:00 AM and 6:00 to 9:00 PM for Trenitalia, suggesting the strike runs from 2026-01-13 00:00:00 to 2026-01-13 23:59:59.",
+    "tokens": {
+      "input": 1279,
+      "output": 1674,
+      "total": 2953
+    }
+  }
+}

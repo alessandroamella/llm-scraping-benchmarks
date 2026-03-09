@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-01-13 00:00:00",
+      "endDate": "2026-01-13 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7297,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00025225,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.0004965,
+      "cachedCost": 0,
+      "totalCost": 0.00093325
+    },
+    "hash": "ede4e8198c9715a83c1c4eb3738d731c",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2026-1-13-sciopero-nazionale-del-trasport.html",
+    "thoughts": "**Strike Announcement Analysis**\n\nOkay, let me break this down. My primary task here is to confirm if this HTML content constitutes an upcoming strike announcement. The input clearly concerns a \"SCIOPERO NAZIONALE,\" a National Strike, specifically for \"Autoferrotranvieri.\" The date provided is \"martedì 13 gennaio 2026,\" which translates to Tuesday, January 13th, 2026. Bingo! That's a strong indicator.\n\nThe analysis concludes, without a doubt, that this *is* a strike announcement. I've extracted the core strike details. The strike *starts* on January 13th, 2026, precisely at midnight (00:00:00) and ends at the stroke of midnight at the end of the same day (23:59:59), implicitly covering the full day. The scope is *National*, as indicated by the header text. Location codes are, as expected, not specified, given the national scope.\n\nCrucially, the guaranteed service times are identified as \"06:00-09:00\" and \"18:00-21:00.\" These are the periods when services *should* be running despite the strike, confirming my initial assessment.\n\nTherefore, `isStrike` is confirmed to be `true`. The associated `strikeData` object provides the structured details: the start and end dates, the location type (\"NATIONAL\"), the lack of specific location codes, and the guaranteed service times. This is now well-formed data ready for further processing and/or output.\n\n\n",
+    "tokens": {
+      "input": 1009,
+      "output": 123,
+      "total": 1463
+    }
+  }
+}

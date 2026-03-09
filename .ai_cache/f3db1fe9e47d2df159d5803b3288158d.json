@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5916,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00042425,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.0009555,
+      "cachedCost": 0,
+      "totalCost": 0.00158975
+    },
+    "hash": "f3db1fe9e47d2df159d5803b3288158d",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_di_24_ore_del_13_dicembre_2024_aggiornamento.html",
+    "thoughts": "**Strike Announcement Analysis: A Deep Dive**\n\nOkay, let's break this down. My task is to determine if this input is indeed a strike announcement and, if so, to extract the relevant data. The input article explicitly states a 24-hour strike, and given the announcement date of December 12, 2024, for a strike scheduled for December 13, 2024, it definitely qualifies as an upcoming strike announcement. That criteria for `isStrike` is True.\n\nNow, let's get into the specifics. I've got a title: \"Linee Flegree: Avviso di sciopero di 24 ore del 13 dicembre 2024\" which translates to a 24-hour strike. The details are pretty clear – it's for December 13th, 2024. The location is EAV, specifically in Campania (region code \"15\"). We are dealing with a REGIONAL strike. The announcement mentions guaranteed service times: 05:30-08:30 and 16:30-19:30.\n\nGiven that this is a 24-hour strike on December 13th, I'm setting `startDate` to \"2024-12-13 00:00:00\" and `endDate` to \"2024-12-13 23:59:59\". The `locationType` is definitely \"REGIONAL,\" and the `locationCodes` should contain \"15\" because the text specifies Campania. And finally, the `guaranteedTimes` will be an array containing the values: [\"05:30-08:30\", \"16:30-19:30\"].\n\nI'm validating everything against the schema now, ensuring that the `isStrike` is indeed a boolean (which is True here). Then, I'm verifying the structure of `strikeData`, double-checking that the `startDate`, `endDate`, `locationType`, `locationCodes`, and `guaranteedTimes` are formatted and populated correctly. Everything is spot on. The data aligns perfectly with the expected format and constraints. So, all checks are green. This looks good.\n\n\n",
+    "tokens": {
+      "input": 1697,
+      "output": 140,
+      "total": 2474
+    }
+  }
+}

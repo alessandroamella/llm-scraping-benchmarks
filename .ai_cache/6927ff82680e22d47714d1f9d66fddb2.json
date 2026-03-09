@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6248,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006646,
+      "outputCost": 0.0001768,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008414
+    },
+    "hash": "6927ff82680e22d47714d1f9d66fddb2",
+    "sourceFile": "sciopero_trasporto_pubblico_ha_aderito_135_personale_atac.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to determine if the document is announcing an upcoming strike. The title mentions a public transport strike with 13.5% participation from Atac personnel. However, the body of the content indicates that this was about a strike that has already taken place, as it says \"questa mattina.\" Therefore, it's clear that this is not an upcoming strike. I'll output JSON reflecting that. \n\nSo, the output is:\n{\n  \"isStrike\": false\n}",
+    "tokens": {
+      "input": 13292,
+      "output": 442,
+      "total": 13734
+    }
+  }
+}

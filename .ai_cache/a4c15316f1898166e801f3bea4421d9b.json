@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 2986,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00019425,
+      "outputCost": 0.000009,
+      "thinkingCost": 0.000204,
+      "cachedCost": 0,
+      "totalCost": 0.00040725
+    },
+    "hash": "a4c15316f1898166e801f3bea4421d9b",
+    "sourceFile": "sciopero_trasporto_pubblico_chiuse_metro_c_termini_centocelle.html",
+    "thoughts": "**Analyzing the Real-Time Strike Situation**\n\nOkay, so I've received some input: \"Sciopero del trasporto pubblico, chiuse metro A e C e Termini-Centocelle\". It's pretty straightforward, indicating a public transport strike. The accompanying body text explicitly states \"È in corso lo sciopero nazionale di 24 ore del trasporto pubblico\" which means this is an active strike with current service updates.\n\nCrucially, the instructions tell me that if the content is giving *real-time* details about an *ongoing* strike, I should set `isStrike` to `false`. Since the body explicitly describes the current state – closed metros, etc. – and uses the phrase \"È in corso,\" it's giving me those real-time updates.\n\nTherefore, following the logic, I need to set `isStrike` to `false` because the input is reporting on the *effects* of the strike in real time, rather than just stating that a strike *is* happening. That's a key distinction.\n\n\n",
+    "tokens": {
+      "input": 777,
+      "output": 6,
+      "total": 919
+    }
+  }
+}

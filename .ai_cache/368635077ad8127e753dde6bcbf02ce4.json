@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-24 10:00:00",
+      "endDate": "2025-11-24 14:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5179,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00017575,
+      "outputCost": 0.0001335,
+      "thinkingCost": 0.000723,
+      "cachedCost": 0,
+      "totalCost": 0.00103225
+    },
+    "hash": "368635077ad8127e753dde6bcbf02ce4",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-11-24-sciopero-24-novembre-personale.html",
+    "thoughts": "**Strike Analysis and Data Extraction**\n\nOkay, let's break this down. The input clearly indicates a strike; the Italian word \"SCIOPERO\" leaves little room for ambiguity. My primary goal here is to determine the strike's characteristics and output the extracted information in a strict JSON format, adhering to the specified schema.\n\nFirst, I need to confirm this is indeed a strike announcement. The input, \"SCIOPERO 24 NOVEMBRE PERSONALE DELLE SOCIETÀ DI MANOVRA FERROVIARIA,\" strongly suggests it is. The provided text, \"Dalle ore 10:00 alle ore 14:00 di lunedì 24 Novembre è stato indetto uno sciopero,\" explicitly confirms the strike and specifies its details.\n\nNow, let's extract the relevant data. The date is easily identified as 2025-11-24 and the time frame is 10:00 to 14:00. These will be our `startDate` and `endDate` in the JSON output.\n\nThe scope of the strike is crucial. It impacts \"personale delle società di manovra ferroviaria.\" Since the announcement doesn't specify a particular region or city, I'm interpreting this as a national-level strike affecting all relevant railway maneuvering companies. Therefore, my `locationType` will be \"NATIONAL,\" and `locationCodes` will be null, as this is a broad scope.\n\nBased on this analysis, I will format the information as follows:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-11-24 10:00:00\",\n    \"endDate\": \"2025-11-24 14:00:00\",\n    \"locationType\": \"NATIONAL\",\n    \"locationCodes\": null\n  }\n}\n```\n\nThat should satisfy the requirements: a boolean `isStrike` set to true, and a nested `strikeData` object with the extracted temporal and location information, adhering strictly to the required format. No comments, no extra fluff. The output is now ready.\n\n\n",
+    "tokens": {
+      "input": 703,
+      "output": 89,
+      "total": 1274
+    }
+  }
+}

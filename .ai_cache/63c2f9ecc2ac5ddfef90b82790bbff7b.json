@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-07-24 08:30:00",
+      "endDate": "2024-07-24 12:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4627,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0003595,
+      "outputCost": 0.0001335,
+      "thinkingCost": 0.0005925,
+      "cachedCost": 0,
+      "totalCost": 0.0010855
+    },
+    "hash": "63c2f9ecc2ac5ddfef90b82790bbff7b",
+    "sourceFile": "luned_24_luglio_sciopero_nazionale_tpl_roma_servizio_rischio_830_1230.html",
+    "thoughts": "**Analyzing the ATAC Strike Information**\n\nOkay, let's break down this notification from ATAC. Essentially, it's informing me of a national transportation strike, or *sciopero nazionale*, affecting Rome. The critical date is Monday, July 24th. I'm inferring this is for the current year, 2024, given that no year is specified and that context is usually implied for such announcements.\n\nThe strike is scheduled to last for four hours, from 8:30 AM to 12:30 PM. This seems straightforward enough: *isStrike* is definitely `true`.\n\nI'll structure the strike data as follows:\n\n*   `startDate`: \"2024-07-24 08:30:00\"\n*   `endDate`: \"2024-07-24 12:30:00\"\n*   `locationType`: \"NATIONAL\"\n*   `locationCodes`: Null or omitted, given the scope is national, which means no specific codes.\n\nThere's no mention of guaranteed service windows, so I won't create a `guaranteedTimes` object, I'll be sure to omit that.\n\nI've ensured that all the formatted data adheres to the required specifications. The date format is correct, `locationType` is as needed and `isStrike` is true. This should be easily digestible and usable for whatever downstream processing this data will undergo.\n\n\n",
+    "tokens": {
+      "input": 1438,
+      "output": 89,
+      "total": 1922
+    }
+  }
+}

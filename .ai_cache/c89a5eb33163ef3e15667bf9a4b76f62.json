@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:01:00",
+      "endDate": "2025-12-12 23:59:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "04",
+        "05"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5466,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000267,
+      "outputCost": 0.000159,
+      "thinkingCost": 0.000966,
+      "cachedCost": 0,
+      "totalCost": 0.001392
+    },
+    "hash": "c89a5eb33163ef3e15667bf9a4b76f62",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-12-12-sciopero-del-personale-di-sad-.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, let's break this down. My task is clear: I need to extract strike information from the text and output *only* valid JSON. The requirements are laid out, which is good. The key is to generate an `isStrike` boolean, and a `strikeData` object with the proper date format, a `locationType`, `locationCodes`, and potentially `guaranteedTimes`.\n\nThe text describes an upcoming strike on December 12, 2025. Two companies are involved: SAD and Trentino Trasporti. The data indicates two strikes, one from each company, but the instructions require me to represent these as a single period. Looking at the two strike times I can find the total period for this strike action, which is from 00:01 to 23:59 on that day. It spans Trentino-Alto Adige (code 04) and Veneto (code 05), which will determine the location data.\n\nThe schema demands a single `strikeData` object, so I need to combine the information. The broadest timeframe, as the instruction indicated, is the entire day. The location is \"REGIONAL\" because this involves specified regions. \"NATIONAL\" is not indicated here. I will extract the location codes as an array. There's no mention of guaranteed times, so that field will be omitted.\n\nTherefore, `isStrike` is clearly `true`. The `startDate` is \"2025-12-12 00:01:00\", and the `endDate` is \"2025-12-12 23:59:00\". The `locationType` is \"REGIONAL\", and the `locationCodes` are \"04\" and \"05\". I have carefully checked these values against the requirements to ensure that I am using the right formats. It's time to output the valid JSON.\n\n\n",
+    "tokens": {
+      "input": 1068,
+      "output": 106,
+      "total": 1818
+    }
+  }
+}

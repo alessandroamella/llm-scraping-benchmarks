@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8066,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00066195,
+      "outputCost": 0.0001632,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00082515
+    },
+    "hash": "22acaf27e6536b7b85d0082acd4688cc",
+    "sourceFile": "sciopero_tpl_mattinata_adesione_personale_atac_233.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to follow the strike_extraction spec to decide if the document is about a new or upcoming strike. The title translates to \"Strike of Tpl, in the morning personal Atac adhesion at 23.3% - Roma Mobility,\" which indicates it’s reporting on a past event. The body confirms participation in a strike that occurred, rather than announcing one. Since it’s about participation, not a future strike, I’ll confirm that isStrike should be false and output: { \"isStrike\": false }. There’s no strikeData to include.",
+    "tokens": {
+      "input": 13239,
+      "output": 408,
+      "total": 13647
+    }
+  }
+}

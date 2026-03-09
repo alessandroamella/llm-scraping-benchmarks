@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3854,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00042425,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.000459,
+      "cachedCost": 0,
+      "totalCost": 0.00109325
+    },
+    "hash": "b934e81ed089e2832e8641d23e92e87c",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_di_24_ore_del_13_dicembre_2024_aggiornamento.html",
+    "thoughts": "**Analyzing the EAV Strike Announcement**\n\nOkay, let's break this down. The primary source is EAV, the Ente Autonomo Volturno, and it's from Campania. This is a heads-up: they're announcing a strike. Specifically, a 24-hour strike set for December 13th, 2024. That's *tomorrow* – the 13th. The strike has a well-defined structure in the metadata. The `isStrike` flag confirms this is an actionable event.\n\nLooking at the structured data, this is the operational data: `startDate` is midnight on the 13th, `endDate` is just before midnight, and the `locationType` is `REGIONAL`, coded for Campania (`locationCodes`: \"15\"). Crucially, the announcement explicitly states the `guaranteedTimes`: service will operate between 05:30 and 08:30, and then again from 16:30 to 19:30. This data is all nicely structured, valid JSON, and the information presented is to the point - no fluff.\n\n\n",
+    "tokens": {
+      "input": 1697,
+      "output": 140,
+      "total": 2143
+    }
+  }
+}

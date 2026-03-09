@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7031,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000077,
+      "outputCost": 0.0001456,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002226
+    },
+    "hash": "cf6abbedc4d07d9037938c9eb4b9c7a5",
+    "sourceFile": "sciopero_trasporto_pubblico_chiusa_metro_c_aperte_linee_bb1.html",
+    "thoughts": "**Preparing JSON output**\n\nI need to determine if an event is upcoming, ongoing, or in real-time updates. The instructions clarify that \"isStrike\" should be set to true only for an upcoming strike announcement. Since the content indicates \"È in corso lo sciopero,\" which means it's currently ongoing, that means \"isStrike\" is false. I’ll prepare the final JSON object accordingly and ensure it follows the examples—just the JSON string without any extra commentary or date/time format. Let's deliver that!",
+    "tokens": {
+      "input": 1540,
+      "output": 364,
+      "total": 1904
+    }
+  }
+}

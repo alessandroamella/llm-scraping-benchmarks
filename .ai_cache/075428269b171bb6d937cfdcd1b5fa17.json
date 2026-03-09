@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 21:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21302,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008765,
+      "outputCost": 0.0006004,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00068805
+    },
+    "hash": "075428269b171bb6d937cfdcd1b5fa17",
+    "sourceFile": "strike-detail-venerd--12-dicembre-da-mezzanotte-alle-21-sciopero.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to output JSON based on the given schema. The document clearly announces a national strike on Friday, December 12, from midnight to 9 PM. The phrase \"dalle 21 a mezzanotte possibili ulteriori impatti\" suggests potential impacts beyond 9 PM. The title confirms it’s for the same day. Since it qualifies as an announcement for an upcoming strike, I’ll set isStrike to true. Next, I’ll extract the needed details like startDate, endDate, and other relevant data.",
+    "tokens": {
+      "input": 1753,
+      "output": 1501,
+      "total": 3254
+    }
+  }
+}

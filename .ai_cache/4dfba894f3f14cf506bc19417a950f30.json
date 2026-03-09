@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4613,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0002425,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.0006435,
+      "cachedCost": 0,
+      "totalCost": 0.001096
+    },
+    "hash": "4dfba894f3f14cf506bc19417a950f30",
+    "sourceFile": "eav_autolinee_avviso_di_sciopero_di_24_ore_venerdi_13_dicembre_2024.html",
+    "thoughts": "**Strike Analysis: EAV Campania - December 13, 2024**\n\nOkay, let's break this down. My task is clear: I need to determine if this input represents a strike announcement and, if so, extract the relevant information in the specified JSON format. The input is a page titled \"Avviso di sciopero di 24 ore venerdì 13 dicembre 2024\" and content from EAV in Campania.\n\nFirst, the key data points jump out. It's a strike happening on Friday, December 13, 2024, lasting for a full 24 hours. The location is Campania (Region 15), and critically, we have guaranteed service times: 05:30 to 08:30 and 16:30 to 19:30.\n\nNow for validation. Is it a strike? Absolutely, based on the title and content. The start and end dates are implicit – a 24-hour strike starting and ending on the 13th, so that's easy enough. `startDate` will be \"2024-12-13 00:00:00\" and `endDate` \"2024-12-13 23:59:59\". The location type is clearly REGIONAL, specifically referencing Campania. The location code is \"15,\" referencing the region code. Finally, the guaranteed service times are confirmed, and these need to be presented in the JSON response.\n\nTherefore, the final output needs to follow the schema. The `isStrike` flag will be true. The `strikeData` object will contain the `startDate`, `endDate`, `locationType`, `locationCodes`, and `guaranteedTimes` as identified. This is a straightforward, well-defined case, and the data is all present and accounted for. This is a simple case, let me deliver that output.\n\n\n",
+    "tokens": {
+      "input": 970,
+      "output": 140,
+      "total": 1539
+    }
+  }
+}

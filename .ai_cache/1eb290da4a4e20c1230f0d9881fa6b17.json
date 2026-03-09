@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-07-24 08:30:00",
+      "endDate": "2023-07-24 12:30:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "08:30-12:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21264,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007795,
+      "outputCost": 0.0007292,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00080715
+    },
+    "hash": "1eb290da4a4e20c1230f0d9881fa6b17",
+    "sourceFile": "luned_24_luglio_sciopero_nazionale_tpl_roma_servizio_rischio_830_1230.html",
+    "thoughts": "**Interpreting strike announcement**\n\nI need to output JSON according to the specified schema. There’s a news post about a national transport strike in Italy, scheduled for Monday, July 24, from 8:30 to 12:30. It looks like the union is USB, and this will affect public transport services in Rome. While the document doesn't specify a year, I understand the date format required is 'yyyy-MM-dd HH:mm:ss'. So, I'll focus on translating and formatting that part for the output.",
+    "tokens": {
+      "input": 1559,
+      "output": 1823,
+      "total": 3382
+    }
+  }
+}

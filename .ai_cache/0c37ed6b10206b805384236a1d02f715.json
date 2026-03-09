@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-05-11 00:00:00",
+      "endDate": "2025-05-11 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 27906,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008135,
+      "outputCost": 0.0007296,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00081095
+    },
+    "hash": "0c37ed6b10206b805384236a1d02f715",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_24h_domenica_11_maggio_2025.html",
+    "thoughts": "**Setting strike data**\n\nI need to fill in the strikeData with startDate and endDate for a 24-hour strike on May 11, 2025. The format is “yyyy-MM-dd HH:mm:ss,” so I’ll set startDate to “2025-05-11 00:00:00” and endDate to “2025-05-11 23:59:59.” \n\nNow, I need to determine the location type. Since the strike is related to a company in Naples, it sounds regional, specifically in the Campania region. I should also include the necessary ISTAT location codes in the array.",
+    "tokens": {
+      "input": 1627,
+      "output": 1824,
+      "total": 3451
+    }
+  }
+}

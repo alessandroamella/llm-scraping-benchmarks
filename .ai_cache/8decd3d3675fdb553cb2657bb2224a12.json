@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 2871,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0001805,
+      "outputCost": 0.000009,
+      "thinkingCost": 0.000198,
+      "cachedCost": 0,
+      "totalCost": 0.0003875
+    },
+    "hash": "8decd3d3675fdb553cb2657bb2224a12",
+    "sourceFile": "sciopero_trasporto_pubblico_ha_aderito_135_personale_atac.html",
+    "thoughts": "**Analyzing the Latest Atac Strike Participation Data**\n\nOkay, so I've got this piece of information: \"Sciopero del trasporto pubblico, ha aderito il 13,5% del personale Atac.\" That immediately tells me this is about a strike (\"sciopero\"). The fact that it says \"ha aderito\" and \"di questa mattina\" tells me that the strike *already* happened – this isn't a forecast or a call to action. It's reporting on participation (\"adesione\") post-event.\n\nBased on that interpretation of this data, since this is simply reporting what happened, I should set my internal flag, 'isStrike,' to false. There's no ongoing strike element here to consider in my analytical models. This is historical data to be considered, not a present event.\n\n\n",
+    "tokens": {
+      "input": 722,
+      "output": 6,
+      "total": 860
+    }
+  }
+}

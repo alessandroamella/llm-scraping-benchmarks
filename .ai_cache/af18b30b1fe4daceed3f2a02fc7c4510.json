@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6872,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005695,
+      "outputCost": 0.0001256,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00018255
+    },
+    "hash": "af18b30b1fe4daceed3f2a02fc7c4510",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_385.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to check if this document is announcing a new or upcoming strike. The content states, “Public transport strike, personal Atac adhesion at 38.5%,” which indicates participation in an existing strike, not a new announcement. It mentions a measurement from a specific date, meaning it's reporting on the strike’s participation. So, I’ll conclude that “isStrike” should be false. The final JSON output will reflect: \n{\n  \"isStrike\": false\n}",
+    "tokens": {
+      "input": 1139,
+      "output": 314,
+      "total": 1453
+    }
+  }
+}

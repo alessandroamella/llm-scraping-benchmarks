@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 31272,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006696,
+      "outputCost": 0.0010164,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.001686
+    },
+    "hash": "916294968db40e749c91544c84ad7c9d",
+    "sourceFile": "venerdi_28_novembre_sciopero_generale_nazionale_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Interpreting service hours**\n\nIt looks like normal service is guaranteed up to 8:30 AM and then again from 5:00 PM to 8:00 PM. The Italian phrase suggests that outside these times, service might be reduced. The \"guaranteedTimes\" should reflect the periods of 00:00-08:30 and 17:00-20:00. However, it seems a bit unclear whether we offer guaranteed service beyond 8:00 PM since the day continues till midnight, but those hours aren't specified as guaranteed.",
+    "tokens": {
+      "input": 13392,
+      "output": 2541,
+      "total": 15933
+    }
+  }
+}

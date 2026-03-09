@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4062,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00032725,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.000522,
+      "cachedCost": 0,
+      "totalCost": 0.00105925
+    },
+    "hash": "0fe8af9587046b6a831d400078ea195c",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_di_24_ore_venerdi_13_dicembre_2024_aggiornamento.html",
+    "thoughts": "**EAV Strike Analysis**\n\nOkay, let's process this information about the EAV strike in Campania. It's a 24-hour work stoppage planned for Friday, December 13th, 2024. The core of this is to flag this as a definite strike (`isStrike: true`). The data specifies the critical parameters for the strike action.\n\nThe strike action's `startDate` is set for 2024-12-13 00:00:00 and goes through the entire day until 2024-12-13 23:59:59 (or possibly 2024-12-14 00:00:00). Regionally this strike is occurring in the Campania region, which is identified by code \"15\". I need to set `locationType` to \"REGIONAL\" since EAV's scope is within that area. The `locationCodes` array should contain [\"15\"] to accurately pinpoint the affected area.\n\nThe provided guaranteed service times are 05:30-08:30 and 16:30-19:30. These need to be formatted correctly in a string array. `guaranteedTimes` should therefore be [\"05:30-08:30\", \"16:30-19:30\"].\n\nFinally, I'll double-check that all fields, particularly the date strings, are correctly formatted as instructed, and are all strings, as stipulated. This ensures data consistency and proper integration within my analysis system.\n\n\n",
+    "tokens": {
+      "input": 1309,
+      "output": 140,
+      "total": 1797
+    }
+  }
+}

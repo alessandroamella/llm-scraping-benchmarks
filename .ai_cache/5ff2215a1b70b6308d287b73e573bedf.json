@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5263,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00022425,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.0007605,
+      "cachedCost": 0,
+      "totalCost": 0.00118125
+    },
+    "hash": "5ff2215a1b70b6308d287b73e573bedf",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-11-28-sciopero-nazionale-personale-a.html",
+    "thoughts": "**Strike Analysis Summary**\n\nOkay, let's break this down. My primary task is clear: I need to analyze this input and determine if it describes a strike, and if so, extract the relevant data into a clean, parseable JSON format that adheres to the given schema. The input itself is a notice about a \"SCIOPERO NAZIONALE PERSONALE AUTOFERROTRANVIERI\" – a national strike of auto-ferro-tramway personnel – scheduled for November 28, 2025.\n\nThe title itself, along with \"sciopero generale\" (general strike), strongly indicates *isStrike* = true, which I confirm. The date is easily extracted: *startDate* is 2025-11-28 00:00:00, and given the \"24 ore\" (24 hours) duration, the *endDate* becomes 2025-11-28 23:59:59. The word \"Nazionale\" gives me *locationType* = \"NATIONAL\", which is consistent with the wording in the notice and confirms that *locationCodes* will be *null*.\n\nI've also identified guaranteed service times: \"06:00-09:00\" and \"18:00-21:00\", which translate directly into the *guaranteedTimes* array. This data will sit inside of `strikeData`.\n\nSo, the most important items from my perspective are:\n\n*   `isStrike` = true\n*   `strikeData`:\n    *   `startDate`: \"2025-11-28 00:00:00\"\n    *   `endDate`: \"2025-11-28 23:59:59\"\n    *   `locationType`: \"NATIONAL\"\n    *   `locationCodes`: null\n    *   `guaranteedTimes`: [\"06:00-09:00\", \"18:00-21:00\"]\n\nIt's crucial that the final output is valid JSON, without comments, and that *null* values are allowed where appropriate. With these details in mind, I can proceed with generating the appropriate JSON output.\n\n\n",
+    "tokens": {
+      "input": 897,
+      "output": 131,
+      "total": 1535
+    }
+  }
+}

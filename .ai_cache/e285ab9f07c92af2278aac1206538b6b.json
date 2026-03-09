@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7841,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006617,
+      "outputCost": 0.0002044,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008661
+    },
+    "hash": "e285ab9f07c92af2278aac1206538b6b",
+    "sourceFile": "comunicato_stampa_sciopero_adesione.html",
+    "thoughts": "**Confirming strike status**\n\nI need to output a specific JSON based on the information. Since there's no current strike data and the information pertains to past events, I should set `isStrike` to false. \n\nI've checked the instructions and they support this conclusion, confirming that the content references a past strike. So, I'm preparing the final output with the correct format. \n\nIt looks like I'll produce: \n\n{\"isStrike\": false} \n\nJust the JSON, no extra explanations.",
+    "tokens": {
+      "input": 13234,
+      "output": 511,
+      "total": 13745
+    }
+  }
+}

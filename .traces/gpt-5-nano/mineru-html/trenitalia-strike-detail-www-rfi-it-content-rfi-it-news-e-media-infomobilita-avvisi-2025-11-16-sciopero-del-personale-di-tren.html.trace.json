@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-03-09T18:43:53.047Z",
+  "timestamp": "2026-03-09T19:15:44.735Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "Trenitalia",
     "fileName": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-11-16-sciopero-del-personale-di-tren.html",
     "model": "gpt-5-nano",
     "strategy": "mineru-html",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"Trenitalia\" (Italy's national railway operator).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: mineru-html):\n<html lang=\"it\"><body data-language=\"it\">\n<div class=\"section-container section-container--fixed\">\n<div class=\"article\">\n<div>\n<h1 class=\"article--heading\" _item_id=\"2\">SCIOPERO DEL PERSONALE DI TRENORD</h1>\n<div class=\"tabular-data-view--snapshot--notes\">\n<div class=\"note\" id=\"service-adjust\" _item_id=\"4\">\n       Servizio: \n       <strong>Lunga percorrenza, Regionale</strong>\n</div>\n<div class=\"note\" id=\"change-adjust\" _item_id=\"5\">\n       Causa Modifica: \n       <strong>Sciopero</strong>\n</div>\n<div class=\"note\" id=\"region-adjust\" _item_id=\"6\">\n       Regione: \n       <strong>Emilia Romagna, LIGURIA, LOMBARDIA, PIEMONTE, VENETO</strong>\n</div>\n<div class=\"note\" id=\"company-adjust\" _item_id=\"7\">\n       Impresa: \n       <strong>Trenitalia, Trenord</strong>\n</div>\n</div>\n</div>\n</div>\n</div>\n<div class=\"section-container section-container--fixed\">\n<div class=\"article\">\n<div class=\"text section\">\n<div class=\"article--text\">\n<p _item_id=\"8\"><b>Dalle ore 10:00 alle ore 17:59 di domenica 16 novembre 2025</b> è stato indetto uno sciopero del personale di Trenord.</p>\n<p _item_id=\"9\">Lo sciopero può comportare modifiche al servizio, anche prima dell’inizio e dopo la sua conclusione. <b>Possibili cancellazioni o variazioni in Lombardia e nelle regioni limitrofe.</b></p>\n<p _item_id=\"10\">I treni Regionali, Suburbani, Lunga Percorrenza di Trenord e i collegamenti aeroportuali <b>Milano - Malpensa Aeroporto e Malpensa Aeroporto - Bellinzona</b> possono subire variazioni.</p>\n<p _item_id=\"11\">Lo sciopero ricade in una fascia oraria senza treni garantiti.</p>\n<p _item_id=\"12\">Per garantire il collegamento con l’aeroporto, in caso di cancellazione dei treni, sarà istituito un servizio bus senza fermate intermedie tra Milano Cadorna (via Paleocapa,1) e Malpensa Aeroporto, e tra Stabio e Malpensa Aeroporto.</p>\n<p _item_id=\"13\">Anche <b>i treni del Regionale di Trenitalia della relazione Milano - Domodossola possono subire variazioni.</b></p>\n<p _item_id=\"14\">Maggiori informazioni sui canali digitali di Trenord o presso il personale di assistenza clienti e le biglietterie. </p>\n</div>\n</div>\n</div>\n</div>\n</body></html>"
   },
   "response": {
@@ -26,18 +26,18 @@
       }
     },
     "usage": {
-      "input": 1535,
-      "output": 1694,
-      "total": 3229
+      "input": 1449,
+      "output": 1512,
+      "total": 2961
     },
     "costUsd": {
-      "inputCost": 0.00007675,
-      "outputCost": 0.0006776,
+      "inputCost": 0.00007245,
+      "outputCost": 0.0006048,
       "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.00075435
+      "totalCost": 0.00067725
     },
-    "durationMs": 21250,
-    "thoughts": "**Processing strike announcement**\n\nI need to output a JSON following the strike_extraction format. The content in Italian announces a strike for Trenord on November 16, 2025, from 10:00 to 17:59. Since it's an announcement of a future strike, I conclude that isStrike should be true. For the strikeData, I’ll set the startDate to \"2025-11-16 10:00:00\" and the endDate to \"2025-11-16 17:59:00\". I think I've got everything I need for this!"
+    "durationMs": 21177,
+    "thoughts": "**Determining regional strike locations**\n\nI’m starting with the details here: the strike is set for November 16, 2025, from 10:00 AM to 5:59 PM. It mentions that service may change, with cancellations in Lombardia and surrounding regions. The \"note region-adjust\" points to regions like Emilia Romagna, Liguria, Lombardia, Piemonte, and Veneto. So, I think I’m leaning toward classifying this as a regional strike. I should set the location type to REGIONAL and include the corresponding location codes for those regions."
   }
 }

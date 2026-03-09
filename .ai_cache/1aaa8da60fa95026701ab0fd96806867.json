@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-11-29 09:00:00",
+      "endDate": "2024-11-29 13:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "09:00-13:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 15758,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00009315,
+      "outputCost": 0.000378,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00047115
+    },
+    "hash": "1aaa8da60fa95026701ab0fd96806867",
+    "sourceFile": "strike-detail-venerd--29-novembre-dalle-9-alle-13-sciopero-gener.html",
+    "thoughts": "**Extracting strike announcement details**\n\nI need to determine if this document is announcing an upcoming strike. The content refers to a general strike on Friday, November 29, from 9 to 13, and it discusses impacts on Trenord, clarifying that Trenord staff aren't involved. However, there could still be delays on lines serving FERROVIENORD. The date is two days before the strike, confirming it as an upcoming event. So, I can confirm that `isStrike` is true and extract the relevant strike data.",
+    "tokens": {
+      "input": 1863,
+      "output": 945,
+      "total": 2808
+    }
+  }
+}

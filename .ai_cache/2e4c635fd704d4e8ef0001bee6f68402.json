@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-05 03:00:00",
+      "endDate": "2025-02-06 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4478,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0003055,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.000594,
+      "cachedCost": 0,
+      "totalCost": 0.0011095
+    },
+    "hash": "2e4c635fd704d4e8ef0001bee6f68402",
+    "sourceFile": "strike-detail-mercoled--5-febbraio-sciopero-dei-treni-regionali.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, here's the deal. My primary task is crystal clear: determine if this input signifies an upcoming strike for Trenord in the Lombardy region (03). The core criteria are straightforward: if it's an upcoming strike, `isStrike` should be `true`; otherwise, it's `false` (meaning it's a cancellation, revocation, past strike update, or real-time information).\n\nI've got the data. The input title, \"Mercoledì 5 febbraio sciopero dei treni regionali\" (\"Wednesday February 5th strike of regional trains\"), is the key, and coupled with the detailed information, it looks promising. The news was released on Monday, February 3rd, 2025, and announces a strike that starts at 3:00 am on Wednesday, February 5th, and ends at 2:00 am on Thursday, February 6th. The strike pertains to Trenord in Lombardy (Region 03), and there are guaranteed service times: 6:00-9:00 and 18:00-21:00. This is pretty much a textbook strike announcement.\n\nGiven all this, I'm confident that this confirms an upcoming strike. The `isStrike` value is, without a doubt, `true`. I now need to format this for the output. I need to make sure the data is structured correctly in JSON format, double quotes, no extra comments, and ready to go.\n\nHere's the data as I see it, ready for the output:\n\n```json\n{\n  \"isStrike\": true,\n  \"startDate\": \"2025-02-05 03:00:00\",\n  \"endDate\": \"2025-02-06 02:00:00\",\n  \"locationType\": \"REGIONAL\",\n  \"locationCodes\": [\n    \"03\"\n  ],\n  \"guaranteedTimes\": [\n    \"06:00-09:00\",\n    \"18:00-21:00\"\n  ]\n}\n```\n\n\n",
+    "tokens": {
+      "input": 1222,
+      "output": 140,
+      "total": 1758
+    }
+  }
+}

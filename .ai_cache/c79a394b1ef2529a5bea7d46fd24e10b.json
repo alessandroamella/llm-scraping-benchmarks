@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-09-06 03:00:00",
+      "endDate": "2023-09-07 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 16934,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008495,
+      "outputCost": 0.0003992,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00048415
+    },
+    "hash": "c79a394b1ef2529a5bea7d46fd24e10b",
+    "sourceFile": "strike-detail-mercoled--6-settembre--sciopero-dei-treni-regional.html",
+    "thoughts": "**Determining upcoming strike dates**\n\nI need to output structured JSON for a document discussing an upcoming train strike. The content specifies that the strike is from 3:00 AM on September 6 to 2:00 AM on September 7. This confirms that it is indeed an upcoming strike in 2023. The page date is April 9, 2023, which gives context for when this information is relevant. I'm preparing the start and end date times in the required format.",
+    "tokens": {
+      "input": 1699,
+      "output": 998,
+      "total": 2697
+    }
+  }
+}

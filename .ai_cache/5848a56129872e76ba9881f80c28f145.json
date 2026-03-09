@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3834,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00370825,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0003825,
+      "cachedCost": 0,
+      "totalCost": 0.00410575
+    },
+    "hash": "5848a56129872e76ba9881f80c28f145",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_174.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, here's the situation. My task is to figure out if this text is announcing an *upcoming* strike. I need to return specific JSON based on the answer. If it *isn't* an upcoming strike – like a cancellation, participation statistics, or a real-time update – I need to return `{\"isStrike\": false}`. If it *is* an announcement of a strike, I need to provide a different JSON output with specific fields.\n\nLet's dive into this particular input. I've got a title, date, and content to analyze. The title, \"Sciopero del trasporto pubblico, adesione personale Atac al 17,4%\" is Italian for \"Public transport strike, Atac staff participation at 17.4%.\" The date is December 15, 2023. The content states \"L’adesione complessiva allo sciopero nazionale del trasporto pubblico da parte del personale Atac, rilevata in mattinata, è stata pari al 17,4%.\" Translated, this means: \"The overall participation in the national public transport strike by Atac staff, detected in the morning, was 17.4%.\"\n\nNow, looking at the entire context, the mention of \"detected in the morning\" and percentage participation points towards this being a report *after* the strike has occurred, detailing the level of involvement, rather than an announcement of a future event. This screams \"participation info\" to me. Therefore, the answer is unequivocally `{\"isStrike\": false}`.\n\n\n",
+    "tokens": {
+      "input": 14833,
+      "output": 10,
+      "total": 15098
+    }
+  }
+}

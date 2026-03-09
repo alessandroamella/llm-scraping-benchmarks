@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3618,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00017975,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000327,
+      "cachedCost": 0,
+      "totalCost": 0.00052175
+    },
+    "hash": "8d146e9e8c62495730b2c1d7c090356d",
+    "sourceFile": "sciopero_nazionale_trasporto_pubblico_adesione_personale_atac_al_274.html",
+    "thoughts": "**Analyzing the Strike Announcement Input**\n\nOkay, let's break this down. My task is to determine whether the provided input is announcing a future strike. The text says \"Sciopero nazionale trasporto pubblico, adesione personale Atac al 27,4%\". My initial thought is to analyze the Italian text provided.\n\nThe text indicates that the strike *occurred* with a participation rate of 27.4%. My first instinct is to flag this as a potential strike announcement, but I have to be sure. My key constraint here is to only return \"true\" for `isStrike` if it concerns an *upcoming* strike. I need to be precise.\n\nI analyze the sentence further. The phrase \"adesione del personale Atac allo sciopero... è stata pari al 27,4%\" strongly suggests that the strike *has already taken place*. The participation rate is presented as a past event. This isn't an announcement; it's a report.\n\nTherefore, since this input is describing a past event, the correct response is `isStrike: false`. The `strikeData` field is not relevant in this scenario, so I'll omit it from the JSON. This resolves to the JSON output `{\"isStrike\": false}`.\n\n\n",
+    "tokens": {
+      "input": 719,
+      "output": 10,
+      "total": 947
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-04-28 08:30:00",
+      "endDate": "2025-04-28 12:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4291,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00034025,
+      "outputCost": 0.0001335,
+      "thinkingCost": 0.0004875,
+      "cachedCost": 0,
+      "totalCost": 0.00096125
+    },
+    "hash": "22284570f1d1217290e4d685d8c98f6f",
+    "sourceFile": "sciopero_trasporto_pubblico_gioved_28_servizio_rischio_830_1230.html",
+    "thoughts": "**Strike Analysis - ATAC (Rome) - JSON Output**\n\nOkay, let's break this down. The primary task is to identify and structure information about a potential strike, specifically from the text provided, ensuring a clean JSON output. The target is the ATAC company, operating in Rome (Lazio, region code 12).\n\nThe core information concerns a planned strike. The provided text indicates a strike is scheduled for \"Giovedì 28 aprile\". Since no year is explicitly stated, the system should interpret this for the current or a near-future date, likely the current year or the upcoming one. I'll default to 2025 unless there's a compelling reason to use something else, but first I will consider that in general such notices refer to the current year. The text indicates that the strike will take place on the 28th of April.\n\nThe strike details are pretty clear: 4 hours, starting at 08:30:00 and ending at 12:30:00. The scope is \"nazionale\" which I understand means national, and therefore is relevant to the whole network. Critically, there are no specific mentions of guaranteed service times, so that will need to be represented as such. I'm aiming for the final JSON to be a parseable, machine-readable format to serve this data.\n\n\n",
+    "tokens": {
+      "input": 1361,
+      "output": 89,
+      "total": 1775
+    }
+  }
+}

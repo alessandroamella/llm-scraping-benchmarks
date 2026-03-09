@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-11-27 00:00:00",
+      "endDate": "2023-11-27 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6256,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00034275,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.000897,
+      "cachedCost": 0,
+      "totalCost": 0.00143625
+    },
+    "hash": "f4a723e306c7a0a5eb19f4f0bfc5c329",
+    "sourceFile": "luned_27_novembre_sciopero_nazionale_trasporto_pubblico_possibili_disagi.html",
+    "thoughts": "**Strike Analysis: ATAC - November 27, 2023**\n\nOkay, let's break this down. My task is to determine if this HTML snippet describes a strike, and if so, extract the relevant details. The text clearly announces a strike: \"Lunedì 27 novembre sciopero nazionale...\". Right away, that's a positive identification. The target is ATAC, the transport authority in Rome (specifically, Lazio, which I know is code 12, but irrelevant here since it's *national*). The date is given as Monday, November 27th. And the year is implied to be the current one. I'll assume the current year is 2023 because the date is Monday, 27 November 2023.\n\nIt's a \"sciopero nazionale,\" a national strike, so the location code information is null. The strike is described as lasting \"24 ore,\" a full 24 hours. The guaranteed service times are \"fino alle 8,30\" (up to 08:30) and \"dalle 17 alle 20\" (from 17:00 to 20:00). So service should be guaranteed from 00:00 to 08:30 and 17:00 to 20:00. This is pretty straightforward.\n\nTherefore:\n\n*   `isStrike`: true\n*   `startDate`: \"2023-11-27 00:00:00\"\n*   `endDate`: \"2023-11-27 23:59:59\"\n*   `locationType`: \"NATIONAL\"\n*   `locationCodes`: null\n*   `guaranteedTimes`: [\"00:00-08:30\", \"17:00-20:00\"]\n\nA quick sanity check confirms this will generate valid JSON and matches the schema I expect. That's a wrap.\n\n\n",
+    "tokens": {
+      "input": 1371,
+      "output": 131,
+      "total": 2100
+    }
+  }
+}

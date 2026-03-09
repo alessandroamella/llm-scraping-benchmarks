@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-12 00:00:00",
+      "endDate": "2025-11-12 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20171,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0001289,
+      "outputCost": 0.0006452,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0007741
+    },
+    "hash": "217b8cbd50c232e422c44cb20808b077",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_aziendale_di_24_h_di_mercoledi_12_11_2025.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to output JSON according to the strike extraction schema. The document indicates an upcoming strike on November 12, 2025, with a duration of 24 hours, specifically mentioning that it’s corporate. Although it provides guaranteed service windows between 05:30-08:30 and 16:30-19:30, the specific start times aren’t included. I must format the date as \"yyyy-MM-dd HH:mm:ss\" for data completeness, despite the lack of exact timing in the announcement.",
+    "tokens": {
+      "input": 2578,
+      "output": 1613,
+      "total": 4191
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-09-06 03:00:00",
+      "endDate": "2023-09-07 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21199,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000792,
+      "outputCost": 0.0011236,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0012028
+    },
+    "hash": "cc64be6ce708fb9ce1689e08930974a6",
+    "sourceFile": "strike-detail-mercoled--6-settembre--sciopero-dei-treni-regional.html",
+    "thoughts": "**Evaluating date format requirements**\n\nI'm looking at a post mentioning \"Mercoledì 6 settembre,\" but there's no year given, which complicates following the date format rules that specify 'yyyy-MM-dd HH:mm:ss'. I need to provide both a startDate and endDate, but without a year, it’s tricky. I wonder if we could deduce an approximate year or set it to null? The schema shows that startDate can be a string or null, but is that acceptable given the requirements?",
+    "tokens": {
+      "input": 1584,
+      "output": 2809,
+      "total": 4393
+    }
+  }
+}

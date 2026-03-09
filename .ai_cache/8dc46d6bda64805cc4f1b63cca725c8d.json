@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-16 00:00:00",
+      "endDate": "2025-01-17 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 23906,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00067835,
+      "outputCost": 0.0008164,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00149475
+    },
+    "hash": "8dc46d6bda64805cc4f1b63cca725c8d",
+    "sourceFile": "sportello_al_pubblico_e_contact_center_di_rsm_giovedi_e_venerdi_possibili_disagi_per_uno_sciopero.html",
+    "thoughts": "**Deducing strike dates**\n\nThe content doesn't explicitly include the exact dates for 2025, but if the article was published on January 13, then the likely dates for the strike are January 16 and 17, 2025. The article mentions disruptions on those days due to a strike proclaimed by USB for the entire shift. For the schema, I need to determine startDate and endDate; I think I can set startDate to January 16 at midnight and endDate to January 17 at 11:59 PM since no specific times are given.",
+    "tokens": {
+      "input": 13567,
+      "output": 2041,
+      "total": 15608
+    }
+  }
+}

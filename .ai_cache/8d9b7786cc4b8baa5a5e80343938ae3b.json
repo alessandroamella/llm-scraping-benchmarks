@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5153,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00032575,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000324,
+      "cachedCost": 0,
+      "totalCost": 0.00066475
+    },
+    "hash": "8d9b7786cc4b8baa5a5e80343938ae3b",
+    "sourceFile": "sciopero_del_trasporto_pubblico_ha_aderito_il_195_del_personale_atac.html",
+    "thoughts": "**Analyzing the ATAC Strike Announcement**\n\nOkay, so I'm looking at what appears to be an announcement from ATAC. The title gives it away: \"Public transport strike, 19.5% of Atac personnel joined.\" The text itself confirms this – it's reporting on the participation rate, stating, \"The overall adherence of Atac staff to today's strike, recorded in the morning, was 19.5%.\"\n\nThe key here is the phrasing. They are using phrases like \"sciopero odierno,\" which translates to \"today's strike,\" and that's the tell. It is not an announcement *before* a strike, but a report *after* (or perhaps during). The focus is on *adesione* - \"participation\" or \"adherence\" - in a past event.\n\nTherefore, given that it's just providing information about the participation in a strike that has *already happened*, I'm going to set `isStrike` to `false`. This makes sense, given that the focus is clearly on reporting the impact of an event, and not the future event itself.\n\n\n",
+    "tokens": {
+      "input": 1303,
+      "output": 10,
+      "total": 1529
+    }
+  }
+}

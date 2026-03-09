@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-10-28 00:00:00",
+      "endDate": "2024-10-28 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5812,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000483,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.0007785,
+      "cachedCost": 0,
+      "totalCost": 0.0014715
+    },
+    "hash": "df103bf04c58fe2fba5afec02e9b31b8",
+    "sourceFile": "trasporto_pubblico_28_ottobre_sciopero_sulla_rete_atac.html",
+    "thoughts": "**Strike Information for Rome: October 28th**\n\nOkay, let's process this. I've got HTML content indicating a strike in Rome, specifically on October 28th. Given that context is crucial, and no year is explicitly mentioned, I'm going to assume the current year, 2024, given the date format aligns with recent data. This seems to be a 24-hour strike impacting the Atac network in Rome, which falls within the Lazio region (code 12).\n\nThe key parameters are straightforward: `isStrike` is `true`. The strike begins at midnight on the 28th (2024-10-28 00:00:00) and runs for the entire day, ending at 23:59:59. This gives us the `startDate` and `endDate`.\n\nThe strike is regional, thus `locationType` should be \"REGIONAL\", and the relevant location code is \"12\" for Lazio.\n\nThe critical piece is the guaranteed service times. The source states \"fino alle 8,30\" and \"dalle 17 alle 20\", meaning the service will run from 00:00 to 08:30 and 17:00 to 20:00, or `guaranteedTimes` of [\"00:00-08:30\", \"17:00-20:00\"].\n\nSo the data points I need are:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-10-28 00:00:00\",\n    \"endDate\": \"2024-10-28 23:59:59\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"00:00-08:30\", \"17:00-20:00\"]\n  }\n}\n```\n\nI just need to ensure the JSON is valid before finalizing the information. This should be good.\n\n\n",
+    "tokens": {
+      "input": 1932,
+      "output": 140,
+      "total": 2591
+    }
+  }
+}

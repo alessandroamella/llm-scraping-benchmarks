@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-12-15 00:00:00",
+      "endDate": "2023-12-15 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6346,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0001965,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.0009555,
+      "cachedCost": 0,
+      "totalCost": 0.0013485
+    },
+    "hash": "92770c0d745c5915d5d133871e2d1856",
+    "sourceFile": "venerd_sciopero_nazionale_trasporto_pubblico_servizio_rischio.html",
+    "thoughts": "**Strike Analysis: Italian Public Transport**\n\nOkay, let's break this down. My task is clear: I need to determine if this input indicates an upcoming strike and, if so, extract the necessary data in the required JSON format. The input announces a national public transport strike in Rome. The date is Friday, December 15th, 2023. It's a 24-hour strike, so the start is pretty straightforward: 2023-12-15 00:00:00, and it runs until the end of the day, so the end time is 2023-12-15 23:59:59.\n\nNow, the specifics. It's a national strike, which simplifies the `locationType` to \"NATIONAL\". Since it's national, the `locationCodes` field should be `null`. The text mentions that service is guaranteed *until* 08:30 and *from* 17:00 to 20:00. This is important. So the `guaranteedTimes` array will contain \"00:00-08:30\" and \"17:00-20:00\".\n\nTherefore, I've got:\n\n*   `isStrike`: `true`.\n*   `strikeData`: will contain the details I've extracted.\n*   `startDate`: \"2023-12-15 00:00:00\".\n*   `endDate`: \"2023-12-15 23:59:59\".\n*   `locationType`: \"NATIONAL\".\n*   `locationCodes`: `null`.\n*   `guaranteedTimes`: \\[\"00:00-08:30\", \"17:00-20:00\"\\].\n\nThat covers it. Now, it's just a matter of assembling that into the JSON structure and I'm done.\n\n\n",
+    "tokens": {
+      "input": 786,
+      "output": 131,
+      "total": 1554
+    }
+  }
+}

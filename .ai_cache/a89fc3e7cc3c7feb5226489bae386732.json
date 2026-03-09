@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4933,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0036945,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0001965,
+      "cachedCost": 0,
+      "totalCost": 0.003906
+    },
+    "hash": "a89fc3e7cc3c7feb5226489bae386732",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_22.html",
+    "thoughts": "**Analyzing the \"Sciopero del trasporto pubblico\" Report**\n\nOkay, let's break this down. My initial instinct, seeing \"Sciopero\" and \"Atac,\" is to check for a potential transport strike. The source, \"Sciopero del trasporto pubblico, adesione personale Atac al 22% - Roma Servizi per la Mobilità,\" immediately triggers that thought. But, I need to be precise. The phrasing - specifically \"rilevata in mattinata\" and the reported participation \"pari al 22%\" - strongly suggests this is a *post*-strike report, a summary of participation *after* an event, not an announcement. The publication date, 2023, also reinforces this conclusion. The goal here is to determine whether it is an announcement of an upcoming strike. The evidence confirms this is not an *announcement*. The conclusion is that this is a report on a *past* strike, detailing the level of participation. Therefore, `isStrike`: false.\n\n\n",
+    "tokens": {
+      "input": 14778,
+      "output": 10,
+      "total": 14919
+    }
+  }
+}

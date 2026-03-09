@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-03-10 09:00:00",
+      "endDate": "2026-03-10 13:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 12154,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0036835,
+      "outputCost": 0.0001335,
+      "thinkingCost": 0.000765,
+      "cachedCost": 0,
+      "totalCost": 0.004582
+    },
+    "hash": "e1c958ffbe68844afe6718937ea53763",
+    "sourceFile": "sciopero_generale_nazionale.html",
+    "thoughts": "**Strike Analysis: \"Roma Servizi per la Mobilità\" Announcement**\n\nOkay, let's break this down. The task is to determine if this text from \"Roma Servizi per la Mobilità\" announces a strike and, if so, extract the relevant data. The text, dated March 9, 2026, reads, \"Domani sciopero generale nazionale. Per i trasporti stop dalle 9 alle 13\". So, immediately, I see \"domani sciopero\" which means \"tomorrow strike,\" a clear indicator. \"Tomorrow\" from March 9th means the strike is scheduled for March 10, 2026.\n\nThe content specifies a \"general national strike\". \"Stop dalle 9 alle 13\" translates to a stoppage from 9:00 to 13:00. This is a crucial detail. Since it is a national strike and the publication mentions Rome (\"Per i trasporti\") it will affect that location specifically. Atac and private bus operators in Rome are mentioned, but since the overall prompt is about a national strike I will indicate that as the `locationType`.\n\nTherefore, the strike data is:\n\n*   `isStrike`: True.\n*   `strikeData`:\n    *   `startDate`: 2026-03-10 09:00:00.\n    *   `endDate`: 2026-03-10 13:00:00.\n    *   `locationType`: \"NATIONAL\". While Rome is mentioned, the text explicitly states a \"general national strike.\"\n    *   `locationCodes`: `null` (because it's a national strike, so there's no specific regional code)\n    *   `guaranteedTimes`: Not specified in the text. The phrase \"stop dalle 9 alle 13\" indicates strike hours, not guaranteed services. Therefore, I will exclude them.\n\nSo, the final output confirms a strike with the specified data.\n\n\n",
+    "tokens": {
+      "input": 14734,
+      "output": 89,
+      "total": 15333
+    }
+  }
+}

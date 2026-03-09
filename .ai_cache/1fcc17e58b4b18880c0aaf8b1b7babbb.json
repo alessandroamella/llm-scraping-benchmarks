@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-09-06 03:00:00",
+      "endDate": "2023-09-07 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5629,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00030775,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.000822,
+      "cachedCost": 0,
+      "totalCost": 0.00133975
+    },
+    "hash": "1fcc17e58b4b18880c0aaf8b1b7babbb",
+    "sourceFile": "strike-detail-mercoled--6-settembre--sciopero-dei-treni-regional.html",
+    "thoughts": "**Strike Announcement Analysis for Trenord (Lombardia)**\n\nOkay, here's what I've got. The task is to analyze this text and determine if it's a strike announcement, specifically for Trenord in the Lombardia region (code \"03\"). The condition is if `isStrike` is true. Let's see...\n\nAlright, the text clearly states \"Mercoledì 6 settembre, sciopero dei treni regionali\" – a strike of regional trains, so `isStrike` is indeed true. I've got the strike announcement.\n\nNow, let's extract the `strikeData`. The strike is organized by the unions ORSA, Uiltrasporti, FAST, FAISA CISAL, beginning at 3 AM on September 6th and ending at 2 AM on September 7th. The date is Wednesday, September 6, 2023. So, my `startDate` will be \"2023-09-06 03:00:00\" and the `endDate` is \"2023-09-07 02:00:00\".\n\nThe location is Trenord regional trains, targeting the Lombardia region, which corresponds to the location code of \"03\". So, `locationType` is \"REGIONAL\" and `locationCodes` is an array containing [\"03\"].\n\nCrucially, there are guaranteed times, specifically \"6-9 e 18-21\", which translates to 6 AM to 9 AM and 6 PM to 9 PM, I'll need to parse them correctly. So, `guaranteedTimes` is an array containing [\"06:00-09:00\", \"18:00-21:00\"].\n\nFinally, the output should look like this.\n\n`isStrike`: true\n\n`strikeData` should be:\n*   `startDate`: \"2023-09-06 03:00:00\".\n*   `endDate`: \"2023-09-07 02:00:00\".\n*   `locationType`: \"REGIONAL\".\n*   `locationCodes`: [\"03\"].\n*   `guaranteedTimes`: [\"06:00-09:00\", \"18:00-21:00\"].\n\nOkay, all the necessary information has been extracted and formatted. I believe this covers all the required fields and correctly answers the original query.\n\n\n",
+    "tokens": {
+      "input": 1231,
+      "output": 140,
+      "total": 1919
+    }
+  }
+}

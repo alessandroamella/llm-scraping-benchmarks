@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3986,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00018975,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000336,
+      "cachedCost": 0,
+      "totalCost": 0.00054075
+    },
+    "hash": "bd0b9f86a5997925ac621531baaf1197",
+    "sourceFile": "sciopero_trasporto_pubblico_attive_metropolitane_termini_centocelle.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, let's break this down. My task is to figure out whether this input text is announcing an *upcoming* strike. The text I'm given says, \"Sciopero del trasporto pubblico, attive le metropolitane e la Termini-Centocelle\" (Public transport strike, metros and Termini-Centocelle active) and \"È in corso lo sciopero...\" (The public transport strike is in progress...). I need to be precise here, since the system depends on me. I know I have to be careful with my criteria.\n\nI have to carefully evaluate the language, and I know that: if this is a cancellation of a strike, a report on participation during a strike, or a live update, then it's *not* an announcement of an upcoming event. I'm only looking for a heads-up, a forewarning, so I can set `isStrike: true`. Otherwise, it's `isStrike: false`.\n\nAlright, reading the text, \"È in corso lo sciopero...\" (The public transport strike is in progress...). That phrase, \"in progress,\" is key. This is a real-time update on an *existing* strike, not a heads-up about a future one. So, my analysis confirms that it's an ongoing strike, not an announcement. Therefore, my final decision is `isStrike: false`.\n\n\n",
+    "tokens": {
+      "input": 759,
+      "output": 10,
+      "total": 993
+    }
+  }
+}

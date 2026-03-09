@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-12-16 20:00:00",
+      "endDate": "2022-12-17 00:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7061,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000192,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.000774,
+      "cachedCost": 0,
+      "totalCost": 0.0011145
+    },
+    "hash": "9dcd499872b5b2e661f85e5de746235f",
+    "sourceFile": "venerd_16_dicembre_sciopero_generale_regionale_trasporto_pubblico_rischio_20_24.html",
+    "thoughts": "**Strike Analysis & Data Extraction**\n\nOkay, let's break this down. The input clearly indicates an upcoming strike. The text \"Venerdì 16 dicembre sciopero generale regionale. Trasporto pubblico a rischio dalle 20 alle 24\" screams strike. I'll need to extract the relevant data, paying close attention to the details and schema constraints.\n\nFirst, I see \"Venerdì 16 dicembre,\" which translates to Friday, December 16th. Given the context (the posting date \"Pubblicato il: 09/12/2022\") I can safely assume the year is 2022. The strike duration is from \"dalle 20 alle 24,\" which I'll convert to the 24-hour clock. \"Dalle 20 alle 24\" indicates a time frame from 20:00 to 00:00 (midnight).\n\nMy initial thought was to make the end time 23:59:59 on the 16th, but \"dalle...alle\" implies a span of time to the end of day. So that should be 00:00 on the 17th.\n\nThe location is described as \"generale regionale,\" meaning it's regional, and the context points to Lazio (code 12). Since \"Trasporto pubblico a rischio\" indicates the strike affects public transport, likely ATAC/Roma Tpl.\n\nThe desired output is a JSON object. I'll need to structure the data precisely according to the specified schema, setting `isStrike` to `true`. Now, for the `strikeData` object, I'll extract the following:\n\n*   `startDate`: 2022-12-16 20:00:00 (derived from the text)\n*   `endDate`: 2022-12-17 00:00:00 (also from the text, as adjusted for the 24 hour clock)\n*   `locationType`: \"REGIONAL\" (directly from the text)\n*   `locationCodes`: \\[\"12\"] (the Lazio code)\n*   `guaranteedTimes`: Omit this key-value pair because no guaranteed times were mentioned.\n\nThe information is all there, just a matter of proper encoding!\n\n\n",
+    "tokens": {
+      "input": 768,
+      "output": 99,
+      "total": 1383
+    }
+  }
+}

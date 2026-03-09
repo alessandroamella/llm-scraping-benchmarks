@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7485,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007545,
+      "outputCost": 0.000168,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00024345
+    },
+    "hash": "ee2bd760d7b4740ce8ab3164b1698812",
+    "sourceFile": "sciopero_nazionale_trasporto_pubblico_roma_aperte_metropolitane.html",
+    "thoughts": "**Evaluating strike announcement status**\n\nI need to output JSON based on the strike extraction schema. There's an Italian news item about a national public transport strike, which says it's ongoing in Rome, with themetros still open. The status indicates that the strike is currently happening, not upcoming, so the `isStrike` should be set to false. It's important to reflect that the national strike is ongoing while noting the specific transport updates and conditions mentioned.",
+    "tokens": {
+      "input": 1509,
+      "output": 420,
+      "total": 1929
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-07-18 08:30:00",
+      "endDate": "2024-07-18 12:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19625,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00067745,
+      "outputCost": 0.0008068,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00148425
+    },
+    "hash": "383c60a114d84a242ade89cfe0e25ded",
+    "sourceFile": "trasporto_pubblico_gioved_sciopero_nazionale_830_1230_servizio_rischio.html",
+    "thoughts": "**Analyzing strike information**\n\nI need to extract data in JSON format according to the specified schema with an `isStrike` boolean and `strikeData` if true. The article I’m looking at is about an upcoming national strike impacting public transport in Italy. It mentions a strike on Thursday from 8:30 to 12:30. The date, July 18, is provided, but I need the year context since the publication time states it's listed as 2024. It looks like an important update!",
+    "tokens": {
+      "input": 13549,
+      "output": 2017,
+      "total": 15566
+    }
+  }
+}

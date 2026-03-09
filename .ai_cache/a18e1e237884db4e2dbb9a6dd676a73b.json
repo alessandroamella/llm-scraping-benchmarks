@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5632,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005695,
+      "outputCost": 0.0001404,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00019735
+    },
+    "hash": "a18e1e237884db4e2dbb9a6dd676a73b",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_302.html",
+    "thoughts": "**Analyzing strike report**\n\nI need to format the output in JSON according to the strike extraction specifications. The content is about public transport strike participation, specifically noting that the adhesion rate among Atac personnel was 30.2%. The timestamps indicate this was reported on December 16, 2021, and updated on February 16, 2022. This means it’s not announcing a new strike; rather, it's discussing a previous one. So, the isStrike should be set to false, as it's just reporting past participation.",
+    "tokens": {
+      "input": 1139,
+      "output": 351,
+      "total": 1490
+    }
+  }
+}

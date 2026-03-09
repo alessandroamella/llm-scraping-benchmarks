@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4821,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00087675,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000306,
+      "cachedCost": 0,
+      "totalCost": 0.00119775
+    },
+    "hash": "c3f884b189aff26d127d65b7ee83863e",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-10-8-linee-della-sardegna--treni-gar.html",
+    "thoughts": "**Analyzing Trenitalia's Sardinian Service Guarantee**\n\nOkay, so I've got Trenitalia content here, specifically about their Sardinian lines. The title, \"LINEE DELLA SARDEGNA: TRENI GARANTITI NEI GIORNI FERIALI IN CASO DI SCIOPERO\", immediately signals this is about service during potential disruptions, and the date range, \"8 OTTOBRE 2025 - 13 DICEMBRE 2025\", makes it clear that this is a standing plan, not a heads-up for an immediate strike.\n\nMy primary goal here is to determine whether this document constitutes an *announcement* of an impending strike. The instructions are clear – only set `isStrike` to true if it *announces* a strike.\n\nConsidering this context, and looking beyond the title, it's pretty clear this is a guarantee list, outlining the trains that will be running *if* a strike were to occur within the specified period. It's preparatory, not definitive. Therefore, `isStrike` is definitively false in this case. It's a useful piece of information for passengers planning travel during that timeframe, but it is not an indicator of an active strike.\n\n\n",
+    "tokens": {
+      "input": 3507,
+      "output": 10,
+      "total": 3721
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-10-20 00:00:00",
+      "endDate": "2023-10-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 28451,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007545,
+      "outputCost": 0.0008652,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00094065
+    },
+    "hash": "4a1c14a40fb1569dc7b9da562ea0647f",
+    "sourceFile": "venerd_20_ottobre_sciopero_generale_nazionale_trasporto_pubblico_rischio.html",
+    "thoughts": "**Evaluating strike data**\n\nIt looks like there’s a predicted strike affecting the ATAC network in Rome on Friday, October 20. The service will be normal until 8:30 and from 17:00 to 20:00, which means it’s not a cancellation. So, I need to set `isStrike` to true. \n\nI need to extract the start and end dates in the correct format, but the year isn’t given. I can deduce it might be from 2023 or 2024, but I can't assume. I'll work with that uncertainty.",
+    "tokens": {
+      "input": 1509,
+      "output": 2163,
+      "total": 3672
+    }
+  }
+}

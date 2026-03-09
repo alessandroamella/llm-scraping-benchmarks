@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3870,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000179,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000288,
+      "cachedCost": 0,
+      "totalCost": 0.000482
+    },
+    "hash": "7d3fba508a4f1511478573107da34848",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_22.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, here's what I've got. The input content is an announcement regarding some kind of transportation disruption, specifically mentioning \"adesione personale Atac al 22%\". My immediate goal is to figure out whether this is an *announcement* of a *future* strike, or something else entirely. The instructions I've got are pretty clear: if it's a cancellation notice, a participation report, or a real-time update, then it's *not* an announcement of a future strike. Only if it's explicitly about a *future* strike do I mark it as `isStrike: true`.\n\nNow, looking at the text itself: \"Sciopero del trasporto pubblico, adesione personale Atac al 22%\" and the date, 17/02/2023. The key phrase here is \"l'adesione ... rilevata in mattinata, è stata pari al 22%.\" It is reporting on the participation. It's quantifying the participation of employees, specifically that it was \"rilevata in mattinata\" (assessed this morning). This suggests a real-time situation or a report on an ongoing or already-occurred strike. This is *not* an announcement for an upcoming strike. This is clearly a participation report.\n\nTherefore, following the instructions and analysis, I am setting `isStrike` to `false`.\n\n\n",
+    "tokens": {
+      "input": 716,
+      "output": 10,
+      "total": 918
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8016,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005675,
+      "outputCost": 0.0001532,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00020995
+    },
+    "hash": "57a5006c2085dfcc6c977ae16025e52a",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_154.html",
+    "thoughts": "**Confirming JSON format**\n\nI’m double-checking the content for \"adesione personale Atac al 15,4%,\" which confirms it discusses attendance rather than an upcoming strike. So, we can set isStrike to false. \n\nThe required output is a simple JSON structure with just the boolean \"isStrike.\" I’ll make sure it matches the format since the platform might need it structured properly, but I’ll focus on delivering plain JSON without extra text. Let’s finalize and deliver that!",
+    "tokens": {
+      "input": 1135,
+      "output": 383,
+      "total": 1518
+    }
+  }
+}

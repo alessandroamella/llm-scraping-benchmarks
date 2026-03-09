@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-09 00:00:00",
+      "endDate": "2025-12-09 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5821,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00035175,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.000909,
+      "cachedCost": 0,
+      "totalCost": 0.00147075
+    },
+    "hash": "69e76d16f8c03bb306158d905d67410a",
+    "sourceFile": "martedi_9_dicembre_sciopero_del_trasporto_pubblico_possibili_stop_per_24_ore.html",
+    "thoughts": "**Strike Alert: Rome's ATAC Network - December 9th, 2025**\n\nOkay, let's break this down. My source is ATAC in Rome, specifically within the Lazio region, which I'm inferring is region \"12\" from the context. It looks like we have a public transport strike scheduled for Tuesday, December 9th, 2025. It's a 24-hour strike, meaning it covers the entire day. The interesting part is the union involved, Sul, and that this affects only the ATAC network. So, other transport may still be running.\n\nThe key here is the guaranteed service windows. The text explicitly states that service *will* be regular until 8:30 AM and then again from 5:00 PM to 8:00 PM. That means we have to assume a full stop from 8:30 AM to 5:00 PM on that network, and a stop after 8:00 PM. So, for the record, here's what the start and end times look like: the strike formally begins at 00:00 on December 9th and lasts until 23:59 on the same day. However, within that day, guaranteed service is expected until 8:30 AM, and again between 5:00 PM and 8:00 PM. I am going to code this as a regional event impacting Lazio Region 12.\n\n\n",
+    "tokens": {
+      "input": 1407,
+      "output": 140,
+      "total": 2153
+    }
+  }
+}

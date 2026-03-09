@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-10 08:30:00",
+      "endDate": "2025-01-10 12:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 28990,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000671,
+      "outputCost": 0.0010724,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0017434
+    },
+    "hash": "db5ca730f3bc207ae9560f9e363b395d",
+    "sourceFile": "trasporto_pubblico_venerdi_10_gennaio_sciopero_nazionale_di_4_ore.html",
+    "thoughts": "**Clarifying time formats**\n\nI'm looking at the instruction that says guaranteed times have to be in the format 'HH:mm-HH:mm'. The content indicates \"dal 8.30 alle 12.30\" but doesn’t specify guaranteed times. So it seems I can omit that property. I must ensure the \"startDate\" and \"endDate\" fields use the 'yyyy-MM-dd HH:mm:ss' format. \n\nFor this case, I'll set: startDate as \"2025-01-10 08:30:00\" and endDate as \"2025-01-10 12:30:00\". It's confirmed that January 10, 2025, is indeed a Friday.",
+    "tokens": {
+      "input": 13420,
+      "output": 2681,
+      "total": 16101
+    }
+  }
+}

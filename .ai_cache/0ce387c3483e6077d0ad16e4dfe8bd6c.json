@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-01-08 09:01:00",
+      "endDate": "2026-01-08 17:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "07"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 16464,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000621,
+      "outputCost": 0.0005056,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0005677
+    },
+    "hash": "0ce387c3483e6077d0ad16e4dfe8bd6c",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2026-1-8-sciopero-del-personale-mobile-in.html",
+    "thoughts": "**Confirming Liguria details**\n\nI’m checking the ISTAT codes for Italian regions and confirming that Liguria's code is \"07.\" I see the note specifies that it should be used as a 2-digit code. Also, the document indicates \"Regione: Liguria\" means the location type should be \"REGIONAL\" with the code [\"07\"]. I need to consider the upcoming strike starting on January 8, 2026, at 09:01 and ending at 17:00, confirming that I should include \"startDate,\" \"endDate,\" and \"isStrike\": true.",
+    "tokens": {
+      "input": 1242,
+      "output": 1264,
+      "total": 2506
+    }
+  }
+}

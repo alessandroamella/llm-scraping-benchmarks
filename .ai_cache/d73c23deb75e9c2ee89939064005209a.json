@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-07-07 20:30:00",
+      "endDate": "2024-07-08 00:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5999,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0003355,
+      "outputCost": 0.0001335,
+      "thinkingCost": 0.0008865,
+      "cachedCost": 0,
+      "totalCost": 0.0013555
+    },
+    "hash": "d73c23deb75e9c2ee89939064005209a",
+    "sourceFile": "trasporto_pubblico_domenica_7_luglio_sciopero_serale_4_ore.html",
+    "thoughts": "**Analyzing the Roman Strike Information**\n\nOkay, so I'm looking at this HTML content about a potential strike in Rome regarding ATAC. My primary goal here is to confirm if it's an upcoming strike and, if so, extract all the relevant details for a structured output. The key piece of information is: \"Domenica 7 luglio sciopero serale di 4 ore, dalle 20,30 alle 0,30, indetto a livello nazionale\".\n\nFirst, the date is clear: \"Domenica 7 luglio\" - which I am inferring to be July 7th of the current year, 2024. The time frame is from 20:30 to 00:30 (the next day, July 8th). The location is indicated as Rome (Lazio - 12) but the phrase \"indetto a livello nazionale\" (called at a national level) is very important here: it means the impact isn't just local to Rome or Lazio, so the `locationType` should be \"NATIONAL\" and the `locationCodes` null. There's no specific mention of guaranteed service times, so I'll omit that from the JSON output.\n\nSince it mentions \"sciopero\" (strike), `isStrike` is clearly true. Therefore, I need to create the `strikeData` object. I am inferring the following values based on the information provided, so I'll assemble the data structure:\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-07-07 20:30:00\",\n    \"endDate\": \"2024-07-08 00:30:00\",\n    \"locationType\": \"NATIONAL\",\n    \"locationCodes\": null\n  }\n}\n```\nI'll also verify that the date in question, July 7th, 2024 is indeed a Sunday, just to confirm. The strike is confirmed, and the data is accurate given the provided text. I'll construct a single JSON object.\n\n\n",
+    "tokens": {
+      "input": 1342,
+      "output": 89,
+      "total": 2022
+    }
+  }
+}

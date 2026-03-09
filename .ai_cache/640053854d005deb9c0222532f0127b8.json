@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-07-23 09:00:00",
+      "endDate": "2025-07-23 11:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6192,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000222,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.0010035,
+      "cachedCost": 0,
+      "totalCost": 0.001374
+    },
+    "hash": "640053854d005deb9c0222532f0127b8",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_di_2_ore_mercoledi_23_luglio_2025.html",
+    "thoughts": "**Strike Announcement Analysis: EAV Campania**\n\nOkay, let's break this down. My task is to analyze this text – a strike announcement for EAV in Campania – and output a valid JSON response. The constraints are pretty clear: just JSON, a boolean for `isStrike`, and strike details if it's true, which it looks like it will be. Date format is strict, and I need to identify the location correctly, which is Campania (region 15) for EAV. No extra fluff, just the bare data.\n\nThe page title helps confirm the context: \"Servizio Autolinee - Avviso di sciopero di 2 ore mercoledì 23 luglio 2025 - EAV srl.\" The text says, \"per il giorno mercoledì 23 luglio 2025 la O.S. Faisa Confail ha proclamato uno sciopero aziendale di 2 ore, dalle ore 09:00 alle ore 11:00\". So, a two-hour strike. Definitely an *upcoming* strike, thus `isStrike` will be true.\n\nNow for the details. `startDate` is easy, 2025-07-23 09:00:00. `endDate` is 2025-07-23 11:00:00.  Location is tricky but specified by the problem. EAV is a regional company, so `locationType` is \"REGIONAL\" and `locationCodes` is [\"15\"] for Campania. The text states \"Non saranno garantite le corse durante l’orario di sciopero,\" meaning no guaranteed service. The schema says I can omit `guaranteedTimes` or set it to null, so I'll omit it.\n\nLet's do a schema check: `isStrike` is true. `strikeData`: `startDate` is \"2025-07-23 09:00:00\", `endDate` is \"2025-07-23 11:00:00\", `locationType` is \"REGIONAL\", `locationCodes` is [\"15\"].\n\nNow, to format the output. Based on my analysis, here's the correct JSON output, compliant with all constraints:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-07-23 09:00:00\",\n    \"endDate\": \"2025-07-23 11:00:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"15\"]\n  }\n}\n```\n\nNo extra text, and it's definitely valid JSON and the date formats are correct. Done.\n\n\n",
+    "tokens": {
+      "input": 888,
+      "output": 99,
+      "total": 1656
+    }
+  }
+}

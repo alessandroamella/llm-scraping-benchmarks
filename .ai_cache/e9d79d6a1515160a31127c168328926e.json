@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-07-07 00:00:00",
+      "endDate": "2023-07-07 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 27959,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00067705,
+      "outputCost": 0.0009024,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00157945
+    },
+    "hash": "e9d79d6a1515160a31127c168328926e",
+    "sourceFile": "venerd_7_luglio_trasporto_pubblico_rischio_sciopero_nazionale_24_ore_della_faisa_confail.html",
+    "thoughts": "**Clarifying service times**\n\nThe page indicates that service will run regularly until 8:30 AM and from 5 PM to 8 PM, suggesting the strike affects other hours. I need to set the start date and end date as 2023-07-07 00:00:00 to 2023-07-07 23:59:59 for a full 24-hour period. The guaranteed service times refer to specific hours, but it’s unclear if they should include the early morning hours before 8:30 AM.",
+    "tokens": {
+      "input": 13541,
+      "output": 2256,
+      "total": 15797
+    }
+  }
+}

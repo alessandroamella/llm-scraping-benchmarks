@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-12 00:00:00",
+      "endDate": "2025-11-12 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5216,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0005495,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.0008265,
+      "cachedCost": 0,
+      "totalCost": 0.001586
+    },
+    "hash": "26f2ff1e76ef0f45030dbfa47340302e",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_aziendale_di_24_h_di_mercoledi_12_11_2025.html",
+    "thoughts": "**Analyzing the EAV Strike Announcement**\n\nOkay, let's break this down. My source is EAV, the Campania public transport company (ISTAT code 15). There's a confirmed 24-hour strike scheduled for November 12th, 2025. It specifically impacts the \"Linee Vesuviane\" network.\n\nI need to represent this information in a structured format, likely JSON. The key `isStrike` is clearly `true`. The core data resides within the `strikeData` object. Inside that, I'm working with the start date, which is November 12, 2025, at 00:00:00, and the end date, also November 12th, but at 23:59:59—the full 24-hour period. I'm choosing the end date to be at 23:59:59 to accurately reflect a full day.\n\nThe strike's scope is regional (Campania), hence `locationType` is \"REGIONAL\", and `locationCodes` is [\"15\"]. Crucially, there are guaranteed service times: 05:30-08:30 and 16:30-19:30.\n\nI should make sure that the date format is consistent in the `yyyy-MM-dd HH:mm:ss` format, and of course use the 24-hour clock. The `locationCodes` are valid, confirming Campania's ISTAT code. It looks like the data is clean, with no extraneous text.\n\nSo, in summary, this is a clear, concise announcement of a 24-hour strike, and I've successfully extracted the key parameters, which are the start and end dates, the location, the guaranteed times and all the values are in the correct format and represent the relevant information. This is now ready to be rendered as JSON.\n\n\n",
+    "tokens": {
+      "input": 2198,
+      "output": 140,
+      "total": 2889
+    }
+  }
+}

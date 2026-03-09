@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7621,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00067045,
+      "outputCost": 0.0001648,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00083525
+    },
+    "hash": "6d57ccd324818d68db78634f8eb74ffd",
+    "sourceFile": "sciopero_del_trasporto_pubblico_aperte_le_metropolitane_e_la_termini_centocelle.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to create a JSON output for the strike extraction that includes an `isStrike` boolean and possible `strikeData`. The input content indicates an ongoing strike in Italy, specifically regarding public transport. It states there’s a public transport strike happening as of a specific date. Since this is not an announcement for an upcoming strike and is already in progress, my conclusion is that `isStrike` should be set to false.",
+    "tokens": {
+      "input": 13409,
+      "output": 412,
+      "total": 13821
+    }
+  }
+}

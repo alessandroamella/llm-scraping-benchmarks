@@ -1,0 +1,36 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-02-25 08:30:00",
+      "endDate": "2022-02-25 17:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "08:30-17:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 2167,
+    "preProcessingStrategy": "jina-reader",
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "costUsd": {
+      "inputCost": 0.00145596,
+      "outputCost": 0.00003026,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00148622
+    },
+    "hash": "cedc5199b440603abae533e52bd24533",
+    "sourceFile": "trasporto_pubblico_venerdi_25_febbraio_sciopero_nazionale_24_ore.html",
+    "tokens": {
+      "input": 13236,
+      "output": 89,
+      "total": 13325
+    }
+  }
+}

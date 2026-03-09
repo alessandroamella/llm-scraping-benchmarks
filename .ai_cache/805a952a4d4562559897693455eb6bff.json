@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-03 00:00:00",
+      "endDate": "2025-10-03 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 14535,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0001203,
+      "outputCost": 0.0005008,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0006211
+    },
+    "hash": "805a952a4d4562559897693455eb6bff",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_generale_nazionale_di_24_ore_venerdi_03_ottobre_2025.html",
+    "thoughts": "**Determining strike data**\n\nI need to ensure we output the information in JSON format according to specifications. The content in Italian indicates an upcoming 24-hour national strike on October 3, 2025. It seems clear that isStrike should be true. The document details guaranteed service times from 5:30 AM to 8:30 AM and from 4:30 PM to 7:30 PM, suggesting the strike is expected to occur all day. I’ll extract relevant details for strikeData.",
+    "tokens": {
+      "input": 2406,
+      "output": 1252,
+      "total": 3658
+    }
+  }
+}

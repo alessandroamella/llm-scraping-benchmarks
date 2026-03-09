@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-04-28 08:30:00",
+      "endDate": "2022-04-28 12:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5490,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00019775,
+      "outputCost": 0.0001335,
+      "thinkingCost": 0.0005085,
+      "cachedCost": 0,
+      "totalCost": 0.00083975
+    },
+    "hash": "91c1a00fa7e24d543b7c9ca44395caf7",
+    "sourceFile": "sciopero_trasporto_pubblico_gioved_28_servizio_rischio_830_1230.html",
+    "thoughts": "**Analyzing the Public Transport Strike Announcement**\n\nOkay, let me break this down. I've got a public transport announcement, sourced from Rome (Lazio, code 12), and it's specifically mentioning a strike. The date is clear: Thursday, April 28th, 2022. The strike duration is *during* 08:30 to 12:30. The text says \"servizio a rischio dalle 8,30 alle 12,30\" implying that the *entire* period is the strike duration.\n\nIt's a national strike, which, in the Italian context, immediately flags the potential for widespread disruption. The duration is fixed at four hours. Now, what's interesting is the absence of explicitly listed \"guaranteed times.\" Normally, with Italian strikes, you'd expect protected service bands, but this announcement doesn't provide them. The announcement clearly states \"servizio a rischio dalle 8,30 alle 12,30\" which means service is affected for the duration of the strike. Given the text, I'll be sure *not* to fabricate \"guaranteed times\" since they aren't stated. I'll need to interpret the implication of this statement in my report, noting the lack of specified guaranteed service times.\n\nI've confirmed the strike details: `isStrike: true`, start time at `2022-04-28 08:30:00`, and end time at `2022-04-28 12:30:00`. The location is flagged as `NATIONAL`, and the location codes are set to `null` because it's a national event, as per the schema. The date format check is also good. All the data lines up correctly for my analysis.\n\n\n",
+    "tokens": {
+      "input": 791,
+      "output": 89,
+      "total": 1219
+    }
+  }
+}

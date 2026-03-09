@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7448,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000734,
+      "outputCost": 0.000144,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002174
+    },
+    "hash": "16666199fa8fd535e29728601ccd18ad",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_174.html",
+    "thoughts": "**Evaluating strike announcement details**\n\nI need to determine if we’re dealing with an announcement of a new strike or if it's about a strike that has already occurred. The content mentions a public transport strike with participation at 17.4%. The body confirms this is a report on participation from the morning, indicating the strike has already taken place. Since it’s just reporting on past participation, I'll set isStrike to false in the JSON output as instructed.",
+    "tokens": {
+      "input": 1468,
+      "output": 360,
+      "total": 1828
+    }
+  }
+}

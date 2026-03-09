@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7138,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005705,
+      "outputCost": 0.0001436,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00020065
+    },
+    "hash": "d825079ffe47b81eed4ae4e0a9a0f52d",
+    "sourceFile": "sciopero_del_trasporto_pubblico_adesione_personale_atac_al_532.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to check if this document is announcing a new or upcoming strike. The content indicates a public transport strike with a participation rate of 53.2%. It mentions this participation was recorded, which suggests the strike has already occurred. The publication and update dates are noted, so I conclude that the \"isStrike\" key should be false. Therefore, I'll output {\"isStrike\": false} and ensure I follow the correct JSON formatting as specified.",
+    "tokens": {
+      "input": 1141,
+      "output": 359,
+      "total": 1500
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:01:00",
+      "endDate": "2025-12-12 21:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5110,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00022075,
+      "outputCost": 0.000147,
+      "thinkingCost": 0.000684,
+      "cachedCost": 0,
+      "totalCost": 0.00105175
+    },
+    "hash": "7419fc5cfc496983b9b6e67de6cb0893",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-12-12-sciopero-nazionale-del-traspor.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, here's the deal. My task is to determine if this input is announcing a strike and, if so, extract the relevant strike data. The input is a short HTML snippet, and I need to output the results in a clean JSON format. No extraneous comments or text – just the data, parseable and ready to go.\n\nThe snippet clearly mentions \"SCIOPERO NAZIONALE DEL TRASPORTO FERROVIARIO,\" which translates to \"National railway strike.\" That's a strong indicator right off the bat. It also specifies the timeframe: \"Dalle ore 00:01 alle ore 21:00 di venerdì 12 dicembre 2025\" – from 00:01 to 21:00 on Friday, December 12, 2025. That gives me the exact start and end times.\n\nTherefore, `isStrike` is definitely `true`. Now, for the `strikeData`. I need to extract the date and time information and structure it accordingly. The start date is \"2025-12-12 00:01:00\", and the end date is \"2025-12-12 21:00:00\". The strike is \"NATIONAL\" in scope, so `locationType` will be \"NATIONAL\" and `locationCodes` will be `null` since specific codes aren't mentioned. As for `guaranteedTimes`, the snippet doesn't explicitly list them. It directs the user to \"canali digitali\" for more information, so I'll set `guaranteedTimes` to `null` as well.\n\nSo, the JSON structure will be:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-12-12 00:01:00\",\n    \"endDate\": \"2025-12-12 21:00:00\",\n    \"locationType\": \"NATIONAL\",\n    \"locationCodes\": null,\n    \"guaranteedTimes\": null\n  }\n}\n```\n\n\n",
+    "tokens": {
+      "input": 883,
+      "output": 98,
+      "total": 1437
+    }
+  }
+}

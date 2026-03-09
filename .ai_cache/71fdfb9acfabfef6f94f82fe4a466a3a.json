@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-27 21:00:00",
+      "endDate": "2025-11-28 21:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22186,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006165,
+      "outputCost": 0.0004804,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00054205
+    },
+    "hash": "71fdfb9acfabfef6f94f82fe4a466a3a",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-11-27-sciopero-nazionale-del-traspor.html",
+    "thoughts": "**Extracting strike data**\n\nI need to output JSON using the \"strike_extraction\" schema based on the content provided. The information is in Italian and reveals that between 21:00 on November 27, 2025, and 21:00 on November 28, 2025, there will be a strike by personnel of the FS Italiane Group, Italo, and Trenord. This indicates a future strike, so I'll set `isStrike` to true. The dates should be formatted as \"2025-11-27 21:00:00\" for startDate and \"2025-11-28 21:00:00\" for endDate. Based on the title, it seems to be a national strike.",
+    "tokens": {
+      "input": 1233,
+      "output": 1201,
+      "total": 2434
+    }
+  }
+}

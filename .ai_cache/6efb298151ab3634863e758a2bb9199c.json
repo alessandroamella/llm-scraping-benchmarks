@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3548,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00018,
+      "outputCost": 0.000009,
+      "thinkingCost": 0.0003585,
+      "cachedCost": 0,
+      "totalCost": 0.0005475
+    },
+    "hash": "6efb298151ab3634863e758a2bb9199c",
+    "sourceFile": "sciopero_generale_adesione_personale_atac_179.html",
+    "thoughts": "**Analyzing the ATAC Strike Document**\n\nOkay, let's break this down. My task is crystal clear: I need to determine if this document is announcing a future strike. The input is a web page discussing an ATAC strike, so I need to be precise. It states \"adesione personale Atac al 17,9%\" and mentions \"sciopero generale di oggi\", which translates roughly to, \"General strike today.\"\n\nMy criteria are simple: `isStrike = true` if it's an *announcement* of a future strike; otherwise, it's false. Things like strike cancellations, participation stats (like \"adesione\"), or real-time status updates immediately make it false.\n\nThe page title is \"Sciopero generale, adesione personale Atac al 17,9%.\" The text itself confirms my suspicions: \"L’adesione complessiva del personale Atac allo sciopero generale di oggi... è stata del 17,9 per cento,\" which means the participation rate of the ATAC staff in today's general strike was 17.9%.\n\nTherefore, this isn't an *announcement*. It's a post-event report, detailing the participation in a strike that already occurred (\"oggi\" - today). It's reporting on \"adesione\", the participation rate, and therefore not an *announcement*. So, the final assessment is `isStrike`: false. And the output is `{\"isStrike\": false}`.\n\n\n",
+    "tokens": {
+      "input": 720,
+      "output": 6,
+      "total": 965
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3233,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00037,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0002865,
+      "cachedCost": 0,
+      "totalCost": 0.0006715
+    },
+    "hash": "4ae032762aac0aa7fa3730e82e4214a4",
+    "sourceFile": "comunicato_stampa_sciopero_trasporto_pubblico.html",
+    "thoughts": "**Analyzing the ATAC Strike Participation Report**\n\nOkay, let's break this down. I've got an ATAC announcement here, titled \"Sciopero del trasporto pubblico, adesione personale Atac al 53,2%.\" Right off the bat, \"adesione\" – participation – is a key word. That tells me this isn't an *announcement* of a strike; it's a *report* on one that's already in progress or has concluded. The content body confirms this; it's reporting a participation rate of 53.2% measured this morning.\n\nMy goal is clear: determine if this signals an *upcoming* strike. The instructions given are straightforward: since \"adesione\" clearly indicates a report of participation during/after a strike, I need to set `isStrike` to `false`. It is not an announcement.\n\nTherefore, the document reports on participation *during* a strike.\n\nThe resulting output should be clean JSON. The appropriate JSON output is:\n\n`{ \"isStrike\": false }`\n\n\n",
+    "tokens": {
+      "input": 1480,
+      "output": 10,
+      "total": 1681
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-03-21 00:00:00",
+      "endDate": "2025-03-21 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 27396,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000669,
+      "outputCost": 0.0009056,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0015746
+    },
+    "hash": "b365ba082b063b5f14857bb71931176a",
+    "sourceFile": "venerdi_21_marzo_sciopero_nazionale_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Parsing strike announcements**\n\nI need to analyze the provided content to determine if it pertains to a new or upcoming strike announcement. The page is from Roma Servizi per la Mobilità about a national strike on Friday, March 21, which was published on March 16 and last updated on March 18. It mentions that public transport will be at risk due to a 24-hour strike declared by several unions. The service is set to be regular until 8:30 AM and from 5 PM to 8 PM, making this an important announcement.",
+    "tokens": {
+      "input": 13380,
+      "output": 2264,
+      "total": 15644
+    }
+  }
+}

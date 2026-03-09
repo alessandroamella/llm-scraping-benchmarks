@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-09-09 08:30:00",
+      "endDate": "2024-09-09 16:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6744,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00020175,
+      "outputCost": 0.000147,
+      "thinkingCost": 0.0009255,
+      "cachedCost": 0,
+      "totalCost": 0.00127425
+    },
+    "hash": "f8ea83e14bbc9d86b7cdc29340632312",
+    "sourceFile": "luned_9_settembre_sciopero_nazionale_trasporto_pubblico_servizio_rischio.html",
+    "thoughts": "**Strike Information Analysis: A Breakdown**\n\nOkay, let's break this down. My task is clear: I need to analyze this text and extract strike information, specifically focusing on whether it's an announcement of an *upcoming* strike, and then format the data as clean JSON. I need to output `isStrike` (boolean) and a `strikeData` object with key-value pairs formatted as specified. The input is a short announcement about a national public transport strike in Rome on September 9th, 2024.\n\nFirst, I identify the critical keywords and dates. The phrase \"sciopero nazionale\" immediately tells me this is a *national* strike. I confirm the date: September 9th, 2024, I extract the information for start and end times - 8:30 to 16:30. \"interesserà la rete Atac\" tells me it effects Atac in Rome and from this I extract that region code 12 corresponds to the region in Rome.\n\nBased on the announcement’s context and the fact that the text is dated for the future as of the input date, my initial determination is that this *is* an announcement of a planned strike. I am comfortable with that as I would classify it as such based on the prompt description.\n\nNext, I need to format this information into JSON. I will set `isStrike` to `true`. Then, for `strikeData`, I'll structure it like this:\n\n*   `startDate`: \"2024-09-09 08:30:00\"\n*   `endDate`: \"2024-09-09 16:30:00\"\n*   `locationType`: \"NATIONAL\" (as it says \"sciopero nazionale\")\n*   `locationCodes`: I can set this as null since it's a *national* strike.\n*   `guaranteedTimes`: The input text doesn't specify any guaranteed service times, so I'll set it to null.\n\nI double-check to ensure this JSON structure is valid, comment-free, and contains no control tokens. Most importantly, I confirm that `isStrike` is correctly set to true, that the structure adheres to the required format, and that the data extraction is accurate and complete. That looks solid.\n\n\n",
+    "tokens": {
+      "input": 807,
+      "output": 98,
+      "total": 1522
+    }
+  }
+}

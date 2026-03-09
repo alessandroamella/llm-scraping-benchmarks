@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-03-09T18:48:40.831Z",
+  "timestamp": "2026-03-09T19:15:48.360Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "ATAC",
     "fileName": "sciopero_generale_nazionale_adesione_personale_atac_al_26.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "mineru-html",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"ATAC\" (the public transport company of Rome, Lazio (12)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: mineru-html):\n<html lang=\"it-IT\" prefix=\"og: https://ogp.me/ns#\"><body class=\"wp-singular comunicato-template-default single single-comunicato postid-11168 wp-embed-responsive wp-theme-hello-elementor wp-child-theme-hello-elementor-child hello-elementor-default elementor-default elementor-kit-12678 elementor-page-15972\">\n<div class=\"elementor elementor-15972 elementor-location-single post-11168 comunicato type-comunicato status-publish hentry sezione-newsmedia visibilita-inevidenzasulblocconewseventsinhomepage\" data-elementor-id=\"15972\" data-elementor-post-type=\"elementor_library\" data-elementor-type=\"single-page\">\n<div class=\"elementor-element elementor-element-6ee3468 e-flex e-con-boxed e-con e-parent\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"6ee3468\" data-settings='{\"background_background\":\"classic\"}'>\n<div class=\"e-con-inner\">\n<div class=\"elementor-element elementor-element-6945d4c e-con-full e-flex e-con e-child\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"6945d4c\">\n<div class=\"elementor-element elementor-element-da182fa e-con-full e-flex e-con e-child\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"da182fa\">\n<div class=\"elementor-element elementor-element-aff84d2 elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading\" data-e-type=\"widget\" data-element_type=\"widget\" data-id=\"aff84d2\" data-widget_type=\"theme-post-title.default\">\n<div class=\"elementor-widget-container\">\n<h1 class=\"elementor-heading-title elementor-size-default\" _item_id=\"1\">Sciopero generale nazionale, adesione personale Atac al 26%</h1> </div>\n</div>\n</div>\n</div>\n</div>\n</div>\n<div class=\"elementor-element elementor-element-32c51eb e-flex e-con-boxed e-con e-parent\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"32c51eb\">\n<div class=\"e-con-inner\">\n<div class=\"elementor-element elementor-element-7a3d033 e-con-full e-flex e-con e-child\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"7a3d033\" id=\"main-content\">\n<div class=\"elementor-element elementor-element-723d484 elementor-widget elementor-widget-theme-post-content\" data-e-type=\"widget\" data-element_type=\"widget\" data-id=\"723d484\" data-widget_type=\"theme-post-content.default\">\n<div class=\"elementor-widget-container\">\n<p _item_id=\"3\">L’adesione complessiva del personale Atac allo sciopero generale nazionale di oggi, rilevata in mattinata, è stata del 26 per cento.</p>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</body></html>"
   },
   "response": {
@@ -15,17 +15,17 @@
     },
     "usage": {
       "input": 1316,
-      "output": 10,
-      "total": 1538
+      "output": 6,
+      "total": 1540
     },
     "costUsd": {
       "inputCost": 0.000329,
-      "outputCost": 0.000015,
-      "thinkingCost": 0.000318,
+      "outputCost": 0.000009,
+      "thinkingCost": 0.000327,
       "cachedCost": 0,
-      "totalCost": 0.000662
+      "totalCost": 0.000665
     },
-    "durationMs": 3098,
-    "thoughts": "**Analyzing the ATAC Strike Announcement**\n\nOkay, let's break this down. My input is an announcement from ATAC: \"Sciopero generale nazionale, adesione personale Atac al 26%.\" That's the headline. The description clarifies that this morning's participation in the national general strike by ATAC staff was 26%. My immediate goal is to figure out if this is an *upcoming* strike announcement or a report on a strike that's already taken place.\n\nThe instructions are clear: if this is about *past* participation, `isStrike` should be `false`. Now, looking at the Italian text, specifically \"di oggi\" (today), it's pretty unambiguous. They're reporting on the participation *of* a strike that *happened* today. It's not a warning, a notice, or anything forecasting an event. It's retrospective. Therefore, `isStrike` is definitively `false`. Case closed.\n\n\n"
+    "durationMs": 3431,
+    "thoughts": "**Analyzing the ATAC Announcement**\n\nOkay, let's break this down. My source is an ATAC announcement page with the title \"Sciopero generale nazionale, adesione personale Atac al 26%.\" I need to figure out if this is a heads-up about a future strike, or just a report on one that's already happened. If it's the former, I need to grab the relevant details. If not, I'm simply returning `{\"isStrike\": false}`.\n\nThe title contains the phrase \"adesione... al 26%\" which translates to \"participation... at 26%\". The content repeats this theme with \"adesione... di oggi\", meaning \"participation... of today\". The use of \"of today\" and the reporting of a specific participation percentage makes it obvious that this is *not* an upcoming strike announcement. It is a report on the participation rate of a strike that has already taken place. The instructions are clear: if this document is *only* about the participation (\"adesione\") of a past strike, then I should set `isStrike` to false.\n\nTherefore, the final result is: `isStrike`: false.\n\n\n"
   }
 }

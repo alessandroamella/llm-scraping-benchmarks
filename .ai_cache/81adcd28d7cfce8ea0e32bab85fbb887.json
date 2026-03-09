@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5270,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000736,
+      "outputCost": 0.0001444,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.000218
+    },
+    "hash": "81adcd28d7cfce8ea0e32bab85fbb887",
+    "sourceFile": "sciopero_trasporto_pubblico_mattinata_ha_aderito_222_personale_atac.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to determine if the document is announcing a new or upcoming strike based on the specified JSON schema for strike extraction. The content is in Italian and talks about a public transport strike, indicating that 22.2% of Atac personnel participated. It describes participation metrics from the morning, but it seems to indicate a past event rather than an upcoming one. So, I’ll conclude that it’s not announcing a new strike, setting isStrike to false.",
+    "tokens": {
+      "input": 1472,
+      "output": 361,
+      "total": 1833
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-28 08:20:00",
+      "endDate": "2025-01-28 12:20:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "08:20-12:20"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 13303,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000903,
+      "outputCost": 0.0003952,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0004855
+    },
+    "hash": "5ae4ca9133f9fdf73ec389e3e3fd317f",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_di_4_ore_martedi_28_gennaio_2025.html",
+    "thoughts": "**Extracting strike data**\n\nI need to output JSON based on a specific schema regarding an upcoming strike announcement. The document states there's a 4-hour strike planned for January 28, 2025, from 08:20 to 12:20, announced by various unions. So, I conclude that isStrike is true. I’ll extract crucial details like startDate and endDate, which should be formatted correctly. The location seems to be the \"Area Nord di Napoli e Giuglianese.\" I’ll ensure all data follows the specified format.",
+    "tokens": {
+      "input": 1806,
+      "output": 988,
+      "total": 2794
+    }
+  }
+}

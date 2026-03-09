@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6749,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006637,
+      "outputCost": 0.0001832,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008469
+    },
+    "hash": "d9e8e6d55ecfdabff1df25023db6ed7a",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_174.html",
+    "thoughts": "**Determining strike status**\n\nI’m figuring out that isStrike should be false. The user wants to extract strikeData only if isStrike is true. So, it makes sense to return: { \"isStrike\": false }.\n\nThe edge indicates a public transport strike with a membership rate but doesn't seem to be ongoing or upcoming. It’s important to ensure there's no explicit upcoming strike announcement, and it looks like this is just a concluding report. Thus, I’ll finalize the output as: {\"isStrike\": false}.",
+    "tokens": {
+      "input": 13274,
+      "output": 458,
+      "total": 13732
+    }
+  }
+}

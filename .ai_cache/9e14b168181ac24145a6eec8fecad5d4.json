@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-09-20 00:00:00",
+      "endDate": "2024-09-21 00:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 26177,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006753,
+      "outputCost": 0.0008672,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0015425
+    },
+    "hash": "9e14b168181ac24145a6eec8fecad5d4",
+    "sourceFile": "venerd_20_settembre_sciopero_nazionale_24_ore_trasporto_pubblico_servizio_rischio.html",
+    "thoughts": "**Interpreting strike details**\n\nThe information states there's a 24-hour nationwide strike without specific location codes. Instructions indicate that for national strikes, I should set `isStrike` to true, and leave location codes as null. The strike lasts 24 hours, starting on September 20, 2024. But I need to clarify the exact start time. It indicates regular service continues until 8:30 a.m. and then again from 5:00 p.m. to 8:00 p.m. So, I'm setting the start date for the strike accurately.",
+    "tokens": {
+      "input": 13506,
+      "output": 2168,
+      "total": 15674
+    }
+  }
+}

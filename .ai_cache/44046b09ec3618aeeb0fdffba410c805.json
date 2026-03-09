@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-11-08 00:00:00",
+      "endDate": "2024-11-08 23:59:59",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 38729,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006335,
+      "outputCost": 0.001172,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00123535
+    },
+    "hash": "44046b09ec3618aeeb0fdffba410c805",
+    "sourceFile": "venerdi_8_novembre_sciopero_nazionale_del_trasporto_pubblico_servizio_a_rischio_per_24_ore.html",
+    "thoughts": "**Determining upcoming strike details**\n\nI need to format the output as JSON following the specified schema. The content indicates there's an upcoming nationwide public transport strike on Friday, November 8, lasting for 24 hours. It’s confirmed by the page title and additional details from the text. I’ll mark `isStrike` as true since this isn’t a cancellation but an announcement. I’ll also need to fill in the `strikeData` with the correct start and end dates for the strike.",
+    "tokens": {
+      "input": 1267,
+      "output": 2930,
+      "total": 4197
+    }
+  }
+}

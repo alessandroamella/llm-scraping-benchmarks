@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6549,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007535,
+      "outputCost": 0.000158,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00023335
+    },
+    "hash": "3864a27b2f0f8fb1f79535890258ddd4",
+    "sourceFile": "sciopero_trasporto_pubblico_aperta_metro_b_chiuse_c.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to prepare JSON output following the strike extraction schema. The document is in Italian and announces a public transport strike. The title indicates which metro lines are open or closed, and the body confirms that the national transport strike is currently happening and will end at 13:00. Metro A and C are closed, while B is open. Additionally, there's active service for buses and trams, but with possible reductions in trips. This clearly indicates an ongoing strike.",
+    "tokens": {
+      "input": 1507,
+      "output": 395,
+      "total": 1902
+    }
+  }
+}

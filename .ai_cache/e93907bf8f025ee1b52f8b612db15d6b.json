@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-07-18 09:00:00",
+      "endDate": "2024-07-18 13:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 33529,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008705,
+      "outputCost": 0.0010188,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00110585
+    },
+    "hash": "e93907bf8f025ee1b52f8b612db15d6b",
+    "sourceFile": "strike-detail-gioved--18-luglio-dalle-9-alle-13-sciopero-del-per.html",
+    "thoughts": "**Extracting strike announcement details**\n\nI need to confirm if this is a strike announcement. The content is in Italian: it mentions a strike on July 18 from 9 AM to 1 PM for FERROVIENORD staff. It specifies that this strike affects staff related to the infrastructure manager, not Trenord employees. So, there's a possibility of service cancellations and line variations due to the strike. It’s clear that this information refers to an upcoming event, so I'll structure the JSON accordingly!",
+    "tokens": {
+      "input": 1741,
+      "output": 2547,
+      "total": 4288
+    }
+  }
+}

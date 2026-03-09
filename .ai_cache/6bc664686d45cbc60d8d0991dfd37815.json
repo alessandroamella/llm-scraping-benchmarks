@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-09-22 00:00:00",
+      "endDate": "2025-09-22 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8486,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0037715,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.001386,
+      "cachedCost": 0,
+      "totalCost": 0.005354
+    },
+    "hash": "6bc664686d45cbc60d8d0991dfd37815",
+    "sourceFile": "lunedi_22_settembre_sciopero_nazionale_di_24_ore_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Strike Information Extraction - My Thought Process**\n\nOkay, the task is clear: I need to extract strike information and format it as a JSON object based on the schema I know. The goal is to determine if this text announces an upcoming strike. The key criterion here is `isStrike` which needs to be `true` for announcements of future events.\n\nLet's dive in. The title is \"Lunedì 22 settembre sciopero nazionale di 24 ore. Trasporto pubblico a rischio,\" which translates to \"Monday, September 22nd, national 24-hour strike. Public transport at risk.\" The content confirms this; it explicitly states \"Lunedì 22 settembre sciopero nazionale di 24 ore proclamato dai sindacati... A Roma l’agitazione interesserà la rete Atac...\", so there is no doubt this is an announcement of an upcoming strike.  `isStrike` is definitely `true`.\n\nNow, for the specifics. The article date is \"16/09/2025\" (published) and \"17/09/2025\" (updated). The strike is on Monday, September 22nd.  That's in the future.  The location is clearly national (\"sciopero nazionale\"), and specifically Rome (\"A Roma l’agitazione interesserà la rete Atac\"). The guaranteed times are mentioned as \"Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" This means service is regular until 8:30, and again from 17:00 to 20:00. These are the windows where service is guaranteed, not necessarily the actual times. I'll represent this as \"00:00-08:30\" and \"17:00-20:00\".\n\nThe strike date is September 22nd, 2025, from the article date. It's a 24-hour strike, so the start time is 00:00:00 and the end time is 23:59:59.\n\nTherefore, `isStrike` is `true`. The strike data is as follows:\n\n*   `startDate`: \"2025-09-22 00:00:00\"\n*   `endDate`: \"2025-09-22 23:59:59\"\n*   `locationType`: \"NATIONAL\" (even though there's a local impact, this is a national strike).\n*   `locationCodes`: `null` (because `locationType` is NATIONAL)\n*   `guaranteedTimes`: [\"00:00-08:30\", \"17:00-20:00\"].\n\nI'm checking this again. Yes, that's correct based on the text's phrasing: \"regolare fino alle 8,30\" (service guaranteed *until* 08:30) and \"dalle 17 alle 20\" (from 17:00 to 20:00). So, to be exact, I'll double check the guaranteed times, yes, this is still correct.\n\nOkay, all the dates align, it is a future strike, so everything looks good. I will represent the guaranteed times correctly. And that should be all. This extraction should be correct.\n\n\n",
+    "tokens": {
+      "input": 15086,
+      "output": 131,
+      "total": 16141
+    }
+  }
+}

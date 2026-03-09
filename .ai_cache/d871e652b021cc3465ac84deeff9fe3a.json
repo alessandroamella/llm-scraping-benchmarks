@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-01-12 03:00:00",
+      "endDate": "2026-01-13 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "08",
+        "07",
+        "03",
+        "01",
+        "05"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 27472,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006225,
+      "outputCost": 0.0008644,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00092665
+    },
+    "hash": "d871e652b021cc3465ac84deeff9fe3a",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2026-1-12-sciopero-del-personale-di-treno.html",
+    "thoughts": "**Analyzing upcoming strike data**\n\nI need to output JSON for the strike data according to guidelines. The content mentions a strike announcement for \"Regione Lombardia\" from January 12 to January 13, 2026. The phrase \"è stato indetto uno sciopero\" confirms this is an announced strike. The time window indicates it's an upcoming event, so I should set `isStrike` to true for this announcement. It's a regional strike affecting multiple regions, including Emilia Romagna, Liguria, Piemonte, and Veneto.",
+    "tokens": {
+      "input": 1245,
+      "output": 2161,
+      "total": 3406
+    }
+  }
+}

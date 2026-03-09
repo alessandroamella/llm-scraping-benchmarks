@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-04-26 08:30:00",
+      "endDate": "2024-04-26 12:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5777,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00377225,
+      "outputCost": 0.0001335,
+      "thinkingCost": 0.0009405,
+      "cachedCost": 0,
+      "totalCost": 0.00484625
+    },
+    "hash": "71763321d76edaec7e8effe5c9d8e0a3",
+    "sourceFile": "venerd_26_aprile_sciopero_nazionale_tpl_roma_possibili_disagi_830_1230.html",
+    "thoughts": "**Strike Analysis: Italian Public Transport, April 26, 2024**\n\nOkay, let's break this down. My source indicates a national public transport strike in Italy on Friday, April 26th. The specific period mentioned is from 08:30 to 12:30. The organization behind the strike is Faisa Confail, as per the text. This is definitely an upcoming strike, and the implications need to be clearly understood.\n\nThe critical pieces of information are the *isStrike* flag, set to `true`, the start and end dates/times, and the location. I've correctly inferred the year as 2024, given the publication date of April 19, 2024. The relevant `strikeData` object would look like this, after a few iterations:\n\n*   `startDate`: \"2024-04-26 08:30:00\"\n*   `endDate`: \"2024-04-26 12:30:00\"\n*   `locationType`: \"NATIONAL\"\n*   `locationCodes`: null (national strike; the mention of Rome is an impact, not the location *of* the strike.)\n\nI initially considered \"REGIONAL\" since it mentions Rome, but the text explicitly calls it a \"sciopero nazionale,\" which means \"national strike\". Therefore, my `locationType` must be \"NATIONAL\" and the `locationCodes` is null as per the instructions, since this is a national strike. No guaranteed times are mentioned in the text, so that field is omitted or explicitly set to null (it is omitted here, as per instructions).\n\nAlright, I'm confident I've got a complete and accurate summary. The data is parsed, clean and ready for integration.\n\n\n",
+    "tokens": {
+      "input": 15089,
+      "output": 89,
+      "total": 15805
+    }
+  }
+}

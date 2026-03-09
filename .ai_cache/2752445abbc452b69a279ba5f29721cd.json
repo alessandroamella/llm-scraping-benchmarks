@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-05-02 08:30:00",
+      "endDate": "2023-05-02 12:30:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "08:30-12:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24526,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000753,
+      "outputCost": 0.0007572,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008325
+    },
+    "hash": "2752445abbc452b69a279ba5f29721cd",
+    "sourceFile": "martedi_2_maggio_sciopero_nazionale_4_ore_trasporto_pubblico_romano_rischio.html",
+    "thoughts": "**Extracting strike information**\n\nI need to output a JSON object based on the schema for strike extraction. The document is announcing a national strike in Italy on Tuesday, May 2, lasting 4 hours. The details note that public transport in Rome will be affected, running from 8:30 to 12:30. So, I’ll set `isStrike` to true. Next, I’ll extract the dates in the format “yyyy-MM-dd HH:mm:ss,” focusing on May 2, but I need to add the year.",
+    "tokens": {
+      "input": 1506,
+      "output": 1893,
+      "total": 3399
+    }
+  }
+}

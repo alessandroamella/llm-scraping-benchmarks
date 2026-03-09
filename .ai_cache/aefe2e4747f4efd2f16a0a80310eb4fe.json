@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3819,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000305,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000222,
+      "cachedCost": 0,
+      "totalCost": 0.000542
+    },
+    "hash": "aefe2e4747f4efd2f16a0a80310eb4fe",
+    "sourceFile": "eav_informa_servizio_automobilistico_integrativo_vico_equense_monte_faito_2.html",
+    "thoughts": "**Analyzing the EAV Announcement**\n\nOkay, let's break this down. I've got an announcement from EAV, the transportation authority, about a new bus service between Vico Equense and Monte Faito. My initial task is to quickly determine if this is related to a strike. If so, I need to extract relevant strike details. If not, I'll set a flag to indicate that a strike isn't the primary focus.\n\nI'm starting by analyzing the input content directly. The title, \"EAV Informa - Servizio automobilistico integrativo Vico Equense-Monte Faito,\" doesn't immediately scream \"strike.\" In fact, it sounds like an informational notice about a new service. Diving into the content, it explicitly mentions that this bus service is an \"integrative\" measure, that is, it is to replace the Funivia del Faito. This replacement is happening because the cable car (Funivia) is interrupted. That confirms it, this is about a service disruption, but NOT a strike.\n\nTherefore, `isStrike` is clearly set to false. No need to go any further down that path. This is a straightforward service update, not a labor dispute. I can now move on to the next task in the queue.\n\n\n",
+    "tokens": {
+      "input": 1220,
+      "output": 10,
+      "total": 1378
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-07-18 09:00:00",
+      "endDate": "2024-07-18 13:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 27636,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00009,
+      "outputCost": 0.000858,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.000948
+    },
+    "hash": "a36bb3f350c118837830bf735f143b5e",
+    "sourceFile": "strike-detail-gioved--18-luglio-dalle-9-alle-13-sciopero-del-per.html",
+    "thoughts": "**Extracting strike information**\n\nI need to format the information about a new upcoming strike in JSON format according to the strike_extraction schema. The document indicates there's a strike set for Thursday, July 18, from 9 AM to 1 PM, involving FERROVIENORD staff, not Trenord. It mentions possible impacts on various lines, suggesting there could be service cancellations or changes during this time. So, this looks like a clear announcement for a future strike on July 18, 2024.",
+    "tokens": {
+      "input": 1800,
+      "output": 2145,
+      "total": 3945
+    }
+  }
+}

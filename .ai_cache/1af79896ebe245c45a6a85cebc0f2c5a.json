@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-01-16 08:30:00",
+      "endDate": "2023-01-16 12:30:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6380,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00377275,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.0009675,
+      "cachedCost": 0,
+      "totalCost": 0.00488875
+    },
+    "hash": "1af79896ebe245c45a6a85cebc0f2c5a",
+    "sourceFile": "luned_16_gennaio_sciopero_atac_4_ore_servizio_rischio_830_1230.html",
+    "thoughts": "**Strike Announcement Analysis**\n\nOkay, let's break this down. My task is to determine if the provided content constitutes a strike announcement. I see the title: \"Lunedì 16 gennaio sciopero Atac di 4 ore. Servizio a rischio dalle 8,30 alle 12,30\" and the text reiterates that there is a 4-hour strike in Rome, announced by the union Faisa-Cisal. The publish date is January 11, 2023, and it's been updated on January 25, 2023.\n\nEven though this is historical data, the *content itself* clearly *announces* a strike. The prompt focuses on determining if it *is* an announcement of a strike. The dates, at the time of publication, indicate that it *was* an upcoming strike, therefore, I will treat the text as a strike object. I need to now determine the associated parameters.\n\nFrom the text, I'm confident that `isStrike` should be `true`. Looking at the timing of the strike, it is from 8:30 AM to 12:30 PM on January 16, 2023. So, my `startDate` will be \"2023-01-16 08:30:00\" and the `endDate` \"2023-01-16 12:30:00\", ensuring the format is `yyyy-MM-dd HH:mm:ss`.\n\nNow, for location. \"Atac\" implies Rome, which is in the Lazio region, Italy. Given the options, I will use `locationType`: \"REGIONAL\" and `locationCodes` [\"12\"] - assuming that \"12\" is the correct regional code for Lazio.\n\nFinally, while the text mentions \"Servizio a rischio dalle 8,30 alle 12,30\", it doesn't explicitly state guaranteed times (e.g., service bands that will be guaranteed). Therefore, I'll omit the `guaranteedTimes` parameter, as it's not directly provided in the text.\n\nSo, I will set `isStrike` to true and populate the `strikeData` object accordingly. All formats are verified.\n\n\n",
+    "tokens": {
+      "input": 15091,
+      "output": 99,
+      "total": 15835
+    }
+  }
+}

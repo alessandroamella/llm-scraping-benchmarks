@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9929,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006545,
+      "outputCost": 0.0004232,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00048865
+    },
+    "hash": "912e761f9caa34558df8eb4a9d80b62b",
+    "sourceFile": "autolinee_sciopero_del_22_marzo_2025.html",
+    "thoughts": "**Setting parameters for strike data**\n\nI think it’s best to set `locationType` to null. The message indicates that guaranteed times may be nonexistent during a strike, so I should set `guaranteedTimes` to null as well. The format for `startDate` and `endDate` needs to include seconds, so I'll provide the necessary timestamps. Since it's an announcement of an upcoming strike, `isStrike` will be true. I'll double-check if `locationCodes` can also be null.",
+    "tokens": {
+      "input": 1309,
+      "output": 1058,
+      "total": 2367
+    }
+  }
+}

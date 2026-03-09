@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4546,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000305,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000306,
+      "cachedCost": 0,
+      "totalCost": 0.000626
+    },
+    "hash": "e98c3248d1dc12a6223d987b60a7e79c",
+    "sourceFile": "eav_informa_servizio_automobilistico_integrativo_vico_equense_monte_faito_3.html",
+    "thoughts": "**Analyzing the EAV Press Release**\n\nOkay, let's break this down. My task is clear: I need to determine if this press release from EAV is announcing an upcoming strike. The input is a release specifically about a bus service change between Vico Equense and Monte Faito. My constraints are strict – I have to deliver valid JSON, no fluff, and a precise format for any strike data.\n\nI see the title: \"EAV Informa – Servizio automobilistico integrativo Vico Equense-Monte Faito.\" The content centers on the interruption of the Funivia del Faito and the experimental implementation of a bus service to compensate. The document goes on to detail the bus schedule.\n\nCrucially, does this mention any labor action? No. There's no reference to a strike. In fact, it explicitly explains the service modification as a response to “tristi vicende legate alla Funivia del Faito” – unfortunate events related to the Faito cable car. That strongly indicates the change is due to technical issues, not labor disputes.\n\nTherefore, this isn't an announcement of a strike. I'm confident in setting `isStrike` to false. The JSON output should be: `{ \"isStrike\": false }`\n\n\n",
+    "tokens": {
+      "input": 1220,
+      "output": 10,
+      "total": 1434
+    }
+  }
+}

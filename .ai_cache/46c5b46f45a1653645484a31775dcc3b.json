@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8358,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000559,
+      "outputCost": 0.0001144,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0001703
+    },
+    "hash": "46c5b46f45a1653645484a31775dcc3b",
+    "sourceFile": "strike-detail-venerd--29-novembre-revocato-sciopero-ferrovienord.html",
+    "thoughts": "**Processing strike announcement**\n\nI need to confirm if this document is announcing a new strike or not. The content in Italian indicates that a strike scheduled for November 29 has been revoked. So, it’s clear this is about cancellation, not a new upcoming strike. Our instructions specify that if it's a revocation, I should set isStrike to false. Therefore, my output will simply be: {\"isStrike\": false}. I'll stick to the format required without any extra fields.",
+    "tokens": {
+      "input": 1118,
+      "output": 286,
+      "total": 1404
+    }
+  }
+}

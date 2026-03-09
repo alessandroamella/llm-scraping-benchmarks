@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7409,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00066355,
+      "outputCost": 0.0001276,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00079115
+    },
+    "hash": "dc2ee0bcce393f075a2a7b5a67b4f3bb",
+    "sourceFile": "sciopero_trasporto_pubblico_attive_linee_della_metropolitana.html",
+    "thoughts": "**Determining strike status**\n\nI need to ensure that the output conforms to the JSON schema. The provided content discusses an ongoing public transport strike in Italy. It's clearly stating that a 24-hour strike is currently happening, so the document isn't announcing a future event. The instruction indicates that the isStrike flag should only be set to true for upcoming strikes. Since this is ongoing, I’ll set isStrike to false.",
+    "tokens": {
+      "input": 13271,
+      "output": 319,
+      "total": 13590
+    }
+  }
+}

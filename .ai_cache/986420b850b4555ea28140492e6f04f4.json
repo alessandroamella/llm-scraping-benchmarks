@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 2942,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0037105,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0002685,
+      "cachedCost": 0,
+      "totalCost": 0.003994
+    },
+    "hash": "986420b850b4555ea28140492e6f04f4",
+    "sourceFile": "sciopero_trasporto_pubblico_attive_metropolitane_termini_centocelle.html",
+    "thoughts": "**Analyzing the Real-Time Strike Update**\n\nOkay, so I've received information from \"Roma Servizi per la Mobilità\" regarding a public transport strike, a \"Sciopero del trasporto pubblico.\" The crucial piece here is that the text explicitly states, \"È in corso lo sciopero...\" meaning \"the strike is underway.\" It also specifies an end time of 12:30. This isn't a notification of a *future* strike; it's a real-time status report on an *existing* situation. The instructions are very clear: If the content details an *ongoing* strike, even though there's disruption, the `isStrike` flag must be set to `false`. Therefore, I'm setting `isStrike` to `false`. The goal is to accurately reflect the dynamic of an event as it unfolds, not merely the possibility of an event. This is a subtle but important distinction for any system that's processing live data.\n\n\n",
+    "tokens": {
+      "input": 14842,
+      "output": 10,
+      "total": 15031
+    }
+  }
+}

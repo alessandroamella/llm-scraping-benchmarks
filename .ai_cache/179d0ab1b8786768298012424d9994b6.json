@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6756,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005675,
+      "outputCost": 0.0001728,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00022955
+    },
+    "hash": "179d0ab1b8786768298012424d9994b6",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_132.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to structure the output as per the strike_extraction schema. The document mentions a public transport strike with a participation rate of 13.2%. The titles indicate it's a report about an event that already happened. It cites a date when the participation was noted, confirming it’s not announcing a new strike but rather reporting on a completed event. Therefore, I’ll set isStrike to false, as this just provides information on past participation.",
+    "tokens": {
+      "input": 1135,
+      "output": 432,
+      "total": 1567
+    }
+  }
+}

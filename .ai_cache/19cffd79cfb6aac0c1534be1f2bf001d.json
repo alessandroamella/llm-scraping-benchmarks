@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-24 00:00:00",
+      "endDate": "2025-02-24 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5542,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00049575,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.0008115,
+      "cachedCost": 0,
+      "totalCost": 0.00151725
+    },
+    "hash": "19cffd79cfb6aac0c1534be1f2bf001d",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_24h_lunedi_24_febbraio_2025.html",
+    "thoughts": "**Analyzing the EAV Strike Announcement**\n\nOkay, let's break this down. I've got a notification from EAV (the Campania public transport provider, region code 15) about a strike. The title is pretty clear: \"Linee Flegree: Avviso di sciopero 24h lunedì 24 febbraio 2025\" – a 24-hour strike alert for their lines, happening on February 24th, 2025. It's important to remember this is a national strike, though it's specifically affecting EAV’s operations within Campania.\n\nThe crucial details are the guaranteed service hours: 05:30 to 08:30 and 16:30 to 19:30. That means outside those times, expect disruption.\n\nNow, let's structure this data properly. `isStrike` is obviously true. For `strikeData`, since it's a 24-hour strike, I'll set the `startDate` to \"2025-02-24 00:00:00\" and the `endDate` to \"2025-02-24 23:59:59\". The tricky part is the `locationType`. While it's a *national* strike in nature, this notification is about *EAV's* *regional* services in Campania. Considering the input options of *either* REGIONAL or NATIONAL, and the fact that I am recording it *specifically* for the regional operator, I will designate the `locationType` as \"REGIONAL\" and provide the corresponding `locationCodes`, which is \"15\" (for Campania). Finally, the `guaranteedTimes` are simply \"05:30-08:30\" and \"16:30-19:30\".\n\nSo, the key data points I'm extracting are:\n-   `startDate`: \"2025-02-24 00:00:00\"\n-   `endDate`: \"2025-02-24 23:59:59\"\n-   `locationType`: \"REGIONAL\"\n-   `locationCodes`: [\"15\"]\n-   `guaranteedTimes`: [\"05:30-08:30\", \"16:30-19:30\"]\n\nThis should provide a clean and concise representation of the strike information.\n\n\n",
+    "tokens": {
+      "input": 1983,
+      "output": 140,
+      "total": 2664
+    }
+  }
+}

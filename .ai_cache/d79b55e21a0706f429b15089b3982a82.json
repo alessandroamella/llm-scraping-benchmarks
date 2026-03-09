@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3602,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0003735,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000309,
+      "cachedCost": 0,
+      "totalCost": 0.0006975
+    },
+    "hash": "d79b55e21a0706f429b15089b3982a82",
+    "sourceFile": "comunicato_stampa_sciopero_adesione.html",
+    "thoughts": "**Analyzing ATAC Strike Data**\n\nOkay, so I've just processed some HTML content from the ATAC website. The title is \"Sciopero del trasporto pubblico, adesione personale Atac al 16,4%,\" and the core text states that the overall participation of Atac staff in today's national strike was 16.4%. My goal here is to determine whether this text is announcing an *upcoming* strike.\n\nBased on the information, this document is providing *information about participation* - \"adesione\" - in a strike that has already *occurred*. The text explicitly refers to \"lo sciopero nazionale di *oggi*,\" meaning today's strike. Therefore, according to the instructions I was given, since this is reporting on a strike that has already happened, I need to set the `isStrike` variable to `false`. So, `isStrike`: `false`. This isn't an announcement of a future event, but rather a post-event report.\n\n\n",
+    "tokens": {
+      "input": 1494,
+      "output": 10,
+      "total": 1710
+    }
+  }
+}

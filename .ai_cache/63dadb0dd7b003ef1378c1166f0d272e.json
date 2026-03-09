@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-09 00:00:00",
+      "endDate": "2025-12-09 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 35808,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005835,
+      "outputCost": 0.0012632,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00132155
+    },
+    "hash": "63dadb0dd7b003ef1378c1166f0d272e",
+    "sourceFile": "martedi_9_dicembre_sciopero_del_trasporto_pubblico_possibili_stop_per_24_ore.html",
+    "thoughts": "**Extracting strike details**\n\nI'm determining if this is a cancellation or an announcement about an upcoming strike. Since it states that there’s a strike planned for December 9, 2025, I’ll set isStrike to true. Now I need to extract the strike data, specifically start and end dates in the 'yyyy-MM-dd HH:mm:ss' format. The context indicates December 9 as the start date, assuming the year is 2025. I'll mark the event as lasting 24 hours.",
+    "tokens": {
+      "input": 1167,
+      "output": 3158,
+      "total": 4325
+    }
+  }
+}

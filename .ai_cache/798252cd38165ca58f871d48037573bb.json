@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4062,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0037085,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0002925,
+      "cachedCost": 0,
+      "totalCost": 0.004016
+    },
+    "hash": "798252cd38165ca58f871d48037573bb",
+    "sourceFile": "sciopero_trasporto_pubblico_ha_aderito_246_personale_atac.html",
+    "thoughts": "**Analyzing Potential Strike Announcements**\n\nOkay, here's the deal. My primary task is to determine if a given text constitutes an announcement of an upcoming strike. The output needs to be a JSON object with a boolean flag, `isStrike`, and potentially some `strikeData` if the flag is true. The critical thing here is *upcoming*. Cancellations, participation information, or real-time updates are out. The rule is simple: `isStrike` is only true for *announcements* of future strike action.\n\nLet me break down this specific text I've been given: \"Sciopero del trasporto pubblico, ha aderito il 24,6% del personale Atac\". After parsing the Italian language text, it clearly discusses the *adhesion rate* – the participation percentage – of a strike. Crucially, the text is discussing a past event as indicated by its publication date, 11/11/2022. It is decidedly *not* an announcement. Given this past tense and participation detail, the logical conclusion is that this describes a concluded event, not a future one.\n\nTherefore, the appropriate JSON output is:\n\n```json\n{\n  \"isStrike\": false\n}\n```\nThe `strikeData` field is entirely irrelevant in this scenario.\n\n\n",
+    "tokens": {
+      "input": 14834,
+      "output": 10,
+      "total": 15039
+    }
+  }
+}

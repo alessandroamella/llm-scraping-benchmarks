@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-09-22 00:00:00",
+      "endDate": "2025-09-22 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5967,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00020075,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.000885,
+      "cachedCost": 0,
+      "totalCost": 0.00128225
+    },
+    "hash": "22df4a7612baee3d9f72acab952b9101",
+    "sourceFile": "lunedi_22_settembre_sciopero_nazionale_di_24_ore_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Strike Analysis Summary**\n\nOkay, let's break this down. My task is to analyze this text and extract information about a potential strike, specifically targeting ATAC in the Rome/Lazio region. The goal is a JSON object compliant with a predefined schema.\n\nThe input is an announcement: a 24-hour national strike set for Monday, September 22nd. The year is inferred as 2025 based on the publication date.\n\nSo, here's what I've got:\n\n*   **Strike Date:** September 22, 2025.\n*   **Duration:** A full 24 hours.\n*   **Location:** National – that includes Rome and ATAC, which is the key.\n*   **Guaranteed Times:** The text states, \"servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20\". That translates to guaranteed service from midnight to 8:30 AM and then again from 5 PM to 8 PM. It’s slightly unusual, but I'll use those intervals as specified in the text. This is important to note and be accurate with.\n\nTherefore, the JSON output needs to reflect this:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-09-22 00:00:00\",\n    \"endDate\": \"2025-09-22 23:59:59\",\n    \"locationType\": \"NATIONAL\",\n    \"locationCodes\": null,\n    \"guaranteedTimes\": [\"00:00-08:30\", \"17:00-20:00\"]\n  }\n}\n```\n\nThat captures the essential information, and it's all based directly on the text provided. The strike is definitely confirmed, national in scope, and upcoming as it's for September 2025.\n\n\n",
+    "tokens": {
+      "input": 803,
+      "output": 131,
+      "total": 1524
+    }
+  }
+}

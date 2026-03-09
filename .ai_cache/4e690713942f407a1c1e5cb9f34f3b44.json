@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-01-24 00:00:00",
+      "endDate": "2024-01-24 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21490,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00066525,
+      "outputCost": 0.0007428,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00140805
+    },
+    "hash": "4e690713942f407a1c1e5cb9f34f3b44",
+    "sourceFile": "sciopero_nazionale_24_gennaio_trasporto_pubblico_rischio.html",
+    "thoughts": "**Determining strike announcement details**\n\nI need to output JSON according to the specified strike extraction schema. The content indicates an upcoming national strike on January 24, as it mentions \"trasporto pubblico a rischio\" and provides details about the timing. They mention the service will function normally until 8:30 AM and then from 5 PM to 8 PM. I'll need to format the start and end dates in 'yyyy-MM-dd HH:mm:ss' format. It looks like I have a clear task ahead!",
+    "tokens": {
+      "input": 13305,
+      "output": 1857,
+      "total": 15162
+    }
+  }
+}

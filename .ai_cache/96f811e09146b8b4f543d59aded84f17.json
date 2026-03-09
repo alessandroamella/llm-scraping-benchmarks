@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8638,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000566,
+      "outputCost": 0.0001724,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.000229
+    },
+    "hash": "96f811e09146b8b4f543d59aded84f17",
+    "sourceFile": "sciopero_generale_nazionale_adesione_personale_atac_23.html",
+    "thoughts": "**Evaluating strike information**\n\nThe content mentions \"Sciopero generale nazionale\" referencing a general strike, noting 23% participation. It clearly states this is not about a future strike since \"adhesion detected in the morning\" indicates current data. So, I’m concluding that isStrike is false. I need to produce a JSON output simply stating that with the correct formatting. The final output should strictly adhere to the expected structure with no added comments. Here it is:  \n\n{\"isStrike\": false}",
+    "tokens": {
+      "input": 1132,
+      "output": 431,
+      "total": 1563
+    }
+  }
+}

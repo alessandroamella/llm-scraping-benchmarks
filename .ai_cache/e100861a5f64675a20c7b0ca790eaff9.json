@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-02-04 08:30:00",
+      "endDate": "2022-02-04 12:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24618,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000596,
+      "outputCost": 0.0010876,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0011472
+    },
+    "hash": "e100861a5f64675a20c7b0ca790eaff9",
+    "sourceFile": "4_febbraio_sciopera_4_ore_sindacato_usb_trasporto_pubblico_rischio.html",
+    "thoughts": "**Determining strike details**\n\nI see that the date is \"Venerdì 4 febbraio\" and the metadata shows it was published on 28/01/2022, updated on 18/05/2022, so the event clearly takes place on February 4, 2022. As for location type, it's a national strike mentioned as “sciopero nazionale di 4 ore”, so I need to set the locationType to NATIONAL, with locationCodes being null because they're not specified for national strikes. The guaranteedTimes should be set as arrays with the specified time ranges.",
+    "tokens": {
+      "input": 1192,
+      "output": 2719,
+      "total": 3911
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18975,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007485,
+      "outputCost": 0.0007416,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00081645
+    },
+    "hash": "dfced2de4f374762d7c48c7a82c6b37d",
+    "sourceFile": "trasporto_pubblico_domenica_7_luglio_sciopero_serale_4_ore.html",
+    "thoughts": "**Determining Date Format**\n\nI need to extract strike data in the format \"yyyy-MM-dd HH:mm:ss.\" The problem is that the document only states \"Sunday July 7,\" without a year, which complicates things. We can’t really assign a year since it's not provided. I might consider using a placeholder year for both startDate and endDate, or perhaps set them to null, but the schema needs a string. It’s tricky because we can't assume the year just based on the provided date.",
+    "tokens": {
+      "input": 1497,
+      "output": 1854,
+      "total": 3351
+    }
+  }
+}

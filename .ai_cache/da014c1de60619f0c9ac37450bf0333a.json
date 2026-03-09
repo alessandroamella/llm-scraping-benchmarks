@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8005,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0001795,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0002595,
+      "cachedCost": 0,
+      "totalCost": 0.000454
+    },
+    "hash": "da014c1de60619f0c9ac37450bf0333a",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_186.html",
+    "thoughts": "**Analyzing Strike Implication**\n\nOkay, my task is straightforward: Determine if this snippet of text signals a *future* strike. I've been given this content: \"L’adesione del personale Atac allo sciopero del trasporto pubblico, rilevata in mattinata, è stata pari al 18,6%.\" It mentions \"adesione... rilevata in mattinata,\" which translates to \"participation... detected this morning.\" The critical piece here is the past tense and the phrase \"rilevata in mattinata.\" That strongly suggests this is *reporting on* the participation in a strike that already happened, not announcing one in the future. My goal is to determine if this describes a future strike. I have to check, as a constraint, if the text is about participation in a completed strike, and if so, it will not be considered an announcement of an upcoming strike. Consequently, given that this is reporting on *participation* (\"adesione\") *after* the fact, I am setting `isStrike` to false. The content is purely informational about a concluded event.\n\n\n",
+    "tokens": {
+      "input": 718,
+      "output": 10,
+      "total": 901
+    }
+  }
+}

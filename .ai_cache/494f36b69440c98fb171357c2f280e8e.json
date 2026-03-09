@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6402,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006185,
+      "outputCost": 0.0001608,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00022265
+    },
+    "hash": "494f36b69440c98fb171357c2f280e8e",
+    "sourceFile": "sciopero_del_trasporto_pubblico_attive_le_metropolitane_e_la_termini_centocelle.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to determine if this document is announcing a new or upcoming strike. The content clearly describes an ongoing strike with updates on the metro services. The instructions state that if it's about a real-time ongoing strike, I should set isStrike to false. Since this document is providing updates for an currently happening strike, I’ll output {\"isStrike\": false}. This matches the expected structure for updates about an ongoing strike.",
+    "tokens": {
+      "input": 1237,
+      "output": 402,
+      "total": 1639
+    }
+  }
+}

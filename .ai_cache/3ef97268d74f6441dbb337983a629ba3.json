@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8156,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005675,
+      "outputCost": 0.000136,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00019275
+    },
+    "hash": "3ef97268d74f6441dbb337983a629ba3",
+    "sourceFile": "sciopero_del_trasporto_pubblico_adesione_personale_atac_al_121.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to check if the document is announcing a strike. The content is about a public transport strike in Italy, mentioning a participation rate of 12.1%. Since it notes the participation already occurred this morning, it indicates it’s not announcing an upcoming strike. Therefore, the `isStrike` should be set to false. There are also no start or end dates provided, confirming that this is not a new announcement. I'll output the JSON as specified.",
+    "tokens": {
+      "input": 1135,
+      "output": 340,
+      "total": 1475
+    }
+  }
+}

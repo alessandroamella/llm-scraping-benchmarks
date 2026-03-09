@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-10 08:30:00",
+      "endDate": "2025-01-10 12:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5456,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000346,
+      "outputCost": 0.0001335,
+      "thinkingCost": 0.000639,
+      "cachedCost": 0,
+      "totalCost": 0.0011185
+    },
+    "hash": "395727ad8bab51faf0504410cc25c23f",
+    "sourceFile": "trasporto_pubblico_venerdi_10_gennaio_sciopero_nazionale_di_4_ore.html",
+    "thoughts": "**Analyzing the ATAC Strike Announcement**\n\nOkay, so I've got this notification from ATAC, the Rome public transport company. It's an announcement about a national strike – \"Trasporto pubblico, venerdì 10 gennaio sciopero nazionale di 4 ore\". Right off the bat, I need to parse the details accurately. Let's see...\n\nThe date is explicitly stated as Friday, January 10th. Given that the text doesn't specify a year, and assuming (standard procedure) to fill the gaps, it's referring to the current year, which is 2025. This strike is going to last for 4 hours.\n\nThe provided start and end times are clear: 8:30 AM to 12:30 PM on the 10th of January, 2025. The scope is \"Nazionale,\" which means it's national, affecting both ATAC and the private operators in Rome. I can confirm this is indeed a strike event. The data is nicely structured:\n\n*   `isStrike`: True.\n*   `strikeData`: I have start and end dates with `startDate`: \"2025-01-10 08:30:00\" and `endDate`: \"2025-01-10 12:30:00\".\n*   The `locationType` is correctly identified as \"NATIONAL\", and `locationCodes` is appropriately `null` given it's a national scope.\n\nI need to quickly confirm the format of the extracted data. Checking my format requirements: the `startDate` and `endDate` are both in 'yyyy-MM-dd HH:mm:ss' format, so that's good. The `locationType` matches the specified criteria (REGIONAL or NATIONAL), it's \"NATIONAL\" - perfect. Looks like the data is ready to be processed or stored. I have all the key pieces of information and it's all well-structured.\n\n\n",
+    "tokens": {
+      "input": 1384,
+      "output": 89,
+      "total": 1899
+    }
+  }
+}

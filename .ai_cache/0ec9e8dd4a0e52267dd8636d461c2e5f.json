@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8839,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006697,
+      "outputCost": 0.0002264,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008961
+    },
+    "hash": "0ec9e8dd4a0e52267dd8636d461c2e5f",
+    "sourceFile": "sciopero_del_trasporto_pubblico_adesione_personale_atac_al_532.html",
+    "thoughts": "**Evaluating strike data**\n\nI need to follow the strike_extraction schema to create the correct JSON output. The content mentions a past event related to a public transport strike and specifically states a participation rate. The reference to the adhesion at 53.2% confirms this is about an event that has already occurred in 2024. Therefore, it’s not announcing an upcoming strike, which means I should set isStrike to false. The final output will be: { \"isStrike\": false }.",
+    "tokens": {
+      "input": 13394,
+      "output": 566,
+      "total": 13960
+    }
+  }
+}

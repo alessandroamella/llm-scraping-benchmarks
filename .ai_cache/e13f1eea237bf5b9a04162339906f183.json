@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2020-02-24 00:00:00",
+      "endDate": "2020-02-24 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 39842,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000785,
+      "outputCost": 0.0011504,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0012289
+    },
+    "hash": "e13f1eea237bf5b9a04162339906f183",
+    "sourceFile": "lunedi_24_febbraio_sciopero_nazionale_del_trasporto_pubblico_possibili_disagi.html",
+    "thoughts": "**Deciding on date extraction**\n\nI'm focused on producing an extraction where the instruction requires a date format. The schema mentions that both startDate and endDate need to be in string or null format. If I'm uncertain, I might consider omitting it, but since it's needed, I wonder if I can set these values to null if the year isn't specified. The content indicates a date, but no year is given. Should I default to the upcoming year? I'll carefully analyze this!",
+    "tokens": {
+      "input": 1570,
+      "output": 2876,
+      "total": 4446
+    }
+  }
+}

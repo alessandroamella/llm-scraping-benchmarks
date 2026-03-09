@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-20 00:00:00",
+      "endDate": "2025-06-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18459,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00009035,
+      "outputCost": 0.0005604,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00065075
+    },
+    "hash": "50597f21f60e9e10febfd1b61e181ebd",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_24_h_venerdi_20_giugno_2025.html",
+    "thoughts": "**Extracting strike announcement details**\n\nI need to produce JSON based on the provided schema. The content is in Italian, announcing a strike on June 20, 2025, related to a national 24-hour strike declared by USB. It mentions guaranteed service hours and trips. So, it's clear this is an announcement for an upcoming strike. I need to determine the start and end date for the 24-hour strike, but still need to figure out the specific times involved.",
+    "tokens": {
+      "input": 1807,
+      "output": 1401,
+      "total": 3208
+    }
+  }
+}

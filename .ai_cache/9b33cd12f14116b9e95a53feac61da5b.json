@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4548,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00370725,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0004245,
+      "cachedCost": 0,
+      "totalCost": 0.00414675
+    },
+    "hash": "9b33cd12f14116b9e95a53feac61da5b",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_144.html",
+    "thoughts": "**Analyzing the Public Transport Strike Document**\n\nOkay, so the task at hand is clear. I need to determine if this document indicates an *upcoming* strike, and if so, return `isStrike: true` along with strike details. If it's *not* an announcement – perhaps a cancellation, participation stats, or a real-time update – then `isStrike` should be `false`.\n\nThe input is a web page from \"Roma Servizi per la Mobilità,\" titled \"Sciopero del trasporto pubblico, adesione personale Atac al 14,4%.\" Right, let's break it down.\n\nThe title itself gives a potential clue: \"Strike of public transport, Atac personnel adherence at 14.4%.\" The key phrase is \"adherence at 14.4%\". Looking at the body text, which states, \"The adherence of Atac personnel to the public transport strike *of today*, detected in mid-morning, was 14.4%,\" confirms my suspicion. The date is 26/04/2024.\n\nIt's reporting the participation *rate* of a strike that's *already* happening, it says \"today\". It's a post-event update, not a pre-emptive announcement. Therefore, since there is no announcement of an *upcoming* strike, `isStrike` is definitely `false`. No need to extract any `strikeData` here. The analysis is conclusive.\n\n\n",
+    "tokens": {
+      "input": 14829,
+      "output": 10,
+      "total": 15122
+    }
+  }
+}

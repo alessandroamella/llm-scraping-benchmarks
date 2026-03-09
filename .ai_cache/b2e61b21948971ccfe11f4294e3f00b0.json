@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5204,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006385,
+      "outputCost": 0.0001536,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00021745
+    },
+    "hash": "b2e61b21948971ccfe11f4294e3f00b0",
+    "sourceFile": "sciopero_generale_aperte_le_metropolitane_e_la_ferrovia_termini_centocelle.html",
+    "thoughts": "**Determining strike status**\n\nI need to decide whether to indicate that a strike is happening. If I’m just relaying information about a past strike or ongoing updates, then `isStrike` should be set to false. So, I’ll produce a JSON output like this: `{\"isStrike\": false}`. I’ll double-check to ensure there’s no mention of an upcoming strike and confirm the final answer is in proper JSON format before finalizing. Let's get this straightened out!",
+    "tokens": {
+      "input": 1277,
+      "output": 384,
+      "total": 1661
+    }
+  }
+}

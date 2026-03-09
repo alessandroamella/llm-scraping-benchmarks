@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9280,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005925,
+      "outputCost": 0.0001968,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00025605
+    },
+    "hash": "b31c0c0a42dd024ab60f534c99710d2d",
+    "sourceFile": "sciopero_sulla_rete_atac_chiuse_metro_ferrovia_termini_centocelle.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to determine the right format for the JSON in the \"strike_extraction\" context. The content indicates there's an ongoing strike with a known end time today at 16:30. That means it's not about an upcoming strike, so I'll set isStrike to false. The instruction is clear that isStrike should only be true for new announcements. Therefore, I’ll output the JSON with isStrike set to false without including the \"strikeData\" field.",
+    "tokens": {
+      "input": 1185,
+      "output": 492,
+      "total": 1677
+    }
+  }
+}

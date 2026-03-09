@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 09:00:00",
+      "endDate": "2024-12-13 13:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4667,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0003605,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.000666,
+      "cachedCost": 0,
+      "totalCost": 0.001175
+    },
+    "hash": "a434594c8ced453a54c405936a9756f4",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_4_ore_del_13_dicembre_2024.html",
+    "thoughts": "**Analyzing the EAV Strike in Campania**\n\nOkay, let's break this down. My source is EAV, the public transport provider for Campania (region code 15). The core information is a planned strike. It's happening on December 13th, 2024, a Friday by my reckoning, and it's scheduled to last for four hours, from 09:00 to 13:00. This is a crucial detail: the original planned strike was a full 24 hours, but that's been cut short, reduced down to this 4-hour window. This makes understanding the operational impact a little harder, because it indicates some kind of outside influence on the strike's duration.\n\nSo, let me confirm the key parameters: It's definitely a strike (`isStrike`: true). The strike's data itself is clear:\n\n*   **`startDate`**: \"2024-12-13 09:00:00\"\n*   **`endDate`**: \"2024-12-13 13:00:00\"\n*   **`locationType`**: \"REGIONAL\" – because it's covering EAV's network, which is regional.\n*   **`locationCodes`**: \\[\"15\"] – this clearly tells me Campania is the affected region.\n\nNow, about any guaranteed services. The announcement doesn't provide the typical \"guaranteed times\" window in a standard format. It mentions the reduction of the strike window itself. The text does not list any specific guaranteed departures within that timeframe. Therefore, I'll need to note this, perhaps by indicating a null value for `guaranteedTimes`, or omitting it. The \"Si comunica che...\" phrase confirms the strike reduction itself, which essentially *defines* the strike hours. This might complicate my processing logic.\n\n\n",
+    "tokens": {
+      "input": 1442,
+      "output": 99,
+      "total": 1985
+    }
+  }
+}

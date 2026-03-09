@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-03-08 00:00:00",
+      "endDate": "2022-03-08 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 36610,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006708,
+      "outputCost": 0.0013772,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.002048
+    },
+    "hash": "1a1186fd856c52725ffc3f3d2b00f5dc",
+    "sourceFile": "martedi_8_marzo_sciopero_generale_24_ore_rischio_trasporto_pubblico.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to output JSON according to the strike_extraction schema. I have a page about a general strike on March 8, which talks about its impact on public transport in Rome and is updated for 2023. However, the details indicate it refers to an event that occurred in 2022. So, I have to decide whether this document announces an upcoming strike or if it's a historical reference. The dates are key here, as they affect the strike's relevance.",
+    "tokens": {
+      "input": 13416,
+      "output": 3443,
+      "total": 16859
+    }
+  }
+}

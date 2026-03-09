@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3431,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000329,
+      "outputCost": 0.000009,
+      "thinkingCost": 0.000327,
+      "cachedCost": 0,
+      "totalCost": 0.000665
+    },
+    "hash": "9d83b5fc7ffdfe2dc0599ab9c1a442e3",
+    "sourceFile": "sciopero_generale_nazionale_adesione_personale_atac_al_26.html",
+    "thoughts": "**Analyzing the ATAC Announcement**\n\nOkay, let's break this down. My source is an ATAC announcement page with the title \"Sciopero generale nazionale, adesione personale Atac al 26%.\" I need to figure out if this is a heads-up about a future strike, or just a report on one that's already happened. If it's the former, I need to grab the relevant details. If not, I'm simply returning `{\"isStrike\": false}`.\n\nThe title contains the phrase \"adesione... al 26%\" which translates to \"participation... at 26%\". The content repeats this theme with \"adesione... di oggi\", meaning \"participation... of today\". The use of \"of today\" and the reporting of a specific participation percentage makes it obvious that this is *not* an upcoming strike announcement. It is a report on the participation rate of a strike that has already taken place. The instructions are clear: if this document is *only* about the participation (\"adesione\") of a past strike, then I should set `isStrike` to false.\n\nTherefore, the final result is: `isStrike`: false.\n\n\n",
+    "tokens": {
+      "input": 1316,
+      "output": 6,
+      "total": 1540
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-07-04 08:30:00",
+      "endDate": "2024-07-04 16:30:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 34542,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006658,
+      "outputCost": 0.0011848,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0018506
+    },
+    "hash": "fac2a494b4262454ef0ece7b10aabbf1",
+    "sourceFile": "trasporto_pubblico_domani_sciopero_8_ore_sulla_rete_atac.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to output JSON according to specifications, focusing on the provided Italian article. The title indicates an upcoming 8-hour strike on the Atac network in Rome. The details confirm that this strike, scheduled for tomorrow, will affect public transport from 8:30 AM to 4:30 PM. It looks legit, so I'll set `isStrike` to true since it clearly announces a new strike rather than a cancellation. This aligns with the critical instructions.",
+    "tokens": {
+      "input": 13316,
+      "output": 2962,
+      "total": 16278
+    }
+  }
+}

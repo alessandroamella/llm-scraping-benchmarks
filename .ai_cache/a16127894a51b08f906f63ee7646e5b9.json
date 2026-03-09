@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7006,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006622,
+      "outputCost": 0.0001884,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008506
+    },
+    "hash": "a16127894a51b08f906f63ee7646e5b9",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_385.html",
+    "thoughts": "**Formatting response parameters**\n\nOkay, it seems I need to follow specific formatting instructions. The output requires an \"isStrike\" boolean and \"strikeData\" if it’s true. If it's false, I can just output {\"isStrike\": false}. So, based on the example provided, that's what I'll present.  \n\nThe content mentions a 38.5% acceptance rate for the public transport strike in Rome, confirming no strike action. I think the final JSON output should be: {\"isStrike\": false}. Just keeping it concise and to the point!",
+    "tokens": {
+      "input": 13244,
+      "output": 471,
+      "total": 13715
+    }
+  }
+}

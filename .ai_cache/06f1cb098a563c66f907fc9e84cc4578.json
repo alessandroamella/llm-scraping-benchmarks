@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3293,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.003687,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0002535,
+      "cachedCost": 0,
+      "totalCost": 0.0039555
+    },
+    "hash": "06f1cb098a563c66f907fc9e84cc4578",
+    "sourceFile": "comunicato_stampa_sciopero_trasporto_pubblico.html",
+    "thoughts": "**Analyzing the Strike Data: A Quick Assessment**\n\nOkay, so I've been given a webpage from \"Roma Servizi per la Mobilità\" detailing the aftermath of a public transport strike. Immediately, the key piece of information jumps out: it's reporting on *already concluded* strike action. Specifically, it provides a participation statistic from ATAC personnel: 53.2%. I can see the date on the article is 08/11/2024 and it's been updated on 11/11/2024.\n\nThe instruction is very clear: since this is simply reporting *on* participation in a *past* strike, not announcing or describing a *current* or *upcoming* strike, the `isStrike` flag needs to be set to `false`. Done. No need to overthink it; the intent is to report, not anticipate.\n\n\n",
+    "tokens": {
+      "input": 14748,
+      "output": 10,
+      "total": 14927
+    }
+  }
+}

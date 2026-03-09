@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7504,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000733,
+      "outputCost": 0.0001664,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002397
+    },
+    "hash": "a540d4b79b553dd98fc588cc1fe5bc65",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_212.html",
+    "thoughts": "**Analyzing strike content**\n\nI need to parse the Italian content regarding “Sciopero del trasporto pubblico, adesione personale Atac al 21,2%.” It indicates that Atac personnel's participation in the strike is at 21.2%. This seems to be a status update rather than announcing a new strike. I should be cautious: only set isStrike to true if there's an announcement about an upcoming strike. The status update shows the participation as 21.2% reported mid-morning, indicating existing involvement.",
+    "tokens": {
+      "input": 1466,
+      "output": 416,
+      "total": 1882
+    }
+  }
+}

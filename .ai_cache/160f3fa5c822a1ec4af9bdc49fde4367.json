@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-10-28 00:00:00",
+      "endDate": "2024-10-28 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 23700,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006674,
+      "outputCost": 0.0009088,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0015762
+    },
+    "hash": "160f3fa5c822a1ec4af9bdc49fde4367",
+    "sourceFile": "trasporto_pubblico_28_ottobre_sciopero_sulla_rete_atac.html",
+    "thoughts": "**Evaluating strike classification**\n\nI need to classify if \"isStrike\" is true or false based on the provided content. The instruction mentions \"an upcoming strike,\" but the document refers to a strike on October 28, 2024, which is indeed upcoming relative to October 22, 2024. It seems like it’s about an announcement for that strike. So, \"isStrike\" should definitely be true.\n\nNow, I’ll extract the strike data. The article indicates it's a 24-hour strike affecting the ATAC network in Rome, which makes the location type REGIONAL.",
+    "tokens": {
+      "input": 13348,
+      "output": 2272,
+      "total": 15620
+    }
+  }
+}

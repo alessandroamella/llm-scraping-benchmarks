@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 10526,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00066565,
+      "outputCost": 0.0002308,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00089645
+    },
+    "hash": "26f33af1bf6ff7a7d1b493406e61c930",
+    "sourceFile": "sciopero_trasporto_pubblico_aperte_metropolitane_ferrovie_concesse.html",
+    "thoughts": "**Analyzing strike information**\n\nI need to create a JSON output based on whether there's a strike using the extracted `isStrike` and `strikeData`. The content I'm looking at is from a webpage about a public transport strike in Rome. It states that the strike is currently happening and will end at 12:30, but it indicates that some services, like metro lines and certain railways, are running normally, although there may be bus cancellations. It doesn't suggest any future strikes; it refers to an ongoing one as of the latest update.",
+    "tokens": {
+      "input": 13313,
+      "output": 577,
+      "total": 13890
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 21:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5321,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0003435,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.0007545,
+      "cachedCost": 0,
+      "totalCost": 0.0012825
+    },
+    "hash": "930db139eec88d5781c10fbcdb27f02b",
+    "sourceFile": "strike-detail-venerd--12-dicembre-da-mezzanotte-alle-21-sciopero.html",
+    "thoughts": "**Strike Announcement Analysis**\n\nOkay, let's break this down. My task is clear: determine if this text announces a strike and, if so, extract the relevant details in a JSON-compatible format. The title immediately signals a strike: \"Venerdì 12 dicembre da mezzanotte alle 21 sciopero nazionale.\" It's in Italian, but the key words are there. The date of the news is Thursday, December 11, 2025, and the strike is planned for the very next day, Friday, December 12, 2025. Excellent, so we have the context.\n\nNow, let's dissect the strike's specifics. The term \"sciopero nazionale\" tells me this is a national strike. The start time is precise: midnight, December 12, 2025. The end time, as explicitly stated, is 9 PM on the same day – December 12, 2025. There's a mention of extended impacts on FERROVIENORD lines, but the primary strike period ends at 21:00. This is important to note and keep separate. The guaranteed service times are also clearly defined: 06:00 to 09:00 and 18:00 to 21:00. These are key data points.\n\nGiven this information, it's a straightforward determination: this is indeed a strike announcement. I can proceed to construct the JSON output, bearing in mind the constraints. Specifically, isStrike must be true. For `strikeData`, the `startDate` is \"2025-12-12 00:00:00\", `endDate` is \"2025-12-12 21:00:00\". The `locationType` is \"NATIONAL,\" and, as instructed for national strikes, I'll omit the `locationCodes`. Finally, the `guaranteedTimes` will be an array containing the specified periods: [\"06:00-09:00\", \"18:00-21:00\"]. The JSON is ready.\n\n\n",
+    "tokens": {
+      "input": 1374,
+      "output": 123,
+      "total": 2000
+    }
+  }
+}

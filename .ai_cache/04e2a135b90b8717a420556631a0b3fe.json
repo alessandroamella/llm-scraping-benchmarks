@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6347,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006677,
+      "outputCost": 0.0001728,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008405
+    },
+    "hash": "04e2a135b90b8717a420556631a0b3fe",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_322.html",
+    "thoughts": "**Deciding on strike status**\n\nI'm determining if this document announces a new strike or provides information about an already occurred one. Here, it’s about participation in a strike that happened today, so I conclude that isStrike should be false. Therefore, I’ll output the JSON object as {\"isStrike\": false}. I need to make sure there’s no additional commentary or strikeData included, just delivering exactly what’s required in the specified format. Here goes!",
+    "tokens": {
+      "input": 13354,
+      "output": 432,
+      "total": 13786
+    }
+  }
+}

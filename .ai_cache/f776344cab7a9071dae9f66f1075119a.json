@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-09-06 03:00:00",
+      "endDate": "2023-09-07 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4760,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00031175,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.000612,
+      "cachedCost": 0,
+      "totalCost": 0.00113375
+    },
+    "hash": "f776344cab7a9071dae9f66f1075119a",
+    "sourceFile": "strike-detail-mercoled--6-settembre--sciopero-dei-treni-regional.html",
+    "thoughts": "**Strike Data Analysis: Trenord - Lombardia**\n\nOkay, so I've received some input data formatted as JSON, and I need to parse it quickly. The key takeaway is that we have a strike announced for \"Mercoledì 6 settembre\". Immediately, I need to extract the relevant details for our system. Let's see...\n\nFirst, it confirms that it *is* a strike. Good. Now, the details: The strike's duration is from \"dalle ore 3 del 6 alle ore 2 del 7 settembre.\" Which translates to a start time of 2023-09-06 03:00:00 and an end time of 2023-09-07 02:00:00. Year is easily implied as 2023 since that is the current context and these are current events. The target is Trenord, specifically regional trains within the Lombardia region, which is identified by the code \"03\". This tells me the `locationType` is `REGIONAL` and the `locationCodes` includes \"03\". Lastly, there are guaranteed service times: \"06:00-09:00\" and \"18:00-21:00\", which the JSON conveniently presents in `guaranteedTimes`. The analysis is complete. All the essential components are there: type, location, and key times. I can now efficiently process this strike information within the wider data context.\n\n\n",
+    "tokens": {
+      "input": 1247,
+      "output": 140,
+      "total": 1795
+    }
+  }
+}

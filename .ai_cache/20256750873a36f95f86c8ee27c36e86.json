@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 28298,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00009685,
+      "outputCost": 0.000992,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00108885
+    },
+    "hash": "20256750873a36f95f86c8ee27c36e86",
+    "sourceFile": "trasporto_pubblico_28_ottobre_sciopero_sulla_rete_atac.html",
+    "thoughts": "**Extracting strike data**\n\nI'm looking at the announcement dated \"Lunedì 28 ottobre\" that indicates an upcoming strike. Since it's announcing a 24-hour strike, I'll set isStrike to true. I need to extract the strike data, specifically the start and end dates with times. The article indicates that regular service will continue until 8:30 AM and then again from 5:00 PM to 8:00 PM, suggesting service will not be available outside those hours.",
+    "tokens": {
+      "input": 1937,
+      "output": 2480,
+      "total": 4417
+    }
+  }
+}

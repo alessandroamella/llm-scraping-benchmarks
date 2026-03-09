@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-09-22 00:00:00",
+      "endDate": "2025-09-22 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6733,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000244,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.0009195,
+      "cachedCost": 0,
+      "totalCost": 0.00136
+    },
+    "hash": "b03fa21caad10fd86ec8f7e966c76fc9",
+    "sourceFile": "linee_automobilistiche_avviso_di_sciopero_generale_nazionale_lunedi_22_settembre_2025.html",
+    "thoughts": "**Analyzing the Strike Information from EAV**\n\nOkay, let's break this down. My task is to analyze this strike announcement from EAV, determine if it's an actual strike, and extract the relevant data into a specific JSON format. The constraints are pretty straightforward: valid JSON, no comments, no extra text, and handle dates, times, and locations correctly.\n\nThe input is a strike announcement for September 22, 2025. I need to pull relevant information from the provided text. Let me see... the page title is \"Linee Automobilistiche: Avviso di sciopero generale nazionale lunedì 22 settembre 2025,\" which confirms the date. The announcement date is September 17, 2025. The scope is \"sciopero generale nazionale,\" meaning it's a national strike. The duration is 23 or 24 hours depending on the staff, and the guaranteed service times are 05:30-08:30 and 16:30-19:30. EAV is in Campania (15), but since this is a national strike, that's less relevant.\n\nNow, let's translate this into the JSON format. `isStrike` is obviously true. The `strikeData` needs some careful attention:\n\n*   The start date for the 24 hour strike is September 22, 2025, and generally they run from the start of the day: `2025-09-22 00:00:00`.\n*   The end date then would be September 22, 2025 at the end of the day: `2025-09-22 23:59:59`.\n*   The `locationType` is definitely \"NATIONAL.\"\n*   `locationCodes` will be null, as it's a national strike.\n*   The `guaranteedTimes` are simply [\"05:30-08:30\", \"16:30-19:30\"].\n\nWith that information, I've got the necessary information for my JSON output:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-09-22 00:00:00\",\n    \"endDate\": \"2025-09-22 23:59:59\",\n    \"locationType\": \"NATIONAL\",\n    \"locationCodes\": null,\n    \"guaranteedTimes\": [\"05:30-08:30\", \"16:30-19:30\"]\n  }\n}\n```\n\nOkay, now let's quickly verify that I've satisfied all the requirements. Valid JSON? Yep. No comments? Yes. No extra text? Correct. Correct types? boolean and object are what I have, and the date formats look perfect. Great. That should be the solution.\n\n\n",
+    "tokens": {
+      "input": 976,
+      "output": 131,
+      "total": 1720
+    }
+  }
+}

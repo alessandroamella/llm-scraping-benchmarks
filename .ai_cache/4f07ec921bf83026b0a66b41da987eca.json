@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4172,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0037975,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0004695,
+      "cachedCost": 0,
+      "totalCost": 0.004282
+    },
+    "hash": "4f07ec921bf83026b0a66b41da987eca",
+    "sourceFile": "trasporto_pubblico_gioved_sciopero_nazionale_830_1230_servizio_rischio.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, here's the deal. My primary task is to determine if this text announces an *upcoming* strike. The output needs to be a JSON object, and I need to adhere strictly to the schema provided. No extraneous fluff.\n\nThe title reads, \"Trasporto pubblico, giovedì sciopero nazionale dalle 8,30 alle 12,30. Servizio a rischio,\" which translates to \"Public transport, national strike Thursday from 8:30 to 12:30. Service at risk.\" The excerpt confirms a 4-hour national strike on Thursday, July 18th, called by several unions.\n\nHowever, the publication and update dates are critical here. The article was published on July 12, 2024, and updated on November 6, 2024. The title references a strike on \"Thursday 18 July,\" which would be a past date. I must determine if this is a present strike that will be happening.\n\nGiven the instructions, and since this is clearly referring to a strike that *has already occurred*, I have to set `isStrike` to `false`. My analysis is complete.\n\n\n",
+    "tokens": {
+      "input": 15190,
+      "output": 10,
+      "total": 15513
+    }
+  }
+}

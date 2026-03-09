@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-06-16 03:00:00",
+      "endDate": "2024-06-17 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4756,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00028725,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.000597,
+      "cachedCost": 0,
+      "totalCost": 0.00103275
+    },
+    "hash": "468cfe19aeefb9e5fc4c75f211699c28",
+    "sourceFile": "strike-detail-sciopero-uiltrasporti-e-orsa-domenica-16-giugno--p.html",
+    "thoughts": "**Analyzing Strike Information for Trenord (Lombardia)**\n\nOkay, here's what I'm thinking. The core task is to identify and extract strike details specifically related to Trenord, the Lombardy regional rail operator. The goal is a JSON output, so I need to structure the data accordingly. Dates need to be in the \"yyyy-MM-dd HH:mm:ss\" format, and I need to identify any guaranteed service times, specifically formatted as \"HH:mm-HH:mm\", though in this instance there are none. The \"locationType\" is crucial - either NATIONAL or REGIONAL and I'll need the corresponding ISTAT location codes.\n\nNow, for the specific text: \"Sciopero Uiltrasporti e ORSA domenica 16 giugno.\" Right away, I see \"Sciopero,\" which translates to \"strike,\" indicating `isStrike` is *true*. The text also states, \"Dalle ore 3 di domenica 16 giugno alle ore 2 di lunedì 17 giugno\" which gives me the start and end dates. That will be: 2024-06-16 03:00:00 and 2024-06-17 02:00:00. Importantly, \"l’azienda non potrà attuare alcun servizio minimo di garanzia\" means there are *no* guaranteed service times. The scope is confirmed as \"servizio ferroviario lombardo,\" which maps to a \"REGIONAL\" location type, specifically for Lombardy, with a region code of \"03\".\n\nTherefore, the extracted strike data will be:\n\n*   `isStrike`: true\n*   `strikeData`:\n    *   `startDate`: \"2024-06-16 03:00:00\"\n    *   `endDate`: \"2024-06-17 02:00:00\"\n    *   `locationType`: \"REGIONAL\"\n    *   `locationCodes`: [\"03\"]\n    *   `guaranteedTimes`: *Omitted* (as there are none).\n\n\n",
+    "tokens": {
+      "input": 1149,
+      "output": 99,
+      "total": 1646
+    }
+  }
+}

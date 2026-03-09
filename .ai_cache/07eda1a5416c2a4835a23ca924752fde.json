@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-03 00:00:00",
+      "endDate": "2025-10-04 00:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24824,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000742,
+      "outputCost": 0.0008564,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0009306
+    },
+    "hash": "07eda1a5416c2a4835a23ca924752fde",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_generale_nazionale_di_venerdi_03_ottobre_2025.html",
+    "thoughts": "**Determining upcoming strike announcement**\n\nI need to find out if this document is announcing a new strike. It’s in Italian and states there’s a general national strike on October 3, 2025, lasting 24 hours, called by CGIL and USB due to the Gaza war. It mentions guaranteed service hours from 05:30 to 08:30 and 16:30 to 19:30. It seems like we should mark isStrike as true. The strike should start at midnight on October 3 and end at 23:59.",
+    "tokens": {
+      "input": 1484,
+      "output": 2141,
+      "total": 3625
+    }
+  }
+}

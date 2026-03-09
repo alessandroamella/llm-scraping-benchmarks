@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-24 00:00:00",
+      "endDate": "2025-02-24 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4656,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0003065,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.0005325,
+      "cachedCost": 0,
+      "totalCost": 0.001049
+    },
+    "hash": "d29545043bd54a9be26932d1b9e2ac72",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_24h_lunedi_24_febbraio_2025.html",
+    "thoughts": "**Strike Analysis: EAV Public Transport (Campania)**\n\nOkay, let's break this down. My task is clear: determine if this document signifies an impending strike. The source is EAV (code 15), the public transport provider in Campania. The core content nails it: \"Linea Metropolitana: Avviso di sciopero 24h lunedì 24 febbraio 2025\" – a strike notice for the metro line. So, `isStrike` is definitely `true`.\n\nThe strike's date is locked down: February 24th, 2025. It's a full 24-hour affair. I need to note the guaranteed service windows – critical for anyone planning travel: 05:30 to 08:30 and 16:30 to 19:30. These times are stored as `guaranteedTimes`. The location is EAV, which covers the Campania region, explicitly mentioning the M1 line. That tells me this is a `REGIONAL` strike. The `locationCodes` reflects this with [\"15\"], the EAV code.\n\nThe text itself confirms my assessment. \"Per il giorno 24 febbraio 2025 la O.S. USB ha proclamato azione di sciopero...\" leaves no room for ambiguity. And the second snippet, \"Servizio garantito dalle ore 05:30 alle ore 8:30 e dalle ore 16:30 alle ore 19:30\", reinforces the guaranteed service periods. I've successfully extracted and validated all the necessary parameters, `startDate`, `endDate`, `locationType`, `locationCodes`, and `guaranteedTimes`, and determined the strike's existence. I’m confident in my assessment.\n\n\n",
+    "tokens": {
+      "input": 1226,
+      "output": 140,
+      "total": 1721
+    }
+  }
+}

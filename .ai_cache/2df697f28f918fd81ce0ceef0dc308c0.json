@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3755,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.003755,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0003885,
+      "cachedCost": 0,
+      "totalCost": 0.0041585
+    },
+    "hash": "2df697f28f918fd81ce0ceef0dc308c0",
+    "sourceFile": "sciopero_del_trasporto_pubblico_adesione_personale_atac_al_121.html",
+    "thoughts": "**Analyzing the Public Transport Strike Announcement**\n\nOkay, let's break this down. My task is clear: determine if this document signals an *upcoming* strike. The input is a markdown article from \"Roma Servizi per la Mobilità\" titled \"Sciopero del trasporto pubblico, adesione personale Atac al 12,1%\". My instructions are equally straightforward: if it's an *upcoming* strike, `isStrike` is true. If it's anything else – a cancellation, participation report, or a real-time update – then `isStrike` is false.\n\nNow, let's dive into the content. The title, \"Public transport strike, 12.1% Atac staff participation,\" immediately throws up a flag. \"Participation\"? That implies the strike is *happening* or *has happened*, not that it *will* happen. The text confirms this: \"The adhesion of Atac staff to the public transport strike *this morning* was 12.1%.\" The phrase \"this morning\" is the dead giveaway; it's a retrospective report on the strike's participation. It's quantifying the impact, not announcing a future event.\n\nTherefore, the conclusion is obvious. This is a post-strike report. The `isStrike` parameter must be set to `false`. Case closed.\n\n\n",
+    "tokens": {
+      "input": 15020,
+      "output": 10,
+      "total": 15289
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-03 00:00:00",
+      "endDate": "2025-10-03 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 23579,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00066335,
+      "outputCost": 0.0009636,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00162695
+    },
+    "hash": "d848df9578ba96dca66424db79171c5f",
+    "sourceFile": "sciopero_generale_nazionale_domani_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Evaluating strike details**\n\nOkay, I see that \"isStrike\" is true, so it's time to extract some details. The start and end dates need to be in the \"yyyy-MM-dd HH:mm:ss\" format. The information indicates a strike tomorrow with the public transport at risk, but it doesn't provide an exact start time—only mentions that service will be regular until 8:30 and again between 17:00 and 20:00. It seems like the strike might cover 24 hours from midnight, but we need to determine dates based on this info.",
+    "tokens": {
+      "input": 13267,
+      "output": 2409,
+      "total": 15676
+    }
+  }
+}

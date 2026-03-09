@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-01-13 00:00:00",
+      "endDate": "2026-01-13 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4420,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00021625,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.000672,
+      "cachedCost": 0,
+      "totalCost": 0.00108475
+    },
+    "hash": "a615b1d4db1411fe1ddffae7370fe4f3",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2026-1-13-sciopero-nazionale-del-trasport.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, let's break this down. The task at hand is to determine if this input is a strike announcement, and if so, to extract the relevant data and format it into a specific JSON structure. The input clearly says \"SCIOPERO NAZIONALE PERSONALE AUTOFERROTRANVIERI\" which immediately signals a national strike involving public transport workers. The date is \"13 GENNAIO 2026\" and the duration is \"24 ore\", further confirming this.\n\nSo, *yes*, this is definitely a strike announcement. Now, to translate this into the required JSON format. The `isStrike` field will be `true`, obviously.\n\nFor the `strikeData` object, I'll start with the date. Since it's a full-day strike, I'll set the `startDate` to \"2026-01-13 00:00:00\" and the `endDate` to \"2026-01-13 23:59:59\". The duration confirms a 24-hour strike. The location is \"NAZIONALE\", translating to a `locationType` of \"NATIONAL\". Since it's national, the `locationCodes` array should be `null`, as per the schema.\n\nFinally, regarding guaranteed service times, \"dalle ore 6.00 alle ore 9.00 e dalle ore 18.00 alle ore 21.00\" provides the information I need for the `guaranteedTimes` array. So, the array should be: [\"06:00-09:00\", \"18:00-21:00\"].\n\nThat should satisfy the schema requirements. Let's make sure the data is accurately represented.\n\n\n",
+    "tokens": {
+      "input": 865,
+      "output": 131,
+      "total": 1444
+    }
+  }
+}

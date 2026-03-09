@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8388,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000748,
+      "outputCost": 0.0001572,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.000232
+    },
+    "hash": "d82cfb13150ad9379caeab9ac3220f97",
+    "sourceFile": "sciopero_trasporto_aperte_metro_ferrovia_termini_centocelle.html",
+    "thoughts": "**Deciding on the JSON output**\n\nI need to output JSON according to the schema, focusing on whether this document announces a new or ongoing strike. The content is in Italian, stating that an ongoing public transport strike in Rome will conclude at 12:30. The updates indicate that various transport services are operating or may have reductions. Since this document pertains to an ongoing strike, I need to set \"isStrike\" to false and prepare the output as {\"isStrike\": false}. No need for strike data here!",
+    "tokens": {
+      "input": 1496,
+      "output": 393,
+      "total": 1889
+    }
+  }
+}

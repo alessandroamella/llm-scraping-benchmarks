@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 16293,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00014145,
+      "outputCost": 0.000684,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00082545
+    },
+    "hash": "6d16bf7286e60460254665e63fc1e4ed",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_24_h_venerdi_28_novembre_2025.html",
+    "thoughts": "**Determining strike details**\n\nI need to output JSON following the right schema. The document is announcing an upcoming strike, indicated by the title and content stating \"24-hour general strike\" on November 28, 2025. It mentions service details and guaranteed times, which confirms the announcement. Therefore, I’ll set isStrike to true and fill strikeData with relevant details like startDate, endDate, locationType, locationCodes, and guaranteedTimes. This is an important step for clarity!",
+    "tokens": {
+      "input": 2829,
+      "output": 1710,
+      "total": 4539
+    }
+  }
+}

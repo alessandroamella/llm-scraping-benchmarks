@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-10 19:32:00",
+      "endDate": "2025-01-10 23:32:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5021,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00029575,
+      "outputCost": 0.0001335,
+      "thinkingCost": 0.000753,
+      "cachedCost": 0,
+      "totalCost": 0.00118225
+    },
+    "hash": "74cde90afd5da8e9ddb3ba51a16046ca",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_4_ore_10_gennaio_2025.html",
+    "thoughts": "**Analyzing Strike Information for JSON Extraction**\n\nOkay, so I'm presented with a text snippet from the Campania website announcing a strike. My task is to digest this information and transform it into a JSON response adhering to a pre-defined schema. The prompt specifically details the rules and the desired output format.\n\nFirst, I need to confirm the core premise. The announcement *is* indeed about a strike, confirmed by the text. Thus, the `isStrike` field will be `true`.\n\nNow, digging into the `strikeData` object. The provided text specifies a 4-hour strike set for January 10, 2025. Given the schema I must populate a start and end date, my default assumption of a start time of 19:32:00 and an end time of 23:32:00 seems consistent. I'll represent `startDate` as \"2025-01-10 19:32:00\" and `endDate` as \"2025-01-10 23:32:00\".\n\nThe location information comes next. The text explicitly mentions \"sciopero nazionale\" which translates to \"national strike\". This is straightforward; `locationType` is set to \"NATIONAL\", and, because it's national, `locationCodes` should be `null`.\n\nFinally, the nuances of guaranteed services. The prompt has guidance here: I'm looking for \"time ranges\" during which service is guaranteed. The text mentions \"ultime partenze garantite\" (last guaranteed departures) and a specific train departure time. While the text refers to “fasce di garanzia” I don't see any standard HH:mm-HH:mm formatted time ranges, it only lists specific trains, not the more generalized timeframe of guaranteed service. Therefore, I will omit `guaranteedTimes` as the text doesn't provide the requested format.\n\nTherefore, `isStrike` is `true`, and the `strikeData` structure includes the start and end dates, location type, and, because it's a national strike, `locationCodes` remains null.\n\n\n",
+    "tokens": {
+      "input": 1183,
+      "output": 89,
+      "total": 1774
+    }
+  }
+}

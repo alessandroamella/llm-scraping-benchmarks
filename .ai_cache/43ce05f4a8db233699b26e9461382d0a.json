@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-11-27 00:00:00",
+      "endDate": "2023-11-27 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21250,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006684,
+      "outputCost": 0.0007796,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.001448
+    },
+    "hash": "43ce05f4a8db233699b26e9461382d0a",
+    "sourceFile": "luned_27_novembre_sciopero_nazionale_trasporto_pubblico_possibili_disagi.html",
+    "thoughts": "**Evaluating strike data requirements**\n\nI need to gather the specifications for the strike data. This includes the start and end dates formatted as 'yyyy-MM-dd HH:mm:ss', the location type (either REGIONAL or NATIONAL), and other specific fields. The date mentioned, \"Lunedì 27 novembre\" in 2023, indicates a nationwide strike. So, I think the start date could be 2023-11-27 00:00:00 and end date could be 2023-11-28 00:00:00, but I might also format it to include seconds for precision. The type is clearly NATIONAL, confirming the nationwide scope of the strike.",
+    "tokens": {
+      "input": 13368,
+      "output": 1949,
+      "total": 15317
+    }
+  }
+}

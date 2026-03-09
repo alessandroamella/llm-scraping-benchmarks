@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-01-16 08:30:00",
+      "endDate": "2023-01-16 12:30:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5264,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0001975,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.0006795,
+      "cachedCost": 0,
+      "totalCost": 0.0010255
+    },
+    "hash": "a941bcd9648a0a0fe3e9e44d050218c1",
+    "sourceFile": "luned_16_gennaio_sciopero_atac_4_ore_servizio_rischio_830_1230.html",
+    "thoughts": "**Strike Analysis: Italian Public Transport**\n\nOkay, let's break this down. My task is clear: I need to analyze this input and determine if it signifies a strike, and if so, extract the relevant information into a JSON format based on the specified schema. The company in question is ATAC, the public transport operator in Rome, with a location code of 12 (Lazio). The format requires a specific set of fields: `isStrike`, `strikeData` (containing `startDate`, `endDate`, `locationType`, `locationCodes`, and `guaranteedTimes`).\n\nThe input snippet is \"Lunedì 16 gennaio sciopero Atac di 4 ore. Servizio a rischio dalle 8,30 alle 12,30\". Immediately, the word \"sciopero\" (strike) jumps out, so `isStrike` is definitely `true`.\n\nNow for the details. The title provides a clear date: January 16th. The times are from 08:30 to 12:30. Given that this is ATAC, I can confidently assume this is a regional strike, and since ATAC is in Rome, the location code is Lazio (12). This is a 4-hour strike, and service is at risk during the specified time.\n\nBased on this, I'll extract these fields:\n\n*   `isStrike`: `true`\n*   `startDate`: \"2023-01-16 08:30:00\"\n*   `endDate`: \"2023-01-16 12:30:00\"\n*   `locationType`: \"REGIONAL\"\n*   `locationCodes`: [\"12\"]\n\nThe snippet doesn't mention any guaranteed service times or bands, so I'll omit that from the JSON output, as the schema states. Let's re-read just to be sure... yep, no mention of guaranteed bands. Good to go.\n\n\n",
+    "tokens": {
+      "input": 790,
+      "output": 99,
+      "total": 1342
+    }
+  }
+}

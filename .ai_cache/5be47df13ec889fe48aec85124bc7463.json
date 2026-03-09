@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4430,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0036995,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000465,
+      "cachedCost": 0,
+      "totalCost": 0.0041795
+    },
+    "hash": "5be47df13ec889fe48aec85124bc7463",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_186.html",
+    "thoughts": "**Analyzing a \"Strike\" Announcement**\n\nOkay, let's break this down. My task is clear: I need to determine if this input indicates an *upcoming* strike. The constraints are pretty straightforward – I need a JSON output, and the data is looking for a Boolean `isStrike` value, and if true, a nested `strikeData` object with formatted dates and a location code.\n\nThe input itself is \"Sciopero del trasporto pubblico, adesione personale Atac al 18,6% - Roma Servizi per la Mobilità.\" Right away, I see \"sciopero,\" which means \"strike.\" But, I need more context. I'm given the title as well, \"Sciopero del trasporto pubblico, adesione personale Atac al 18,6%.\" That's the same as the beginning. I'm also given a published date of 08/03/2022 and an update on 11/04/2023. Hmm, that's interesting.\n\nNow, let's parse the content: \"Reports on the *participation* (adesione) of Atac staff to a strike that already happened (18.6%).\" Bingo! \"Adesione\" is key here. That's *participation*. It's a *report* of the results of a strike, not a pre-strike announcement. The update date is likely a clarification or correction to the report. The 18.6% clearly indicates the level of participation, which is a statistic about a past event.\n\nTherefore, my conclusion is definitive: this is *not* an upcoming strike announcement. It is reporting on the participation in a past strike. I am returning `{\"isStrike\": false}`.\n\n\n",
+    "tokens": {
+      "input": 14798,
+      "output": 10,
+      "total": 15118
+    }
+  }
+}

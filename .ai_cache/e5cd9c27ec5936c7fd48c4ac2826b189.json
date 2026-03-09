@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-01-09 21:00:00",
+      "endDate": "2026-01-10 23:59:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "04",
+        "05"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7697,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0003245,
+      "outputCost": 0.000159,
+      "thinkingCost": 0.0015075,
+      "cachedCost": 0,
+      "totalCost": 0.001991
+    },
+    "hash": "e5cd9c27ec5936c7fd48c4ac2826b189",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2026-1-9-sciopero-del-personale-di-sad---.html",
+    "thoughts": "**JSON Construction Thought Process**\n\nOkay, here's the deal. My task is to extract strike information from this HTML and output it as a JSON object, following a specific schema. The goal is to produce a single JSON array object, just as requested.\n\nFirst, let's look at the criteria. There are two strikes announced: one for SAD and another for Trentino Trasporti. Both fit the definition of a strike, as they announce upcoming stoppages. The dates are: SAD from 2026-01-09 21:00:00 to 2026-01-10 20:59:00, and Trentino Trasporti from 2026-01-10 00:01:00 to 2026-01-10 23:59:00.  The location is regional, covering Trentino-Alto Adige and Veneto.\n\nI need to decide what to do with the fact that there are two strikes. Since the schema is for a *single* `strikeData` object, and the strikes overlap both in time and location (they are both regional), I'm going to combine the information. The earliest start date and the latest end date should be used. The location codes for Trentino Alto Adige (04) and Veneto (05) are also available.\n\nNow I am going to carefully construct the JSON. The `isStrike` field will be `true`. The `strikeData` object will include the combined `startDate` of 2026-01-09 21:00:00, the `endDate` of 2026-01-10 23:59:00, a `locationType` of \"REGIONAL\", and `locationCodes` of [\"04\", \"05\"].  The data does not specify any guaranteed times, so I will omit this field.\n\nI need to confirm whether to return the object directly or as an array. The prompt says \"return a single parseable JSON array\". The schema itself is an object, not an array. If forced, I would return the data as a single-element array. However, \"single parseable JSON array\" makes me assume I can return the object itself. Let's stick with a single object in the array if the prompt insists.\n\nFinally, let's run a final check to make sure I am following the schema. I will be sure the date formats are correct, and the other types align with the schema. I will note the companies (SAD and Trentino Trasporti) and regions. The combined start is 2026-01-09 21:00:00 and combined end is 2026-01-10 23:59:00. This is a strike! Now, let's build that JSON.\n\n\n",
+    "tokens": {
+      "input": 1298,
+      "output": 106,
+      "total": 2409
+    }
+  }
+}

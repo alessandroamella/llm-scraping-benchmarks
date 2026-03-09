@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-10 19:32:00",
+      "endDate": "2025-01-10 23:32:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4468,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00042,
+      "outputCost": 0.0001335,
+      "thinkingCost": 0.000543,
+      "cachedCost": 0,
+      "totalCost": 0.0010965
+    },
+    "hash": "e640ae290a0b28d17b9f01c35a57f4da",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_4_ore_venerdi_10_gennaio_2025.html",
+    "thoughts": "**Strike Analysis: EAV Announcement**\n\nOkay, let's break down this EAV announcement. First off, this is a confirmed strike. The source is EAV, which, if I recall correctly, is the transportation authority in Campania. The announcement itself details a *national* strike – that's the key. Forget any regional codes for Campania in this instance; the scope is broader.\n\nThe strike is scheduled for January 10, 2025. Specifically, it runs for four hours, from 19:32 to 23:32. No need to include any guaranteed departure times from the original announcement; there are none that are relevant to this data model.\n\nTherefore, the critical data points are:\n\n*   `isStrike`: true (Confirmed strike)\n*   `startDate`: \"2025-01-10 19:32:00\" (Precise start time)\n*   `endDate`: \"2025-01-10 23:32:00\" (Precise end time)\n*   `locationType`: \"NATIONAL\" (Crucial for the scope)\n*   `locationCodes`: null (Irrelevant, since it's national)\n\nI'm confident this structure is valid JSON, correctly formatted, and adheres to the specified data types for the relevant fields. The dates are in the correct format, and the location data is appropriate given that this is a national event. That should provide the required data.\n\n\n",
+    "tokens": {
+      "input": 1680,
+      "output": 89,
+      "total": 2131
+    }
+  }
+}

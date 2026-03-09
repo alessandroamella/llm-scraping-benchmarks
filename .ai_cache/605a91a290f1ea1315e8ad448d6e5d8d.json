@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20414,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0001055,
+      "outputCost": 0.0006976,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008031
+    },
+    "hash": "605a91a290f1ea1315e8ad448d6e5d8d",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_di_24_ore_del_13_dicembre_2024_aggiornamento.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to determine if this document is about an upcoming strike. The title mentions a 24-hour strike on December 13, 2024, and the content indicates it’s confirming the status due to a ruling. Since it refers to the next day, it’s indeed an upcoming strike, lasting for 24 hours. I’ll set `isStrike` to true and will need to extract specific details like start and end dates and location codes as instructed.",
+    "tokens": {
+      "input": 2110,
+      "output": 1744,
+      "total": 3854
+    }
+  }
+}

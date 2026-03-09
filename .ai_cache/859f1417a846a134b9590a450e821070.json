@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-10-09 00:00:00",
+      "endDate": "2023-10-09 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7019,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00375075,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.0010335,
+      "cachedCost": 0,
+      "totalCost": 0.00498075
+    },
+    "hash": "859f1417a846a134b9590a450e821070",
+    "sourceFile": "luned_9_ottobre_sciopero_nazionale_trasporto_pubblico_possibili_disagi_24_ore.html",
+    "thoughts": "**Strike Detection and Data Extraction**\n\nOkay, let's break this down. My primary goal is to determine if this text announces an upcoming strike and, if so, to extract the relevant data, structuring it as a JSON object per the specified schema.\n\nFirst, I see the input: a web page excerpt concerning a public transport strike scheduled for \"Lunedì 9 ottobre\" (Monday, October 9th). The title immediately flags this as a strong possibility. The text confirms the strike, mentioning a \"sciopero nazionale\" (national strike) lasting 24 hours.\n\nNow, let's extract the key details for the `strikeData` object. The date is straightforward: \"Lunedì 9 ottobre,\" which, given the publication date of 04/10/2023, clearly refers to 2023-10-09. It's a \"sciopero nazionale,\" indicating a national scope. The text specifies guaranteed service windows: \"regolare fino alle 8,30\" (regular until 8:30) and \"dalle 17 alle 20\" (from 17:00 to 20:00). Interpreting strike terminology, these likely define the guaranteed service times: 00:00-08:30 and 17:00-20:00. The duration is stated as \"24 ore\" (24 hours).\n\nWith this information, I can construct the JSON object. `isStrike` will be `true`. For `strikeData`, `startDate` is \"2023-10-09 00:00:00\" and `endDate` is \"2023-10-09 23:59:59\". `locationType` is `NATIONAL` since it's a national strike, which, based on the schema and constraint check, means `locationCodes` should be `null`. The `guaranteedTimes` array is [\"00:00-08:30\", \"17:00-20:00\"]. The format of the date fields is \"yyyy-MM-dd HH:mm:ss\".\n\nSo, the JSON structure will be:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2023-10-09 00:00:00\",\n    \"endDate\": \"2023-10-09 23:59:59\",\n    \"locationType\": \"NATIONAL\",\n    \"locationCodes\": null,\n    \"guaranteedTimes\": [\n      \"00:00-08:30\",\n      \"17:00-20:00\"\n    ]\n  }\n}\n```\n\nThat should satisfy the schema and the constraints. The critical thing here is to correctly interpret the guaranteed service windows within the strike context and handle the `locationCodes` accordingly for a national strike.\n\n\n",
+    "tokens": {
+      "input": 15003,
+      "output": 131,
+      "total": 15823
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-12-14 09:00:00",
+      "endDate": "2023-12-14 17:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6064,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00027475,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.000951,
+      "cachedCost": 0,
+      "totalCost": 0.00137425
+    },
+    "hash": "3031db43dae765241ddf6a8223b868e9",
+    "sourceFile": "strike-detail-gioved--14-dicembre-dalle-ore-9-alle-ore-17-sciope.html",
+    "thoughts": "**Analyzing the Trenord Strike Information**\n\nOkay, let's break this down. My primary task here is to extract strike information, specifically focusing on Trenord in the Lombardia region (code \"03\"). The critical point is determining if this constitutes an *upcoming* strike, which is the sole condition for setting `isStrike` to `true`.\n\nI'm given news about a strike occurring on \"Giovedì 14 dicembre\" (Thursday, December 14th, 2023), published on \"martedì 12/12/2023\" (Tuesday, December 12th, 2023). That confirms it's an announcement of a future event, so `isStrike` is definitely `true`.\n\nNow for the details. The strike is scheduled for Thursday, December 14th, 2023, from 09:00 to 17:00. This affects regional trains operated by Trenord in Lombardia.\n\nI need to decide how to handle the \"guaranteed times\" information. The text mentions that trains \"viaggeranno i treni con orario di partenza ... prima delle ore 9 e arrivo a destinazione finale entro le ore 10\". While it is important, I recognize that this is *not* a standard \"guaranteed time window\" as defined in the schema (which usually refers to peak hours like 6-9 AM or 6-9 PM). Since the schema specifically asks for *guaranteed time ranges* in the standardized format, and the text just mentions services before 9 am, I think I'll omit the `guaranteedTimes` field entirely. It could be misleading to try to interpret this as a fixed time window.\n\nTherefore, the key extracted data is:\n\n*   `isStrike`: true\n*   `strikeData`:\n    *   `startDate`: \"2023-12-14 09:00:00\"\n    *   `endDate`: \"2023-12-14 17:00:00\"\n    *   `locationType`: \"REGIONAL\"\n    *   `locationCodes`: [\"03\"]\n\n\n",
+    "tokens": {
+      "input": 1099,
+      "output": 99,
+      "total": 1832
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5445,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00021975,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.0006225,
+      "cachedCost": 0,
+      "totalCost": 0.00103875
+    },
+    "hash": "f9f1d444e27080f4f5a402f66990c924",
+    "sourceFile": "linee_automobilistiche_avviso_di_sciopero_generale_di_24h_per_venerdi_12_dicembre_2025.html",
+    "thoughts": "**Strike Information Extraction - My Thought Process**\n\nOkay, let's break this down. My task is to pull strike information from this text and format it as a clean JSON object according to a predefined schema. First, I need to analyze the content. I see a title: \"Linee Automobilistiche: Avviso di sciopero generale di 24h per venerdì 12 dicembre 2025 - EAV srl.\" That's a good start. It's an announcement, and the key date is December 12th, 2025. The announcement was made on December 7th, 2025.\n\nSo, the strike is on the 12th, lasting 24 hours. The text states it's a \"nazionale generale\" strike. It seems EAV is the specific company, however it is described as \"national general\" so let's mark it as a National strike. I also see some \"guaranteed times\": 05:30 to 08:30 and 16:30 to 19:30.\n\nNow, to the JSON output. `isStrike` is clearly true. The `strikeData` object needs to be constructed carefully. Let's make sure the start and end dates are correct. A 24-hour strike starting on the 12th, I'll assume it begins at midnight (00:00:00) and ends at the very end of the day, 23:59:59. I need to double-check that this format, \"yyyy-MM-dd HH:mm:ss\" is acceptable for the schema. *Yep, that's correct*.\n\nThe `locationType` should be \"NATIONAL\" as the text clearly states \"nazionale generale\" and `locationCodes` should be `null` based on the schema's requirements for a national strike. Finally, I'll put in the `guaranteedTimes` array with those two time ranges. That should cover it. Now it's ready to construct the JSON.\n\n\n",
+    "tokens": {
+      "input": 879,
+      "output": 131,
+      "total": 1425
+    }
+  }
+}

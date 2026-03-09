@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-24 00:00:00",
+      "endDate": "2025-02-24 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 17815,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000622,
+      "outputCost": 0.0006684,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0007306
+    },
+    "hash": "36bc42f5e5a2768c3295df14ada64284",
+    "sourceFile": "eav_autolinee_avviso_di_sciopero_di_24_ore_lunedi_24_febbraio_2025.html",
+    "thoughts": "**Clarifying date and location details**\n\nI'm working with the \"startDate\" and \"endDate\" fields, which require date-time values in the format 'yyyy-MM-dd HH:mm:ss'. The instruction mentions a date of February 24, 2025, which suggests a start time of 2025-02-24 00:00:00 and an end time of 2025-02-24 23:59:59. Since it's a 24-hour strike, that makes sense. Also, considering the \"locationType,\" it seems like it should be NATIONAL based on the context provided.",
+    "tokens": {
+      "input": 1244,
+      "output": 1671,
+      "total": 2915
+    }
+  }
+}

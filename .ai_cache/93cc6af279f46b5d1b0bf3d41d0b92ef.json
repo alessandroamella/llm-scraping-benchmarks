@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7511,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006614,
+      "outputCost": 0.0001992,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008606
+    },
+    "hash": "93cc6af279f46b5d1b0bf3d41d0b92ef",
+    "sourceFile": "sciopero_generale_adesione_personale_atac_179.html",
+    "thoughts": "**Evaluating strike status**\n\nI need to set `isStrike` to false, which means my output should be:  \n{ \"isStrike\": false }\n\nI should think about the context too. The document talks about a general strike that occurred today, showing it was relevant to the date 2023-10-20. The use of \"oggi\" means the event happened today, not that it's upcoming. So, confirming that, I’m clear — it’s false and I’ll produce the correct JSON format without any extra text.",
+    "tokens": {
+      "input": 13228,
+      "output": 498,
+      "total": 13726
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3426,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00367375,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000264,
+      "cachedCost": 0,
+      "totalCost": 0.00395275
+    },
+    "hash": "e0ccc16e38ff989a5d956cb652d84f46",
+    "sourceFile": "sciopero_adesione_personale_atac_185.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, let's break this down. My task is clear: determine if this content is an *announcement* of a *future* strike. Based on the provided content, specifically, \"Sciopero, adesione personale Atac al 18,5% - Roma Servizi per la Mobilità\" and \"L’adesione complessiva del personale Atac allo sciopero di oggi è stata pari al 18,5%\", it looks like this is a report on a *past* event.\n\nThe title mentions the word \"Sciopero\" (strike) and an \"adesione\" (participation rate), but the crucial phrase here is \"di oggi\" (of today). It describes participation *in a strike that has already occurred.* I have to carefully consider the instructions: I am asked to set \"isStrike\" to false if the provided information is just reporting a participation rate, and *not* announcing a future strike. Given the clear indication of a past event, the conclusion is straightforward. This is a post-strike participation report, not a pre-strike announcement. Therefore, \"isStrike\" should be set to *false*.\n\n\n",
+    "tokens": {
+      "input": 14695,
+      "output": 10,
+      "total": 14881
+    }
+  }
+}

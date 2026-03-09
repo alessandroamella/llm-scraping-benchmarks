@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-12-02 00:00:00",
+      "endDate": "2022-12-02 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19673,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000061,
+      "outputCost": 0.0008412,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0009022
+    },
+    "hash": "5fb0049548756ef29f5dddfefbe4ff5e",
+    "sourceFile": "venerd_2_dicembre_sciopero_generale_nazionale_24_ore_rischio_trasporto_pubblico_romano.html",
+    "thoughts": "**Analyzing strike details**\n\nI'm looking into an upcoming strike (sciopero nazionale di 24 ore) that affects Atac. It mentions \"a rischio,\" meaning service is at risk. The guaranteed service times are until 8:30 AM and from 5 PM to 8 PM. I need to check the requirements for strike data like startDate, endDate, and locationType. If it’s a national strike, locationType should be \"NATIONAL\" in all caps, and location codes would be null. If isStrike is true, I'll extract the details.",
+    "tokens": {
+      "input": 1220,
+      "output": 2103,
+      "total": 3323
+    }
+  }
+}

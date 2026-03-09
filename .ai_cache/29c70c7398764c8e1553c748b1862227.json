@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-01-09 21:00:00",
+      "endDate": "2026-01-10 23:59:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "04",
+        "05"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24743,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000806,
+      "outputCost": 0.0014624,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.001543
+    },
+    "hash": "29c70c7398764c8e1553c748b1862227",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2026-1-9-sciopero-del-personale-di-sad---.html",
+    "thoughts": "**Processing strike announcement**\n\nI need to output the information in JSON format based on the specified strike extraction format. The Italian content reveals a strike by SAD personnel and another by Trentino Trasporti, with clear times listed. The strikes are set from January 9 to January 10, 2026. Since these details confirm upcoming strikes, I need to ensure that the `isStrike` attribute is marked as true in my JSON output.",
+    "tokens": {
+      "input": 1612,
+      "output": 3656,
+      "total": 5268
+    }
+  }
+}

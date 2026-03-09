@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-09-30 03:00:00",
+      "endDate": "2024-10-01 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 17014,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000862,
+      "outputCost": 0.0005192,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0006054
+    },
+    "hash": "e09157c05f4777a1a06479e3c4b3885b",
+    "sourceFile": "strike-detail-sciopero-del-trasporto-ferroviario-luned--30-sette.html",
+    "thoughts": "**Extracting strike data**\n\nI need to output JSON per the schema to announce an upcoming strike. The content discusses a railway strike set for \"lunedì 30 settembre\" starting at 3:00 PM on that day and ending at 2:00 AM on October 1. This relates to regional transport in the Lombardia region, confirming `isStrike = true`. I also need to extract `startDate` and `endDate` in the right format, including regional codes. I’m almost there!",
+    "tokens": {
+      "input": 1724,
+      "output": 1298,
+      "total": 3022
+    }
+  }
+}

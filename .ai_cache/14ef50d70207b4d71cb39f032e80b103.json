@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19212,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000673,
+      "outputCost": 0.0005448,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0006121
+    },
+    "hash": "14ef50d70207b4d71cb39f032e80b103",
+    "sourceFile": "eav_autolinee_avviso_di_sciopero_di_24_ore_venerdi_13_dicembre_2024.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to confirm if this document announces a new upcoming strike. It’s Italian and mentions “Eav Autolinee – Avviso di sciopero di 24 ore venerdì 13 dicembre 2024,” stating the date as December 9, 2024. The text says “OS USB ha proclamato Sciopero Generale nazionale di 24 ore,\" indicating a national strike on December 13, 2024. It also outlines specific service hours. So yes, it’s definitely an announcement of an upcoming strike, making isStrike true.",
+    "tokens": {
+      "input": 1346,
+      "output": 1362,
+      "total": 2708
+    }
+  }
+}

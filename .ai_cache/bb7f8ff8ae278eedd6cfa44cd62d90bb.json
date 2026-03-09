@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-24 00:00:00",
+      "endDate": "2025-02-24 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5560,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0002165,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.0008745,
+      "cachedCost": 0,
+      "totalCost": 0.0012875
+    },
+    "hash": "bb7f8ff8ae278eedd6cfa44cd62d90bb",
+    "sourceFile": "eav_autolinee_avviso_di_sciopero_di_24_ore_lunedi_24_febbraio_2025.html",
+    "thoughts": "**Strike Analysis & JSON Object Creation**\n\nOkay, let's break this down. My task is clear: I need to analyze this input and determine if it describes an upcoming strike, ultimately outputting a valid JSON object according to the provided schema. The company in question is EAV, located in Campania (region code \"15\").\n\nThe content itself is straightforward. It explicitly mentions a 24-hour strike on February 24, 2025, declared by USB. I immediately recognize this as a definitive announcement. The details confirm it: the date is February 24, 2025; it's a 24-hour duration; and importantly, the scope is described as \"sciopero nazionale,\" indicating a national strike. The guaranteed service bands are also provided: 05:30-08:30 and 16:30-19:30.\n\nNow, let's translate this into the JSON object, adhering strictly to the schema. First, the `isStrike` field will be `true`. This is a no-brainer. Next, the `strikeData` object. I need to nail down the `startDate` and `endDate`. Since it's a 24-hour strike, the `startDate` is \"2025-02-24 00:00:00\" and the `endDate` is \"2025-02-24 23:59:59\". The `locationType` is critical here; the text explicitly states \"sciopero nazionale,\" so it will be \"NATIONAL,\" and I need to omit the location code because it's a national strike. The `locationCodes` field will therefore be `null`. Finally, the `guaranteedTimes` field is populated directly from the input: `[\"05:30-08:30\", \"16:30-19:30\"]`.\n\nTo summarize, after careful analysis, I've confirmed that this is indeed an announcement of an upcoming strike. The format used is `yyyy-MM-dd HH:mm:ss`. The LocationType is \"NATIONAL,\" and the guaranteed times are as specified. Now, let's create that JSON.\n\n\n",
+    "tokens": {
+      "input": 866,
+      "output": 131,
+      "total": 1580
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3218,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0001795,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000228,
+      "cachedCost": 0,
+      "totalCost": 0.0004225
+    },
+    "hash": "00c163913006765fb28ca011eef2d630",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_302.html",
+    "thoughts": "**Analyzing Strike-Related Information**\n\nOkay, let's break this down. My task is to figure out if this excerpt is announcing a *future* strike. The input is a web page excerpt with the title \"Sciopero del trasporto pubblico, adesione personale Atac al 30,2%\". Right away, I see \"adesione,\" meaning participation or adherence, and the percentage \"30,2%.\" That's a key clue. I need to determine if this is news *about* a strike, or if it is *the announcement of a future event*.\n\nThe key is the word \"adesione\" here, and after considering the other information I am now quite certain this is a report on the *outcome* of a strike. It is reporting on the participation *after* an event that already transpired (\"30,2%\"). Therefore, since this *isn't* an announcement of an upcoming work stoppage, I need to flag this as such. So, I will set `isStrike` to `false`. The output format requested is JSON, so I'll be ready to present the structured response accordingly.\n\n\n",
+    "tokens": {
+      "input": 718,
+      "output": 10,
+      "total": 880
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 08:30:00",
+      "endDate": "2024-12-13 17:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "08:30-17:00",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 811,
+    "preProcessingStrategy": "jina-reader",
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "costUsd": {
+      "inputCost": 0.00143638,
+      "outputCost": 0.00003332,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0014697
+    },
+    "hash": "d13026fc95921b6d1f566ca54104a12f",
+    "sourceFile": "news_media_comunicati_sciopero_generale_13_dicembre_240re.html",
+    "tokens": {
+      "input": 13058,
+      "output": 98,
+      "total": 13156
+    }
+  }
+}

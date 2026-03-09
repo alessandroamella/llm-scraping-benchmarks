@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-09-06 03:00:00",
+      "endDate": "2023-09-07 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18340,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008065,
+      "outputCost": 0.000544,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00062465
+    },
+    "hash": "984fe90e5383db0ea5ac030422340d9a",
+    "sourceFile": "strike-detail-mercoled--6-settembre--sciopero-dei-treni-regional.html",
+    "thoughts": "**Determining strike announcement details**\n\nI need to format the output in JSON according to the specified strike_extraction requirements. The document's content is in Italian and indicates a train strike from September 6 at 3:00 AM until September 7 at 2:00 AM. It provides guaranteed times between 6-9 AM and 6-9 PM. The dates are confirmed with \"Mercoledì 6 settembre\" and \"pagina titolo 4/09/2023\" indicating this is for 2023. I’ll ensure all these details are properly presented!",
+    "tokens": {
+      "input": 1613,
+      "output": 1360,
+      "total": 2973
+    }
+  }
+}

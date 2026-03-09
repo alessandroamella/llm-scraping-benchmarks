@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-09-30 03:00:00",
+      "endDate": "2024-10-01 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 17111,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000805,
+      "outputCost": 0.0006916,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0007721
+    },
+    "hash": "0aefda87cda1a095da134743ebd0fe5f",
+    "sourceFile": "strike-detail-sciopero-del-trasporto-ferroviario-luned--30-sette.html",
+    "thoughts": "**Determining strike details**\n\nI need to assess if the document is announcing a new strike. It's in Italian and mentions \"Sciopero del trasporto ferroviario lunedì 30 settembre,\" indicating an upcoming strike from Monday, September 30 at 3:00 AM to Tuesday, October 1 at 2:00 AM. This involves specific union actions from ORSA and Uiltrasporti. The strike pertains to lines in Lombardy, with reference codes indicating local services. If confirmed as a strike, I should extract the start and end dates in the required format.",
+    "tokens": {
+      "input": 1610,
+      "output": 1729,
+      "total": 3339
+    }
+  }
+}

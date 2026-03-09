@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21154,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006535,
+      "outputCost": 0.0007616,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00082695
+    },
+    "hash": "aa01754045e744356d5344e67fb5f23a",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-11-28-sciopero-nazionale-personale-a.html",
+    "thoughts": "**Parsing strike information**\n\nI need to output JSON based on the isStrike and strikeData if a strike is indicated. The content is about a national strike for transport personnel in Italy, specifically \"SCIOPERO NAZIONALE PERSONALE AUTOFERROTRANVIERI,\" happening on November 28, 2025. It informs that a 24-hour strike will occur due to a general strike, affecting various services, with some Trenitalia services guaranteeing essential operations during specified hours. The document doesn't provide specific location types beyond national.",
+    "tokens": {
+      "input": 1307,
+      "output": 1904,
+      "total": 3211
+    }
+  }
+}

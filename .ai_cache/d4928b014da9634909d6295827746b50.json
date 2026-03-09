@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 09:00:00",
+      "endDate": "2024-12-13 13:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4096,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000387,
+      "outputCost": 0.0001335,
+      "thinkingCost": 0.000351,
+      "cachedCost": 0,
+      "totalCost": 0.0008715
+    },
+    "hash": "d4928b014da9634909d6295827746b50",
+    "sourceFile": "news_media_comunicati_sciopero_generale_13_dicembre.html",
+    "thoughts": "**Analyzing the Italian General Strike Data**\n\nOkay, let's break this down. The core topic here is a \"Sciopero generale\" – a general strike. The specifics are: it's being organized by USB (sindacato Usb), which is useful for context. The strike is scheduled for Friday, December 13th, from 09:00 to 13:00. Importantly, it's a \"Sciopero generale nazionale,\" meaning a national strike, with a specific mention of Roma/Atac, implying potential impact on public transport or city services.\n\nNow, to make this data usable, I need to represent it effectively. I need to extract the relevant information for the task. Let's make sure our constraints are met:\n\n`isStrike`: definitely true.\n\n`startDate`: I’m setting the date as 2024-12-13 09:00:00, assuming 2024 as the current year, which is a fair assumption given the context.\n\n`endDate`: 2024-12-13 13:00:00.\n\n`locationType`: This is a national strike, so that’s `NATIONAL`.\n\n`locationCodes`: Null is appropriate because it is national, not specific to any particular region code.\n\n\n",
+    "tokens": {
+      "input": 1548,
+      "output": 89,
+      "total": 1871
+    }
+  }
+}

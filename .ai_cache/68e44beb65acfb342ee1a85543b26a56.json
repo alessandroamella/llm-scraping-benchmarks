@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4365,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00017825,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0003,
+      "cachedCost": 0,
+      "totalCost": 0.00049325
+    },
+    "hash": "68e44beb65acfb342ee1a85543b26a56",
+    "sourceFile": "sciopero_generale_adesione_personale_atac_al_259.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, here's the deal. My task is to figure out if this text snippet is announcing a *future* strike. The input is this little tidbit about an \"adesione,\" or participation, of Atac staff in a general strike, and it’s showing 25.9%.\n\nMy criteria are pretty straightforward. If it's a heads-up about a strike that's coming, then `isStrike` is `true`. However, if the text is talking about *participation* in a strike that has *already* happened or is currently in progress, or it's just a real-time update, then `isStrike` is `false`.\n\nSo, let's break down the input. It states \"Sciopero generale, adesione personale Atac al 25,9%\" – \"General strike, Atac staff participation at 25.9%.\" The phrasing here screams post-event or current-event reporting. It's giving us a statistic about how many people *participated*. It's not a notification of a new strike.\n\nTherefore, the result is `isStrike: false`. Simple enough.\n\n\n",
+    "tokens": {
+      "input": 713,
+      "output": 10,
+      "total": 923
+    }
+  }
+}

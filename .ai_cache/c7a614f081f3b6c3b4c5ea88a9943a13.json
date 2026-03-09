@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-24 00:00:00",
+      "endDate": "2025-02-24 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 14425,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008035,
+      "outputCost": 0.0006716,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00075195
+    },
+    "hash": "c7a614f081f3b6c3b4c5ea88a9943a13",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_24h_lunedi_24_febbraio_2025.html",
+    "thoughts": "**Evaluating strike announcement data**\n\nI need to output the data in JSON format according to a specific schema. The content indicates a strike announcement for February 24, 2025, where the USB has called for a 24-hour strike. I see that the guaranteed service times are specified, and it confirms that this is indeed a future strike. I need to extract fields like start date, end date, and ensure I format the times correctly, padding as needed.",
+    "tokens": {
+      "input": 1607,
+      "output": 1679,
+      "total": 3286
+    }
+  }
+}

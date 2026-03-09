@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-03-09T18:52:15.225Z",
+  "timestamp": "2026-03-09T19:11:26.796Z",
   "isCacheHit": false,
   "request": {
     "sourceName": "ATAC",
     "fileName": "lunedi_22_settembre_sciopero_nazionale_di_24_ore_trasporto_pubblico_a_rischio.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "mineru-html",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"ATAC\" (the public transport company of Rome, Lazio (12)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: mineru-html):\n<html lang=\"it-IT\" prefix=\"og: https://ogp.me/ns#\"><body class=\"wp-singular comunicato-template-default single single-comunicato postid-257812 wp-embed-responsive wp-theme-hello-elementor wp-child-theme-hello-elementor-child hello-elementor-default elementor-default elementor-kit-12678 elementor-page-15972\">\n<div class=\"elementor elementor-15972 elementor-location-single post-257812 comunicato type-comunicato status-publish hentry\" data-elementor-id=\"15972\" data-elementor-post-type=\"elementor_library\" data-elementor-type=\"single-page\">\n<div class=\"elementor-element elementor-element-6ee3468 e-flex e-con-boxed e-con e-parent\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"6ee3468\" data-settings='{\"background_background\":\"classic\"}'>\n<div class=\"e-con-inner\">\n<div class=\"elementor-element elementor-element-6945d4c e-con-full e-flex e-con e-child\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"6945d4c\">\n<div class=\"elementor-element elementor-element-da182fa e-con-full e-flex e-con e-child\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"da182fa\">\n<div class=\"elementor-element elementor-element-aff84d2 elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading\" data-e-type=\"widget\" data-element_type=\"widget\" data-id=\"aff84d2\" data-widget_type=\"theme-post-title.default\">\n<div class=\"elementor-widget-container\">\n<h1 class=\"elementor-heading-title elementor-size-default\" _item_id=\"1\">Lunedì 22 settembre sciopero nazionale di 24 ore. Trasporto pubblico a rischio</h1> </div>\n</div>\n</div>\n</div>\n</div>\n</div>\n<div class=\"elementor-element elementor-element-32c51eb e-flex e-con-boxed e-con e-parent\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"32c51eb\">\n<div class=\"e-con-inner\">\n<div class=\"elementor-element elementor-element-7a3d033 e-con-full e-flex e-con e-child\" data-e-type=\"container\" data-element_type=\"container\" data-id=\"7a3d033\" id=\"main-content\">\n<div class=\"elementor-element elementor-element-723d484 elementor-widget elementor-widget-theme-post-content\" data-e-type=\"widget\" data-element_type=\"widget\" data-id=\"723d484\" data-widget_type=\"theme-post-content.default\">\n<div class=\"elementor-widget-container\">\n<p _item_id=\"3\">Lunedì 22 settembre trasporto pubblico a rischio per lo sciopero generale nazionale di 24 ore proclamato dai sindacati Usb, Orsa, Cobas, Cub, Adl e Sgb. A Roma l’agitazione interesserà la rete Atac e i bus gestiti da operatori privati. Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.</p>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</body></html>"
   },
   "response": {
@@ -16,6 +16,7 @@
         "startDate": "2025-09-22 00:00:00",
         "endDate": "2025-09-22 23:59:59",
         "locationType": "NATIONAL",
+        "locationCodes": null,
         "guaranteedTimes": [
           "00:00-08:30",
           "17:00-20:00"
@@ -36,19 +37,19 @@
     },
     "usage": {
       "input": 1360,
-      "output": 123,
+      "output": 131,
       "cached": 0,
-      "thinking": 461,
-      "total": 1944
+      "thinking": 688,
+      "total": 2179
     },
     "costUsd": {
       "inputCost": 0.00034,
-      "outputCost": 0.0001845,
-      "thinkingCost": 0.0006915,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.001032,
       "cachedCost": 0,
-      "totalCost": 0.001216
+      "totalCost": 0.0015685
     },
-    "durationMs": 4930,
-    "thoughts": "**Strike Detection Analysis**\n\nOkay, let's break this down. My primary objective is to ascertain whether the provided content constitutes an announcement of a strike. The input clearly states a \"24-hour national strike\" set for Monday, September 22nd. Given the lack of a specified year, I'm defaulting to 2025 as a reasonable assumption for the near future. While I can check the actual current year for context, for now I'll stick with 2025.\n\nSo, here's what I've extracted:\n\n*   **Strike Confirmation:** The content unequivocally indicates a strike, therefore `isStrike` is `true`.\n*   **Date & Time:** The strike begins on September 22nd, 2025 (I'm using this as the default), and lasts for 24 hours. The formal start time is \"2025-09-22 00:00:00\" and the end time \"2025-09-22 23:59:59\".\n*   **Location:** The strike is national in scope, so I'm logging `locationType` as \"NATIONAL\".\n*   **Guaranteed Periods:** The text specifies guaranteed times, which I'll translate to `guaranteedTimes`. The Italian phrases \"fino alle 8,30\" (until 08:30) and \"dalle 17 alle 20\" (from 17:00 to 20:00) tell me that these segments of time are guaranteed. Thus, the guaranteed intervals are \"00:00-08:30\" and \"17:00-20:00\".\n\nFinally, I'll store all this in the `strikeData` object, mapping the strike's vital information. This will include the `startDate`, `endDate`, `locationType`, and `guaranteedTimes`. This information can then be used to perform further processing and analysis to determine impact, send notifications, or make further relevant decisions.\n\n\n"
+    "durationMs": 6774,
+    "thoughts": "**Strike Information Extraction - My Thought Process**\n\nOkay, here's what I'm thinking. The task is to pull strike information from this HTML and spit out a JSON object. No problem, I do this all the time. Let's start with the headline and body - that's our context. \"Lunedì 22 settembre sciopero nazionale di 24 ore. Trasporto pubblico a rischio\". Alright, so Monday, September 22nd, national strike, 24 hours. The body confirms this.\n\nNow, for the juicy bits. The date is obviously September 22nd. Let's assume the upcoming year. Quick calendar check... looks like September 22nd is a Monday in 2025, so we're good to go with that. The duration is explicitly 24 hours. The strike is \"nazionale,\" so we'll treat it as a national event.\n\nThe tricky part is the guaranteed service windows. The text says \"sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" That sounds like \"regular until 8:30\" and \"from 17:00 to 20:00\". So that's the non-strike window. Let's make sure we get this right. The strike will run for the full 24 hours, therefore start at 00:00 and end at 23:59 on the same day.\n\nAlright, so the `startDate` should be \"2025-09-22 00:00:00\" and the `endDate` \"2025-09-22 23:59:59\". The `locationType` is \"NATIONAL,\" and `locationCodes` is `null`. We need to include the guaranteed service windows, those are important for users. I'll translate that into the correct format. The `guaranteedTimes` should be [\"00:00-08:30\", \"17:00-20:00\"].\n\nFinally, to confirm, we set `isStrike` to `true`. And there we have it, a JSON object ready to go.\n\n\n"
   }
 }

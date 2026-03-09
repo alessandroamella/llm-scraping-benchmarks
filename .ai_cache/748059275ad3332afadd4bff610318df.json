@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-07-23 09:00:00",
+      "endDate": "2025-07-23 11:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4845,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00030975,
+      "outputCost": 0.0001395,
+      "thinkingCost": 0.000615,
+      "cachedCost": 0,
+      "totalCost": 0.00106425
+    },
+    "hash": "748059275ad3332afadd4bff610318df",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_2_ore_mercoledi_23_luglio_2025.html",
+    "thoughts": "**Strike Analysis: EAV Linee Suburbane - July 23, 2025**\n\nOkay, here's what I've got. The input clearly describes a strike scheduled for July 23rd, 2025, concerning the \"Linee Suburbane\" operated by EAV. This is a regional strike within Campania, specifically covering region 15, as EAV operates there. I need to extract the pertinent details and format them into a JSON structure, which is a straightforward task.\n\nMy analysis reveals this is an upcoming event, confirmed as a strike. The strike period is defined precisely: it starts at 09:00 and ends at 11:00 on July 23rd, 2025. The strike is organized by Faisa Confail.\n\nRegarding \"guaranteed times,\" the text references \"ultime partenze prima dello sciopero\" (last departures before the strike) and \"prime partenze dopo lo sciopero\" (first departures after the strike). However, I have to be careful here. While the language explicitly states \"fasce di garanzia\" (guaranteed time slots), I see no explicit HH:mm-HH:mm ranges. I'll need to double-check the text again, but my initial thought is the text just mentions departures, not the intervals of guaranteed service. The instruction specifically requires an array of HH:mm-HH:mm. Since the exact guaranteed time slots are not explicitly defined in the input, I'll have to omit the `guaranteedTimes` field completely to remain compliant with the specifications. We can't fabricate that information, so I need to leave it as is or null.\n\n\n",
+    "tokens": {
+      "input": 1239,
+      "output": 93,
+      "total": 1742
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 25849,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005995,
+      "outputCost": 0.000942,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00100195
+    },
+    "hash": "788ccd0f8281a8dcbe7745149acfa6fe",
+    "sourceFile": "roma_servizi_mobilit_domani_attivit_rischio_sciopero.html",
+    "thoughts": "**Extracting strike information**\n\nI need to follow the strike extraction format to output JSON. The document's title indicates an upcoming strike with the phrase \"domani attività a rischio per sciopero,\" meaning tomorrow activities might be disrupted. It mentions that there may be issues affecting public service. So, this is an announcement for an upcoming strike, not an ongoing situation, which means isStrike should be true. I’ll need to extract specific strike data, though no times are given.",
+    "tokens": {
+      "input": 1199,
+      "output": 2355,
+      "total": 3554
+    }
+  }
+}

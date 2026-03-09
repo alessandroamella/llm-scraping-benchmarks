@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-01-12 03:00:00",
+      "endDate": "2026-01-13 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "08",
+        "07",
+        "03",
+        "01",
+        "05"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6057,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00024,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.000906,
+      "cachedCost": 0,
+      "totalCost": 0.0013305
+    },
+    "hash": "78167a7908a1036f147aea627f65794a",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2026-1-12-sciopero-del-personale-di-treno.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, here's the deal. I need to determine if this HTML input describes an upcoming strike and, if so, extract the crucial details in JSON format. The criteria are pretty straightforward: if it's an announcement of an upcoming strike, `isStrike` should be true. Cancellations, participation reports, and real-time updates get a \"false\". Dates need to be in `yyyy-MM-dd HH:mm:ss` format, and the `locationType` will be either \"REGIONAL\" or \"NATIONAL,\" with the regional codes adhering to the specified format. Guaranteed times, if provided, get a specific array format as `HH:mm-HH:mm`.\n\nLet's dive in. The text has a heading: \"SCIOPERO REGIONALE DEL TRASPORTO FERROVIARIO - REGIONE LOMBARDIA\". The content states, \"Dalle ore 03:00 di lunedì 12 gennaio alle ore 02:00 di martedì 13 gennaio 2026...\" That’s a clear strike start and end date. The text mentions multiple regions like Emilia Romagna, Liguria, Lombardia, Piemonte, and Veneto. Initially, I was a little thrown by the heading indicating \"REGIONAL\" while listing multiple regions. However, the intent is clear; it’s a strike impacting these areas.\n\nNow, let's break down the data: The strike starts on \"2026-01-12 03:00:00\" and ends on \"2026-01-13 02:00:00\". The regions are: Emilia-Romagna (08), Liguria (07), Lombardia (03), Piemonte (01), and Veneto (05). I'm confident about marking `isStrike` as true.\n\nRegarding the `locationType`, the specified format requires either \"REGIONAL\" or \"NATIONAL\". Given that multiple regions are specified, \"REGIONAL\" makes sense. \"NATIONAL\" is not explicitly correct. Therefore, I will set `locationType` to \"REGIONAL.\" The `locationCodes` will be an array of these regions: [\"08\", \"07\", \"03\", \"01\", \"05\"].\n\nFinally, there's no mention of \"guaranteed times\" in the text. I'll omit or set that value to null. With that, I believe I've got all the essential information to construct the JSON output, following the provided structure precisely.\n\n\n",
+    "tokens": {
+      "input": 960,
+      "output": 123,
+      "total": 1687
+    }
+  }
+}

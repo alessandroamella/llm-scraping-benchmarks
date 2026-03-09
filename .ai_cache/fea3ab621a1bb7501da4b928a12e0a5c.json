@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 38755,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007675,
+      "outputCost": 0.001418,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00149475
+    },
+    "hash": "fea3ab621a1bb7501da4b928a12e0a5c",
+    "sourceFile": "venerdi_10_sciopero_del_trasporto_pubblico_rete_atac_a_rischio.html",
+    "thoughts": "**Parsing strike data**\n\nI'm figuring out the parameters for the strike data. I need to include startDate, endDate, locationType, locationCodes, and guaranteedTimes. \n\nThe article refers to \"Venerdì 10 ottobre\" (Friday, October 10), but it doesn't specify the year. The data indicates \"Rome, Lazio (12)\", and examples include 2024. I’ll format everything as 'yyyy-MM-dd HH:mm:ss', but without a specific year, I’m left guessing one from the 2020s. \n\nI must ensure that this extraction is accurate without inventing a year.",
+    "tokens": {
+      "input": 1535,
+      "output": 3545,
+      "total": 5080
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-14 00:00:00",
+      "endDate": "2025-11-15 00:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 36608,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006075,
+      "outputCost": 0.0012592,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00131995
+    },
+    "hash": "5661f17c26ae8a74fd7fe5c822f82e73",
+    "sourceFile": "trasporto_pubblico_venerdi_prossimo_sciopero_di_24_ore_servizio_a_rischio.html",
+    "thoughts": "**Assessing strike announcement**\n\nI need to output JSON for a strike extraction based on the specifications. The document appears to announce a potentially upcoming strike, as it mentions \"Trasporto pubblico, venerdì prossimo sciopero di 24 ore.\" From the details, it notes a 24-hour strike on Friday, November 14, 2025, with the service at risk. It clearly indicates service will be regular until 8:30 and from 17:00 to 20:00, so yes, it's an upcoming event.",
+    "tokens": {
+      "input": 1215,
+      "output": 3148,
+      "total": 4363
+    }
+  }
+}

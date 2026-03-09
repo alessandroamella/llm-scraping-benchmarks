@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5986,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000785,
+      "outputCost": 0.000132,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002105
+    },
+    "hash": "24173367f078dcf53b8da35264031865",
+    "sourceFile": "sciopero_del_trasporto_pubblico_attive_le_metropolitane_e_la_termini_centocelle.html",
+    "thoughts": "**Preparing JSON output**\n\nI see that this is part of an ongoing strike, which means isStrike is false. So, I need to make sure to output just that: {\"isStrike\": false}. The example for when there is no strike shows only isStrike as false, so I’ll follow that format closely. I’ll ensure the JSON formatting is exact and won’t add any extra commentary. Let’s get the final answer ready!",
+    "tokens": {
+      "input": 1570,
+      "output": 330,
+      "total": 1900
+    }
+  }
+}

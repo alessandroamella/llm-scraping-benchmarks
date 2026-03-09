@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-11-27 00:00:00",
+      "endDate": "2023-11-27 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24950,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007615,
+      "outputCost": 0.0008948,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00097095
+    },
+    "hash": "7df12b642dcbcd546e4019f7850317c9",
+    "sourceFile": "luned_27_novembre_sciopero_nazionale_trasporto_pubblico_possibili_disagi.html",
+    "thoughts": "**Analyzing upcoming transport strike**\n\nI need to output JSON for strike extraction and determine if this is about an upcoming strike. The content is in Italian, mentioning a national public transport strike on Monday, November 27, due to disruptions. It provides some details about the service availability in Rome and affected transport networks, indicating a 24-hour strike proclaimed by various unions. This definitely means it is an announcement for an upcoming strike, so I'll proceed with that classification.",
+    "tokens": {
+      "input": 1523,
+      "output": 2237,
+      "total": 3760
+    }
+  }
+}

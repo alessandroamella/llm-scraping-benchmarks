@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-10 08:30:00",
+      "endDate": "2025-01-10 12:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19070,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000767,
+      "outputCost": 0.0008724,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0009491
+    },
+    "hash": "b29d9edd62443ca6bbd304abe327d413",
+    "sourceFile": "trasporto_pubblico_venerdi_10_gennaio_sciopero_nazionale_di_4_ore.html",
+    "thoughts": "**Determining strike details**\n\nThe content mentions \"sciopero nazionale,\" meaning locationType should be NATIONAL and we can skip locationCodes. Since it's about an upcoming strike, isStrike should be true. We need to establish startDate and endDate. The year isn’t clearly provided, but there might be context implying it's 2024. However, guessing isn't safe. The safest method could be setting the year as null if it's uncertain, following the required date format of 'yyyy-MM-dd HH:mm:ss'.",
+    "tokens": {
+      "input": 1534,
+      "output": 2181,
+      "total": 3715
+    }
+  }
+}

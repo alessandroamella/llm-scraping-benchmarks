@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9532,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006602,
+      "outputCost": 0.0002196,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008798
+    },
+    "hash": "5b4a93ac5377f733cb54c2e74d6bef3a",
+    "sourceFile": "comunicato_stampa_sciopero_trasporto_pubblico.html",
+    "thoughts": "**Determining strike announcement status**\n\nI need to check if the document is announcing a new or upcoming strike. The content mentions \"Sciopero del trasporto pubblico, adesione personale Atac al 53,2%\" and indicates a press release dated 8/11/2024 updated on 11/11/2024 about 53.2% staff participation in a past strike. Since the document discusses participation in a strike that has already occurred, I conclude that it isn’t announcing a new strike—so, isStrike should be false.",
+    "tokens": {
+      "input": 13204,
+      "output": 549,
+      "total": 13753
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8348,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00033875,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.001254,
+      "cachedCost": 0,
+      "totalCost": 0.00178925
+    },
+    "hash": "14e834b6c0fa71e27986176fcd225a39",
+    "sourceFile": "venerdi_28_novembre_sciopero_generale_nazionale_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Analyzing the National Strike Data**\n\nOkay, so I've been given this HTML content describing a potential national strike. My primary objective is to determine if it describes an upcoming strike, and if so, to extract the relevant details. If not, I'll return `isStrike: false`.\n\nThe content's title is \"Venerdì 28 novembre sciopero generale nazionale. Trasporto pubblico a rischio,\" which translates to \"Friday, November 28th general national strike. Public transport at risk.\" The body confirms this, stating that public transport will be affected by a 24-hour national strike called by various unions.\n\nThe tricky part is the date. The text only mentions \"Venerdì 28 novembre\" (Friday, November 28th) and does not specify the year. So, I need to figure out the date. Considering the context, I'll assume it's for the current or upcoming year. November 28th, 2024 is a Thursday. November 28th, 2025 is a Friday, as per the text. So, the upcoming occurrence is on November 28th, 2025.\n\nThe duration is clearly stated as 24 hours. Given the absence of specific start and end times, I'll assume the strike begins at 00:00:00 and ends at 23:59:59 on November 28th, 2025.\n\nThe location is straightforward. The word \"nazionale\" (national) indicates that it's a NATIONAL strike. The text mentions guaranteed public transportation services \"fino alle 8,30\" (until 08:30) and \"dalle 17 alle 20\" (from 17:00 to 20:00). So, I am inferring these are guaranteed times during the strike, rather than during the normal public transport hours.\n\nTherefore, `isStrike` is definitely `true`. The `strikeData` object will contain:\n\n*   `startDate`: \"2025-11-28 00:00:00\"\n*   `endDate`: \"2025-11-28 23:59:59\"\n*   `locationType`: \"NATIONAL\"\n*   `guaranteedTimes`: [\"00:00-08:30\", \"17:00-20:00\"]\n*   `locationCodes` will be `null`.\n\nSo, the strike data is confirmed.\n\n\n",
+    "tokens": {
+      "input": 1355,
+      "output": 131,
+      "total": 2322
+    }
+  }
+}

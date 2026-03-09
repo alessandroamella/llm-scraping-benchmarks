@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4280,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00372525,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000462,
+      "cachedCost": 0,
+      "totalCost": 0.00420225
+    },
+    "hash": "579add0a08268aaadf13137d7dac22ef",
+    "sourceFile": "trasporto_pubblico_28_ottobre_sciopero_sulla_rete_atac.html",
+    "thoughts": "**Analyzing the ATAC Strike Announcement**\n\nOkay, let's break this down. My task is clear: I need to determine if this text announces an *upcoming* strike by ATAC (code \"12\", Rome, Lazio). The rules are straightforward – if it’s a cancellation, past participation, real-time update, or general service info, the answer is `isStrike: false`. Only if it's an *upcoming* strike do I return `isStrike: true` and the `strikeData`.\n\nNow, the input: the title says, \"Trasporto pubblico, il 28 ottobre sciopero sulla rete Atac,\" which translates to \"Public transport, October 28 strike on the Atac network.\" The text itself confirms this: \"Lunedì 28 ottobre trasporto pubblico romano a rischio per lo sciopero di 24 ore... Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" That's the key date, October 28th, 2024. The publish date of the text is the 22nd of October 2024.\n\nHere's the crucial point: I'm operating under the context of \"Published Time: Mon, 09 Mar 2026.\" The event date is October 2024, but it is now March 2026. This means the event is in the past. Therefore, this is not an *upcoming* strike announcement; it's a record of a past event. Following the rule set, I need to confidently return `isStrike: false`.\n\n\n",
+    "tokens": {
+      "input": 14901,
+      "output": 10,
+      "total": 15219
+    }
+  }
+}

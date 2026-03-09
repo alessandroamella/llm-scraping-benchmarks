@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9623,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00066305,
+      "outputCost": 0.0002056,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00086865
+    },
+    "hash": "d8b2eb9830b31694a1cd7b2ad5cab1d1",
+    "sourceFile": "sciopero_trasporto_pubblico_aperte_metropolitane.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to check if the document is announcing a new or upcoming strike. The content mentions a public transport strike in Rome, stating it was published in March 2022 and updated in January 2023. It also discusses a 24-hour strike that's ongoing but refers to events from 2022. Since the instructions say I should only indicate that there is an upcoming strike if the announcement is about the future, I can’t set “isStrike” to true here.",
+    "tokens": {
+      "input": 13261,
+      "output": 514,
+      "total": 13775
+    }
+  }
+}

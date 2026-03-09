@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4528,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0003255,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0001995,
+      "cachedCost": 0,
+      "totalCost": 0.00054
+    },
+    "hash": "b8d39a756adc0febfc8f10f088a57b6c",
+    "sourceFile": "sciopero_nazionale_trasporto_pubblico_ha_aderito_101_personale_atac.html",
+    "thoughts": "**Analyzing the Strike Data**\n\nOkay, let's break this down. My input is: \"Sciopero nazionale del trasporto pubblico, ha aderito il 10,1% del personale Atac\" and \"L’adesione del personale Atac allo sciopero nazionale del trasporto pubblico di questa mattina è stata pari al 10,1%.\" My immediate goal is to determine if this describes an upcoming strike, or if it's a report on a past event.\n\nLooking at the phrases, the keyword is \"adesione,\" the participation, and \"questa mattina,\" this morning. This tells me that the participation *already occurred*. The text isn't announcing a future strike; it's *reporting* the level of participation in a strike that took place today. Therefore, the information is about an event that has already occurred. My conclusion is definitive: `isStrike` = false.\n\n\n",
+    "tokens": {
+      "input": 1302,
+      "output": 10,
+      "total": 1445
+    }
+  }
+}

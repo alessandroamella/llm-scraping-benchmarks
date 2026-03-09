@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-12-07 09:00:00",
+      "endDate": "2023-12-07 13:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 15427,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005915,
+      "outputCost": 0.0005128,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00057195
+    },
+    "hash": "1a7dd965854a5968070b74384e9af80f",
+    "sourceFile": "gioved_sciopero_regionale_4_ore_trasporto_pubblico_rischio.html",
+    "thoughts": "**Extracting strike announcement details**\n\nI need to output the data in the JSON format based on the strike extraction guidelines. The document is likely announcing an upcoming strike. The content is Italian, with a title indicating a four-hour strike on December 7. The paragraph confirms that public transport will be affected during this time, organized by the Faisa Cisal union. Even though the date is technically in the past relative to 2023, the announcement indicates it's an upcoming strike.",
+    "tokens": {
+      "input": 1183,
+      "output": 1282,
+      "total": 2465
+    }
+  }
+}

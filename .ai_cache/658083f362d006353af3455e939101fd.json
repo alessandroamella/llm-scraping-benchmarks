@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-14 08:30:00",
+      "endDate": "2025-01-14 12:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5545,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00034525,
+      "outputCost": 0.0001335,
+      "thinkingCost": 0.0007605,
+      "cachedCost": 0,
+      "totalCost": 0.00123925
+    },
+    "hash": "658083f362d006353af3455e939101fd",
+    "sourceFile": "venerdi_14_gennaio_sciopero_nazionale_4_ore_trasporto_pubblico_rischio.html",
+    "thoughts": "**My Analysis of the Upcoming ATAC Strike**\n\nOkay, so I've got this piece of information about an upcoming public transport strike in Rome, specifically affecting ATAC. The title gives it away: \"Venerdì 14 gennaio sciopero nazionale di 4 ore. Trasporto pubblico a rischio,\" which translates to \"Friday, January 14, national 4-hour strike. Public transport at risk.\"\n\nI need to nail down the specifics. The date is Friday, January 14th. The information doesn't explicitly mention the year, but given the prompt I'll assume a future instance and use 2025 – \"2025-01-14.\" The strike duration is four hours, from 08:30 to 12:30. Importantly, it's a *national* strike. This means it's not just a local ATAC issue, although it's certainly impacting Rome.\n\nBased on this, I would format the key details this way:\n\n*   `isStrike`: true\n*   `strikeData`:\n    *   `startDate`: \"2025-01-14 08:30:00\"\n    *   `endDate`: \"2025-01-14 12:30:00\"\n    *   `locationType`: \"NATIONAL\"\n    *   `locationCodes`: null (Since it's national).\n\nOf course, the guaranteed times aren't specified in the text provided. A deeper investigation would be needed to determine that.\n\n\n",
+    "tokens": {
+      "input": 1381,
+      "output": 89,
+      "total": 1977
+    }
+  }
+}

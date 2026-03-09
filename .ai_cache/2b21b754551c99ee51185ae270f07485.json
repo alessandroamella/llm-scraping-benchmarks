@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 2710,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0003265,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0002175,
+      "cachedCost": 0,
+      "totalCost": 0.000559
+    },
+    "hash": "2b21b754551c99ee51185ae270f07485",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_212.html",
+    "thoughts": "**Analyzing the Atac Strike Announcement**\n\nOkay, so I'm looking at this announcement about an Atac strike, and the key thing here is the word \"adesione,\" meaning participation, which is what I need to focus on. The title itself, \"Sciopero del trasporto pubblico, adesione personale Atac al 21,2%,\" already points to participation percentages. The body text confirms that this is about participation *in* a strike that's *already* happened, noting that participation reached 21.2% \"a metà mattinata\" (mid-morning). The crucial instruction here is to set `isStrike` to `false` if the content is just reporting *on* participation in a *completed* strike. And based on what I'm reading, there's no question; this is a post-event report. This isn't an *announcement* of a future disruption. This is data. `isStrike` absolutely needs to be set to false. Simple enough.\n\n\n",
+    "tokens": {
+      "input": 1306,
+      "output": 10,
+      "total": 1461
+    }
+  }
+}

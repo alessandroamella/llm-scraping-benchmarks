@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-09-30 03:00:00",
+      "endDate": "2024-10-01 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4180,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0003155,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.000627,
+      "cachedCost": 0,
+      "totalCost": 0.0011525
+    },
+    "hash": "549edcec9afe7607e7e03a7db5472ae8",
+    "sourceFile": "strike-detail-sciopero-del-trasporto-ferroviario-luned--30-sette.html",
+    "thoughts": "**Analyzing the Upcoming Rail Strike**\n\nOkay, so I'm processing information about an upcoming rail strike. It seems this involves \"ORSA\" and \"Uiltrasporti,\" and it's scheduled to take place on Monday, September 30th, 2024. The strike will run from 03:00 on September 30th to 02:00 on October 1st, which is fairly standard.\n\nThe context here is Trenord, and it's operating within region 03, which I immediately recognize as Lombardy. So this is a regional strike, affecting services within that area, which is important to quickly flag.\n\nI can see the guaranteed service bands are from 06:00 to 09:00 and then again from 18:00 to 21:00. These guaranteed times are crucial; I'll need to know which services will run during those periods. This is key for analyzing the potential disruption.\n\nLet's break down the strike details: `isStrike`: true, confirmed, and I can extract strike information from `strikeData` where I have the start and end dates/times, a regional `locationType`, `locationCodes` [\"03\"], and again, the confirmed guaranteed times.\n\nI must ensure this information is valid JSON for further processing, which is always important.\n\n\n",
+    "tokens": {
+      "input": 1262,
+      "output": 140,
+      "total": 1820
+    }
+  }
+}

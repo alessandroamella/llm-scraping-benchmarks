@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-24 00:00:00",
+      "endDate": "2025-02-24 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 23313,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00067425,
+      "outputCost": 0.000808,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00148225
+    },
+    "hash": "6a30be240fcacef6fdae462684a9d148",
+    "sourceFile": "lunedi_24_febbraio_sciopero_nazionale_del_trasporto_pubblico_possibili_disagi.html",
+    "thoughts": "**Interpreting service hours**\n\nThe phrase \"il servizio sarà regolare fino alle 8,30 e dalle 17 alle 20\" suggests that regular service is promised until 8:30 AM and then again from 5 PM to 8 PM. This implies potential disruptions outside these times, as \"fino alle 8,30\" includes early morning, while \"dalle 17 alle 20\" covers late afternoon to evening. Given the context of a national strike, it seems reasonable to list these guaranteed times, while we can omit location codes as suggested.",
+    "tokens": {
+      "input": 13485,
+      "output": 2020,
+      "total": 15505
+    }
+  }
+}

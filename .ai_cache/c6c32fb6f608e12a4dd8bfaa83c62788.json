@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-01-14 08:30:00",
+      "endDate": "2022-01-14 12:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18877,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00067135,
+      "outputCost": 0.0006524,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00132375
+    },
+    "hash": "c6c32fb6f608e12a4dd8bfaa83c62788",
+    "sourceFile": "venerdi_14_gennaio_sciopero_nazionale_4_ore_trasporto_pubblico_rischio.html",
+    "thoughts": "**Extracting strike data**\n\nI need to extract strike data and format it correctly. For the start date, it mentions January 14, 2022, from 8:30 to 12:30, which I'll format as \"2022-01-14 08:30:00\" and the end date as \"2022-01-14 12:30:00\". \n\nNext, the location type is for a national strike, and I have to omit or set location codes to null since it's national. So, I'll set locationType to \"NATIONAL\" and omit locationCodes.",
+    "tokens": {
+      "input": 13427,
+      "output": 1631,
+      "total": 15058
+    }
+  }
+}

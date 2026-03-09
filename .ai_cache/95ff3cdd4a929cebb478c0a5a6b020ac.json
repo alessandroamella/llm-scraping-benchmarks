@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-05-11 00:00:00",
+      "endDate": "2025-05-11 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5160,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0003165,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.0008175,
+      "cachedCost": 0,
+      "totalCost": 0.001344
+    },
+    "hash": "95ff3cdd4a929cebb478c0a5a6b020ac",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_24h_domenica_11_maggio_2025.html",
+    "thoughts": "**My Analysis of the EAV Strike Information**\n\nOkay, so I need to extract and structure the strike information from this text. The goal is to produce clean, parseable JSON data. Let's break this down systematically.\n\nFirst, I recognize the core elements: there's an announcement about a 24-hour strike concerning Linea Metropolitana on Sunday, May 11th, 2025. \"Linea Metropolitana\" implies a regional scope, which, based on prior knowledge of these codes, should correspond to EAV, and EAV's region (Campania) has a code of \"15\".\n\nThe announcement also specifies guaranteed service times: 05:30 to 08:30 and 16:30 to 19:30.  I need to remember these.\n\nI am confirming `isStrike` should be true.  Good, it is.\n\nNow, let's assemble the `strikeData`. I'm going to set `startDate` to \"2025-05-11 00:00:00\" and `endDate` to \"2025-05-11 23:59:59\" because the duration is 24 hours, and it's safest to assume the strike covers the full day. The \"Per il giorno...\" further confirms all of this.\n\n`locationType` will be \"REGIONAL,\" and `locationCodes` will be [\"15\"].  The guaranteed times will be added to `guaranteedTimes` which is going to be set to [\"05:30-08:30\", \"16:30-19:30\"].\n\nFinally, the output needs to be in JSON format. I must ensure the JSON is strictly parseable, without any extraneous text or comments. I'm ready to craft that JSON now.\n\n\n",
+    "tokens": {
+      "input": 1266,
+      "output": 140,
+      "total": 1951
+    }
+  }
+}

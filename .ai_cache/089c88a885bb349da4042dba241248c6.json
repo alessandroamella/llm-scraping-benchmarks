@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-16 10:00:00",
+      "endDate": "2025-11-16 17:59:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "08",
+        "07",
+        "03",
+        "01",
+        "05"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6385,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00023425,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.0007935,
+      "cachedCost": 0,
+      "totalCost": 0.00122425
+    },
+    "hash": "089c88a885bb349da4042dba241248c6",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-11-16-sciopero-del-personale-di-tren.html",
+    "thoughts": "**Strike Analysis & JSON Output**\n\nOkay, let's break this down. My task is to definitively determine if this text represents a strike announcement, and if so, to craft a valid JSON object based on the schema I'm given. The input content clearly indicates a strike by Trenord/Trenitalia personnel. The page title \"SCIOPERO DEL PERSONALE DI TRENORD\" is the first red flag, followed by the explicit date and time range: \"Dalle ore 10:00 alle ore 17:59 di domenica 16 novembre 2025.\" That's a solid start.\n\nThe locations are also specified: Emilia Romagna, Liguria, Lombardia, Piemonte, and Veneto. This confirms the scope is regional/interregional; more than one region is involved. The phrase \"Lo sciopero ricade in una fascia oraria senza treni garantiti\" is key – it explicitly states there are *no* guaranteed train services during the strike. That's a crucial piece of information.\n\nTherefore, `isStrike` is definitely `true`. The `startDate` is \"2025-11-16 10:00:00\" and the `endDate` is \"2025-11-16 17:59:00\", as extracted. Since specific regions are listed, even if multiple, the `locationType` is definitely \"REGIONAL\". I need to find the location codes too. Emilia-Romagna is 08, Liguria is 07, Lombardia is 03, Piemonte is 01, and Veneto is 05, so the `locationCodes` array will be [\"08\", \"07\", \"03\", \"01\", \"05\"]. Because no guaranteed times are mentioned in the text, I'll set `guaranteedTimes` to `null` or omit it. The schema says that is an option.\n\nNow, I can build my output JSON:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-11-16 10:00:00\",\n    \"endDate\": \"2025-11-16 17:59:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\n      \"08\",\n      \"07\",\n      \"03\",\n      \"01\",\n      \"05\"\n    ],\n    \"guaranteedTimes\": null\n  }\n}\n```\nThat should be a clean and correct JSON response.\n\n\n",
+    "tokens": {
+      "input": 937,
+      "output": 131,
+      "total": 1597
+    }
+  }
+}

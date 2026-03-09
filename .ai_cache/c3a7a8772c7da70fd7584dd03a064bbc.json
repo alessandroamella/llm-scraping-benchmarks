@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-07-23 09:00:00",
+      "endDate": "2025-07-23 11:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "09:00-11:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 23644,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0001129,
+      "outputCost": 0.000926,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0010389
+    },
+    "hash": "c3a7a8772c7da70fd7584dd03a064bbc",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_2_ore_mercoledi_23_luglio_2025.html",
+    "thoughts": "**Extracting strike data**\n\nI need to format the output as JSON following the strike_extraction schema. The document indicates a future strike notice for \"Linee Vesuviane\" on July 23, 2025. So, isStrike should be true. I’ll extract the strike data, with startDate as \"2025-07-23 09:00:00\" and endDate as \"2025-07-23 11:00:00.\" It seems this pertains to a regional strike given its location in Napoli, around Campania, so I'll label it as such.",
+    "tokens": {
+      "input": 2258,
+      "output": 2315,
+      "total": 4573
+    }
+  }
+}

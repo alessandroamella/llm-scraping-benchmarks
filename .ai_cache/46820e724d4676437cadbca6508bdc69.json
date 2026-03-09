@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-09-04 08:30:00",
+      "endDate": "2025-09-04 12:30:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4450,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00020625,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.0005415,
+      "cachedCost": 0,
+      "totalCost": 0.00089625
+    },
+    "hash": "46820e724d4676437cadbca6508bdc69",
+    "sourceFile": "rete_atac_giovedi_4_settembre_sciopero_dalle_830_alle_1230_possibili_disagi.html",
+    "thoughts": "**Strike Analysis: Rome, September 4th, 2025**\n\nOkay, let's break this down. First, I see an announcement about a strike impacting \"rete Atac\" – that immediately tells me this involves local transport within the Rome area. The date is clearly stated as \"giovedì 4 settembre,\" which translates to Thursday, September 4th. The time window is from 8:30 AM to 12:30 PM. Given the publication date of August 29th, 2025, the date is easy to parse.\n\nThis is a clear-cut strike; `isStrike` is definitely `true`. I need to extract the relevant details for the data structure. The `startDate` is \"2025-09-04 08:30:00\" and the `endDate` is \"2025-09-04 12:30:00.\" Since \"rete Atac\" refers to local transport, I'm categorizing the `locationType` as \"REGIONAL,\" specifically covering Rome, which I know codes as \"12.\" So, `locationCodes` is [\"12\"]. There's no mention of guaranteed service, so I'll leave `guaranteedTimes` as unspecified. Now, the key is to ensure this information is clean, structured, and ready for integration.\n\n\n",
+    "tokens": {
+      "input": 825,
+      "output": 99,
+      "total": 1285
+    }
+  }
+}

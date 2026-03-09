@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-07-07 00:00:00",
+      "endDate": "2023-07-07 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24824,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000606,
+      "outputCost": 0.0009956,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0010562
+    },
+    "hash": "d48f186662147ba7288d7dd455a0ab88",
+    "sourceFile": "venerd_7_luglio_trasporto_pubblico_rischio_sciopero_nazionale_24_ore_della_faisa_confail.html",
+    "thoughts": "**Parsing strike announcement**\n\nI need to output JSON that includes an `isStrike` boolean and `strikeData` if applicable. So, I’ll check if the document indicates a new or upcoming strike. The context metadata shows it's about a 24-hour nationwide strike on July 7 from the Faisa Confail union. The document mentions that public transport will be at risk, and it provides specific details about the services affected and their schedules. Let's process this information clearly!",
+    "tokens": {
+      "input": 1212,
+      "output": 2489,
+      "total": 3701
+    }
+  }
+}

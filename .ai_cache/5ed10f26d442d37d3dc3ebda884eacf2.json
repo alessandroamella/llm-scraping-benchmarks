@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-02-04 08:30:00",
+      "endDate": "2022-02-04 12:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 32180,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000778,
+      "outputCost": 0.0009948,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0010726
+    },
+    "hash": "5ed10f26d442d37d3dc3ebda884eacf2",
+    "sourceFile": "4_febbraio_sciopera_4_ore_sindacato_usb_trasporto_pubblico_rischio.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to determine if this document is announcing a new strike. The content is in Italian and discusses a strike on February 4, lasting four hours from 8:30 to 12:30. Since it clearly indicates an upcoming strike, I should set \"isStrike\" to true. I’ll also extract the relevant strike data with the start and end dates formatted properly. Lastly, I have to figure out if the location type is \"REGIONAL\" or \"NATIONAL.\"",
+    "tokens": {
+      "input": 1556,
+      "output": 2487,
+      "total": 4043
+    }
+  }
+}

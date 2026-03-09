@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8683,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005995,
+      "outputCost": 0.0002192,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00027915
+    },
+    "hash": "8c9acea2fcf235aff5aebae6988f30e6",
+    "sourceFile": "sciopero_trasporto_pubblico_chiusa_roma_lido_funzione_resto_della_rete.html",
+    "thoughts": "**Determining strike status**\n\nI’m realizing this might be about an ongoing strike rather than an upcoming one. The instructions are clear: if it’s just information about a past strike, or updates on an ongoing one, I need to set isStrike to false. This definitely fits the description of an ongoing strike with an end time, so it's not an announcement for something upcoming. The appropriate output should be {\"isStrike\": false}. I’ll double-check the page title to confirm it’s a status update.",
+    "tokens": {
+      "input": 1199,
+      "output": 548,
+      "total": 1747
+    }
+  }
+}

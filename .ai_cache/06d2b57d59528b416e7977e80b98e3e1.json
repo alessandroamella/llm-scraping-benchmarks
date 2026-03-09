@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-04-11 20:00:00",
+      "endDate": "2024-04-11 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "20:00-23:59"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24696,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000757,
+      "outputCost": 0.0007556,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008313
+    },
+    "hash": "06d2b57d59528b416e7977e80b98e3e1",
+    "sourceFile": "gioved_11_aprile_sciopero_nazionale_trasporto_pubblico_rischio_20_24.html",
+    "thoughts": "**Processing strike announcement**\n\nI need to output JSON following the strike extraction format and determine if the document is announcing a new or upcoming strike. The content indicates a national strike on Thursday, April 11, from 20:00 to 24:00. It's confirmed as an upcoming strike. I need to extract the strike data including startDate, endDate, locationType, locationCodes, and guaranteedTimes. The date format should be 'yyyy-MM-dd HH:mm:ss'. The content gives the date but not the year, so I’ll infer that based on the current year.",
+    "tokens": {
+      "input": 1514,
+      "output": 1889,
+      "total": 3403
+    }
+  }
+}

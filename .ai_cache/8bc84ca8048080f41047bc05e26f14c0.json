@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7465,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000593,
+      "outputCost": 0.00016,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002193
+    },
+    "hash": "8bc84ca8048080f41047bc05e26f14c0",
+    "sourceFile": "sciopero_del_trasporto_pubblico_aperte_le_metropolitane_2.html",
+    "thoughts": "**Evaluating strike status**\n\nI need to output JSON based on the specified schema. The content is in Italian, and the title translates to \"Public transport strike, metro open.\" The text indicates there's an ongoing national strike for 24 hours, which means isStrike should be set to false. The rules state that I should only mark isStrike as true for announcements of upcoming strikes. Since the document discusses an ongoing situation, I'll confirm isStrike as false.",
+    "tokens": {
+      "input": 1186,
+      "output": 400,
+      "total": 1586
+    }
+  }
+}

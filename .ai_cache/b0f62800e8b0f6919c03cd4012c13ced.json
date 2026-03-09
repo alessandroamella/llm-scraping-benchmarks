@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6709,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00019375,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.000726,
+      "cachedCost": 0,
+      "totalCost": 0.00111625
+    },
+    "hash": "b0f62800e8b0f6919c03cd4012c13ced",
+    "sourceFile": "venerdi_28_novembre_sciopero_generale_nazionale_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Analyzing the National Strike Announcement**\n\nOkay, so I'm looking at this announcement regarding a national general strike, and let's break this down systematically. The title itself, \"Venerdì 28 novembre sciopero generale nazionale. Trasporto pubblico a rischio - Roma Servizi per la Mobilità,\" immediately flags it as significant. The crucial date here is November 28th, 2025 – confirming that it is a future strike. I have confirmed that using the publication date of November 21st, 2025.\n\nMy first thought is, this is a full 24-hour national strike, which is the \"sciopero nazionale generale\" aspect. The key takeaway, of course, is the disruption to public transport. We need to define exactly what the duration is of the strike.\n\nNow, let's examine the information. The provided guaranteed times are critical. Public service will run as normal until 08:30 and will function again between 17:00 and 20:00. These are the times where transport will be unaffected. Based on the data, the strike officially begins at midnight on November 28th, and runs until 23:59:59 that day.\n\nWe have a clean and useful data structure here. I see `isStrike` is true, so that's simple. The start and end dates are clear – 2025-11-28 00:00:00 and 2025-11-28 23:59:59. The `locationType` is explicitly set to \"NATIONAL,\" and `locationCodes` is omitted (or null). And finally, the `guaranteedTimes` are [\"00:00-08:30\", \"17:00-20:00\"], which confirms the information earlier.\n\nAlright, a quick double-check... I see the announcement date is the 21st, and the strike is on the 28th. Yes, November 28th, 2025. Good. With this information in hand, I can now assess the potential impact and plan accordingly.\n\n\n",
+    "tokens": {
+      "input": 775,
+      "output": 131,
+      "total": 1390
+    }
+  }
+}

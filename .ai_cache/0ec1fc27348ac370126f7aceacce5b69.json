@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-01-24 00:00:00",
+      "endDate": "2024-01-25 00:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 27640,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000612,
+      "outputCost": 0.0009428,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.001004
+    },
+    "hash": "0ec1fc27348ac370126f7aceacce5b69",
+    "sourceFile": "sciopero_nazionale_24_gennaio_trasporto_pubblico_rischio.html",
+    "thoughts": "**Evaluating strike information**\n\nI need to construct a JSON that indicates whether a strike is occurring and provide relevant data if it is. The Italian article mentions a national strike on January 24, 2024, affecting public transportation. It states that service will operate normally until 8:30 AM and again from 5 PM to 8 PM. Given this, I’ll set \"isStrike\" to true and include the start and end dates formatted correctly. So, we’re looking at upcoming strike data here!",
+    "tokens": {
+      "input": 1224,
+      "output": 2357,
+      "total": 3581
+    }
+  }
+}

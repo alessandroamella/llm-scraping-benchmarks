@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-02-17 00:00:00",
+      "endDate": "2023-02-17 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6678,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.003754,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.001032,
+      "cachedCost": 0,
+      "totalCost": 0.0049825
+    },
+    "hash": "61697e6d5c679fe5e3b08cce93ec3cac",
+    "sourceFile": "venerd_17_febbraio_sciopero_nazionale_usb_24_ore_trasporto_pubblico_rischio.html",
+    "thoughts": "**Analyzing the Public Transport Strike Information**\n\nOkay, let's break this down. The text clearly indicates a 24-hour national strike organized by Usb is scheduled for Friday, February 17th, 2023. The strike is affecting public transportation, specifically in Rome. The mention of Atac and Roma Tpl confirms its regional impact, although the strike itself is national in scope. I need to be careful with the nuances here. The notice says service will be \"regular until 8:30 and from 17:00 to 20:00.\" This is key. That means the strike is happening *outside* those windows. So, I have to assume the strike's main duration is from 08:30 to 17:00 and from 20:00 to 23:59 on February 17th, with service guaranteed in the earlier and later windows.\n\nTherefore, `isStrike` is definitely `true`. The `startDate` is \"2023-02-17 00:00:00\" and the `endDate` is \"2023-02-17 23:59:59\". Given the text's mention of \"sciopero nazionale\" (national strike), even though it is impacting the Rome region, I will classify the `locationType` as `NATIONAL`. We aren't given specific regional codes, so `locationCodes` is `Null`. The guaranteed service times are \"00:00-08:30\" and \"17:00-20:00\", which gives us the values for `guaranteedTimes`. The date is clearly February 17th, 2023, and the strike duration is 24 hours. The strike affects public transportation within the Atac and Roma Tpl networks. All of these details confirm my initial assumptions. It appears I'm ready to accurately synthesize the implications.\n\n\n",
+    "tokens": {
+      "input": 15016,
+      "output": 131,
+      "total": 15835
+    }
+  }
+}

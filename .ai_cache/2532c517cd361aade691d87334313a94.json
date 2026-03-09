@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-09-30 03:00:00",
+      "endDate": "2024-10-01 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 15723,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00036755,
+      "outputCost": 0.0004772,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00084475
+    },
+    "hash": "2532c517cd361aade691d87334313a94",
+    "sourceFile": "strike-detail-sciopero-del-trasporto-ferroviario-luned--30-sette.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to confirm if this document announces an upcoming strike. It clearly states \"Sciopero 30 settembre\" with details about a strike on regional trains from 3:00 PM on September 30 to 2:00 AM on October 1. This indicates it's indeed an announcement. I’ll extract relevant data, ensuring the date format is correct: startDate should be 2024-09-30 03:00:00 and endDate 2024-10-01 02:00:00. The strike affects regional train services and specific routes.",
+    "tokens": {
+      "input": 7351,
+      "output": 1193,
+      "total": 8544
+    }
+  }
+}

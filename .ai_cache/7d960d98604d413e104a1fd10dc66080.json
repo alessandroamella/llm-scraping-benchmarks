@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3525,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0001975,
+      "outputCost": 0.000009,
+      "thinkingCost": 0.0002115,
+      "cachedCost": 0,
+      "totalCost": 0.000418
+    },
+    "hash": "7d960d98604d413e104a1fd10dc66080",
+    "sourceFile": "funivia_del_faito_sospensione_temporanea_del_servizio_funiviario_dalle_ore_1105.html",
+    "thoughts": "**Analyzing the Faito Cable Car Service Interruption**\n\nOkay, so I've just processed this notification from EAV, the Campania public transport authority. The message is pretty straightforward: \"Funivia del Faito – Sospensione temporanea del servizio funiviario dalle ore 11:05,\" which, roughly translated, means the Faito Cable Car service is temporarily suspended starting at 11:05. The reason given is \"Causa avverse condizioni metereologiche\" – adverse weather conditions.\n\nMy immediate takeaway is that this *isn't* a strike. The provided reason is explicitly weather-related. We're dealing with a service disruption due to operational constraints, not a labor dispute. I need to flag that `isStrike` is `false`.\n\nTherefore, I need to represent this information as a single JSON object. The most efficient representation would be: `{\"isStrike\": false}`.\n\n\n",
+    "tokens": {
+      "input": 790,
+      "output": 6,
+      "total": 937
+    }
+  }
+}

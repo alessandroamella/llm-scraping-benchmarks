@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-09-09 08:30:00",
+      "endDate": "2024-09-09 16:30:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "08:30-16:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 25276,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000764,
+      "outputCost": 0.0009532,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0010296
+    },
+    "hash": "2600643ee89b8e1de23aff3f4f2f457b",
+    "sourceFile": "luned_9_settembre_sciopero_nazionale_trasporto_pubblico_servizio_rischio.html",
+    "thoughts": "**Extracting strike announcement details**\n\nI need to check if this is a strike announcement based on the information provided in Italian, which states there's a national transport strike on Monday, September 9, affecting service from 8:30 AM to 4:30 PM. This clearly indicates it’s an announcement about an upcoming strike. I’ll need to format the start and end dates correctly, but oddly, the year isn’t mentioned, so that’s an aspect I need to address while extracting dates.",
+    "tokens": {
+      "input": 1528,
+      "output": 2383,
+      "total": 3911
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-27 21:00:00",
+      "endDate": "2025-11-28 21:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4637,
+    "preProcessingStrategy": "mineru-html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00022275,
+      "outputCost": 0.0001335,
+      "thinkingCost": 0.0006885,
+      "cachedCost": 0,
+      "totalCost": 0.00104475
+    },
+    "hash": "5348476343f4e5300f0c2d6799d3c717",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-11-27-sciopero-nazionale-del-traspor.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, here's the breakdown. My task is to analyze this HTML content and determine if it's announcing an upcoming strike and, if so, to output the relevant data in a strict JSON format. I need to be precise and adhere to the given schema.\n\nThe heading \"SCIOPERO NAZIONALE DEL TRASPORTO FERROVIARIO\" immediately signals a potential strike, a national railway strike. Now, let's look at the content: \"Dalle ore 21:00 di giovedì 27 novembre alle ore 21:00 di venerdì 28 novembre 2025 è stato indetto uno sciopero...\" The text clearly announces a strike! I've confirmed that `isStrike` is `true`.\n\nI need to extract the date information. I've correctly identified the start date as 2025-11-27 21:00:00 and the end date as 2025-11-28 21:00:00, both in the required \"yyyy-MM-dd HH:mm:ss\" format. The location type, as suggested by the heading \"SCIOPERO NAZIONALE\", is \"NATIONAL\". `guaranteedTimes` isn't mentioned, so it can be omitted.\n\nNow, to construct the `strikeData` object according to the schema. The `strikeData` object needs the `startDate`, `endDate`, `locationType`, and `locationCodes`. Since the `locationType` is NATIONAL, the `locationCodes` needs to be `null`. Therefore the JSON must be as follows:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-11-27 21:00:00\",\n    \"endDate\": \"2025-11-28 21:00:00\",\n    \"locationType\": \"NATIONAL\",\n    \"locationCodes\": null\n  }\n}\n```\n\n\n",
+    "tokens": {
+      "input": 891,
+      "output": 89,
+      "total": 1439
+    }
+  }
+}

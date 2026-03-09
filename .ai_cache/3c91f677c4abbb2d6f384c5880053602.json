@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-12-16 20:00:00",
+      "endDate": "2022-12-16 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6399,
+    "preProcessingStrategy": "jina-reader",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00375675,
+      "outputCost": 0.0001605,
+      "thinkingCost": 0.0010815,
+      "cachedCost": 0,
+      "totalCost": 0.00499875
+    },
+    "hash": "3c91f677c4abbb2d6f384c5880053602",
+    "sourceFile": "venerd_16_dicembre_sciopero_generale_regionale_trasporto_pubblico_rischio_20_24.html",
+    "thoughts": "**Strike Announcement Analysis**\n\nOkay, let's break this down. My task is to determine if the input text from Roma Servizi per la Mobilità constitutes a strike announcement and, if so, to output the relevant strike data in a specific JSON format. The provided text clearly describes a strike. The text says \"Venerdì 16 dicembre sciopero generale regionale. Trasporto pubblico a rischio dalle 20 alle 24\" which translates to \"Friday, December 16, general regional strike. Public transport at risk from 20:00 to 24:00.\"\n\nTherefore, I've identified this as a strike announcement and can now extract the relevant details. The strike date is unambiguously December 16, 2022. The strike duration is from 20:00 to 24:00. Note, the provided time notation of 24:00 will be interpreted as the end of that day. Given the prompt requests a specific timestamp format, I'll represent the end time as 2022-12-16 23:59:59. This avoids any ambiguity. The location type is \"regionale,\" which translates to \"regional\" and I know from my domain knowledge that Lazio is associated with location code 12. Guaranteed times aren't specified in the text.\n\nFinally, I have all the information required and I am confident that the strike details are: isStrike: true, with the `strikeData` object containing: startDate: \"2022-12-16 20:00:00\", endDate: \"2022-12-16 23:59:59\", locationType: \"REGIONAL\", locationCodes: [\"12\"], and guaranteedTimes: null. I will need to ensure the final output is a clean JSON string, without any additional text or comments.\n\n\n",
+    "tokens": {
+      "input": 15027,
+      "output": 107,
+      "total": 15855
+    }
+  }
+}
