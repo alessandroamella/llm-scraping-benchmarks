@@ -1,0 +1,36 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-05-20 00:00:00",
+      "endDate": "2022-05-20 23:59:59",
+      "locationType": "PROVINCE",
+      "locationCodes": [
+        "RM"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5243,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00019125,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.0008685,
+      "cachedCost": 0,
+      "totalCost": 0.00126975
+    },
+    "hash": "d6810c9be7b16b60689c608d9b51dcab",
+    "tokens": {
+      "input": 765,
+      "output": 140,
+      "total": 1484
+    }
+  }
+}

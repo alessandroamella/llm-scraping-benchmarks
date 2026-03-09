@@ -1,0 +1,60 @@
+{
+  "timestamp": "2026-03-09T02:03:36.205Z",
+  "isCacheHit": false,
+  "request": {
+    "sourceName": "ATAC",
+    "fileName": "trasporto_pubblico_28_ottobre_sciopero_sulla_rete_atac.html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "strategy": "dom-distillation-markdown",
+    "useLenientSchema": true,
+    "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a strike from \"ATAC\".\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), 2-letter for provinces (e.g., \"MI\" for Milan), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGION\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: Trasporto pubblico, il 28 ottobre sciopero sulla rete Atac - Roma Servizi per la Mobilità\n\n* * *\n\n# Trasporto pubblico, il 28 ottobre sciopero sulla rete Atac\n\nPubblicato il: 22/10/2024 - Aggiornato il: 06/11/2024\n\nLunedì 28 ottobre trasporto pubblico romano a rischio per lo sciopero di 24 ore indetto dai sindacati Usb e Orsa. L’agitazione interesserà la sola rete Atac. La protesta non coinvolgerà le linee periferiche gestite da operatori  \nprivati. Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\n\nUlteriori informazioni sui siti atac.roma.it e romamobilita.it"
+  },
+  "response": {
+    "rawOutput": {
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2024-10-28 00:00:00",
+        "endDate": "2024-10-28 23:59:59",
+        "locationType": "PROVINCE",
+        "locationCodes": [
+          "RM"
+        ],
+        "guaranteedTimes": [
+          "00:00-08:30",
+          "17:00-20:00"
+        ]
+      }
+    },
+    "parsedData": {
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2024-10-28 00:00:00",
+        "endDate": "2024-10-28 23:59:59",
+        "locationType": "PROVINCE",
+        "locationCodes": [
+          "RM"
+        ],
+        "guaranteedTimes": [
+          "00:00-08:30",
+          "17:00-20:00"
+        ]
+      }
+    },
+    "usage": {
+      "input": 621,
+      "output": 126,
+      "cached": 0,
+      "thinking": 665,
+      "total": 1412
+    },
+    "costUsd": {
+      "inputCost": 0.00015525,
+      "outputCost": 0.000189,
+      "thinkingCost": 0.0009975,
+      "cachedCost": 0,
+      "totalCost": 0.00134175
+    },
+    "durationMs": 4859,
+    "thoughts": "**My Analysis of the Upcoming Rome Public Transport Strike**\n\nOkay, so I've just processed some information regarding a significant event: a 24-hour public transport strike in Rome. It's scheduled for October 28th, 2024, affecting the Atac network. The unions Usb and Orsa are leading the industrial action.\n\nI need to nail down the specifics, as this could have a considerable impact. The strike is set to begin at midnight on the 28th and last the entire day. Rome, specifically the province (RM), is the affected area.\n\nNow, the crucial part: guaranteed service times. The text explicitly states that service *will be regular* until 8:30 AM (\"fino alle 8,30\") and from 5:00 PM to 8:00 PM (\"dalle 17 alle 20\"). I will take those phrases literally. So, I need to represent those windows as \"00:00-08:30\" and \"17:00-20:00.\" I should map precisely to the info. This is essential for anyone relying on public transport that day.\n\nEssentially, I have the following key data points:\n\n*   **Strike Date:** October 28, 2024\n*   **Duration:** 24 hours\n*   **Network:** Atac (Rome)\n*   **Guaranteed Service:** 00:00-08:30 and 17:00-20:00\n*   **Location:** Rome (RM)\n\nI'll need to keep this precise information accessible and readily available for anyone who might need it.\n\n\n"
+  }
+}

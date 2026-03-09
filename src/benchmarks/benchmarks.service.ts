@@ -2,6 +2,7 @@ import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path, { basename } from 'node:path';
 import { performance } from 'node:perf_hooks';
+import readline from 'node:readline';
 import { setTimeout as sleep } from 'node:timers/promises';
 import { Injectable, Logger, OnModuleInit } from '@nestjs/common';
 import chalk from 'chalk';
@@ -127,9 +128,9 @@ export class BenchmarksService implements OnModuleInit {
   private readonly includeManualInSuite = false;
   private readonly generateChaosDatasetFlag = false;
 
-  private readonly customReportName = 'better_prompt_ALL';
-  private readonly disabledChecks: string[] = ['locationType', 'locationCodes'];
-  // private readonly disabledChecks: string[] = [];
+  private readonly customReportName = 'base_all_models_strategies';
+  // private readonly disabledChecks: string[] = ['locationType', 'locationCodes'];
+  private readonly disabledChecks: string[] = [];
 
   // --- NEW FLAGS ---
   private readonly enableResilienceSuite = false; // Toggle Resilience Suite
@@ -179,11 +180,16 @@ export class BenchmarksService implements OnModuleInit {
     }
 
     if (this.customReportName) {
+      await sleep(100); // Give the logger a moment to print before the warning
       this.logger.warn(
         chalk.bold.yellowBright(
-          `Custom report name is set to "${this.customReportName}". Make sure this is intentional to avoid having a report that is NOT what you are looking for`,
+          `Custom report name is set to "${chalk.underline(this.customReportName)}". Please ensure this is intentional to avoid having bad report names.` +
+            (this.disabledChecks.length > 0
+              ? ` Moreover, beware of disabled checks: ${chalk.red(this.disabledChecks.join(', '))}`
+              : ''),
         ),
       );
+      await this.confirmCustomReportName();
     }
 
     if (this.disabledChecks.length > 0) {
@@ -204,6 +210,22 @@ export class BenchmarksService implements OnModuleInit {
     );
   }
 
+  private async confirmCustomReportName(): Promise<void> {
+    return new Promise((resolve) => {
+      const rl = readline.createInterface({
+        input: process.stdin,
+        output: process.stdout,
+      });
+      rl.question(
+        chalk.bold.cyan('Press ENTER to confirm and continue: '),
+        () => {
+          rl.close();
+          resolve();
+        },
+      );
+    });
+  }
+
   async runAllBenchmarks() {
     this.logger.log('Starting Multi-Model Benchmarks...');
 
@@ -217,7 +239,7 @@ export class BenchmarksService implements OnModuleInit {
     const baseStrategies: PreProcessingStrategy[] = [
       'html-to-markdown', // The likely winner
       'basic-cleanup', // Simple cleanup, no structural changes
-      'dom-distillation',
+      // 'dom-distillation',
       'dom-distillation-markdown',
       // 'raw-html', // The baseline
     ];

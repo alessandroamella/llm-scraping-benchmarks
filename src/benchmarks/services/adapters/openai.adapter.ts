@@ -15,14 +15,46 @@ export class OpenAiAdapter extends BaseOpenAiAdapter {
       ? BenchmarkAiOpenAILenientSchema
       : BenchmarkAiOpenAISchema;
 
-    const response = await this.client.responses.parse({
+    const response = await this.client.responses.create({
       model: this.model as string,
       input: prompt,
       text: { format: zodTextFormat(schema, 'strike_extraction') },
+      reasoning: {
+        effort: 'medium',
+        summary: 'auto',
+      },
     });
 
-    const rawOutput = response.output_parsed;
-    if (!rawOutput) throw new Error('OpenAI returned null parsed output');
+    // Extract message from output array
+    const messageItem = response.output?.find(
+      (item) => item.type === 'message',
+    );
+    if (!messageItem || messageItem.type !== 'message')
+      throw new Error('OpenAI response missing message');
+
+    const messageContent = messageItem.content?.[0];
+    if (messageContent?.type !== 'output_text' || !messageContent?.text)
+      throw new Error('OpenAI response missing text');
+
+    // Extract reasoning summary if available
+    const reasoningItem = response.output?.find(
+      (item) => item.type === 'reasoning',
+    );
+    const thoughts =
+      reasoningItem?.type === 'reasoning'
+        ? reasoningItem.summary?.[0]?.text
+        : undefined;
+
+    // Parse the JSON response text with the schema
+    let rawOutput: RawAiResponse;
+    try {
+      const parsed = JSON.parse(messageContent.text);
+      rawOutput = schema.parse(parsed) as RawAiResponse;
+    } catch (error) {
+      throw new Error(
+        `Failed to parse OpenAI response: ${error instanceof Error ? error.message : String(error)}`,
+      );
+    }
 
     const usage = response.usage || {
       input_tokens: 0,
@@ -31,12 +63,13 @@ export class OpenAiAdapter extends BaseOpenAiAdapter {
     };
 
     return {
-      rawOutput: rawOutput as RawAiResponse,
+      rawOutput,
       usage: {
         input: usage.input_tokens ?? 0,
         output: usage.output_tokens ?? 0,
         total: usage.total_tokens ?? 0,
       },
+      thoughts,
     };
   }
 }

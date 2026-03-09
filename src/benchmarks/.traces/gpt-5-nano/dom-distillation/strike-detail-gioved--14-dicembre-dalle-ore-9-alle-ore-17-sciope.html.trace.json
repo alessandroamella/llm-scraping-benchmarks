@@ -1,0 +1,30 @@
+{
+  "timestamp": "2026-03-09T02:12:41.405Z",
+  "isCacheHit": true,
+  "request": {
+    "sourceName": "Trenord",
+    "fileName": "strike-detail-gioved--14-dicembre-dalle-ore-9-alle-ore-17-sciope.html",
+    "model": "gpt-5-nano",
+    "strategy": "dom-distillation",
+    "useLenientSchema": true,
+    "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a strike from \"Trenord\".\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), 2-letter for provinces (e.g., \"MI\" for Milan), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGION\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"> <h3>Context Metadata</h3> <ul><li>Page Title: Giovedì 14 dicembre dalle ore 9 alle ore 17 sciopero dei treni regionaliUser-logged-no-picCloseSend-mail-OKAlert</li><li>Date News: martedì 12/12/2023</li><li>Header: Giovedì 14 dicembre dalle ore 9 alle ore 17 sciopero dei treni regionali</li></ul> </div><hr/><div> <div> <h1> <b> Giovedì 14 dicembre dalle ore 9 alle ore 17 sciopero dei treni regionali </b> </h1> <p> martedì 12/12/2023 </p> </div> <div> <!-- start simpleTextMedia --> <div> <div> <div> <div> <h4><strong>Informazioni in tempo reale sulla circolazione su trenord.it e App</strong></h4> <p>Giovedì 14 dicembre dalle ore 9 alle ore 17 è in programma uno sciopero proclamato da alcune sigle sindacali, che potrà avere ripercussioni sulla circolazione dei treni regionali, suburbani, sui servizi di Lunga Percorrenza di Trenord e sui collegamenti aeroportuali Malpensa Express e S50 Malpensa Aeroporto-Bellinzona.</p> <p>La mattina viaggeranno i treni con orario di partenza dalla stazione di origine corsa prima delle ore 9 e arrivo a destinazione finale entro le ore 10.</p> <p>Per garantire il collegamento con l’Aeroporto Internazionale di Malpensa, saranno previsti autobus sostitutivi senza fermate intermedie per le corse non effettuate sui collegamenti Malpensa Aeroporto - Milano Cadorna (partenza e arrivo in Via Paleocapa 1) e S50 Malpensa Aeroporto - Stabio.</p> <p>Informazioni in tempo reale sulla circolazione saranno disponibili sulle pagine di ogni linea della App e del sito Trenord.</p> <p>Durante lo sciopero e alla ripresa del servizio, si invitano i passeggeri a prestare attenzione ad annunci sonori e monitor di stazione.</p> <p>­</p> <p><a href=\"/fileadmin/contenuti/TRENORD/3-News/Trenord_Informa/Comunicati_stampa/2023/Trenord_231212_CS_Sciopero14.pdf\">Comunicato stampa sciopero 14 dicembre 2023</a></p> </div> </div> </div> </div> <!-- end simpleTextMedia --> </div> </div> <div>PDF Document Found: /fileadmin/contenuti/TRENORD/3-News/Trenord_Informa/Comunicati_stampa/2023/Trenord_231212_CS_Sciopero14.pdf</div>"
+  },
+  "response": {
+    "parsedData": {
+      "isStrike": false
+    },
+    "usage": {
+      "input": 1463,
+      "output": 2041,
+      "total": 3504
+    },
+    "costUsd": {
+      "inputCost": 0.00007315,
+      "outputCost": 0.0008164,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00088955
+    },
+    "durationMs": 12689
+  }
+}

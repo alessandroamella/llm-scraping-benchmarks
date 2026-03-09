@@ -1,0 +1,47 @@
+{
+  "timestamp": "2026-03-09T02:03:27.621Z",
+  "isCacheHit": false,
+  "request": {
+    "sourceName": "ATAC",
+    "fileName": "venerd_26_aprile_sciopero_nazionale_tpl_roma_possibili_disagi_830_1230.html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "strategy": "dom-distillation",
+    "useLenientSchema": true,
+    "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a strike from \"ATAC\".\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), 2-letter for provinces (e.g., \"MI\" for Milan), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGION\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"> <h3>Context Metadata</h3> <ul><li>Page Title: Venerdì 26 aprile sciopero nazionale del Tpl. A Roma possibili disagi dalle 8,30 alle 12,30 - Roma Servizi per la Mobilità</li></ul> </div><hr/><div> <div> <div> <div> <div> <div> </div> </div> </div> <div> <div> <div> <div> <h1>Venerdì 26 aprile sciopero nazionale del Tpl. A Roma possibili disagi dalle 8,30 alle 12,30</h1> </div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div><p>Pubblicato il: 19/04/2024 - Aggiornato il: 19/04/2024</p></div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div> <span> </span> </div> </div> </div> <div> <div> <div></div> </div> </div> <div> <div> <p>status: 1 Venerdì 26 aprile trasporto pubblico a rischio per lo sciopero nazionale di 4 ore, dalle 8,30 alle 12,30, proclamato dal sindacato Faisa Confail. A Roma l’agitazione interesserà le reti Atac, RomaTpl, ATI Autoservizi Troiani/Sap. Aggiornamenti in tempo reale su romamobilita.it e atac.roma.it</p> </div> </div> </div> </div> </div> </div>"
+  },
+  "response": {
+    "rawOutput": {
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2024-04-26 08:30:00",
+        "endDate": "2024-04-26 12:30:00",
+        "locationType": "NATIONAL",
+        "locationCodes": null
+      }
+    },
+    "parsedData": {
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2024-04-26 08:30:00",
+        "endDate": "2024-04-26 12:30:00",
+        "locationType": "NATIONAL"
+      }
+    },
+    "usage": {
+      "input": 774,
+      "output": 89,
+      "cached": 0,
+      "thinking": 588,
+      "total": 1451
+    },
+    "costUsd": {
+      "inputCost": 0.0001935,
+      "outputCost": 0.0001335,
+      "thinkingCost": 0.000882,
+      "cachedCost": 0,
+      "totalCost": 0.001209
+    },
+    "durationMs": 5521,
+    "thoughts": "**Strike Analysis Summary**\n\nOkay, let me break this down. My task is to determine if this text announces an upcoming strike. If it does, I need to extract specific strike data in a JSON format. The format needs to be `yyyy-MM-dd HH:mm:ss`, and region/province codes must adhere to the specified definitions. If no strike is indicated, I just return `{\"isStrike\": false}`. JSON is the only allowed format.\n\nFirst, I'm examining these example sentences: \"Venerdì 26 aprile sciopero nazionale del Tpl. A Roma possibili disagi dalle 8,30 alle 12,30\" and \"Venerdì 26 aprile trasporto pubblico a rischio per lo sciopero nazionale di 4 ore, dalle 8,30 alle 12,30.\" It's pretty clear; the words \"sciopero\" (strike) and \"disagi\" (disruptions) are direct indicators. So, I need to extract the details.\n\nThe text specifies \"Venerdì 26 aprile,\" which means Friday, April 26th. Given the publication date of 2024 (19/04/2024), I can safely assume the year is 2024. The start time is 08:30:00, and the end time is 12:30:00.\n\nThe location is described as a \"sciopero nazionale\" (national strike), but Rome (Roma) is also explicitly mentioned as an area experiencing potential disruptions. So, I can deduce that the `locationType` should be \"NATIONAL\" based on the \"nazionale\" wording. The prompt also specifies that Rome is a province (RM), but since it’s a national strike, I don’t need a location code. Therefore, `locationCodes` should be `null`.\n\nSo, the strike data I've extracted should look like this in JSON:\n\n*   `isStrike`: `true`\n*   `strikeData`:\n    *   `startDate`: \"2024-04-26 08:30:00\"\n    *   `endDate`: \"2024-04-26 12:30:00\"\n    *   `locationType`: \"NATIONAL\"\n    *   `locationCodes`: `null`\n\nNow, regarding \"guaranteedTimes.\" The text only mentions the strike duration (08:30-12:30). It doesn't explicitly state any guaranteed service times. The prompt *does* ask for \"guaranteedTimes\", as service that is guaranteed. This is standard in public transit strikes. Therefore, because of the ambiguity, I'll omit this key-value pair from the JSON output.\n\n\n"
+  }
+}

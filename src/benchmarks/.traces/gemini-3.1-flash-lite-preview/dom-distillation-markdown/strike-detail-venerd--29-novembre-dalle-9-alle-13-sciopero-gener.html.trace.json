@@ -1,0 +1,38 @@
+{
+  "timestamp": "2026-03-09T02:13:05.887Z",
+  "isCacheHit": true,
+  "request": {
+    "sourceName": "Trenord",
+    "fileName": "strike-detail-venerd--29-novembre-dalle-9-alle-13-sciopero-gener.html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "strategy": "dom-distillation-markdown",
+    "useLenientSchema": true,
+    "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a strike from \"Trenord\".\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), 2-letter for provinces (e.g., \"MI\" for Milan), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGION\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: Venerdì 29 novembre dalle 9 alle 13 sciopero generale: possibili impatti su rete Ferrovienord, servizio regolare su RFIUser-logged-no-picCloseSend-mail-OKAlert\n-   Date News: mercoledì 27/11/2024\n-   Header: Venerdì 29 novembre dalle 9 alle 13 sciopero generale: possibili impatti su rete Ferrovienord, servizio regolare su RFI\n\n* * *\n\n# **Venerdì 29 novembre dalle 9 alle 13 sciopero generale: possibili impatti su rete Ferrovienord, servizio regolare su RFI**\n\nmercoledì 27/11/2024\n\n#### ****L’agitazione riguarda il personale del gestore dell’infrastruttura, non Trenord.****  ****Possibile impatto sulla circolazione delle linee su rete FERROVIENORD e “miste”.**** ****Regolare il servizio delle linee che circolano solo su rete RFI****\n\nI sindacati Cgil e Uil hanno indetto uno sciopero generale che dalle ore 9 alle ore 13 di venerdì 29 novembre potrà interessare il personale del gestore dell’infrastruttura FERROVIENORD.\n\nIl personale di Trenord non è coinvolto dallo sciopero, ma l’agitazione sindacale potrà causare ritardi e soppressioni sulle linee che transitano su rete FERROVIENORD. In particolare, potranno essere interessate le linee regionali e suburbane che raggiungono Milano Bovisa e Milano Cadorna – da e per Saronno (S3), Seveso/Camnago (S4), Canzo/Asso, Novara Nord, Como Lago, Varese Nord/Laveno – e la Brescia-Iseo-Edolo.\n\nSaranno possibili variazioni anche sul servizio delle linee “miste” che transitano su entrambe le reti, FERROVIENORD e RFI: S1 Saronno-Milano Passante-Lodi, S2 Mariano Comense-Milano Passante-Milano Rogoredo, S9 Saronno-Seregno-Albairate, S12 Cormano Cusano-Milano Passante-Melegnano, S13 Garbagnate-Milano Passante-Pavia.\n\nSaranno coinvolti anche i servizi aeroportuali Malpensa Express su Milano Cadorna e Milano Centrale e S50 Malpensa Aeroporto-Bellinzona. Per il collegamento con l’Aeroporto di Malpensa, saranno previsti autobus sostitutivi, senza fermate intermedie, per eventuali corse non effettuate tra Milano Cadorna e Malpensa Aeroporto T1 (da via Paleocapa, 1) e tra Busto FS e Malpensa Aeroporto T1.\n\n**Sarà regolare il servizio delle linee che effettuano l’intero tragitto su rete RFI.**\n\nNella mattina di venerdì, sulle linee che circolano esclusivamente su rete FERROVIENORD viaggeranno i treni con orario di partenza dalla stazione di origine entro le ore 9. Sulle linee “miste”, viaggeranno i treni che transitano prima delle ore 9 dalle stazioni di cambio rete: Milano Bovisa e Seregno.\n\nLe informazioni sulla circolazione saranno disponibili sulle pagine di ogni linea della App e del sito Trenord. Si invitano i passeggeri a prestare attenzione ad annunci sonori e monitor di stazione.\n\n[Comunicato stampa sciopero 29 novembre](/fileadmin/contenuti/TRENORD/3-News/Trenord_Informa/Comunicati_stampa/2024/Trenord_241127_CS_Sciopero_generale.pdf)\n\nPDF Document Found: /fileadmin/contenuti/TRENORD/3-News/Trenord\\_Informa/Comunicati\\_stampa/2024/Trenord\\_241127\\_CS\\_Sciopero\\_generale.pdf"
+  },
+  "response": {
+    "parsedData": {
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2024-11-29 09:00:00",
+        "endDate": "2024-11-29 13:00:00",
+        "locationType": "REGION",
+        "locationCodes": [
+          "03"
+        ]
+      }
+    },
+    "usage": {
+      "input": 1328,
+      "output": 98,
+      "total": 1977
+    },
+    "costUsd": {
+      "inputCost": 0.000332,
+      "outputCost": 0.000147,
+      "thinkingCost": 0.0008265,
+      "cachedCost": 0,
+      "totalCost": 0.0013055
+    },
+    "durationMs": 6159
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "timestamp": "2026-03-09T02:12:40.700Z",
+  "isCacheHit": true,
+  "request": {
+    "sourceName": "Trenord",
+    "fileName": "strike-detail-sciopero-nazionale-17-novembre-ore-9-13-personale-.html",
+    "model": "gpt-5-nano",
+    "strategy": "dom-distillation",
+    "useLenientSchema": true,
+    "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a strike from \"Trenord\".\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), 2-letter for provinces (e.g., \"MI\" for Milan), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGION\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"> <h3>Context Metadata</h3> <ul><li>Page Title: Sciopero Nazionale 17 novembre ore 9-13 personale Trenord non coinvoltoUser-logged-no-picCloseSend-mail-OKAlert</li><li>Date News: giovedì 16/11/2023</li><li>Header: Sciopero Nazionale 17 novembre ore 9-13 personale Trenord non coinvolto</li></ul> </div><hr/><div> <div> <h1> <b> Sciopero Nazionale 17 novembre ore 9-13 personale Trenord non coinvolto </b> </h1> <p> giovedì 16/11/2023 </p> </div> <div> <!-- start simpleTextMedia --> <div> <div> <div> <div> <p><strong>Potrà aderire il personale delle imprese che gestiscono le infrastrutture FERROVIENORD e RFI</strong></p> <p>Il personale di Trenord non è coinvolto nello sciopero nazionale indetto per venerdì 17 novembre tra le ore 9 e le ore 13 al quale, tuttavia, potrebbero aderire i lavoratori delle imprese che gestiscono l’infrastruttura ferroviaria, FERROVIENORD e RFI.</p> <p>L’eventuale adesione allo sciopero del personale dei gestori delle infrastrutture potrà ripercuotersi anche sul servizio offerto da Trenord, causando tra le ore 9 e le ore 13 limitazioni e cancellazioni dei treni regionali, suburbani e del collegamento aeroportuale Malpensa Express.</p> <p>Nella mattina di venerdì, saranno garantiti i treni con orario di partenza entro le ore 9 e arrivo alla destinazione finale entro le ore 10.</p> <p>Per quanto riguarda il collegamento aeroportuale, saranno previsti autobus sostitutivi, senza fermate intermedie, per eventuali corse non effettuate tra Milano Cadorna e Malpensa Aeroporto – da Milano i bus partiranno da Via Paleocapa, 1 – e tra Busto Arsizio e Malpensa Aeroporto.</p> <p>Informazioni in tempo reale sulla circolazione saranno disponibili sulle pagine di ogni linea della App e del sito Trenord. Si invitano i passeggeri a prestare attenzione ad annunci sonori e monitor di stazione.</p> <p>­</p> <p><a href=\"/fileadmin/contenuti/TRENORD/3-News/Trenord_Informa/Comunicati_stampa/2023/Trenord_231115_CS_Sciopero_nazionale.pdf\">Comunicato stampa sciopero 17 novembre</a></p> </div> </div> </div> </div> <!-- end simpleTextMedia --> </div> </div> <div>PDF Document Found: /fileadmin/contenuti/TRENORD/3-News/Trenord_Informa/Comunicati_stampa/2023/Trenord_231115_CS_Sciopero_nazionale.pdf</div>"
+  },
+  "response": {
+    "parsedData": {
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2023-11-17 09:00:00",
+        "endDate": "2023-11-17 13:00:00",
+        "locationType": "NATIONAL",
+        "guaranteedTimes": [
+          "09:00-10:00"
+        ]
+      }
+    },
+    "usage": {
+      "input": 1490,
+      "output": 1708,
+      "total": 3198
+    },
+    "costUsd": {
+      "inputCost": 0.0000745,
+      "outputCost": 0.0006832,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0007577
+    },
+    "durationMs": 13123
+  }
+}

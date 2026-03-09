@@ -115,7 +115,7 @@ export class BenchmarkAiRunnerService implements OnModuleInit {
     } else {
       this.logger.warn(
         chalk.red.bold(
-          '\n⚠️  Manual confirmation DISABLED. AI will run automatically. ⚠️\n',
+          '⚠️  Manual confirmation DISABLED. AI will run automatically. ⚠️',
         ),
       );
     }
@@ -286,13 +286,12 @@ Input Content (Pre-processing: ${preProcessingStrategy}):
     const rates = getPricing(model);
     const estimatedCost = (inputTokens / 1_000_000) * rates.input;
 
-    this.logger.log(
-      `\n${chalk.yellow.bold('⚠️  Pre-Flight Check')} ${chalk.gray(`[${sourceName}]`)}\n` +
-        `${chalk.cyan('Est. Input Tokens:')} ${chalk.white.bold(inputTokens)}\n` +
-        `${chalk.green('Est. Input Cost:')} $${estimatedCost.toFixed(6)}\n`,
-    );
-
     if (this.manualConfirmationEnabled) {
+      this.logger.log(
+        `\n${chalk.yellow.bold('⚠️  Pre-Flight Check')} ${chalk.gray(`[${sourceName}]`)}\n` +
+          `${chalk.cyan('Est. Input Tokens:')} ${chalk.white.bold(inputTokens)}\n` +
+          `${chalk.green('Est. Input Cost:')} $${estimatedCost.toFixed(6)}\n`,
+      );
       await this.handleManualConfirmation(prompt, sourceName);
     }
 

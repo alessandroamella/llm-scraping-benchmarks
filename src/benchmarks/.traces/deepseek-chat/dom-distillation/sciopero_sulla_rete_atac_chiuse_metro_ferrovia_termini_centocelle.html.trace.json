@@ -1,0 +1,30 @@
+{
+  "timestamp": "2026-03-09T02:03:29.454Z",
+  "isCacheHit": true,
+  "request": {
+    "sourceName": "ATAC",
+    "fileName": "sciopero_sulla_rete_atac_chiuse_metro_ferrovia_termini_centocelle.html",
+    "model": "deepseek-chat",
+    "strategy": "dom-distillation",
+    "useLenientSchema": true,
+    "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a strike from \"ATAC\".\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), 2-letter for provinces (e.g., \"MI\" for Milan), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGION\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"> <h3>Context Metadata</h3> <ul><li>Page Title: Sciopero sulla rete Atac, chiuse le metro e la ferrovia Termini-Centocelle - Roma Servizi per la Mobilità</li></ul> </div><hr/><div> <div> <div> <div> <div> <div> </div> </div> </div> <div> <div> <div> <div> <h1>Sciopero sulla rete Atac, chiuse le metro e la ferrovia Termini-Centocelle</h1> </div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div><p>Pubblicato il: 04/07/2024 - Aggiornato il: 06/11/2024</p></div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div> <span> </span> </div> </div> </div> <div> <div> <div></div> </div> </div> <div> <div> <p>È in corso lo sciopero sulla rete Atac che si concluderà alle 16,30. Ecco la situazione:</p> <p>Metro A, B/B1, C: chiuse<br>Ferrovia Termini-Centocelle: chiusa<br>Bus e tram: possibili riduzioni di corse.</p> </div> </div> </div> </div> </div> </div>"
+  },
+  "response": {
+    "parsedData": {
+      "isStrike": false
+    },
+    "usage": {
+      "input": 1378,
+      "output": 10,
+      "total": 1388
+    },
+    "costUsd": {
+      "inputCost": 0.00003858,
+      "outputCost": 0.0000028,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00004138
+    },
+    "durationMs": 1709
+  }
+}

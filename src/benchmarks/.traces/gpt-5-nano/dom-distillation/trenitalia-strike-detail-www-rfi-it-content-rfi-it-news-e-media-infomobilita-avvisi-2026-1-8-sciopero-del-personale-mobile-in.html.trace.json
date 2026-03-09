@@ -1,0 +1,38 @@
+{
+  "timestamp": "2026-03-09T02:02:28.385Z",
+  "isCacheHit": true,
+  "request": {
+    "sourceName": "Trenitalia",
+    "fileName": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2026-1-8-sciopero-del-personale-mobile-in.html",
+    "model": "gpt-5-nano",
+    "strategy": "dom-distillation",
+    "useLenientSchema": true,
+    "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a strike from \"Trenitalia\".\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), 2-letter for provinces (e.g., \"MI\" for Milan), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGION\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"> <h3>Context Metadata</h3> <ul><li>Page Title: SCIOPERO DEL PERSONALE MOBILE INTERCITY DI GENOVA DI TRENITALIA</li></ul> </div><hr/><div> <div> <h1>SCIOPERO DEL PERSONALE MOBILE INTERCITY DI GENOVA DI TRENITALIA</h1> <div> <span>In vigore: 8 GENNAIO 2026</span> </div> <div></div> <div> <div> Servizio: <strong>Lunga percorrenza</strong> </div> <div> Causa Modifica: <strong>Sciopero</strong> </div> <div> Regione: <strong>LIGURIA</strong> </div> <div> Impresa: <strong>Trenitalia</strong> </div> </div> </div> </div> <div> <div> <div> <p><b>Dalle ore 9:01 alle ore 17:00 di giovedì 8 gennaio 2026</b> è stato indetto uno sciopero del personale mobile di <b>Trenitalia&nbsp;della Direzione Operation Intercity di Genova.</b>&nbsp;&nbsp;</p> <p>Lo sciopero può comportare modifiche al servizio,&nbsp;anche prima dell’inizio e dopo la sua conclusione.</p> <p>Maggiori informazioni sui servizi garantiti in caso di sciopero sono disponibili sui canali digitali delle Imprese ferroviarie o presso il personale di assistenza clienti e le biglietterie.</p> </div> </div> </div>"
+  },
+  "response": {
+    "parsedData": {
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2026-01-08 09:01:00",
+        "endDate": "2026-01-08 17:00:00",
+        "locationType": "REGION",
+        "locationCodes": [
+          "07"
+        ]
+      }
+    },
+    "usage": {
+      "input": 1173,
+      "output": 2120,
+      "total": 3293
+    },
+    "costUsd": {
+      "inputCost": 0.00005865,
+      "outputCost": 0.000848,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00090665
+    },
+    "durationMs": 12723
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "timestamp": "2026-03-09T02:11:18.687Z",
+  "isCacheHit": true,
+  "request": {
+    "sourceName": "EAV",
+    "fileName": "linee_vesuviane_avviso_di_sciopero_di_4_ore_martedi_28_gennaio_2025.html",
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "strategy": "dom-distillation",
+    "useLenientSchema": true,
+    "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a strike from \"EAV\".\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), 2-letter for provinces (e.g., \"MI\" for Milan), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGION\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"> <h3>Context Metadata</h3> <ul><li>Page Title: Linee Vesuviane: Avviso di sciopero di 4 ore, martedì 28 gennaio 2025 - EAV srl</li></ul> </div><hr/><article> <section> <div> <div> <div> <h2> Linee Vesuviane: Avviso di sciopero di 4 ore, martedì 28 gennaio 2025 </h2> </div> </div> </div> <div> <div> <p> <small>Data: </small><br> <small><strong>27 Gennaio 2025</strong></small> </p> </div> </div> </section> <section> <div> <div> <div> </div> </div> <div> <div> <section> <p>Si comunica che, ai sensi dell’art. 2 comma 7 della L.146/90 (fattispecie: gravi eventi lesivi dell’incolumità e della sicurezza dei lavoratori) e delle integrazioni alla stessa della L.83/2000 e successive modifiche, per martedì 28 gennaio 2025 le OO.SS. ORSA, CONFAIL, Filt Cgil, Fit Cisl, Uiltrasporti, Ugl autoferro, Faisa Cisal e USB hanno proclamato uno sciopero aziendale di 4 ore, dalle ore 08:20 alle ore 12:20, avente le seguenti motivazioni: sicurezza sul posto di lavoro per il personale front-line di EAV S.r.l.</p> <p>Durante l’ultima proclamazione di sciopero delle citate OO.SS., la percentuale di adesione è stata la seguente:</p> <ul> <li>Or.S.A. e Confail: 15,5 % (sciopero di 4 ore del giorno 23 ottobre 2024)</li> <li>CGIL e UIL: 10,8% (sciopero di 4 ore del giorno 29 novembre 2024)</li> <li>CISL, CISAL e UGL: 42% (sciopero nazionale di 24 ore del giorno 8 novembre 2024)</li> <li>USB: 9,2% (sciopero generale nazionale di 24 ore del 13 dicembre 2024)</li> </ul> <p>Di seguito vengono elencate le ultime e le prime partenze garantite in relazione alle diverse fasce di garanzia.</p> <p><em>Durante l’orario di sciopero l’effettuazione delle corse è subordinata al numero di lavoratori aderenti allo sciopero</em></p> <p><strong>Ultime partenze garantite prima dello sciopero:</strong></p> <p><strong>Da Napoli per</strong></p> <ul> <li>Sorrento&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 8:05</li> <li>Sarno&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;8:10</li> <li>Torre Annunziata* 8:14 * treno 4083 per Poggiomarino</li> <li>Poggiomarino&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8:14</li> <li>Baiano&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 7:43</li> </ul> <p><strong>Per Napoli da</strong></p> <ul> <li>Sorrento&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 8:14</li> <li>Sarno&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;7:50</li> <li>Poggiomarino&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 8:18</li> <li>Torre Annunziata* 8:44 *treno 4082 proveniente da Poggiomarino</li> <li>da Baiano per S.Giorgio 8:15</li> </ul> <p><strong>Prime partenze garantite dopo lo sciopero:&nbsp;</strong></p> <p><strong>Da Napoli per</strong></p> <ul> <li>Sorrento&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 12:53</li> <li>Sarno&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;12:22</li> <li>Poggiomarino&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 12:26</li> <li>Torre Annunziata&nbsp; &nbsp;12:33</li> <li>da S.Giorgio per Baiano 12:54</li> </ul> <p><strong>Per Napoli da</strong></p> <ul> <li>Sorrento&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 12:26</li> <li>Sarno&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;13:14</li> <li>Poggiomarino&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 12:30</li> <li>Torre Annunziata* 12:56 *treno 4124 proveniente da Poggiomarino</li> <li>da Baiano per S.Giorgio 12:27</li> </ul> <p>I servizi sostitutivi sulla relazione Napoli-Baiano non sono interessati dallo sciopero.</p> <div> <div> <p><b>Categoria:&nbsp;</b><a href=\"https://www.eavsrl.it/categoria-disservizio/trasporto-pubblico/\">Trasporto pubblico</a></p> <p><b>Area:&nbsp;</b><a href=\"https://www.eavsrl.it/area/linee-vesuviane/\">Linee Vesuviane</a></p> </div> </div> <div></div> </section> </div> </div> </div> </section> </article>"
+  },
+  "response": {
+    "parsedData": {
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2025-01-28 08:20:00",
+        "endDate": "2025-01-28 12:20:00",
+        "locationType": "REGION",
+        "locationCodes": [
+          "15"
+        ],
+        "guaranteedTimes": [
+          "08:05-08:14",
+          "12:22-12:53"
+        ]
+      }
+    },
+    "usage": {
+      "input": 2459,
+      "output": 97,
+      "total": 2556
+    },
+    "costUsd": {
+      "inputCost": 0.00027049,
+      "outputCost": 0.00003298,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00030347
+    },
+    "durationMs": 775
+  }
+}

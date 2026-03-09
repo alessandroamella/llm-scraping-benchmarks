@@ -1,0 +1,60 @@
+{
+  "timestamp": "2026-03-09T02:03:55.185Z",
+  "isCacheHit": false,
+  "request": {
+    "sourceName": "ATAC",
+    "fileName": "martedi_9_dicembre_sciopero_del_trasporto_pubblico_possibili_stop_per_24_ore.html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "strategy": "dom-distillation-markdown",
+    "useLenientSchema": true,
+    "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a strike from \"ATAC\".\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), 2-letter for provinces (e.g., \"MI\" for Milan), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGION\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: Martedì 9 dicembre sciopero del trasporto pubblico. Possibili stop per 24 ore - Roma Servizi per la Mobilità\n\n* * *\n\n# Martedì 9 dicembre sciopero del trasporto pubblico. Possibili stop per 24 ore\n\nPubblicato il: 04/12/2025 - Aggiornato il: 04/12/2025\n\nMartedì 9 dicembre trasporto pubblico a rischio per lo sciopero di 24 ore indetto dal sindacato Sul. L’agitazione interesserà la sola rete Atac. Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20."
+  },
+  "response": {
+    "rawOutput": {
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2025-12-09 00:00:00",
+        "endDate": "2025-12-09 23:59:59",
+        "locationType": "PROVINCE",
+        "locationCodes": [
+          "RM"
+        ],
+        "guaranteedTimes": [
+          "00:00-08:30",
+          "17:00-20:00"
+        ]
+      }
+    },
+    "parsedData": {
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2025-12-09 00:00:00",
+        "endDate": "2025-12-09 23:59:59",
+        "locationType": "PROVINCE",
+        "locationCodes": [
+          "RM"
+        ],
+        "guaranteedTimes": [
+          "00:00-08:30",
+          "17:00-20:00"
+        ]
+      }
+    },
+    "usage": {
+      "input": 583,
+      "output": 134,
+      "cached": 0,
+      "thinking": 634,
+      "total": 1351
+    },
+    "costUsd": {
+      "inputCost": 0.00014575,
+      "outputCost": 0.000201,
+      "thinkingCost": 0.000951,
+      "cachedCost": 0,
+      "totalCost": 0.00129775
+    },
+    "durationMs": 4828,
+    "thoughts": "**Analyzing the Upcoming Public Transport Strike in Rome**\n\nOkay, so I've got this piece of information about a public transport strike in Rome, specifically affecting the ATAC network. The title, \"Martedì 9 dicembre sciopero del trasporto pubblico. Possibili stop per 24 ore\", clearly states a strike is planned for Tuesday, December 9th. Now, the publication date is \"04/12/2025\" which makes the strike date Tuesday, December 9th, 2025.\n\nThe strike is scheduled to last for 24 hours, which initially makes it simple. I need to be precise, though. The text specifies \"Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" That means the service will be regular from 00:00 to 08:30, and from 17:00 to 20:00. Logically, the strike would cover the time outside of these two blocks.\n\nTherefore, my understanding is that the strike will disrupt service from 08:30 to 17:00 and from 20:00 to midnight. Given the 24-hour nature, it will cover the entire day, but this guaranteed window info is crucial. I should represent this with:\n\n*   `startDate`: \"2025-12-09 00:00:00\"\n*   `endDate`: \"2025-12-09 23:59:59\"\n\nThe strike is location-specific to Rome, so `locationType` is \"PROVINCE\" and the `locationCodes` is [\"RM\"]. Finally, I'll record the guaranteed times:\n\n*   `guaranteedTimes`: [\"00:00-08:30\", \"17:00-20:00\"].\n\nSo, that's it. It's a single-day, 24-hour strike, with specific guaranteed service windows. The critical aspect is to ensure the guaranteed times are accurately represented, so they can be considered when planning travel during the day.\n\n\n"
+  }
+}
