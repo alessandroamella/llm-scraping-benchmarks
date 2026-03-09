@@ -1,27 +1,15 @@
 {
-  "timestamp": "2026-03-09T14:35:49.583Z",
-  "isCacheHit": false,
+  "timestamp": "2026-03-09T15:54:09.395Z",
+  "isCacheHit": true,
   "request": {
     "sourceName": "Trenitalia TPER",
     "fileName": "ttper_2025-10-02_23-00.pdf",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "basic-cleanup",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"Trenitalia TPER\" (the public transport company of Emilia-Romagna (08)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: basic-cleanup):\nSCIOPERO NAZIONALE DEL TRASPORTO FERROVIARIO PERSONALE DEL GRUPPO FS E TRENORD Dalle ore 21:00 di giovedì 2 alle ore 20:59 di venerdì 3 ottobre 2025, i treni possono subire cancellazioni o variazioni, per uno sciopero nazionale del personale del Gruppo FS, Trenitalia, Trenitalia Tper e Trenord. Per il trasporto Regionale di Trenitalia e Trenitalia Tper, sono garantiti i servizi essenziali previsti in caso di sciopero nei giorni feriali dalle ore 6:00 alle ore 9:00 e dalle ore 18:00 alle ore 21:00. Gli elenchi dei servizi garantiti sono consultabili sull’Orario ufficiale Trenitalia e su www.trenitalia.com, per Trenord sul sito www.trenord.it e per Trenitalia Tper sul sito www.trenitaliatper.it. L’agitazione sindacale può comportare modifiche al servizio anche prima dell’inizio e dopo la sua conclusione. I passeggeri che intendono rinunciare al viaggio possono chiedere il rimborso a partire dalla dichiarazione di sciopero: - fino all’ora di partenza del treno prenotato, per i treni Intercity e Frecce; - fino alle ore 24:00 del giorno antecedente lo sciopero stesso, per i treni Regionali; in alternativa possono riprogrammare il viaggio, a condizioni di trasporto simili, non appena possibile, secondo la disponibilità dei posti. Informazioni su collegamenti e servizi anche attraverso l’app Trenitalia, la sezione Infomobilità del sito trenitalia.com, il sito www.trenord.it o tramite l’App di Trenord, sito trenitaliatper.it, il numero verde gratuito 800 89 20 21, oltre che nelle biglietterie e presso il personale di assistenza clienti. 2 OTTOBRE – 3 OTTOBRE 2025 -- 1 of 1 --"
   },
   "response": {
-    "rawOutput": {
-      "isStrike": true,
-      "strikeData": {
-        "startDate": "2025-10-02 21:00:00",
-        "endDate": "2025-10-03 20:59:00",
-        "locationType": "NATIONAL",
-        "guaranteedTimes": [
-          "06:00-09:00",
-          "18:00-21:00"
-        ]
-      }
-    },
     "parsedData": {
       "isStrike": true,
       "strikeData": {
@@ -36,19 +24,16 @@
     },
     "usage": {
       "input": 916,
-      "output": 123,
-      "cached": 0,
-      "thinking": 380,
-      "total": 1419
+      "output": 131,
+      "total": 1469
     },
     "costUsd": {
       "inputCost": 0.000229,
-      "outputCost": 0.0001845,
-      "thinkingCost": 0.00057,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.000633,
       "cachedCost": 0,
-      "totalCost": 0.0009835
+      "totalCost": 0.0010585
     },
-    "durationMs": 5624,
-    "thoughts": "**Analyzing Strike Information for JSON Output**\n\nOkay, here's what I'm thinking. My primary task is to extract the relevant strike information from this text snippet and transform it into a JSON object that adheres to the defined schema. Let's break this down.\n\nFirst, I need to analyze the content. The text is straightforward: \"SCIOPERO NAZIONALE DEL TRASPORTO FERROVIARIO... Dalle ore 21:00 di giovedì 2 alle ore 20:59 di venerdì 3 ottobre 2025...\". I see it's a national rail strike. The companies involved are Trenitalia, Trenitalia Tper, Trenord, and the Gruppo FS. The scope is clearly \"SCIOPERO NAZIONALE,\" a national strike.\n\nI've identified the start date and time as October 2nd, 2025, at 21:00:00, and the end date and time as October 3rd, 2025, at 20:59:00. Guaranteed services are scheduled between 06:00-09:00 and 18:00-21:00. This is definitely a strike, and it's confirmed to be national.\n\nTherefore, the JSON I need to construct will have `isStrike: true`. And, the `strikeData` object will contain: `startDate`: \"2025-10-02 21:00:00\", `endDate`: \"2025-10-03 20:59:00\", `locationType`: \"NATIONAL\", `guaranteedTimes`: [\"06:00-09:00\", \"18:00-21:00\"]. And of course, since it's national, I can omit the `locationCodes` field as per the schema. I'm ready to output the JSON now.\n\n\n"
+    "durationMs": 5481
   }
 }

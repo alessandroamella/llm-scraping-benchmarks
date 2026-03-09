@@ -1,30 +1,15 @@
 {
-  "timestamp": "2026-03-09T14:34:52.493Z",
-  "isCacheHit": false,
+  "timestamp": "2026-03-09T15:07:55.501Z",
+  "isCacheHit": true,
   "request": {
     "sourceName": "Trenord",
     "fileName": "strike-detail-mercoled--6-settembre--sciopero-dei-treni-regional.html",
     "model": "meta-llama/llama-4-scout-17b-16e-instruct",
     "strategy": "dom-distillation-markdown",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"Trenord\" (the public transport company of Lombardia (03)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: 6 settembre, sciopero dei treni regionaliUser-logged-no-picCloseSend-mail-OKAlert\n-   Date News: lunedì 04/09/2023\n-   Header: Mercoledì 6 settembre, sciopero dei treni regionali\n\n* * *\n\n# **Mercoledì 6 settembre, sciopero dei treni regionali**\n\nlunedì 04/09/2023\n\n#### **L’agitazione indetta da ORSA, Uiltrasporti, FAST, FAISA CISAL** **dalle ore 3 del 6 alle ore 2 del 7 settembre**\n\n#### **Si invitano i passeggeri a consultare su trenord.it l’elenco dei treni garantiti negli orari 6-9 e 18-21, con particolare attenzione alle corse serali**\n\nDalle ore 3 di mercoledì 6 alle ore 2 di giovedì 7 settembre le organizzazioni sindacali ORSA, Uiltrasporti, FAST, FAISA CISAL hanno indetto uno sciopero che per l’intera giornata di mercoledì potrà generare ripercussioni sulla circolazione dei treni regionali, suburbani e sui collegamenti aeroportuali Malpensa Express e S50 Malpensa Aeroporto-Bellinzona.\n\nNegli orari 6-9 e 18-21 circoleranno i treni indicati nella lista delle corse garantite, disponibile su trenord.it. Si invitano i passeggeri a consultare l’elenco, con particolare attenzione alle corse serali per il rientro.\n\nIn particolare, la mattina viaggeranno i convogli con orario di partenza dalla stazione di origine dopo le 6 e arrivo alla destinazione finale entro le 9. Nella fascia pomeridiana, circoleranno quelli con partenza prevista dopo le 18 e con arrivo entro le 21.\n\nSaranno previsti autobus sostitutivi, senza fermate intermedie, per le corse non effettuate tra Milano Cadorna (da via Paleocapa, 1) e Malpensa Aeroporto e tra Busto FS e Malpensa Aeroporto.\n\nLe informazioni sulla circolazione saranno disponibili sulle pagine di ogni linea della App e del sito Trenord.\n\nSi invitano i passeggeri a prestare attenzione ad annunci sonori e monitor di stazione.\n\n­\n\n[Comunicato stampa sciopero 6 settembre 2023](/fileadmin/contenuti/TRENORD/3-News/Trenord_Informa/Comunicati_stampa/2023/Trenord_230904_CS_Sciopero_6sett.pdf)\n\nPDF Document Found: /fileadmin/contenuti/TRENORD/3-News/Trenord\\_Informa/Comunicati\\_stampa/2023/Trenord\\_230904\\_CS\\_Sciopero\\_6sett.pdf"
   },
   "response": {
-    "rawOutput": {
-      "isStrike": true,
-      "strikeData": {
-        "startDate": "2023-09-06 03:00:00",
-        "endDate": "2023-09-07 02:00:00",
-        "locationType": "REGIONAL",
-        "locationCodes": [
-          "03"
-        ],
-        "guaranteedTimes": [
-          "06:00-09:00",
-          "18:00-21:00"
-        ]
-      }
-    },
     "parsedData": {
       "isStrike": true,
       "strikeData": {
@@ -41,17 +26,17 @@
       }
     },
     "usage": {
-      "input": 1560,
+      "input": 1559,
       "output": 98,
-      "total": 1658
+      "total": 1657
     },
     "costUsd": {
-      "inputCost": 0.0001716,
+      "inputCost": 0.00017149,
       "outputCost": 0.00003332,
       "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.00020492
+      "totalCost": 0.00020481
     },
-    "durationMs": 511
+    "durationMs": 880
   }
 }

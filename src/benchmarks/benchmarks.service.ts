@@ -128,16 +128,17 @@ export class BenchmarksService implements OnModuleInit {
   private readonly logger = new Logger(BenchmarksService.name);
 
   // Toggle this to run benchmarks
-  private readonly useLenientSchema = false;
-  private readonly includeManualInSuite = false;
+  private readonly useLenientSchema = true;
+  private readonly includeManualInSuite = true;
   private readonly generateChaosDatasetFlag = false;
 
-  private readonly customReportName = 'use_STRICT_schema';
+  private readonly customReportName = 'ai_suite_full';
   // private readonly disabledChecks: string[] = ['locationType', 'locationCodes'];
   private readonly disabledChecks: string[] = [];
 
   // --- NEW FLAGS ---
   private readonly enableResilienceSuite = false; // Toggle Resilience Suite
+  private readonly enableAiSuites = true; // Toggle AI Suites
   // -----------------
   private readonly baseDir = path.join(process.cwd(), 'src/benchmarks/data');
   private readonly resultsDir = path.join(
@@ -409,39 +410,41 @@ export class BenchmarksService implements OnModuleInit {
     const allDetails: BenchmarkResultDetail[] = [];
     const summaryStats: Record<string, SummaryStats> = {};
 
-    // Suite 1: Trenord (Standard)
-    const resultsTrenord = await this.runSuite('Trenord', trenordParsers);
-    this.mergeStats(summaryStats, resultsTrenord.stats, '');
-    allDetails.push(...resultsTrenord.details);
+    if (this.enableAiSuites) {
+      // Suite 1: Trenord (Standard)
+      const resultsTrenord = await this.runSuite('Trenord', trenordParsers);
+      this.mergeStats(summaryStats, resultsTrenord.stats, '');
+      allDetails.push(...resultsTrenord.details);
 
-    // Suite 2: Trenitalia TPER (Standard)
-    const resultsTrenitaliaTper = await this.runSuite(
-      'Trenitalia TPER',
-      trenitaliaTperParsers,
-    );
-    this.mergeStats(summaryStats, resultsTrenitaliaTper.stats, '');
-    allDetails.push(...resultsTrenitaliaTper.details);
+      // Suite 2: Trenitalia TPER (Standard)
+      const resultsTrenitaliaTper = await this.runSuite(
+        'Trenitalia TPER',
+        trenitaliaTperParsers,
+      );
+      this.mergeStats(summaryStats, resultsTrenitaliaTper.stats, '');
+      allDetails.push(...resultsTrenitaliaTper.details);
 
-    // Suite 3: EAV
-    const resultsEav = await this.runSuite('EAV', eavParsers);
-    this.mergeStats(summaryStats, resultsEav.stats, '');
-    allDetails.push(...resultsEav.details);
+      // Suite 3: EAV
+      const resultsEav = await this.runSuite('EAV', eavParsers);
+      this.mergeStats(summaryStats, resultsEav.stats, '');
+      allDetails.push(...resultsEav.details);
 
-    // Suite 4: Trenitalia
-    const resultsTrenitalia = await this.runSuite(
-      'Trenitalia',
-      trenitaliaParsers,
-    );
-    this.mergeStats(summaryStats, resultsTrenitalia.stats, '');
-    allDetails.push(...resultsTrenitalia.details);
+      // Suite 4: Trenitalia
+      const resultsTrenitalia = await this.runSuite(
+        'Trenitalia',
+        trenitaliaParsers,
+      );
+      this.mergeStats(summaryStats, resultsTrenitalia.stats, '');
+      allDetails.push(...resultsTrenitalia.details);
 
-    // Suite: ATAC
-    const resultsAtac = await this.runSuite('ATAC', atacParsers, {
-      customSuiteName: 'ATAC (No location checks)',
-      disabledChecksOverride: ['guaranteedTimes'],
-    });
-    this.mergeStats(summaryStats, resultsAtac.stats, '');
-    allDetails.push(...resultsAtac.details);
+      // Suite: ATAC
+      const resultsAtac = await this.runSuite('ATAC', atacParsers, {
+        // customSuiteName: 'ATAC (No location checks)',
+        // disabledChecksOverride: ['guaranteedTimes'],
+      });
+      this.mergeStats(summaryStats, resultsAtac.stats, '');
+      allDetails.push(...resultsAtac.details);
+    }
 
     if (this.enableResilienceSuite) {
       this.logger.log(
@@ -490,29 +493,9 @@ export class BenchmarksService implements OnModuleInit {
       // parser per questa suite:
       // manuale (ci si aspetta che fallisca)
       // AI (ci si aspetta che sopravviva) - Usiamo un modello veloce/economico
-      const resilienceParsers: IStrikeParser[] = [
+      const trenordResilienceParsers: IStrikeParser[] = [
         this.trenordManual,
-        new ConfigurableAiParser(
-          this.aiRunner,
-          'html-to-markdown',
-          'Trenord',
-          'gemini-3-flash-preview',
-          this.useLenientSchema,
-        ),
-        new ConfigurableAiParser(
-          this.aiRunner,
-          'basic-cleanup',
-          'Trenord',
-          'gpt-5-nano',
-          this.useLenientSchema,
-        ),
-        new ConfigurableAiParser(
-          this.aiRunner,
-          'html-to-markdown',
-          'Trenord',
-          'meta-llama/llama-4-scout-17b-16e-instruct',
-          this.useLenientSchema,
-        ),
+        // facciamo solo deepseek perché va bene e costa poco
         new ConfigurableAiParser(
           this.aiRunner,
           'html-to-markdown',
@@ -527,18 +510,18 @@ export class BenchmarksService implements OnModuleInit {
       // Il trucco è che i nomi dei file sono identici, cambia solo la cartella.
 
       // Hack: Aggiorniamo runSuite per accettare una directory override
-      const resultsChaos = await this.runSuite(
+      const resultsTrenordChaos = await this.runSuite(
         'Trenord', // Usa ground truth di Trenord
-        resilienceParsers,
+        trenordResilienceParsers,
         {
           customSuiteName: 'Trenord Resilience (Chaos DOM)',
           directoryOverride: this.trenordMessedDir,
         },
       );
 
-      this.mergeStats(summaryStats, resultsChaos.stats, ' [CHAOS]');
+      this.mergeStats(summaryStats, resultsTrenordChaos.stats, ' [CHAOS]');
       allDetails.push(
-        ...resultsChaos.details.map((d) => ({
+        ...resultsTrenordChaos.details.map((d) => ({
           ...d,
           parser: `${d.parser} [CHAOS]`,
         })),

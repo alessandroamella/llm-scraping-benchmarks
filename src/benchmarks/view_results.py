@@ -747,7 +747,7 @@ if details_data:
     )
 
     plt.title(
-        "F1-Score medio per Modello su ciascun dataset (Source)",
+        "F1-Score medio per modello su ciascun dataset",
         fontsize=16,
         fontweight="bold",
     )
