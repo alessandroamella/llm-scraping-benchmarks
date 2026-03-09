@@ -643,14 +643,21 @@ export class BenchmarksService implements OnModuleInit {
               ).toFixed(1);
               const icon = comparison.isExactMatch ? '✅' : '⚠️';
 
+              const scoreStr = (comparison.score * 100).toFixed(2);
+              const chalkFn =
+                comparison.score < 0.2
+                  ? chalk.red
+                  : comparison.score > 0.9
+                    ? chalk.green
+                    : chalk.white;
+
               // This line prints the progress bar style log
               this.logger.log(
                 `${chalk.magenta(`[${completedTasks}/${totalTasks}]`)} ` +
                   `${chalk.cyan(`(${progressPercent}%)`)} ` +
-                  `${icon} ${chalk.white(parser.name)} on ${chalk.gray(file)} (${
-                    // percentage
-                    (comparison.score * 100).toFixed(2)
-                  }%) - ${Math.round(duration)}ms`,
+                  `${icon} ${chalk.white(parser.name)} on ${chalk.gray(file)} (${chalkFn(
+                    `${scoreStr}%`,
+                  )}) - ${Math.round(duration)}ms`,
               );
             } catch (e) {
               this.logger.error(`Parser ${parser.name} failed on ${file}`, e);
