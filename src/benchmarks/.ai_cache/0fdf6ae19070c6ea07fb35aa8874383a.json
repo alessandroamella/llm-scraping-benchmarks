@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-20 00:00:00",
+      "endDate": "2025-06-21 00:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 26974,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00048255,
+      "outputCost": 0.000704,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00118655
+    },
+    "hash": "0fdf6ae19070c6ea07fb35aa8874383a",
+    "sourceFile": "venerdi_20_giugno_sciopero_generale_nazionale_di_usb_cub_e_sgb_a_roma_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to determine if this document is signaling an upcoming strike. The content indicates that there's a general strike planned for Friday, June 20, organized by several unions. The text specifies that public transport in Rome will be affected but outlines service guarantees for specific times. I can see that it fits the criteria for being a strike announcement, so I'll need to format the output as JSON according to the required schema.",
+    "tokens": {
+      "input": 9651,
+      "output": 1760,
+      "total": 11411
+    }
+  }
+}

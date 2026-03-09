@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7095,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00093845,
+      "outputCost": 0.0001496,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00108805
+    },
+    "hash": "756d95690f983c35df5f1035cc1e2e5d",
+    "sourceFile": "sciopero_attive_metro_b_chiusa_c.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to check if the document indicates a new or upcoming strike. The content mentions an ongoing national strike affecting public transport, stating that metros A and B are active while C is closed. The document is dated November 17, 2023, indicating this is not a new strike announcement but rather an update on the current situation. Thus, I can confirm that `isStrike` should be set to false since this is not an announcement of an upcoming strike.",
+    "tokens": {
+      "input": 18769,
+      "output": 374,
+      "total": 19143
+    }
+  }
+}

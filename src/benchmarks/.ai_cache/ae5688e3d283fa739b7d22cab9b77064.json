@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-09-09 08:30:00",
+      "endDate": "2024-09-09 16:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5886,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.002647,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.0008895,
+      "cachedCost": 0,
+      "totalCost": 0.0036595
+    },
+    "hash": "ae5688e3d283fa739b7d22cab9b77064",
+    "sourceFile": "luned_9_settembre_sciopero_nazionale_trasporto_pubblico_servizio_rischio.html",
+    "thoughts": "**Analyzing a Public Transport Strike Announcement**\n\nOkay, let's break this down. My task is to analyze this text snippet regarding a public transport strike and extract specific information into a JSON format. The core is to determine if it's a strike and, if so, capture the start and end dates, the location type, and any location codes, adhering to a strict JSON structure. I'm provided with the text: \"Lunedì 9 settembre sciopero nazionale del trasporto pubblico... A Roma l’agitazione durerà dalle 8,30 alle 16,30...\" from ATAC in Rome, and a publication date of September 3, 2024.\n\nFirst, definitely a strike; it says so clearly. I need to get the `isStrike` flag to `true`. Next, the start date is Monday, September 9th. The publication date helps me determine the year: it is 2024. So, that gives me a `startDate` of \"2024-09-09 08:30:00\" and an `endDate` of \"2024-09-09 16:30:00\" as per the text.\n\nThe location is a critical element. It states \"sciopero nazionale,\" which immediately flags `locationType` as \"NATIONAL\". The prompt specifies that if the location type is NATIONAL, `locationCodes` MUST BE OMITTED. That's a key constraint I need to remember. So, it's a national strike, even though the example mentions Rome/ATAC. I need to prioritize the overall scope, as the instruction states. Guarantee times are not explicitly mentioned, so I will infer that they are missing.\n\nPutting this together, I have:\n*   `isStrike`: true\n*   `strikeData`:\n    *   `startDate`: \"2024-09-09 08:30:00\"\n    *   `endDate`: \"2024-09-09 16:30:00\"\n    *   `locationType`: \"NATIONAL\"\n\nNow I need to ensure it's JSON formatted, with valid syntax, no extra text, correct date format (yyyy-MM-dd HH:mm:ss), and correctly omit location codes since `locationType` is NATIONAL. Everything looks good.\n\n\n",
+    "tokens": {
+      "input": 10588,
+      "output": 82,
+      "total": 11263
+    }
+  }
+}

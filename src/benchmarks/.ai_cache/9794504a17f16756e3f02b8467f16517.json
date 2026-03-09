@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-03-21 00:00:00",
+      "endDate": "2025-03-21 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 29472,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00048315,
+      "outputCost": 0.0009528,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00143595
+    },
+    "hash": "9794504a17f16756e3f02b8467f16517",
+    "sourceFile": "venerdi_21_marzo_sciopero_nazionale_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to output JSON based on the strike_extraction schema. The document states that on Friday, March 21, there will be a national strike affecting public transport. The information in Italian describes a 24-hour strike by union groups, with specific service details for certain times. It's clear this document announces an upcoming strike. So, my job is to format this information properly into JSON to reflect those details accurately.",
+    "tokens": {
+      "input": 9663,
+      "output": 2382,
+      "total": 12045
+    }
+  }
+}

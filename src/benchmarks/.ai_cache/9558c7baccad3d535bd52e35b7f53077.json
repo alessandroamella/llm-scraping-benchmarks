@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-07-18 08:30:00",
+      "endDate": "2024-07-18 12:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5066,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000169,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.000456,
+      "cachedCost": 0,
+      "totalCost": 0.000748
+    },
+    "hash": "9558c7baccad3d535bd52e35b7f53077",
+    "sourceFile": "trasporto_pubblico_gioved_sciopero_nazionale_830_1230_servizio_rischio.html",
+    "thoughts": "**Strike Information Extraction - My Thought Process**\n\nOkay, here's what I'm thinking. The task is to pull out strike details from this text snippet. The input is specifically about public transport in Rome, ATAC. I've got the text: \"Trasporto pubblico, giovedì sciopero nazionale dalle 8,30 alle 12,30. Servizio a rischio\". Alright, first, let's nail down the key elements.\n\nThe text mentions \"Giovedì 18 luglio,\" and given the context I'm inferring this is in 2024, specifically July. I'll need to confirm the publish date for exactness, but I'm reasonably confident. So, that's my strike date: July 18th, 2024. Then, the time is explicitly stated as \"dalle 8,30 alle 12,30\", which translates to 08:30 to 12:30.\n\nNext, the type of strike is clearly \"nazionale\" which means national. So I'll flag the `locationType` as \"NATIONAL\". This implies no specific regional codes are needed, per the data schema.\n\nThe crucial bit, is it an announcement about a strike? Yes, absolutely! \"Sciopero\" is the key word here. Therefore, my `isStrike` flag will be set to `true`.\n\nNow, let's assemble the JSON output. I'll construct the JSON structure, paying close attention to the requested fields:\n\n*   `isStrike`: true\n*   `startDate`: \"2024-07-18 08:30:00\"\n*   `endDate`: \"2024-07-18 12:30:00\"\n*   `locationType`: \"NATIONAL\"\n*   `locationCodes`: *Omitted* (as it should be, given \"NATIONAL\").\n*   `guaranteedTimes`: None mentioned in the text, so that stays `None`.\n\nI need to confirm all the parameters in my schema are met, like the location codes not needed with the location type of NATIONAL, and so on.\n\nExcellent, looks like I've extracted all the relevant information and correctly formatted it according to the specifications. I think I've got a clean and accurate JSON object ready.\n\n\n",
+    "tokens": {
+      "input": 676,
+      "output": 82,
+      "total": 1062
+    }
+  }
+}

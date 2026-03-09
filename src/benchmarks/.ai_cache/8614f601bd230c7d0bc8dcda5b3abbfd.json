@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-09 00:00:00",
+      "endDate": "2025-12-09 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7340,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0026345,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.0012345,
+      "cachedCost": 0,
+      "totalCost": 0.004079
+    },
+    "hash": "8614f601bd230c7d0bc8dcda5b3abbfd",
+    "sourceFile": "martedi_9_dicembre_sciopero_del_trasporto_pubblico_possibili_stop_per_24_ore.html",
+    "thoughts": "**Strike Information Extraction - My Thought Process**\n\nOkay, the task is clear: I need to extract strike information and format it as a JSON object, adhering to a specific schema. The key constraint is that `isStrike` is only true for *upcoming* strikes. I also need to be precise with the date formatting: `yyyy-MM-dd HH:mm:ss`. If it's a strike, I need to grab the `startDate`, `endDate`, `locationType`, `locationCodes`, and `guaranteedTimes`. Importantly, Rome/Lazio has code \"12\" for `locationCodes`.\n\nThe text says: \"Martedì 9 dicembre sciopero del trasporto pubblico. Possibili stop per 24 ore\", \"Martedì 9 dicembre trasporto pubblico a rischio per lo sciopero di 24 ore indetto dal sindacato Sul.\" and \"Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" The footer gives context: it's December 9, 2025. It's a 24-hour strike in Rome, specifically ATAC (which falls under REGIONAL for Lazio). So, this *is* an upcoming strike, right? Yes.\n\nI need to calculate the dates and times. Based on the information, the strike starts on 2025-12-09 at 00:00:00 and ends on 2025-12-09 at 23:59:59. For `locationType`, it's \"REGIONAL\" since it's the Rome transportation system. The `locationCodes` is \"12\" for Lazio. Now, the `guaranteedTimes`: the text explicitly states \"Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" That translates to 00:00-08:30 and 17:00-20:00, which are the guaranteed times for this strike. I will run a final check using the regular expression to ensure the `guaranteedTimes` formatting is correct. The regex `^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]-(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$` should be valid for both `00:00-08:30` and `17:00-20:00`.\n\n\n",
+    "tokens": {
+      "input": 10538,
+      "output": 140,
+      "total": 11501
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-07-24 08:30:00",
+      "endDate": "2023-07-24 12:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6338,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.004098,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.0009105,
+      "cachedCost": 0,
+      "totalCost": 0.0051315
+    },
+    "hash": "ec020f14fddf191f702d494e81e54a6b",
+    "sourceFile": "luned_24_luglio_sciopero_nazionale_tpl_roma_servizio_rischio_830_1230.html",
+    "thoughts": "**Strike Analysis and Data Extraction**\n\nOkay, let's break this down. The task is to parse this HTML content and pull out strike information. My primary goal is to determine if there's an upcoming strike and, if so, extract specific data points: `startDate`, `endDate`, `locationType`, `locationCodes`, and `guaranteedTimes`. The output *must* be valid JSON and nothing else.\n\nFrom the provided text, the headline is \"Lunedì 24 luglio sciopero nazionale del Tpl. A Roma servizio a rischio dalle 8,30 alle 12,30\" and the body says \"Lunedì 24 luglio trasporto pubblico a rischio per lo sciopero nazionale di 4 ore, dalle 8,30 alle 12,30...\". The date is clearly July 24th, 2023. The text specifies it's a \"sciopero nazionale,\" a national strike, so `locationType` will be \"NATIONAL\".\n\nThe details are pretty straightforward: the strike is for 4 hours, from 08:30 to 12:30. The header mentions Rome, but it also says \"sciopero nazionale\" which is the more accurate information. The instructions state \"If locationType is NATIONAL, locationCodes MUST BE OMITTED completely.\" so this is fine. The text says \"servizio a rischio dalle 8,30 alle 12,30\", meaning service is at risk during this window. I will set the strike `startDate` to \"2023-07-24 08:30:00\" and `endDate` to \"2023-07-24 12:30:00\".\n\nFinally, I will check if there are \"guaranteedTimes\" (periods of safe transit). The prompt asks to extract these. The text states \"servizio a rischio dalle 8,30 alle 12,30\". This is the period of the strike, it doesn't give specific windows of guaranteed service. Since the text doesn't explicitly list guaranteed times, I will omit `guaranteedTimes` entirely from the JSON output.\n\nTherefore, the final JSON I will produce would include `isStrike: true` and the `strikeData` object with the extracted information as shown above. The `locationCodes` element will not be added since it is a national strike.\n\n\n",
+    "tokens": {
+      "input": 16392,
+      "output": 82,
+      "total": 17081
+    }
+  }
+}

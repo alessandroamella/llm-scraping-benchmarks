@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 11125,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0009403,
+      "outputCost": 0.0002444,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0011847
+    },
+    "hash": "7713ab80a671f3eff1909fb1c796beeb",
+    "sourceFile": "sciopero_sulla_rete_atac_chiuse_metro_ferrovia_termini_centocelle.html",
+    "thoughts": "**Parsing strike announcement**\n\nI need to analyze the provided content to see if it's announcing a new or upcoming strike. The HTML seems to reflect a press release with clear messaging about the ongoing strike on the Atac network. It mentions services like Metro A, B/B1, C, and the Termini-Centocelle railway being closed until 16:30. Since it's describing an ongoing situation, I can’t set isStrike to true, as it’s not an upcoming strike announcement.",
+    "tokens": {
+      "input": 18806,
+      "output": 611,
+      "total": 19417
+    }
+  }
+}

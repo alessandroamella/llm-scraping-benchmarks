@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-10 08:30:00",
+      "endDate": "2025-01-10 12:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5492,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000162,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.0006285,
+      "cachedCost": 0,
+      "totalCost": 0.0009135
+    },
+    "hash": "3a2881b2ebcf56f97ad5968140a34f68",
+    "sourceFile": "trasporto_pubblico_venerdi_10_gennaio_sciopero_nazionale_di_4_ore.html",
+    "thoughts": "**Analyzing a Strike Announcement**\n\nOkay, here's the deal. My task is to analyze this text and determine if it's an announcement of an *upcoming* strike. I have to look for specific clues. If the text points to a cancellation, past event, or real-time update, then `isStrike` is false. Otherwise, it's true.\n\nThe input text is \"Trasporto pubblico, venerdì 10 gennaio sciopero nazionale di 4 ore.\" Right, let's break this down. I see the date: Friday, January 10th. I'll need to assume the current year, and I'll default to 2025 unless I'm told otherwise (a good assumption given the prompt is not explicit about the year). The duration is 4 hours, which is helpful. It's described as a \"sciopero nazionale,\" which means a national strike. The scope is national, according to the text. It includes Rome (Atac) but the prompt specifies it's national. Okay, so far, so good.\n\nNow, I need to translate all of this into structured data. The text is very clear that it's a \"sciopero nazionale di 4 ore\".\n\nThinking about the schema constraints, `locationType` can be either \"NATIONAL\" or \"REGIONAL\". And importantly, if it’s \"NATIONAL,\" the `locationCodes` field *must* be omitted. So, let's nail down the dates: from 2025-01-10 08:30:00 to 2025-01-10 12:30:00. This is straightforward.\n\nGiven all of this, I'm confident that `isStrike` should be `true`. I'll build my `strikeData` accordingly:\n\n*   `startDate`: \"2025-01-10 08:30:00\"\n*   `endDate`: \"2025-01-10 12:30:00\"\n*   `locationType`: \"NATIONAL\"\n\nHmm, wait a second. The prompt does mention \"the public transport company of Rome, Lazio (12)\". Does that mean I should classify it as REGIONAL? No, the text says \"sciopero nazionale\". I should stick with \"NATIONAL\" as defined in the prompt. I will keep it as national.\n\n\n",
+    "tokens": {
+      "input": 648,
+      "output": 82,
+      "total": 1149
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-24 00:00:00",
+      "endDate": "2025-02-24 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "06:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5461,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00265675,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.000822,
+      "cachedCost": 0,
+      "totalCost": 0.00368875
+    },
+    "hash": "313795e336aabcd3bb1b1d616d5c6211",
+    "sourceFile": "lunedi_24_febbraio_sciopero_nazionale_del_trasporto_pubblico_possibili_disagi.html",
+    "thoughts": "**Analyzing the Transit Strike Information**\n\nOkay, so I'm looking at this text about the upcoming transit strike. The source is provided HTML/Markdown, seems pretty straightforward. The key entities are ATAC, Rome's transit authority, and some private peripheral operators, striking on February 24th. It's a national 24-hour strike, as indicated. Now, let's get into the guaranteed service periods.\n\nThe text *explicitly* states \"Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" Right, so service is *regular* until 8:30, and then again from 17:00 to 20:00. Now, I need to represent this in the correct `HH:mm-HH:mm` format. Standard Italian transit strikes usually have guaranteed hours of 05:30/06:00-08:30 and 17:00-20:00. However, the text says \"fino alle 8,30\" (until 8:30) and \"dalle 17 alle 20\" (from 17:00 to 20:00). So, to stick to the standard and the data schema, I'll interpret the first range as 06:00-08:30. Even though the text isn't explicit, it *implies* that the service starts early morning. So, the guaranteed service periods will be 06:00-08:30 and 17:00-20:00. And I'll be sure to format it as such.\n\n\n",
+    "tokens": {
+      "input": 10627,
+      "output": 140,
+      "total": 11315
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-07-07 00:00:00",
+      "endDate": "2023-07-07 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 34207,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00093935,
+      "outputCost": 0.0008968,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00183615
+    },
+    "hash": "b0c491aa71fa0078a82fb6b1cd99b6a6",
+    "sourceFile": "venerd_7_luglio_trasporto_pubblico_rischio_sciopero_nazionale_24_ore_della_faisa_confail.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to produce JSON according to the specified strike extraction schema. The content is in Italian, and the title clearly states that there's a 24-hour national strike on July 7. It translates to traffic disruptions due to the strike announced by Faisa Confail for Rome Mobility Services. I see it mentions the impact on public transport, but services will be regular until 8:30 AM and from 5 PM to 8 PM.",
+    "tokens": {
+      "input": 18787,
+      "output": 2242,
+      "total": 21029
+    }
+  }
+}

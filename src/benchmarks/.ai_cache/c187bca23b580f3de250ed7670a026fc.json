@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8024,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005425,
+      "outputCost": 0.0001324,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00018665
+    },
+    "hash": "c187bca23b580f3de250ed7670a026fc",
+    "sourceFile": "sciopero_trasporto_pubblico_chiuse_metro_c_attiva_b.html",
+    "thoughts": "**Analyzing strike status**\n\nI need to determine if the document is announcing a new or upcoming strike. It mentions a public transport strike happening now, with a specific ending time. This means it’s currently ongoing. According to the instructions, the \"isStrike\" should be true only for upcoming strikes. So, I’ll set \"isStrike\" to false. I’ll ensure the output is in proper JSON format and add a brief explanation that it indicates an ongoing strike.",
+    "tokens": {
+      "input": 1085,
+      "output": 331,
+      "total": 1416
+    }
+  }
+}

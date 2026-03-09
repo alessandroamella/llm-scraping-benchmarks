@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-12-15 00:00:00",
+      "endDate": "2023-12-15 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 34843,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000545,
+      "outputCost": 0.0007912,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008457
+    },
+    "hash": "cdd9495b7878b8b28166cd058aaf8e93",
+    "sourceFile": "venerd_sciopero_nazionale_trasporto_pubblico_servizio_rischio.html",
+    "thoughts": "**Determining service times**\n\nI’m thinking we should use a default start date of December 15, 2023, at midnight, and an end date of the same day at 11:59 PM. The instructions don’t clarify what to do about unspecified times, but since “24 ore” indicates 24 hours, that seems reasonable. The reliable service times mentioned in the text suggest it’s regular until 8:30 AM and from 5 PM to 8 PM, which are likely the guaranteed service hours during the strike.",
+    "tokens": {
+      "input": 1090,
+      "output": 1978,
+      "total": 3068
+    }
+  }
+}

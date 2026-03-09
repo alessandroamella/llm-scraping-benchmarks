@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 09:00:00",
+      "endDate": "2024-12-13 13:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7614,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0041105,
+      "outputCost": 0.0001395,
+      "thinkingCost": 0.0005235,
+      "cachedCost": 0,
+      "totalCost": 0.0047735
+    },
+    "hash": "aa3d58c637baf03ec0f7e419a357aeed",
+    "sourceFile": "news_media_comunicati_sciopero_generale_13_dicembre.html",
+    "thoughts": "**Analyzing the ATAC Strike Information**\n\nOkay, so I've pulled in this HTML content, looks like it's about a strike in Rome, focusing on ATAC. My primary objective here is to figure out if it *is* a strike and, if so, extract all the relevant details. Let's see...\n\nI'm analyzing the content. The title, \"Sciopero generale, venerdì protesta dalle 9 alle 13 dopo ordinanza del ministero,\" translates to \"General strike, Friday protest from 9 to 13 after ministerial ordinance.\" That sounds promising! The post date is December 12th, 2024. The text itself says, \"Venerdì 13 dicembre trasporto pubblico a rischio... dalle 9 alle 13. A Roma la protesta coinvolgerà la rete Atac.\" Alright, that confirms it: there *is* an upcoming strike! Friday, December 13th, from 9 AM to 1 PM, and it's affecting ATAC, the transport network in Rome.\n\nNow, I need to extract the specific fields. Let's map it out...\n\n*   `isStrike`: definitely true.\n*   `strikeData`:\n    *   `startDate`: 2024-12-13 09:00:00 - clear.\n    *   `endDate`: 2024-12-13 13:00:00 - also clear.\n    *   `locationType`: REGIONAL - since it specifies \"A Roma,\" the region of Lazio is implied, so REGIONAL is the correct type.\n    *   `locationCodes`: The implied location is Lazio, so the location code should be [\"12\"].\n    *   `guaranteedTimes`: The instructions say to omit the guaranteed times if not specified. The text doesn't mention guaranteed times, so I'll leave that field out completely. The text says \"protesta... dalle 9 alle 13\", which implies those are the only times, so they are not guaranteed.\n\nOkay, I think I've got everything I need. I'm ready to package this up for the system now.\n\n\n",
+    "tokens": {
+      "input": 16442,
+      "output": 93,
+      "total": 16884
+    }
+  }
+}

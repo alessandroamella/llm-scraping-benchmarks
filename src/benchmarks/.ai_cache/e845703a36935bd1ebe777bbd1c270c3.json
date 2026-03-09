@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-02-17 00:00:00",
+      "endDate": "2023-02-17 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9190,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0001645,
+      "outputCost": 0.0001725,
+      "thinkingCost": 0.0009345,
+      "cachedCost": 0,
+      "totalCost": 0.0012715
+    },
+    "hash": "e845703a36935bd1ebe777bbd1c270c3",
+    "sourceFile": "venerd_17_febbraio_sciopero_nazionale_usb_24_ore_trasporto_pubblico_rischio.html",
+    "thoughts": "**Analyzing the USB National Strike on February 17th**\n\nOkay, let's break this down. We've got a national strike by USB scheduled for Friday, February 17th, 2023. The title explicitly states a \"national strike,\" so it seems pretty straightforward, despite the mention of Rome. I need to make sure I don't misinterpret this as a regional strike just because \"Nella Capitale\" (Rome) is mentioned – the *sciopero nazionale* indicates it is in fact national.\n\nThe key pieces of information are:\n\n*   **Strike Date:** February 17, 2023.\n*   **Duration:** A full 24 hours. Given the convention for 24-hour strikes, I'll define this as starting at 00:00:00 on the 17th and running until 23:59:59 on the same day.\n*   **Guaranteed Service:** The information indicates guaranteed service *until* 08:30 and *from* 17:00 to 20:00. No mention of usual service start time, so I will stick with the text, which is \"fino alle 8,30\" (00:00-08:30) and \"dalle 17 alle 20\" (17:00-20:00).\n*   **Location:** National (\"nazionale\").\n\nTherefore, here's my interpretation in a structured manner:\n\n*   `isStrike`: true\n*   `startDate`: \"2023-02-17 00:00:00\"\n*   `endDate`: \"2023-02-17 23:59:59\"\n*   `locationType`: \"NATIONAL\"\n*   `guaranteedTimes`: [\"00:00-08:30\", \"17:00-20:00\"]\n\nLooks like we're set.\n\n\n",
+    "tokens": {
+      "input": 658,
+      "output": 115,
+      "total": 1396
+    }
+  }
+}

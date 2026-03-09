@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3373,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00014675,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0003165,
+      "cachedCost": 0,
+      "totalCost": 0.00047825
+    },
+    "hash": "f23e935734d07484e4452472362c44ca",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_302.html",
+    "thoughts": "**Analyzing Public Transportation Strike Information**\n\nOkay, let's see what we've got. The input content is about a \"Sciopero del trasporto pubblico\" – a public transport strike. My immediate goal is to figure out if this is announcing an upcoming strike, or reporting on one that's already taken place. The phrasing, \"adesione personale Atac al 30,2%\" catches my eye. It focuses on the participation of personnel.\n\nThe critical pieces of information are within the text itself. The phrase \"rilevata in mattinata\" – \"detected in the morning\" – and the past tense, \"è stata pari al 30,2%\" – \"was equal to 30.2%\" both point towards a past event. It's not a *future* strike announcement, but a *report* of participation in an *existing* strike. Therefore, I can confidently set `isStrike` to `false`.\n\nThe output should be `{ \"isStrike\": false }`.\n\n\n",
+    "tokens": {
+      "input": 587,
+      "output": 10,
+      "total": 808
+    }
+  }
+}

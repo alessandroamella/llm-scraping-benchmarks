@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8069,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00047945,
+      "outputCost": 0.00015,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00062945
+    },
+    "hash": "13f361c12dbe741a78a365915eba800b",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_209.html",
+    "thoughts": "**Verifying strike information**\n\nI'm checking if there's any future scheduled strike mention. It looks like the top line refers to the adhesion rate for a public transport strike, which means it’s not an upcoming strike. So, isStrike should indeed be false. \n\nI need to make sure the output is in the correct JSON format, which should be:\n\n{\"isStrike\": false}\n\nI’ll ensure to follow the specific formatting without adding any extra analysis—just a straightforward response!",
+    "tokens": {
+      "input": 9589,
+      "output": 375,
+      "total": 9964
+    }
+  }
+}

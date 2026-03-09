@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-11-08 00:00:00",
+      "endDate": "2024-11-08 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8252,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00411425,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.0012285,
+      "cachedCost": 0,
+      "totalCost": 0.00552725
+    },
+    "hash": "70d2aa556f67c72d3afe735ab755ed2b",
+    "sourceFile": "venerdi_8_novembre_sciopero_nazionale_del_trasporto_pubblico_servizio_a_rischio_per_24_ore.html",
+    "thoughts": "**Analyzing Strike Information from HTML**\n\nOkay, let's break this down. My goal here is to extract strike information from the provided HTML and output it as valid JSON. I need to make sure this is a *new/upcoming* strike, and then I need to get the details like the start/end date, location type, and guaranteed times. The output has to be valid JSON, and date formats must be `yyyy-MM-dd HH:mm:ss`, region codes need to be two-digit ISTAT strings, and guaranteed times should be in `HH:mm-HH:mm` format.\n\nI see several variations of the announcement: \"Venerdì 8 novembre sciopero nazionale del trasporto pubblico. Servizio a rischio per 24 ore\" and \"Venerdì 8 novembre trasporto pubblico a rischio per lo sciopero nazionale di 24 ore\". It's clear that it is a national strike based on the text \"sciopero nazionale\". I need to figure out the date. The article title says \"Venerdì 8 novembre,\" and the published/updated dates are \"02/11/2024\" and \"06/11/2024,\" so this *must* be November 8, 2024.\n\nNow, let's get those guaranteed times. It mentions \"dall’inizio del servizio diurno alle 8.30\" and \"dalle 17 alle 20.\" The first one, \"dall’inizio del servizio diurno alle 8.30,\" needs interpretation. Typically, this translates to 05:30-08:30 in Rome, which I will assume here. The second is straightforward: 17:00-20:00. This is the time during which service is guaranteed.\n\nThe title says \"Venerdì 8 novembre,\" which is key. So, since it's a 24-hour strike, the start date/time is 2024-11-08 00:00:00, and the end date/time is 2024-11-08 23:59:59.\n\nBased on this, I'm constructing my JSON output:\n\n`isStrike`: true\n`strikeData`:\n*   `startDate`: \"2024-11-08 00:00:00\"\n*   `endDate`: \"2024-11-08 23:59:59\"\n*   `locationType`: \"NATIONAL\"\n*   `guaranteedTimes`: [\"05:30-08:30\", \"17:00-20:00\"]\n\nIt's an upcoming strike announcement, no doubt. The `locationType` is \"NATIONAL,\" so the `locationCodes` field is omitted as per the instructions. I've double-checked that the date formats (`yyyy-MM-dd HH:mm:ss`) and guaranteed times formats (`HH:mm-HH:mm`) are correct. I'm confident in the JSON output, and it should be perfectly valid.\n\n\n",
+    "tokens": {
+      "input": 16457,
+      "output": 123,
+      "total": 17399
+    }
+  }
+}

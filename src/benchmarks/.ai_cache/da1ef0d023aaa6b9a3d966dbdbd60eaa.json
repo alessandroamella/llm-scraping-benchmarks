@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-10-28 00:00:00",
+      "endDate": "2024-10-28 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 25415,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0004824,
+      "outputCost": 0.0009228,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0014052
+    },
+    "hash": "da1ef0d023aaa6b9a3d966dbdbd60eaa",
+    "sourceFile": "trasporto_pubblico_28_ottobre_sciopero_sulla_rete_atac.html",
+    "thoughts": "**Interpreting strike schedule**\n\nI'm reviewing an article that talks about a 24-hour strike on Monday, October 28. However, it doesn’t specify a start time. It mentions regular service until 8:30 and then again from 17:00 to 20:00, which suggests there might be partial service during those hours. I’m trying to understand if the strike is truly from midnight until midnight or if there are some adjustments to consider. I need to extract the strike data with specific start and end times formatted correctly.",
+    "tokens": {
+      "input": 9648,
+      "output": 2307,
+      "total": 11955
+    }
+  }
+}

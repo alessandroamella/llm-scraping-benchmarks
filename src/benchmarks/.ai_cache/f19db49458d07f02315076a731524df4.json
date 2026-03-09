@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-04-28 08:30:00",
+      "endDate": "2022-04-28 12:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5430,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00016525,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.0007815,
+      "cachedCost": 0,
+      "totalCost": 0.00106975
+    },
+    "hash": "f19db49458d07f02315076a731524df4",
+    "sourceFile": "sciopero_trasporto_pubblico_gioved_28_servizio_rischio_830_1230.html",
+    "thoughts": "**Strike Data Extraction and JSON Formatting**\n\nOkay, let's break this down. The input content clearly announces a strike scheduled for Thursday, April 28, 2022. I'm seeing the key details: it's a four-hour national strike, impacting the city of Rome, specifically targeting Atac, the transportation company. My primary goal here is to accurately parse this information and convert it into a structured JSON format suitable for programmatic consumption.\n\nFirst, I've confirmed that this *is* indeed a strike announcement. Next, I extracted all the relevant timestamps. I've got the start time at 08:30 and the end time at 12:30 on the specified date of April 28th, 2022. Since the text explicitly states \"servizio a rischio dalle 8,30 alle 12,30\", I am going to assume that no guarantee for service will be upheld during that time window, and will omit that key from the final JSON structure. Since the location type is \"Nazionale\", I can safely omit `locationCodes`, as those are only necessary for more granular location specifications.\n\nNow, let's build the JSON. Based on the information extracted and the absence of any further requirements, I'll create a `strikeData` object within the primary JSON structure. The structure will have a primary flag for `isStrike: true` and a nested `strikeData` object, containing `startDate`, `endDate`, and `locationType`.\n\nFinally, I've validated that the JSON structure is syntactically correct, and that strings are properly quoted within the JSON object. This final structure should now be ready for deployment in any downstream system.\n\n\n",
+    "tokens": {
+      "input": 661,
+      "output": 82,
+      "total": 1264
+    }
+  }
+}

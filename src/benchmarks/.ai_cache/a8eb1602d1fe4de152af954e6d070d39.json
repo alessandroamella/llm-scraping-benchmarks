@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7979,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000536,
+      "outputCost": 0.0001464,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002
+    },
+    "hash": "a8eb1602d1fe4de152af954e6d070d39",
+    "sourceFile": "sciopero_trasporto_pubblico_chiusa_metro_c.html",
+    "thoughts": "**Formatting JSON correctly**\n\nThe user wants to confirm if there's an upcoming strike, which isn't the case. Therefore, I’m setting `isStrike` to false. I need to produce the exact JSON structure mentioned in the specifications. Since `isStrike` is false, I’ll only include the JSON element `{\"isStrike\": false}` as per the required schema for \"strike_extraction.\" It's important to keep it straightforward, so I won't add any extra commentary or details. I'll provide that JSON now.",
+    "tokens": {
+      "input": 1072,
+      "output": 366,
+      "total": 1438
+    }
+  }
+}

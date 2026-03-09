@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-11-29 00:00:00",
+      "endDate": "2024-11-29 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 35405,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005365,
+      "outputCost": 0.0009308,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00098445
+    },
+    "hash": "c4f4488401dac5adcd395296101241d1",
+    "sourceFile": "venerdi_29_novembre_sciopero_generale_nazionale_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Determining strike announcement details**\n\nI need to output JSON following the strike extraction schema. The document is about a nationwide general strike in Italy, specifically on Friday, November 29. The article states that public transport will be at risk due to the strike proclaimed by CGIL and others. It confirms the upcoming strike details, including times when services will be regular. Overall, it clearly announces the upcoming nationwide general strike scheduled for that date.",
+    "tokens": {
+      "input": 1073,
+      "output": 2327,
+      "total": 3400
+    }
+  }
+}

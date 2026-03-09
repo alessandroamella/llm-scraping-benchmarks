@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-04 00:00:00",
+      "endDate": "2025-10-04 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6012,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0001555,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.001002,
+      "cachedCost": 0,
+      "totalCost": 0.001342
+    },
+    "hash": "34c361affb2d17c96c3cccd9ed4e8619",
+    "sourceFile": "sciopero_generale_nazionale_domani_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Analyzing the National Strike Announcement**\n\nOkay, let's break this down. The input clearly indicates a national general strike is planned. My primary goal here is to extract the critical details: the date, the scope, and any service guarantees.\n\nThe text reads \"Domani trasporto pubblico a rischio,\" which translates to \"Tomorrow, public transport at risk.\" The publication date is October 2nd, 2025, but the updated date is October 3rd, 2025. \"Domani\" (tomorrow) relative to October 3rd, therefore, means the strike is scheduled for October 4th, 2025. It's a 24-hour strike. Given the common convention for 24-hour events, I'm inferring the strike runs from 00:00:00 to 23:59:59 on October 4th, 2025. So, my `startDate` is \"2025-10-04 00:00:00\" and `endDate` is \"2025-10-04 23:59:59\".\n\nThe term \"Sciopero generale nazionale\" directly signifies a \"NATIONAL\" strike, so my `locationType` is \"NATIONAL.\" Crucially, because it's national, I need to omit any specific `locationCodes`. That's a constraint to remember.\n\nRegarding service guarantees, the text states \"servizio regolare fino alle 8,30 e dalle 17 alle 20.\" That translates to \"regular service until 8:30 and from 17:00 to 20:00\". Therefore, my `guaranteedTimes` will be the string list `[\"00:00-08:30\", \"17:00-20:00\"]`. The phrasing \"fino alle\" means up to, so I'm correctly interpreting that \"until 8:30\" should encompass 00:00 through 08:30. \"Dalle...alle\" is between...and, therefore, correctly interpreting that 17:00-20:00 is correct.\n\nSo, in summary: I've confirmed a strike (`isStrike`: true), identified the date (October 4th, 2025), correctly determined the scope as NATIONAL, and accurately extracted the guaranteed service times. The `locationCodes` parameter will be omitted as per the constraints for national strikes.\n\n\n",
+    "tokens": {
+      "input": 622,
+      "output": 123,
+      "total": 1413
+    }
+  }
+}

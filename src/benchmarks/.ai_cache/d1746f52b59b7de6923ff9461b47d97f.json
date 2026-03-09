@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-10-20 00:00:00",
+      "endDate": "2023-10-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 27338,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0009412,
+      "outputCost": 0.0009604,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0019016
+    },
+    "hash": "d1746f52b59b7de6923ff9461b47d97f",
+    "sourceFile": "venerd_20_ottobre_sciopero_generale_nazionale_trasporto_pubblico_rischio.html",
+    "thoughts": "**Extracting strike information**\n\nI need to output a JSON object with fields like isStrike and possibly strikeData. The goal is to check if the document announces an upcoming strike. The content is an HTML page from Roma Mobilità. The title announces a national strike on October 20, affecting public transportation in Rome. The status paragraph indicates there’s a 24-hour strike planned, with services impacted across buses. I’ll make sure to capture this crucial information accurately.",
+    "tokens": {
+      "input": 18824,
+      "output": 2401,
+      "total": 21225
+    }
+  }
+}

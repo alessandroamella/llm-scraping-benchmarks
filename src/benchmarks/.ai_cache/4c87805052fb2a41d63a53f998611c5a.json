@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 09:00:00",
+      "endDate": "2024-12-13 13:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5929,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00016175,
+      "outputCost": 0.0001395,
+      "thinkingCost": 0.000438,
+      "cachedCost": 0,
+      "totalCost": 0.00073925
+    },
+    "hash": "4c87805052fb2a41d63a53f998611c5a",
+    "sourceFile": "news_media_comunicati_sciopero_generale_13_dicembre.html",
+    "thoughts": "**Analyzing the ATAC Strike Announcement**\n\nOkay, let's break this down. The key piece of information here is the general strike announcement for ATAC in Rome, Lazio. The text states a general strike is planned, it's scheduled for Friday, December 13th, 2024, and it's set to run from 09:00 to 13:00. The source clearly mentions a \"Sciopero generale\" so it's a strike, and this should be flagged accordingly.\n\nI've got the essential metadata now: `isStrike: true`. The `strikeData` object captures the critical details. I'm storing the `startDate` and `endDate` clearly. The location is \"REGIONAL\" and the code I have is \"12\" which is Lazio. Now, based on my understanding of how this data is typically structured, I should omit `guaranteedTimes` because they are not explicitly listed in the text. I've successfully extracted the core facts from the announcement.\n\n\n",
+    "tokens": {
+      "input": 647,
+      "output": 93,
+      "total": 1032
+    }
+  }
+}

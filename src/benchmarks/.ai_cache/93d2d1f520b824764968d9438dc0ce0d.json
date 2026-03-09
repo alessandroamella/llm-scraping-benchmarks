@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-20 00:00:00",
+      "endDate": "2025-06-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 26493,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000543,
+      "outputCost": 0.000662,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0007163
+    },
+    "hash": "93d2d1f520b824764968d9438dc0ce0d",
+    "sourceFile": "venerdi_20_giugno_sciopero_generale_nazionale_di_usb_cub_e_sgb_a_roma_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Determining strike details**\n\nI need to confirm if this is indeed a strike announcement, and it is! So, I set isStrike to true and gather the necessary strike data, like start and end dates, location type, and guaranteed times. The strike is scheduled for Friday, June 20, 2025. The date format needs to be 'yyyy-MM-dd HH:mm:ss'. The strike will run for 24 hours, starting at midnight, which I can set as 2025-06-20 00:00:00 to 2025-06-20 23:59:59.",
+    "tokens": {
+      "input": 1086,
+      "output": 1655,
+      "total": 2741
+    }
+  }
+}

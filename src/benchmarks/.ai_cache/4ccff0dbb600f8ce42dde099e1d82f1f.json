@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18273,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00094135,
+      "outputCost": 0.000728,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00166935
+    },
+    "hash": "4ccff0dbb600f8ce42dde099e1d82f1f",
+    "sourceFile": "venerdi_28_novembre_sciopero_generale_nazionale_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Extracting strike data**\n\nI see there's an announcement for a general transport strike on Friday, November 28. Service will be regular until 8:30 AM and again from 5 PM to 8 PM. This makes it clear that the strike will be active for 24 hours. I’ll need to extract details like start and end dates, location codes, and guaranteed times. The specific date seems to be November 28, 2025, starting at midnight. The usual strike length should be across that full day.",
+    "tokens": {
+      "input": 18827,
+      "output": 1820,
+      "total": 20647
+    }
+  }
+}

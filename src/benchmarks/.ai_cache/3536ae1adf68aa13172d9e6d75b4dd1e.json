@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-12-16 20:00:00",
+      "endDate": "2022-12-16 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 12904,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0026395,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.001335,
+      "cachedCost": 0,
+      "totalCost": 0.004123
+    },
+    "hash": "3536ae1adf68aa13172d9e6d75b4dd1e",
+    "sourceFile": "venerd_16_dicembre_sciopero_generale_regionale_trasporto_pubblico_rischio_20_24.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, here's the deal. I'm looking at this text about a general strike in Rome, and my primary goal is to determine if it's an announcement of an *upcoming* strike and then extract the relevant information into a structured JSON format. I need to follow a very specific set of rules here: I need to flag `isStrike` as true if it's an upcoming announcement, false if it's a revocation, a past event, or a real-time update. I have to extract `startDate`, `endDate`, `locationType` (either 'REGIONAL' or 'NATIONAL'), `locationCodes` (the 2-digit ISTAT codes - for Lazio that's 12), and any `guaranteedTimes` in the \"HH:mm-HH:mm\" format.\n\nNow, let's break this down. The text says \"Venerdì 16 dicembre sciopero generale regionale,\" and mentions \"Trasporto pubblico a rischio dalle 20 alle 24.\" It was *published* on 09/12/2022. The instructions are telling me to decide if this document is actually announcing a *new* strike. At first glance, the publication date suggests this is a *past* event. It says \"Venerdì 16 dicembre\", so the year is 2022. I need to make a judgment call here, considering how these tasks usually work.\n\nThe instructions specifically say to set `isStrike` to false if the document only provides information about participation in a strike that *already* happened. This is key. The initial read is that this is an *announcement* of a strike that was *going to happen* relative to the news article. So, yes, it’s an *announcement*, even though it's historical from our perspective. I'll treat it as if I'm extracting the information at the time of the announcement. This means it *is* an announcement of a strike.\n\nBased on the article's context, and how these extraction tasks typically function, I'll set `isStrike` to `true`.\n\nNow, the dates. \"Venerdì 16 dicembre\" is clear. Given the publish date, the year is 2022. \"Trasporto pubblico a rischio dalle 20 alle 24\" indicates the time. Since the schema expects `yyyy-MM-dd HH:mm:ss`, the `startDate` is \"2022-12-16 20:00:00\". The `endDate` is more interesting. \"24\" could be interpreted as 00:00 the next day. But since I have to use `yyyy-MM-dd HH:mm:ss`, the standard is to have the strike end at the end of the day. Therefore the `endDate` is \"2022-12-16 23:59:59\".\n\nThe `locationType` is explicitly \"REGIONAL\". Lazio, the region mentioned, corresponds to the `locationCodes` of [\"12\"]. Finally, there are no `guaranteedTimes` specified in the text. I am ready to assemble the final output according to the format, I have determined the data:\n\n*   `isStrike`: true\n*   `startDate`: \"2022-12-16 20:00:00\"\n*   `endDate`: \"2022-12-16 23:59:59\"\n*   `locationType`: \"REGIONAL\"\n*   `locationCodes`: [\"12\"]\n\n\n",
+    "tokens": {
+      "input": 10558,
+      "output": 99,
+      "total": 11547
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-04 00:00:00",
+      "endDate": "2025-10-04 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6513,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0026355,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.001158,
+      "cachedCost": 0,
+      "totalCost": 0.003978
+    },
+    "hash": "c1e38192da2f83639dc1b0d83293bd27",
+    "sourceFile": "sciopero_generale_nazionale_domani_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Strike Analysis for ATAC in Rome**\n\nOkay, let's break this down. My task is to determine if this text announces an upcoming strike affecting ATAC, the public transport system in Rome, and to extract relevant strike details. The input is from \"Roma Servizi per la Mobilità,\" specifically a web page titled \"Sciopero generale nazionale, domani trasporto pubblico a rischio.\"\n\nFirst, it's clear the text *is* announcing a strike. It explicitly mentions a \"Sciopero generale nazionale\" and confirms that the protest will affect the ATAC network in Rome.\n\nNow, let's get the key details. The update date of the page is 2025-10-03, and the strike is scheduled for \"domani,\" which means tomorrow. So, the strike date is 2025-10-04. The text specifies it's a \"generale nazionale\" strike, indicating it's a national-level event. Since it's a general national strike, the `locationType` will be \"NATIONAL\" and, therefore, the `locationCodes` aren't applicable.\n\nThe text specifies a 24-hour strike. Thus, the `startDate` is 2025-10-04 00:00:00 and the `endDate` is 2025-10-04 23:59:59.\n\nNext, the guaranteed service times: the snippet says \"Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" That implies service is guaranteed from 00:00 to 08:30 and again from 17:00 to 20:00. This confirms that those periods are *not* included in the strike. Therefore, the `guaranteedTimes` are [\"00:00-08:30\", \"17:00-20:00\"].\n\nSo, in summary, I have `isStrike: true`, and the strike data is as follows:\n\n*   `startDate`: \"2025-10-04 00:00:00\"\n*   `endDate`: \"2025-10-04 23:59:59\"\n*   `locationType`: \"NATIONAL\"\n*   `guaranteedTimes`: [\"00:00-08:30\", \"17:00-20:00\"]\n\nAll clear. I can confidently report these findings.\n\n\n",
+    "tokens": {
+      "input": 10542,
+      "output": 123,
+      "total": 11437
+    }
+  }
+}

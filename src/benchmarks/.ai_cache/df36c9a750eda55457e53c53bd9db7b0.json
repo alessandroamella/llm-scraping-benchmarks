@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-07-24 08:30:00",
+      "endDate": "2023-07-24 12:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8680,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00016625,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.0003345,
+      "cachedCost": 0,
+      "totalCost": 0.00062375
+    },
+    "hash": "df36c9a750eda55457e53c53bd9db7b0",
+    "sourceFile": "luned_24_luglio_sciopero_nazionale_tpl_roma_servizio_rischio_830_1230.html",
+    "thoughts": "**Analyzing the Public Transport Strike Announcement**\n\nOkay, let's break this down. The input content clearly indicates a planned public transport strike. My primary task is to extract the relevant information for the system. I see a national strike, which, based on the text \"sciopero nazionale\", I can confidently identify. This one's set for Monday, July 24th, 2023, lasting from 08:30 to 12:30. Definitely upcoming, so `isStrike` will be `true`. The start date (`startDate`) is 2023-07-24 08:30:00, and the end date (`endDate`) is 2023-07-24 12:30:00. Location type is clearly \"NATIONAL\" because the text specifies it (sciopero nazionale). Since it's national, I can omit location codes like \"12\". No guaranteed times are mentioned in the text, so that field stays empty. My analysis is complete.\n\n\n",
+    "tokens": {
+      "input": 665,
+      "output": 82,
+      "total": 970
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 27337,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000529,
+      "outputCost": 0.0006912,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0007441
+    },
+    "hash": "0a46974fb84e0c4c2cf07af2ef00e681",
+    "sourceFile": "news_media_comunicati_sciopero_generale_13_dicembre_240re.html",
+    "thoughts": "**Extracting strike details**\n\nI’m looking into service schedules, which are regular until 8:30 AM and then again from 5 PM to 8 PM. Beyond these times, there may be service disruptions. I need to gather details for a strike, which includes fields such as startDate, endDate, locationType, and locationCodes. Since it’s a national strike, the locationType should be NATIONAL, and locationCodes will be null. The strike is a 24-hour event starting on 2024-12-13 at midnight.",
+    "tokens": {
+      "input": 1058,
+      "output": 1728,
+      "total": 2786
+    }
+  }
+}

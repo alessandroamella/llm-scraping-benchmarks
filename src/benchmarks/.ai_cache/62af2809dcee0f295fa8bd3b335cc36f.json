@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-07-07 00:00:00",
+      "endDate": "2023-07-07 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 10146,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00016525,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.0012765,
+      "cachedCost": 0,
+      "totalCost": 0.00162625
+    },
+    "hash": "62af2809dcee0f295fa8bd3b335cc36f",
+    "sourceFile": "venerd_7_luglio_trasporto_pubblico_rischio_sciopero_nazionale_24_ore_della_faisa_confail.html",
+    "thoughts": "**Strike Information Extraction: A Mental Walkthrough**\n\nOkay, let's break this down. The task is clear: I need to extract strike information from this text snippet. It's a markdown snippet about a public transport strike in Rome, specifically the Atac service, scheduled for Friday, July 7th. Alright, let's get into the details:\n\nFirst, the date: July 7th, 2023. I'm inferring the year from the publication date (\"Pubblicato il: 30/06/2023\"). Next, the type of strike is a 24-hour national strike, organized by Faisa Confail. The location is Rome, in the Lazio region (code 12). That's critical. Now the guaranteed service times; the text states \"regolare fino alle 8,30 e dalle 17 alle 20\". This translates directly to \"05:30-08:30\" and \"17:00-20:00\". Yes, the text says \"fino alle 8:30\". Standard phrasing is \"fino alle 8:30\" and \"dalle 17 alle 20\". So I'm confident about these guaranteed times.\n\nI'm considering the strike as upcoming. The scope is national, even though it mentions Rome specifically. Therefore, my `locationType` is definitely \"NATIONAL.\" Since it's a national strike, according to the schema I should omit `locationCodes`.\n\nNow to formalize the dates: the strike is 24 hours. The start date is 2023-07-07 00:00:00. The end date is 2023-07-07 23:59:59. That's a standard representation for a full-day strike.\n\nI'm comfortable setting the strike data. I'm sure it's an announcement of a strike. The final data looks like this:\n\n`isStrike`: true\n`strikeData`:\n*   `startDate`: \"2023-07-07 00:00:00\"\n*   `endDate`: \"2023-07-07 23:59:59\"\n*   `locationType`: \"NATIONAL\"\n*   `guaranteedTimes`: [\"05:30-08:30\", \"17:00-20:00\"]\n\nI need to confirm the use of the `NATIONAL` location type. Yes, the text is saying \"Sciopero nazionale\". The schema should support the \"NATIONAL\" type; I need to look it up, but it's very likely. And I need to confirm the guaranteed times - the text specifically stated those times. The final data seems good. The JSON schema, by the way, allows `NATIONAL`. I'm ready to move on.\n\n\n",
+    "tokens": {
+      "input": 661,
+      "output": 123,
+      "total": 1635
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-16 00:00:00",
+      "endDate": "2025-01-17 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 25057,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00094025,
+      "outputCost": 0.0007648,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00170505
+    },
+    "hash": "4f12f90732270b77baa5f9821d0acadd",
+    "sourceFile": "sportello_al_pubblico_e_contact_center_di_rsm_giovedi_e_venerdi_possibili_disagi_per_uno_sciopero.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to extract information in JSON format based on the strike extraction schema. The document comes from Roma Mobilità and indicates a new strike announcement. The title states that there may be disruptions on January 16 and 17 due to a strike declared by the Usb union affecting the public service desk and contact center. This means I need to capture the details and ensure they fit the schema correctly for the strike announcement.",
+    "tokens": {
+      "input": 18805,
+      "output": 1912,
+      "total": 20717
+    }
+  }
+}

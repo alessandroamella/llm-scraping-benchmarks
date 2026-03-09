@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-11-27 00:00:00",
+      "endDate": "2023-11-27 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6991,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0026445,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.0008745,
+      "cachedCost": 0,
+      "totalCost": 0.003729
+    },
+    "hash": "aeefa0949e7835f863432b8ee8006064",
+    "sourceFile": "luned_27_novembre_sciopero_nazionale_trasporto_pubblico_possibili_disagi.html",
+    "thoughts": "**Strike Announcement Analysis: Rome, November 27, 2023**\n\nOkay, let's break this down. My task is to determine if this text announces a strike and, if so, extract key details in JSON format. The region of interest is Rome (Lazio, code \"12\").\n\nRight, the title immediately signals a potential issue: \"Lunedì 27 novembre sciopero nazionale del trasporto pubblico, possibili disagi\" – \"Monday, November 27 national public transport strike, possible disruptions.\" The body confirms it: \"Lunedì 27 novembre trasporto pubblico a rischio per lo sciopero nazionale di 24 ore... A Roma l’agitazione interesserà la rete Atac e i bus periferici della Roma Tpl. Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" – \"Monday, November 27 public transport at risk due to the 24-hour national strike... In Rome, the agitation will affect the Atac network and the peripheral buses of Roma Tpl. The service will however be regular until 8:30 and from 17:00 to 20:00.\"\n\nThis is definitely a strike announcement. Now, let's extract the details. The strike is for a full 24 hours on Monday, November 27th. Given today's date of publication is \"21/11/2023\", that means the strike date is November 27, 2023. Therefore:\n\n*   `isStrike`: true\n*   `startDate`: \"2023-11-27 00:00:00\"\n*   `endDate`: \"2023-11-27 23:59:59\"\n*   `locationType`: It's regional, Rome specifically.\n*   `locationCodes`: [\"12\"] – Lazio, the region encompassing Rome.\n*   `guaranteedTimes`: The text specifies \"Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" - \"The service will however be regular until 8:30 and from 17:00 to 20:00.\" This gives us: \"00:00-08:30\" and \"17:00-20:00\".\n\nSo, assembling it into JSON format, this is what I get:\n\n```json\n{\n  \"isStrike\": true,\n  \"startDate\": \"2023-11-27 00:00:00\",\n  \"endDate\": \"2023-11-27 23:59:59\",\n  \"locationType\": \"REGIONAL\",\n  \"locationCodes\": [\"12\"],\n  \"guaranteedTimes\": [\"00:00-08:30\", \"17:00-20:00\"]\n}\n```\n\nThat should be accurate.\n\n\n",
+    "tokens": {
+      "input": 10578,
+      "output": 140,
+      "total": 11301
+    }
+  }
+}

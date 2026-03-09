@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-07-07 20:30:00",
+      "endDate": "2024-07-08 00:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18320,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0004821,
+      "outputCost": 0.0005516,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0010337
+    },
+    "hash": "ff7946bf7efd4e22dff50b5b47eb253c",
+    "sourceFile": "trasporto_pubblico_domenica_7_luglio_sciopero_serale_4_ore.html",
+    "thoughts": "**Clarifying schema requirements**\n\nI see that the schema requires the \"guaranteedTimes\" property to be present, which can be an array of strings or null—allowing null is good. All fields in the strike data are mandatory, meaning we must include values like startDate, endDate, locationType, locationCodes, and guaranteedTimes, even if that means using null.\n\nNow, back to dates! The article mentions \"Domenica 7 luglio,\" indicating the strike is on Sunday, July 7, 2024. The given times are in Italian style, so I'll convert those appropriately too.",
+    "tokens": {
+      "input": 9642,
+      "output": 1379,
+      "total": 11021
+    }
+  }
+}

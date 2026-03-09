@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-10 00:00:00",
+      "endDate": "2025-10-10 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22945,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000936,
+      "outputCost": 0.0008904,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0018264
+    },
+    "hash": "2c31d42da6c376c95a78b7adaea9e509",
+    "sourceFile": "venerdi_10_sciopero_del_trasporto_pubblico_rete_atac_a_rischio.html",
+    "thoughts": "**Analyzing strike information**\n\nI need to output JSON indicating whether there’s a strike or not. The content is about a strike on Friday, October 10, 2025. It mentions that there will be disruptions due to unions Sul, USB, and Orsa, specifically affecting Rome's Atac network. Services will run regularly until 8:30 AM and then from 5 PM to 8 PM. So, I'll mark isStrike as true and include the relevant strike data in the JSON output.",
+    "tokens": {
+      "input": 18720,
+      "output": 2226,
+      "total": 20946
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-07-07 00:00:00",
+      "endDate": "2023-07-07 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 33007,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00048305,
+      "outputCost": 0.0007464,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00122945
+    },
+    "hash": "c51e830a3e5ef3e1d4a4637d6f77f3a4",
+    "sourceFile": "venerd_7_luglio_trasporto_pubblico_rischio_sciopero_nazionale_24_ore_della_faisa_confail.html",
+    "thoughts": "**Extracting strike details**\n\nI've found information about a 24-hour national strike by Faisa Confail in Rome, set for July 7, 2023. The services will run regularly until 8:30 AM and then again from 5 PM to 8 PM. So, it looks like the strike starts at midnight on July 7 and ends at 11:59 PM that same day. Thus, I’ll record the startDate as 2023-07-07 00:00:00 and the endDate as 2023-07-07 23:59:59.",
+    "tokens": {
+      "input": 9661,
+      "output": 1866,
+      "total": 11527
+    }
+  }
+}

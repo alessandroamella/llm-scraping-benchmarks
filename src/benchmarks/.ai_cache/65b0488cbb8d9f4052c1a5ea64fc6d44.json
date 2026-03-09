@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8546,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0009361,
+      "outputCost": 0.0001992,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0011353
+    },
+    "hash": "65b0488cbb8d9f4052c1a5ea64fc6d44",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_385.html",
+    "thoughts": "**Formatting JSON output**\n\nI see that the page isn't about an upcoming strike but talks about participation in a previous strike. So, it should reflect that the `isStrike` value is false. I'll ensure the output is just a plain JSON object without any additional information. The required format is straightforward: `{\"isStrike\": false}`. No need for extra fields or comments; I'll stick closely to the specified format for clarity. Let's finalize this clean output!",
+    "tokens": {
+      "input": 18722,
+      "output": 498,
+      "total": 19220
+    }
+  }
+}

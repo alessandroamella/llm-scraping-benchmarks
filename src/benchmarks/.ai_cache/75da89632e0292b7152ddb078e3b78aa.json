@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-09 00:00:00",
+      "endDate": "2025-12-09 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21795,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005265,
+      "outputCost": 0.000768,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00082065
+    },
+    "hash": "75da89632e0292b7152ddb078e3b78aa",
+    "sourceFile": "martedi_9_dicembre_sciopero_del_trasporto_pubblico_possibili_stop_per_24_ore.html",
+    "thoughts": "**Analyzing strike details**\n\nI see that the service will be regular until 8:30 and again from 5 PM to 8 PM due to a 24-hour strike, specifically noted as \"sciopero di 24 ore.\" This means there’s indeed an upcoming strike on December 9, 2025, so I should mark the isStrike as true. I need to extract strike data with start and end dates formatted as yyyy-MM-dd HH:mm:ss, indicate the location type as \"REGIONAL,\" and use the ISTAT code \"12\" for Lazio, which fits given that the strike affects the ATAC network in Rome.",
+    "tokens": {
+      "input": 1053,
+      "output": 1920,
+      "total": 2973
+    }
+  }
+}

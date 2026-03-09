@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-10-09 00:00:00",
+      "endDate": "2023-10-09 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 29622,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0009424,
+      "outputCost": 0.0007672,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0017096
+    },
+    "hash": "40daed0e4533e4359ff087d2fb4f53c8",
+    "sourceFile": "luned_9_ottobre_sciopero_nazionale_trasporto_pubblico_possibili_disagi_24_ore.html",
+    "thoughts": "**Analyzing strike announcement**\n\nIt looks like there’s going to be a nationwide strike on October 9, 2023, for 24 hours. Since the isStrike condition is true, I need to confirm certain details like startDate and endDate, but there's no precise start time given. The content mentions \"sciopero nazionale del trasporto pubblico,\" indicating possible disruptions to the Atac network and peripheral buses, with some services running normally until 8:30 am and then again from 5 pm to 8 pm.",
+    "tokens": {
+      "input": 18848,
+      "output": 1918,
+      "total": 20766
+    }
+  }
+}

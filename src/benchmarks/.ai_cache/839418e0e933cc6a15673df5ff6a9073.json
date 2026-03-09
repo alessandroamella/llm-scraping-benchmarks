@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-09-04 08:30:00",
+      "endDate": "2025-09-04 12:30:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5839,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00265175,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.0007095,
+      "cachedCost": 0,
+      "totalCost": 0.00350975
+    },
+    "hash": "839418e0e933cc6a15673df5ff6a9073",
+    "sourceFile": "rete_atac_giovedi_4_settembre_sciopero_dalle_830_alle_1230_possibili_disagi.html",
+    "thoughts": "**Strike Announcement Analysis: A Focus on Rete Atac**\n\nOkay, let's break this down. The task is to identify and extract data from a text regarding a strike announcement, and I need to output it as a JSON object. The key criteria are to determine if it's an upcoming strike (`isStrike`), and if so, to extract the relevant details like start and end dates, location (type and code), and guaranteed times, if available.\n\nHere's what I've got: The headline is \"Rete Atac, giovedì 4 settembre sciopero dalle 8,30 alle 12,30. Possibili disagi\". The date specified is \"giovedì 4 settembre,\" which I have to clarify the year to be \"2025\" because of the publication date. The time window is clearly \"dalle 8,30 alle 12,30\". The content confirms that this involves the Roman public transport, specifically the ATAC network, and explicitly mentions a four-hour strike. The publication date helps with the implied year, which matches as 2025. I also know that ATAC refers to Rome, which falls under Lazio (ISTAT code 12).\n\nTherefore, this is a clear-cut case of an *upcoming* strike. So, `isStrike` is unequivocally `true`. The `startDate` will be \"2025-09-04 08:30:00\" and `endDate` will be \"2025-09-04 12:30:00\". The `locationType` is going to be \"REGIONAL\" because it's the ATAC which is a regional transport company and the `locationCodes` will be [\"12\"]. Finally, there is no information about `guaranteedTimes` in the text provided.\n\n\n",
+    "tokens": {
+      "input": 10607,
+      "output": 99,
+      "total": 11179
+    }
+  }
+}

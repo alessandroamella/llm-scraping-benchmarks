@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-04-11 20:00:00",
+      "endDate": "2024-04-12 00:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6868,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0026445,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.0012795,
+      "cachedCost": 0,
+      "totalCost": 0.004047
+    },
+    "hash": "1fc28cf6a31a246eae6dd077e35b037f",
+    "sourceFile": "gioved_11_aprile_sciopero_nazionale_trasporto_pubblico_rischio_20_24.html",
+    "thoughts": "**Analyzing the Roma Servizi per la Mobilità Strike Announcement**\n\nOkay, let's break this down. I'm looking at the \"Roma Servizi per la Mobilità\" website, and it's announcing a national strike, a \"sciopero nazionale,\" set for Thursday, April 11th, 2024. The publication date is 05/04/2024, so I know the year is 2024. The key information is the timing: it's from 20:00 to 24:00 – a four-hour window. The scope is clearly \"nazionale,\" meaning it's a nationwide event. The context confirms this; \"Trasporto pubblico a rischio dalle 20 alle 24\" indicates potential disruption to public transport, and the text explicitly states it's \"proclamato a livello nazionale.\"\n\nNow, let's translate this into the structured data. `isStrike` is definitively `true`. I'll create `strikeData`: The `startDate` is going to be \"2024-04-11 20:00:00\". For the `endDate`, it's trickier. It says \"alle 24,\" which technically means midnight, so \"2024-04-12 00:00:00\" is correct. However, to stay consistent with the database formats, I can set it as \"2024-04-11 23:59:59\". The `locationType` is definitely \"NATIONAL,\" and since it's a national strike, `locationCodes` is omitted. And there are no `guaranteedTimes` stated.\n\nSo, here's the final data structure, in a clean and organized format:\n\n*   `isStrike`: true\n*   `strikeData`: {\n    *   \"startDate\": \"2024-04-11 20:00:00\",\n    *   \"endDate\": \"2024-04-12 00:00:00\",\n    *   \"locationType\": \"NATIONAL\"\n    *   `locationCodes` : [] (Omitted as requested)\n    }\n\nAnd I have the exact timing: 20:00 to 24:00, Thursday, April 11th, 2024. And the full and precise `strikeData` object.\n\n\n",
+    "tokens": {
+      "input": 10578,
+      "output": 82,
+      "total": 11513
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-09-09 08:30:00",
+      "endDate": "2024-09-09 16:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4227,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00016675,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.000423,
+      "cachedCost": 0,
+      "totalCost": 0.00071275
+    },
+    "hash": "779cf23620cfc938a3e72ddc96943742",
+    "sourceFile": "luned_9_settembre_sciopero_nazionale_trasporto_pubblico_servizio_rischio.html",
+    "thoughts": "**Analyzing the Transport Strike Announcement**\n\nOkay, let's break this down. The input clearly states, \"Lunedì 9 settembre sciopero nazionale del trasporto pubblico. Servizio a rischio.\" My initial parsing gives me the date: Monday, September 9th, 2024. That's assuming it's a current announcement, and given the publication date of 03/09/2024, it seems likely.\n\nThe text specifies a time frame: \"dalle 8,30 alle 16,30\" - from 8:30 AM to 4:30 PM. Crucially, it's a \"sciopero nazionale,\" a national strike, so that sets the scope. \"Servizio a rischio\" indicates the impact. I am confident that it's an upcoming strike.\n\nTherefore, I'll structure the data points accordingly. We have `isStrike: true`. The `strikeData` should include: `startDate`: \"2024-09-09 08:30:00\", and `endDate`: \"2024-09-09 16:30:00\". The `locationType` is definitely \"NATIONAL,\" and I don't need `locationCodes` since this is a national strike. The snippet doesn't specifically mention guaranteed service, so I'll leave `guaranteedTimes` out for now. This seems comprehensive for what's been provided.\n\n\n",
+    "tokens": {
+      "input": 667,
+      "output": 82,
+      "total": 1031
+    }
+  }
+}

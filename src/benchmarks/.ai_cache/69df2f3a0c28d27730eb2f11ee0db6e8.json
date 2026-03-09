@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-11-07 08:30:00",
+      "endDate": "2024-11-07 16:30:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7004,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.002635,
+      "outputCost": 0.0001395,
+      "thinkingCost": 0.0011625,
+      "cachedCost": 0,
+      "totalCost": 0.003937
+    },
+    "hash": "69df2f3a0c28d27730eb2f11ee0db6e8",
+    "sourceFile": "trasporto_pubblico_domani_sciopero_8_ore_sulla_rete_atac.html",
+    "thoughts": "**Strike Information Extraction: A Detailed Analysis**\n\nOkay, let's break this down. My task is to extract strike information from this text snippet and return it as valid JSON, adhering strictly to the defined schema. The initial challenge is to identify the strike details: \"8 ore,\" \"dalle 8,30 alle 16,30,\" affecting the \"rete Atac\" (Atac network), organized by the unions \"Orsa e Usb\". That seems straightforward enough.\n\nThe next critical piece is the date. The text uses \"domani\" (tomorrow), but also includes publication and update dates. The text reads: \"Pubblicato il: 03/07/2024 - Aggiornato il: 06/11/2024.\" Since it was updated on 2024-11-06, \"domani\" logically refers to 2024-11-07. That's a key contextual inference.\n\nNow, let's apply the schema. `isStrike` will be `true`, obviously. Within `strikeData`, I need `startDate`, `endDate`, `locationType`, and `locationCodes`. Based on the identified times, `startDate` will be 2024-11-07 08:30:00, and `endDate` will be 2024-11-07 16:30:00.\n\nRegarding location, \"rete Atac\" indicates the Rome transport network. I need to determine if this is national or regional. Ah, Atac is the local transport provider for Rome. I should select \"REGIONAL\" and Roma is in Lazio (region 12). That means the `locationCodes` should be [\"12\"].\n\nThe tricky bit: guaranteed times. The prompt instructs me to omit the guaranteed times if they are not explicitly mentioned in the text. I reread the relevant section: \"Domani trasporto pubblico a rischio per 8 ore, dalle 8,30 alle 16,30...\" There is no mention of guaranteed hours. I will follow the instructions and omit them.\n\nTherefore, after a final check, the JSON output should be:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-11-07 08:30:00\",\n    \"endDate\": \"2024-11-07 16:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"]\n  }\n}\n```\n\nI am now confident that this is a correct and complete extraction of the strike information from the text, adhering to all constraints. I've double-checked the logic regarding the date inference, location codes, and guaranteed times to ensure accuracy.\n\n\n",
+    "tokens": {
+      "input": 10540,
+      "output": 93,
+      "total": 11408
+    }
+  }
+}

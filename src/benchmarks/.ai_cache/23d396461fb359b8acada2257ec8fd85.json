@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-03-08 00:00:00",
+      "endDate": "2023-03-08 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8142,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00016225,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.000585,
+      "cachedCost": 0,
+      "totalCost": 0.00093175
+    },
+    "hash": "23d396461fb359b8acada2257ec8fd85",
+    "sourceFile": "mercoled_8_marzo_sciopero_nazionale_cub_trasporto_pubblico_rischio_24_ore.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, let's break this down. The objective is clear: determine if this content announces an upcoming strike. The input is a markdown snippet, specifically about a \"nazionale del Cub\" strike happening on Wednesday, March 8th. The metadata confirms this: \"Mercoledì 8 marzo sciopero nazionale del Cub.\"\n\nThe strike details are straightforward: Wednesday, March 8th, 2023, a 24-hour event impacting Atac and Roma Tpl, which, knowing the geography, means the Lazio region (code 12). The \"guaranteed bands\" are specified as \"regolare fino alle 8,30 e dalle 17 alle 20,\" meaning services will be regular until 8:30 AM and again from 5:00 PM to 8:00 PM. I need to make a note to remember that detail is \"fino alle 8.30\" and \"dalle 17 alle 20\", I must pay attention to this. It's a national strike, as the metadata indicates.\n\nBased on this information, I can confidently set `isStrike` to `true`. The `startDate` is obviously 2023-03-08 00:00:00, and given the 24-hour duration, the `endDate` is 2023-03-08 23:59:59. The `locationType` is definitely \"NATIONAL,\" and the `guaranteedTimes` are accurately captured as [\"00:00-08:30\", \"17:00-20:00\"].\n\nThe input also specifies \"Mercoledì 8 marzo\" and the publication date is 03/03/2023. This is absolutely an announcement for an upcoming strike. The `locationType` is again, NATIONAL.\n\nFinally, I need to remember the critical instruction: \"If locationType is NATIONAL, locationCodes MUST BE OMITTED completely.\" I'll need to double-check my implementation to ensure that's correctly handled.\n\n\n",
+    "tokens": {
+      "input": 649,
+      "output": 123,
+      "total": 1162
+    }
+  }
+}

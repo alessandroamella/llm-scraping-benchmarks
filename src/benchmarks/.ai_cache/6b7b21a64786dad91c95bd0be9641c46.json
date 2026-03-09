@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 11130,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0004833,
+      "outputCost": 0.0001972,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0006805
+    },
+    "hash": "6b7b21a64786dad91c95bd0be9641c46",
+    "sourceFile": "venerdi_14_gennaio_sciopero_nazionale_4_ore_trasporto_pubblico_rischio.html",
+    "thoughts": "**Analyzing strike data**\n\nI'm looking at a historical document regarding a strike dated January 14, 2022. It indicates \"sciopero nazionale di 4 ore,\" but since this is about a past event, it can't be marked as an upcoming strike. The instructions specify that I should only set `isStrike` to true for future events. So, for this document, `isStrike` should be false. Therefore, I'll format the output as JSON, which looks like this: `{\"isStrike\": false}`.",
+    "tokens": {
+      "input": 9666,
+      "output": 493,
+      "total": 10159
+    }
+  }
+}

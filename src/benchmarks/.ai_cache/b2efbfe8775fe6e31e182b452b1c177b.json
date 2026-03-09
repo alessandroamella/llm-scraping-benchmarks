@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 11050,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00094525,
+      "outputCost": 0.0002324,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00117765
+    },
+    "hash": "b2efbfe8775fe6e31e182b452b1c177b",
+    "sourceFile": "sciopero_trasporto_pubblico_chiusa_metro_c_aperte_linee_bb1.html",
+    "thoughts": "**Determining strike status**\n\nThe instruction specifies that I should set isStrike to true only if it’s an announcement about an upcoming strike. Since this is about an ongoing strike, isStrike should be false. Therefore, I’ll respond with the JSON format: {\"isStrike\": false}. Even though there are mentions of dates and some news content, the key point is that it's not an upcoming strike. I'll focus on delivering the proper JSON output without extra text!",
+    "tokens": {
+      "input": 18905,
+      "output": 581,
+      "total": 19486
+    }
+  }
+}

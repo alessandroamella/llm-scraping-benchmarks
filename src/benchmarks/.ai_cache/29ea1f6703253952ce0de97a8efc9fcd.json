@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-29 20:00:00",
+      "endDate": "2025-10-29 24:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "20:00-24:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22854,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000538,
+      "outputCost": 0.0007932,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.000847
+    },
+    "hash": "29ea1f6703253952ce0de97a8efc9fcd",
+    "sourceFile": "domani_sciopero_serale_di_4_ore_a_rischio_i_bus_del_deposito_magliana.html",
+    "thoughts": "**Determining Strike Announcement**\n\nI need to output JSON according to the specified format for the upcoming strike. The document indicates an upcoming strike tomorrow evening from 20:00 to 24:00, specifically affecting bus lines from the Magliana depot in Rome. So, it’s definitely an upcoming strike announcement. I need to set isStrike to true and fill in the strikeData, which includes the startDate and endDate in the required format. I'll ensure to adjust the time correctly for midnight to the next day.",
+    "tokens": {
+      "input": 1076,
+      "output": 1983,
+      "total": 3059
+    }
+  }
+}

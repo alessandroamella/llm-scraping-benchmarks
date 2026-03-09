@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-07-18 08:30:00",
+      "endDate": "2024-07-18 12:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20400,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00093855,
+      "outputCost": 0.00056,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00149855
+    },
+    "hash": "30461f72a104839ae13f829d15aba75e",
+    "sourceFile": "trasporto_pubblico_gioved_sciopero_nazionale_830_1230_servizio_rischio.html",
+    "thoughts": "**Extracting strike information**\n\nI need to format the information according to the strike_extraction schema. The document is indeed announcing a strike: it mentions a national strike affecting public transport in Italy on Thursday, from 8:30 to 12:30. The notice emphasizes potential service disruptions. The publication date indicates it was posted recently, ensuring it's relevant for upcoming events. Overall, it’s clearly outlining the strike details and the involved unions. I’ll proceed using this structured information!",
+    "tokens": {
+      "input": 18771,
+      "output": 1400,
+      "total": 20171
+    }
+  }
+}

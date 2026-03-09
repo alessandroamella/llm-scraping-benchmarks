@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-29 20:00:00",
+      "endDate": "2025-10-29 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7979,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000161,
+      "outputCost": 0.0001395,
+      "thinkingCost": 0.001095,
+      "cachedCost": 0,
+      "totalCost": 0.0013955
+    },
+    "hash": "b14f24ac23b37854311351898a064627",
+    "sourceFile": "domani_sciopero_serale_di_4_ore_a_rischio_i_bus_del_deposito_magliana.html",
+    "thoughts": "**Strike Information Extraction - My Thought Process**\n\nOkay, here's the deal. I need to pull strike information from this text snippet. The primary goal is crystal clear: extract strike details, if there is a strike at all, and format it as strictly defined JSON.  The input text talks about an ATAC strike in Rome (Lazio, code 12). My logic is straightforward: first, determine if it *is* a strike. If it is, then I'll extract the specifics: `startDate`, `endDate`, `locationType`, `locationCodes`, and any `guaranteedTimes` mentioned.  Strict adherence to the JSON format and data formats (`yyyy-MM-dd HH:mm:ss`, `HH:mm-HH:mm`) and the region code \"12\" is paramount.\n\nSo, let's break it down piece by piece. The text states \"Domani sciopero serale di 4 ore\" – *tomorrow* there's a 4-hour evening strike. Bingo! `isStrike` is definitely true. The text also states that it's published \"Pubblicato il: 28/10/2025\" and the strike is \"Domani sera... dalle 20 alle 24\" - *tomorrow* evening from 20:00 to 24:00.  \"Domani,\" relative to October 28, 2025, translates to October 29, 2025. That gives me the timeframe, from 20:00 to 24:00, which is the strike's duration. Location is Rome, which I know is in Lazio, and Lazio has the region code \"12\". There are no \"guaranteed times\" mentioned in the input, so that field will be omitted in the output.\n\nNow, let's map these pieces to the JSON structure.\n\n*   `isStrike`: True - Got it.\n*   `startDate`:  Since the strike starts at 20:00 on October 29, 2025, that's \"2025-10-29 20:00:00\".\n*   `endDate`: The strike goes to \"24:00,\" but let's be technically precise.  Standard time practices usually have the last minute of the day as 23:59:59. The instructions say \"24\" so I will use 23:59:59.\n*   `locationType`: Because it's regional (Lazio, code 12), the locationType will be \"REGIONAL.\"\n*   `locationCodes`: The location code is \"12\" – simple, so `[\"12\"]`.\n*   `guaranteedTimes`: Not present. I'll omit this from the final output.\n\nPutting it all together, I have:\n\n`isStrike`: true\n`strikeData`:\n    *   `startDate`: \"2025-10-29 20:00:00\"\n    *   `endDate`: \"2025-10-29 23:59:59\"\n    *   `locationType`: \"REGIONAL\"\n    *   `locationCodes`: [\"12\"]\n\nDoes this meet all the criteria?  Absolutely. It adheres to the JSON structure and uses all of the specific date and format patterns that are required. I'm confident I have a clean, concise, and accurate representation of this strike information, ready for use.\n\n\n",
+    "tokens": {
+      "input": 644,
+      "output": 93,
+      "total": 1467
+    }
+  }
+}

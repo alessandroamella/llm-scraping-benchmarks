@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-02-04 08:30:00",
+      "endDate": "2022-02-04 12:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3744,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00016175,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.000387,
+      "cachedCost": 0,
+      "totalCost": 0.00067175
+    },
+    "hash": "349d76e3ea6a89e48426c9b0e34b1df1",
+    "sourceFile": "4_febbraio_sciopera_4_ore_sindacato_usb_trasporto_pubblico_rischio.html",
+    "thoughts": "**Analyzing the February 4th ATAC Strike Announcement**\n\nOkay, let's process this information efficiently. My primary task is to confirm and extract key data from this strike announcement. First, I have the input content: an announcement of a 4-hour national strike set for February 4th, 2022. It concerns ATAC in Rome, which is important for identifying the relevant stakeholders.\n\nI quickly scan the page title and content, which translates to \"On February 4th, the Usb union strikes for 4 hours... national strike.\" This confirms the strike's validity. Now, I need to pinpoint the specifics.\n\nI can definitively extract the start date and time: 2022-02-04 at 08:30:00, and the end date and time: 2022-02-04 at 12:30:00. The location is clearly \"National,\" which is crucial for determining its scope. The `LocationType` is explicitly \"NATIONAL\" as indicated by the text \"sciopero nazionale\". Since it's a national strike, I don't need any location codes.\n\nCrucially, I also need to note that guaranteed times are *not* explicitly mentioned in the source material. I'll need to consider this lack of data in my next steps, as it might impact my overall analysis and the implications.\n\n\n",
+    "tokens": {
+      "input": 647,
+      "output": 82,
+      "total": 987
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-11-07 08:30:00",
+      "endDate": "2024-11-07 16:30:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7378,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0040795,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.0011625,
+      "cachedCost": 0,
+      "totalCost": 0.0053905
+    },
+    "hash": "d2c76c390145dd9b2c2fd27a4f12c39c",
+    "sourceFile": "trasporto_pubblico_domani_sciopero_8_ore_sulla_rete_atac.html",
+    "thoughts": "**Strike Information Extraction: Initial Thoughts and Refinement**\n\nOkay, so the task is to pull strike data from this HTML, and the output needs to be clean JSON, ready to parse. No extra text, no fluff. Let's see... the `isStrike` field will be `true` if it's an announcement of a future strike. I need to pull out the start and end dates/times, a `locationType` (\"NATIONAL\" or \"REGIONAL\"),  `locationCodes` as 2-digit strings, and any \"guaranteedTimes\", which are optional.\n\nThe headline says \"Trasporto pubblico, domani sciopero di 8 ore sulla rete Atac\" – that's \"Public transport, tomorrow 8-hour strike on the Atac network\".  And the excerpt mentions \"Domani trasporto pubblico a rischio per 8 ore, dalle 8,30 alle 16,30, per lo sciopero indetto dai sindacati Orsa e Usb lavoro privato. L’agitazione coinvolgerà la rete Atac.\"  So, it *is* tomorrow.\n\nAha! \"Domani\" (tomorrow) is the key. The update date is 2024-11-06. That means the strike is scheduled for 2024-11-07.  The text gives the times directly: from 08:30 to 16:30. Atac operates in Rome, therefore in the Lazio region, which is code \"12\". Since this strike is focused on a specific regional transport service, the `locationType` is going to be \"REGIONAL\". LocationCodes, then, will be [\"12\"]. The guaranteed times aren't specified.\n\nLet me just double-check the text again. The \"Pubblicato il: 03/07/2024 - Aggiornato il: 06/11/2024\" part confirms the logic with the \"domani\".  Okay, so my final output should look like this:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-11-07 08:30:00\",\n    \"endDate\": \"2024-11-07 16:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"]\n  }\n}\n```\n\n\n",
+    "tokens": {
+      "input": 16318,
+      "output": 99,
+      "total": 17192
+    }
+  }
+}

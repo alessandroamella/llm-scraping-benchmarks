@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-09-16 08:30:00",
+      "endDate": "2022-09-16 16:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21732,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005595,
+      "outputCost": 0.000542,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00059795
+    },
+    "hash": "040312d7123503d5bcf8100fcdc0339d",
+    "sourceFile": "venerd_16_settembre_sciopero_nazionale_8_ore_trasporto_pubblico_romano_rischio.html",
+    "thoughts": "**Extracting strike data**\n\nI need to output JSON according to the strike extraction schema. The document indicates a national 8-hour strike planned for Friday, 16 September. Rome's public transport will be affected due to the national strike. The publication date is 14/09/2022, updated on 25/01/2023. It confirms an upcoming strike stated as \"dalle 8,30 alle 16,30\" (8:30 AM to 4:30 PM). The start date for extraction will be \"2022-09-16 08:30:00\" in the required format.",
+    "tokens": {
+      "input": 1119,
+      "output": 1355,
+      "total": 2474
+    }
+  }
+}

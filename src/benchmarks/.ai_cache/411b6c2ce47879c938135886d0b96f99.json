@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-05-20 00:00:00",
+      "endDate": "2022-05-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 33757,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0009383,
+      "outputCost": 0.0010848,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0020231
+    },
+    "hash": "411b6c2ce47879c938135886d0b96f99",
+    "sourceFile": "venerd_20_maggio_sciopero_24_ore_trasporto_pubblico_rischio.html",
+    "thoughts": "**Interpreting a Strike Announcement**\n\nI need to output JSON in the right format based on the content. The document is in Italian and discusses an announcement for an upcoming strike on May 20. The title indicates it's about a 24-hour public transport strike in Rome. The main content mentions risks to public transport due to union support for this national strike. It confirms that it indeed seems to be a strike announcement since it highlights key details about the event.",
+    "tokens": {
+      "input": 18766,
+      "output": 2712,
+      "total": 21478
+    }
+  }
+}

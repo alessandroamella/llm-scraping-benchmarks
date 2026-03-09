@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-05-20 00:00:00",
+      "endDate": "2022-05-21 00:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 31861,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00048335,
+      "outputCost": 0.0008868,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00137015
+    },
+    "hash": "abbc5a823698d7792e90175808f17cba",
+    "sourceFile": "venerd_20_maggio_sciopero_24_ore_trasporto_pubblico_rischio.html",
+    "thoughts": "**Setting up date parameters**\n\nI'm considering setting the startDate to \"2022-05-20 00:00:00\" and the endDate to \"2022-05-21 00:00:00.\" I want to ensure the 24-hour timeframe is correct, since it should cover the full period. Hm, the content mentions a strike affecting the Atac network and might indicate it's a national or regional strike in Italy, particularly a 24-hour national strike. I think labeling it as \"NATIONAL\" makes sense for the location type.",
+    "tokens": {
+      "input": 9667,
+      "output": 2217,
+      "total": 11884
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-03-21 00:00:00",
+      "endDate": "2025-03-21 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00], ",
+        "description”: "
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 73835,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0009427,
+      "outputCost": 0.0031852,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0041279
+    },
+    "hash": "c96aa95c5bd9cfab147d1b781de8c402",
+    "sourceFile": "venerdi_21_marzo_sciopero_nazionale_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Clarifying strike data requirements**\n\nIt seems that we have a partial service for strikes, and their duration spans 24 hours. I need to ensure that we extract both startDate and endDate. The schema requires these dates to be present in the strikeData object, but I wonder if we can set them to null if they're not specified. The dates must follow the 'yyyy-MM-dd HH:mm:ss' format, and we need to provide both values. For unspecified times, would using default dates like \"2025-03-21 00:00:00\" and \"2025-03-21 23:59:59\" be acceptable?",
+    "tokens": {
+      "input": 18854,
+      "output": 7963,
+      "total": 26817
+    }
+  }
+}

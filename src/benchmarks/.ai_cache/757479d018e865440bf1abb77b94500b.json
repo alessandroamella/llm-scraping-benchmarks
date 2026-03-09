@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-04-28 08:30:00",
+      "endDate": "2022-04-28 12:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5152,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00264525,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.000684,
+      "cachedCost": 0,
+      "totalCost": 0.00345225
+    },
+    "hash": "757479d018e865440bf1abb77b94500b",
+    "sourceFile": "sciopero_trasporto_pubblico_gioved_28_servizio_rischio_830_1230.html",
+    "thoughts": "**Processing Public Transport Strike Information**\n\nOkay, let's break this down. The text indicates a public transport strike. First, I need to extract the core details. The source material, \"Sciopero del trasporto pubblico, giovedì 28 servizio a rischio dalle 8,30 alle 12,30\", clearly states a strike.\n\nSpecifically, it's a national strike (\"sciopero nazionale\") scheduled for Thursday, April 28th, 2022 – inferred from the publication date (\"Pubblicato il: 22/04/2022\"). It's affecting the Atac and Roma Tpl operators. The strike duration is from 08:30 to 12:30.\n\nNow, let's structure this into the required JSON format, adhering to the specifications provided.\n\nI've confirmed it's an announcement about a strike. The dates and times are extracted and structured as `yyyy-MM-dd HH:mm:ss`. Since it's a *national* strike, the `locationType` is \"NATIONAL,\" and critically, as per the rules, the `locationCodes` field needs to be omitted completely.\n\nBased on the information, the `startDate` is \"2022-04-28 08:30:00\" and the `endDate` is \"2022-04-28 12:30:00\". Also I need to include the fact that `isStrike` is true. Because the type of location is national, I am also confident the `locationCodes` MUST be omitted.\n\nThe article mentions a \"sciopero nazionale di 4 ore\" which confirms the start and end times match the description.\n\nSo, I'm confident I have everything I need to proceed. This data is now correctly structured for further processing.\n\n\n",
+    "tokens": {
+      "input": 10581,
+      "output": 82,
+      "total": 11119
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-10-05 00:00:00",
+      "endDate": "2024-10-06 00:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 29357,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005365,
+      "outputCost": 0.0009504,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00100405
+    },
+    "hash": "0e4b83a73c41443c5927386a5414802d",
+    "sourceFile": "trasporto_pubblico_sabato_5_ottobre_sciopero_nazionale_24_ore_servizio_rischio.html",
+    "thoughts": "**Determining strike announcement details**\n\nI need to format this information in JSON as per instructions. The Italian content announces a national strike on Saturday, October 5, 2024, lasting for 24 hours. It mentions the service will be normal until 8:30 AM and resume again from 5 PM to 8 PM, which suggests the strike runs continuously from midnight. This means I should mark `isStrike` as true, and set the `startDate` and `endDate` accordingly for the full 24-hour period.",
+    "tokens": {
+      "input": 1073,
+      "output": 2376,
+      "total": 3449
+    }
+  }
+}

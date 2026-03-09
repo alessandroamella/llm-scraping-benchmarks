@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-01-16 08:30:00",
+      "endDate": "2023-01-16 12:30:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 14094,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.002645,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.000711,
+      "cachedCost": 0,
+      "totalCost": 0.0035045
+    },
+    "hash": "130a9a846399c24632c0bb5ef51d9879",
+    "sourceFile": "luned_16_gennaio_sciopero_atac_4_ore_servizio_rischio_830_1230.html",
+    "thoughts": "**Processing the ATAC Strike Announcement**\n\nOkay, here's the breakdown. I've received a text announcement about an ATAC strike in Rome. My primary goal is to translate this into a valid JSON format, adhering to the specified conditions.\n\nThe text reads: \"Lunedì 16 gennaio sciopero Atac di 4 ore. Servizio a rischio dalle 8,30 alle 12,30\". Published 11/01/2023. This is pretty straightforward. I recognize this as an announcement of an upcoming strike, so `isStrike` will be set to `true`. Because `isStrike` is `true`, I need to extract and format the strike details into a `strikeData` object.\n\nBased on the date and the format of the text, I'm interpreting the strike to be scheduled for Monday, January 16th, 2023. The strike duration is from 8:30 AM to 12:30 PM. I'll need to parse and format the dates accordingly. I need to make sure I represent the date and time strings in the format `yyyy-MM-dd HH:mm:ss`.\n\nSince it is a regional strike, I can safely set the location type to \"REGIONAL\". I know that Rome is in the Lazio region, which is identified by the ISTAT code \"12\". This should be represented as a string within an array (`\"locationCodes\": [\"12\"]`). I need to explicitly remember to omit the guaranteed times, as these were not provided in the original text.\n\nNow, let's assemble the `strikeData` object.\n\n*   `startDate`: \"2023-01-16 08:30:00\"\n*   `endDate`: \"2023-01-16 12:30:00\"\n*   `locationType`: \"REGIONAL\"\n*   `locationCodes`: [\"12\"]\n\nThe main JSON structure will then look like this:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2023-01-16 08:30:00\",\n    \"endDate\": \"2023-01-16 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"]\n  }\n}\n```\n\nI've double-checked that all strings are double-quoted, dates are in the correct format, and that the resulting output is a valid JSON object. I'm ready to pass this along.\n\n\n",
+    "tokens": {
+      "input": 10580,
+      "output": 99,
+      "total": 11153
+    }
+  }
+}

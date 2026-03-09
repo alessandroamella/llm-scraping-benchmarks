@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-01-24 00:00:00",
+      "endDate": "2024-01-24 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7787,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00264925,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.001446,
+      "cachedCost": 0,
+      "totalCost": 0.00427975
+    },
+    "hash": "187642ca32123433760a12812105017a",
+    "sourceFile": "sciopero_nazionale_24_gennaio_trasporto_pubblico_rischio.html",
+    "thoughts": "**Strike Analysis: January 24th Public Transport**\n\nAlright, let's break this down. My task is to analyze this text and determine if it announces an upcoming strike, and if so, extract the relevant strike details in JSON format. The criteria are pretty straightforward: it needs to be an *upcoming* strike, not a cancellation, past event, or real-time status.\n\nThe headline is \"Sciopero nazionale: il 24 gennaio trasporto pubblico a rischio\" – \"National strike: January 24th public transport at risk.\" The content confirms this: \"Mercoledì 24 gennaio trasporto pubblico a rischio per lo sciopero nazionale di 24 ore...\" (Wednesday, January 24th, public transport at risk due to a national 24-hour strike...).  Okay, first check.\n\nNow, the timestamp is January 18th, 2024, and the strike is on January 24th, 2024. So this is, indeed, an *upcoming* event. Good.\n\nThe text clearly indicates a 24-hour strike, which, unless otherwise specified, I assume runs from 00:00:00 to 23:59:59.\n\nThe location is described as \"nazionale\" – national. So, we're looking at a `locationType` of \"NATIONAL\". Since it's national, I won't need `locationCodes`.\n\nNow, the guaranteed service times. The article states, \"Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" This means service will be regular \"until 8:30\" and \"from 17 to 20\". So, the guaranteed times are \"00:00-08:30\" and \"17:00-20:00\". These ranges are unusual, but the text is explicit. I'll stick with the provided ranges, as it says \"fino alle 8,30\".\n\nPutting it all together: I'm confident that `isStrike` is `true`.\n\nThe JSON output should look like this:\n\n*   `startDate`: \"2024-01-24 00:00:00\"\n*   `endDate`: \"2024-01-24 23:59:59\"\n*   `locationType`: \"NATIONAL\"\n*   `guaranteedTimes`: [\"00:00-08:30\", \"17:00-20:00\"]\n\nYes, this is a national strike that meets the criteria and all the details are in the correct format. The guaranteed times are unusual, but they're explicitly stated in the text. I'm going with those ranges. Okay, that should be it.\n\n\n",
+    "tokens": {
+      "input": 10597,
+      "output": 123,
+      "total": 11684
+    }
+  }
+}

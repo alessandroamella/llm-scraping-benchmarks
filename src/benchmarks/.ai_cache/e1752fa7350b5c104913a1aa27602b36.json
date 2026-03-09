@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8634,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00093815,
+      "outputCost": 0.0001876,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00112575
+    },
+    "hash": "e1752fa7350b5c104913a1aa27602b36",
+    "sourceFile": "sciopero_trasporto_pubblico_chiusa_metro.html",
+    "thoughts": "**Determining strike status**\n\nI’m trying to figure out if this document is announcing a new or upcoming strike. The HTML page is in Italian and mentions \"Sciopero del trasporto pubblico\" and \"chiusa la metro A,\" indicating that a 24-hour strike is already happening. The date indicates the information was recently updated, confirming that this strike status is ongoing, not a future event. Based on the instructions, I’ll conclude that `isStrike` should be false.",
+    "tokens": {
+      "input": 18763,
+      "output": 469,
+      "total": 19232
+    }
+  }
+}

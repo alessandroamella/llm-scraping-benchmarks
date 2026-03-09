@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-10-28 00:00:00",
+      "endDate": "2024-10-28 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7527,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0041135,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.001251,
+      "cachedCost": 0,
+      "totalCost": 0.0055745
+    },
+    "hash": "adf38fd9ce88e67005e9a51a98d65c2f",
+    "sourceFile": "trasporto_pubblico_28_ottobre_sciopero_sulla_rete_atac.html",
+    "thoughts": "**Strike Information Extraction: A Mental Walkthrough**\n\nOkay, let's break this down. My task is to pull strike information from this HTML and format it as a JSON object, sticking to the provided schema. The primary goal is to determine if it's a strike (`isStrike`) and then extract the relevant details: date, time, location (ISTAT code), and guaranteed service times. The HTML is about an ATAC strike on October 28th.\n\nFirst, I see the announcement: \"Trasporto pubblico, il 28 ottobre sciopero sulla rete Atac\" and further details confirming it's a 24-hour strike in Rome, specifically on the ATAC network. So, immediately, `isStrike` is `true`. The text mentions Usb and Orsa unions calling the strike. The article's publication date is October 22nd, 2024. Not the strike date.\n\nNow, let's get specific with the data. The date is October 28th, 2024. Since it's a full 24-hour strike, the start time is 00:00:00, and the end time is 23:59:59. Rome's ATAC is the location; that's region 12 (Lazio). The text says \"Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20\". So, the guaranteed service times are until 8:30 (00:00-08:30) and from 17:00 to 20:00. This is different from the usual windows, which are: 05:30-08:30 and 17:00-20:00, but the text explicitly says that the guaranteed windows are until 08:30 and from 17:00 to 20:00. So I'll go with what the text says.\n\nLet me organize the output:\n\n*   `isStrike`: `true` (definite strike announcement)\n*   `strikeData`:\n    *   `startDate`: \"2024-10-28 00:00:00\"\n    *   `endDate`: \"2024-10-28 23:59:59\"\n    *   `locationType`: \"REGIONAL\"\n    *   `locationCodes`: [\"12\"]\n    *   `guaranteedTimes`: [\"00:00-08:30\", \"17:00-20:00\"]\n\nI need to confirm all formats conform to the schema: Dates are 'yyyy-MM-dd HH:mm:ss', location codes are in a string array (\"12\"), and guaranteed times are also in a string array. Looks good. Time to move on.\n\n\n",
+    "tokens": {
+      "input": 16454,
+      "output": 140,
+      "total": 17428
+    }
+  }
+}

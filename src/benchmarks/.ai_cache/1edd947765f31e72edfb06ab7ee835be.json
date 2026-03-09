@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-16 00:00:00",
+      "endDate": "2025-01-17 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9204,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0026495,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.00129,
+      "cachedCost": 0,
+      "totalCost": 0.004088
+    },
+    "hash": "1edd947765f31e72edfb06ab7ee835be",
+    "sourceFile": "sportello_al_pubblico_e_contact_center_di_rsm_giovedi_e_venerdi_possibili_disagi_per_uno_sciopero.html",
+    "thoughts": "**Strike Analysis: Roma Servizi per la Mobilità**\n\nOkay, here's what I've got. The source is the \"Roma Servizi per la Mobilità\" website. It's an announcement for a strike at their \"Sportello al Pubblico e contact center\" – not the public transport service itself, but the public-facing desk and call center. The strike is scheduled for Thursday, January 16th, and Friday, January 17th, 2025. This is according to the publication date of January 13, 2025, which sets the year as 2025. The union involved is Usb.\n\nThe prompt specifically mentions \"ATAC,\" the public transport company of Rome, but the text is about *Roma Servizi per la Mobilità* (Rsm). Now, the instructions say to analyze a strike *from* ATAC. Hmm. Is this within the scope? It *is* a strike, affecting mobility services in Rome, even if it's not directly ATAC's buses, metros, or trams. And, typically these systems want all transport related entities.\n\nLet me double-check. The instruction says \"Decide if this document is actually announcing a new/upcoming strike... ONLY set `isStrike` to true if it is an announcement of an upcoming strike.\" Well, it *is* an announcement of an upcoming strike. The prompt does say \"from ATAC\", but Roma Servizi per la Mobilità is an associated, related mobility service provider. Given that it is a mobility related strike, I'll extract it.\n\nThe dates are clear: January 16th and 17th, 2025. Since it says \"intero turno\" (entire shift), I'll set the start date to 2025-01-16 00:00:00 and the end date to 2025-01-17 23:59:59. Given that it is about Roma (region 12), I'll set the `locationType` to \"REGIONAL\", the `locationCodes` to [\"12\"], and there's no mention of guaranteed service periods, so I won't include anything for `guaranteedTimes`. The final dates will be:\n\n*   `startDate`: 2025-01-16 00:00:00\n*   `endDate`: 2025-01-17 23:59:59\n*   `locationType`: \"REGIONAL\"\n*   `locationCodes`: [\"12\"]\n*   `guaranteedTimes`: Not mentioned\n\n\n",
+    "tokens": {
+      "input": 10598,
+      "output": 99,
+      "total": 11557
+    }
+  }
+}

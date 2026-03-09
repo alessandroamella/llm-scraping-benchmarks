@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-12-02 00:00:00",
+      "endDate": "2022-12-02 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 23187,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0009435,
+      "outputCost": 0.0007516,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0016951
+    },
+    "hash": "d4d942498da4a74a5c18e816f838efcd",
+    "sourceFile": "venerd_2_dicembre_sciopero_generale_nazionale_24_ore_rischio_trasporto_pubblico_romano.html",
+    "thoughts": "**Extracting strike details**\n\nIt looks like there's an announcement about an upcoming strike on December 2nd, not something happening in real-time. So I need to set isStrike as true. The strike starts according to the announcement, and the article mentions specific service times, which shows the network will operate until 8:30 AM and then again from 5 PM to 8 PM, meaning the strike arguably lasts 24 hours. I need to clarify both the start and end dates with those times.",
+    "tokens": {
+      "input": 18870,
+      "output": 1879,
+      "total": 20749
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7990,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00048245,
+      "outputCost": 0.000182,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00066445
+    },
+    "hash": "8c49afca9900201a668cf42f604bf1e0",
+    "sourceFile": "sciopero_trasporto_pubblico_chiuse_metro_c_attiva_b.html",
+    "thoughts": "**Determining strike status**\n\nI need to output JSON in the strike_extraction format. The content discusses an ongoing public transport strike with details about closures, indicating it won't conclude until a specified time. Since it indicates a current strike, it can't be classified as an upcoming one. Therefore, I have to set \"isStrike\" to false according to the instructions. My final output will be {\"isStrike\": false}. Let's ensure everything aligns!",
+    "tokens": {
+      "input": 9649,
+      "output": 455,
+      "total": 10104
+    }
+  }
+}

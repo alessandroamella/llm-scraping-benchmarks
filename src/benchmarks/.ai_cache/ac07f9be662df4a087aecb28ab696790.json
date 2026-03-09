@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-09 00:00:00",
+      "endDate": "2025-12-09 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5719,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0001545,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.0009885,
+      "cachedCost": 0,
+      "totalCost": 0.001353
+    },
+    "hash": "ac07f9be662df4a087aecb28ab696790",
+    "sourceFile": "martedi_9_dicembre_sciopero_del_trasporto_pubblico_possibili_stop_per_24_ore.html",
+    "thoughts": "**Analyzing the Rome Public Transport Strike Announcement**\n\nOkay, let's break this down. First, the input content is an announcement about a 24-hour strike affecting Rome's public transport (Atac) on Tuesday, December 9th, 2025. It was published on December 4th, 2025 – so, it's definitely an upcoming event.\n\nThe strike is scheduled for Tuesday, December 9th (of that year, 2025, which is important for any time calculations). The duration is confirmed as 24 hours. The location is Rome, which the code \"12\" identifies within the Lazio region.\n\nNow, the \"guaranteed times\" section requires careful attention. It initially reads \"regolare fino alle 8,30 e dalle 17 alle 20.\" That translates to service operating *up to* 8:30 AM and again between 5 PM and 8 PM. However, the initial context suggests a full 24-hour strike. A standard strike format typically runs from 00:00 to 23:59. It is important to confirm what is stated, but from the announcement, I'm confident about the 24 hour nature.\n\nBased on this, I'm structuring the strike information in the following way:\n\n*   **`startDate`:** 2025-12-09 00:00:00\n*   **`endDate`:** 2025-12-09 23:59:59\n*   **`locationType`:** \"REGIONAL\" (due to Rome/Lazio).\n*   **`locationCodes`:** [\"12\"]\n*   **`guaranteedTimes`:** [\"00:00-08:30\", \"17:00-20:00\"]\n\nIt's clear that `isStrike` is `true`. This data all passes schema validation and the strike is an announcement of an upcoming event. I'm ready to proceed with generating the appropriate response based on this structured information.\n\n\n",
+    "tokens": {
+      "input": 618,
+      "output": 140,
+      "total": 1417
+    }
+  }
+}

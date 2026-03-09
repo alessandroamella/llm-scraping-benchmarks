@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-11-08 00:00:00",
+      "endDate": "2024-11-08 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 45676,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000567,
+      "outputCost": 0.0014036,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0014603
+    },
+    "hash": "2909166ebd0995914167db23739008a9",
+    "sourceFile": "venerdi_8_novembre_sciopero_nazionale_del_trasporto_pubblico_servizio_a_rischio_per_24_ore.html",
+    "thoughts": "**Extracting strike data**\n\nI need to output JSON according to instructions for a strike extraction. The content mentions a national strike on Friday, November 8, lasting 24 hours, which is confirmed as an upcoming strike. So, I’ll set `isStrike` to true. I’ll also create `strikeData` with the start and end dates formatted as 'yyyy-MM-dd HH:mm:ss'. The article provides some service details from 8:30 AM and then again from 5 PM to 8 PM, so I’ll need to calculate those exact times for the data.",
+    "tokens": {
+      "input": 1134,
+      "output": 3509,
+      "total": 4643
+    }
+  }
+}

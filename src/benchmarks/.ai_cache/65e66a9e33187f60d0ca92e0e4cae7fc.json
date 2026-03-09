@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-04-11 20:00:00",
+      "endDate": "2024-04-11 23:59:59",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 34044,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0009419,
+      "outputCost": 0.0010484,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0019903
+    },
+    "hash": "65e66a9e33187f60d0ca92e0e4cae7fc",
+    "sourceFile": "gioved_11_aprile_sciopero_nazionale_trasporto_pubblico_rischio_20_24.html",
+    "thoughts": "**Parsing strike announcement**\n\nI need to output JSON according to the strike_extraction schema. The document mentions an upcoming strike in Italy on Thursday, April 11, 2024. It states that public transport is at risk from 8 PM to midnight, as announced by the unions Cgil and Uil. The timestamp in the document clarifies its recent publishing, confirming this is an announcement about the strike times. Let’s ensure that the JSON reflects this accurately!",
+    "tokens": {
+      "input": 18838,
+      "output": 2621,
+      "total": 21459
+    }
+  }
+}

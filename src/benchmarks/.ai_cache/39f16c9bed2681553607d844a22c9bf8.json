@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-05-02 08:30:00",
+      "endDate": "2023-05-02 12:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24951,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005385,
+      "outputCost": 0.0004772,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00053105
+    },
+    "hash": "39f16c9bed2681553607d844a22c9bf8",
+    "sourceFile": "martedi_2_maggio_sciopero_nazionale_4_ore_trasporto_pubblico_romano_rischio.html",
+    "thoughts": "**Determining location type and details**\n\nI'm starting with the date and time parameters: startDate is \"2023-05-02 08:30:00\" and EndDate is \"2023-05-02 12:30:00.\" \n\nNow, I need to decide between \"REGIONAL\" or \"NATIONAL\" for locationType. The phrase \"sciopero nazionale di 4 ore\" indicates a national strike, so it should be NATIONAL. It affects public transport in Rome, but since it's a national issue, we'll set locationCodes to null. \n\nFor guaranteedTimes, the article doesn’t specify any, mentioning updates available on romamobilita.it instead.",
+    "tokens": {
+      "input": 1077,
+      "output": 1193,
+      "total": 2270
+    }
+  }
+}

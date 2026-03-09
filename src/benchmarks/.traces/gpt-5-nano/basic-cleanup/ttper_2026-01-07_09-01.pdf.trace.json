@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-03-09T15:54:09.474Z",
+  "timestamp": "2026-03-09T16:10:30.180Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "Trenitalia TPER",
     "fileName": "ttper_2026-01-07_09-01.pdf",
     "model": "gpt-5-nano",
     "strategy": "basic-cleanup",
-    "useLenientSchema": true,
+    "useLenientSchema": false,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"Trenitalia TPER\" (the public transport company of Emilia-Romagna (08)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: basic-cleanup):\nSCIOPERO DEL PERSONALE DI TRENITALIA TPER 07 GENNAIO Dalle ore 09:01 alle ore 17:00 del 07 gennaio 2026 è stato indetto uno sciopero regionale del personale di Trenitalia Tper che potrà coinvolgere i treni Regionali in Emilia Romagna e nelle regioni limitrofe. Lo sciopero può comportare modifiche al servizio anche prima dell’inizio e dopo la sua conclusione. Sono garantiti i servizi essenziali previsti in caso di sciopero nei giorni feriali dalle ore 6:00 alle ore 9:00 e dalle ore 18:00 alle ore 21:00. Gli elenchi dei servizi garantiti sono consultabili sull’Orario ufficiale Trenitalia Tper sul sito www.trenitaliatper.it. I viaggiatori potranno richiedere il rimborso del biglietto secondo quanto previsto dalle Condizioni Generali di Trasporto di ciascun vettore, consultabili sul sito delle singole Imprese Ferroviarie; in alternativa possono riprogrammare il viaggio, a condizioni di trasporto simili, non appena possibile, secondo disponibilità dei posti. Informazioni su collegamenti e servizi anche attraverso la sezione Infomobilità del sito trenitaliatper.it, sito trenitalia.com, il call center 840151152, l’app Trenitalia, oltre che nelle biglietterie e presso il personale di assistenza clienti. -- 1 of 1 --"
   },
   "response": {
@@ -17,7 +17,12 @@
         "endDate": "2026-01-07 17:00:00",
         "locationType": "REGIONAL",
         "locationCodes": [
-          "08"
+          "01",
+          "03",
+          "05",
+          "08",
+          "09",
+          "11"
         ],
         "guaranteedTimes": [
           "06:00-09:00",
@@ -26,17 +31,18 @@
       }
     },
     "usage": {
-      "input": 1142,
-      "output": 2305,
-      "total": 3447
+      "input": 1228,
+      "output": 1790,
+      "total": 3018
     },
     "costUsd": {
-      "inputCost": 0.0000571,
-      "outputCost": 0.000922,
+      "inputCost": 0.0000614,
+      "outputCost": 0.000716,
       "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.0009791
+      "totalCost": 0.0007774
     },
-    "durationMs": 28387
+    "durationMs": 25946,
+    "thoughts": "**Determining strike announcement**\n\nI'm working on how to output JSON that marks whether there's a strike. The document clearly states a regional strike of Trenitalia Tper, scheduled for January 7, 2026, from 09:01 to 17:00. It mentions that this strike could involve regional trains, which means we definitely classify this as an announcement. I need to include that it guarantees certain services around the strike times, but the main focus is confirming it’s officially announced."
   }
 }

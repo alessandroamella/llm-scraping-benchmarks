@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-10-28 00:00:00",
+      "endDate": "2024-10-28 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 28960,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00094175,
+      "outputCost": 0.0009456,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00188735
+    },
+    "hash": "ea75858f8ab4db751da43722b02b0ac0",
+    "sourceFile": "trasporto_pubblico_28_ottobre_sciopero_sulla_rete_atac.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to output JSON indicating whether there's a strike, either true or false, along with strikeData details if applicable. I'm looking at a long Italian HTML page titled, \"Trasporto pubblico, il 28 ottobre sciopero sulla rete Atac - Roma Servizi per la Mobilità.\" The content discusses a 24-hour public transport strike in Rome set for October 28, affecting the Atac network. The page date is from October 2024, meaning this is an announcement for a future strike.",
+    "tokens": {
+      "input": 18835,
+      "output": 2364,
+      "total": 21199
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24276,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0009429,
+      "outputCost": 0.001044,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0019869
+    },
+    "hash": "929c01fc7dbc4a60c918caeff625fc58",
+    "sourceFile": "roma_servizi_mobilit_domani_attivit_rischio_sciopero.html",
+    "thoughts": "**Extracting strike data**\n\nI need to gather strike data which includes startDate and endDate formatted as 'yyyy-MM-dd HH:mm:ss'. There aren’t specific times mentioned, just hints about \"Domani\" and the risks to operations. The instructions suggest using null if no times are provided, but the schema requires all fields if isStrike is true.\n\nIt sounds like the locationType could be national or regional, given it relates to the USB union strike impacting Roma Mobility. Since it involves \"Roma,\" it seems likely to be National but might still be REGIONAL for Lazio. I can also note that Lazio has a region code of 12.",
+    "tokens": {
+      "input": 18858,
+      "output": 2610,
+      "total": 21468
+    }
+  }
+}

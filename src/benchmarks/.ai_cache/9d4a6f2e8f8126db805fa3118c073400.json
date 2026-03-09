@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-07-07 00:00:00",
+      "endDate": "2023-07-07 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 30182,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005485,
+      "outputCost": 0.0006656,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00072045
+    },
+    "hash": "9d4a6f2e8f8126db805fa3118c073400",
+    "sourceFile": "venerd_7_luglio_trasporto_pubblico_rischio_sciopero_nazionale_24_ore_della_faisa_confail.html",
+    "thoughts": "**Preparing strike data in JSON**\n\nI need to create a JSON output indicating if there’s a strike happening. The content discusses transport risks in Italy due to a national 24-hour strike by Faisa Confail on Friday, July 7. It mentions that services in Rome, like the ATAC network, will operate normally until 8:30 AM and then again from 5 PM to 8 PM. It’s clear the strike is confirmed, so I’ll set isStrike to true and determine the start and end times for the strike data.",
+    "tokens": {
+      "input": 1097,
+      "output": 1664,
+      "total": 2761
+    }
+  }
+}

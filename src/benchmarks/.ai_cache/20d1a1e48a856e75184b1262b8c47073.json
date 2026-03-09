@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 26765,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00048105,
+      "outputCost": 0.0007176,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00119865
+    },
+    "hash": "20d1a1e48a856e75184b1262b8c47073",
+    "sourceFile": "news_media_comunicati_sciopero_generale_13_dicembre_240re.html",
+    "thoughts": "**Extracting strike data**\n\nI need to set isStrike to true and pull the strikeData, which includes the start date. The entry mentions dates published on 12/12/2024. There’s a general 24-hour strike tomorrow, affecting transport in Rome, with regular service until 8:30 and from 17:00 to 20:00. The instruction requires dates in 'yyyy-MM-dd HH:mm:ss' format, so I’ll fill in the date for tomorrow, which is 12/13/2024, at appropriate times. Those mentioned times are the guaranteed ones, I think.",
+    "tokens": {
+      "input": 9621,
+      "output": 1794,
+      "total": 11415
+    }
+  }
+}

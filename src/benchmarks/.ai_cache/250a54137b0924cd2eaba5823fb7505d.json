@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-09-09 08:30:00",
+      "endDate": "2024-09-09 16:30:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3997,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00411825,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.0003465,
+      "cachedCost": 0,
+      "totalCost": 0.00461325
+    },
+    "hash": "250a54137b0924cd2eaba5823fb7505d",
+    "sourceFile": "luned_9_settembre_sciopero_nazionale_trasporto_pubblico_servizio_rischio.html",
+    "thoughts": "**Analyzing Strike Announcement Text**\n\nOkay, let's break this down. My objective is crystal clear: I need to ascertain if this text constitutes an announcement regarding an impending strike. My analysis starts with the content itself. The title, \"Lunedì 9 settembre sciopero nazionale del trasporto pubblico. Servizio a rischio\" – that immediately flags something. \"Sciopero\" translates to \"strike\", and \"servizio a rischio\" means \"service at risk.\" A quick glance at the body confirms this suspicion.\n\nThe text specifies \"Lunedì 9 settembre trasporto pubblico a rischio per lo sciopero nazionale proclamato dai sindacati...\" – essentially, a national public transport strike is planned for September 9th, declared by various unions. Excellent. This confirms \"isStrike\" is true. I'll need to extract the pertinent details. The text explicitly mentions the start time as 08:30 and the end time as 16:30 on September 9th, 2024 (based on the provided date).\n\nI'll denote this as a regional strike, specifically in Rome, which I'll code as \"12\". This is relevant because even though it's described as \"national,\" it is specifically detailing the impact on Rome, which falls under the Lazio region. I’m thinking \"locationType\" will be \"REGIONAL,\" and \"locationCodes\" should contain [\"12\"]. Finally, it needs to be formatted as a JSON array of objects.\n\n\n",
+    "tokens": {
+      "input": 16473,
+      "output": 99,
+      "total": 16803
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-05-02 08:30:00",
+      "endDate": "2023-05-02 12:30:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9083,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00410425,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.0009495,
+      "cachedCost": 0,
+      "totalCost": 0.00520225
+    },
+    "hash": "5187217b55ab8e666d2655bf676c098f",
+    "sourceFile": "martedi_2_maggio_sciopero_nazionale_4_ore_trasporto_pubblico_romano_rischio.html",
+    "thoughts": "**My Analysis of the ATAC Strike Information**\n\nAlright, let's break this down. My task is to extract strike information from this HTML content, specifically focusing on ATAC in Rome. The goal is to determine if there's an upcoming strike and, if so, format the details into a specific JSON structure.\n\nThe text itself indicates a strike on Tuesday, May 2nd. The publication date is April 26, 2023, confirming the year. The title \"Martedi 2 maggio sciopero nazionale di 4 ore. Trasporto pubblico romano a rischio\" clearly states a national strike impacting Rome's public transport. The body confirms a four-hour strike from 8:30 AM to 12:30 PM, the strike is announced. The text mentions the sindicato Faisa Confail is organizing it.\n\nSo, here's what I'm pulling together. The data will indicate a strike (`isStrike: true`). The `strikeData` section then needs filling. I know the `startDate` is \"2023-05-02 08:30:00\" and the `endDate` is \"2023-05-02 12:30:00\".\n\nNow, the `locationType` and `locationCodes` part needs careful consideration. While the text refers to a *national* strike (\"sciopero nazionale\"), the focus and impact specified is for ATAC in Rome. My initial thought is it's national, but the prompt says to extract it. Therefore, I will define `locationType` to \"REGIONAL\" since the impact is specified to region 12 (Rome, Lazio). The `locationCodes` will be `[\"12\"]`.\n\nSince the HTML excerpt doesn't mention guaranteed times, this field will be omitted in the JSON structure.\n\nFinally, let's verify the date format. \"2023-05-02 08:30:00\" fits the specified `yyyy-MM-dd HH:mm:ss` format. Okay, I believe I have extracted the requested information and can now construct the output.\n\n\n",
+    "tokens": {
+      "input": 16417,
+      "output": 99,
+      "total": 17149
+    }
+  }
+}

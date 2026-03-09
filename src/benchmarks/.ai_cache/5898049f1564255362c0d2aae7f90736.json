@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-12-02 00:00:00",
+      "endDate": "2022-12-02 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 11972,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0041245,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.001407,
+      "cachedCost": 0,
+      "totalCost": 0.0057415
+    },
+    "hash": "5898049f1564255362c0d2aae7f90736",
+    "sourceFile": "venerd_2_dicembre_sciopero_generale_nazionale_24_ore_rischio_trasporto_pubblico_romano.html",
+    "thoughts": "**Strike Analysis and Data Extraction**\n\nOkay, let's break this down. My objective here is clear: determine if this text announces a strike and, if so, meticulously extract the relevant details. I need to return *valid* JSON, nothing else, following a very specific format. No extraneous comments or fluff.\n\nFirst, I see the text: \"Venerdì 2 dicembre sciopero generale nazionale di 24 ore.\" That's a strong indicator – \"sciopero generale\" means general strike. There's also the detail about \"trasporto pubblico romano\" (Roman public transport), specifically ATAC. The posting date is historical (25/11/2022), but I'm operating on the logic as if it were an announcement.\n\nAnalyzing further, \"L'agitazione interesserà la rete Atac e i bus periferici della Roma Tpl. Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" Okay, this confirms it impacts ATAC and peripheral buses. Now, the phrasing is crucial. It says \"servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" That specifies guaranteed service intervals.\n\nSo, I need to extract the relevant strike details, bearing in mind the date formatting requirements (yyyy-MM-dd HH:mm:ss for dates, HH:mm-HH:mm for guaranteed times).\n\n*   Strike start: Assuming a 24-hour strike, and with the \"Venerdì 2 dicembre\" information, it would be \"2022-12-02 00:00:00\".\n*   Strike end: \"2022-12-02 23:59:59\".\n*   Location: \"REGIONAL,\" specifically Rome, which, with code \"12\".\n*   Guaranteed service windows: The text is very clear: \"fino alle 8,30\" translates to \"00:00-08:30\" (inclusive), and \"dalle 17 alle 20\" is \"17:00-20:00\".\n\nI'm now satisfied that the text is an *announcement of an upcoming strike*. I've verified the guaranteed times are compliant with regex and datetime requirements. Therefore, I can now construct the JSON:\n```json\n{\n  \"isStrike\": true,\n  \"startDate\": \"2022-12-02 00:00:00\",\n  \"endDate\": \"2022-12-02 23:59:59\",\n  \"locationType\": \"REGIONAL\",\n  \"locationCodes\": [\n    \"12\"\n  ],\n  \"guaranteedTimes\": [\n    \"00:00-08:30\",\n    \"17:00-20:00\"\n  ]\n}\n```\n\n\n",
+    "tokens": {
+      "input": 16498,
+      "output": 140,
+      "total": 17576
+    }
+  }
+}

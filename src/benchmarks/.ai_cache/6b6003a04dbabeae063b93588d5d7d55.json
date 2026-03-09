@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 12096,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00094105,
+      "outputCost": 0.0002412,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00118225
+    },
+    "hash": "6b6003a04dbabeae063b93588d5d7d55",
+    "sourceFile": "sciopero_trasporto_pubblico_aperte_metropolitane_situazione_sulla_rete_15.html",
+    "thoughts": "**Determining strike status**\n\nI need to assess whether this document announces an upcoming strike. The date is 17/02/2023, and the text indicates an ongoing transit strike in Rome for 24 hours. This makes it clear that the strike is currently in progress, not upcoming, so isStrike should be set to false. Also, this involves ATAC, but the focus here is on the transit authority's services during the strike. The output will be {\"isStrike\": false}.",
+    "tokens": {
+      "input": 18821,
+      "output": 603,
+      "total": 19424
+    }
+  }
+}

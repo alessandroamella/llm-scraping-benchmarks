@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-07-24 08:30:00",
+      "endDate": "2023-07-24 12:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 30705,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00093795,
+      "outputCost": 0.0007156,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00165355
+    },
+    "hash": "3b0981d8b86a4076a323dfb381ef4961",
+    "sourceFile": "luned_24_luglio_sciopero_nazionale_tpl_roma_servizio_rischio_830_1230.html",
+    "thoughts": "**Determining strike data setup**\n\nI’m working on the strike data, confirming that isStrike should be true. I need to format strikeData with the startDate and endDate in 'yyyy-MM-dd HH:mm:ss'. The strike occurs on July 24, 2023, from 8:30 to 12:30, using Italian formatting. I’ll convert the times to align with the example format, resulting in startDate as 2023-07-24 08:30:00 and endDate as 2023-07-24 12:30:00. Since it's a national strike, I wonder if locationCodes should be null.",
+    "tokens": {
+      "input": 18759,
+      "output": 1789,
+      "total": 20548
+    }
+  }
+}

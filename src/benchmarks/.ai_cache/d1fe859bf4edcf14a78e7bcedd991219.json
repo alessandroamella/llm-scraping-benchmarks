@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-02-04 08:30:00",
+      "endDate": "2022-02-04 12:30:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5569,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00264175,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.0005985,
+      "cachedCost": 0,
+      "totalCost": 0.00338875
+    },
+    "hash": "d1fe859bf4edcf14a78e7bcedd991219",
+    "sourceFile": "4_febbraio_sciopera_4_ore_sindacato_usb_trasporto_pubblico_rischio.html",
+    "thoughts": "**Analyzing the Public Transport Strike Announcement**\n\nOkay, let's break this down. My task is clear: I need to analyze this text – a public transport strike announcement – and output a JSON object adhering to a specific schema. The goal is to extract key strike-related information.\n\nFirst, I need to check if this is, in fact, an announcement about a strike. The title and text are pretty clear: \"Il 4 febbraio sciopera 4 ore...\" and mentions \"sciopero\" (strike) explicitly. So, `isStrike` is definitely `true`.\n\nNow, if it *is* a strike announcement, I need to extract the relevant details: start and end dates, the location type, the location codes, and the guaranteed service times, if any. The title and text provide all the details.\n\nThe text says the strike is on \"Venerdì 4 febbraio\", which, according to the implied publication year 2022, is February 4th, 2022. I need to format this in `yyyy-MM-dd HH:mm:ss` format. So, `startDate` will be \"2022-02-04 08:30:00\" and `endDate` will be \"2022-02-04 12:30:00\" since the text says that the strike lasts from 8:30 to 12:30.\n\nThe location is specified as Rome, which is in the Lazio region. The constraint requires I use the 2-digit ISTAT code, and Lazio is \"12\". Since the strike affects the entire Rome transport network, from bus to train, I need to represent this in `locationCodes` and represent the `locationType` correctly.\n\nFinally, I need to extract the guaranteed service times. The provided text doesn't explicitly mention any guaranteed times, so I have to leave that field as null or an empty array.\n\nAlright, with all the necessary information parsed, I can now construct the JSON object. It needs to be valid JSON, so I'll double-check everything before returning.\n\n\n",
+    "tokens": {
+      "input": 10567,
+      "output": 99,
+      "total": 11065
+    }
+  }
+}

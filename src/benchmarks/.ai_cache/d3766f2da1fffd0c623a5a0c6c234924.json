@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-02-25 00:00:00",
+      "endDate": "2022-02-25 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 41571,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00094325,
+      "outputCost": 0.0012332,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00217645
+    },
+    "hash": "d3766f2da1fffd0c623a5a0c6c234924",
+    "sourceFile": "trasporto_pubblico_venerdi_25_febbraio_sciopero_nazionale_24_ore.html",
+    "thoughts": "**Extracting strike data**\n\nI need to format this information according to the JSON strike extraction instructions. The document is in Italian and announces a public transport strike on Friday, February 25. The body specifies strike times and provides additional details like local updates. Since this clearly indicates an upcoming strike, I’ll set isStrike to true. I'll also extract relevant data such as start and end dates and location. The page indicates it was published on February 18, 2022.",
+    "tokens": {
+      "input": 18865,
+      "output": 3083,
+      "total": 21948
+    }
+  }
+}

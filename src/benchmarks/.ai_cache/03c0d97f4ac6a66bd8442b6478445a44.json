@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-02-25 08:30:00",
+      "endDate": "2022-02-25 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "08:30-17:00",
+        "20:00-23:59"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 36335,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005615,
+      "outputCost": 0.0010476,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00110375
+    },
+    "hash": "03c0d97f4ac6a66bd8442b6478445a44",
+    "sourceFile": "trasporto_pubblico_venerdi_25_febbraio_sciopero_nazionale_24_ore.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to output JSON based on the strike extraction format. The document announces an upcoming national strike on February 25, based on the content. It's highlighting the potential impact on public transport and includes specific times related to the strike, which will involve the Atac network in Rome. Given the details, I can confidently say it is an announcement for a strike. I’ll set isStrike: true and include the necessary strike data.",
+    "tokens": {
+      "input": 1123,
+      "output": 2619,
+      "total": 3742
+    }
+  }
+}

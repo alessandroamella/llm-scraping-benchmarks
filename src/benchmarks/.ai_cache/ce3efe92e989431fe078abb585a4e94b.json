@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-02-04 08:30:00",
+      "endDate": "2022-02-04 12:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22597,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000539,
+      "outputCost": 0.0008352,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008891
+    },
+    "hash": "ce3efe92e989431fe078abb585a4e94b",
+    "sourceFile": "4_febbraio_sciopera_4_ore_sindacato_usb_trasporto_pubblico_rischio.html",
+    "thoughts": "**Extracting strike data**\n\nI need to output the data in the specific JSON format for strike extraction. This document announces an upcoming strike by USB on February 4, 2022, for four hours from 08:30 to 12:30. So, I'll set isStrike to true. \n\nFor the strike data, the start date will be formatted as \"2022-02-04 08:30:00\" and the end date as \"2022-02-04 12:30:00\". Since it mentions a \"sciopero nazionale,\" the location type will be \"NATIONAL.\"",
+    "tokens": {
+      "input": 1078,
+      "output": 2088,
+      "total": 3166
+    }
+  }
+}

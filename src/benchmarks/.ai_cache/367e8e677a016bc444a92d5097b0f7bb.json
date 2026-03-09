@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6779,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00048205,
+      "outputCost": 0.0001472,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00062925
+    },
+    "hash": "367e8e677a016bc444a92d5097b0f7bb",
+    "sourceFile": "sciopero_trasporto_pubblico_aperta_metro_b_chiuse_c.html",
+    "thoughts": "**Checking strike information**\n\nI see the content mentions a public transport strike, but it looks like it's stating that the B line is open while A and C are closed. The directive tells me to set `isStrike` to true only if it's an announcement about an upcoming strike, so in this case, I’ll set it to false. I need to make sure the final output is just the JSON object: `{\"isStrike\": false}`. Let's finalize that!",
+    "tokens": {
+      "input": 9641,
+      "output": 368,
+      "total": 10009
+    }
+  }
+}

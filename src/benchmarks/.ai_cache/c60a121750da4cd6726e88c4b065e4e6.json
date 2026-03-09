@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-11-29 09:00:00",
+      "endDate": "2024-11-29 13:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "09:00-13:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24798,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005575,
+      "outputCost": 0.0005032,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00055895
+    },
+    "hash": "c60a121750da4cd6726e88c4b065e4e6",
+    "sourceFile": "sciopero_generale_nazionale.html",
+    "thoughts": "**Determining strike announcement details**\n\nI need to respond with JSON according to the strict schema. The content is about a nationwide general strike tomorrow, affecting public transport from 9 AM to 1 PM. It mentions ATAC and private operators in Rome, but since this is a national strike, the locationType should be marked as \"NATIONAL,\" which means my locationCodes need to be explicitly null. It looks like I’m preparing to finalize the details for this strike announcement.",
+    "tokens": {
+      "input": 1115,
+      "output": 1258,
+      "total": 2373
+    }
+  }
+}

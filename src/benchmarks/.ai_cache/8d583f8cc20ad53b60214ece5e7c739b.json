@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8966,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00264,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.0016905,
+      "cachedCost": 0,
+      "totalCost": 0.004515
+    },
+    "hash": "8d583f8cc20ad53b60214ece5e7c739b",
+    "sourceFile": "venerdi_28_novembre_sciopero_generale_nazionale_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Strike Analysis Summary**\n\nOkay, let's break this down. My task is to analyze this snippet of text and determine if it's a strike announcement, and if so, to extract the necessary information and format it as a valid JSON object according to the provided schema, *strictly* adhering to the constraints. First, let's confirm the core of it: \"Venerdì 28 novembre sciopero generale nazionale.\" This looks like a strike announcement. The context helps: \"Pubblicato il: 21/11/2025\" implies the year, so it's Friday, November 28th, 2025. Given it's a 24-hour national strike in Italy, I'll assume the strike period is the full day, from 00:00 to 23:59 on November 28th, 2025.\n\nThe text specifies \"Trasporto pubblico a rischio,\" so I have a strike, and the location is \"nazionale,\" which translates to `locationType`: \"NATIONAL\". The text provides key guaranteed service times: \"fino alle 8,30 e dalle 17 alle 20\". This means the service is regular *until* 08:30 and *from* 17:00 to 20:00. Those are the periods outside the strike hours. So that translates to a guaranteed time period of 00:00-08:30 and 17:00-20:00. It is a general transit strike, often from 00:00 to 23:59.\n\nNow, let's assemble the data for the JSON. `isStrike` is clearly true. The `strikeData` object needs `startDate` as \"2025-11-28 00:00:00\" and `endDate` as \"2025-11-28 23:59:59\". The `locationType` will be \"NATIONAL\" and `guaranteedTimes` will be [\"00:00-08:30\", \"17:00-20:00\"].\n\nCrucially, the prompt states that if `locationType` is \"NATIONAL,\" I **must** omit `locationCodes`. I need to ensure that the schema checks out, so let me do that before proceeding. The date and time format `^\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}$` seems correct for start and end dates. The time format for `guaranteedTimes` as `^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]-(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$` is also correct. Double check.\n\nFinally, confirm no extra details are included, and no extra text will be present. I also reconfirm the date \"Venerdì 28 novembre\" matches 21/11/2025. Yes, Nov 28, 2025 *is* a Friday. Okay, it looks good. Let me generate that JSON now.\n\n\n",
+    "tokens": {
+      "input": 10560,
+      "output": 123,
+      "total": 11810
+    }
+  }
+}

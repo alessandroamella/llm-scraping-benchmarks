@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 13362,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00047945,
+      "outputCost": 0.0001704,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00064985
+    },
+    "hash": "11a3c807827da99f48ae5bbccbb73a70",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_385.html",
+    "thoughts": "**Analyzing strike information**\n\nI need to output JSON indicating whether this is a current strike. The heading mentions a public transport strike in Italy, and it states participation was at 38.5% on a specific date. The document covers a past event from 2022, so it definitely doesn't announce an upcoming strike. Therefore, I’ll set isStrike to false. I want to ensure I classify this correctly and not misrepresent the information.",
+    "tokens": {
+      "input": 9589,
+      "output": 426,
+      "total": 10015
+    }
+  }
+}

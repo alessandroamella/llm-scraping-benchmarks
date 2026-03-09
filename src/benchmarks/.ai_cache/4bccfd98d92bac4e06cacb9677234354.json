@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-09-20 00:00:00",
+      "endDate": "2024-09-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 23536,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0009476,
+      "outputCost": 0.000768,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0017156
+    },
+    "hash": "4bccfd98d92bac4e06cacb9677234354",
+    "sourceFile": "venerd_20_settembre_sciopero_nazionale_24_ore_trasporto_pubblico_servizio_rischio.html",
+    "thoughts": "**Extracting strike data**\n\nI need to output JSON based on the strike extraction schema. First, I must determine if the document is announcing a new or upcoming strike. The content indicates a national public transport strike on Friday, September 20, which has been proclaimed by several unions. It specifies affected services and times, such as regular service until 8:30 and adjustments from 17:00 to 20:00. There’s also a 4-hour strike impacting only Atac. This qualifies as a pre-announcement for the strike.",
+    "tokens": {
+      "input": 18952,
+      "output": 1920,
+      "total": 20872
+    }
+  }
+}

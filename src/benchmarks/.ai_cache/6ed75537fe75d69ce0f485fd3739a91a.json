@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4872,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00014675,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0002745,
+      "cachedCost": 0,
+      "totalCost": 0.00043625
+    },
+    "hash": "6ed75537fe75d69ce0f485fd3739a91a",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_209.html",
+    "thoughts": "**Analyzing the Transit Strike Report**\n\nOkay, let's break this down. My input is a text string mentioning a public transport strike in Rome (\"Sciopero del trasporto pubblico... Atac\"). The initial goal is clear: figure out if this is a notice about a *future* strike, or a report on *past* participation. I need to extract any relevant data if it's about a future strike.\n\nMy initial interpretation of the text hinges on understanding the nuances of the Italian language and the context of the words used. Key phrases jumped out: \"adesione del personale Atac allo sciopero,\" indicating participation, not a call for it, and \"rilevata in mattinata\" (observed this morning) and \"è stata\" (it was), indicating something that has already happened.\n\nSince the phrasing describes participation that *has been* observed, and not an announcement for a future action, I'm setting the `isStrike` variable to `false`. The text isn't a pre-strike announcement; it's a post-strike assessment of the level of participation. I have the participation rate: 20.9% – so it's a report of limited participation for that particular strike.\n\n\n",
+    "tokens": {
+      "input": 587,
+      "output": 10,
+      "total": 780
+    }
+  }
+}

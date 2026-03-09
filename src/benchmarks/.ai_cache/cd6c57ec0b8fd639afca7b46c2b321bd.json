@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-09-04 08:30:00",
+      "endDate": "2025-09-04 12:30:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21699,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00094395,
+      "outputCost": 0.0007188,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00166275
+    },
+    "hash": "cd6c57ec0b8fd639afca7b46c2b321bd",
+    "sourceFile": "rete_atac_giovedi_4_settembre_sciopero_dalle_830_alle_1230_possibili_disagi.html",
+    "thoughts": "**Formatting strike data**\n\nI need to analyze the content page carefully. The date provided, \"Pubblicato il: 29/08/2025,\" indicates the year 2025, and \"4 settembre\" refers to September 4, 2025. This confirms the date range from \"2025-09-04 08:30:00\" to \"2025-09-04 12:30:00.\" I'll also note that the ISTAT region code for Lazio is 12. Since the instruction seeks a JSON output and confirms that this is indeed an announcement of an upcoming strike, I'll format that accordingly.",
+    "tokens": {
+      "input": 18879,
+      "output": 1797,
+      "total": 20676
+    }
+  }
+}

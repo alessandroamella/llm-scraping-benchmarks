@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-01-16 08:30:00",
+      "endDate": "2023-01-16 12:30:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7824,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00411925,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.0007125,
+      "cachedCost": 0,
+      "totalCost": 0.00498025
+    },
+    "hash": "9b4c6d797cecc059b859a118dd330a49",
+    "sourceFile": "luned_16_gennaio_sciopero_atac_4_ore_servizio_rischio_830_1230.html",
+    "thoughts": "**Analyzing the ATAC Strike Information**\n\nOkay, let's see. I'm looking at this webpage from \"Roma Servizi per la Mobilità\" regarding an upcoming ATAC strike. The goal is to distill the relevant strike details into a specific JSON format. The text says \"Lunedì 16 gennaio sciopero Atac di 4 ore. Servizio a rischio dalle 8,30 alle 12,30.\" Right, so that translates to a four-hour ATAC strike on Monday, January 16th. Based on the published date of 11/01/2023, the actual strike date is January 16, 2023. The times are from 08:30 to 12:30.\n\nI need to nail down the location. ATAC is the Rome transport company, and that's in Rome, which corresponds to the Lazio region, ISTAT code 12.\n\nNow to map this information into the constraints. Definitely a strike, so `isStrike` is true. `startDate` is \"2023-01-16 08:30:00\", `endDate` is \"2023-01-16 12:30:00\". The `locationType` is \"REGIONAL\" and `locationCodes` should be [\"12\"].\n\nAh, the crucial point about the `guaranteedTimes`. The prompt states to omit the `guaranteedTimes` field if it's not explicitly mentioned. This text snippet doesn't specify any guaranteed times, so I won't include that field. Perfect, I think I've got it. Time to build that JSON output.\n\n\n",
+    "tokens": {
+      "input": 16477,
+      "output": 99,
+      "total": 17051
+    }
+  }
+}

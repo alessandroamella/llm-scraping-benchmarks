@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-07-24 08:30:00",
+      "endDate": "2023-07-24 12:30:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6374,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0026465,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.0008715,
+      "cachedCost": 0,
+      "totalCost": 0.0036665
+    },
+    "hash": "995a76a769cd90464b53d0840cf9d1c6",
+    "sourceFile": "luned_24_luglio_sciopero_nazionale_tpl_roma_servizio_rischio_830_1230.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, let's break this down. My task is clear: I need to extract strike information from this text snippet and represent it as a JSON object, adhering to a pre-defined schema. The key constraint is that `isStrike` should only be true if this is about an *upcoming* strike. The text clearly states \"Lunedì 24 luglio sciopero nazionale del Tpl. A Roma servizio a rischio dalle 8,30 alle 12,30\" and is dated July 19th, suggesting an upcoming event, so `isStrike` will definitely be `true`.\n\nNow, let's populate the `strikeData` object. The date is July 24th, 2023, and the strike times are from 8:30 AM to 12:30 PM. I need to format these as \"yyyy-MM-dd HH:mm:ss\", so that gives me \"2023-07-24 08:30:00\" and \"2023-07-24 12:30:00\" for the start and end times, respectively. The announcement says a national strike in \"Roma,\" meaning it is regional; this indicates the value `REGIONAL`. The schema also requires a `locationCodes` field. Since Rome is in Lazio, and I know my ISTAT codes, I can confidently add \"12\" as the correct code.\n\nI need to confirm the text explicitly mentions \"guaranteed times\" -- it doesn't. Therefore, the `guaranteedTimes` field should be omitted from the JSON output, or an empty array if required.\n\nFinally, I need to double-check against the schema: `isStrike` (boolean) is `true`, `startDate` and `endDate` are strings in the correct format, `locationType` is \"REGIONAL\", `locationCodes` is `[\"12\"]`, and `guaranteedTimes` is either omitted or an empty array. Seems solid.\n\n\n",
+    "tokens": {
+      "input": 10586,
+      "output": 99,
+      "total": 11266
+    }
+  }
+}

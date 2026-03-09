@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-09-29 00:00:00",
+      "endDate": "2023-09-29 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 31776,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000482,
+      "outputCost": 0.0009732,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0014552
+    },
+    "hash": "12ef79dfd769e5cbb69144b9e23657da",
+    "sourceFile": "venerd_29_settembre_sciopero_nazionale_trasporto_pubblico_possibili_disagi.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to format the provided content into JSON according to the strike_extraction schema. The details mention a national strike on September 29, 2023, and it's sourced from the Roma Mobilità site. The article outlines potential disruptions due to a 24-hour strike announced by Usb, affecting public transportation in Rome. The service will operate normally until 8:30 AM and from 5 PM to 8 PM. I should confirm whether this indicates a new or upcoming strike as requested.",
+    "tokens": {
+      "input": 9640,
+      "output": 2433,
+      "total": 12073
+    }
+  }
+}

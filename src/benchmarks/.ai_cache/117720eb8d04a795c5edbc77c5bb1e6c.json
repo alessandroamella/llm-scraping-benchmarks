@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-09-20 00:00:00",
+      "endDate": "2024-09-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6987,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00414925,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.001023,
+      "cachedCost": 0,
+      "totalCost": 0.00535675
+    },
+    "hash": "117720eb8d04a795c5edbc77c5bb1e6c",
+    "sourceFile": "venerd_20_settembre_sciopero_nazionale_24_ore_trasporto_pubblico_servizio_rischio.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, here's the deal. My primary goal here is to figure out if this HTML content from \"Roma Servizi per la Mobilità\" actually announces an upcoming strike. And if it does, I need to extract the relevant details and format them as JSON, as per the specifications I've been given. Let's break this down step-by-step.\n\nFirst, I've got this headline: \"Venerdì 20 settembre sciopero nazionale di 24 ore del trasporto pubblico. Servizio a rischio\". The body text then confirms it, stating: \"Venerdì 20 settembre, trasporto pubblico a rischio per lo sciopero nazionale di 24 ore proclamato dai sindacati... Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" That's pretty clear - it's an announcement, not a revocation, and it's definitely in the future because the article date is 13/09/2024. The text discusses a strike on September 20. So, no historical data to consider here.\n\n\"sciopero nazionale\" (national strike) definitively settles that point. The date is a national strike!\n\nSo, `isStrike` is definitely `true`. Now, I need to populate the `strikeData` object. The strike is on Friday, September 20th. Given that the text states it's a \"24-hour strike,\" I'm inferring a start time of 00:00:00 and an end time of 23:59:59 on that day. Therefore, the start date is \"2024-09-20 00:00:00\" and the end date is \"2024-09-20 23:59:59\". The strike is clearly \"NATIONAL.\"\n\nFinally, the guaranteed service times. The text explicitly mentions service will be \"regolare fino alle 8,30 e dalle 17 alle 20\". That translates directly to `guaranteedTimes` : [\"00:00-08:30\", \"17:00-20:00\"]. I need to keep the JSON clean as requested. No extra text!\n\nAlright, based on all that:\n\n`isStrike`: true\n`strikeData`:\n*   `startDate`: \"2024-09-20 00:00:00\"\n*   `endDate`: \"2024-09-20 23:59:59\"\n*   `locationType`: \"NATIONAL\"\n*   `guaranteedTimes`: [\"00:00-08:30\", \"17:00-20:00\"]\n\nThere we go. I'm ready to output this in the required JSON format.\n\n\n",
+    "tokens": {
+      "input": 16597,
+      "output": 123,
+      "total": 17402
+    }
+  }
+}

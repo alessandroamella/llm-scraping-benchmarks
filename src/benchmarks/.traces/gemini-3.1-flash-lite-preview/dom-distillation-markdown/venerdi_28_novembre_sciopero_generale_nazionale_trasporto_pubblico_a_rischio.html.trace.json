@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-03-09T14:07:24.083Z",
+  "timestamp": "2026-03-09T16:23:26.901Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "ATAC",
     "fileName": "venerdi_28_novembre_sciopero_generale_nazionale_trasporto_pubblico_a_rischio.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "dom-distillation-markdown",
-    "useLenientSchema": true,
+    "useLenientSchema": false,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"ATAC\" (the public transport company of Rome, Lazio (12)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: Venerdì 28 novembre sciopero generale nazionale. Trasporto pubblico a rischio - Roma Servizi per la Mobilità\n\n* * *\n\n# Venerdì 28 novembre sciopero generale nazionale. Trasporto pubblico a rischio\n\nPubblicato il: 21/11/2025 - Aggiornato il: 24/11/2025\n\nVenerdì 28 novembre trasporto pubblico a rischio per lo sciopero nazionale generale di 24 ore indetto dai sindacati Usb, Cub, Sgb e Cobas. A Roma l’agitazione interesserà la rete Atac e i bus periferici gestiti da operatori privati. Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20."
   },
   "response": {
@@ -24,17 +24,17 @@
     },
     "usage": {
       "input": 637,
-      "output": 131,
-      "total": 1427
+      "output": 115,
+      "total": 1293
     },
     "costUsd": {
       "inputCost": 0.00015925,
-      "outputCost": 0.0001965,
-      "thinkingCost": 0.0009885,
+      "outputCost": 0.0001725,
+      "thinkingCost": 0.0008115,
       "cachedCost": 0,
-      "totalCost": 0.00134425
+      "totalCost": 0.00114325
     },
-    "durationMs": 8900,
-    "thoughts": "**Strike Announcement Summary**\n\nOkay, let me break this down. We have a strike announcement to process. The key information is: it's for November 28th, 2025. This is a national strike (\"sciopero generale nazionale\") affecting Rome (Lazio, code \"12\" is a bit irrelevant here). The strike is for a full 24 hours, which means the date range is Friday, November 28, 2025, starting at 00:00:00 and ending at 23:59:59.\n\nNow, let's look at the \"guaranteed times\". The text explicitly states \"il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" That translates to service is regular until 8:30 AM and from 5 PM to 8 PM. Which are the *guaranteed* times that we need.\n\nSo, let me make sure I'm formatting this correctly. The JSON needs to have the \"isStrike\": true, and then the strikeData:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-11-28 00:00:00\",\n    \"endDate\": \"2025-11-28 23:59:59\",\n    \"locationType\": \"NATIONAL\",\n    \"locationCodes\": null,\n    \"guaranteedTimes\": [\n      \"00:00-08:30\",\n      \"17:00-20:00\"\n    ]\n  }\n}\n```\n\nOkay, the date is fine, \"NATIONAL\" for `locationType`, `null` for `locationCodes`. Guaranteed times are right. The original text gave me the correct information for how to phrase it. This should be good.\n\n\n"
+    "durationMs": 5490,
+    "thoughts": "**Strike Analysis: November 28, 2025**\n\nOkay, so I've got this announcement about a national strike impacting ATAC in Rome, set for Friday, November 28, 2025. It's a full 24-hour event, which is straightforward. The strike is definitely upcoming; the announcement was made within the last week of the strike.\n\nThe location is explicitly \"NATIONAL,\" so the location codes should indeed be omitted, which is as expected. The critical part here is the guaranteed service times. The provided text states \"Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" That translates to service being regular *until* 8:30 AM and *from* 5 PM to 8 PM. Thus, that means the *guaranteed* times are the periods *including* those times: so that is 00:00-08:30, and 17:00-20:00. This is the correct interpretation.\n\n\n"
   }
 }

@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-14 00:00:00",
+      "endDate": "2025-11-14 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 28987,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005455,
+      "outputCost": 0.0007356,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00079015
+    },
+    "hash": "8125e9bdc2767f0eb553f4fff53f137e",
+    "sourceFile": "trasporto_pubblico_venerdi_prossimo_sciopero_di_24_ore_servizio_a_rischio.html",
+    "thoughts": "**Determining upcoming strike announcement**\n\nI need to decide if the document is announcing a new strike. The content states there’s a 24-hour public transport strike on Friday, November 14, affecting the ATAC network. So yeah, it’s clear that we need to set the `isStrike` to true. Now, when it comes to extracting the `strikeData`, I see I need to format the dates correctly. The document mentions the strike is for 24 hours but doesn’t specify exact start or end times. I'll assume it runs from midnight to 23:59 for that day.",
+    "tokens": {
+      "input": 1091,
+      "output": 1839,
+      "total": 2930
+    }
+  }
+}

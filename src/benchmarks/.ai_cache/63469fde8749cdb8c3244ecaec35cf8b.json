@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6981,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00015525,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.0011715,
+      "cachedCost": 0,
+      "totalCost": 0.00151125
+    },
+    "hash": "63469fde8749cdb8c3244ecaec35cf8b",
+    "sourceFile": "news_media_comunicati_sciopero_generale_13_dicembre_240re.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, let's break this down methodically. I see a notice for a 24-hour national general strike planned for December 13th, 2024, organized by \"Usb.\" The strike starts at midnight on the 13th and runs until the end of the day.\n\nWhile it's a \"sciopero generale nazionale,\" the specifics mention Rome, particularly the Atac network. Now, here's where it gets nuanced, and I need to make some precise choices for how to categorize the data. My initial instinct was to classify it as a regional strike due to the focus on Rome (Lazio, code \"12\"). However, the language is explicitly \"sciopero generale nazionale.\" The instructions also state that if the `locationType` is NATIONAL, `locationCodes` MUST BE OMITTED completely. So, even though it *impacts* Rome, and even though the specifics are about Rome's public transportation network (Atac), to adhere to the given instructions, the correct `locationType` must be \"NATIONAL\" and the `locationCodes` omitted. That's a critical distinction to ensure data integrity.\n\nI also see that guaranteed service times are listed as \"regolare fino alle 8,30 e dalle 17 alle 20\". That translates to service being regular until 8:30 am, and again from 5 pm to 8 pm (17:00-20:00). To capture that accurately, I will represent the guaranteed times as \"00:00-08:30\" and \"17:00-20:00\". These are likely implied service windows. In a real application, you might use more granular timestamps within that window.\n\nSo, in summary: I'm setting `isStrike` to true, the `startDate` to \"2024-12-13 00:00:00\", the `endDate` to \"2024-12-13 23:59:59\", `locationType` to \"NATIONAL\" (omitting location codes per the instructions), and accounting for guaranteed service times as specified.\n\n\n",
+    "tokens": {
+      "input": 621,
+      "output": 123,
+      "total": 1525
+    }
+  }
+}

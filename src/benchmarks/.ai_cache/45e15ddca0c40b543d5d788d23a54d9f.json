@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-10-20 00:00:00",
+      "endDate": "2023-10-21 00:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 26892,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000539,
+      "outputCost": 0.0008108,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008647
+    },
+    "hash": "45e15ddca0c40b543d5d788d23a54d9f",
+    "sourceFile": "venerd_20_ottobre_sciopero_generale_nazionale_trasporto_pubblico_rischio.html",
+    "thoughts": "**Extracting strike data**\n\nI'm determining strike details like start date, end date, and times based on the content. It mentions a \"sciopero generale nazionale di 24 ore,\" which suggests a 24-hour strike. I initially thought the start date was October 13, but it's actually on Friday, October 20. So, the start date should be set to 2023-10-20 00:00:00 and end date to 2023-10-21 00:00:00. I’ll make sure to format them correctly.",
+    "tokens": {
+      "input": 1078,
+      "output": 2027,
+      "total": 3105
+    }
+  }
+}

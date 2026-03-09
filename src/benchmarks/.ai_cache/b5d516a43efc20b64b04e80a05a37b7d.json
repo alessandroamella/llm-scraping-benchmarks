@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-02-17 00:00:00",
+      "endDate": "2023-02-17 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 28613,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00094205,
+      "outputCost": 0.00092,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00186205
+    },
+    "hash": "b5d516a43efc20b64b04e80a05a37b7d",
+    "sourceFile": "venerd_17_febbraio_sciopero_nazionale_usb_24_ore_trasporto_pubblico_rischio.html",
+    "thoughts": "**Extracting strike data**\n\nI see that isStrike should be true, with startDate and endDate times included. I need to remember to format those dates as 'yyyy-MM-dd HH:mm:ss' and consider locationType. The article mentions a national strike on February 17th and states it's 24 hours long, suggesting it starts at midnight and runs to midnight of the next day. There might be partial service times mentioned, which aren't the same as guaranteed service times. It's a bit complicated, but I think I've got the key points!",
+    "tokens": {
+      "input": 18841,
+      "output": 2300,
+      "total": 21141
+    }
+  }
+}

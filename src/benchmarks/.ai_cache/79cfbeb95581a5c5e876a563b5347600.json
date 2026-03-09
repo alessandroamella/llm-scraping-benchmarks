@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-12-16 20:00:00",
+      "endDate": "2022-12-16 24:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "20:00-24:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 26888,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00048165,
+      "outputCost": 0.0008628,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00134445
+    },
+    "hash": "79cfbeb95581a5c5e876a563b5347600",
+    "sourceFile": "venerd_16_dicembre_sciopero_generale_regionale_trasporto_pubblico_rischio_20_24.html",
+    "thoughts": "**Extracting strike announcement details**\n\nI need to create a JSON output based on the strike_extraction schema. The document's content is in Italian and announces a general regional strike on Friday, December 16, with public transport at risk from 8 PM to midnight. It mentions a four-hour strike involving Atac and Roma Tpl, as stated by Roma Servizi per la Mobilità. The announcement includes a publication date of December 9, 2022, and an update on January 25, 2023.",
+    "tokens": {
+      "input": 9633,
+      "output": 2157,
+      "total": 11790
+    }
+  }
+}

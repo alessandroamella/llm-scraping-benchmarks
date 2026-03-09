@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 15833,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00093725,
+      "outputCost": 0.0002156,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00115285
+    },
+    "hash": "b8313abd827a27753ef16dad79431c1c",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_186.html",
+    "thoughts": "**Extracting strike information**\n\nI need to determine if the document announces a new or upcoming strike. The output should be in JSON format, indicating whether `isStrike` is true or false. If it is true, I’ll include `strikeData`, which should cover dates, location type, location codes, and guaranteed times. The document, titled about public transport strikes in Rome, states an 18.6% participation, suggesting this is about a strike that occurred. The page dates are published in early March 2022 and updated in April 2023.",
+    "tokens": {
+      "input": 18745,
+      "output": 539,
+      "total": 19284
+    }
+  }
+}

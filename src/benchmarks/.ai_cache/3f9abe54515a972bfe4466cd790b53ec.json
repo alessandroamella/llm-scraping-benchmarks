@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-11-27 00:00:00",
+      "endDate": "2023-11-27 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 27331,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00048285,
+      "outputCost": 0.00081,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00129285
+    },
+    "hash": "3f9abe54515a972bfe4466cd790b53ec",
+    "sourceFile": "luned_27_novembre_sciopero_nazionale_trasporto_pubblico_possibili_disagi.html",
+    "thoughts": "**Evaluating strike service times**\n\nOkay, I'm considering the wait times of 8:30 and from 17:00 to 20:00 due to a 24-hour national strike. It states that service will be regular until 8:30, and then again from 17:00 to 20:00. The guaranteed service during the strike means these times should be expected. However, it’s not clear when the day starts since \"fino alle 8,30\" just indicates service until 8:30, but doesn’t specify the start time for the day.",
+    "tokens": {
+      "input": 9657,
+      "output": 2025,
+      "total": 11682
+    }
+  }
+}

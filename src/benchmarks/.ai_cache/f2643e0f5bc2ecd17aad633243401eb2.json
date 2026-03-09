@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-29 20:00:00",
+      "endDate": "2025-10-29 24:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "20:00-24:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 25167,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000482,
+      "outputCost": 0.000668,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00115
+    },
+    "hash": "f2643e0f5bc2ecd17aad633243401eb2",
+    "sourceFile": "domani_sciopero_serale_di_4_ore_a_rischio_i_bus_del_deposito_magliana.html",
+    "thoughts": "**Considering time format issues**\n\nI’m working on a time format problem. I see that using an end time of 24:00 might technically mean midnight of the next day, but then again, it conflicts with ISO standard time, as 24:00 isn’t typically valid. The examples don’t cross days, either. I think the safer option could be to set the time as 20:00:00 for the start and maybe 23:59:59 rather than 24:00:00, as it's safer for compatibility.",
+    "tokens": {
+      "input": 9640,
+      "output": 1670,
+      "total": 11310
+    }
+  }
+}

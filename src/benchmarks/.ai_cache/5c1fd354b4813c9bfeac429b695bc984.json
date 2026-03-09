@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-10-20 00:00:00",
+      "endDate": "2023-10-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5854,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00016075,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.000855,
+      "cachedCost": 0,
+      "totalCost": 0.00120025
+    },
+    "hash": "5c1fd354b4813c9bfeac429b695bc984",
+    "sourceFile": "venerd_20_ottobre_sciopero_generale_nazionale_trasporto_pubblico_rischio.html",
+    "thoughts": "**Analyzing the ATAC Strike Announcement**\n\nOkay, let's break down this strike announcement. My primary goal here is to determine if this is a future strike and extract the relevant details. I'm given the text \"Venerdì 20 ottobre sciopero generale nazionale,\" which, along with the published date of 13/10/2023, is the key input.\n\nBased on \"Venerdì 20 ottobre,\" the strike date is clearly October 20th, 2023. This is a general, national strike lasting 24 hours, so `isStrike` is definitely `true`.\n\nNow for the specifics: the strike starts at midnight on the 20th – `startDate` is \"2023-10-20 00:00:00\" – and ends just before midnight – `endDate` is \"2023-10-20 23:59:59\". The strike is `locationType`: \"NATIONAL\", so it's a general strike.\n\nThe tricky part is the guaranteed service times. The text explicitly states \"regolare fino alle 8,30 e dalle 17 alle 20\". That translates to service being guaranteed until 08:30 and again from 17:00 to 20:00. These guaranteed times need to be represented as [\"00:00-08:30\", \"17:00-20:00\"] which are not exactly in the right format for validation, I need to check how to treat a time like \"08:30\". I will have to ensure that this is valid, according to the pattern `^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]-(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$`.\n\nLastly, the location type is NATIONAL, therefore the location codes must be omitted. This is checked and confirmed.\n\n\n",
+    "tokens": {
+      "input": 643,
+      "output": 123,
+      "total": 1336
+    }
+  }
+}

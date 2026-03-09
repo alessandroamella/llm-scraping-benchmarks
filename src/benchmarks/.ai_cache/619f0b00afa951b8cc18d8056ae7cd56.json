@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-11-29 09:00:00",
+      "endDate": "2024-11-29 13:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "09:00-13:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22210,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00094415,
+      "outputCost": 0.0005816,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00152575
+    },
+    "hash": "619f0b00afa951b8cc18d8056ae7cd56",
+    "sourceFile": "sciopero_generale_nazionale.html",
+    "thoughts": "**Determining strike announcement details**\n\nI need to output JSON based on a specific schema. The content is in Italian and mentions an upcoming national strike. The title says, \"Domani sciopero generale nazionale,\" which means \"Tomorrow is a general national strike.\" The article elaborates that it's been organized by major unions and will impact public transport in Rome, specifically the Atac network and buses. The date is also important; it suggests this strike is indeed happening tomorrow.",
+    "tokens": {
+      "input": 18883,
+      "output": 1454,
+      "total": 20337
+    }
+  }
+}

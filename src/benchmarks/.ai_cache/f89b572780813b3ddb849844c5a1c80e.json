@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-09-09 08:30:00",
+      "endDate": "2024-09-09 16:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 32881,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000055,
+      "outputCost": 0.0008728,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0009278
+    },
+    "hash": "f89b572780813b3ddb849844c5a1c80e",
+    "sourceFile": "luned_9_settembre_sciopero_nazionale_trasporto_pubblico_servizio_rischio.html",
+    "thoughts": "**Determining strike extraction details**\n\nI need to check if the content is about a strike announcement. The provided text indicates a national public transport strike on September 9, with service at risk. It clearly mentions the strike hours from 8:30 to 16:30, and it’s indicated as a national strike affecting Roma. So, I’ll set isStrike to true, confirming it’s an upcoming strike. As it’s a national strike, I'll classify locationType as \"NATIONAL,\" with locationCodes set to null.",
+    "tokens": {
+      "input": 1100,
+      "output": 2182,
+      "total": 3282
+    }
+  }
+}

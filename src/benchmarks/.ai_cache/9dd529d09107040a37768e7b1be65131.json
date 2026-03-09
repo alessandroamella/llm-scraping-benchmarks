@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-07-04 08:30:00",
+      "endDate": "2024-07-04 16:30:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "08:30-16:30x00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24459,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0009357,
+      "outputCost": 0.0006932,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0016289
+    },
+    "hash": "9dd529d09107040a37768e7b1be65131",
+    "sourceFile": "trasporto_pubblico_domani_sciopero_8_ore_sulla_rete_atac.html",
+    "thoughts": "**Clarifying strike requirements**\n\nI need to pay attention to the format required for startDate and endDate, especially when isStrike is true. It’s specified I must include locationType and two-digit ISTAT codes. The article mentions an eight-hour strike that affects public transport across the Atac network, initiated by the Orsa and Usb unions. Since Atac is in Rome, it seems like a local strike, despite not being explicitly labeled as national or regional.",
+    "tokens": {
+      "input": 18714,
+      "output": 1733,
+      "total": 20447
+    }
+  }
+}

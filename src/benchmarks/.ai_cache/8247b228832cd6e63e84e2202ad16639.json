@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-20 00:00:00",
+      "endDate": "2025-06-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6819,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.004104,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.001056,
+      "cachedCost": 0,
+      "totalCost": 0.0053445
+    },
+    "hash": "8247b228832cd6e63e84e2202ad16639",
+    "sourceFile": "venerdi_20_giugno_sciopero_generale_nazionale_di_usb_cub_e_sgb_a_roma_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Strike Analysis - My Thought Process**\n\nOkay, let's break down this HTML content. The task is to determine if this is a strike announcement and, if so, extract the relevant details for a JSON output. Simple. No comments, no extraneous text. Straight to the point.\n\nThe headline immediately screams \"strike\": \"Venerdì 20 giugno sciopero generale nazionale...\". The date is Friday, June 20th. Given the context (mentions of 2025 elsewhere), the *likely* date is 2025-06-20. Let's make that our working assumption. The content excerpt confirms the strike, mentioning \"sciopero generale nazionale di 24 ore\".\n\n\"A Roma l’agitazione interesserà la rete Atac...\" points to a significant impact, specifically in Rome's public transport. Crucially, the text says service is \"guaranteed until 8:30 and from 17:00 to 20:00.\" This suggests a normal \"guaranteed window\" pattern. I need to make sure I get that correct in the final output. The general text is \"Il servizio sarà comunque garantito fino alle 8,30 e dalle 17 alle 20.\" That is clear: until 08:30 and from 17:00.\n\nAlright, putting it all together: the strike is definitely happening. It's a \"National general strike,\" lasting 24 hours. The date is June 20, 2025. It affects public transport, nationally. The guaranteed times - I need to double-check that part. Based on common practice and that wording, it should be 00:00 - 08:30 and 17:00 - 20:00. So here's the JSON I need to construct. I already know this structure, and I've got all the data I need. The key thing will be correctly handling those guaranteed times.\n\n`isStrike`: true\n`startDate`: 2025-06-20 00:00:00\n`endDate`: 2025-06-20 23:59:59\n`locationType`: \"NATIONAL\" (so, no locationCodes)\n`guaranteedTimes`: [\"00:00-08:30\", \"17:00-20:00\"]\n\nDone. That should be a clean and correct JSON object.\n\n\n",
+    "tokens": {
+      "input": 16416,
+      "output": 123,
+      "total": 17243
+    }
+  }
+}

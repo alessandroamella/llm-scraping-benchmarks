@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-12-15 00:00:00",
+      "endDate": "2023-12-15 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 32341,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005505,
+      "outputCost": 0.0008436,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00089865
+    },
+    "hash": "9e23c00ba795f8cac9cc45c38465d6c7",
+    "sourceFile": "trasporto_pubblico_sciopero_nazionale_differito_15_dicembre.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to output JSON based on whether this document mentions a new strike. The Italian news states the national transport strike has been postponed to December 15 from the originally scheduled date of November 27. In Rome, the strike will last for 24 hours, affecting ATAC and Roma Tpl services. Regular service will run until 8:30 and from 5 to 8 PM. So, this is indeed an announcement that the strike is delayed to December 15.",
+    "tokens": {
+      "input": 1101,
+      "output": 2109,
+      "total": 3210
+    }
+  }
+}

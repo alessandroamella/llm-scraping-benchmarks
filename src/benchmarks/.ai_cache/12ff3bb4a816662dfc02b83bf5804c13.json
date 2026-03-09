@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-05-02 08:30:00",
+      "endDate": "2023-05-02 12:30:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "08:30-12:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 15649,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00048205,
+      "outputCost": 0.0004372,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00091925
+    },
+    "hash": "12ff3bb4a816662dfc02b83bf5804c13",
+    "sourceFile": "martedi_2_maggio_sciopero_nazionale_4_ore_trasporto_pubblico_romano_rischio.html",
+    "thoughts": "**Determining location details**\n\nThe article was published on 04/26/2023, and the time frame starts from 08:30 AM to 12:30 PM on 05/02/2023. Since it mentions \"sciopero nazionale,\" the location type is \"NATIONAL.\" For national strikes, the locationCodes must be set to null. The schema requires this, stating it shouldn’t be omitted but explicitly null. For Guaranteed Times, I see the content specifies a time format. It’s important to clarify if it uses a comma as a decimal.",
+    "tokens": {
+      "input": 9641,
+      "output": 1093,
+      "total": 10734
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-10-09 00:00:00",
+      "endDate": "2023-10-09 23:59:59",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 32312,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000548,
+      "outputCost": 0.0008252,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00088
+    },
+    "hash": "7670c99f526b17d1ed1fcaa90f666010",
+    "sourceFile": "luned_9_ottobre_sciopero_nazionale_trasporto_pubblico_possibili_disagi_24_ore.html",
+    "thoughts": "**Clarifying JSON input**\n\nI'm thinking about how the example requires seconds for the date and time format. For my input, I'll use \"2023-10-09 00:00:00\" to \"2023-10-09 23:59:59.\" I considered using \"24:00:00,\" but that doesn't seem right since it typically extends into the next day.\n\nFor locationType, it should be \"NATIONAL\" since this strike is proclaimed as national by USB. Then, according to the instructions, locationCodes must be explicitly set to null because it’s a national strike. I'll make sure to format that correctly in the JSON.",
+    "tokens": {
+      "input": 1096,
+      "output": 2063,
+      "total": 3159
+    }
+  }
+}

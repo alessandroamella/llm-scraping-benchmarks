@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-04-28 08:30:00",
+      "endDate": "2022-04-28 12:30:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "08:30-12:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19033,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000545,
+      "outputCost": 0.000458,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0005125
+    },
+    "hash": "10678f6fffdf61720b3b75724fe44028",
+    "sourceFile": "sciopero_trasporto_pubblico_gioved_28_servizio_rischio_830_1230.html",
+    "thoughts": "**Evaluating location type and times**\n\nI need to determine if the location type should be \"REGIONAL\" or \"NATIONAL\" based on the text mentioning a \"sciopero nazionale di 4 ore,\" which points to \"NATIONAL.\" The location codes should explicitly be null, as specified. \n\nNow, regarding the \"guaranteedTimes\" field, it states service is guaranteed from \"08:30 to 12:30,\" so it should be formatted as [\"08:30-12:30\"]. I’ll convert the Italian time format correctly. Everything seems to be aligned!",
+    "tokens": {
+      "input": 1090,
+      "output": 1145,
+      "total": 2235
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-11-29 09:00:00",
+      "endDate": "2024-11-29 13:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5859,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.004125,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.0006765,
+      "cachedCost": 0,
+      "totalCost": 0.0049245
+    },
+    "hash": "68eb510120f9aa20d829cbeae15e040b",
+    "sourceFile": "sciopero_generale_nazionale.html",
+    "thoughts": "**Strike Announcement Analysis for ATAC (Rome Public Transport)**\n\nOkay, here's what I've got. My objective is to determine if this content represents a new strike announcement, specifically for ATAC, the public transport company in Rome. Let's break it down:\n\nThe title immediately grabs my attention: \"Domani sciopero generale nazionale. Per i trasporti stop dalle 9 alle 13\" - \"General national strike tomorrow. For transport, stop from 9 to 13.\" Clear indicator, so far. Then I'm cross checking this with the text snippet \"Domani è in programma lo sciopero generale nazionale proclamato da Cgil, Uil, Cobas, Cub e Sgb.\" - \"Tomorrow a general national strike is planned...\" Confirmed again. This is likely a strike announcement.\n\nThe time frame is specified: 9:00 to 13:00. Looking at the date, the content was published or updated on 28/11/2024, and \"Domani\" (tomorrow) means it will take place on 29/11/2024. The scope is *national* (sciopero generale nazionale).\n\nNow, to extract the data needed for structured output: `isStrike` is definitely `true`.\n\nThe `strikeData` looks like this:\n\n*   `startDate`: \"2024-11-29 09:00:00\"\n*   `endDate`: \"2024-11-29 13:00:00\"\n*   `locationType`: \"NATIONAL\".\n*   `guaranteedTimes`: Hmmm. The text says \"Per effetto di un’ordinanza del ministero Infrastrutture e Trasporti la protesta è stata ridotta a 4 ore: dalle 9 alle 13.\" which is important to the strike duration. This *doesn't* specify guaranteed *time windows* like some announcements do; the text directly indicates the duration is contained within the strike window. So, I will omit `guaranteedTimes` as per the spec.\n*   `locationCodes`: Since it's national, this should be omitted, according to the specifications I know.\n\n\n",
+    "tokens": {
+      "input": 16500,
+      "output": 82,
+      "total": 17033
+    }
+  }
+}

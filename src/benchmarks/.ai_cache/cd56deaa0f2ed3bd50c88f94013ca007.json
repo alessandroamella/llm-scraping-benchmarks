@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-02-25 00:00:00",
+      "endDate": "2022-02-25 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8295,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0041235,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.001371,
+      "cachedCost": 0,
+      "totalCost": 0.005679
+    },
+    "hash": "cd56deaa0f2ed3bd50c88f94013ca007",
+    "sourceFile": "trasporto_pubblico_venerdi_25_febbraio_sciopero_nazionale_24_ore.html",
+    "thoughts": "**Strike Information Extraction - ATAC Rome**\n\nOkay, the task is to pull strike information from this HTML content, specifically for public transport in Rome (ATAC). The goal is to determine if it's a strike and, if so, extract the details: start date, end date, location type, location codes (if applicable), and guaranteed times. If it's not a strike, I need to return `{\"isStrike\": false}`.\n\nThe headline immediately catches my eye: \"Trasporto pubblico, venerdì 25 febbraio sciopero nazionale di 24 ore\" – a 24-hour national strike on February 25th. Excellent, that's a good start. The text confirms the strike details: \"Venerdì 25 febbraio trasporto pubblico a rischio per gli scioperi nazionali di 24 ore...\" and specifies the strike windows as \"...dalle 8,30 alle 17 e dalle 20 al termine del servizio...\". The article was published on 18/02/2022, and the date mentioned is the 25th. Definitely an upcoming strike announcement.\n\nThe prompt requires the date in `yyyy-MM-dd HH:mm:ss` format. So, the date is 2022-02-25. The start time is implied as 08:30:00. The text also mentions the strike’s periods: 8:30-17:00 and 20:00-end of service. This is a *24-hour* strike. It is important to remember that these are the specific times when transport is impacted, not the actual strike start/end. The schema instructions specify that for a 24h strike, the duration is defined as the full day. Thus, the start date should be 2022-02-25 00:00:00 and the end date 2022-02-25 23:59:59.\n\nNow, the tricky part: the guaranteed times. The text reads \"...dalle 8,30 alle 17 e dalle 20 al termine del servizio\". These are the strike times! The *guaranteed* service is in the gaps: 00:00-08:30 and 17:00-20:00.\n\nLet's summarize: `isStrike`: true. `startDate`: \"2022-02-25 00:00:00\". `endDate`: \"2022-02-25 23:59:59\". The text says \"sciopero nazionale\". I need to be sure about the location type. The prompt clarifies this is a national strike. The schema dictates that if `locationType` is `NATIONAL`, `locationCodes` must be omitted. So, the final determination is `locationType`: \"NATIONAL\".\n\n\n",
+    "tokens": {
+      "input": 16494,
+      "output": 123,
+      "total": 17531
+    }
+  }
+}

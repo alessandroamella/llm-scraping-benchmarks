@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-12-15 00:00:00",
+      "endDate": "2023-12-15 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 35805,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00093965,
+      "outputCost": 0.0010596,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00199925
+    },
+    "hash": "934a6cbe99e81c78d82407d0c64e3b42",
+    "sourceFile": "venerd_sciopero_nazionale_trasporto_pubblico_servizio_rischio.html",
+    "thoughts": "**Analyzing strike notice**\n\nI realize this isn’t a cancellation; instead, it's about an upcoming strike. So, I should mark `isStrike` as true. I need to extract the `strikeData`, which includes fields like start date, end date, location type, and guaranteed times. The mention of \"Venerdì 15 dicembre\" suggests a start date of December 15, 2023, at midnight, covering 24 hours. The page notes regular service until 8:30 and then again from 17:00 to 20:00, indicating some limited schedules. So, location type should be NATIONAL.",
+    "tokens": {
+      "input": 18793,
+      "output": 2649,
+      "total": 21442
+    }
+  }
+}

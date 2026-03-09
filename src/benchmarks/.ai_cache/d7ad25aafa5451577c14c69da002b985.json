@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-07-18 08:30:00",
+      "endDate": "2024-07-18 12:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7526,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.002649,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.0009375,
+      "cachedCost": 0,
+      "totalCost": 0.0037095
+    },
+    "hash": "d7ad25aafa5451577c14c69da002b985",
+    "sourceFile": "trasporto_pubblico_gioved_sciopero_nazionale_830_1230_servizio_rischio.html",
+    "thoughts": "**Strike Analysis - My Thought Process**\n\nAlright, let's break this down. My objective is clear: analyze this text snippet to determine if it indicates an upcoming strike and, if so, extract the relevant strike details in the specified JSON format. The text \"Giovedì 18 luglio trasporto pubblico a rischio per lo sciopero nazionale di 4 ore, dalle 8,30 alle 12,30...\" immediately catches my attention. \"Sciopero nazionale\" – that's the key phrase. This points to a strike, so `isStrike` will be true.\n\nNow, for the details. The date is easily derived; \"Giovedì 18 luglio\" combined with the publication date (12/07/2024) strongly suggests July 18, 2024. Therefore, the strike date is the 18th of July, and I'll format the start time at \"08:30:00\" and the end at \"12:30:00\".\n\nThe time range is provided \"dalle 8,30 alle 12,30\", so I have the start and end times clearly. Now let's address the location. The text specifies \"sciopero nazionale\", indicating a national strike. This directly translates to `locationType: \"NATIONAL\"`. It's crucial to omit `locationCodes`, and only include the locationType, as I recall the instructions are very specific: \"If locationType is NATIONAL, locationCodes MUST BE OMITTED completely.\"\n\nOkay, let's assemble this information into the JSON format. Considering the format, the `isStrike` attribute can be set to \"true\". The strike data will include the `startDate`, `endDate`, and `locationType`. The text does not provide enough information for a guaranteed times field, so it will not be included.\n\nI need to confirm the values are valid: `isStrike = true` (boolean) check, `startDate` matches the \"yyyy-MM-dd HH:mm:ss\" format, check, `endDate` matches the format, check, and finally `locationType` is in the correct enum, also check. It all aligns with the rules. Therefore, I can confidently output the following JSON:\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-07-18 08:30:00\",\n    \"endDate\": \"2024-07-18 12:30:00\",\n    \"locationType\": \"NATIONAL\"\n  }\n}\n```\n\n\n",
+    "tokens": {
+      "input": 10596,
+      "output": 82,
+      "total": 11303
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-04-28 08:30:00",
+      "endDate": "2022-04-28 12:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 25802,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0009442,
+      "outputCost": 0.0007468,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.001691
+    },
+    "hash": "75563919cdc777c5d6e99bfc3b61d112",
+    "sourceFile": "sciopero_trasporto_pubblico_gioved_28_servizio_rischio_830_1230.html",
+    "thoughts": "**Clarifying strike instructions**\n\nThe content indicates a \"sciopero nazionale di 4 ore,\" suggesting a national strike. Therefore, I’ll set the `locationType` to \"NATIONAL\" and `locationCodes` to null, since that’s what the instructions specify: if it’s national, codes must be explicitly null.\n\nRegarding `guaranteedTimes`, the text indicates strike times as \"dalle 8,30 alle 12,30\" but doesn’t mention any guaranteed services. Since there are no explicit times, I can set `guaranteedTimes` to null as well.",
+    "tokens": {
+      "input": 18884,
+      "output": 1867,
+      "total": 20751
+    }
+  }
+}

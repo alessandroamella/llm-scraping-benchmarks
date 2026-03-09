@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-10 08:30:00",
+      "endDate": "2025-01-10 12:30:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "08:30-12:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21118,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005385,
+      "outputCost": 0.0004952,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00054905
+    },
+    "hash": "02fbaf943d7b673084240ad9f4436a27",
+    "sourceFile": "trasporto_pubblico_venerdi_10_gennaio_sciopero_nazionale_di_4_ore.html",
+    "thoughts": "**Formatting strike data in JSON**\n\nI need to extract the relevant information regarding the public transport strike, specifically the guaranteed timing of 08:30 to 12:30. I’ll set the `startDate` and `endDate` for January 10, 2025, in the correct format. The `strikeData` object will include fields like `startDate`, `endDate`, `locationType`, and `guaranteedTimes`, while `locationCodes` will be null. I should produce the output strictly as JSON without additional commentary!",
+    "tokens": {
+      "input": 1077,
+      "output": 1238,
+      "total": 2315
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 10097,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0009335,
+      "outputCost": 0.00018,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0011135
+    },
+    "hash": "c79942332b3075f8e4de013f96b7f960",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_302.html",
+    "thoughts": "**Determining strike participation**\n\nSince this is about participation in a strike, it indicates that the strike has already occurred, meaning isStrike should be false. I’ll format the output in JSON as {\"isStrike\": false}. The title and publication date on the page support this conclusion. There's no need for extra information, just the straightforward JSON response. So, the final output will simply be: {\"isStrike\": false}. I think this covers everything!",
+    "tokens": {
+      "input": 18670,
+      "output": 450,
+      "total": 19120
+    }
+  }
+}

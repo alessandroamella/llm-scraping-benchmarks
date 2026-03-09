@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-09-20 00:00:00",
+      "endDate": "2024-09-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 40271,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005705,
+      "outputCost": 0.0012144,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00127145
+    },
+    "hash": "718a3a02e2e36d49eeb82a3f36031247",
+    "sourceFile": "venerd_20_settembre_sciopero_nazionale_24_ore_trasporto_pubblico_servizio_rischio.html",
+    "thoughts": "**Extracting strike details**\n\nI need to respond with JSON per the strike_extraction schema and determine if the document announces a new strike. The Italian news states there's a national 24-hour strike on Friday, September 20, affecting public transport in Rome. Services will be normal until 8:30 AM, and then there's also a separate 4-hour strike affecting only the Atac network. This indicates that it is an announcement of an upcoming strike, so I can confirm that isStrike is true.",
+    "tokens": {
+      "input": 1141,
+      "output": 3036,
+      "total": 4177
+    }
+  }
+}

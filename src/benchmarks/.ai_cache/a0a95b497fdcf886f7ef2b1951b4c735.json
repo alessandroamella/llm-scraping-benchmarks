@@ -1,0 +1,32 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 35477,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00094045,
+      "outputCost": 0.000974,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00191445
+    },
+    "hash": "a0a95b497fdcf886f7ef2b1951b4c735",
+    "sourceFile": "sportello_al_pubblico_e_contact_center_di_rsm_servizi_non_attivi_causa_sciopero.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to output some JSON with fields `isStrike` and `strikeData` if it's applicable. The content is a long HTML page in Italian. The title means \"Public counter and contact center of Rsm: services not active due to strike.\" The content mentions that the public counter is closed today and tomorrow due to a strike announced by the Usb union. It looks like this protest is ongoing and might extend into tomorrow.",
+    "tokens": {
+      "input": 18809,
+      "output": 2435,
+      "total": 21244
+    }
+  }
+}

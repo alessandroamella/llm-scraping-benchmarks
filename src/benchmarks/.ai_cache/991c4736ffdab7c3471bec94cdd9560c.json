@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-09-29 00:00:00",
+      "endDate": "2023-09-29 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 26846,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005385,
+      "outputCost": 0.000906,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00095985
+    },
+    "hash": "991c4736ffdab7c3471bec94cdd9560c",
+    "sourceFile": "venerd_29_settembre_sciopero_nazionale_trasporto_pubblico_possibili_disagi.html",
+    "thoughts": "**Extracting strike information**\n\nI need to output the content in JSON format, as I'm a data extraction algorithm. The original text is in Italian and talks about an upcoming 24-hour national public transportation strike on September 29th. It states that there may be disruptions, which translates to \"possibili disagi.\" The strike is organized by the Usb union, and services like Atac and peripheral buses may be affected. However, regular service will continue until 8:30 AM and then again from 5 PM to 8 PM.",
+    "tokens": {
+      "input": 1077,
+      "output": 2265,
+      "total": 3342
+    }
+  }
+}

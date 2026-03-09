@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5490,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00015925,
+      "outputCost": 0.0001725,
+      "thinkingCost": 0.0008115,
+      "cachedCost": 0,
+      "totalCost": 0.00114325
+    },
+    "hash": "ae57afc7c5b13915821d0f5f4f21909e",
+    "sourceFile": "venerdi_28_novembre_sciopero_generale_nazionale_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Strike Analysis: November 28, 2025**\n\nOkay, so I've got this announcement about a national strike impacting ATAC in Rome, set for Friday, November 28, 2025. It's a full 24-hour event, which is straightforward. The strike is definitely upcoming; the announcement was made within the last week of the strike.\n\nThe location is explicitly \"NATIONAL,\" so the location codes should indeed be omitted, which is as expected. The critical part here is the guaranteed service times. The provided text states \"Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" That translates to service being regular *until* 8:30 AM and *from* 5 PM to 8 PM. Thus, that means the *guaranteed* times are the periods *including* those times: so that is 00:00-08:30, and 17:00-20:00. This is the correct interpretation.\n\n\n",
+    "tokens": {
+      "input": 637,
+      "output": 115,
+      "total": 1293
+    }
+  }
+}

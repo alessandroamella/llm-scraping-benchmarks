@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-20 00:00:00",
+      "endDate": "2025-06-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6028,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00016325,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.0009165,
+      "cachedCost": 0,
+      "totalCost": 0.00126425
+    },
+    "hash": "96a0b856e191e61d67aaea5b9270cb9e",
+    "sourceFile": "venerdi_20_giugno_sciopero_generale_nazionale_di_usb_cub_e_sgb_a_roma_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Analyzing the Roman Public Transport Strike Announcement**\n\nOkay, let's break this down. My source is an announcement from Atac, the Rome public transport provider. The key piece of information is: \"Venerdì 20 giugno sciopero generale nazionale...\" - a general national strike. This is for Friday, June 20th, 2025. It's a 24-hour strike, as stated. And it's a *general* national strike, so the scope is wide, though this particular announcement is related to Rome (region 12) specifically.\n\nNow, the important details. The strike *is* a full 24-hour one, starting at 00:00 and ending at 23:59 on June 20th, 2025. Typically, public transport strikes in Italy follow this pattern, but with *guaranteed* service windows. The announcement explicitly mentions guaranteed service: \"fino alle 8,30\" (until 08:30) and \"dalle 17 alle 20\" (from 17:00 to 20:00). So, we have a complete 24-hour strike, but with service windows as indicated by the text.\n\nSo my internal data looks like this:\n\n*   `isStrike`: true\n*   `strikeData`:\n    *   `startDate`: \"2025-06-20 00:00:00\"\n    *   `endDate`: \"2025-06-20 23:59:59\"\n    *   `locationType`: \"NATIONAL\"\n    *   `guaranteedTimes`: [\"00:00-08:30\", \"17:00-20:00\"] (Correct format to align with the schema)\n\nThis is a confirmed *upcoming* strike, not a revocation, and it's definitely an announcement, not real-time service info. As it's national, I wouldn't need to include regional location codes. I've got a solid handle on the data now.\n\n\n",
+    "tokens": {
+      "input": 653,
+      "output": 123,
+      "total": 1387
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-11-27 00:00:00",
+      "endDate": "2023-11-27 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6761,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00016425,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.0010155,
+      "cachedCost": 0,
+      "totalCost": 0.00136425
+    },
+    "hash": "6ba16d51cceb9d10a9186436ba395c2f",
+    "sourceFile": "luned_27_novembre_sciopero_nazionale_trasporto_pubblico_possibili_disagi.html",
+    "thoughts": "**Analyzing the Public Transport Strike Announcement**\n\nOkay, let's break this down systematically. The title itself, \"Lunedì 27 novembre sciopero nazionale del trasporto pubblico, possibili disagi - Roma Servizi per la Mobilità,\" clearly states there's a national transport strike on Monday, November 27th. Excellent, that's the starting point.\n\nThe core information is the announcement of a 24-hour national strike on November 27th, 2023. The unions involved are Usb, Orsa, Sgb, Cub, Adl, and Cobas. It specifies that, in Rome, the strike impacts the Atac network and peripheral buses (Roma Tpl).\n\nNow, the critical part: they're guaranteeing *some* service. \"Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" Right, so that translates to \"00:00-08:30\" and \"17:00-20:00\". Always good to get the timings precise.\n\nLet me organize this data now. I'm going to set `isStrike` to true, no doubt about it. The `startDate` is 2023-11-27 00:00:00 and the `endDate` needs to be 2023-11-27 23:59:59 because it's a 24-hour strike. Since it's national, the `locationType` is definitely \"NATIONAL\". `locationCodes` should be omitted when the location type is national. And then the guaranteed times are `guaranteedTimes`: [\"00:00-08:30\", \"17:00-20:00\"].\n\nJust to confirm, I'll double-check: \"fino alle 8:30\" does mean *up to* the start of the service, not including the strike. \"dalle 17 alle 20\" is definitely 17:00-20:00. And, yes, the date-time format is `yyyy-MM-dd HH:mm:ss`.\n\nSo, the strike data parameters are looking like this:\n\n*   `isStrike`: true\n*   `strikeData`:\n    *   `startDate`: \"2023-11-27 00:00:00\"\n    *   `endDate`: \"2023-11-27 23:59:59\"\n    *   `locationType`: \"NATIONAL\"\n    *   `guaranteedTimes`: [\"00:00-08:30\", \"17:00-20:00\"]\n\nI can confirm everything from the text: \"Lunedì 27 novembre trasporto pubblico a rischio per lo sciopero nazionale di 24 ore...\" – yep, it's a strike. And, the guaranteed times: \"Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" That is it!\n\n\n",
+    "tokens": {
+      "input": 657,
+      "output": 123,
+      "total": 1457
+    }
+  }
+}

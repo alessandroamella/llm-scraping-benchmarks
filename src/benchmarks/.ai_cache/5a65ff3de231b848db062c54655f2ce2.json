@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-01-14 08:30:00",
+      "endDate": "2022-01-14 12:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 35385,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0009426,
+      "outputCost": 0.0011012,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0020438
+    },
+    "hash": "5a65ff3de231b848db062c54655f2ce2",
+    "sourceFile": "venerdi_14_gennaio_sciopero_nazionale_4_ore_trasporto_pubblico_rischio.html",
+    "thoughts": "**Interpreting guaranteed times**\n\nI see that the schema requires locationCodes to be null for NATIONAL. \n\nAbout guaranteedTimes, there's a mention of \"dalle 8,30 alle 12,30,\" which needs to be reformatted to \"08:30-12:30\" in HH:mm-HH:mm format. The text indicates a window rather than guaranteed service. \n\nI'm trying to determine if we should include this as guaranteed times, even though it's not explicitly stated. The example in the instructions shows how to format guaranteed times, and I'm deciding how to apply that here.",
+    "tokens": {
+      "input": 18852,
+      "output": 2753,
+      "total": 21605
+    }
+  }
+}

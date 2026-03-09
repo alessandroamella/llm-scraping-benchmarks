@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-01-14 08:30:00",
+      "endDate": "2022-01-14 12:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5224,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0001675,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.0005295,
+      "cachedCost": 0,
+      "totalCost": 0.00082
+    },
+    "hash": "f92d277190322ee95dfd5751aa548c96",
+    "sourceFile": "venerdi_14_gennaio_sciopero_nazionale_4_ore_trasporto_pubblico_rischio.html",
+    "thoughts": "**Analyzing the Transit Strike Announcement**\n\nOkay, let's break this down. First, the input clearly announces an upcoming public transport strike, specifically in Rome, but nationally scoped, occurring on Friday, January 14th, 2022. The strike will last for four hours, from 08:30 to 12:30. The \"sciopero nazionale\" phrasing indicates its national reach, even though the focus seems to be Rome and ATAC (the local transit authority).\n\nNow, to process this according to the prescribed logic:\n\n1.  **Upcoming Strike:** Confirmed. It's explicitly announcing a future event.\n\n2.  **Formatting the Data:**\n    *   `isStrike`: This is definitely `true`.\n    *   `startDate`: Based on the information, this is precisely \"2022-01-14 08:30:00\".\n    *   `endDate`: Similarly, the end time is \"2022-01-14 12:30:00\".\n    *   `locationType`: Since the title reads \"sciopero nazionale,\" it's accurate to assign \"NATIONAL\".\n    *   `guaranteedTimes`: The input doesn't provide any information on guaranteed services, so this field should be omitted, or ideally, set to `null` if the system supports it.\n\nTherefore, the structured data looks like this:\n\n*   `isStrike`: `true`\n*   `strikeData`:\n    *   `startDate`: \"2022-01-14 08:30:00\"\n    *   `endDate`: \"2022-01-14 12:30:00\"\n    *   `locationType`: \"NATIONAL\"\n    *   `locationCodes`: *Omitted (It's a national strike, so it wouldn't be appropriate to include location codes)*\n\n\n",
+    "tokens": {
+      "input": 670,
+      "output": 82,
+      "total": 1105
+    }
+  }
+}

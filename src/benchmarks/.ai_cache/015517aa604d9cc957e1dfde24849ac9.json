@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8476,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000544,
+      "outputCost": 0.000154,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002084
+    },
+    "hash": "015517aa604d9cc957e1dfde24849ac9",
+    "sourceFile": "sciopero_trasporto_pubblico_chiuse_metro_c_termini_centocelle.html",
+    "thoughts": "**Structuring JSON Output**\n\nI need to structure the JSON for a content extraction based on specific rules. The content discusses an ongoing 24-hour national public transport strike in Italy. Given that updates indicate both Metro A and C are closed, while Metro B/B1 operates normally, we establish that this isn’t an upcoming strike, just updates on an ongoing situation. Therefore, the `isStrike` value should be false. I’ll finalize the output as `{\"isStrike\": false}`.",
+    "tokens": {
+      "input": 1088,
+      "output": 385,
+      "total": 1473
+    }
+  }
+}

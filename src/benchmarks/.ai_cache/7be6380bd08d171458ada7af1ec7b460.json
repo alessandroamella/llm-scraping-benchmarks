@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6157,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000532,
+      "outputCost": 0.000168,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002212
+    },
+    "hash": "7be6380bd08d171458ada7af1ec7b460",
+    "sourceFile": "sciopero_sulla_rete_atac_chiuse_metro_ferrovia_termini_centocelle.html",
+    "thoughts": "**Ensuring output correctness**\n\nI’m checking the strike information, and it clearly states that it's ongoing, not upcoming. Therefore, isStrike should be false. I need to consider whether the content includes relevant times or details for the strike, but I shouldn't mark it as a strike since it's active. The example output I’m aiming for if it's not a strike is {\"isStrike\": false}. I must ensure the JSON is correctly formatted without any extra text. So, my final output will be:\n\n{\n  \"isStrike\": false\n}",
+    "tokens": {
+      "input": 1064,
+      "output": 420,
+      "total": 1484
+    }
+  }
+}

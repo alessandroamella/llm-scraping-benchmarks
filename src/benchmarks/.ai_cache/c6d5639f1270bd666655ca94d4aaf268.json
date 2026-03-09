@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-01-16 08:30:00",
+      "endDate": "2023-01-16 12:30:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "08:30-12:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 29883,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0009416,
+      "outputCost": 0.0008396,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0017812
+    },
+    "hash": "c6d5639f1270bd666655ca94d4aaf268",
+    "sourceFile": "luned_16_gennaio_sciopero_atac_4_ore_servizio_rischio_830_1230.html",
+    "thoughts": "**Extracting strike details**\n\nI need to parse this HTML to gather strike information. The goal is to determine whether the document is announcing a new or upcoming strike. If that's the case, I should set `isStrike` to true and extract key details like startDate, endDate, locationType, locationCodes, and guaranteedTimes. The content mentions a strike on January 16, indicating that it’s an upcoming strike from 8:30 to 12:30 in Rome.",
+    "tokens": {
+      "input": 18832,
+      "output": 2099,
+      "total": 20931
+    }
+  }
+}

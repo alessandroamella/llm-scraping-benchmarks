@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5386,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000056,
+      "outputCost": 0.0001404,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0001964
+    },
+    "hash": "269a243f9545aa03db8acfb38035182f",
+    "sourceFile": "sciopero_del_trasporto_pubblico_chiuse_le_metropolitane_e_la_ferrovia_termini_centocelle_2.html",
+    "thoughts": "**Determining strike status**\n\nI need to confirm the strike status based on the document's content. Since it’s not announcing anything new or upcoming, I conclude that \"isStrike\" should be set to false. The document indicates it's about an ongoing strike, so \"isStrike\" is indeed false, which means my output will be straightforward: {\"isStrike\": false}. I want to ensure the JSON formatting is precise. There’s no need for additional strike data here, so I'll keep it minimal.",
+    "tokens": {
+      "input": 1120,
+      "output": 351,
+      "total": 1471
+    }
+  }
+}

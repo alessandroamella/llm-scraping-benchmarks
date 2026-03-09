@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-04-11 20:00:00",
+      "endDate": "2024-04-11 23:59:59",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6355,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0001645,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.000873,
+      "cachedCost": 0,
+      "totalCost": 0.0011605
+    },
+    "hash": "0f47601ad082245dfe42931ded5c3918",
+    "sourceFile": "gioved_11_aprile_sciopero_nazionale_trasporto_pubblico_rischio_20_24.html",
+    "thoughts": "**Strike Analysis: Italian National Public Transport**\n\nOkay, here's the breakdown. I've got a piece of content: \"Giovedì 11 aprile sciopero nazionale. Trasporto pubblico a rischio dalle 20 alle 24,\" published on May 5th, 2024. That translates to: a national strike is planned for Thursday, April 11th, impacting public transport from 8 PM to midnight.\n\nRight, so this is definitely a strike, `isStrike: true`. The scope is clearly national, *proclamato a livello nazionale*, affecting public transport. The target seems to be all public transport, ATAC, RomaTpl, and so on.\n\nThe key data points are: `startDate` is April 11th, 2024, at 8 PM, which is `2024-04-11 20:00:00`. The end time is a little ambiguous: *dalle 20 alle 24* is the phrase. Usually, midnight is interpreted as the end of the day, so the `endDate` is most accurately `2024-04-11 23:59:59`. The prompt format asks for `yyyy-MM-dd HH:mm:ss`, so that works.\n\nWe also have the `locationType`: it's \"NATIONAL\" because the strike is \"national\". There aren't any guaranteed times mentioned, which is typical for evening strikes, so that field gets omitted. No location codes seem applicable, so that can be omitted as well.\n\nTherefore, the complete `strikeData` object looks like this: `{ \"startDate\": \"2024-04-11 20:00:00\", \"endDate\": \"2024-04-11 23:59:59\", \"locationType\": \"NATIONAL\" }`.\n\nNow, let's confirm I have all the required fields: `isStrike` (boolean) - yes. `strikeData` (object) - yes. `startDate` (\"yyyy-MM-dd HH:mm:ss\") - yes. `endDate` (\"yyyy-MM-dd HH:mm:ss\") - yes. `locationType` (\"NATIONAL\" or \"REGIONAL\") - yes, \"NATIONAL.\" Everything is present and accounted for; ready to go.\n\n\n",
+    "tokens": {
+      "input": 658,
+      "output": 82,
+      "total": 1322
+    }
+  }
+}

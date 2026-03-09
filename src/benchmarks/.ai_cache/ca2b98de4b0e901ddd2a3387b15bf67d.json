@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 09:00:00",
+      "endDate": "2024-12-13 13:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7961,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00264175,
+      "outputCost": 0.0001395,
+      "thinkingCost": 0.0006255,
+      "cachedCost": 0,
+      "totalCost": 0.00340675
+    },
+    "hash": "ca2b98de4b0e901ddd2a3387b15bf67d",
+    "sourceFile": "news_media_comunicati_sciopero_generale_13_dicembre.html",
+    "thoughts": "**Strike Information Extraction: A Thought Process**\n\nOkay, let's analyze this text snippet and extract the strike information. The primary task is to determine if this describes an upcoming strike and, if so, to extract relevant details. First, I need to decide if it is a strike. Based on the snippet \"Sciopero generale, venerdì protesta dalle 9 alle 13,\" and the context \"venerdì 13 dicembre trasporto pubblico a rischio per lo sciopero... dalle 9 alle 13,\" it's pretty clear this is indeed a strike, so `isStrike` is `true`.\n\nNow for the details. The date is relatively straightforward. The publication date is December 12, 2024, and the relevant information specifies Friday, December 13th. The time frame for the strike is \"dalle 9 alle 13,\" meaning from 9 AM to 1 PM. Thus, `startDate` becomes 2024-12-13 09:00:00 and `endDate` becomes 2024-12-13 13:00:00.\n\nNext, I need to determine the strike's geographical scope. The text mentions \"A Roma la protesta coinvolgerà la rete Atac.\" While the phrasing \"Sciopero generale nazionale\" suggests a national strike, the specific focus on Rome's Atac network means I should treat this as a *regional* strike. Therefore, `locationType` is set to \"REGIONAL.\"  Since Rome, or the Lazio region, is where this is happening, the `locationCodes` should be [\"12\"], which is the region code for Lazio.\n\nFinally, are there guaranteed times? The text doesn't explicitly mention any. Although Italian strikes often include guaranteed service times, since they aren't provided in the text, I'll omit that from the JSON object.\n\nThe single, valid JSON object that will be returned, in the end, would be based on these extracted values.\n\n\n",
+    "tokens": {
+      "input": 10567,
+      "output": 93,
+      "total": 11077
+    }
+  }
+}

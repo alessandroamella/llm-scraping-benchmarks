@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-12-02 00:00:00",
+      "endDate": "2022-12-02 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 28846,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00048345,
+      "outputCost": 0.0008248,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00130825
+    },
+    "hash": "02160f4e3edfa015c2c5b018d3409c64",
+    "sourceFile": "venerd_2_dicembre_sciopero_generale_nazionale_24_ore_rischio_trasporto_pubblico_romano.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to output JSON following the provided schema. The document indeed announces a national 24-hour strike set for Friday, December 2, 2022. It mentions potential disruptions to public transport in Rome due to union participation. The text specifies guaranteed service times, which will be regular until 8:30 AM and between 5 PM and 8 PM. I’ll confirm that isStrike is true and provide all necessary details for strikeData, including the strike dates, location type, and times.",
+    "tokens": {
+      "input": 9669,
+      "output": 2062,
+      "total": 11731
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8423,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0004862,
+      "outputCost": 0.0001312,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0006174
+    },
+    "hash": "a09a6d6f8eb9115d5407dd6f11b2ae35",
+    "sourceFile": "sciopero_trasporto_pubblico_aperte_metropolitane_bb1_c.html",
+    "thoughts": "**Determining strike information**\n\nI need to follow the strike extraction JSON schema. The document is in Italian and looks like it's about a public transport strike. It mentions that the strike is already happening and provides updates, which means it's not announcing an upcoming strike. Therefore, I’ll set isStrike to false. There’s no strikeData necessary here. I’ll make sure I check for any announcements about future strikes, but in this case, it's clear. \n\n{ \"isStrike\": false }",
+    "tokens": {
+      "input": 9724,
+      "output": 328,
+      "total": 10052
+    }
+  }
+}

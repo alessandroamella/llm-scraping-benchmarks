@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7669,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0004815,
+      "outputCost": 0.0001524,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0006339
+    },
+    "hash": "e8a6e12d9691d4b2b452fe8dd526f852",
+    "sourceFile": "sciopero_trasporto_aperte_metro_ferrovia_termini_centocelle.html",
+    "thoughts": "**Analyzing strike extraction**\n\nI need to output JSON based on the strike extraction format. The document I'm looking at is in Italian and mentions an ongoing transportation strike in Rome. The header translates to “Transportation strike: opened metro and Termini-Centocelle railway.” It provides a status update indicating the strike is currently happening and will conclude at 12:30. Since it's an ongoing situation, we should set \"isStrike\" to false. Therefore, the output should simply be: { \"isStrike\": false }.",
+    "tokens": {
+      "input": 9630,
+      "output": 381,
+      "total": 10011
+    }
+  }
+}

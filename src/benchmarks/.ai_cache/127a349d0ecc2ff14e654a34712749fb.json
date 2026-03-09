@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-05-02 08:30:00",
+      "endDate": "2023-05-02 12:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 11181,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000161,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.000378,
+      "cachedCost": 0,
+      "totalCost": 0.000662
+    },
+    "hash": "127a349d0ecc2ff14e654a34712749fb",
+    "sourceFile": "martedi_2_maggio_sciopero_nazionale_4_ore_trasporto_pubblico_romano_rischio.html",
+    "thoughts": "**Analyzing the National Strike Announcement**\n\nOkay, let's break this down. My input is an announcement for a national strike. The key pieces here are: it's happening on Tuesday, May 2nd, 2023. The strike duration is four hours, from 08:30 to 12:30. \"Sciopero nazionale\" clearly indicates a national scope, not just localized to Rome, although Rome is mentioned.\n\nI need to extract the pertinent information for processing. Yes, this is an *upcoming* strike – the announcement was published on April 26th for the May 2nd date. Therefore, `isStrike` is definitely `true`. I'll set the `startDate` to \"2023-05-02 08:30:00\" and `endDate` to \"2023-05-02 12:30:00\" accordingly. Because the announcement explicitly states \"sciopero nazionale\", I'll set the `locationType` to \"NATIONAL\". Since it is a *national* strike, there's no need to specify individual location codes. Thus, `locationCodes` should be omitted from the output. The text doesn't mention any guaranteed service times, so that variable will remain undefined.\n\n\n",
+    "tokens": {
+      "input": 644,
+      "output": 82,
+      "total": 978
+    }
+  }
+}

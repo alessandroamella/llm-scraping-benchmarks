@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-04-28 08:30:00",
+      "endDate": "2022-04-28 12:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7965,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.004132,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.000852,
+      "cachedCost": 0,
+      "totalCost": 0.005107
+    },
+    "hash": "09c0ba8c56f9836e84890de1d477a9a2",
+    "sourceFile": "sciopero_trasporto_pubblico_gioved_28_servizio_rischio_830_1230.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, here's the deal. My primary objective is to determine whether this text from \"Roma Servizi per la Mobilità\" contains information about an upcoming strike. And, yes, as ATAC (code 12), I need to extract the strike's details if it's there. The output must be a properly formatted JSON object as I'm sure you know well.\n\nThe text is an HTML snippet. Scanning the content, I can see the headline states, \"Sciopero del trasporto pubblico, giovedì 28 servizio a rischio dalle 8,30 alle 12,30\" (Public transport strike, Thursday 28, service at risk from 8:30 to 12:30). The body reinforces this: \"Giovedì 28 aprile trasporto pubblico romano a rischio per lo sciopero nazionale di 4 ore, dalle 8,30 alle 12,30, proclamato dal sindacato Faisa Confail.\" (Thursday, April 28, Roman public transport at risk for a 4-hour national strike, from 8:30 to 12:30, proclaimed by the union Faisa Confail.) The publication date is \"22/04/2022\".\n\nBased on this, it's pretty clear: This is an announcement of a strike! It's happening on \"giovedì 28 aprile\". Time to structure this into the output format.\n\nSo, `isStrike` will be `true`. Now, for the `strikeData`:\n\n*   `startDate`: Let's figure this out. It's a strike on \"giovedì 28 aprile\". The publication date, \"22/04/2022\", helps here, letting me determine the year as 2022. I can confirm this using the published date. Therefore, the start and end dates can be extracted.\n\n    *   Start: 2022-04-28 08:30:00\n    *   End: 2022-04-28 12:30:00\n\n*   `locationType`: The text explicitly says \"sciopero nazionale\" (national strike). Perfect! The schema says that for \"NATIONAL\" you need to omit the location codes. Since I am ATAC and this is a national strike that affects Rome, that works.\n\nI've made sure the date format follows the `yyyy-MM-dd HH:mm:ss` standard. \"2022-04-28 08:30:00\" fits perfectly. I think I've got all the pieces I need!\n\n\n",
+    "tokens": {
+      "input": 16528,
+      "output": 82,
+      "total": 17178
+    }
+  }
+}

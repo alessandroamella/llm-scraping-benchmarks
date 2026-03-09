@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 2933,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0001615,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000177,
+      "cachedCost": 0,
+      "totalCost": 0.0003535
+    },
+    "hash": "878bc4a87026d66f72d347d8aa086e9b",
+    "sourceFile": "sciopero_trasporto_pubblico_chiuse_metro_c_termini_centocelle.html",
+    "thoughts": "**Analyzing the Strike Information**\n\nOkay, so I'm processing this input about a strike. Specifically, it states \"È in corso lo sciopero nazionale di 24 ore del trasporto pubblico.\" Right, so that's the key piece: a 24-hour national public transport strike is either currently happening or has just concluded. The instructions are very clear: if the input is providing real-time updates about an ongoing strike, then I need to set the `isStrike` flag to `false`. Since the content clearly describes a *situation* – a past or current strike – then I will set `isStrike` to `false`. This reflects that the data *is* about the strike, but is not considered real-time updates, as it describes a specific past or ongoing event.\n\n\n",
+    "tokens": {
+      "input": 646,
+      "output": 10,
+      "total": 774
+    }
+  }
+}

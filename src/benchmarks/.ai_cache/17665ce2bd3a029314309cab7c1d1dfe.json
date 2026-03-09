@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-07-07 00:00:00",
+      "endDate": "2023-07-07 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9940,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0026455,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.0012585,
+      "cachedCost": 0,
+      "totalCost": 0.0040885
+    },
+    "hash": "17665ce2bd3a029314309cab7c1d1dfe",
+    "sourceFile": "venerd_7_luglio_trasporto_pubblico_rischio_sciopero_nazionale_24_ore_della_faisa_confail.html",
+    "thoughts": "**Strike Information Extraction - My Thought Process**\n\nOkay, here's the breakdown of my thinking. My task is to extract strike information from this text and present it in JSON format. Several constraints are in play, so I'll go through them carefully:\n\nFirst, is this even a strike? Yes, the text explicitly announces an *upcoming* strike for Friday, July 7th. Good. I need to make sure I format the output as JSON, and I need to parse the dates into the 'yyyy-MM-dd HH:mm:ss' format, which is straightforward. I also need to be mindful of ISTAT region codes, but only if the strike isn't national. The prompt is very specific: If `locationType` is NATIONAL, `locationCodes` MUST BE OMITTED completely, so I'll need to keep that in mind as I process the data.\n\nThe text also provides guaranteed service times. It says, \"Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" Initially, I had that translated as \"06:00-09:00\" and \"17:00-20:00\", but on closer inspection, \"fino alle 8,30\" (until 8:30) means regular service is guaranteed *up to* that point. So, the guaranteed times are \"00:00-08:30\" and \"17:00-20:00\". These times are likely to be part of the strike information.\n\nNow, let's process the specifics: \"Venerdì 7 luglio... Sciopero nazionale...\" I’ll assume the publication date (\"Pubblicato il: 30/06/2023\") gives me the year: 2023. The strike is on July 7th. Given that the article specifies an *upcoming* strike, I can safely assume the strike duration is for the entire day. The location is specified as \"NATIONAL.\" So, here is the information:\n\n*   `isStrike`: true\n*   `strikeData`:\n    *   `startDate`: \"2023-07-07 00:00:00\"\n    *   `endDate`: \"2023-07-07 23:59:59\"\n    *   `locationType`: \"NATIONAL\"\n    *   `guaranteedTimes`: [\"00:00-08:30\", \"17:00-20:00\"]\n\nI need to confirm the output is formatted correctly: `isStrike` is boolean, and `strikeData` is an object. `startDate` and `endDate` are in the correct `yyyy-MM-dd HH:mm:ss` format. `locationType` is set to \"NATIONAL\", and I'm *omitting* `locationCodes` as the prompt requires. Finally, `guaranteedTimes` uses the specified time format (HH:mm-HH:mm). \"00:00-08:30\" and \"17:00-20:00\" both fit this format. This should be correct.\n\n\n",
+    "tokens": {
+      "input": 10582,
+      "output": 123,
+      "total": 11544
+    }
+  }
+}

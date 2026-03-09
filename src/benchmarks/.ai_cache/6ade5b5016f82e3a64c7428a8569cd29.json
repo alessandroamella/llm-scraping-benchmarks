@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-12-16 20:00:00",
+      "endDate": "2022-12-16 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "20:00-23:59"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 28139,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000535,
+      "outputCost": 0.0007364,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0007899
+    },
+    "hash": "6ade5b5016f82e3a64c7428a8569cd29",
+    "sourceFile": "venerd_16_dicembre_sciopero_generale_regionale_trasporto_pubblico_rischio_20_24.html",
+    "thoughts": "**Clarifying date formats**\n\nI'm analyzing the given startDate and endDate. The end time \"24:00:00\" isn't standard; technically it should be written as \"2022-12-17 00:00:00.\" Since it’s within the same day and the instruction specifies 'yyyy-MM-dd HH:mm:ss' format, I might consider whether to use \"2022-12-16 24:00:00\" or change it to \"2022-12-16 23:59:59.\" The latter avoids any formatting issues. It's tricky because I want to follow the instruction accurately.",
+    "tokens": {
+      "input": 1070,
+      "output": 1841,
+      "total": 2911
+    }
+  }
+}

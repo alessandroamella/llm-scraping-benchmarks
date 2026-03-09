@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8827,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0009403,
+      "outputCost": 0.0001764,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0011167
+    },
+    "hash": "4f6cbf5e19ea9b573909638f3f10f853",
+    "sourceFile": "sciopero_trasporto_pubblico_chiuse_metro_c_attiva_b.html",
+    "thoughts": "**Assessing strike announcement**\n\nI need to extract structured data according to the schema. The document discusses a public transport strike, specifically mentioning that Metro A and C are closed while Metro B is active. It updates about an ongoing strike that will conclude at 12:30. Since it's already in progress, I need to set \"isStrike\" to false. \n\nSo, the output will be: { \"isStrike\": false } without any extra fields.",
+    "tokens": {
+      "input": 18806,
+      "output": 441,
+      "total": 19247
+    }
+  }
+}

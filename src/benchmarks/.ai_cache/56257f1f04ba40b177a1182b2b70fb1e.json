@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 09:00:00",
+      "endDate": "2024-12-13 13:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "09:00-13:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 17978,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00048235,
+      "outputCost": 0.0004692,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00095155
+    },
+    "hash": "56257f1f04ba40b177a1182b2b70fb1e",
+    "sourceFile": "news_media_comunicati_sciopero_generale_13_dicembre.html",
+    "thoughts": "**Parsing protest details**\n\nI need to clarify a few things regarding the national \"sciopero generale nazionale.\" The locationCodes should be set to null, as the specification states it must be included but explicitly null for a national type. \n\nFor \"GuaranteedTimes,\" it looks like the agitation mentioned runs from 9 to 13, so I'll record that as [\"09:00-13:00\"]. But I see that the article indicates the rally lasts four hours, and I'm considering whether the time noted is indeed the time of the strike.",
+    "tokens": {
+      "input": 9647,
+      "output": 1173,
+      "total": 10820
+    }
+  }
+}

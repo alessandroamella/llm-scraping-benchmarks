@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-10-09 00:00:00",
+      "endDate": "2023-10-09 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7046,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0041185,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.00105,
+      "cachedCost": 0,
+      "totalCost": 0.005353
+    },
+    "hash": "37f42527a76a9aedc1e9bc9612def864",
+    "sourceFile": "luned_9_ottobre_sciopero_nazionale_trasporto_pubblico_possibili_disagi_24_ore.html",
+    "thoughts": "**Analyzing Strike Information from Provided Content**\n\nOkay, let's break this down. My task is clear: I need to analyze this text and extract strike information, ultimately providing it in a valid JSON format. I have specific constraints to follow: a valid JSON output, a default `{\"isStrike\": false}` if no strike is found, and the defined JSON object if a strike is present.\n\nFirst, I see the text mentions a national public transport strike on \"Lunedì 9 ottobre,\" which, given the article's date of October 4, 2023, falls on a Monday. The strike's duration is 24 hours. The location is \"nazionale,\" meaning national. Now, I need to pinpoint the guaranteed service times. The text states \"Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" That translates to regular service until 8:30 AM and again from 5:00 PM to 8:00 PM. So, I need to be careful. The usual assumption is 06:00-09:00 - but here the provided text says \"fino alle 08:30\" (until 08:30) and \"dalle 17 alle 20\" (from 17:00 to 20:00). So, to be precise, the guaranteed times are from 00:00 to 08:30 and 17:00 to 20:00.\n\nNow, let's refine the JSON structure.\n\n*   `isStrike`: This is definitely true.\n*   `strikeData`:\n    *   `startDate`:  Since it's a 24-hour strike and the date is clear, the start is 2023-10-09 00:00:00.\n    *   `endDate`: And logically, the strike ends at 2023-10-09 23:59:59.\n    *   `locationType`: The text specifies \"nazionale,\" which translates to \"NATIONAL.\"\n    *   `guaranteedTimes`: The guaranteed times are as previously mentioned: \\[\"00:00-08:30\", \"17:00-20:00\"].\n\nFinally, let's ensure I'm adhering to the final detail. Because the location type is NATIONAL, I must exclude the `locationCodes` field.\n\nThis provides the JSON I need.\n\n\n",
+    "tokens": {
+      "input": 16474,
+      "output": 123,
+      "total": 17297
+    }
+  }
+}

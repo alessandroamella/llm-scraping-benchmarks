@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-12-07 09:00:00",
+      "endDate": "2023-12-07 13:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "09:00-13:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 14623,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000534,
+      "outputCost": 0.0004156,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.000469
+    },
+    "hash": "75f3386bc6fef398d8efd64385edda00",
+    "sourceFile": "gioved_sciopero_regionale_4_ore_trasporto_pubblico_rischio.html",
+    "thoughts": "**Classifying an upcoming strike announcement**\n\nI'm looking at a document in Italian about an upcoming regional strike scheduled for December 7, 2023. It mentions that public transport will be at risk for 4 hours from 9 AM to 1 PM. The strike has been organized by the Faisa Cisal union. So, it seems clear that I should classify this as a planned strike, which means the isStrike status would be true. The start date will be formatted as 2023-12-07 09:00:00.",
+    "tokens": {
+      "input": 1068,
+      "output": 1039,
+      "total": 2107
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-20 00:00:00",
+      "endDate": "2025-06-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8733,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.002644,
+      "outputCost": 0.0001725,
+      "thinkingCost": 0.001314,
+      "cachedCost": 0,
+      "totalCost": 0.0041305
+    },
+    "hash": "b138f2102ea600477717e7e058f674a4",
+    "sourceFile": "venerdi_20_giugno_sciopero_generale_nazionale_di_usb_cub_e_sgb_a_roma_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Strike Analysis: Rome Transport**\n\nAlright, let's break this down. The task is to determine if this text describes an upcoming strike, and it clearly does. The input is a news announcement about a transport strike in Rome. The text itself is in Italian, mentioning \"Venerdì 20 giugno sciopero generale nazionale,\" explicitly indicating a national general strike. The context points to the strike affecting transport in Rome, which is specifically highlighted. The publication date, June 13, 2025, and an update on June 16, 2025, sets the timeframe. \"Venerdì 20 giugno\" confirms the strike date, which, given the publication date, I'm inferring is June 20, 2025. It also specifies that the strike is a \"sciopero generale nazionale,\" implying it lasts for 24 hours.\n\nNow for the specifics. The text mentions guaranteed service during certain times: \"Il servizio sarà comunque garantito fino alle 8,30 e dalle 17 alle 20.\" Okay, this is key. This translates to service being guaranteed until 8:30 AM and then from 5:00 PM to 8:00 PM. I need to make some assumptions here given the implied start of service, but \"fino alle 8,30\" generally means the guarantee extends from the start of service until that time. A strike has to start sometime. No start time is specified, but 06:00 is a safe start, or the start of the typical transport day. The second range is clear. So, my initial parsing of the data would be:\n\n*   `isStrike`: true - because the text *explicitly* says it's a strike.\n*   `startDate`: I will calculate 2025-06-20 00:00:00. This is the start of the strike based on the text.\n*   `endDate`: 2025-06-20 23:59:59.  Full 24-hour strike.\n*   `locationType`: \"NATIONAL\" - even though Rome is mentioned, the text specifies a \"sciopero generale nazionale.\"\n*   `guaranteedTimes`: \"06:00-08:30\" and \"17:00-20:00\". These are the periods with guaranteed service, based directly on the Italian text's \"fino alle 8,30\" and \"dalle 17 alle 20.\"\n\nThen, I need to check my work against constraints. The JSON output needs to follow specific criteria. The constraint says that since this is a national strike, `locationCodes` MUST BE OMITTED. Date format is `yyyy-MM-dd HH:mm:ss`, confirmed. Guaranteed times format is `HH:mm-HH:mm`. Looks good! So, my final JSON object will be:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-06-20 00:00:00\",\n    \"endDate\": \"2025-06-20 23:59:59\",\n    \"locationType\": \"NATIONAL\",\n    \"guaranteedTimes\": [\"06:00-08:30\", \"17:00-20:00\"]\n  }\n}\n```\n\nThat should be accurate, concise, and in line with the specifications. I think I've got this one locked down.\n\n\n",
+    "tokens": {
+      "input": 10576,
+      "output": 115,
+      "total": 11567
+    }
+  }
+}

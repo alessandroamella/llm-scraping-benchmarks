@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-12-15 00:00:00",
+      "endDate": "2023-12-15 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 30775,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00048325,
+      "outputCost": 0.0008236,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00130685
+    },
+    "hash": "26101e7803cf26a882eafe5e77f3146b",
+    "sourceFile": "trasporto_pubblico_sciopero_nazionale_differito_15_dicembre.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI see that there's an announcement of an upcoming strike scheduled for December 15. The phrase \"differito al 15 dicembre\" indicates it's been rescheduled. According to the instructions, I only set `isStrike` to true if it's announcing a future strike. Since this document confirms the date of the strike, I will set `isStrike` to true. Now, I need to extract the strike data and determine the start date and time.",
+    "tokens": {
+      "input": 9665,
+      "output": 2059,
+      "total": 11724
+    }
+  }
+}

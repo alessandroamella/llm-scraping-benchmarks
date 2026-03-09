@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 13470,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00094015,
+      "outputCost": 0.0002824,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00122255
+    },
+    "hash": "08906b419334268001dbb04017db17ab",
+    "sourceFile": "sciopero_trasporto_pubblico_chiusa_roma_lido_funzione_resto_della_rete.html",
+    "thoughts": "**Assuring JSON format**\n\nI’ll output a JSON object to ensure clarity. I think it’s safer to present the response in either one line or a multi-line format, following the \"strike_extraction\" schema. I don’t need to include \"strikeData,\" so the final output should just be the block showing \"isStrike\": false. \n\nI’m also considering the nuance that this could be an announcement about the current status of a strike, but since it’s not announcing an upcoming strike, I’ll confirm that it remains false.",
+    "tokens": {
+      "input": 18803,
+      "output": 706,
+      "total": 19509
+    }
+  }
+}

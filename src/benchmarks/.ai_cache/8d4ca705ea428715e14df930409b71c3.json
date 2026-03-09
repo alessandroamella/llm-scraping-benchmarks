@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6853,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000513,
+      "outputCost": 0.0001148,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0001661
+    },
+    "hash": "8d4ca705ea428715e14df930409b71c3",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_385.html",
+    "thoughts": "**Outputting strike data**\n\nI need to generate a JSON output for the strike information. The content references a public transport strike with a participation rate of 38.5% from Atac. Since this describes participation in a strike that already occurred, it doesn't indicate a new or upcoming strike. So, I’ll set \"isStrike\" to false based on the guidelines. Thus, my final JSON output will be: {\"isStrike\": false}, without any additional strike data included.",
+    "tokens": {
+      "input": 1026,
+      "output": 287,
+      "total": 1313
+    }
+  }
+}

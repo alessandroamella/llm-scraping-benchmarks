@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 23591,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005355,
+      "outputCost": 0.0007484,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00080195
+    },
+    "hash": "0154ef45f397466cb69d20b85d0b0c43",
+    "sourceFile": "venerdi_28_novembre_sciopero_generale_nazionale_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to output JSON based on the specified `strike_extraction` format. There's an Italian article announcing a general strike on November 28, 2025. It states that public transport will be affected, but services will remain regular until 8:30 AM and then again from 5:00 PM to 8:00 PM. So, I should set `isStrike` to true, and I need to extract the `startDate` and `endDate`, defining the specific times for the 24-hour strike.",
+    "tokens": {
+      "input": 1071,
+      "output": 1871,
+      "total": 2942
+    }
+  }
+}

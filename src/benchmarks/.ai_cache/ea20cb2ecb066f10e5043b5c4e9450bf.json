@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6060,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0004812,
+      "outputCost": 0.0001428,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.000624
+    },
+    "hash": "ea20cb2ecb066f10e5043b5c4e9450bf",
+    "sourceFile": "sciopero_attive_metro_b_chiusa_c.html",
+    "thoughts": "**Deciding document status**\n\nI'm focusing on creating a JSON object that simply states that it's not a strike. According to the instructions: I need to output {\"isStrike\": false} without any extra explanations. It’s also important to consider the context of the document, which indicates that there's currently an ongoing strike. Since the criteria prioritize ongoing status over upcoming, I'll ensure I'm providing the correct output.",
+    "tokens": {
+      "input": 9624,
+      "output": 357,
+      "total": 9981
+    }
+  }
+}

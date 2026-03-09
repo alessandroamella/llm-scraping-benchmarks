@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-07-07 20:30:00",
+      "endDate": "2024-07-08 00:30:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "20:30-00:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19578,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000539,
+      "outputCost": 0.0005776,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0006315
+    },
+    "hash": "d37a6ff18910559d2ff3fc5e4fd3c380",
+    "sourceFile": "trasporto_pubblico_domenica_7_luglio_sciopero_serale_4_ore.html",
+    "thoughts": "**Extracting strike data**\n\nI need to format the output in JSON according to the specified guidelines. The document is indeed announcing an upcoming strike, specifically that on Sunday, July 7, 2024, there will be a four-hour evening strike from 20:30 to 00:30. It mentions this is a national-level strike, proclaimed by the mayor. So, I’ll set isStrike to true and extract the start and end date in the required format as 'yyyy-MM-dd HH:mm:ss'.",
+    "tokens": {
+      "input": 1078,
+      "output": 1444,
+      "total": 2522
+    }
+  }
+}

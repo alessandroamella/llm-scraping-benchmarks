@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3063,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00015475,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000246,
+      "cachedCost": 0,
+      "totalCost": 0.00041575
+    },
+    "hash": "a42d512dd7a356db6414bf778dbfc53d",
+    "sourceFile": "sciopero_attive_metro_b_chiusa_c.html",
+    "thoughts": "**Analyzing Real-Time Strike Information**\n\nOkay, so I've received the input: \"Sciopero, attive metro A e B, chiusa la C.\" Immediately, I recognize this is about a strike, and the text includes real-time information – specific metro lines (A, B) are active while line C is closed. The accompanying description confirms that it is an ongoing national strike.\n\nMy objective is clear: to determine if this is a fresh announcement about a *new* strike or a snapshot of the *current* situation during an existing one. The provided instructions are straightforward. The phrasing of the Italian (\"...chiusa la C,\" indicating a current state) strongly suggests this is real-time status. It is providing updates, not announcing a future event.\n\nTherefore, because this input is clearly detailing the *present* conditions of the strike, specifically which lines are running and which are not, I'm going to set `isStrike` to `false`. It's a report on an already declared strike.\n\n\n",
+    "tokens": {
+      "input": 619,
+      "output": 10,
+      "total": 793
+    }
+  }
+}

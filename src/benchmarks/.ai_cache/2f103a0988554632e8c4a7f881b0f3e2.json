@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-03-08 00:00:00",
+      "endDate": "2023-03-08 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24145,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0009445,
+      "outputCost": 0.0009176,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0018621
+    },
+    "hash": "2f103a0988554632e8c4a7f881b0f3e2",
+    "sourceFile": "mercoled_8_marzo_sciopero_nazionale_cub_trasporto_pubblico_rischio_24_ore.html",
+    "thoughts": "**Analyzing strike data**\n\nI need to output JSON that includes isStrike and potentially strikeData, but only if isStrike is true. The content is lengthy and talks about a national strike on March 8, affecting public transport in Rome. It mentions that the services will be normal until 8:30 AM and then resume from 5 PM to 8 PM. This indicates an upcoming strike and provides some timeline details. The publication dates are also clear, being recent updates from early March 2023.",
+    "tokens": {
+      "input": 18890,
+      "output": 2294,
+      "total": 21184
+    }
+  }
+}

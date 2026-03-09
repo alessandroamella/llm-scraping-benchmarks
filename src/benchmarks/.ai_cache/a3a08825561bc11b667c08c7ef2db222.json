@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-09-22 00:00:00",
+      "endDate": "2025-09-22 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7227,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.002647,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.0010755,
+      "cachedCost": 0,
+      "totalCost": 0.003907
+    },
+    "hash": "a3a08825561bc11b667c08c7ef2db222",
+    "sourceFile": "lunedi_22_settembre_sciopero_nazionale_di_24_ore_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Strike Information Extraction: A Thought Process**\n\nOkay, here's the deal. I need to pull strike information from this text and format it into a JSON structure, according to a specified schema. The task is pretty straightforward: identify if there's an upcoming strike, and if so, extract the crucial details.\n\nFirst, I'm given the input – web page content, which in this case announces a strike on \"Lunedì 22 settembre.\" Then I note the publication and update dates, which gives me context; the text refers to September 2025. This sets the stage for accurate date interpretation.\n\nMy goal is to produce JSON output with these key fields: `isStrike`, which is a boolean indicating the presence of a strike; and, if `isStrike` is true, the `strikeData` object, containing `startDate`, `endDate`, `locationType`, `locationCodes` (which is omitted for \"NATIONAL\" strikes, per instructions), and `guaranteedTimes`.\n\nThe initial statement immediately confirms this is about a strike. \"Lunedì 22 settembre sciopero nazionale di 24 ore...\" That's a clear signal. So, `isStrike` will be true.\n\nNow for the details. \"Lunedì 22 settembre\" means the strike is happening on that date. Combined with the 2025 publication date, I've got the date – 2025-09-22. It's a 24-hour strike. This means the start is 00:00:00 on that day and ends at 23:59:59 (or 00:00:00 of the next day, but that's implied for a 24-hour strike).\n\nThe text indicates \"nazionale\" – \"national\". This dictates a `locationType` of \"NATIONAL\". And, as per my instructions, this *must* be correctly interpreted, and `locationCodes` is omitted.\n\nNext, the guaranteed service times. The text says \"fino alle 8,30 e dalle 17 alle 20.\" That's standard Italian; so it's [\"00:00-08:30\", \"17:00-20:00\"].\n\nThus, my constructed JSON will be something like:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-09-22 00:00:00\",\n    \"endDate\": \"2025-09-22 23:59:59\",\n    \"locationType\": \"NATIONAL\",\n    \"guaranteedTimes\": [\"00:00-08:30\", \"17:00-20:00\"]\n  }\n}\n```\n\nThat should be accurate, and adheres to all the requirements.\n\n\n",
+    "tokens": {
+      "input": 10588,
+      "output": 123,
+      "total": 11428
+    }
+  }
+}

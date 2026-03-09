@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-10-20 00:00:00",
+      "endDate": "2023-10-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7751,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.004112,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.000645,
+      "cachedCost": 0,
+      "totalCost": 0.0049415
+    },
+    "hash": "d6cedbeca4d65aa140dc19442c77e529",
+    "sourceFile": "venerd_20_ottobre_sciopero_generale_nazionale_trasporto_pubblico_rischio.html",
+    "thoughts": "**Strike Information Extraction: ATAC (Rome, Lazio)**\n\nOkay, here's what I've got. My task is to pull strike information from this HTML content, specifically targeting ATAC in Rome, Lazio. Analyzing the text, it's clear we're dealing with an upcoming strike. The title, \"Venerdì 20 ottobre sciopero generale nazionale. Trasporto pubblico a rischio,\" immediately flags it. Let's break it down:\n\nThe strike date is explicitly given as \"Venerdì 20 ottobre,\" which is October 20th. I need to nail down the year. Other sections on the page mention dates like \"2026,\" but the \"Pubblicato il: 13/10/2023\" gives context. Plus, October 20th, 2023, was a Friday. Confirmed: it's October 20, 2023.\n\nThe scope is \"sciopero generale nazionale,\" meaning it's a national strike. The duration is stated as \"24 ore,\" a full day of disruption.\n\nCrucially, the service info provides guaranteed times: \"Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" This specifies the reliable service windows.\n\nTherefore, the `isStrike` flag is definitely `true`.\n\nNow for the `strikeData` structure. I'm inferring the `startDate` as \"2023-10-20 00:00:00\" because a 24-hour strike usually implies it begins at the start of the day. The `endDate` becomes \"2023-10-20 23:59:59\". The `locationType` will be \"NATIONAL\" as indicated by \"sciopero generale nazionale\".\n\nLastly, the guaranteed service times are crucial. These are \"00:00-08:30\" and \"17:00-20:00\". Though it's a 24-hour strike, the text clearly highlights these two time windows with \"regolare\". Thus the guaranteed times are explicitly \"00:00-08:30\" and \"17:00-20:00\".\n\n\n",
+    "tokens": {
+      "input": 16448,
+      "output": 123,
+      "total": 17001
+    }
+  }
+}

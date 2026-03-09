@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-05-20 00:00:00",
+      "endDate": "2022-05-20 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8897,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0026475,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.0008685,
+      "cachedCost": 0,
+      "totalCost": 0.003726
+    },
+    "hash": "510caf167e3bbc5ab25b6cb37b1744af",
+    "sourceFile": "venerd_20_maggio_sciopero_24_ore_trasporto_pubblico_rischio.html",
+    "thoughts": "**Analyzing the Strike Information**\n\nOkay, let's break this down. The input content clearly indicates a 24-hour strike set for Friday, May 20th. Given the publication date of May 13th, I'm assuming this is May 20th of 2022. I need to extract the key pieces of information and structure it properly.\n\nFirst, `isStrike` is definitely `true`. Now, for the strike details. The `startDate` should be \"2022-05-20 00:00:00\", assuming a 24-hour strike starts at the beginning of the day. The `endDate` would logically be \"2022-05-20 23:59:59\" to cover the full duration.\n\nThe strike is regional, specifically concerning Rome and Lazio, so `locationType` will be \"REGIONAL\". I'll use \"12\" for the `locationCodes`, representing Lazio.\n\nNext, the critical part: the guaranteed service times. The text says service is \"regolare fino alle 8,30\" and \"dalle 17 alle 20.\" That means the `guaranteedTimes` are \"00:00-08:30\" and \"17:00-20:00\". No ambiguity there. This is a pretty straightforward extraction.\n\n\n",
+    "tokens": {
+      "input": 10590,
+      "output": 140,
+      "total": 11309
+    }
+  }
+}

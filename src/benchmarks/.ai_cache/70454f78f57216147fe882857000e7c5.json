@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-10 00:00:00",
+      "endDate": "2025-10-10 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 35642,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00048105,
+      "outputCost": 0.0010712,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00155225
+    },
+    "hash": "70454f78f57216147fe882857000e7c5",
+    "sourceFile": "venerdi_10_sciopero_del_trasporto_pubblico_rete_atac_a_rischio.html",
+    "thoughts": "**Extracting strike details**\n\nI need to extract information like startDate, endDate, locationType, locationCodes, and guaranteedTimes, ensuring the date format is 'yyyy-MM-dd HH:mm:ss.' The document is in Italian and refers to a general strike on October 10. It mentions two strikes of 24 and 4 hours, but there’s no specific start or end time. I can deduce time intervals. The location type is \"REGIONAL\" with an ISTAT code of \"12\" for Lazio.",
+    "tokens": {
+      "input": 9621,
+      "output": 2678,
+      "total": 12299
+    }
+  }
+}

@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-03-09T15:54:18.736Z",
+  "timestamp": "2026-03-09T16:10:39.649Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "Trenitalia",
     "fileName": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-12-12-sciopero-del-personale-di-sad-.html",
     "model": "deepseek-chat",
     "strategy": "dom-distillation-markdown",
-    "useLenientSchema": true,
+    "useLenientSchema": false,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"Trenitalia\" (Italy's national railway operator).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: SCIOPERO DEL PERSONALE DI SAD E TRENTINO TRASPORTI / PERSONALSTREIK VON SAD UND TRENTINO TRASPORTI\n\n* * *\n\n# SCIOPERO DEL PERSONALE DI SAD E TRENTINO TRASPORTI / PERSONALSTREIK VON SAD UND TRENTINO TRASPORTI\n\nIn vigore: 12 DICEMBRE 2025\n\nServizio: **Regionale**\n\nCausa Modifica: **Sciopero**\n\nRegione: **Trentino Alto Adige, VENETO**\n\nImpresa: **SAD, TT– Trentino Trasporti**\n\n**Dalle ore 00:01 alle ore 21:00 del 12 dicembre 2025** è stato indetto uno sciopero del personale di **SAD**. I treni delle linee Bolzano – Trento, Bolzano – Merano, Merano – Malles, Brennero – Bolzano – Merano e Brunico – San Candido possono subire variazioni.\n\n**Dalle ore 00:01 alle ore 23:59 del 12 dicembre 2025** è stato indetto uno sciopero del personale di **Trentino Trasporti**. I treni della linea Trento-Bassano del Grappa possono subire variazioni.\n\nLo sciopero può comportare modifiche al servizio, **anche prima dell’inizio e dopo la sua conclusione.**\n\n**Von 00:01 Uhr bis 21:00 Uhr** am 12. Dezember 2025 wurde ein Streik des SAD-Personals ausgerufen.\n\nBei den SAD-Zügen auf den Strecken Bozen - Trient, Bozen - Meran, Meran - Mals, Brenner - Bozen-Meran und Bruneck – Innichen kann es zu Änderungen kommen.\n\n**Von 00:01 Uhr bis 23:59 Uhr am 12. Dezember 2025** wurde ein Streik des Trentino Trasporti-Personals ausgerufen. Bei den Trentino Trasporti-Zügen auf der Strecke Trient - Bassano del Grappa kann es zu Änderungen kommen.\n\nDer Streik kann **bereits vor Beginn und nach Beendigung** zu Änderungen des Dienstes führen."
   },
   "response": {
@@ -19,21 +19,22 @@
         "locationCodes": [
           "04",
           "05"
-        ]
+        ],
+        "guaranteedTimes": []
       }
     },
     "usage": {
-      "input": 1509,
-      "output": 90,
-      "total": 1599
+      "input": 1515,
+      "output": 89,
+      "total": 1604
     },
     "costUsd": {
-      "inputCost": 0.00004225,
-      "outputCost": 0.0000252,
+      "inputCost": 0.00004242,
+      "outputCost": 0.00002492,
       "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.00006745
+      "totalCost": 0.00006734
     },
-    "durationMs": 5968
+    "durationMs": 5724
   }
 }

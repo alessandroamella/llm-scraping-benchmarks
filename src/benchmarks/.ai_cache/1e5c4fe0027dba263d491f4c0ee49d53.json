@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-09 00:00:00",
+      "endDate": "2025-12-09 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7102,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00408425,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.00117,
+      "cachedCost": 0,
+      "totalCost": 0.00546425
+    },
+    "hash": "1e5c4fe0027dba263d491f4c0ee49d53",
+    "sourceFile": "martedi_9_dicembre_sciopero_del_trasporto_pubblico_possibili_stop_per_24_ore.html",
+    "thoughts": "**Strike Analysis for ATAC (Rome)**\n\nOkay, let's break this down. My objective is to determine if this text announces an upcoming strike for ATAC in Rome and represent that information in a JSON format. The core rule is that `isStrike` is `true` if it *is* an announcement of a strike; otherwise, it's false, and the text provides the start and end dates of the event in \"yyyy-MM-dd HH:mm:ss\" format.\n\nFirst, I identified the target: ATAC in Rome (code \"12\"). The title, \"Martedì 9 dicembre sciopero del trasporto pubblico. Possibili stop per 24 ore,\" is pretty clear. The date, \"Martedì 9 dicembre\" confirms it. The publication date is \"04/12/2025\" and gives us an *implied* start date for the strike on December 9th, 2025.\n\nThe content summary explicitly states, \"Martedì 9 dicembre trasporto pubblico a rischio per lo sciopero di 24 ore indetto dal sindacato Sul.\" So, it's definitely a strike announcement. `isStrike` is therefore `true`.\n\nNow, let's extract the strike data. \"24 ore\" means it's a full day. The text mentions \"il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" That translates to guaranteed service from 00:00 to 08:30 and from 17:00 to 20:00. This is important: the text states \"fino alle 8,30\" and \"dalle 17 alle 20,\" so I must use these times as guaranteed service, even if typical Italian service times differ. Therefore, the start date is 2025-12-09 00:00:00 and the end date is 2025-12-09 23:59:59 because the full day (24 hours) of service is affected. Location is Rome, indicated by code \"12\".\n\nGiven all this, here's how the data should be structured in the JSON format:\n\n*   `isStrike`: `true`\n*   `strikeData`:\n    *   `startDate`: \"2025-12-09 00:00:00\"\n    *   `endDate`: \"2025-12-09 23:59:59\"\n    *   `locationType`: \"REGIONAL\"\n    *   `locationCodes`: [\"12\"]\n    *   `guaranteedTimes`: [\"00:00-08:30\", \"17:00-20:00\"]\n\nI'm confident this accurately represents the strike information according to the specified criteria.\n\n\n",
+    "tokens": {
+      "input": 16337,
+      "output": 140,
+      "total": 17257
+    }
+  }
+}

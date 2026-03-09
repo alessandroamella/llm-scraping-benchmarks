@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-24 00:00:00",
+      "endDate": "2025-02-24 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5914,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0001765,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.000834,
+      "cachedCost": 0,
+      "totalCost": 0.001195
+    },
+    "hash": "59b9a6c6d9afa9412c2eed4a6c89c7e6",
+    "sourceFile": "lunedi_24_febbraio_sciopero_nazionale_del_trasporto_pubblico_possibili_disagi.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, so I've got an announcement about a national public transport strike set for Monday, February 24th, 2025. My primary goal is to extract the relevant strike information and structure it into a clean JSON object. The trigger condition, of course, is that this is an announcement about a strike, and therefore I am setting `isStrike` to true.\n\nLet's break down the details. The text explicitly states it's a 24-hour strike (\"24 ore\"). I'll interpret this as spanning the entire day – from midnight to 11:59 PM on February 24th, 2025. So, the `startDate` becomes \"2025-02-24 00:00:00\" and the `endDate` becomes \"2025-02-24 23:59:59\". The strike is \"nazionale,\" meaning national, which I'll represent as \"NATIONAL\" for `locationType`. Since it's national, location codes aren't relevant here.\n\nNow, the crucial part: guaranteed service times. The text states \"Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" This translates to regular service *until* 8:30 AM, meaning the strike effectively begins after that time. This needs to be considered for guaranteed times. Also, from 5 PM to 8 PM, there will be regular service (\"dalle 17 alle 20\"). I'll represent this in the `guaranteedTimes` array as [\"00:00-08:30\", \"17:00-20:00\"].\n\nFinally, I need to validate the formats of all the extracted data. The date formats, `startDate` and `endDate`, are in the correct `yyyy-MM-dd HH:mm:ss` format. `locationType` is a straightforward string, and the `guaranteedTimes` are in the `HH:mm-HH:mm` format. All formats are good.\n\nSo, the JSON structure should look like this:\n\n*   `isStrike`: true\n*   `strikeData`:\n    *   `startDate`: \"2025-02-24 00:00:00\"\n    *   `endDate`: \"2025-02-24 23:59:59\"\n    *   `locationType`: \"NATIONAL\"\n    *   `guaranteedTimes`: [\"00:00-08:30\", \"17:00-20:00\"]\n\n\n",
+    "tokens": {
+      "input": 706,
+      "output": 123,
+      "total": 1385
+    }
+  }
+}

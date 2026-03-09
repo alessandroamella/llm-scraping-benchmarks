@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-03 00:00:00",
+      "endDate": "2025-10-04 00:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24249,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005305,
+      "outputCost": 0.0008796,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00093265
+    },
+    "hash": "0193965dfdea8a2eff7810bdc633483e",
+    "sourceFile": "sciopero_generale_nazionale_domani_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to output JSON for a strike announcement in Italian that says there will be a nationwide strike tomorrow, affecting public transportation. The strike is scheduled for 24 hours, and it's organized by several unions. In Rome, Atac and private operators will be affected, with regular service until 8:30 AM and again from 5 PM to 8 PM. This is definitely an upcoming strike, so I’ll set isStrike to true and prepare the relevant start and end times in the required format.",
+    "tokens": {
+      "input": 1061,
+      "output": 2199,
+      "total": 3260
+    }
+  }
+}

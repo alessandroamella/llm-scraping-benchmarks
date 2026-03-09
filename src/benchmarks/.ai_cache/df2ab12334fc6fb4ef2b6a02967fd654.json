@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-07-07 20:30:00",
+      "endDate": "2024-07-08 00:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5580,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00016075,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.000861,
+      "cachedCost": 0,
+      "totalCost": 0.00114475
+    },
+    "hash": "df2ab12334fc6fb4ef2b6a02967fd654",
+    "sourceFile": "trasporto_pubblico_domenica_7_luglio_sciopero_serale_4_ore.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, here's what I've got. The task is clear: I need to extract strike information from this text snippet and format it as strict JSON. First, I need to figure out if it *is* an announcement of an upcoming strike. Yes, it's pretty explicit: \"sciopero serale\" and \"a rischio\" clearly indicate a strike.\n\nNow, let's break down the details. The date is Sunday, July 7th. Given this is 2024, the date is 2024-07-07. The strike starts at 20:30 and ends at 00:30 the next day, which is 2024-07-08.\n\nThe location is a bit nuanced. It says \"indetto a livello nazionale\" which means it's national, but then mentions it will affect Rome. The schema indicates that if it is national I must select `NATIONAL` for `locationType`, and `locationCodes` must be omitted. This is key to getting it right according to the requirements. Since there are no guaranteed times specified, I should omit those from my final JSON.\n\nSo, I'm constructing the JSON: I'm setting `isStrike` to `true`. And now the strike data: `startDate` will be \"2024-07-07 20:30:00\", `endDate` will be \"2024-07-08 00:30:00\", and `locationType` will be \"NATIONAL\" and `locationCodes` will be omitted, as indicated by the rules. The `guaranteedTimes` field is also going to be omitted, as it is not mentioned in the text.\n\nI'm checking the formatting – `yyyy-MM-dd HH:mm:ss` for the dates. That looks good. The JSON should be clean and valid, with no extra text or unnecessary fields. The final check is whether it matches the schema. That's it, ready to output the JSON.\n\n\n",
+    "tokens": {
+      "input": 643,
+      "output": 82,
+      "total": 1299
+    }
+  }
+}

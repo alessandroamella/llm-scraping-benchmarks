@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-07-18 08:30:00",
+      "endDate": "2024-07-18 12:30:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "08:30-12:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18115,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000551,
+      "outputCost": 0.0004772,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0005323
+    },
+    "hash": "2b4036a6f6897c90699434a694e63f18",
+    "sourceFile": "trasporto_pubblico_gioved_sciopero_nazionale_830_1230_servizio_rischio.html",
+    "thoughts": "**Clarifying time and location data**\n\nYes, I've confirmed that July 18, 2024, is a Thursday. The event starts at 08:30 and ends at 12:30, indicating a national strike. So, I need to set the location type to \"NATIONAL,\" with location codes explicitly as null. According to the specifications, if it's national, the location codes must be null. For the guaranteed times, I'll format them as \"08:30-12:30,\" converting from the Italian format used in the article.",
+    "tokens": {
+      "input": 1102,
+      "output": 1193,
+      "total": 2295
+    }
+  }
+}

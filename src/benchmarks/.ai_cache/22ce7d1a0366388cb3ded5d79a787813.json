@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 11068,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000512,
+      "outputCost": 0.0001048,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.000156
+    },
+    "hash": "22ce7d1a0366388cb3ded5d79a787813",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_112.html",
+    "thoughts": "**Determining strike status**\n\nI need to decide if the document mentions a new or upcoming strike. The content indicates a public transport strike with an 11.2% participation, but it’s clearly an update about a strike that already occurred. Since it’s not about an upcoming strike and just reports participation, I should set `isStrike` to false. I'll ensure the output is in the correct JSON format and includes no extra fields.  \nHere's the output:  \n{  \n  \"isStrike\": false  \n}",
+    "tokens": {
+      "input": 1024,
+      "output": 262,
+      "total": 1286
+    }
+  }
+}

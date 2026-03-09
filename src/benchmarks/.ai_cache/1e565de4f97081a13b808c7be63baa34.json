@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-09-29 00:00:00",
+      "endDate": "2023-09-29 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6823,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00016,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.0008385,
+      "cachedCost": 0,
+      "totalCost": 0.001183
+    },
+    "hash": "1e565de4f97081a13b808c7be63baa34",
+    "sourceFile": "venerd_29_settembre_sciopero_nazionale_trasporto_pubblico_possibili_disagi.html",
+    "thoughts": "**Analyzing the Public Transport Strike Announcement**\n\nOkay, let's break this down systematically. The title itself, \"Venerdì 29 settembre sciopero nazionale del trasporto pubblico. Possibili disagi\" – that's Friday, September 29th, a national public transport strike with potential disruptions. Straightforward.\n\nRight, so we're looking at a 24-hour national strike declared by the USB union, scheduled for September 29th, 2023. This is based on the publication date of September 25th, which makes the 29th the immediate future.\n\nNow, let's extract the key data points:\n\n*   **Date:** Friday, September 29, 2023.\n*   **Duration:** 24 hours. This is crucial for planning.\n*   **Guaranteed Service:** Okay, the announcement indicates service will be \"regolare\" (regular) until 8:30 AM and again from 5:00 PM to 8:00 PM. I'm noting the 00:00-08:30 and 17:00-20:00 timeframes for guaranteed service.\n*   **Location:** National. Important to define it as 'national' rather than specific codes.\n\nSo, I can classify this as a strike: `isStrike`: true.\n\nLet's structure the strike data logically:\n\n*   `strikeData`:\n    *   `startDate`: \"2023-09-29 00:00:00\" - That's the start of the strike.\n    *   `endDate`: \"2023-09-29 23:59:59\" - The very end.\n    *   `locationType`: \"NATIONAL\" - Confirmed.\n    *   `guaranteedTimes`: [\"00:00-08:30\", \"17:00-20:00\"] - These are the operational hours.\n\nThis is a well-defined strike event. This information is now structured and ready to integrate into any system that relies on transportation schedules.\n\n\n",
+    "tokens": {
+      "input": 640,
+      "output": 123,
+      "total": 1322
+    }
+  }
+}

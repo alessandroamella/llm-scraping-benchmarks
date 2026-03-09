@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-14 00:00:00",
+      "endDate": "2025-11-14 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9197,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00264675,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.001746,
+      "cachedCost": 0,
+      "totalCost": 0.00460275
+    },
+    "hash": "2b4b0eea18d9984b0f97534ed6808f74",
+    "sourceFile": "trasporto_pubblico_venerdi_prossimo_sciopero_di_24_ore_servizio_a_rischio.html",
+    "thoughts": "**Strike Analysis: ATAC, Rome**\n\nOkay, let's break this down. My task is to determine if this content describes an upcoming strike, specifically concerning ATAC, the public transport operator in Rome (region Lazio, ISTAT code 12). The text states \"Trasporto pubblico, venerdì prossimo sciopero di 24 ore\" which translates to \"Public transport, next Friday 24-hour strike.\" That's a clear indicator. \"Venerdì 14 novembre...\" tells us the date, and the unions Usb and Orsa are proclaiming it. The crucial bit for my purposes is \"Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" Service will be regular until 08:30 and from 17:00 to 20:00, which means we can infer those time periods are the guaranteed windows.\n\nNow, let's nail down the specifics. The date format is yyyy-MM-dd HH:mm:ss.  The provided text clearly specifies \"Venerdì 14 novembre\" (Friday, November 14th) in the context of \"Pubblicato il: 10/11/2025 - Aggiornato il: 11/11/2025\". Therefore, the year is 2025. It's a 24-hour strike. The text suggests that the strike will last a day. Standard strike durations go from 00:00 to 23:59. Rome is in the Lazio region, so location type is REGIONAL, and ISTAT code 12 is appropriate.\n\nLet's carefully consider the guaranteed service windows. The text states \"regolare fino alle 8,30\" and \"17 alle 20\". This implies that the guaranteed service times are \"00:00-08:30\" (or 05:30-08:30 based on ATAC standard and general practice) and \"17:00-20:00\". Though not explicitly stated as a start time for the first window, 05:30 is a common guarantee starting time for ATAC services. I'll stick to 05:30 as the start time, to keep with standard practices. This means we're dealing with a strike on 2025-11-14, starting at 00:00:00 and ending at 23:59:59.\n\nSo, let's construct the JSON payload. `isStrike` will be true. The `strikeData` object will contain: `startDate`: \"2025-11-14 00:00:00\", `endDate`: \"2025-11-14 23:59:59\", `locationType`: \"REGIONAL\", `locationCodes`: [\"12\"], and `guaranteedTimes`: [\"05:30-08:30\", \"17:00-20:00\"]. I need to keep in mind, it must be valid JSON, no extra text, no comments and completely parseable. All conditions met, now ready.\n\n\n",
+    "tokens": {
+      "input": 10587,
+      "output": 140,
+      "total": 11891
+    }
+  }
+}

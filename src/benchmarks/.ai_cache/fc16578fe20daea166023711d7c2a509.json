@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5218,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0026415,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.000507,
+      "cachedCost": 0,
+      "totalCost": 0.0031635
+    },
+    "hash": "fc16578fe20daea166023711d7c2a509",
+    "sourceFile": "sciopero_trasporto_pubblico_chiuse_metro_c_termini_centocelle.html",
+    "thoughts": "**Analyzing the Text for a Strike Announcement**\n\nOkay, let's break this down. My task is to determine if this text announces an *upcoming* strike. The constraints are straightforward: only valid JSON, no comments, no control tokens, and the provided schema. Most importantly, `isStrike` is true *only* if it's an announcement of a future strike. Real-time updates on an ongoing strike? That's a definite `false`.\n\nNow, looking at the provided text: The title is \"Sciopero del trasporto pubblico, chiuse metro A e C e Termini-Centocelle\" – public transport strike, Metro A and C and Termini-Centocelle closed. Okay, sounds strike-related.\n\nThe content body states \"È in corso lo sciopero nazionale di 24 ore del trasporto pubblico.\" – The national 24-hour public transport strike is *underway* or *ongoing*. Ah-ha! That \"in corso\" (underway/ongoing) is the key! The text is describing the *current* status of the network during a strike. We get examples like \"Metro A: chiusa\" (Metro A: closed), \"Metro B/B1: regolare\" (Metro B/B1: running as normal).\n\nThe instructions were crystal clear: If the text is providing real-time updates about an *ongoing* strike, like the one this text is describing, `isStrike` is definitely `false`.\n\nTherefore, the final result will be: `{\"isStrike\": false}`.\n\n\n",
+    "tokens": {
+      "input": 10566,
+      "output": 10,
+      "total": 10914
+    }
+  }
+}

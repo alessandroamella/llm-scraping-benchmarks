@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-02-04 08:30:00",
+      "endDate": "2022-02-04 12:30:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "08:30-12:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21983,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00048205,
+      "outputCost": 0.0004528,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00093485
+    },
+    "hash": "22ecfe2a02876845a9de589b7190ef6e",
+    "sourceFile": "4_febbraio_sciopera_4_ore_sindacato_usb_trasporto_pubblico_rischio.html",
+    "thoughts": "**Determining strike details**\n\nThe document is older, but it clearly announces a strike, indicating that isStrike should be true. I need to extract the strikeData, including fields like startDate, endDate, locationType, locationCodes, and guaranteedTimes. From the context, it mentions a national strike happening for four hours on February 4th, so locationType is NATIONAL. I realize locationCodes should be explicitly set to null, not just omitted.",
+    "tokens": {
+      "input": 9641,
+      "output": 1132,
+      "total": 10773
+    }
+  }
+}

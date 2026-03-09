@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-03 00:00:00",
+      "endDate": "2025-10-03 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18762,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0009394,
+      "outputCost": 0.0006468,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0015862
+    },
+    "hash": "f4340870607e6c7b6ddf31e70b52a816",
+    "sourceFile": "sciopero_generale_nazionale_domani_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Clarifying strike specifications**\n\nI’m considering the standard for the Italian strike, which is 24 hours from 00:00 to 23:59 on October 3rd. So, I should set the datetime string as 2025-10-03 00:00:00 to 2025-10-03 23:59:59. However, the location type is NATIONAL, meaning locationCodes must be explicitly null according to the spec. I need to make sure I set locationCodes to null, not as an array, which sounds a bit tricky. It’s important to follow this precisely!",
+    "tokens": {
+      "input": 18788,
+      "output": 1617,
+      "total": 20405
+    }
+  }
+}

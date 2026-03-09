@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-12-15 00:00:00",
+      "endDate": "2023-12-15 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6302,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.002648,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.0008265,
+      "cachedCost": 0,
+      "totalCost": 0.0036845
+    },
+    "hash": "0f1cd402aab41cbe58af5ffaa17d99cd",
+    "sourceFile": "trasporto_pubblico_sciopero_nazionale_differito_15_dicembre.html",
+    "thoughts": "**Strike Announcement Analysis**\n\nOkay, let's break this down. My task is to determine if this text announces an *upcoming* strike. The title \"Trasporto pubblico, sciopero nazionale differito al 15 dicembre\" immediately suggests a postponement, which means it *is* about a future event. Let's dig in.\n\nThe text confirms it: \"È stato rinviato a venerdì 15 dicembre lo sciopero nazionale del trasporto pubblico...\" So, strike, yes. Now, let's extract the key parameters.\n\n*   `isStrike`: Definitely `true`. It's explicitly stated.\n*   `startDate`: December 15th. Given the phrasing about a 24-hour strike and the article date of November 25th 2023, the full date is `2023-12-15`. I'll assume standard strike start and end times - meaning this will run from `2023-12-15 00:00:00` to `2023-12-15 23:59:59`.\n*   `endDate`: Also December 15th, `2023-12-15 23:59:59`.\n*   `locationType`: It's described as \"nazionale\" (national), but the text then specifies Rome's Atac and Roma Tpl. So this is REGIONAL, specifically concerning Rome and Lazio, location code \"12\".\n*   `locationCodes`: [\"12\"] - Rome falls within the Lazio region, so location code \"12\" is what I'll associate with this event.\n*   `guaranteedTimes`: The text states \"Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" That is, service is guaranteed in those intervals. So, I will encode the service guarantee periods as `[\"00:00-08:30\", \"17:00-20:00\"]`.\n\n\n",
+    "tokens": {
+      "input": 10592,
+      "output": 140,
+      "total": 11283
+    }
+  }
+}

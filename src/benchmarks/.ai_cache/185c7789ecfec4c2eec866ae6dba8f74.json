@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7987,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00048415,
+      "outputCost": 0.0001352,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00061935
+    },
+    "hash": "185c7789ecfec4c2eec866ae6dba8f74",
+    "sourceFile": "sciopero_del_trasporto_pubblico_chiuse_le_metropolitane_e_la_ferrovia_termini_centocelle_2.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to output JSON that fits the strike_extraction schema. The content in Italian mentions a public transportation strike with current details. It states it was published and updated on the same day, indicating it’s about an ongoing strike, not an upcoming one. The instruction says to set isStrike to true only for announcements about future strikes. Since this is about the current situation, I’ll set isStrike to false. So, the final output will be {\"isStrike\": false}.",
+    "tokens": {
+      "input": 9683,
+      "output": 338,
+      "total": 10021
+    }
+  }
+}

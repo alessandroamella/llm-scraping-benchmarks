@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-07-18 08:30:00",
+      "endDate": "2024-07-18 12:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 26537,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0004833,
+      "outputCost": 0.0007552,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0012385
+    },
+    "hash": "3cfaea81c3a5ca98a044a48c192885bf",
+    "sourceFile": "trasporto_pubblico_gioved_sciopero_nazionale_830_1230_servizio_rischio.html",
+    "thoughts": "**Extracting strike data**\n\nI’m looking to extract key details from the provided content for a national strike on July 18, 2024, which occurs from 8:30 AM to 12:30 PM. The strike is national, so the locationType will be \"NATIONAL.\" Although the schema requires locationCodes to be present, it should explicitly be null since it's a national strike. So I need to set locationCodes as null. I’m confirming everything aligns with the JSON schema requirements!",
+    "tokens": {
+      "input": 9666,
+      "output": 1888,
+      "total": 11554
+    }
+  }
+}

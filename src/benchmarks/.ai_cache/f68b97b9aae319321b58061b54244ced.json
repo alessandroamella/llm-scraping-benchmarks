@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-10-05 00:00:00",
+      "endDate": "2024-10-05 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8528,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00015975,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.001191,
+      "cachedCost": 0,
+      "totalCost": 0.00153525
+    },
+    "hash": "f68b97b9aae319321b58061b54244ced",
+    "sourceFile": "trasporto_pubblico_sabato_5_ottobre_sciopero_nazionale_24_ore_servizio_rischio.html",
+    "thoughts": "**Strike Information Extraction - My Thought Process**\n\nOkay, the task is clear: I need to extract strike information from this text and format it as a JSON object, adhering to a specific schema. Let's break this down.\n\nFirst, is this an actual strike announcement? Yes, it explicitly states \"sciopero nazionale di 24 ore\" which translates to a national strike of 24 hours. Good, that's straightforward.\n\nNow, the start date. The text mentions \"sabato 5 ottobre,\" and the publication date is 29/09/2024. Therefore, the year must be 2024. So, the start date is October 5th, 2024. The duration is 24 hours. While a 24-hour strike *technically* covers the whole day, in public transport contexts, it usually refers to a period from 00:00 to 23:59. Let's confirm: 2024-10-05. Yes, that's right. So, `startDate` will be \"2024-10-05 00:00:00\" and `endDate` will be \"2024-10-05 23:59:59\".\n\nNext, the location. The text says \"sciopero nazionale,\" indicating a \"NATIONAL\" strike. That's easy enough. `locationType` will be \"NATIONAL.\" We'll omit the `locationCodes` field as it's not present here.\n\nFinally, the guaranteed service times. The text says \"il servizio sarà comunque regolare fino alle 8:30 e dalle 17 alle 20\". This means that the service will be regular until 8:30 and between 17:00 and 20:00. This translates to \"00:00-08:30\" and \"17:00-20:00\". These are the guaranteed times, so `guaranteedTimes` will be an array containing those two strings: [\"00:00-08:30\", \"17:00-20:00\"]. Remember that the schema expects the times in \"HH:mm-HH:mm\" format, so that's perfect.\n\nLet's quickly check the schema for validation:\n\n*   `startDate`: \"^\\\\d{4}-\\\\d{2}-\\\\d{2} \\\\d{2}:\\\\d{2}:\\\\d{2}$\" - Matches.\n*   `endDate`: \"^\\\\d{4}-\\\\d{2}-\\\\d{2} \\\\d{2}:\\\\d{2}:\\\\d{2}$\" - Matches.\n*   `locationType`: \"NATIONAL\" - Matches.\n*   `guaranteedTimes`: \"00:00-08:30\" (and \"17:00-20:00\") - Matches the pattern \"^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]-(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$\".\n\nPerfect. I'm ready. The output should be:\n```json\n{\n  \"isStrike\": true,\n  \"startDate\": \"2024-10-05 00:00:00\",\n  \"endDate\": \"2024-10-05 23:59:59\",\n  \"locationType\": \"NATIONAL\",\n  \"locationCodes\": [],\n  \"guaranteedTimes\": [\"00:00-08:30\", \"17:00-20:00\"]\n}\n```\n\n\n",
+    "tokens": {
+      "input": 639,
+      "output": 123,
+      "total": 1556
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-09-04 08:30:00",
+      "endDate": "2025-09-04 12:30:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18357,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00048365,
+      "outputCost": 0.0005316,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00101525
+    },
+    "hash": "ae8e0ab91ae65549159c37a32d09bca4",
+    "sourceFile": "rete_atac_giovedi_4_settembre_sciopero_dalle_830_alle_1230_possibili_disagi.html",
+    "thoughts": "**Extracting strike data**\n\nI need to output the information in JSON that follows the strike_extraction schema. The content is Italian, announcing a strike on the Atac network in Rome on Thursday, September 4, 2025, from 8:30 to 12:30. This details that it's organized by the Sul union. I need to mark isStrike as true and extract additional details like startDate, endDate, locationType, locationCodes, and guaranteedTimes, ensuring dates are formatted correctly.",
+    "tokens": {
+      "input": 9673,
+      "output": 1329,
+      "total": 11002
+    }
+  }
+}

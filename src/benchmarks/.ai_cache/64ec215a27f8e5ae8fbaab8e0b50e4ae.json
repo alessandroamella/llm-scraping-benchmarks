@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-24 00:00:00",
+      "endDate": "2025-02-24 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21448,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000568,
+      "outputCost": 0.0007208,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0007776
+    },
+    "hash": "64ec215a27f8e5ae8fbaab8e0b50e4ae",
+    "sourceFile": "lunedi_24_febbraio_sciopero_nazionale_del_trasporto_pubblico_possibili_disagi.html",
+    "thoughts": "**Structuring strike information in JSON**\n\nI'm planning to output JSON that indicates whether there's a strike with an `isStrike` boolean and also add some `strikeData`. The content discusses an upcoming national strike in Italy on February 24, and it mentions that public transportation will be disrupted. The strike is for 24 hours, with regular service until 8:30 and from 17:00 to 20:00. So, I'll set `isStrike` to true and extract relevant details like start and end dates, location type, codes, and guaranteed times.",
+    "tokens": {
+      "input": 1136,
+      "output": 1802,
+      "total": 2938
+    }
+  }
+}

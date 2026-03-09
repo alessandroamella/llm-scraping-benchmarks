@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-12-07 09:00:00",
+      "endDate": "2023-12-07 13:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5161,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00263775,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.000594,
+      "cachedCost": 0,
+      "totalCost": 0.00338025
+    },
+    "hash": "bb031545c6ea567f92aec8d88167416d",
+    "sourceFile": "gioved_sciopero_regionale_4_ore_trasporto_pubblico_rischio.html",
+    "thoughts": "**Strike Analysis and JSON Output**\n\nOkay, let's break this down. My task is to analyze this text and construct a JSON object representing a strike announcement. The critical constraint here is that the output *must* be JSON. I've got to extract the essential strike details and then format them precisely.\n\nThe text clearly mentions a 4-hour strike: \"Giovedì 7 dicembre trasporto pubblico a rischio per lo sciopero di 4 ore, dalle 9 alle 13...\" Okay, that directly gives me the duration - 9 AM to 1 PM on Thursday, December 7th, 2023. The date of the announcement itself is December 5th, 2023. The strike is regional (\"a livello regionale\"), and the company name is implicitly ATAC (mentioned in the text \"trasporto pubblico\" refers to ATAC). I need to make sure to capture the regional scope correctly, which means retrieving the relevant ISTAT code. Thinking about the prompt's instructions, since the strike is regional, I *must* return a 2-digit ISTAT region code. I know that the region is Roma (Lazio) from the context. ISTAT code for Lazio is 12, so I can include that now.\n\nNow, to structure the JSON. `isStrike` is clearly true; it's an explicit strike announcement. I need a `strikeData` object to hold the details: `startDate` \"2023-12-07 09:00:00\", `endDate` \"2023-12-07 13:00:00\", `locationType` \"REGIONAL\" since the text says the strike is on a regional level, and `locationCodes` is an array. I just determined it should contain the ISTAT code for Lazio, which is \"12\".\n\nThe text doesn't specify any guaranteed times. The prompt states that guaranteed times must be omitted if not specified. So, the `guaranteedTimes` array will be empty; it should not be included in the final output. That's a key detail to remember. Alright, I think I'm ready to craft the JSON now.\n\n\n",
+    "tokens": {
+      "input": 10551,
+      "output": 99,
+      "total": 11046
+    }
+  }
+}

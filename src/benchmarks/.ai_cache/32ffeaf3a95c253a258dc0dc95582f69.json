@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-04-26 08:30:00",
+      "endDate": "2024-04-26 12:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6068,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.0026495,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.000813,
+      "cachedCost": 0,
+      "totalCost": 0.0035855
+    },
+    "hash": "32ffeaf3a95c253a258dc0dc95582f69",
+    "sourceFile": "venerd_26_aprile_sciopero_nazionale_tpl_roma_possibili_disagi_830_1230.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, here's the breakdown of this strike announcement. My task is to determine if this text describes an *upcoming* strike and then extract the relevant information in strict JSON format. I need to output `isStrike: true` if it’s an upcoming strike, and `false` otherwise. Cancellations, real-time updates, and past strikes are all \"false\" cases.\n\nThe input text is \"Venerdì 26 aprile sciopero nazionale del Tpl. A Roma possibili disagi dalle 8,30 alle 12,30.\"  Let's see:\n\nFirst, is this an *upcoming* strike? Yes, the language (\"sciopero nazionale\") indicates an impending event. The publication date is April 19, 2024 (\"Pubblicato il: 19/04/2024\"), while the strike is for April 26, 2024. Clear indicator it's ahead.\n\nNow, let's extract the strike details. The date is Friday, April 26, 2024, derived from the text and the article's date. The times are 08:30 to 12:30. The location is \"nazionale del Tpl,\" which means a national strike, with a specific mention of potential disruption in Rome. The location type should be NATIONAL. The prompt says if it is national, then I should omit location codes. Guaranteed times are not mentioned in the text, so these will also be omitted.\n\nTherefore, `isStrike` should be `true`. Here’s the JSON output I’ll construct:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-04-26 08:30:00\",\n    \"endDate\": \"2024-04-26 12:30:00\",\n    \"locationType\": \"NATIONAL\"\n  }\n}\n```\n\nThe date format of `startDate` seems correct (YYYY-MM-DD HH:MM:SS), and the JSON should be parseable. All criteria met.\n\n\n",
+    "tokens": {
+      "input": 10598,
+      "output": 82,
+      "total": 11222
+    }
+  }
+}

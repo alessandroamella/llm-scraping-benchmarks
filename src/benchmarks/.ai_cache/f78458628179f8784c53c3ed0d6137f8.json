@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-10-20 00:00:00",
+      "endDate": "2023-10-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 25931,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00048205,
+      "outputCost": 0.0009528,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00143485
+    },
+    "hash": "f78458628179f8784c53c3ed0d6137f8",
+    "sourceFile": "venerd_20_ottobre_sciopero_generale_nazionale_trasporto_pubblico_rischio.html",
+    "thoughts": "**Extracting strike data**\n\nI've determined that service will be regular until the upcoming strike, so the isStrike flag should be true. I need to extract the strikeData with key fields: startDate, endDate, locationType, locationCodes, and guaranteedTimes. The announcement indicates a national strike, so the locationType is NATIONAL. For locationCodes, according to the schema, it must be explicitly set to null. I also found the strike date as Friday, October 20, 2023, from the publication date.",
+    "tokens": {
+      "input": 9641,
+      "output": 2382,
+      "total": 12023
+    }
+  }
+}

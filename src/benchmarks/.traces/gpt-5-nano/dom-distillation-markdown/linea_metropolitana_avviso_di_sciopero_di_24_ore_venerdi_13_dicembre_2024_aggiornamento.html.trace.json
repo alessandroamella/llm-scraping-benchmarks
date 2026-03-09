@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-03-09T15:54:10.455Z",
+  "timestamp": "2026-03-09T16:10:31.156Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "EAV",
     "fileName": "linea_metropolitana_avviso_di_sciopero_di_24_ore_venerdi_13_dicembre_2024_aggiornamento.html",
     "model": "gpt-5-nano",
     "strategy": "dom-distillation-markdown",
-    "useLenientSchema": true,
+    "useLenientSchema": false,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"EAV\" (the public transport company of Campania (15)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: Linea Metropolitana: Avviso di sciopero di 24 ore venerdì 13 dicembre 2024 - Aggiornamento - EAV srl\n\n* * *\n\n## Linea Metropolitana: Avviso di sciopero di 24 ore venerdì 13 dicembre 2024 – Aggiornamento\n\nData:  \n**12 Dicembre 2024**\n\nSi comunica che, in seguito all’accoglimento da parte del TAR del Lazio della richiesta dell’USB di sospendere l’ordinanza di precettazione del Ministero dei Trasporti, **lo sciopero proclamato per domani 13 dicembre torna ad essere di 24 ore.**\n\nLo sciopero ha le seguenti motivazioni:\n\n-   • Una nuova indicizzazione che leghi i salari all’aumento reale del costo della vita;\n-   • Un rinnovo contrattuale con incremento delle retribuzioni di 300 euro\n-   • il libero esercizio del diritto di sciopero senza il rispetto delle fasce di garanzia\n-   • Riduzione dell’orario di lavoro a 32 ore a parità di salario;\n-   • la sicurezza dei lavoratori e del servizio\n-   • Contro le guerre ed il genocidio del governo Israeliano nei confronti del popolo Palestinese;\n-   • Contro la manovra economica per il 2025 approvata dal Governo Meloni.\n\nDurante l’ultima proclamazione di sciopero delle citate OO.SS., la percentuale di adesione è stata del 5,7% (sciopero di 4 ore del giorno 28 ottobre 2024)\n\nDi seguito vengono elencate le ultime e le prime partenze garantite in relazione alle fasce di garanzia. Durante l’orario di sciopero l’effettuazione delle corse è subordinata al numero di lavoratori aderenti allo sciopero.\n\n**Servizio garantito dalle ore 05:30 alle ore 8:30 e dalle ore 16:30 alle ore 19:30**\n\n**Ultime partenze garantite prima dello sciopero**\n\n-   da Aversa per Piscinola  08.15\n-   da Piscinola per Aversa 08.15\n\n**Prime partenze garantite dopo lo sciopero – (fascia operatività servizio dalle 16.30 alle 19.30)**\n\n-   da Aversa per    Piscinola             16.30\n-   da Piscinola        per Aversa          16.45\n\n**Ultime partenze garantite prima dello sciopero** \n\n-   da Aversa per Piscinola  19.00\n-   da Piscinola per Aversa  19.15"
   },
   "response": {
@@ -26,17 +26,18 @@
       }
     },
     "usage": {
-      "input": 1407,
-      "output": 2043,
-      "total": 3450
+      "input": 1493,
+      "output": 1566,
+      "total": 3059
     },
     "costUsd": {
-      "inputCost": 0.00007035,
-      "outputCost": 0.0008172,
+      "inputCost": 0.00007465,
+      "outputCost": 0.0006264,
       "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.00088755
+      "totalCost": 0.00070105
     },
-    "durationMs": 27653
+    "durationMs": 26111,
+    "thoughts": "**Determining upcoming strike details**\n\nI need to output JSON based on the schema regarding an announcement of a new strike. The content indicates a 24-hour strike on Friday, December 13, 2024, and it's confirmed as an update due to a recent decision. The date states December 12, 2024, mentioning \"domani 13 dicembre\" to indicate it's upcoming. It also provides guaranteed service times during the strike. I need to decide that isStrike is true based on this information."
   }
 }

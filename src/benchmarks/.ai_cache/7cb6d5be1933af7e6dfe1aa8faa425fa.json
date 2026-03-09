@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-14 00:00:00",
+      "endDate": "2025-11-14 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8333,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.004121,
+      "outputCost": 0.000189,
+      "thinkingCost": 0.0015705,
+      "cachedCost": 0,
+      "totalCost": 0.0058805
+    },
+    "hash": "7cb6d5be1933af7e6dfe1aa8faa425fa",
+    "sourceFile": "trasporto_pubblico_venerdi_prossimo_sciopero_di_24_ore_servizio_a_rischio.html",
+    "thoughts": "**Strike Information Extraction: ATAC (Rome)**\n\nOkay, let's break this down. My task is to extract strike information from this HTML content concerning ATAC in Rome (code \"12\"). First, I need to confirm if it's an upcoming strike and then pinpoint the details: start/end dates, location types, codes, and guaranteed service times.\n\nRight away, the title \"Trasporto pubblico, venerdì prossimo sciopero di 24 ore. Servizio a rischio\" signals a strike. The text confirms a 24-hour strike on Friday, November 14, 2025, which, by my quick mental check, does indeed fall on a Friday. The information is consistent.\n\nLet's nail down the specifics. The article's published and updated dates are within the relevant time frame for a strike announcement. The text says service is \"regular until 8:30\" and from 17:00 to 20:00, which are the guaranteed times. So:\n\n*   **Strike Confirmation:** Yes, it's a 24-hour strike.\n*   **Start Date:** 2025-11-14 00:00:00.\n*   **End Date:** 2025-11-14 23:59:59 (standard interpretation of a 24-hour strike).\n*   **Location:** Rome (ATAC), which corresponds to Lazio (code \"12\").\n*   **Guaranteed Times:** The text clearly states \"fino alle 8,30\" (until 08:30) and \"dalle 17 alle 20\" (from 17:00 to 20:00). So, we have \"00:00-08:30\" (usually service starts at this time, in absence of more information), and \"17:00-20:00\".\n\nNow, let's translate this into the required data structure:\n\n*   `isStrike`: `true`\n*   `strikeData`:\n    *   `startDate`: \"2025-11-14 00:00:00\"\n    *   `endDate`: \"2025-11-14 23:59:59\"\n    *   `locationType`: \"REGIONAL\" (Since it's ATAC in Rome, it affects the regional transport)\n    *   `locationCodes`: [\"12\"]\n    *   `guaranteedTimes`: [\"00:00-08:30\", \"17:00-20:00\"]\n\nI can confirm that the `startDate` and `endDate` are in the correct \"yyyy-MM-dd HH:mm:ss\" format. The `locationType` is \"REGIONAL\". `locationCodes` is an array containing \"12.\" Guaranteed times are \"00:00-08:30\" and \"17:00-20:00.\" They're also in a valid format. I'm all set!\n\n\n",
+    "tokens": {
+      "input": 16484,
+      "output": 126,
+      "total": 17657
+    }
+  }
+}

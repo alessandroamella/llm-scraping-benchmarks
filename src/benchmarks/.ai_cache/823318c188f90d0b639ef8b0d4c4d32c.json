@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-12-02 00:00:00",
+      "endDate": "2022-12-02 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 26442,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005525,
+      "outputCost": 0.0009672,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00102245
+    },
+    "hash": "823318c188f90d0b639ef8b0d4c4d32c",
+    "sourceFile": "venerd_2_dicembre_sciopero_generale_nazionale_24_ore_rischio_trasporto_pubblico_romano.html",
+    "thoughts": "**Extracting strike data**\n\nI need to output JSON based on strike extraction from an Italian document. It announces a general strike on Friday, December 2, 2022, affecting Rome's public transport. The service will be regular until 8:30 AM and from 5 PM to 8 PM, indicating some partial service interruptions. So, moving forward, I’ll mark `isStrike` as true. I also need to extract the start and end dates in the correct format, considering the ambiguous year.",
+    "tokens": {
+      "input": 1105,
+      "output": 2418,
+      "total": 3523
+    }
+  }
+}

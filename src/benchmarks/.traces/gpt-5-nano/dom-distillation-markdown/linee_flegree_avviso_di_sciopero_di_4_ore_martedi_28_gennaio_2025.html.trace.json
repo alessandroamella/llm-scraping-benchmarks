@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-03-09T15:54:12.020Z",
+  "timestamp": "2026-03-09T16:10:32.755Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "EAV",
     "fileName": "linee_flegree_avviso_di_sciopero_di_4_ore_martedi_28_gennaio_2025.html",
     "model": "gpt-5-nano",
     "strategy": "dom-distillation-markdown",
-    "useLenientSchema": true,
+    "useLenientSchema": false,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"EAV\" (the public transport company of Campania (15)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: Linee Flegree: Avviso di sciopero di 4 ore, martedì 28 gennaio 2025 - EAV srl\n\n* * *\n\n## Linee Flegree: Avviso di sciopero di 4 ore, martedì 28 gennaio 2025\n\nData:  \n**27 Gennaio 2025**\n\nSi comunica che, ai sensi dell’art. 2 comma 7 della L.146/90 (fattispecie: gravi eventi lesivi dell’incolumità e della sicurezza dei lavoratori) e delle integrazioni alla stessa della L.83/2000 e successive modifiche, per martedì 28 gennaio 2025 le OO.SS. ORSA, CONFAIL, Filt Cgil, Fit Cisl, Uiltrasporti, Ugl autoferro, Faisa Cisal e USB hanno proclamato uno sciopero aziendale di 4 ore, dalle ore 08:20 alle ore 12:20, avente le seguenti motivazioni: sicurezza sul posto di lavoro per il personale front-line di EAV S.r.l.\n\nDurante l’ultima proclamazione di sciopero delle citate OO.SS., la percentuale di adesione è stata la seguente:\n\n-   Or.S.A. e Confail: 15,5 % (sciopero di 4 ore del giorno 23 ottobre 2024)\n-   CGIL e UIL: 10,8% (sciopero di 4 ore del giorno 29 novembre 2024)\n-   CISL, CISAL e UGL: 42% (sciopero nazionale di 24 ore del giorno 8 novembre 2024)\n-   USB: 9,2% (sciopero generale nazionale di 24 ore del 13 dicembre 2024)\n\nDi seguito vengono elencate le ultime e le prime partenze garantite in relazione alle diverse fasce di garanzia.\n\n_Durante l’orario di sciopero l’effettuazione delle corse è subordinata al numero di lavoratori aderenti allo sciopero_\n\n**Ultime partenze garantite prima dello sciopero:**\n\n-   da Montesanto per Bagnoli          08:01\n-   da Montesanto per Licola             08:00\n-   da Bagnoli per Montesanto          08:00\n-   da Licola per Montesanto             07:56\n\n**Prime partenze garantite dopo lo sciopero:** \n\n-   da Montesanto per Bagnoli           12:21\n-   da Montesanto per Licola              12:24\n-    da Bagnolli per Montesanto          12:40\n-   da Licola per Montesanto              12:44\n\nIl servizio sostitutivo operato da D’Agostino non sarà interessato dallo sciopero.\n\n**Categoria:** [Trasporto pubblico](https://www.eavsrl.it/categoria-disservizio/trasporto-pubblico/)\n\n**Area:** [Linee Flegree](https://www.eavsrl.it/area/linee-flegree/)"
   },
   "response": {
@@ -18,24 +18,22 @@
         "locationType": "REGIONAL",
         "locationCodes": [
           "15"
-        ],
-        "guaranteedTimes": [
-          "08:20-12:20"
         ]
       }
     },
     "usage": {
-      "input": 1512,
-      "output": 1412,
-      "total": 2924
+      "input": 1598,
+      "output": 1707,
+      "total": 3305
     },
     "costUsd": {
-      "inputCost": 0.0000756,
-      "outputCost": 0.0005648,
+      "inputCost": 0.0000799,
+      "outputCost": 0.0006828,
       "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.0006404
+      "totalCost": 0.0007627
     },
-    "durationMs": 17929
+    "durationMs": 22130,
+    "thoughts": "**Determining strike details**\n\nI need to figure out if the document is announcing an upcoming strike. It mentions a 4-hour strike on January 28, 2025, from 08:20 to 12:20. This is clearly a formal announcement, so I should set isStrike to true. I'll also create the strikeData, with startDate as 2025-01-28 08:20:00 and endDate as 2025-01-28 12:20:00. Given that it's \"Linee Flegree,\" it is a local network, so it's classified as \"REGIONAL.\""
   }
 }

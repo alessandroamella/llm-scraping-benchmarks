@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-03-29 00:00:00",
+      "endDate": "2022-03-29 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 33571,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00048295,
+      "outputCost": 0.0009288,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00141175
+    },
+    "hash": "327a38c3adb3baae7e11b288c4e5b1de",
+    "sourceFile": "martedi_29_marzo_sciopera_24_ore_trasporto_pubblico_servizio_rischio.html",
+    "thoughts": "**Analyzing strike information**\n\nI need to output JSON that includes an isStrike boolean and, if true, some strikeData. The content is a messy page in Italian, mentioning a transport strike on March 29. It indicates that it might be a past event since it states that the document was published in 2022. So, it appears to refer to a previous strike rather than announcing a new one. I should clarify if it’s indeed about a forthcoming strike.",
+    "tokens": {
+      "input": 9659,
+      "output": 2322,
+      "total": 11981
+    }
+  }
+}

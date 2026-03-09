@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7377,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005275,
+      "outputCost": 0.00012,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00017275
+    },
+    "hash": "aab9e225c3c501cc3c4a504562937c56",
+    "sourceFile": "sciopero_trasporto_pubblico_chiusa_metro.html",
+    "thoughts": "**Extracting strike information**\n\nI need to output JSON according to the strike extraction schema. The document titled \"Sciopero del trasporto pubblico, chiusa la metro A,\" published on 07/07/2023, indicates an ongoing national strike, thus confirming its status. The instruction states that if it's ongoing, I should set isStrike to false. Given this, my final output should be: { \"isStrike\": false }. I won’t include strikeData since it's not an upcoming strike, just ongoing.",
+    "tokens": {
+      "input": 1055,
+      "output": 300,
+      "total": 1355
+    }
+  }
+}

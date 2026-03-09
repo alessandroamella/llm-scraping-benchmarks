@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-04-11 20:00:00",
+      "endDate": "2024-04-12 00:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "20:00-24:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20974,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000544,
+      "outputCost": 0.0005696,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.000624
+    },
+    "hash": "6ec5e9b10ea8d8f4e0980c8f6f91bff9",
+    "sourceFile": "gioved_11_aprile_sciopero_nazionale_trasporto_pubblico_rischio_20_24.html",
+    "thoughts": "**Evaluating time format**\n\nI’m working with a time schema where they mention times like \"20:00-24:00.\" But is \"24:00\" even a valid time? In 24-hour format, it's not really used; \"00:00\" is more standard for midnight. The instructions say guaranteed times should be arrays in the form of \"HH:mm-HH:mm.\" Since they didn't explicitly restrict \"24:00,\" I think I can use it as the end time based on their example. So, I’m considering if it makes sense to use \"20:00-24:00.\"",
+    "tokens": {
+      "input": 1088,
+      "output": 1424,
+      "total": 2512
+    }
+  }
+}

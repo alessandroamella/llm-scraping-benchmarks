@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-11-29 09:00:00",
+      "endDate": "2024-11-29 13:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9455,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00265,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.00129,
+      "cachedCost": 0,
+      "totalCost": 0.004063
+    },
+    "hash": "cb04f29edfbbf5e50fd3fff9c020c5ec",
+    "sourceFile": "sciopero_generale_nazionale.html",
+    "thoughts": "**Strike Analysis: Roma Servizi per la Mobilità Text**\n\nOkay, let's break this down. The task is to determine if this text from \"Roma Servizi per la Mobilità\" signals an upcoming strike and, if so, to format the information into a specific JSON structure.  I've got the text about the \"Atac\" strike in Rome.\n\nFirst, I need to extract the relevant data. The title says \"Domani sciopero generale nazionale. Per i trasporti stop dalle 9 alle 13,\" meaning \"Tomorrow a national general strike. For transport, stop from 9 to 13\".  The body reiterates this, mentioning the strike is from Cgil, Uil, Cobas, Cub and Sgb and will last 4 hours \"dalle 9 alle 13\" (from 9 to 13). The publication date is 28/11/2024. Therefore, the strike will be on 29/11/2024, the next day (\"Domani\").\n\nThe key is to determine if this constitutes an *upcoming* strike.  It's scheduled for tomorrow, so clearly, yes, it's *upcoming*.  Therefore, `isStrike` should be `true`.\n\nNow for the JSON formatting. The `startDate` is 2024-11-29 09:00:00, and the `endDate` is 2024-11-29 13:00:00.\n\nThe text specifies \"sciopero generale nazionale\", a *national* general strike.  While \"Atac\" is mentioned in Rome, it does not state it is a regional strike. Thus, the `locationType` is `NATIONAL`. The instruction says, if the location is NATIONAL, then the `locationCodes` *must* be omitted entirely.\n\nThe text doesn't explicitly state the *guaranteed* service times - common in Italian transport strikes - and the JSON schema doesn't mark it as *required*. So, I will omit the `guaranteedTimes` field, as I don't have that information from the provided text.\n\nBased on this, my final output should be:\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-11-29 09:00:00\",\n    \"endDate\": \"2024-11-29 13:00:00\",\n    \"locationType\": \"NATIONAL\"\n  }\n}\n```\n\nNow, I will verify that this JSON conforms to all the stated constraints: valid JSON, parseable, no extraneous text, `isStrike` is true/false as expected, and the date format matches. Finally, confirm the `locationType` is `NATIONAL`, and the `locationCodes` are omitted as required. All constraints are met.\n\n\n",
+    "tokens": {
+      "input": 10600,
+      "output": 82,
+      "total": 11542
+    }
+  }
+}

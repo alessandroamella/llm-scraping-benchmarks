@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-10-05 00:00:00",
+      "endDate": "2024-10-05 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 29561,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0004818,
+      "outputCost": 0.00069,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0011718
+    },
+    "hash": "eb1b0ef38fb5dc2cd54d3102ca262872",
+    "sourceFile": "trasporto_pubblico_sabato_5_ottobre_sciopero_nazionale_24_ore_servizio_rischio.html",
+    "thoughts": "**Considering strike details**\n\nI see the mention of \"sabato 5 ottobre\" with a \"sciopero nazionale di 24 ore,\" but there's no precise start time. It notes regular service until 8:30 and from 17:00 to 20:00, suggesting some changes. Since it's a 24-hour strike, I think setting the start date to 2024-10-05 00:00:00 makes sense. The instructions indicate dates need a specific format, and all fields are required unless null is used for missing values. So, I need to ensure I address that properly for the schema.",
+    "tokens": {
+      "input": 9636,
+      "output": 1725,
+      "total": 11361
+    }
+  }
+}

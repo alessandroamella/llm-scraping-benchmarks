@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-07-07 20:30:00",
+      "endDate": "2024-07-08 00:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4998,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00410975,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.0006495,
+      "cachedCost": 0,
+      "totalCost": 0.00488225
+    },
+    "hash": "b092644796c110eba764ac86576f8169",
+    "sourceFile": "trasporto_pubblico_domenica_7_luglio_sciopero_serale_4_ore.html",
+    "thoughts": "**My Analysis of the Strike Information**\n\nOkay, my primary goal here is to pull out the strike details from this text and represent them as valid JSON. I need to make sure I adhere to the given constraints: specifically that the output is valid JSON and that I indicate whether it's a strike with `isStrike` as either true or false.\n\nLooking at the text snippet: \"Trasporto pubblico, domenica 7 luglio sciopero serale di 4 ore,\" and the provided details, it's clear this is describing a strike. So, I will set `isStrike` to `true`.\n\nI've got the necessary information: the date, duration, and scope. The article was published on 01/07/2024, and the strike is set for Sunday, July 7th. The strike will last 4 hours, starting at 20:30 and ending at 00:30 the following day. It will be \"indetto a livello nazionale\", which translates to national level, affecting Rome. Therefore, this means a national scope and impacting Rome (Lazio: 12).\n\nNow, to format the data:\n\n*   I need to create the `startDate` and `endDate` fields. The start date is \"2024-07-07 20:30:00\" and the end date will be \"2024-07-08 00:30:00\", because it starts on the 7th and ends on the 8th.\n*   The `locationType` will be \"NATIONAL\" because the text says “indetto a livello nazionale”.\n*   Since the `locationType` is NATIONAL, I must omit the `locationCodes` field, as per the schema requirements.\n*   The text doesn't mention any guaranteed service times, so I will omit the `guaranteedTimes` field.\n\nI'm confident I have a complete and accurate understanding.\n\n\n",
+    "tokens": {
+      "input": 16439,
+      "output": 82,
+      "total": 16954
+    }
+  }
+}

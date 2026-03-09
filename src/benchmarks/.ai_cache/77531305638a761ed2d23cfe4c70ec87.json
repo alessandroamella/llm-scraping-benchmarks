@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-10 00:00:00",
+      "endDate": "2025-10-10 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 11540,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.004083,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.001053,
+      "cachedCost": 0,
+      "totalCost": 0.005346
+    },
+    "hash": "77531305638a761ed2d23cfe4c70ec87",
+    "sourceFile": "venerdi_10_sciopero_del_trasporto_pubblico_rete_atac_a_rischio.html",
+    "thoughts": "**Strike Information Extraction: A Mental Walkthrough**\n\nOkay, so I need to pull strike details from this HTML content and output them as JSON. The key here is to determine if it *is* a strike announcement and, if so, extract specific data. Let's break this down:\n\nFirst, I see the title: \"Venerdì 10 sciopero del trasporto pubblico, rete Atac a rischio.\" \"Venerdì 10\" and \"sciopero\" are big clues. The text confirms it: \"Venerdì 10 ottobre trasporto pubblico a rischio per gli scioperi...\". Yep, definitely a strike. `isStrike = true`.\n\nNow for the details. I have the target date: \"Venerdì 10,\" which, given the publishing date of October 4, 2025, translates to October 10, 2025. That gives me a `startDate` of \"2025-10-10 00:00:00\" and an `endDate` of \"2025-10-10 23:59:59\". These are standard representations.\n\nThe location is clearly ATAC, which I know is in Rome (region 12). So, the `locationType` is \"REGIONAL,\" and `locationCodes` is [\"12\"].\n\nThe text mentions guaranteed service times: \"Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" This phrasing is standard for Italian transit strikes. It means regular service until 8:30 AM and then again between 5 PM and 8 PM (17:00-20:00). Therefore, `guaranteedTimes` should be [\"00:00-08:30\", \"17:00-20:00\"].\n\nSo the JSON output structure looks like this:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-10-10 00:00:00\",\n    \"endDate\": \"2025-10-10 23:59:59\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"00:00-08:30\", \"17:00-20:00\"]\n  }\n}\n```\n\nNow, I'll just double-check the logic and the JSON validity to ensure a clean, accurate extraction. Done.\n\n\n",
+    "tokens": {
+      "input": 16332,
+      "output": 140,
+      "total": 17174
+    }
+  }
+}

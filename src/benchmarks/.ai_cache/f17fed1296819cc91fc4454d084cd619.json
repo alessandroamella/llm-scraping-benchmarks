@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-03-29 00:00:00",
+      "endDate": "2022-03-29 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 36198,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00093795,
+      "outputCost": 0.0010272,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00196515
+    },
+    "hash": "f17fed1296819cc91fc4454d084cd619",
+    "sourceFile": "martedi_29_marzo_sciopera_24_ore_trasporto_pubblico_servizio_rischio.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to output JSON according to the strike_extraction schema, including an `isStrike` boolean and possibly `strikeData`. I’m looking at an Italian pre-processed HTML page discussing a public transport strike on Tuesday, March 29, for 24 hours. It mentions that service will be regular until specific times, and it provides additional context regarding the affected services. The publication date is March 24, 2022, and it was updated on January 25, 2023. This gives relevant timeline details for the announcement.",
+    "tokens": {
+      "input": 18759,
+      "output": 2568,
+      "total": 21327
+    }
+  }
+}

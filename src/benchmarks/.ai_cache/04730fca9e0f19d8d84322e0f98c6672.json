@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-24 00:00:00",
+      "endDate": "2025-02-24 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 27240,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000485,
+      "outputCost": 0.0010312,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0015162
+    },
+    "hash": "04730fca9e0f19d8d84322e0f98c6672",
+    "sourceFile": "lunedi_24_febbraio_sciopero_nazionale_del_trasporto_pubblico_possibili_disagi.html",
+    "thoughts": "**Extracting strike details**\n\nI need to format a JSON output based on the strike extraction schema. The document announces a national public transport strike in Italy on Monday, February 24, 2025. It details that the public transport system may face disruptions and specifies that service will be regular until 8:30 AM and again from 5 PM to 8 PM. Since it's confirmed that this is announcing an upcoming strike, I need to extract details like startDate, endDate, and location information for the JSON format.",
+    "tokens": {
+      "input": 9700,
+      "output": 2578,
+      "total": 12278
+    }
+  }
+}

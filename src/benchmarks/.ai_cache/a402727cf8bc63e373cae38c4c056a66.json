@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-07-24 08:30:00",
+      "endDate": "2023-07-24 12:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 29063,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00048275,
+      "outputCost": 0.000664,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00114675
+    },
+    "hash": "a402727cf8bc63e373cae38c4c056a66",
+    "sourceFile": "luned_24_luglio_sciopero_nazionale_tpl_roma_servizio_rischio_830_1230.html",
+    "thoughts": "**Identifying strike announcement**\n\nI need to produce JSON according to the strike_extraction schema. The document is in Italian and announces an upcoming strike. It states there will be a nationwide strike on July 24 that will put public transport in Rome at risk from 8:30 AM to 12:30 PM. The message indicates an official announcement before this date and reflects a prediction about the strike. It mentions that services are at risk due to the strike proclaimed by the union.",
+    "tokens": {
+      "input": 9655,
+      "output": 1660,
+      "total": 11315
+    }
+  }
+}

@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-03-09T13:54:22.063Z",
+  "timestamp": "2026-03-09T16:18:04.830Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "ATAC",
     "fileName": "martedi_8_marzo_sciopero_generale_24_ore_rischio_trasporto_pubblico.html",
     "model": "meta-llama/llama-4-scout-17b-16e-instruct",
     "strategy": "dom-distillation-markdown",
-    "useLenientSchema": true,
+    "useLenientSchema": false,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"ATAC\" (the public transport company of Rome, Lazio (12)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: Martedi 8 marzo sciopero generale di 24 ore. A rischio anche il trasporto pubblico - Roma Servizi per la Mobilità\n\n* * *\n\n# Martedi 8 marzo sciopero generale di 24 ore. A rischio anche il trasporto pubblico\n\nPubblicato il: 02/03/2022 - Aggiornato il: 25/01/2023\n\nMartedi 8 marzo trasporto pubblico romano a rischio per l’adesione allo sciopero generale di 24 ore da parte dei sindacati Cobas, Cub e Usb. L’agitazione interesserà la rete Atac – bus, metropolitane, ferrovie concesse – e le linee periferiche gestite dalla Roma Tpl. Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20."
   },
   "response": {
@@ -26,17 +26,17 @@
       }
     },
     "usage": {
-      "input": 1134,
+      "input": 1135,
       "output": 98,
-      "total": 1232
+      "total": 1233
     },
     "costUsd": {
-      "inputCost": 0.00012474,
+      "inputCost": 0.00012485,
       "outputCost": 0.00003332,
       "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.00015806
+      "totalCost": 0.00015817
     },
-    "durationMs": 468
+    "durationMs": 529
   }
 }

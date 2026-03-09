@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 12670,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000579,
+      "outputCost": 0.0001296,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0001875
+    },
+    "hash": "493df59cc0f9de0b21ae51c0a896c7aa",
+    "sourceFile": "sciopero_trasporto_pubblico_metro_aperte_chiusa_termini_centocelle.html",
+    "thoughts": "**Evaluating strike status**\n\nI need to output JSON with isStrike and possibly strikeData if true. The document is discussing a public transport strike in Italian, mentioning it's currently ongoing until 12:30. It’s not announcing an upcoming strike, so I should mark isStrike as false. I’ll output this as {\"isStrike\": false}. I just want to make sure I follow the instruction correctly, confirming that it’s not announcing anything new.",
+    "tokens": {
+      "input": 1158,
+      "output": 324,
+      "total": 1482
+    }
+  }
+}

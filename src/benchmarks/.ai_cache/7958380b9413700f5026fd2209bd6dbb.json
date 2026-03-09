@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-03-08 00:00:00",
+      "endDate": "2022-03-08 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6391,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00016375,
+      "outputCost": 0.000189,
+      "thinkingCost": 0.001032,
+      "cachedCost": 0,
+      "totalCost": 0.00138475
+    },
+    "hash": "7958380b9413700f5026fd2209bd6dbb",
+    "sourceFile": "martedi_8_marzo_sciopero_generale_24_ore_rischio_trasporto_pubblico.html",
+    "thoughts": "**Strike Announcement Analysis**\n\nOkay, let's break this down. My input is an announcement: \"Martedi 8 marzo sciopero generale di 24 ore.\" That's a clear signal. The date is Tuesday, March 8th. The announcement was published on 02/03/2022, so I can confidently infer the year as 2022. I'm reading this as of today, so that's in the past. But, based on the prompt \"Decide if this document is actually announcing a new/upcoming strike.\" I will process it as a document describing a strike, whether historical or current, is secondary, as I am tasked with extracting data.\n\nThe goal here is to determine if this is a strike announcement and, if so, extract the relevant data, which is: `isStrike`, `startDate`/`endDate`, `locationType`, `locationCodes`, and `guaranteedTimes`.\n\n\"Martedi 8 marzo sciopero generale di 24 ore\" confirms this is an announcement. Scope is \"generale,\" but it's referencing Roma (Lazio, code 12), so it's `locationType: NATIONAL` and `locationCodes: [\"12\"]`. I also know it is a 24-hour strike, as explicitly stated.\n\nThe text specifies guaranteed service times: \"regolare fino alle 8,30\" (meaning normal service until 08:30) and \"dalle 17 alle 20\" (from 17:00 to 20:00). So, I'll record those as `guaranteedTimes`: \"00:00-08:30\" and \"17:00-20:00\"\n\nThe strike spans 24 hours on March 8, 2022. Thus, I'll extract these values: `isStrike: true`, `startDate`: \"2022-03-08 00:00:00\", `endDate`: \"2022-03-09 00:00:00\". `locationType: \"NATIONAL\"`, `locationCodes: [\"12\"]`, `guaranteedTimes`: [\"00:00-08:30\", \"17:00-20:00\"]. I'm now finished.\n\n\n",
+    "tokens": {
+      "input": 655,
+      "output": 126,
+      "total": 1469
+    }
+  }
+}

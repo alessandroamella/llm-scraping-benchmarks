@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-10 00:00:00",
+      "endDate": "2025-10-10 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6192,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.002636,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.00117,
+      "cachedCost": 0,
+      "totalCost": 0.004016
+    },
+    "hash": "f0749e1e7befe5bc99b563d31265f7d0",
+    "sourceFile": "venerdi_10_sciopero_del_trasporto_pubblico_rete_atac_a_rischio.html",
+    "thoughts": "**Analyzing the ATAC Strike Information**\n\nAlright, let's get down to it. I've got this webpage content about an ATAC strike – public transport in Rome. My primary goal is to determine if there's an upcoming strike and, crucially, to extract the relevant details in valid JSON format. Precision is key here; the output *must* be parseable JSON.\n\nThe text reads, \"Venerdì 10 ottobre trasporto pubblico a rischio per gli scioperi di 24 e 4 ore indetti dai sindacati Sul, Usb e Orsa.\" Okay, \"Venerdì 10\" clearly indicates October 10th. And the publication date is 04/10/2025. Yes, this is an announcement about a strike. It's happening on October 10th, 2025. It specifies a 24-hour strike *and* a 4-hour one... which, in practice, usually covers the whole day.\n\nNow, the text gives us some \"guaranteed windows\" of service. \"Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" That translates to \"00:00-08:30\" and \"17:00-20:00\". No ambiguity there. The prompt asks for *guaranteed times*. Let's stick with what the text explicitly states: \"00:00-08:30\" and \"17:00-20:00\".\n\nNow, let's construct the JSON.\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-10-10 00:00:00\",\n    \"endDate\": \"2025-10-10 23:59:59\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"00:00-08:30\", \"17:00-20:00\"]\n  }\n}\n```\n\nOkay, I believe that's accurate. Date, duration, regional scope (Lazio, code \"12\" is what I know the region code is), and guaranteed service times are included. This is a solid, parseable JSON representation of the strike information. I'm confident in this output.\n\n\n",
+    "tokens": {
+      "input": 10544,
+      "output": 140,
+      "total": 11464
+    }
+  }
+}

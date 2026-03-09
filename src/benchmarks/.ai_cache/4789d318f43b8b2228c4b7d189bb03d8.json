@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-14 00:00:00",
+      "endDate": "2025-11-14 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 32763,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00094225,
+      "outputCost": 0.0009072,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00184945
+    },
+    "hash": "4789d318f43b8b2228c4b7d189bb03d8",
+    "sourceFile": "trasporto_pubblico_venerdi_prossimo_sciopero_di_24_ore_servizio_a_rischio.html",
+    "thoughts": "**Clarifying guaranteed times**\n\nI’m trying to figure out the guaranteed service times mentioned in the directive. It states that service will be regular until 8:30 and then again from 17:00 to 20:00. It feels tricky since \"fino alle 8,30\" means up to 8:30, implying service is guaranteed until then. So, I'm concluding that the guaranteed times should be 00:00 to 08:30 and then again from 17:00 to 20:00. It seems I’m on the right track!",
+    "tokens": {
+      "input": 18845,
+      "output": 2268,
+      "total": 21113
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-01-16 08:30:00",
+      "endDate": "2023-01-16 12:30:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21767,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0004825,
+      "outputCost": 0.0005456,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0010281
+    },
+    "hash": "341fe651a54265615b121911063a203f",
+    "sourceFile": "luned_16_gennaio_sciopero_atac_4_ore_servizio_rischio_830_1230.html",
+    "thoughts": "**Structuring strike data**\n\nI need to format the output as JSON, including details about a strike. The content in Italian indicates an upcoming strike on January 16, lasting four hours, with service at risk from 8:30 to 12:30 in Rome. I'll set isStrike to true. The key fields to extract for strikeData are startDate, endDate, locationType, locationCodes, and guaranteedTimes. Overall, it's about capturing necessary details for this announced strike in a structured way.",
+    "tokens": {
+      "input": 9650,
+      "output": 1364,
+      "total": 11014
+    }
+  }
+}

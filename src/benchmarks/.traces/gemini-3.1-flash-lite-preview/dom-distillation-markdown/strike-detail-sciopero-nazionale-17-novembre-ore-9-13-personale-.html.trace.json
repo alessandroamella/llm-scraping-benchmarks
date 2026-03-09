@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-03-09T15:07:55.238Z",
+  "timestamp": "2026-03-09T16:10:28.852Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "Trenord",
     "fileName": "strike-detail-sciopero-nazionale-17-novembre-ore-9-13-personale-.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "dom-distillation-markdown",
-    "useLenientSchema": true,
+    "useLenientSchema": false,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"Trenord\" (the public transport company of Lombardia (03)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: Sciopero Nazionale 17 novembre ore 9-13 personale Trenord non coinvoltoUser-logged-no-picCloseSend-mail-OKAlert\n-   Date News: giovedì 16/11/2023\n-   Header: Sciopero Nazionale 17 novembre ore 9-13 personale Trenord non coinvolto\n\n* * *\n\n# **Sciopero Nazionale 17 novembre ore 9-13 personale Trenord non coinvolto**\n\ngiovedì 16/11/2023\n\n**Potrà aderire il personale delle imprese che gestiscono le infrastrutture FERROVIENORD e RFI**\n\nIl personale di Trenord non è coinvolto nello sciopero nazionale indetto per venerdì 17 novembre tra le ore 9 e le ore 13 al quale, tuttavia, potrebbero aderire i lavoratori delle imprese che gestiscono l’infrastruttura ferroviaria, FERROVIENORD e RFI.\n\nL’eventuale adesione allo sciopero del personale dei gestori delle infrastrutture potrà ripercuotersi anche sul servizio offerto da Trenord, causando tra le ore 9 e le ore 13 limitazioni e cancellazioni dei treni regionali, suburbani e del collegamento aeroportuale Malpensa Express.\n\nNella mattina di venerdì, saranno garantiti i treni con orario di partenza entro le ore 9 e arrivo alla destinazione finale entro le ore 10.\n\nPer quanto riguarda il collegamento aeroportuale, saranno previsti autobus sostitutivi, senza fermate intermedie, per eventuali corse non effettuate tra Milano Cadorna e Malpensa Aeroporto – da Milano i bus partiranno da Via Paleocapa, 1 – e tra Busto Arsizio e Malpensa Aeroporto.\n\nInformazioni in tempo reale sulla circolazione saranno disponibili sulle pagine di ogni linea della App e del sito Trenord. Si invitano i passeggeri a prestare attenzione ad annunci sonori e monitor di stazione.\n\n­\n\n[Comunicato stampa sciopero 17 novembre](/fileadmin/contenuti/TRENORD/3-News/Trenord_Informa/Comunicati_stampa/2023/Trenord_231115_CS_Sciopero_nazionale.pdf)\n\nPDF Document Found: /fileadmin/contenuti/TRENORD/3-News/Trenord\\_Informa/Comunicati\\_stampa/2023/Trenord\\_231115\\_CS\\_Sciopero\\_nazionale.pdf"
   },
   "response": {
@@ -20,16 +20,17 @@
     },
     "usage": {
       "input": 1031,
-      "output": 89,
-      "total": 1997
+      "output": 82,
+      "total": 1926
     },
     "costUsd": {
       "inputCost": 0.00025775,
-      "outputCost": 0.0001335,
-      "thinkingCost": 0.0013155,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.0012195,
       "cachedCost": 0,
-      "totalCost": 0.00170675
+      "totalCost": 0.00160025
     },
-    "durationMs": 6708
+    "durationMs": 9095,
+    "thoughts": "**Strike Information Extraction: A Thought Process**\n\nOkay, here's the scenario: I've got this text, \"Sciopero Nazionale 17 novembre ore 9-13 personale Trenord non coinvolto\" (National strike November 17, 9-13, Trenord personnel not involved), and my goal is to figure out if it's an announcement of a strike and, if so, extract the details in a specific JSON format.\n\nFirst, I parsed the text and noted it describes a \"Sciopero Nazionale\" – a national strike – on November 17th, from 9 AM to 1 PM. It immediately mentions that \"personale Trenord non coinvolto\" - Trenord staff are not involved. My initial thought was: does this even qualify as a strike announcement if Trenord staff *aren't* striking? The prompt specified to set `isStrike` to `true` *only* if it's an announcement of an upcoming strike.\n\nHowever, I dug deeper. The text confirms that even if Trenord staff aren't striking, the *service* itself will be impacted. The infrastructure managers, like FERROVIENORD and RFI, might be striking, which is a major part of the service. The important part is that the text is announcing a strike event impacting Trenord's service. Therefore, I'm confident that this qualifies as a strike announcement.\n\nSo, `isStrike` is `true`. The dates are straightforward: start date is 2023-11-17 09:00:00 and end date is 2023-11-17 13:00:00. The location type is clearly \"NATIONAL\", because the text explicitly states \"Sciopero Nazionale.\" The prompt also specifically dictates that `locationCodes` MUST be omitted if the `locationType` is `NATIONAL`.\n\nNow, the text also mentions something about guaranteed services: \"saranno garantiti i treni con orario di partenza entro le ore 9 e arrivo alla destinazione finale entro le ore 10.\" The prompt asks for guaranteed service times, but the example is \"06:00-09:00\". The text, though, doesn't mention a specific block but *departures* by 9am, *arrival* by 10am. Since it doesn't clearly map to a standard guaranteed window like `HH:mm-HH:mm`, I'll omit that from the output. The schema for `guaranteedTimes` is also an array of strings in format `HH:mm-HH:mm`, and this text does not provide such specific blocks.\n\nFinally, I made sure I was following the rules. I re-read the instruction to check if it's a strike *announcement*. Yes, it is. With all those decisions validated, I'm confident in the output. The extracted strike details fit into the expected schema.\n\n\n"
   }
 }

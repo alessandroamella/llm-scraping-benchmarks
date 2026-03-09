@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 10090,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0004826,
+      "outputCost": 0.0001888,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0006714
+    },
+    "hash": "6a1353277dbd3f0ae557cdf62f6256ce",
+    "sourceFile": "sciopero_trasporto_pubblico_chiuse_metro_c_termini_centocelle.html",
+    "thoughts": "**Understanding strike announcement**\n\nI need to output JSON in the strike extraction format. The content is in Italian and mentions a public transport strike, specifically \"sciopero del trasporto pubblico.\" The date shows a publication from 2022 but updated in 2023. It’s currently a 24-hour national strike, with updates on closed metro lines and possible reductions in bus services. Since this document is detailing an ongoing strike and not announcing a new or upcoming one, I need to reflect that accurately in the output.",
+    "tokens": {
+      "input": 9652,
+      "output": 472,
+      "total": 10124
+    }
+  }
+}

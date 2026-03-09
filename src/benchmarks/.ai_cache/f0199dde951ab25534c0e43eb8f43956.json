@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-03-21 00:00:00",
+      "endDate": "2025-03-21 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8467,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.004119,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.0015045,
+      "cachedCost": 0,
+      "totalCost": 0.0058335
+    },
+    "hash": "f0199dde951ab25534c0e43eb8f43956",
+    "sourceFile": "venerdi_21_marzo_sciopero_nazionale_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Strike Information Extraction: ATAC (Rome) - Analysis & JSON Output**\n\nOkay, let's break this down. My objective is to extract strike information from this HTML content, specifically for ATAC, the public transport system in Rome. The goal is a valid JSON object following the predefined schema. I need to determine if it's a strike (`isStrike`) and, if so, pull out details like start/end dates, location, and guaranteed service times. No problem.\n\nFirst, I see the title: \"Venerdì 21 marzo sciopero nazionale. Trasporto pubblico a rischio - Roma Servizi per la Mobilità.\" Right away, the \"sciopero\" (strike) flags it as a likely positive for `isStrike`. The date mentioned is Friday, March 21. And with the publication date being 16/03/2025, I am confident to infer that the year is 2025.\n\nScanning the content, \"Venerdì 21 marzo trasporto pubblico a rischio per lo sciopero nazionale di 24 ore...\" confirms it's an upcoming strike, not a cancellation or real-time update. So `isStrike` is definitely true.\n\nNow for the details:  The text says the service will be regular \"fino alle 8,30 e dalle 17 alle 20.\" That’s where the guaranteed times come into play. My assumption is a standard 24-hour strike starting at the beginning of the service. I am going to have to make a choice. While the text is 'fino alle 8:30' meaning 'up to 8:30', the schema requires 'HH:mm-HH:mm'. Let me interpret \"fino alle 8,30\" as 00:00-08:30 or similar. The \"dalle 17 alle 20\" is easy – that translates directly to 17:00-20:00. This is the common format.\n\nThe announcement says it is a national strike in Rome, and Rome is in Lazio. I will set the `locationType` to \"REGIONAL\" and `locationCodes` to [\"12\"] (the Lazio region code). A nationwide strike is likely to cause disruption.\n\nTherefore, my final JSON output will be constructed with:\n\n*   `isStrike`: true\n*   `strikeData`:\n    *   `startDate`: \"2025-03-21 00:00:00\" (a standard assumption for a 24-hour strike)\n    *   `endDate`: \"2025-03-21 23:59:59\" (end of the strike)\n    *   `locationType`: \"REGIONAL\"\n    *   `locationCodes`: [\"12\"]\n    *   `guaranteedTimes`: [\"00:00-08:30\", \"17:00-20:00\"]\n\nI am confident that this representation accurately captures the strike information. Now, let's output that JSON.\n\n\n",
+    "tokens": {
+      "input": 16476,
+      "output": 140,
+      "total": 17619
+    }
+  }
+}

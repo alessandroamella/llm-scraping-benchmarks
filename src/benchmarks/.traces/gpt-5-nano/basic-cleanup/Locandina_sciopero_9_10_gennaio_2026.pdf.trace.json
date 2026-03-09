@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-03-09T15:54:09.116Z",
+  "timestamp": "2026-03-09T16:10:29.837Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "Trenitalia TPER",
     "fileName": "Locandina sciopero 9 10 gennaio 2026.pdf",
     "model": "gpt-5-nano",
     "strategy": "basic-cleanup",
-    "useLenientSchema": true,
+    "useLenientSchema": false,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"Trenitalia TPER\" (the public transport company of Emilia-Romagna (08)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: basic-cleanup):\nSCIOPERO NAZIONALE DEL TRASPORTO FERROVIARIO PERSONALE DEL GRUPPO FS E TRENORD Dalle ore 21:00 di venerdì 9 alle ore 21:00 di sabato 10 gennaio 2026, i treni possono subire cancellazioni o variazioni, per uno sciopero nazionale del personale del Gruppo FS, Trenitalia, Trenitalia Tper e Trenord. Per il trasporto Regionale di Trenitalia, Trenitalia Tper e Trenord sono garantiti i servizi essenziali previsti in caso di sciopero nei giorni feriali dalle ore 6:00 alle ore 9:00 e dalle ore 18:00 alle ore 21:00. Gli elenchi dei servizi garantiti sono consultabili sull’Orario ufficiale Trenitalia e su www.trenitalia.com, per Trenord sul sito www.trenord.it e per Trenitalia Tper sul sito www.trenitaliatper.it. L’agitazione sindacale può comportare modifiche al servizio anche prima dell’inizio e dopo la sua conclusione. I passeggeri che intendono rinunciare al viaggio possono chiedere il rimborso a partire dalla dichiarazione di sciopero: - fino all’ora di partenza del treno prenotato, per i treni Intercity e Frecce; - fino alle ore 24:00 del giorno antecedente lo sciopero stesso, per i treni Regionali; in alternativa possono riprogrammare il viaggio, a condizioni di trasporto simili, non appena possibile, secondo la disponibilità dei posti. Informazioni su collegamenti e servizi anche attraverso l’app Trenitalia, la sezione Infomobilità del sito trenitalia.com, il sito www.trenord.it o tramite l’App di Trenord, sito trenitaliatper.it, il numero verde gratuito 800 89 20 21, oltre che nelle biglietterie e presso il personale di assistenza clienti. 9 E 10 GENNAIO 2026 -- 1 of 1 --"
   },
   "response": {
@@ -23,17 +23,18 @@
       }
     },
     "usage": {
-      "input": 1269,
-      "output": 1894,
-      "total": 3163
+      "input": 1355,
+      "output": 1455,
+      "total": 2810
     },
     "costUsd": {
-      "inputCost": 0.00006345,
-      "outputCost": 0.0007576,
+      "inputCost": 0.00006775,
+      "outputCost": 0.000582,
       "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.00082105
+      "totalCost": 0.00064975
     },
-    "durationMs": 26973
+    "durationMs": 21207,
+    "thoughts": "**Extracting strike details**\n\nI need to output JSON for strike extraction, determining if the document announces a new or upcoming strike. The Italian content suggests there's a nationwide railway strike from January 9 at 21:00 to January 10 at 21:00, 2026, indicating potential train cancellations or changes. It mentions guaranteed services on weekdays. Since this clearly outlines a future strike, I’ll set isStrike to true. It's definitely a strike announcement!"
   }
 }

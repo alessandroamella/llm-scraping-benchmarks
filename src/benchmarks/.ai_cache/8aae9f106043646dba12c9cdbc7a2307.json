@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-12-15 00:00:00",
+      "endDate": "2023-12-15 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8005,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000168,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.001311,
+      "cachedCost": 0,
+      "totalCost": 0.0016635
+    },
+    "hash": "8aae9f106043646dba12c9cdbc7a2307",
+    "sourceFile": "trasporto_pubblico_sciopero_nazionale_differito_15_dicembre.html",
+    "thoughts": "**Analyzing the Public Transport Strike Announcement**\n\nOkay, so I've got this announcement about a public transport strike. Let's break it down: The title is \"Trasporto pubblico, sciopero nazionale differito al 15 dicembre,\" which essentially says it's a national strike, but deferred to December 15th. I need to nail down the specifics for this to be useful.\n\nFirst, it was originally planned for November 27th, but that's been pushed back. The critical thing is the new date: December 15, 2023. It's a full 24-hour strike. The location is national, as the title states, though the text does also specify \"a Roma\" which means Rome, in the Lazio region, which is identified by the code \"12.\" However, the location type is NATIONAL, as per the documentation's directives. Therefore, even if the text mentions a region or city, the scope of this is national.\n\nNow, the important part: the guaranteed service times. The text says \"il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" So, service will be guaranteed from 00:00 to 08:30 and from 17:00 to 20:00. This is pretty standard for Italian strikes. I need to make sure I represent this accurately.\n\nSo, `isStrike` is definitely `true`. For the `strikeData` object, the `startDate` is \"2023-12-15 00:00:00\" and the `endDate` is \"2023-12-15 23:59:59\". I'm using that time for the end date to ensure the full 24 hours. The `locationType` is definitely \"NATIONAL,\" and critically, since the type is national, I need to omit the `locationCodes` field completely, even though Rome is mentioned, as per the schema. The `guaranteedTimes` are [\"00:00-08:30\", \"17:00-20:00\"].\n\nFinally, I need to double-check those time formats. The `startDate` and `endDate` patterns are `yyyy-MM-dd HH:mm:ss`, which is what I'm using. The `guaranteedTimes` need to match the `^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]-(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$` pattern. And yes, \"00:00-08:30\" and \"17:00-20:00\" fit perfectly. Great, I think I've got everything covered. This is ready to be processed.\n\n\n",
+    "tokens": {
+      "input": 672,
+      "output": 123,
+      "total": 1669
+    }
+  }
+}

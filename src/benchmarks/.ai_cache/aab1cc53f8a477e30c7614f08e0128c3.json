@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-03-21 00:00:00",
+      "endDate": "2025-03-21 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6590,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00016625,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.0010635,
+      "cachedCost": 0,
+      "totalCost": 0.00141425
+    },
+    "hash": "aab1cc53f8a477e30c7614f08e0128c3",
+    "sourceFile": "venerdi_21_marzo_sciopero_nazionale_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Strike Data Structuring and Validation**\n\nOkay, let's break down this strike announcement. First, the core information: a 24-hour national strike is planned for Friday, March 21, 2025. It's ATAC in Rome (Lazio) that's the company involved.\n\nNow, let's translate this into a structured format for the database.  Since it's a national strike, I need to make sure I'm adhering to the schema rules. It seems I should represent this with the `locationType` set to \"NATIONAL\" and omit any `locationCodes`. Good, that's straightforward.\n\nThe strike's duration is 24 hours starting on March 21st, 2025. So, the `startDate` should be \"2025-03-21 00:00:00\" and the `endDate` should be \"2025-03-21 23:59:59\".  I'll double check the precise datetime format with the regex `^\\\\d{4}-\\\\d{2}-\\\\d{2} \\\\d{2}:\\\\d{2}:\\\\d{2}$` and it appears to be correct.\n\nThe guaranteed service windows need some attention. The announcement states \"regolare fino alle 8,30 e dalle 17 alle 20\". This translates to service being regular until 8:30 am and from 5 pm to 8 pm. So I need to set `guaranteedTimes` to  [\"00:00-08:30\", \"17:00-20:00\"].\n\nFinally, after verifying all of the above, my data structure looks like this:  `{\"isStrike\": true, \"strikeData\": {\"startDate\": \"2025-03-21 00:00:00\", \"endDate\": \"2025-03-21 23:59:59\", \"locationType\": \"NATIONAL\", \"guaranteedTimes\": [\"00:00-08:30\", \"17:00-20:00\"]}}`. I'm confident in this and ready to proceed.\n\n\n",
+    "tokens": {
+      "input": 665,
+      "output": 123,
+      "total": 1497
+    }
+  }
+}

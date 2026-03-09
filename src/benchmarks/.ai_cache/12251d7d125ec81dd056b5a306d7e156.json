@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-12-07 09:00:00",
+      "endDate": "2023-12-07 13:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 25339,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00093615,
+      "outputCost": 0.0007556,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00169175
+    },
+    "hash": "12251d7d125ec81dd056b5a306d7e156",
+    "sourceFile": "gioved_sciopero_regionale_4_ore_trasporto_pubblico_rischio.html",
+    "thoughts": "**Extracting strike information**\n\nI need to output JSON according to the strike_extraction schema and identify if the content announces a new or upcoming strike. The page from Roma Mobilità, dated 2023-12-05, states there’s a \"Thursday regional 4-hour strike, public transport at risk.\" The details confirm an upcoming strike on Thursday, December 7, from 9 to 13, organized by the Faisa Cisal union. This information is crucial for understanding potential disruptions in public transport in Rome.",
+    "tokens": {
+      "input": 18723,
+      "output": 1889,
+      "total": 20612
+    }
+  }
+}

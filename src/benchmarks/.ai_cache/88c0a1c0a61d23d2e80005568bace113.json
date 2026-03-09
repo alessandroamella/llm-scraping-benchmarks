@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-11-27 00:00:00",
+      "endDate": "2023-11-28 00:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 23647,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00094415,
+      "outputCost": 0.0009056,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00184975
+    },
+    "hash": "88c0a1c0a61d23d2e80005568bace113",
+    "sourceFile": "luned_27_novembre_sciopero_nazionale_trasporto_pubblico_possibili_disagi.html",
+    "thoughts": "**Outputting JSON for transport strike**\n\nI need to create a JSON output that includes the fields isStrike and possibly strikeData, following the extraction rules given. The article discusses a national transport strike on Monday, November 27, and highlights potential disruptions. It specifies that in Rome, the Atac network and perimeter buses will be affected. Regular service will continue until 8:30 AM and then from 5 PM to 8 PM. I'll check for real-time updates on romamobilita.it too!",
+    "tokens": {
+      "input": 18883,
+      "output": 2264,
+      "total": 21147
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-05-20 00:00:00",
+      "endDate": "2022-05-20 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7369,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00016725,
+      "outputCost": 0.000189,
+      "thinkingCost": 0.001146,
+      "cachedCost": 0,
+      "totalCost": 0.00150225
+    },
+    "hash": "76d04b6d82c3ebd4de7e5d75f336c843",
+    "sourceFile": "venerd_20_maggio_sciopero_24_ore_trasporto_pubblico_rischio.html",
+    "thoughts": "**Strike Analysis: ATAC, Rome, May 20th**\n\nOkay, so I've received an announcement about a 24-hour strike. First things first, the target is ATAC, covering Rome and Lazio (region 12). The strike is scheduled for Friday, May 20th, 2022 – confirmed, based on the publication date. The duration is the standard 24 hours.\n\nNow, the crucial details: *guaranteed service times*. The text states service will be \"regolare fino alle 8,30 e dalle 17 alle 20.\" That translates directly to guaranteed service between 05:30 and 08:30 in the morning, and again from 17:00 to 20:00 in the evening. I'll make sure those are the values included.\n\nLet's nail down the start and end times: the strike begins at the stroke of midnight on the 20th (00:00:00) and runs until the final second of that day (23:59:59).\n\nTherefore, I'm confident that this accurately represents an upcoming strike: `isStrike`: true.\n\nThe strike data can be summarized as:\n\n*   `startDate`: \"2022-05-20 00:00:00\"\n*   `endDate`: \"2022-05-20 23:59:59\"\n*   `locationType`: \"REGIONAL\"\n*   `locationCodes`: [\"12\"]\n*   `guaranteedTimes`: [\"05:30-08:30\", \"17:00-20:00\"]\n\nIt seems the information aligns with my expected format and constraints: no control characters, a single array or object. That should be good to go.\n\n\n",
+    "tokens": {
+      "input": 669,
+      "output": 126,
+      "total": 1559
+    }
+  }
+}

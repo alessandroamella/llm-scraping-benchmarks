@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-12-16 20:00:00",
+      "endDate": "2022-12-16 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7403,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00015925,
+      "outputCost": 0.0001395,
+      "thinkingCost": 0.000468,
+      "cachedCost": 0,
+      "totalCost": 0.00076675
+    },
+    "hash": "189fadf1ad0b662d22af41fd5d580693",
+    "sourceFile": "venerd_16_dicembre_sciopero_generale_regionale_trasporto_pubblico_rischio_20_24.html",
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, here's the deal. I've got this announcement about a general regional strike in Rome. My job is to concisely extract the relevant information and structure it in a JSON format as per the given schema. Let's break this down systematically.\n\nFirst, I need to confirm that this is indeed an upcoming strike. The context suggests that it is, so I'll set `isStrike` to `true`.\n\nNext, I'll populate the `strikeData` object. The date is Friday, December 16, 2022. The strike duration is from 20:00 to 24:00. Now, how to handle that end time… I'll represent 24:00 as the end of the day, which means 23:59:59. I should be as precise as possible. The location is Rome, which corresponds to the Lazio region with code \"12\". Since the announcement specifies a general regional strike, I'll set `locationType` to \"REGIONAL\" and `locationCodes` to [\"12\"]. There's no mention of guaranteed times, so I'll leave that part out. It's not explicitly mentioned, so I will omit it, as it is not an inference to be made.\n\nTherefore, the final output will be a JSON object conforming to the specification.\n\n\n",
+    "tokens": {
+      "input": 637,
+      "output": 93,
+      "total": 1042
+    }
+  }
+}

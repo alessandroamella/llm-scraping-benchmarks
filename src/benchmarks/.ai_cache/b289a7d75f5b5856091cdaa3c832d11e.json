@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-03-29 00:00:00",
+      "endDate": "2022-03-29 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 27971,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005475,
+      "outputCost": 0.0006472,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00070195
+    },
+    "hash": "b289a7d75f5b5856091cdaa3c832d11e",
+    "sourceFile": "martedi_29_marzo_sciopera_24_ore_trasporto_pubblico_servizio_rischio.html",
+    "thoughts": "**Setting strike parameters**\n\nI'm figuring out how to set the start and end dates for a potential strike. If it covers a 24-hour period, I think it should run from 2022-03-29 00:00:00 to 2022-03-29 23:59:59. The instructions specify the date format and mention that service will be regular until certain times, but since the text states it's a full-day strike, that's what I'm considering. I also need to determine if the location type should be \"REGIONAL\" or \"NATIONAL\" based on the context.",
+    "tokens": {
+      "input": 1095,
+      "output": 1618,
+      "total": 2713
+    }
+  }
+}

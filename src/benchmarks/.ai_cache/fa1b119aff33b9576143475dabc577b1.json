@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-14 00:00:00",
+      "endDate": "2025-11-14 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6135,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00016675,
+      "outputCost": 0.000189,
+      "thinkingCost": 0.000981,
+      "cachedCost": 0,
+      "totalCost": 0.00133675
+    },
+    "hash": "fa1b119aff33b9576143475dabc577b1",
+    "sourceFile": "trasporto_pubblico_venerdi_prossimo_sciopero_di_24_ore_servizio_a_rischio.html",
+    "thoughts": "**Strike Analysis: Rome, November 14th, 2025**\n\nOkay, let's break this down. Input content: A strike announcement. First, is it actually a strike? Yes, clearly it is. Now, I need to extract the relevant details and format them into a clean JSON structure.\n\nThe date is explicitly stated: Friday, November 14th, 2025. That gives me the `startDate` and, since it's a 24-hour strike, I can calculate the `endDate`. Based on the \"servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20\" I can determine the periods which will be unaffected and will constitute the `guaranteedTimes`. The location is Rome, which I'll classify as \"REGIONAL\" and translate to the relevant code \"12\" for Lazio.\n\nNow, let's build the JSON:\n\n*   `startDate`: I'll format the start date as \"2025-11-14 00:00:00\". That should be unambiguous and parseable.\n*   `endDate`: \"2025-11-14 23:59:59\". The strike lasts a full 24 hours.\n*   `locationType`: \"REGIONAL\".\n*   `locationCodes`: `[\"12\"]`.\n*   `guaranteedTimes`: I need to translate the wording in the text: \"00:00-08:30\" and \"17:00-20:00\". These need to be included as an array of strings in the JSON. The pattern \"^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]-(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$\" matches the format.\n\nFinally, the top-level structure:\n\n*   `isStrike`: true.\n*   `strikeData`: This object will contain all the details extracted above: `startDate`, `endDate`, `locationType`, `locationCodes`, and `guaranteedTimes`.\n\nEverything looks good, the data is complete and correctly formatted, and all the details are accounted for. We should be able to produce a valid JSON output with confidence.\n\n\n",
+    "tokens": {
+      "input": 667,
+      "output": 126,
+      "total": 1447
+    }
+  }
+}

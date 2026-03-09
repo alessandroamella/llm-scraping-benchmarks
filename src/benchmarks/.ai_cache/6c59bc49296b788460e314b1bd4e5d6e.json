@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-12-16 20:00:00",
+      "endDate": "2022-12-16 24:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "20:00-24:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 23753,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0009414,
+      "outputCost": 0.0007948,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0017362
+    },
+    "hash": "6c59bc49296b788460e314b1bd4e5d6e",
+    "sourceFile": "venerd_16_dicembre_sciopero_generale_regionale_trasporto_pubblico_rischio_20_24.html",
+    "thoughts": "**Parsing strike announcement**\n\nI need to output JSON following the strike_extraction schema. I'll start by checking if the document is announcing a strike by ATAC. The title translates to \"Friday December 16 regional general strike. Public transport at risk from 20 to 24.\" The content indicates that there's a 4-hour strike from 20:00 to 24:00, affecting ATAC's network and peripheral buses. It seems clear this document announces an upcoming regional strike on that date.",
+    "tokens": {
+      "input": 18828,
+      "output": 1987,
+      "total": 20815
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-04-11 20:00:00",
+      "endDate": "2024-04-11 24:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21129,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00048255,
+      "outputCost": 0.0006476,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00113015
+    },
+    "hash": "c8bd223998ec509e5a41efec83b79e3d",
+    "sourceFile": "gioved_11_aprile_sciopero_nazionale_trasporto_pubblico_rischio_20_24.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to extract information from the provided content, which is in Italian. It announces a national strike on Thursday, April 11, from 20:00 to 24:00, involving public transportation. The content clearly indicates that this is an upcoming strike announced by the unions Cgil and Uil. Therefore, I should set isStrike to true. I will also ensure to format the strikeData correctly with the startDate and endDate according to the specified schema.",
+    "tokens": {
+      "input": 9651,
+      "output": 1619,
+      "total": 11270
+    }
+  }
+}

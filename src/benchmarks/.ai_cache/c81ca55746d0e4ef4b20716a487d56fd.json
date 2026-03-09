@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-12-02 00:00:00",
+      "endDate": "2022-12-02 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 10639,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.002648,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.001146,
+      "cachedCost": 0,
+      "totalCost": 0.0039785
+    },
+    "hash": "c81ca55746d0e4ef4b20716a487d56fd",
+    "sourceFile": "venerd_2_dicembre_sciopero_generale_nazionale_24_ore_rischio_trasporto_pubblico_romano.html",
+    "thoughts": "**Strike Analysis: Friday, December 2nd, 2022**\n\nOkay, let's break this down. My task is to determine if this content announces a strike and, if so, extract the pertinent details. First, the title immediately signals a potential strike: \"Venerdì 2 dicembre sciopero generale nazionale di 24 ore. A rischio anche il trasporto pubblico romano\" (Friday, December 2, 24-hour national general strike. Public transport in Rome also at risk). That \"sciopero\" is the key term.\n\nAnalyzing the content, it's definitely a strike announcement using future tense, it's informative and it's describing an upcoming event. The date is Friday, December 2nd (confirmed by the publication date of November 25th, 2022, and the title), and the duration is a full 24 hours. The location is described as a \"national general strike,\" impacting Rome's public transport, so the scope is clearly broad. The text confirms this with \"sciopero generale nazionale.\"\n\nNow, the guaranteed service times. The text says \"fino alle 8,30 e dalle 17 alle 20\", which, in Italian strike context, most likely means service is guaranteed from 00:00 to 08:30 and again from 17:00 to 20:00.\n\nTherefore, `isStrike` is `true`.  The `strikeData` structure will look like this:\n\n*   `startDate`: 2022-12-02 00:00:00\n*   `endDate`: 2022-12-02 23:59:59 (for a 24-hour strike)\n*   `locationType`: \"NATIONAL\" (despite the mention of Rome, the description focuses on a national strike). *Important*: Since the strike is classified as national, the `locationCodes` field *must* be omitted, as per the established schema.\n*   `locationCodes`: Omitted (because `locationType` is `NATIONAL`)\n*   `guaranteedTimes`: [\"00:00-08:30\", \"17:00-20:00\"]\n\nSo, the extracted strike data is precise and correctly formatted for input into the system.\n\n\n",
+    "tokens": {
+      "input": 10592,
+      "output": 123,
+      "total": 11479
+    }
+  }
+}

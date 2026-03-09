@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-01-14 08:30:00",
+      "endDate": "2022-01-14 12:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5498,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00411975,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.0007125,
+      "cachedCost": 0,
+      "totalCost": 0.00495525
+    },
+    "hash": "4195c4d6dae12fd023c26f5d3a3476fa",
+    "sourceFile": "venerdi_14_gennaio_sciopero_nazionale_4_ore_trasporto_pubblico_rischio.html",
+    "thoughts": "**Strike Detection and JSON Encoding**\n\nOkay, let's break this down. My task is to determine if this text announces an upcoming strike and then format the information into a specific JSON structure. No comments, strict double quotes, valid JSON – got it. The key is that `isStrike` is the initial boolean to set, and it drives the inclusion of strike details.\n\nThe title and body are pretty clear: it's a national strike. The headline, \"Venerdì 14 gennaio sciopero nazionale di 4 ore,\" screams strike. The body confirms this, specifying a four-hour national strike impacting Roman public transport, starting at 8:30 and ending at 12:30. \"Sciopero nazionale\" and the mention of specific timeframes seals the deal. The provided date of publication, \"07/01/2022,\" and the date of the strike, \"Venerdì 14 gennaio\", means we are in the year 2022.\n\nTherefore, `isStrike` is definitely `true`. Now, the `strikeData` object. The start time is 08:30, the end is 12:30, and the date is January 14, 2022. So, we'll format the `startDate` and `endDate` accordingly, using the specified 'yyyy-MM-dd HH:mm:ss' format. The location is \"NATIONAL,\" according to \"sciopero nazionale,\" so `locationType` will be \"NATIONAL\" and, therefore, no `locationCodes` are needed.\n\nFinal JSON structure:\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2022-01-14 08:30:00\",\n    \"endDate\": \"2022-01-14 12:30:00\",\n    \"locationType\": \"NATIONAL\"\n  }\n}\n```\n\n\n",
+    "tokens": {
+      "input": 16479,
+      "output": 82,
+      "total": 17036
+    }
+  }
+}

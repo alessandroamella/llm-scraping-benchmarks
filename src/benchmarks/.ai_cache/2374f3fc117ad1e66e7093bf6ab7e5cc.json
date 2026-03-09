@@ -1,0 +1,33 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "endDate": "2023-05-02 12:30:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 27158,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000535,
+      "outputCost": 0.0007716,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008251
+    },
+    "hash": "2374f3fc117ad1e66e7093bf6ab7e5cc",
+    "sourceFile": "sciopero_trasporto_pubblico_aperte_metropolitane_possibili_riduzioni_bus_tram.html",
+    "thoughts": "**Determining strike status**\n\nI need to output the information in JSON format to specify if there’s an upcoming strike. The content is Italian and discusses a public transport strike titled \"Sciopero del trasporto pubblico.\" The publication date is 02/05/2023. The document states that the strike is ongoing and will conclude at 12:30. It mentions that metro services are running normally, but there are reductions for buses and trams. So, it seems this is an ongoing strike that ends today.",
+    "tokens": {
+      "input": 1070,
+      "output": 1929,
+      "total": 2999
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-11-08 00:00:00",
+      "endDate": "2024-11-08 23:59:59",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 41371,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00048485,
+      "outputCost": 0.0012588,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00174365
+    },
+    "hash": "cfd3e76667a0638710e0927fccd2e91c",
+    "sourceFile": "venerdi_8_novembre_sciopero_nazionale_del_trasporto_pubblico_servizio_a_rischio_per_24_ore.html",
+    "thoughts": "**Extracting strike details**\n\nI need to output JSON based on the specifications regarding an upcoming strike. The Italian content references a national strike on November 8, 2024, affecting public transportation for 24 hours. It indicates that the ATAC network in Rome will be involved, and some essential services will be available from 8:30 AM to 5 PM. So, I’ll confirm that the isStrike property should be set to true and extract the required strikeData accordingly, ensuring the date format is correct.",
+    "tokens": {
+      "input": 9697,
+      "output": 3147,
+      "total": 12844
+    }
+  }
+}

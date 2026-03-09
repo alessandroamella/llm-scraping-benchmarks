@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 12833,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0009359,
+      "outputCost": 0.0001716,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0011075
+    },
+    "hash": "ea0607538440478ea9fcc41e082bab08",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_132.html",
+    "thoughts": "**Extracting strike details**\n\nI need to output JSON in the specified strike extraction format. The content mentions a public transport strike in Italy, indicating that 13.2% of Atac staff participated. The title and paragraph suggest this was a strike that occurred earlier today, meaning it's not an upcoming strike. Therefore, the `isStrike` value should be false. I’ll extract the information accordingly: `{\"isStrike\": false}`.",
+    "tokens": {
+      "input": 18718,
+      "output": 429,
+      "total": 19147
+    }
+  }
+}

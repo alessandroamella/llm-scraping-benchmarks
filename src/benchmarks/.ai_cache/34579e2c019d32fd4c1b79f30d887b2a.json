@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-09-22 00:00:00",
+      "endDate": "2025-09-22 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24682,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000483,
+      "outputCost": 0.0009736,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0014566
+    },
+    "hash": "34579e2c019d32fd4c1b79f30d887b2a",
+    "sourceFile": "lunedi_22_settembre_sciopero_nazionale_di_24_ore_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Extracting strike data**\n\nI need to determine if the document is announcing a new or upcoming strike based on the Italian content provided. It's clear that there’s a national 24-hour strike planned for September 22. The text mentions transportation risks in Rome due to this strike, which is organized by various unions. Since it states a specific date, this confirms it is an upcoming strike, meaning I'll set isStrike to true and proceed to extract the necessary data according to the required schema.",
+    "tokens": {
+      "input": 9660,
+      "output": 2434,
+      "total": 12094
+    }
+  }
+}

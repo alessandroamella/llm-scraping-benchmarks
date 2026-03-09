@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 3147,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00014675,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.0001965,
+      "cachedCost": 0,
+      "totalCost": 0.00035825
+    },
+    "hash": "a42acca9a7d184682b4666b5048748d3",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_385.html",
+    "thoughts": "**Analyzing Strike Participation Data**\n\nOkay, here's what I've got. The input text is \"Sciopero del trasporto pubblico, adesione personale Atac al 38,5%\" – a public transport strike, with 38.5% participation from Atac staff. The update dates seem to be from either 2022 or 2023. I need to figure out what to do with this.\n\nThe key is \"adesione ... rilevata in mattinata\" – participation *was observed* this morning. The data describes an already-occurring event, detailing participation levels, which I immediately recognize is how you measure the impact and success of a strike. The instruction here is to set `isStrike` to `false` if it just provides information about participation. Based on the context, I'm interpreting this as reporting on participation after the strike started. Therefore, since the focus is retrospective reporting of adesione, and not a notice that the strike *will* happen, I'm setting `isStrike` to `false`. That's the correct logic here.\n\n\n",
+    "tokens": {
+      "input": 587,
+      "output": 10,
+      "total": 728
+    }
+  }
+}

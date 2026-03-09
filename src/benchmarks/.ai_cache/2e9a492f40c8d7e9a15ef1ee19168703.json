@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-09-16 08:30:00",
+      "endDate": "2022-09-16 16:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8714,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.000171,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.000795,
+      "cachedCost": 0,
+      "totalCost": 0.001089
+    },
+    "hash": "2e9a492f40c8d7e9a15ef1ee19168703",
+    "sourceFile": "venerd_16_settembre_sciopero_nazionale_8_ore_trasporto_pubblico_romano_rischio.html",
+    "thoughts": "**Strike Analysis: Friday, September 16th, 2022**\n\nOkay, let's break this down. The input content clearly announces an upcoming strike: \"Venerdì 16 settembre sciopero nazionale di 8 ore. Trasporto pubblico romano a rischio\" – that's Friday, September 16th, an 8-hour national strike, impacting Roman public transport. The publication date is September 14th, 2022, so the context is clear.\n\nThe core information is straightforward: the strike is on Friday, September 16th, 2022, lasting 8 hours, from 08:30 to 16:30.  It explicitly targets ATAC, which is the Rome/Lazio transport authority. Since it's a \"sciopero nazionale,\" a national strike, it seems to affect the entire network and so it is classified as NATIONAL.\n\nNow, the crucial point: schema compliance. The text states \"If locationType is NATIONAL, locationCodes MUST BE OMITTED completely.\" Even though the strike's impact is mentioned in the context of Rome, because it's *defined* as \"national\", I need to suppress the `locationCodes` field in my output. This is a very important detail, and I'm ensuring this is accurately reflected. There were no guaranteed times mentioned within the content provided.\n\nTherefore, the `isStrike` flag will be set to `true`, and the `strikeData` object should contain the start date, end date, and `locationType` set to \"NATIONAL.\" The `guaranteedTimes` key can remain empty, since that information wasn't present.\n\nGiven this understanding, the data is valid and meets requirements, and the analysis will produce JSON that is accurate and in accordance to the specifications.\n\n\n",
+    "tokens": {
+      "input": 684,
+      "output": 82,
+      "total": 1296
+    }
+  }
+}

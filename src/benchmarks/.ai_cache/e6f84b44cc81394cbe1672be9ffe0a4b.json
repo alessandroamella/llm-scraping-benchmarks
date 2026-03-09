@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 31281,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0004818,
+      "outputCost": 0.0007924,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0012742
+    },
+    "hash": "e6f84b44cc81394cbe1672be9ffe0a4b",
+    "sourceFile": "venerdi_28_novembre_sciopero_generale_nazionale_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Clarifying guaranteed service times**\n\nI'm looking at the guaranteed service times which mention service will be regular until 8:30 and from 17 to 20. This doesn't exactly fit the \"06:00-09:00\" format. It seems like I should represent it as two ranges: from 00:00 to 08:30 and from 17:00 to 20:00. The translation \"fino alle 8:30\" suggests service is confirmed up to that time, but I need to consider that the time between 8:30 and 17:00 isn't guaranteed.",
+    "tokens": {
+      "input": 9636,
+      "output": 1981,
+      "total": 11617
+    }
+  }
+}

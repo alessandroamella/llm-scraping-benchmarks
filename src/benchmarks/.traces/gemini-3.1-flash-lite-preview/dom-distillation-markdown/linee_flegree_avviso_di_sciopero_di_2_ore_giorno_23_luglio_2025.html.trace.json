@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-03-09T15:54:15.180Z",
+  "timestamp": "2026-03-09T16:10:36.083Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "EAV",
     "fileName": "linee_flegree_avviso_di_sciopero_di_2_ore_giorno_23_luglio_2025.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "dom-distillation-markdown",
-    "useLenientSchema": true,
+    "useLenientSchema": false,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"EAV\" (the public transport company of Campania (15)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: Linee Flegree: Avviso di sciopero di 2 ore mercoledì 23 luglio 2025 - EAV srl\n\n* * *\n\n## Linee Flegree: Avviso di sciopero di 2 ore mercoledì 23 luglio 2025\n\nData:  \n**22 Luglio 2025**\n\nSi comunica che, ai sensi dell’art. 2 comma 7 della L.146/90 (fattispecie: gravi eventi lesivi dell’incolumità e della sicurezza dei lavoratori) e delle integrazioni alla stessa della L.83/2000 e successive modifiche, per il giorno **23 luglio 2025** la O.S. CONF.A.I.L. ha proclamato uno sciopero nazionale di 2 ore, dalle ore 09:00 alle ore 11:00, avente la seguente motivazione: _“__sicurezza sul posto di lavoro per_ _il personale front-line di EAV S.r.l._ _(autisti, macchinisti, capitreno, gestori, capistazione, Pl e biglietterie)”._\n\nDurante l’ultima proclamazione di sciopero delle citate OO.SS., la percentuale di adesione è stata del 2,32% (sciopero del giorno 10 gennaio 2025)\n\nDi seguito vengono elencate le ultime e le prime partenze garantite in relazione alle fasce di garanzia.\n\nDurante l’orario di sciopero, l’effettuazione delle corse è subordinata al numero di lavoratori aderenti allo sciopero\n\n**Ultime partenze prima dello sciopero:**\n\n-   da Montesanto per Bagnoli          08:45\n-   da Arco Felice per Torregaveta   08:15\n-   da Montesanto per Licola             08:48\n-   da Bagnoli per Montesanto            08:47\n-   da Torregaveta per Arco Felice    08:38\n-   da Licola per Montesanto            08:44\n\n**Prime partenze dopo lo sciopero**\n\n-   da Montesanto per Bagnoli          11:15\n-   da Arco Felice per Torregaveta    11:15\n-   da Montesanto per Licola             11:12\n-   da Bagnoli per Montesanto           11:02\n-   da Torregaveta per Arco Felice    11:38\n-   da Licola per Montesanto            11:08\n\n**Categoria:** [Trasporto pubblico](https://www.eavsrl.it/categoria-disservizio/trasporto-pubblico/)\n\n**Area:** [Linee Flegree](https://www.eavsrl.it/area/linee-flegree/)"
   },
   "response": {
@@ -15,21 +15,25 @@
       "strikeData": {
         "startDate": "2025-07-23 09:00:00",
         "endDate": "2025-07-23 11:00:00",
-        "locationType": "NATIONAL"
+        "locationType": "REGIONAL",
+        "locationCodes": [
+          "15"
+        ]
       }
     },
     "usage": {
       "input": 1312,
-      "output": 89,
-      "total": 1844
+      "output": 99,
+      "total": 1816
     },
     "costUsd": {
       "inputCost": 0.000328,
-      "outputCost": 0.0001335,
-      "thinkingCost": 0.0006645,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.0006075,
       "cachedCost": 0,
-      "totalCost": 0.001126
+      "totalCost": 0.001084
     },
-    "durationMs": 5390
+    "durationMs": 6716,
+    "thoughts": "**Analyzing the EAV Strike Announcement**\n\nOkay, let's break down this announcement from EAV in Campania. It's a strike, a *national* strike according to the wording \"sciopero nazionale\", scheduled for Wednesday, July 23rd, 2025. The prompt reads \"per il giorno 23 luglio 2025 la O.S. CONF.A.I.L. ha proclamato uno sciopero nazionale di 2 ore\", but it's important to understand the scope. The details are clear: it's from 09:00 to 11:00 on the 23rd of July, 2025, and it's specifically impacting EAV S.r.l. which is the public transport company here in Campania.\n\nMy primary task is to confirm if it's an upcoming strike - which, yes, it definitely is. The start date will be 2025-07-23 09:00:00 and it ends at 2025-07-23 11:00:00.\n\nNow, the location. The text calls it a \"sciopero nazionale,\" which is a national strike, but it's localized to EAV. The instructions say that if it's regional, I need to provide the ISTAT codes. EAV operates within Campania, and in my understanding, that makes it regional and the schema wants ISTAT codes. Thus, even though it's called \"national\", it's *functionally* a regional strike. Therefore, I need to set the `locationType` to \"REGIONAL\" and, given that EAV operates exclusively in Campania (region 15), the `locationCodes` will be an array containing only [\"15\"].\n\nEven though it’s a “national” strike in the text, it’s about EAV lines, so I'll set it as a regional event with the correct ISTAT codes.\n\n\n"
   }
 }

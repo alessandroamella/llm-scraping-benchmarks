@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-01-24 00:00:00",
+      "endDate": "2024-01-24 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 33384,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00094035,
+      "outputCost": 0.0011352,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00207555
+    },
+    "hash": "cbeb7822085ffc2ab47bb564fa31742c",
+    "sourceFile": "sciopero_nazionale_24_gennaio_trasporto_pubblico_rischio.html",
+    "thoughts": "**Identifying strike announcement**\n\nI need to output this in a JSON format specific to strike extraction. The content is announcing a national strike on January 24, lasting 24 hours, which is clear from the title and body. It also mentions potential disruptions in public transport due to the strike organized by the unions.\n\nI’ve noted that the publication dates indicate this is recent and relevant news. So, I’ll format this information appropriately for the JSON output.",
+    "tokens": {
+      "input": 18807,
+      "output": 2838,
+      "total": 21645
+    }
+  }
+}

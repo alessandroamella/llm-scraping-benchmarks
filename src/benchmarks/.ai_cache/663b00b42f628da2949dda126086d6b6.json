@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-03-08 00:00:00",
+      "endDate": "2023-03-08 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 13565,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00264225,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.001059,
+      "cachedCost": 0,
+      "totalCost": 0.00388575
+    },
+    "hash": "663b00b42f628da2949dda126086d6b6",
+    "sourceFile": "mercoled_8_marzo_sciopero_nazionale_cub_trasporto_pubblico_rischio_24_ore.html",
+    "thoughts": "**Strike Announcement Analysis**\n\nOkay, let's break this down. My task is to determine if the given text is a strike announcement and, if so, to extract the relevant data in a JSON format. The primary constraint is that the output needs to be a parseable JSON array. So, I need to ensure the format is absolutely correct.\n\nFirst, the text: \"Mercoledì 8 marzo sciopero nazionale del Cub. Trasporto pubblico a rischio per 24 ore.\" and \"Mercoledì 8 marzo trasporto pubblico romano a rischio per lo sciopero nazionale di 24 ore... Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" The publication date is 03/03/2023.\n\nClearly, this is a strike announcement. I can see the keywords and phrases. So, `isStrike` is `true`. Now, the strike data: I need to extract `startDate`, `endDate`, `locationType`, and `guaranteedTimes`.\n\nThe text indicates a 24-hour strike on \"Mercoledì 8 marzo\". The start date should be 2023-03-08 00:00:00, and the end date should be 2023-03-08 23:59:59, implicitly covering the entire day.\n\nThe location is described as \"nazionale,\" meaning \"national.\" Therefore, `locationType` will be \"NATIONAL.\" Based on the provided schema, if `locationType` is NATIONAL, `locationCodes` is omitted. I am sure to follow the schema.\n\nNow, for the \"guaranteed\" service times, the text states, \"Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" Thus, the service is guaranteed from 00:00-08:30 and 17:00-20:00. Those become `guaranteedTimes`: [\"00:00-08:30\", \"17:00-20:00\"].\n\nSo the `isStrike` is confirmed to be true. The `strikeData` object looks like this, ensuring all fields are present and correctly formatted:\n\n```json\n{\n    \"startDate\": \"2023-03-08 00:00:00\",\n    \"endDate\": \"2023-03-08 23:59:59\",\n    \"locationType\": \"NATIONAL\",\n    \"guaranteedTimes\": [\"00:00-08:30\", \"17:00-20:00\"]\n}\n```\n\nThis should be a perfectly valid JSON output. It accounts for the national scope and accurately extracts the strike period, guaranteed service times, and the boolean confirmation.\n\n\n",
+    "tokens": {
+      "input": 10569,
+      "output": 123,
+      "total": 11398
+    }
+  }
+}

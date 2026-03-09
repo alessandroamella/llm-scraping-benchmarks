@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7838,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00048135,
+      "outputCost": 0.0001732,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00065455
+    },
+    "hash": "16eb28094e38e1988e527b2a9ff58bca",
+    "sourceFile": "sciopero_trasporto_pubblico_attive_metropolitane_termini_centocelle.html",
+    "thoughts": "**Determining strike status**\n\nI'm looking at the content, which indicates it's still in progress and not about an upcoming strike, so I think isStrike should be false. If it’s detailing participation in a strike that has already happened or real-time updates about an ongoing strike, I definitely need to affirm that it's false.\n\nIt mentions the Sciopero del trasporto pubblico but states it's ongoing and will end at 12:30, confirming isStrike is indeed false. My output should be valid JSON with isStrike set to false.",
+    "tokens": {
+      "input": 9627,
+      "output": 433,
+      "total": 10060
+    }
+  }
+}

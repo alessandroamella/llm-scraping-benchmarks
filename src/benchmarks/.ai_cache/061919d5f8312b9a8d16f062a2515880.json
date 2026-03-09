@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-14 00:00:00",
+      "endDate": "2025-11-14 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 28513,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00048275,
+      "outputCost": 0.0008512,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00133395
+    },
+    "hash": "061919d5f8312b9a8d16f062a2515880",
+    "sourceFile": "trasporto_pubblico_venerdi_prossimo_sciopero_di_24_ore_servizio_a_rischio.html",
+    "thoughts": "**Extracting strike information**\n\nI need to output the strike extraction JSON according to the specifications. The content mentions a public transport strike on Friday, November 14, 2025, for 24 hours. It says the service may be at risk, but operations will be normal until 8:30 AM and again from 5 to 8 PM. I gather that this announcement confirms an upcoming strike, so I need to extract strike data: start date, end date, location type, location codes, and guaranteed times.",
+    "tokens": {
+      "input": 9655,
+      "output": 2128,
+      "total": 11783
+    }
+  }
+}

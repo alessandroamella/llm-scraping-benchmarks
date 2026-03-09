@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-07-24 08:30:00",
+      "endDate": "2023-07-24 12:30:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "08:30-12:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21273,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005455,
+      "outputCost": 0.0003708,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00042535
+    },
+    "hash": "1c0967a9d117a71dfa2c98489ae7ba41",
+    "sourceFile": "luned_24_luglio_sciopero_nazionale_tpl_roma_servizio_rischio_830_1230.html",
+    "thoughts": "**Extracting strike data**\n\nI need to format the output as a JSON based on the strike extraction format. The document announces an upcoming strike for public transport in Italy on Monday, July 24, indicating service disruptions in Rome. The service will be at risk from 8:30 AM to 12:30 PM. Given this, I’ll set `isStrike` to true and extract the relevant data: the start and end dates will be \"2023-07-24 08:30:00\" and \"2023-07-24 12:30:00\", with `LocationType` as NATIONAL.",
+    "tokens": {
+      "input": 1091,
+      "output": 927,
+      "total": 2018
+    }
+  }
+}

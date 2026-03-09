@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-03-29 00:00:00",
+      "endDate": "2022-03-29 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "06:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7151,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00409425,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.000906,
+      "cachedCost": 0,
+      "totalCost": 0.00521025
+    },
+    "hash": "a6b69ac27516e52e51699e36bb7624a7",
+    "sourceFile": "martedi_29_marzo_sciopera_24_ore_trasporto_pubblico_servizio_rischio.html",
+    "thoughts": "**Strike Analysis: ATAC, Rome - March 29, 2022**\n\nOkay, let's break this down. My objective is clear: determine if this content confirms a strike. Specifically, we're looking at ATAC, Rome, which corresponds to region 12.\n\nThe content states: \"Martedì 29 marzo sciopera 24 ore il trasporto pubblico\" (Tuesday, March 29th, public transport strike for 24 hours). That's a strong indicator right off the bat. It's explicitly a 24-hour strike. The text explicitly mentions it is a strike by ATAC workers: \"indetto tra i lavoratori dell’Atac dal sindacato Faisa Cisal\" (called by Faisa Cisal union for ATAC workers). And there's more. The publication date is \"24/03/2022\", and March 29, 2022, was indeed a Tuesday. Therefore, the year is confirmed as 2022.\n\nA 24-hour strike usually means the entire service day is affected, so from 00:00 to 23:59. The text also indicates that service will be partially regular \"Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20\" (service regular until 8:30 and 17:00-20:00). Based on that, we can refine the guaranteed service times. The text says \"fino alle 8,30\", which implies the end of the morning window; typical morning service starts at 06:00, so that is the start. The afternoon window is clearly 17:00 to 20:00. This confirms the location as \"Lazio (12)\" or Region 12.\n\nTherefore, the strike parameters are:\n\n*   `isStrike`: true\n*   `startDate`: 2022-03-29 00:00:00\n*   `endDate`: 2022-03-29 23:59:59\n*   `locationType`: REGIONAL\n*   `locationCodes`: [\"12\"]\n*   `guaranteedTimes`: [\"06:00-08:30\", \"17:00-20:00\"]\n\nI will retain the provided guaranteed service times, since they are explicitly defined by the text.\n\n\n",
+    "tokens": {
+      "input": 16377,
+      "output": 140,
+      "total": 17121
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-04-28 08:30:00",
+      "endDate": "2022-04-28 12:30:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "08:30-12:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20495,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00048265,
+      "outputCost": 0.0005088,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00099145
+    },
+    "hash": "f085c000f9ecd35491ca57c02be62133",
+    "sourceFile": "sciopero_trasporto_pubblico_gioved_28_servizio_rischio_830_1230.html",
+    "thoughts": "**Deciding on strike announcement**\n\nI need to format this information into JSON as specified. The content in Italian is about a public transport strike on \"giovedì 28 aprile,\" and it points to a four-hour strike period from 8:30 to 12:30. It’s confirmed as a strike announcement for the date, which is 28 April 2022, based on the publication date provided. I'll set isStrike to true and extract the start date for the strike data. Now I just need to finalize the date format for the JSON.",
+    "tokens": {
+      "input": 9653,
+      "output": 1272,
+      "total": 10925
+    }
+  }
+}

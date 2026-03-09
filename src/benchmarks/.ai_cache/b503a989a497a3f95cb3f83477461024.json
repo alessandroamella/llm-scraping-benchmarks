@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-01-14 08:30:00",
+      "endDate": "2022-01-14 12:30:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "08:30-12:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 25655,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000551,
+      "outputCost": 0.000376,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0004311
+    },
+    "hash": "b503a989a497a3f95cb3f83477461024",
+    "sourceFile": "venerdi_14_gennaio_sciopero_nazionale_4_ore_trasporto_pubblico_rischio.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to assess if the document announces an upcoming strike. It mentions a national strike for January 14, 2022, lasting four hours, directly impacting the ATAC network. I see it's indeed an announcement. The date is in the past relative to 2026, but we’re focusing on the content. It’s clear that this is a strike announcement for a specific time and date, marking it with true status for isStrike. The location type is confirmed as regional based on the national nature of the strike.",
+    "tokens": {
+      "input": 1102,
+      "output": 940,
+      "total": 2042
+    }
+  }
+}

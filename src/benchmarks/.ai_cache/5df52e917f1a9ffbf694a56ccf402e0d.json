@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-03-21 00:00:00",
+      "endDate": "2025-03-21 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21668,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00005495,
+      "outputCost": 0.0007332,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00078815
+    },
+    "hash": "5df52e917f1a9ffbf694a56ccf402e0d",
+    "sourceFile": "venerdi_21_marzo_sciopero_nazionale_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Analyzing strike details**\n\nThe article notes that service will remain regular until 8:30 AM and again from 5 PM to 8 PM. This implies possible strike times, as national strikes in Italy typically begin at 8:30 AM. They mention \"sciopero nazionale di 24 ore,\" which means a 24-hour strike. However, the document provides service windows rather than guaranteed times, and it only specifies that the strike will last 24 hours without exact start times. The location type should be \"NATIONAL,\" with location codes null. I need to input the strike data with start and end dates.",
+    "tokens": {
+      "input": 1099,
+      "output": 1833,
+      "total": 2932
+    }
+  }
+}

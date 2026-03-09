@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-09-09 08:30:00",
+      "endDate": "2024-09-09 16:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18400,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00048315,
+      "outputCost": 0.0004272,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00091035
+    },
+    "hash": "0dc1d1b18344ef82499ec7cb6ce0bc22",
+    "sourceFile": "luned_9_settembre_sciopero_nazionale_trasporto_pubblico_servizio_rischio.html",
+    "thoughts": "**Extracting strike data**\n\nI need to determine if the document announces an upcoming strike. The content indicates a national public transport strike on \"Lunedì 9 settembre\" with services at risk. The announcement mentions that it will happen on 9 September 2024, running from 08:30 to 16:30. This confirms it's an upcoming strike, so I’ll set isStrike to true. Now, I need to extract the start and end dates formatted as 'yyyy-MM-dd HH:mm:ss'.",
+    "tokens": {
+      "input": 9663,
+      "output": 1068,
+      "total": 10731
+    }
+  }
+}

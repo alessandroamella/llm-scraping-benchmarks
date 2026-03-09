@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-10-28 00:00:00",
+      "endDate": "2024-10-28 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21330,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000542,
+      "outputCost": 0.0008212,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008754
+    },
+    "hash": "a86afc2d34250c05264e5d3a45081c8f",
+    "sourceFile": "trasporto_pubblico_28_ottobre_sciopero_sulla_rete_atac.html",
+    "thoughts": "**Extracting strike details**\n\nI need to output the information in JSON format according to the strike_extraction standards. The document indicates that there will be a strike on October 28, 2024, affecting the Atac network in Rome. It's a 24-hour strike but with regular service until 8:30 AM and between 5 PM and 8 PM. This means I should set isStrike to true and extract the start and end dates as well. I'll format those dates correctly.",
+    "tokens": {
+      "input": 1084,
+      "output": 2053,
+      "total": 3137
+    }
+  }
+}

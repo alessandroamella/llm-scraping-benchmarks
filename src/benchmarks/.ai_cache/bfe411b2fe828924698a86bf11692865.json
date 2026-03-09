@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-03-29 00:00:00",
+      "endDate": "2022-03-29 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5976,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00016625,
+      "outputCost": 0.000189,
+      "thinkingCost": 0.0007635,
+      "cachedCost": 0,
+      "totalCost": 0.00111875
+    },
+    "hash": "bfe411b2fe828924698a86bf11692865",
+    "sourceFile": "martedi_29_marzo_sciopera_24_ore_trasporto_pubblico_servizio_rischio.html",
+    "thoughts": "**Analyzing the ATAC Strike on March 29th**\n\nOkay, let's break this down. The document clearly indicates a full, 24-hour strike affecting public transport in Rome, specifically operated by ATAC. The date is Tuesday, March 29th, 2022. I need to make sure I'm precise with the scope, this is a regional issue, targeting Lazio, code 12, to be precise.\n\nThe guaranteed service periods are critical. Initially, the document notes service will be guaranteed *fino alle 8,30* and *dalle 17 alle 20*. So, that translates to service being regular from the start of the day until 08:30 and then again from 17:00 to 20:00. These guaranteed times will be crucial for any travel planning, so I need to accurately represent them. I will confirm this by double checking the textual explanation alongside my structured data.\n\nTherefore, the strike period runs from the start of March 29th to the end of that day. The `guaranteedTimes` are thus 00:00-08:30 and 17:00-20:00. This is a crucial element for anyone who relies on public transport within the affected area. It's a binary case, yes/no: `isStrike`: true, and my calculations have confirmed the start and end dates. Good, I think I have a solid understanding of the implications here.\n\n\n",
+    "tokens": {
+      "input": 665,
+      "output": 126,
+      "total": 1300
+    }
+  }
+}

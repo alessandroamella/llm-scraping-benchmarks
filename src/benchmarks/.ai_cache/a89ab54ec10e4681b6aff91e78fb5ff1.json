@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 10593,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000532,
+      "outputCost": 0.000128,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0001812
+    },
+    "hash": "a89ab54ec10e4681b6aff91e78fb5ff1",
+    "sourceFile": "sciopero_trasporto_pubblico_attive_metropolitane_termini_centocelle.html",
+    "thoughts": "**Processing public transport strike information**\n\nI need to output JSON according to the strike_extraction schema. The title translates to \"Public Transport Strike, Metro and Termini-Centocelle Active.\" It's mentioned that the strike is ongoing and will end at 12:30. The statement about the metro service indicates it's not announcing a future strike. According to the instructions, since it's currently happening, I'll set isStrike to false. I'll ensure the output is correctly formatted as JSON.",
+    "tokens": {
+      "input": 1064,
+      "output": 320,
+      "total": 1384
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-12-15 00:00:00",
+      "endDate": "2023-12-15 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 48205,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00094125,
+      "outputCost": 0.0013356,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00227685
+    },
+    "hash": "bfa2cf0c2531755ca36bfa59671038e7",
+    "sourceFile": "trasporto_pubblico_sciopero_nazionale_differito_15_dicembre.html",
+    "thoughts": "**Determining strike status**\n\nI need to create JSON data based on the strike_extraction schema. The title mentions a national strike that has been postponed to December 15. The body also confirms this, stating that the strike was originally set for November 27 but has been rescheduled. Since the strike is not happening soon, I can conclude that it’s not an upcoming strike. So, I’ll reflect that in the output I generate.",
+    "tokens": {
+      "input": 18825,
+      "output": 3339,
+      "total": 22164
+    }
+  }
+}

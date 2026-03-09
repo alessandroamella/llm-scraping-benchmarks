@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-10 08:30:00",
+      "endDate": "2025-01-10 12:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5273,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.002642,
+      "outputCost": 0.000123,
+      "thinkingCost": 0.000723,
+      "cachedCost": 0,
+      "totalCost": 0.003488
+    },
+    "hash": "06df5dbaf0304ee5f789a9092ff94388",
+    "sourceFile": "trasporto_pubblico_venerdi_10_gennaio_sciopero_nazionale_di_4_ore.html",
+    "thoughts": "**Strike Detection and JSON Encoding**\n\nOkay, let's break this down. My task is to determine if this text announces a strike and, if so, to encode the information into valid JSON. No comments, no extraneous text, just the facts.\n\nThe text reads: \"Trasporto pubblico, venerdì 10 gennaio sciopero nazionale di 4 ore\" (Public transport, Friday Jan 10 4-hour national strike). Straightforward. It's an announcement. The content analysis confirms: it *is* a strike.\n\nNow for the JSON. `isStrike` is clearly `true`. The `strikeData` object is next. Let's extract the key details: Friday, January 10th, 4 hours, national. The year is \"Pubblicato il: 05/01/2025\". Okay, 2025.\n\nStart date: \"2025-01-10 08:30:00\". End date: \"2025-01-10 12:30:00\". `locationType`: \"NATIONAL\". `locationCodes` is omitted because it's a national strike; the instructions explicitly say to omit that.\n\nCrucially, the text *doesn't* specify guaranteed times, just the window of disruption (\"dalle 8.30 alle 12.30\"). Therefore, following the instructions I will *not* include the key \"guaranteedTimes\".\n\nMy resulting JSON structure is simple, direct, and adheres to the given specifications.\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-01-10 08:30:00\",\n    \"endDate\": \"2025-01-10 12:30:00\",\n    \"locationType\": \"NATIONAL\"\n  }\n}\n```\n\n\n",
+    "tokens": {
+      "input": 10568,
+      "output": 82,
+      "total": 11132
+    }
+  }
+}

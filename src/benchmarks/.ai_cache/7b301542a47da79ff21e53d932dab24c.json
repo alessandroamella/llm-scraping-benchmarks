@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-03-08 00:00:00",
+      "endDate": "2022-03-08 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 29712,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00048265,
+      "outputCost": 0.00088,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00136265
+    },
+    "hash": "7b301542a47da79ff21e53d932dab24c",
+    "sourceFile": "martedi_8_marzo_sciopero_generale_24_ore_rischio_trasporto_pubblico.html",
+    "thoughts": "**Extracting strike details**\n\nI need to pull out details about the strike, such as the start and end dates, location type, location codes, and the guaranteed times arrays. The content mentions a 24-hour general strike on March 8, which is a bit unclear regarding precise times. It states service will be regular until 08:30 and again from 17:00 to 20:00. So the guaranteed service is during two specific periods within the day: 00:00-08:30 and 17:00-20:00.",
+    "tokens": {
+      "input": 9653,
+      "output": 2200,
+      "total": 11853
+    }
+  }
+}

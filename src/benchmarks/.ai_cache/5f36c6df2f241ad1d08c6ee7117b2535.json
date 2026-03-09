@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-12-07 09:00:00",
+      "endDate": "2023-12-07 13:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 4338,
+    "preProcessingStrategy": "dom-distillation-markdown",
+    "model": "gemini-3.1-flash-lite-preview",
+    "costUsd": {
+      "inputCost": 0.00015775,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.000495,
+      "cachedCost": 0,
+      "totalCost": 0.00080125
+    },
+    "hash": "5f36c6df2f241ad1d08c6ee7117b2535",
+    "sourceFile": "gioved_sciopero_regionale_4_ore_trasporto_pubblico_rischio.html",
+    "thoughts": "**Analyzing the ATAC Strike Announcement**\n\nOkay, let's break this down. The news is about a strike announcement, specifically regarding ATAC, which I immediately recognize as the public transportation system in Rome. The text clearly states \"Giovedì sciopero regionale di 4 ore, trasporto pubblico a rischio... Giovedì 7 dicembre... dalle 9 alle 13... a livello regionale... A Roma l'agitazione interesserà la rete Atac.\" That confirms it's an upcoming strike. The key parameters are all present and easily extracted.\n\nThe strike will be on Thursday, December 7th, 2023, lasting for four hours, from 9 AM to 1 PM local time. Regionally. The focus is definitely ATAC's network in Rome. There's no mention of any guaranteed service periods, which is worth noting.\n\nI've got the data formatted correctly now. Confirmed. `isStrike: true`, `strikeData.startDate` is \"2023-12-07 09:00:00\", `strikeData.endDate` is \"2023-12-07 13:00:00\", `strikeData.locationType` is \"REGIONAL\", and `strikeData.locationCodes` contains the code for Lazio, which is \"12\".\n\nThe data validates against the schema without a problem. No extraneous commentary or noise. Straightforward and ready to be integrated. Excellent.\n\n\n",
+    "tokens": {
+      "input": 631,
+      "output": 99,
+      "total": 1060
+    }
+  }
+}
