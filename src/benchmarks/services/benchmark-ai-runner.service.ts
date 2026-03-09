@@ -252,7 +252,9 @@ Input Content (Pre-processing: ${preProcessingStrategy}):
           await readFile(cachePath, 'utf-8'),
         );
         this.logger.log(
-          `CACHE HIT [${hash.slice(0, 6)}] - Duration: ${cached.metadata.durationMs}ms`,
+          chalk.gray(
+            `CACHE HIT [${hash.slice(0, 6)}] - Duration: ${cached.metadata.durationMs}ms`,
+          ),
         );
 
         // Save trace for cache hits too (useful to see the prompt)
