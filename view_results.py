@@ -280,7 +280,7 @@ sns.scatterplot(
 )
 
 plt.title("Costo/file vs. F1-Score", fontsize=16, fontweight="bold")
-plt.xlabel("Costo stimato per file ($)", fontsize=12)
+plt.xlabel("Costo stimato per file ($) - valori decrescenti verso destra", fontsize=12)
 plt.ylabel("F1-Score", fontsize=12)
 plt.grid(True, linestyle="--", alpha=0.7)
 plt.gca().invert_xaxis()  # Best values (low cost, high F1) in top-right
