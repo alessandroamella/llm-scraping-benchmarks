@@ -134,15 +134,14 @@ export class BenchmarksService implements OnModuleInit {
   private readonly includeManualInSuite = false;
   private readonly generateChaosDatasetFlag = false;
 
-  private readonly customReportName =
-    'slm_models_with_ATAC_dataset_and_basic_cleanup';
+  private readonly customReportName = 'ai_suite_full_BASIC_and_MARKDOWN';
   // private readonly disabledChecks: string[] = ['locationType', 'locationCodes'];
   private readonly disabledChecks: string[] = [];
 
   // --- NEW FLAGS ---
   private readonly enableResilienceSuite = false; // Toggle Resilience Suite
   private readonly enableAiSuites = true; // Toggle AI Suites
-  private readonly enableSlmSuites = true; // Toggle SLM Suites (MinerU and Jina)
+  private readonly enableSlmSuites = false; // Toggle SLM Suites (MinerU and Jina)
   // -----------------
   private readonly baseDir = path.join(process.cwd(), 'data');
   private readonly resultsDir = path.join(process.cwd(), 'results');
@@ -266,9 +265,9 @@ export class BenchmarksService implements OnModuleInit {
 
     // Define the Matrix of Tests
     const baseStrategies: PreProcessingStrategy[] = [
-      // 'html-to-markdown',
       'basic-cleanup',
-      'dom-distillation',
+      'html-to-markdown',
+      // 'dom-distillation',
       // 'dom-distillation-markdown',
       // 'raw-html', // molto costoso, non abilitare
     ];
