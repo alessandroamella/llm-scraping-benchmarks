@@ -7,6 +7,7 @@ export const geminiModels = [
   'gemini-3-flash-preview',
   'gemini-3.1-pro-preview',
   'gemini-3.1-flash-lite-preview',
+  'gemini-3.1-flash-lite-preview-nothink', // TO REMOVE
 ] as const;
 export type GeminiModel = (typeof geminiModels)[number];
 export const isGeminiModel = (model: string): model is GeminiModel => {

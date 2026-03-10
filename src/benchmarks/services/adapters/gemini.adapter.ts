@@ -68,7 +68,7 @@ export class GeminiAdapter extends BaseAiAdapter {
         responseMimeType: 'application/json',
         responseJsonSchema: targetSchema.toJSONSchema(),
         thinkingConfig: {
-          thinkingLevel: ThinkingLevel.MEDIUM,
+          thinkingLevel: ThinkingLevel.MINIMAL,
           includeThoughts: true,
         },
       },
