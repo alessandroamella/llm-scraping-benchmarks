@@ -134,7 +134,7 @@ export class BenchmarksService implements OnModuleInit {
   private readonly includeManualInSuite = false;
   private readonly generateChaosDatasetFlag = false;
 
-  private readonly customReportName = 'ai_suite_full_BASIC_and_MARKDOWN';
+  private readonly customReportName = 'ai_suite_full_MARKDOWN_and_DISTILLATION';
   // private readonly disabledChecks: string[] = ['locationType', 'locationCodes'];
   private readonly disabledChecks: string[] = [];
 
@@ -265,9 +265,9 @@ export class BenchmarksService implements OnModuleInit {
 
     // Define the Matrix of Tests
     const baseStrategies: PreProcessingStrategy[] = [
-      'basic-cleanup',
+      // 'basic-cleanup',
       'html-to-markdown',
-      // 'dom-distillation',
+      'dom-distillation',
       // 'dom-distillation-markdown',
       // 'raw-html', // molto costoso, non abilitare
     ];
