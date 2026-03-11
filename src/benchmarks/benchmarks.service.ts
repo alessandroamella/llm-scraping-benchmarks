@@ -9,7 +9,6 @@ import chalk from 'chalk';
 import { format } from 'date-fns';
 import { round, union } from 'lodash-es';
 import pLimit from 'p-limit';
-import { PDFParse } from 'pdf-parse';
 import { EnvsService } from '@/envs/envs.service';
 import { type Company, groundTruth } from './data/ground-truth';
 import { jinaFileMap } from './data/jina-files.map';
@@ -18,69 +17,17 @@ import {
   AiParserMetadata,
   IStrikeParser,
   isAiParserMetadata,
-  ParseOptions,
   ParserMetadata,
-  ParserResponse,
   SupportedModel,
 } from './definitions/strike-parser.interface';
 import { ATACManualParser } from './parsers/atac/atac-manual.parser';
+import { ConfigurableAiParser } from './parsers/configurable-ai.parser';
 import { PreComputedFileParser } from './parsers/precomputed-file-parser';
 import { TrenordManualParser } from './parsers/trenord/trenord-manual.parser';
 import { BenchmarkStrike } from './schemas/benchmark-strike.schema';
 import { BenchmarkAiRunnerService } from './services/benchmark-ai-runner.service';
 import { compareStrikes } from './utils/comparator.util';
 import { messUpDom } from './utils/dom-chaos.util';
-
-class ConfigurableAiParser implements IStrikeParser {
-  name: string;
-  parserType = 'ai' as const;
-
-  constructor(
-    private readonly runner: BenchmarkAiRunnerService,
-    private readonly strategy: PreProcessingStrategy,
-    private readonly companyName: Company,
-    readonly model: SupportedModel,
-    private readonly useLenientSchema: boolean,
-  ) {
-    const schemaTag = useLenientSchema ? 'Lenient' : 'Strict';
-    this.name = `${model} [${strategy}] (${schemaTag})`;
-  }
-
-  async parse(content: string, options: ParseOptions): Promise<ParserResponse> {
-    let textToProcess = content;
-
-    // --- THE FIX
-    // If we are dealing with Trenitalia TPER, the 'content' is binary PDF data.
-    // We must extract the text first.
-    if (this.companyName === 'Trenitalia TPER') {
-      try {
-        const dataBuffer = Buffer.from(content, 'binary');
-        // const pdfData = await pdf(dataBuffer);
-
-        const parser = new PDFParse({ data: dataBuffer });
-        const { text } = await parser.getText();
-        parser.destroy(); // Clean up resources
-
-        textToProcess = text;
-
-        // Apply a small cleanup for common PDF garbage if needed
-        textToProcess = textToProcess.replace(/\n\s*\n/g, '\n').trim();
-      } catch (e) {
-        console.error('Failed to extract text from PDF for benchmark', e);
-        throw e;
-      }
-    }
-
-    return this.runner.parseWithAi(
-      textToProcess,
-      this.companyName,
-      this.strategy,
-      this.model,
-      options.metadata.fileName,
-      this.useLenientSchema,
-    );
-  }
-}
 
 // Define the shape of the saved report
 type BenchmarkResultDetail = Omit<ParserMetadata, 'thoughts'> & {
