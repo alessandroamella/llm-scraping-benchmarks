@@ -70,6 +70,6 @@ export class GroqAdapter extends BaseOpenAiAdapter {
 
   async generate(prompt: string, options: AiModelAdapterOptions) {
     await checkAndUpdateRateLimit(prompt);
-    return this.generateViaJsonMode(prompt, options);
+    return this.generateWithCompletionsAPI(prompt, options);
   }
 }

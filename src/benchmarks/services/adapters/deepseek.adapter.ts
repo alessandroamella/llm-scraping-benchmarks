@@ -6,6 +6,6 @@ export class DeepSeekAdapter extends BaseOpenAiAdapter {
 
   // DeepSeek just reuses the shared JSON generation fallback
   async generate(prompt: string, options: AiModelAdapterOptions) {
-    return this.generateViaJsonMode(prompt, options);
+    return this.generateWithCompletionsAPI(prompt, options);
   }
 }
