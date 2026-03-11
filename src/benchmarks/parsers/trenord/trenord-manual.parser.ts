@@ -216,7 +216,7 @@ export class TrenordManualParser implements IStrikeParser {
       `Clean title length: ${cleanTitle.length}, clean body length: ${cleanBody.length}`,
     );
 
-    // --- A. FIND THE PRIMARY DATE ---
+    // --- FIND THE PRIMARY DATE ---
     // Regex for "14 dicembre" or "14/12"
     const dateRegex =
       /(\d{1,2})(?:\s|°|º)?\s+(gennaio|febbraio|marzo|aprile|maggio|giugno|luglio|agosto|settembre|ottobre|novembre|dicembre)/i;
@@ -243,7 +243,7 @@ export class TrenordManualParser implements IStrikeParser {
     }
     this.logger.debug(`After year rollover: ${startDateObj.toISOString()}`);
 
-    // --- B. FIND TIME RANGE ---
+    // --- FIND TIME RANGE ---
     // Updated Regex:
     // Supports "dalle X alle Y"
     // Supports "dalle ore X alle ore Y"
@@ -293,7 +293,7 @@ export class TrenordManualParser implements IStrikeParser {
     });
     this.logger.debug(`Start time set: ${startDateObj.toISOString()}`);
 
-    // --- C. CALCULATE END DATE ---
+    // --- CALCULATE END DATE ---
     let endDateObj = set(startDateObj, {
       hours: endHour,
       minutes: endMin,

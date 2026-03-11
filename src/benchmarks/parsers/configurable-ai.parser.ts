@@ -27,7 +27,6 @@ export class ConfigurableAiParser implements IStrikeParser {
   async parse(content: string, options: ParseOptions): Promise<ParserResponse> {
     let textToProcess = content;
 
-    // --- THE FIX
     // If we are dealing with Trenitalia TPER, the 'content' is binary PDF data.
     // We must extract the text first.
     if (this.companyName === 'Trenitalia TPER') {

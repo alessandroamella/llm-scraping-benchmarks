@@ -54,9 +54,8 @@ export const BenchmarkAiOpenAISchema = z.object({
 
 export type BenchmarkAiOpenAI = z.infer<typeof BenchmarkAiOpenAISchema>;
 
-// --- LENIENT SCHEMA FOR OPENAI ---
+// Lenient schema for OpenAI
 // Uses unions with null instead of optional fields, matching OpenAI preferences
-
 const openAiLenientLocationCodesDesc = `Location code (2-digit region code (e.g. ${regionsArr
   .map(([code, name]) => `${code} for ${name}`)
   .join(', ')}))`;

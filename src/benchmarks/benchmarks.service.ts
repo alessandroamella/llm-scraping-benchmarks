@@ -85,10 +85,10 @@ export class BenchmarksService implements OnModuleInit {
   // private readonly disabledChecks: string[] = ['locationType', 'locationCodes'];
   private readonly disabledChecks: string[] = [];
 
-  // --- NEW FLAGS ---
   private readonly enableResilienceSuite = false; // Toggle Resilience Suite
   private readonly enableAiSuites = true; // Toggle AI Suites
   private readonly enableSlmSuites = false; // Toggle SLM Suites (MinerU and Jina)
+
   // -----------------
   private readonly baseDir = path.join(process.cwd(), 'data');
   private readonly resultsDir = path.join(process.cwd(), 'results');
@@ -204,13 +204,12 @@ export class BenchmarksService implements OnModuleInit {
   async runAllBenchmarks() {
     this.logger.log('Starting Multi-Model Benchmarks...');
 
-    // --- STEP 0: GENERATE CHAOS DATASET
-    // da fare una volta
+    // to do once!
     if (this.generateChaosDatasetFlag) {
       this.generateChaosDataset();
     }
 
-    // Define the Matrix of Tests
+    // test matrix
     const baseStrategies: PreProcessingStrategy[] = [
       // 'basic-cleanup',
       'html-to-markdown',
@@ -535,7 +534,6 @@ export class BenchmarksService implements OnModuleInit {
   }
   // ---------------------------------------
 
-  // --- NUOVO METODO PER GENERARE DATASET
   private generateChaosDataset() {
     this.logger.log(
       chalk.magenta('Generating Chaos Dataset (Trenord & ATAC)...'),

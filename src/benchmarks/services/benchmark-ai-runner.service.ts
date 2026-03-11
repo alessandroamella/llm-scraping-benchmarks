@@ -115,7 +115,7 @@ export class BenchmarkAiRunnerService implements OnModuleInit {
     }
   }
 
-  // --- Add the saveTrace helper ---
+  // Add the saveTrace helper
   private async saveTrace(trace: AiTrace) {
     try {
       const { model, strategy, fileName } = trace.request;
@@ -182,7 +182,7 @@ export class BenchmarkAiRunnerService implements OnModuleInit {
     }
   }
 
-  // --- Main Entry Point ---
+  // Main Entry Point
 
   async parseWithAi(
     content: string,
@@ -254,7 +254,7 @@ Input Content (Pre-processing: ${preProcessingStrategy}):
     );
   }
 
-  // --- Pipeline Logic ---
+  // Pipeline Logic
 
   private async runPipeline(
     adapter: AiModelAdapter,
@@ -427,7 +427,7 @@ Input Content (Pre-processing: ${preProcessingStrategy}):
     }
   }
 
-  // --- Helper Methods ---
+  // Helper Methods
 
   private getAdapter(model: SupportedModel): AiModelAdapter<RawAiResponse> {
     if (isGeminiModel(model)) return new GeminiAdapter(this.genAI, model);
@@ -958,7 +958,6 @@ Input Content (Pre-processing: ${preProcessingStrategy}):
       selectedHtml = $distilled.html();
     }
 
-    // --- RECOMBINE CONTEXT + CONTENT ---
     // Inject the context at the top of the HTML so the LLM sees it first
     const contextHtml = contextParts.length
       ? `<div class="extracted-context">
