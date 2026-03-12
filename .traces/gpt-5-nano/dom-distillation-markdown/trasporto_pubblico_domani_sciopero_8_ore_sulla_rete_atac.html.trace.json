@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-03-09T16:18:14.580Z",
+  "timestamp": "2026-03-12T01:45:32.942Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "ATAC",
     "fileName": "trasporto_pubblico_domani_sciopero_8_ore_sulla_rete_atac.html",
     "model": "gpt-5-nano",
     "strategy": "dom-distillation-markdown",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"ATAC\" (the public transport company of Rome, Lazio (12)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: Trasporto pubblico, domani sciopero di 8 ore sulla rete Atac - Roma Servizi per la Mobilità\n\n* * *\n\n# Trasporto pubblico, domani sciopero di 8 ore sulla rete Atac\n\nPubblicato il: 03/07/2024 - Aggiornato il: 06/11/2024\n\nDomani trasporto pubblico a rischio per 8 ore, dalle 8,30 alle 16,30, per lo sciopero indetto dai sindacati Orsa e Usb lavoro privato. L’agitazione coinvolgerà la rete Atac.\n\nAggiornamenti in tempo reale su romamobilita.it"
   },
   "response": {
@@ -18,25 +18,21 @@
         "locationType": "REGIONAL",
         "locationCodes": [
           "12"
-        ],
-        "guaranteedTimes": [
-          "08:30-16:30"
         ]
       }
     },
     "usage": {
-      "input": 1054,
-      "output": 1466,
-      "total": 2520
+      "input": 968,
+      "output": 1655,
+      "total": 2623
     },
     "costUsd": {
-      "inputCost": 0.0000527,
-      "outputCost": 0.0005864,
+      "inputCost": 0.0000484,
+      "outputCost": 0.000662,
       "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.0006391
+      "totalCost": 0.0007104
     },
-    "durationMs": 19041,
-    "thoughts": "**Analyzing strike details**\n\nI need to consider the strike involving the Atac network, which is Rome's public transportation system in the Lazio region. The article states there will be an eight-hour strike tomorrow. Based on the publication date, I need to correctly format the start date and time for the strike, which is from 08:30 to 16:30. Since the article was published on July 3, 2024, I’m determining the specific date for \"domani\" in my output."
+    "durationMs": 19415
   }
 }

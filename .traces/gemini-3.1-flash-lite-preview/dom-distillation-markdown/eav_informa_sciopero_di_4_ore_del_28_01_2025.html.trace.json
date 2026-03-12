@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-03-09T16:10:32.686Z",
+  "timestamp": "2026-03-12T01:45:06.185Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "EAV",
     "fileName": "eav_informa_sciopero_di_4_ore_del_28_01_2025.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "dom-distillation-markdown",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"EAV\" (the public transport company of Campania (15)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: EAV Informa: Sciopero di 4 ore del 28/01/2025 - EAV srl\n\n* * *\n\n## EAV Informa: Sciopero di 4 ore del 28/01/2025\n\nData:  \n**27 Gennaio 2025**\n\nLo sciopero previsto per domani 28 gennaio non riguarderà i servizi autobus sostitutivi che, pertanto, circoleranno regolarmente\n\n**Categoria:** [Trasporto pubblico](https://www.eavsrl.it/categoria-disservizio/trasporto-pubblico/)\n\n**Area:** [Campania](https://www.eavsrl.it/area/campania/)"
   },
   "response": {
@@ -14,7 +14,7 @@
       "isStrike": true,
       "strikeData": {
         "startDate": "2025-01-28 00:00:00",
-        "endDate": "2025-01-28 23:59:59",
+        "endDate": "2025-01-28 04:00:00",
         "locationType": "REGIONAL",
         "locationCodes": [
           "15"
@@ -23,17 +23,16 @@
     },
     "usage": {
       "input": 632,
-      "output": 93,
-      "total": 1631
+      "output": 99,
+      "total": 1573
     },
     "costUsd": {
       "inputCost": 0.000158,
-      "outputCost": 0.0001395,
-      "thinkingCost": 0.001359,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.001263,
       "cachedCost": 0,
-      "totalCost": 0.0016565
+      "totalCost": 0.0015695
     },
-    "durationMs": 8625,
-    "thoughts": "**Strike Analysis: EAV Srl Announcement**\n\nOkay, so I've received an EAV Informa update concerning a strike on January 28, 2025. My primary goal is to extract pertinent data about this strike and format it.\n\nThe source explicitly mentions a \"Sciopero di 4 ore del 28/01/2025.\" This is straightforward: It's a strike, that's certain, so `isStrike` is `true`. The text confirms the strike but notes that substitute bus services will *not* be affected. Regionally, this applies to Campania (code 15).\n\nNow to construct the `strikeData` object. I am careful because I need `startDate` and `endDate`. The text says \"Sciopero di 4 ore\". There's no specific start or end time. Since I'm missing time information, I have to be careful. The format I must use requires the `yyyy-MM-dd HH:mm:ss` format. I have to work within this constraint and use the full day if I can't find times. I am used to this.\n\nTherefore, for the start date, it is `2025-01-28 00:00:00`. Since there are only 4 hours, and no specified hours, I'm going to set an end date. Often when this situation occurs, I will represent the whole day. Thus, the end date will be `2025-01-28 23:59:59`. The schema also requires `locationType`, which is \"REGIONAL\" given the reference to Campania, and `locationCodes` is `[\"15\"]`. Since there are no guaranteed times specified, I'll omit that field. My understanding is that, if there's no specified time range, I can fill the whole day in.\n\nI've also re-confirmed against the provided JSON schema to ensure adherence to formatting rules and data types. My final output has to use that format.\n\n\n"
+    "durationMs": 7647
   }
 }

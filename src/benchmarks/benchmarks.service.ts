@@ -81,13 +81,13 @@ export class BenchmarksService implements OnModuleInit {
   private readonly includeManualInSuite = false;
   private readonly generateChaosDatasetFlag = false;
 
-  private readonly customReportName = 'ai_suite_full_MARKDOWN_and_DISTILLATION';
+  private readonly customReportName = 'all_strategies_all_models_ALL';
   // private readonly disabledChecks: string[] = ['locationType', 'locationCodes'];
   private readonly disabledChecks: string[] = [];
 
   private readonly enableResilienceSuite = false; // Toggle Resilience Suite
   private readonly enableAiSuites = true; // Toggle AI Suites
-  private readonly enableSlmSuites = false; // Toggle SLM Suites (MinerU and Jina)
+  private readonly enableSlmSuites = true; // Toggle SLM Suites (MinerU and Jina)
 
   // -----------------
   private readonly baseDir = path.join(process.cwd(), 'data');
@@ -213,8 +213,8 @@ export class BenchmarksService implements OnModuleInit {
     const baseStrategies: PreProcessingStrategy[] = [
       // 'basic-cleanup',
       'html-to-markdown',
-      'dom-distillation',
-      // 'dom-distillation-markdown',
+      // 'dom-distillation',
+      'dom-distillation-markdown',
       // 'raw-html', // molto costoso, non abilitare
     ];
 

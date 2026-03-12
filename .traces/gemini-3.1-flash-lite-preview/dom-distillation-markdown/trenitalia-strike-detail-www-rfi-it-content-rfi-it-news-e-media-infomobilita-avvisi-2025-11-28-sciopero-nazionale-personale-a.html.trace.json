@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-03-09T16:10:39.533Z",
+  "timestamp": "2026-03-12T01:45:11.167Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "Trenitalia",
     "fileName": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-11-28-sciopero-nazionale-personale-a.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "dom-distillation-markdown",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"Trenitalia\" (Italy's national railway operator).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: SCIOPERO NAZIONALE PERSONALE AUTOFERROTRANVIERI\n\n* * *\n\n# SCIOPERO NAZIONALE PERSONALE AUTOFERROTRANVIERI\n\nIn vigore: 28 NOVEMBRE 2025\n\nServizio: **Bus**\n\nCausa Modifica: **Sciopero**\n\nImpresa: **Gruppo FS Italiane**\n\n**Il giorno venerdì 28 novembre 2025**, in adesione allo sciopero generale, è stato indetto uno sciopero di 24 ore del personale delle imprese cui si applica il Contratto Collettivo Nazionale di Lavoro degli Autoferrotranvieri.\n\n**I servizi bus programmati in orario possono subire variazioni o cancellazioni.**\n\nPer i servizi in orario Trenitalia sono garantiti i servizi essenziali previsti in caso di sciopero nei giorni feriali dalle ore 6.00 alle ore 9.00 e dalle ore 18.00 alle ore 21.00 (come da Orario ufficiale Trenitalia e www.trenitalia.com).\n\nNon sono previste fasce di garanzia per i servizi FrecciaLink.\n\nNel rispetto delle fasce di garanzia, ci possono essere variazioni in base ai programmi locali.\n\nLo sciopero può comportare modifiche al servizio anche prima dell’inizio e dopo la sua conclusione.\n\nMaggiori informazioni sui servizi minimi garantiti in caso di sciopero sono disponibili sui canali digitali di Trenitalia o rivolgendosi al personale di assistenza clienti e presso le biglietterie."
   },
   "response": {
@@ -24,17 +24,16 @@
     },
     "usage": {
       "input": 808,
-      "output": 123,
-      "total": 1340
+      "output": 131,
+      "total": 1453
     },
     "costUsd": {
       "inputCost": 0.000202,
-      "outputCost": 0.0001845,
-      "thinkingCost": 0.0006135,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.000771,
       "cachedCost": 0,
-      "totalCost": 0.001
+      "totalCost": 0.0011695
     },
-    "durationMs": 4922,
-    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, here's the scenario: I've got an input text and need to determine if it announces a strike and, if so, extract the relevant details. The input text clearly mentions a \"SCIOPERO NAZIONALE PERSONALE AUTOFERROTRANVIERI\" on \"28 NOVEMBRE 2025,\" so, immediately, I'm thinking, \"Yes, this definitely signals a strike.\"\n\nNow, to nail down the specifics. The criteria are pretty straightforward. I need to output `isStrike`, the `startDate` and `endDate` in a specific 'yyyy-MM-dd HH:mm:ss' format, a `locationType` ('NATIONAL' or 'REGIONAL'), the `locationCodes` if it's 'REGIONAL' (which, I note, it won't be in this case), and any `guaranteedTimes`.\n\nThe text says \"sciopero di 24 ore.\" This translates directly to the whole day of November 28th, 2025. So, I need to format the start date as \"2025-11-28 00:00:00\" and the end date as \"2025-11-28 23:59:59\". The scope is \"SCIOPERO NAZIONALE,\" which clearly indicates that the `locationType` is \"NATIONAL.\" We do not have any region codes.\n\nFinally, the text mentions \"dalle ore 6.00 alle ore 9.00 e dalle ore 18.00 alle ore 21.00,\" which I'll convert and format correctly into the `guaranteedTimes` array: `[\"06:00-09:00\", \"18:00-21:00\"]`.\n\nTherefore, the final output would be:\n\n*   `isStrike`: true\n*   `strikeData`:\n    *   `startDate`: \"2025-11-28 00:00:00\"\n    *   `endDate`: \"2025-11-28 23:59:59\"\n    *   `locationType`: \"NATIONAL\"\n    *   `guaranteedTimes`: [\"06:00-09:00\", \"18:00-21:00\"]\n\nDone.\n\n\n"
+    "durationMs": 5555
   }
 }

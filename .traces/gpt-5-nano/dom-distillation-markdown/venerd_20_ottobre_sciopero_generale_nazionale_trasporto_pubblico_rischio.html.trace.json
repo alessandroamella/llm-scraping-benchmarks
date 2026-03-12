@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-03-09T16:18:11.083Z",
+  "timestamp": "2026-03-12T01:45:30.592Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "ATAC",
     "fileName": "venerd_20_ottobre_sciopero_generale_nazionale_trasporto_pubblico_rischio.html",
     "model": "gpt-5-nano",
     "strategy": "dom-distillation-markdown",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"ATAC\" (the public transport company of Rome, Lazio (12)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: Venerdì 20 ottobre sciopero generale nazionale. Trasporto pubblico a rischio - Roma Servizi per la Mobilità\n\n* * *\n\n# Venerdì 20 ottobre sciopero generale nazionale. Trasporto pubblico a rischio\n\nPubblicato il: 13/10/2023 - Aggiornato il: 13/10/2023\n\nstatus: 1 Venerdì 20 ottobre trasporto pubblico a rischio per l’adesione allo sciopero generale nazionale di 24 ore dei sindacati Cub, Sgb, Adl e Sicobas. A Roma l’agitazione interesserà la rete Atac e i bus periferici gestiti dalla Roma Tpl. Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20."
   },
   "response": {
@@ -14,7 +14,7 @@
       "isStrike": true,
       "strikeData": {
         "startDate": "2023-10-20 00:00:00",
-        "endDate": "2023-10-21 00:00:00",
+        "endDate": "2023-10-20 23:59:59",
         "locationType": "NATIONAL",
         "guaranteedTimes": [
           "00:00-08:30",
@@ -23,18 +23,17 @@
       }
     },
     "usage": {
-      "input": 1078,
-      "output": 2027,
-      "total": 3105
+      "input": 992,
+      "output": 1882,
+      "total": 2874
     },
     "costUsd": {
-      "inputCost": 0.0000539,
-      "outputCost": 0.0008108,
+      "inputCost": 0.0000496,
+      "outputCost": 0.0007528,
       "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.0008647
+      "totalCost": 0.0008024
     },
-    "durationMs": 26892,
-    "thoughts": "**Extracting strike data**\n\nI'm determining strike details like start date, end date, and times based on the content. It mentions a \"sciopero generale nazionale di 24 ore,\" which suggests a 24-hour strike. I initially thought the start date was October 13, but it's actually on Friday, October 20. So, the start date should be set to 2023-10-20 00:00:00 and end date to 2023-10-21 00:00:00. I’ll make sure to format them correctly."
+    "durationMs": 25093
   }
 }

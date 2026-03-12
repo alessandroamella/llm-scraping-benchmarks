@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-03-09T16:23:25.815Z",
+  "timestamp": "2026-03-12T01:45:37.833Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "ATAC",
     "fileName": "sciopero_generale_nazionale_domani_trasporto_pubblico_a_rischio.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "dom-distillation-markdown",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"ATAC\" (the public transport company of Rome, Lazio (12)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: Sciopero generale nazionale, domani trasporto pubblico a rischio - Roma Servizi per la Mobilità\n\n* * *\n\n# Sciopero generale nazionale, domani trasporto pubblico a rischio\n\nPubblicato il: 02/10/2025 - Aggiornato il: 03/10/2025\n\nDomani trasporto pubblico a rischio per lo sciopero generale nazionale di 24 ore indetto dai sindacati Cgil, Usb, Cub, Sgb e Cobas. \n\nA Roma la protesta interesserà la rete Atac e i bus gestiti da operatori privati. Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20."
   },
   "response": {
@@ -24,17 +24,17 @@
     },
     "usage": {
       "input": 622,
-      "output": 123,
-      "total": 1413
+      "output": 131,
+      "total": 1461
     },
     "costUsd": {
       "inputCost": 0.0001555,
-      "outputCost": 0.0001845,
-      "thinkingCost": 0.001002,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.001062,
       "cachedCost": 0,
-      "totalCost": 0.001342
+      "totalCost": 0.001414
     },
-    "durationMs": 6012,
-    "thoughts": "**Analyzing the National Strike Announcement**\n\nOkay, let's break this down. The input clearly indicates a national general strike is planned. My primary goal here is to extract the critical details: the date, the scope, and any service guarantees.\n\nThe text reads \"Domani trasporto pubblico a rischio,\" which translates to \"Tomorrow, public transport at risk.\" The publication date is October 2nd, 2025, but the updated date is October 3rd, 2025. \"Domani\" (tomorrow) relative to October 3rd, therefore, means the strike is scheduled for October 4th, 2025. It's a 24-hour strike. Given the common convention for 24-hour events, I'm inferring the strike runs from 00:00:00 to 23:59:59 on October 4th, 2025. So, my `startDate` is \"2025-10-04 00:00:00\" and `endDate` is \"2025-10-04 23:59:59\".\n\nThe term \"Sciopero generale nazionale\" directly signifies a \"NATIONAL\" strike, so my `locationType` is \"NATIONAL.\" Crucially, because it's national, I need to omit any specific `locationCodes`. That's a constraint to remember.\n\nRegarding service guarantees, the text states \"servizio regolare fino alle 8,30 e dalle 17 alle 20.\" That translates to \"regular service until 8:30 and from 17:00 to 20:00\". Therefore, my `guaranteedTimes` will be the string list `[\"00:00-08:30\", \"17:00-20:00\"]`. The phrasing \"fino alle\" means up to, so I'm correctly interpreting that \"until 8:30\" should encompass 00:00 through 08:30. \"Dalle...alle\" is between...and, therefore, correctly interpreting that 17:00-20:00 is correct.\n\nSo, in summary: I've confirmed a strike (`isStrike`: true), identified the date (October 4th, 2025), correctly determined the scope as NATIONAL, and accurately extracted the guaranteed service times. The `locationCodes` parameter will be omitted as per the constraints for national strikes.\n\n\n"
+    "durationMs": 6926,
+    "thoughts": "**Strike Analysis: Italian National Transport Strike**\n\nOkay, let's break this down. My task is to extract the relevant strike details from this text snippet. The primary trigger is \"Sciopero generale nazionale,\" the national strike, so `isStrike` is definitely `true`.\n\nThe publication and update dates are 02/10/2025 and 03/10/2025, respectively. The phrase \"domani\" indicates the strike date, which, given the context, I'm going to safely infer as 04/10/2025. It is a national strike across Italy.\n\nThe text specifies a 24-hour duration, confirming `startDate` as 2025-10-04 00:00:00 and `endDate` as 2025-10-04 23:59:59. The `locationType` will be \"NATIONAL\" to reflect the scope. I don't need any `locationCodes`.\n\nThe text mentions that service is \"regolare fino alle 8,30 e dalle 17 alle 20\", implying guaranteed service during those periods. Therefore, `guaranteedTimes` will be defined as [\"00:00-08:30\", \"17:00-20:00\"]. It is crucial to capture those guaranteed hours, as that's what commuters will need to know. That seems right for this type of strike.\n\n\n"
   }
 }

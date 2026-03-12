@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-03-09T16:10:36.531Z",
+  "timestamp": "2026-03-12T01:45:08.931Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "EAV",
     "fileName": "linee_automobilistiche_avviso_di_sciopero_generale_nazionale_lunedi_22_settembre_2025.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "dom-distillation-markdown",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"EAV\" (the public transport company of Campania (15)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: Linee Automobilistiche: Avviso di sciopero generale nazionale lunedì 22 settembre 2025 - EAV srl\n\n* * *\n\n## Linee Automobilistiche: Avviso di sciopero generale nazionale lunedì 22 settembre 2025\n\nData:  \n**17 Settembre 2025**\n\nPer il giorno 22 settembre 2025 la O.S. USB ha proclamato azione di sciopero generale nazionale di tutte le categorie pubbliche e private avente le seguenti motivazioni: protesta per la guerra e per l’aggravarsi della situazione umanitaria nella striscia di Gaza.\n\nLo sciopero sarà così articolato: 23 ore per il personale viaggiante e personale connesso alla circolazione e di 24 ore per tutto il restante personale.\n\nDurante l’ultima proclamazione di sciopero della O.S. USB, la percentuale di adesione è stata del 4,9% sciopero di 24 ore del 20 giugno 2025\n\n**Il servizio si svolge regolarmente nelle seguenti fasce di garanzia: dalle ore 05:30 alle ore 8:30 e dalle ore 16:30 alle ore 19:30**  \nDurante l’orario di sciopero l’effettuazione delle corse è subordinata al numero di lavoratori aderenti allo sciopero.\n\n**Categoria:** [Trasporto pubblico](https://www.eavsrl.it/categoria-disservizio/trasporto-pubblico/)\n\n**Area:** [Campania](https://www.eavsrl.it/area/campania/)"
   },
   "response": {
@@ -24,17 +24,16 @@
     },
     "usage": {
       "input": 838,
-      "output": 123,
-      "total": 1698
+      "output": 131,
+      "total": 1334
     },
     "costUsd": {
       "inputCost": 0.0002095,
-      "outputCost": 0.0001845,
-      "thinkingCost": 0.0011055,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.0005475,
       "cachedCost": 0,
-      "totalCost": 0.0014995
+      "totalCost": 0.0009535
     },
-    "durationMs": 7962,
-    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, let's break this down. My task is clear: I need to analyze this text from EAV regarding a strike on September 22, 2025, and present the information in a valid JSON format. The core requirement is that if it's a strike announcement, `isStrike` needs to be set to true. I need to pull out the `startDate`, `endDate`, `locationType`, `locationCodes`, and the `guaranteedTimes`, making sure everything adheres to the specified constraints. Date formats, ISTAT codes for regional locations, and the guaranteed time format all need to be strictly followed.\n\nThe announcement itself, \"Linee Automobilistiche: Avviso di sciopero generale nazionale lunedì 22 settembre 2025,\" is my starting point. The date is clearly September 22, 2025. It specifies a 23-hour strike for travel staff and a 24-hour strike for other staff. Guaranteed service times are between \"05:30-08:30\" and \"16:30-19:30\". The crucial part is that the scope is \"Nazionale\" – national.\n\nBased on this, I'm setting `isStrike` to true, no question about that. The `startDate` will be 2025-09-22 00:00:00, because, conventionally, a 24-hour strike starts at midnight. The `endDate` will be 2025-09-22 23:59:59. Given that the strike is described as national, the `locationType` is definitely \"NATIONAL,\" and therefore, `locationCodes` is omitted because it’s not applicable. The `guaranteedTimes` will be an array containing \"05:30-08:30\" and \"16:30-19:30.\"\n\nNow, a quick check against my mentally constructed JSON schema: I'm confident that the second object in the `anyOf` schema should be correct. Finally, I confirm the following:\n*   `isStrike`: true\n*   `strikeData`:\n    *   `startDate`: \"2025-09-22 00:00:00\"\n    *   `endDate`: \"2025-09-22 23:59:59\"\n    *   `locationType`: \"NATIONAL\"\n    *   `guaranteedTimes`: [\"05:30-08:30\", \"16:30-19:30\"]\n\nJust a moment... It's important to remember that this announcement is from EAV, the Campania transport company. However, the announcement says \"sciopero generale nazionale,\" or national strike, so, I will stick to \"NATIONAL.\" That's the correct way to handle it.\n\n\n"
+    "durationMs": 11926
   }
 }

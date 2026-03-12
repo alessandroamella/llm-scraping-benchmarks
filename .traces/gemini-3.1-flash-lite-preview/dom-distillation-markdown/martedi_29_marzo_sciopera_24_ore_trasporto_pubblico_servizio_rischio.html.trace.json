@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-03-09T16:18:05.502Z",
+  "timestamp": "2026-03-12T01:45:26.486Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "ATAC",
     "fileName": "martedi_29_marzo_sciopera_24_ore_trasporto_pubblico_servizio_rischio.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "dom-distillation-markdown",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"ATAC\" (the public transport company of Rome, Lazio (12)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: Martedì 29 marzo sciopera 24 ore il trasporto pubblico. Servizio a rischio - Roma Servizi per la Mobilità\n\n* * *\n\n# Martedì 29 marzo sciopera 24 ore il trasporto pubblico. Servizio a rischio\n\nPubblicato il: 24/03/2022 - Aggiornato il: 25/01/2023\n\nMartedì 29 marzo trasporto pubblico a rischio per lo sciopero di 24 ore indetto tra i lavoratori dell’Atac dal sindacato Faisa Cisal. L’agitazione interesserà l’intera rete Atac. Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20. Lo sciopero non coinvolgerà le linee periferiche gestite dalla Roma Tpl. Aggiornamenti in tempo reale su romamobilita.it"
   },
   "response": {
@@ -27,17 +27,16 @@
     },
     "usage": {
       "input": 665,
-      "output": 126,
-      "total": 1300
+      "output": 140,
+      "total": 1457
     },
     "costUsd": {
       "inputCost": 0.00016625,
-      "outputCost": 0.000189,
-      "thinkingCost": 0.0007635,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.000978,
       "cachedCost": 0,
-      "totalCost": 0.00111875
+      "totalCost": 0.00135425
     },
-    "durationMs": 5976,
-    "thoughts": "**Analyzing the ATAC Strike on March 29th**\n\nOkay, let's break this down. The document clearly indicates a full, 24-hour strike affecting public transport in Rome, specifically operated by ATAC. The date is Tuesday, March 29th, 2022. I need to make sure I'm precise with the scope, this is a regional issue, targeting Lazio, code 12, to be precise.\n\nThe guaranteed service periods are critical. Initially, the document notes service will be guaranteed *fino alle 8,30* and *dalle 17 alle 20*. So, that translates to service being regular from the start of the day until 08:30 and then again from 17:00 to 20:00. These guaranteed times will be crucial for any travel planning, so I need to accurately represent them. I will confirm this by double checking the textual explanation alongside my structured data.\n\nTherefore, the strike period runs from the start of March 29th to the end of that day. The `guaranteedTimes` are thus 00:00-08:30 and 17:00-20:00. This is a crucial element for anyone who relies on public transport within the affected area. It's a binary case, yes/no: `isStrike`: true, and my calculations have confirmed the start and end dates. Good, I think I have a solid understanding of the implications here.\n\n\n"
+    "durationMs": 6718
   }
 }

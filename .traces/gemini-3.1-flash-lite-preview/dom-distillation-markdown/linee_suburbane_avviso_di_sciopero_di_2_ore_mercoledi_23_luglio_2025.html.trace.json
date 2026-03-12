@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-03-09T16:10:35.853Z",
+  "timestamp": "2026-03-12T01:45:08.418Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "EAV",
     "fileName": "linee_suburbane_avviso_di_sciopero_di_2_ore_mercoledi_23_luglio_2025.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "dom-distillation-markdown",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"EAV\" (the public transport company of Campania (15)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: Linee Suburbane: Avviso di sciopero di 2 ore mercoledì 23 luglio 2025 - EAV srl\n\n* * *\n\n## Linee Suburbane: Avviso di sciopero di 2 ore mercoledì 23 luglio 2025\n\nData:  \n**22 Luglio 2025**\n\nSi comunica che, ai sensi dell’art. 2 comma 7 della L.146/90 (fattispecie: gravi eventi lesivi dell’incolumità e della sicurezza dei lavoratori) e delle integrazioni alla stessa della L.83/2000 e successive modifiche, per mercoledì 23 luglio 2025 la O.S. Faisa Confail ha proclamato uno sciopero aziendale di 2 ore, dalle ore 09:00 alle ore 11:00, avente le seguenti motivazioni: sicurezza sul posto di lavoro per il personale front-line di EAV S.r.l. (autisti, macchinisti, capitreno, gestori, capistazione, Pl e biglietterie)\n\nDurante l’ultima proclamazione di sciopero della citata O.S., la percentuale di adesione è stata del 2,32% (sciopero di 4 ore del 10/01/2025)\n\nDi seguito vengono elencate le ultime e le prime partenze garantite in relazione alle fasce di garanzia.\n\nDurante l’orario di sciopero, l’effettuazione delle corse è subordinata al numero di lavoratori aderenti allo sciopero.\n\n**Ultime partenze prima dello sciopero** \n\n-   da Napoli per Piedimonte treno 7862 delle ore 08:36\n-   da Piedimonte per Napoli treno 7863/7874 delle ore 08:27\n\n**Prime partenze dopo lo sciopero**\n\n-   da Napoli per Piedimonte treno 7877/7864 delle ore 11:38\n-   da Piedimonte per Napoli treno 7867 delle ore 13:13\n\nSulla Linea NAPOLI- BENEVENTO sarà garantito il servizio automobilistico sostitutivo come da programma feriale.  \nIl servizio è effettuato dalla società D’AGOSTINO TOURS.\n\n**Categoria:** [Trasporto pubblico](https://www.eavsrl.it/categoria-disservizio/trasporto-pubblico/)\n\n**Area:** [Linee Suburbane](https://www.eavsrl.it/area/linee-suburbane/)"
   },
   "response": {
@@ -24,16 +24,15 @@
     "usage": {
       "input": 1076,
       "output": 99,
-      "total": 1760
+      "total": 1594
     },
     "costUsd": {
       "inputCost": 0.000269,
       "outputCost": 0.0001485,
-      "thinkingCost": 0.0008775,
+      "thinkingCost": 0.0006285,
       "cachedCost": 0,
-      "totalCost": 0.001295
+      "totalCost": 0.001046
     },
-    "durationMs": 7927,
-    "thoughts": "**Analyzing the EAV Strike Announcement**\n\nOkay, let's break this down. I have an announcement from EAV in Campania, Italy, and my objective is clear: determine if this is a strike and then extract the relevant data into a specific JSON format. I need to be precise here, ensuring I adhere to the schema's requirements.\n\nFirst, the key data points jump out. It's a strike by EAV in Campania. The date is July 23, 2025, and it's scheduled to last for two hours, from 9:00 to 11:00. Location is Campania, specifically Region 15, making it a regional strike.\n\nNow, for the JSON structure. `isStrike` is obviously true. The `startDate` is 2025-07-23 09:00:00, and the `endDate` is 2025-07-23 11:00:00. The `locationType` is definitely \"REGIONAL\", and the `locationCodes` array correctly contains [\"15\"].\n\nThe tricky part, as usual, are the \"guaranteed times.\" The text mentions \"ultime partenze prima dello sciopero\" and \"prime partenze dopo lo sciopero,\" but it *doesn't* explicitly define guaranteed time ranges in the standard \"HH:mm-HH:mm\" format expected by the system. My interpretation is that these are *departures*, not predefined *time windows* that must be guaranteed to run, so I'll omit the `guaranteedTimes` field entirely.\n\nTherefore, the final output needs to be this exact JSON, which I have verified as being correct:\n\n`{ \"isStrike\": true, \"strikeData\": { \"startDate\": \"2025-07-23 09:00:00\", \"endDate\": \"2025-07-23 11:00:00\", \"locationType\": \"REGIONAL\", \"locationCodes\": [\"15\"] } }`\n\nAlright. I'm satisfied. This data extraction is complete and accurately reflects the announcement, while adhering exactly to the requirements.\n\n\n"
+    "durationMs": 29228
   }
 }

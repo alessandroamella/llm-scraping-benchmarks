@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-03-09T16:10:33.664Z",
+  "timestamp": "2026-03-12T01:45:06.880Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "EAV",
     "fileName": "eav_autolinee_avviso_di_sciopero_di_24_ore_lunedi_24_febbraio_2025.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "dom-distillation-markdown",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"EAV\" (the public transport company of Campania (15)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: EAV Autolinee- Avviso di sciopero di 24 ore lunedì 24 febbraio 2025 - EAV srl\n\n* * *\n\n## EAV Autolinee- Avviso di sciopero di 24 ore lunedì 24 febbraio 2025\n\nData:  \n**20 Febbraio 2025**\n\nPer il giorno 24 febbraio 2025 la O.S. USB ha proclamato azione di sciopero per adesione a sciopero nazionale di 24 ore avente le seguenti motivazioni:\n\nmaggiore sicurezza dei lavoratori e del servizio\n\nincremento delle retribuzioni mensili.\n\nDurante l’ultima proclamazione di sciopero della O.S. USB, la percentuale di adesione è stata del 9,2% (sciopero generale nazionale di 24 ore del 13 dicembre 2024)\n\nIl servizio sarà effettuato nelle seguenti fasce di garanzia: dalle ore 05:30 alle ore 8:30 e dalle ore 16:30 alle ore 19:30.\n\nDurante l’orario di sciopero l’effettuazione delle corse è subordinata al numero di lavoratori aderenti allo sciopero."
   },
   "response": {
@@ -28,16 +28,15 @@
     "usage": {
       "input": 747,
       "output": 140,
-      "total": 1322
+      "total": 1378
     },
     "costUsd": {
       "inputCost": 0.00018675,
       "outputCost": 0.00021,
-      "thinkingCost": 0.0006525,
+      "thinkingCost": 0.0007365,
       "cachedCost": 0,
-      "totalCost": 0.00104925
+      "totalCost": 0.00113325
     },
-    "durationMs": 6781,
-    "thoughts": "**Strike Analysis: EAV Campania - February 24, 2025**\n\nOkay, let's break this down. My input is an announcement regarding a strike by EAV in Campania, set for February 24, 2025. My primary goal is to determine if it is a strike, what the relevant details are, and represent them in a structured way.\n\nFirst, I confirm: Yes, it's definitively a strike announcement. Now, extracting the crucial details: the strike is scheduled for a full 24 hours on Monday, February 24th, 2025. Given that it's a 24-hour event, I'll represent the start time as 00:00:00 and the end time as 23:59:59 on that day. It's important to be precise here.\n\nNext, I need to define the location. Given that EAV operates regionally within Campania, I'll set the `locationType` to \"REGIONAL\". Campania's region code is \"15,\" so I'll store it as a string within the `locationCodes` array.\n\nFinally, I need to extract the guaranteed service times. The announcement specifies \"05:30-08:30\" and \"16:30-19:30\". I'll format these as strings in the `guaranteedTimes` array.\n\nWith that, I've constructed a clear and concise JSON representation:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-02-24 00:00:00\",\n    \"endDate\": \"2025-02-24 23:59:59\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"15\"],\n    \"guaranteedTimes\": [\"05:30-08:30\", \"16:30-19:30\"]\n  }\n}\n```\n\nNow, I'll run my standard validation checks: This is valid JSON, has no extraneous comments or text, the date and time format is correct ('yyyy-MM-dd HH:mm:ss'), the guaranteed times are appropriately formatted ('HH:mm-HH:mm'), and the location codes are stored as a string array. Confirmed: the information is well-structured and ready for processing.\n\n\n"
+    "durationMs": 6140
   }
 }

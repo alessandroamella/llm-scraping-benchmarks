@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-03-09T16:10:35.498Z",
+  "timestamp": "2026-03-12T01:45:08.170Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "EAV",
     "fileName": "linee_vesuviane_avviso_di_sciopero_24h_venerdi_20_giugno_2025.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "dom-distillation-markdown",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"EAV\" (the public transport company of Campania (15)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: Linee Vesuviane: Avviso di Sciopero 24h venerdì 20 giugno 2025 - EAV srl\n\n* * *\n\n## Linee Vesuviane: Avviso di Sciopero 24h venerdì 20 giugno 2025\n\nData:  \n**15 Giugno 2025**\n\nPer il giorno 20 giugno 2025 la O.S. USB ha proclamato azione di sciopero per adesione a sciopero nazionale di 24 ore avente le seguenti motivazioni: per una maggiore sicurezza dei lavoratori e del servizio ed un incremento delle retribuzioni mensili.\n\nDurante l’ultima proclamazione di sciopero della O.S. USB, la percentuale di adesione è stata del 7,02% (sciopero generale nazionale di 24 ore del 24 febbraio 2025)\n\nDi seguito vengono elencate le ultime e le prime partenze garantite in relazione alle fasce di garanzia. Durante l’orario di sciopero l’effettuazione delle corse è subordinata al numero di lavoratori aderenti allo sciopero.\n\n**_Servizio garantito dalle ore 05:30 alle ore 8:30 e dalle ore 16:30 alle ore 19:30_**\n\n**Ultime partenze garantite prima dello sciopero – fascia operatività servizio dalle ore 5:30 alle ore 08:30**\n\n**da Napoli per**\n\n-   Sorrento                    08:05\n-   Poggiomarino           08:14\n-   Sarno                          08:10\n-   Torre Annunziata    08:26 diretto\n\n**per Napoli da**\n\n-   Sorrento                    08:14\n-   Poggiomarino          08:18\n-   Sarno                         08:26\n-   Torre Annunziata    08:44 treno 4082 da Poggiomarino\n\n**Prime partenze garantite dopo lo sciopero – fascia operatività servizio dalle 16.30 alle 19.30**\n\n**da Napoli per**\n\n-   Sorrento                    17:05\n-   Poggiomarino          16:38\n-   Torre Annunziata    16:45\n-   Sarno                          16:34\n\n**per Napoli da**\n\n-   Sorrento                   16:38\n-   Poggiomarino          16:42\n-   Sarno                         16:50\n-   Torre Annunziata    16:57\n\n**Ultime partenze garantite prima dello sciopero – fascia operatività servizio dalle 16.30 alle 19.30**\n\n**da Napoli per**       \n\n-   Sorrento                    19:29\n-   Poggiomarino          19:02\n-   Sarno                         18:58\n-   Torre Annunziata    19:09\n\n**per Napoli da**\n\n-   Sorrento                     19:02\n-   Poggiomarino          18:30\n-   Sarno                         19:14\n-   Torre Annunziata    19:21\n\n**Servizio sostitutivo linea Napoli-Baiano**\n\nLe fasce di garanzia previste per i servizi automobilistici espletati sulla direttrice Napoli – Baiano da AIR Campania sono le seguenti:\n\n-   dalle ore 06:00 alle ore 08:00\n-   dalle ore 13:00 alle ore 15:00\n-   dalle ore 17.00 alle ore 19:00\n\n**Servizio sostitutivo linea Napoli-Baiano**\n\nLe fasce di garanzia previste per i servizi automobilistici espletati sulla direttrice Napoli – Baiano da AIR Campania sono le seguenti:\n\n-   dalle ore 06:00 alle ore 08:00\n-   dalle ore 13:00 alle ore 15:00\n-   dalle ore 17.00 alle ore 19:00\n\n**Categoria:** [Trasporto pubblico](https://www.eavsrl.it/categoria-disservizio/trasporto-pubblico/)\n\n**Area:** [Linee Vesuviane](https://www.eavsrl.it/area/linee-vesuviane/)"
   },
   "response": {
@@ -28,16 +28,15 @@
     "usage": {
       "input": 2049,
       "output": 140,
-      "total": 2807
+      "total": 2498
     },
     "costUsd": {
       "inputCost": 0.00051225,
       "outputCost": 0.00021,
-      "thinkingCost": 0.000927,
+      "thinkingCost": 0.0004635,
       "cachedCost": 0,
-      "totalCost": 0.00164925
+      "totalCost": 0.00118575
     },
-    "durationMs": 8211,
-    "thoughts": "**Strike Announcement Analysis**\n\nOkay, let's break this down. My task is to definitively determine if this document represents a strike announcement, specifically for EAV, and to structure the information according to a predefined JSON schema.  The date in question is June 20, 2025, and it's a 24-hour strike.\n\nFirst, I examine the title: \"Linee Vesuviane: Avviso di Sciopero 24h venerdì 20 giugno 2025\". \"Avviso di Sciopero\" immediately flags this as a strike notice. The content confirms it: \"Per il giorno 20 giugno 2025 la O.S. USB ha proclamato azione di sciopero per adesione a sciopero nazionale di 24 ore\".  Clear confirmation of a 24-hour strike on the specified date.\n\nNow, let's populate the JSON.  `isStrike`: true, without a doubt. The start date, based on the 24-hour duration, is `startDate`: \"2025-06-20 00:00:00\" and the end date is `endDate`: \"2025-06-20 23:59:59\".  The location is *Regional* given that EAV operates in Campania. `locationType`: \"REGIONAL\". Campania's Region Code is \"15\", so `locationCodes`: [\"15\"].  I need to extract the guaranteed service windows. The text contains guaranteed times, I will infer from it, the guaranteed times are \"05:30-08:30\" and \"16:30-19:30\", so `guaranteedTimes`: [\"05:30-08:30\", \"16:30-19:30\"].\n\nI'm validating each element now. The start date, end date, location type, location code, and guaranteed times are all valid and correctly formatted. The JSON structure is complete.\n\nTherefore, the final output would be JSON structured.\n\n\n"
+    "durationMs": 4693
   }
 }
