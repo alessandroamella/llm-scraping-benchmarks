@@ -1,5 +1,5 @@
+import * as groundTruthJson from '../../../data/ground-truth.json';
 import { BenchmarkLenientStrike } from '../schemas/benchmark-strike.schema';
-import * as groundTruthJson from './ground-truth.json';
 
 export type Company = keyof typeof groundTruth;
 

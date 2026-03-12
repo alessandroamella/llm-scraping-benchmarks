@@ -7,10 +7,7 @@ import { gfm } from 'turndown-plugin-gfm';
 
 // ⚠️ CHANGE THIS if your scraped HTML/PDF files are in a different directory
 const RAW_FILES_BASE_DIR = path.join(process.cwd(), 'benchmarks/data');
-const GROUND_TRUTH_PATH = path.join(
-  process.cwd(),
-  './benchmarks/data/ground-truth.json',
-);
+const GROUND_TRUTH_PATH = path.join(process.cwd(), '../data/ground-truth.json');
 
 // Load existing ground truth from JSON
 // ignore ts error

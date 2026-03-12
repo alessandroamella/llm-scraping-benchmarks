@@ -2,7 +2,7 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { getRegionCodeForProvince } from '../../shared/constants/provinces';
 
-const gtPath = '../data/ground-truth.ts';
+const gtPath = '../../../data/ground-truth.ts';
 let content = readFileSync(gtPath, 'utf-8');
 
 // 1. Sostituiamo i locationType
