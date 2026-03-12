@@ -211,9 +211,9 @@ export class BenchmarksService implements OnModuleInit {
 
     // test matrix
     const baseStrategies: PreProcessingStrategy[] = [
-      // 'basic-cleanup',
+      'basic-cleanup',
       'html-to-markdown',
-      // 'dom-distillation',
+      'dom-distillation',
       'dom-distillation-markdown',
       // 'raw-html', // molto costoso, non abilitare
     ];
