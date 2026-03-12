@@ -1,0 +1,504 @@
+{
+  "timestamp": "2026-02-12T11:24:24.199Z",
+  "summary": {
+    "Trenord-Manual-Regex": {
+      "totalScore": 11.83,
+      "count": 12,
+      "perfect": 11,
+      "avgPrecision": 0.9861,
+      "avgRecall": 0.9861,
+      "avgF1": 0.9861,
+      "avgDuration": 8.8,
+      "errorRate": 0.0769
+    },
+    "gpt-5-mini [html-to-markdown]": {
+      "totalScore": 0,
+      "count": 0,
+      "perfect": 0,
+      "avgPrecision": null,
+      "avgRecall": null,
+      "avgF1": null,
+      "avgDuration": null,
+      "errorRate": 1
+    },
+    "gpt-5-mini [basic-cleanup]": {
+      "totalScore": 0,
+      "count": 0,
+      "perfect": 0,
+      "avgPrecision": null,
+      "avgRecall": null,
+      "avgF1": null,
+      "avgDuration": null,
+      "errorRate": 1
+    },
+    "gpt-5-nano [html-to-markdown]": {
+      "totalScore": 0,
+      "count": 0,
+      "perfect": 0,
+      "avgPrecision": null,
+      "avgRecall": null,
+      "avgF1": null,
+      "avgDuration": null,
+      "errorRate": 1
+    },
+    "gpt-5-nano [basic-cleanup]": {
+      "totalScore": 0,
+      "count": 0,
+      "perfect": 0,
+      "avgPrecision": null,
+      "avgRecall": null,
+      "avgF1": null,
+      "avgDuration": null,
+      "errorRate": 1
+    },
+    "meta-llama/llama-4-scout-17b-16e-instruct [html-to-markdown]": {
+      "totalScore": 0,
+      "count": 0,
+      "perfect": 0,
+      "avgPrecision": null,
+      "avgRecall": null,
+      "avgF1": null,
+      "avgDuration": null,
+      "errorRate": 1
+    },
+    "meta-llama/llama-4-scout-17b-16e-instruct [basic-cleanup]": {
+      "totalScore": 0,
+      "count": 0,
+      "perfect": 0,
+      "avgPrecision": null,
+      "avgRecall": null,
+      "avgF1": null,
+      "avgDuration": null,
+      "errorRate": 1
+    },
+    "gemini-2.5-flash [html-to-markdown]": {
+      "totalScore": 0,
+      "count": 0,
+      "perfect": 0,
+      "avgPrecision": null,
+      "avgRecall": null,
+      "avgF1": null,
+      "avgDuration": null,
+      "errorRate": 1
+    },
+    "gemini-2.5-flash [basic-cleanup]": {
+      "totalScore": 0,
+      "count": 0,
+      "perfect": 0,
+      "avgPrecision": null,
+      "avgRecall": null,
+      "avgF1": null,
+      "avgDuration": null,
+      "errorRate": 1
+    },
+    "gemini-2.5-flash-lite [html-to-markdown]": {
+      "totalScore": 0,
+      "count": 0,
+      "perfect": 0,
+      "avgPrecision": null,
+      "avgRecall": null,
+      "avgF1": null,
+      "avgDuration": null,
+      "errorRate": 1
+    },
+    "gemini-2.5-flash-lite [basic-cleanup]": {
+      "totalScore": 0,
+      "count": 0,
+      "perfect": 0,
+      "avgPrecision": null,
+      "avgRecall": null,
+      "avgF1": null,
+      "avgDuration": null,
+      "errorRate": 1
+    },
+    "gemini-3-flash-preview [html-to-markdown]": {
+      "totalScore": 0,
+      "count": 0,
+      "perfect": 0,
+      "avgPrecision": null,
+      "avgRecall": null,
+      "avgF1": null,
+      "avgDuration": null,
+      "errorRate": 1
+    },
+    "gemini-3-flash-preview [basic-cleanup]": {
+      "totalScore": 0,
+      "count": 0,
+      "perfect": 0,
+      "avgPrecision": null,
+      "avgRecall": null,
+      "avgF1": null,
+      "avgDuration": null,
+      "errorRate": 1
+    },
+    "Trenord-Manual-Regex [CHAOS]": {
+      "totalScore": 1,
+      "count": 13,
+      "perfect": 1,
+      "avgPrecision": 0.0769,
+      "avgRecall": 0.0769,
+      "avgF1": 0.0769,
+      "avgDuration": 6.96,
+      "errorRate": 0
+    },
+    "gemini-2.5-flash [html-to-markdown] [CHAOS]": {
+      "totalScore": 0,
+      "count": 0,
+      "perfect": 0,
+      "avgPrecision": null,
+      "avgRecall": null,
+      "avgF1": null,
+      "avgDuration": null,
+      "errorRate": 1
+    },
+    "gpt-5-nano [basic-cleanup] [CHAOS]": {
+      "totalScore": 0,
+      "count": 0,
+      "perfect": 0,
+      "avgPrecision": null,
+      "avgRecall": null,
+      "avgF1": null,
+      "avgDuration": null,
+      "errorRate": 1
+    }
+  },
+  "details": [
+    {
+      "file": "strike-detail-venerd--29-novembre-revocato-sciopero-ferrovienord.html",
+      "parser": "Trenord-Manual-Regex",
+      "parserType": "manual",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 36
+    },
+    {
+      "file": "strike-detail-venerd--29-novembre-dalle-9-alle-13-sciopero-gener.html",
+      "parser": "Trenord-Manual-Regex",
+      "parserType": "manual",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 9,
+      "info": "Strategy: precise regex parsing"
+    },
+    {
+      "file": "strike-detail-sciopero-uiltrasporti-e-orsa-domenica-16-giugno--p.html",
+      "parser": "Trenord-Manual-Regex",
+      "parserType": "manual",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 8,
+      "info": "Strategy: precise regex parsing"
+    },
+    {
+      "file": "strike-detail-sciopero-nazionale-17-novembre-ore-9-13-personale-.html",
+      "parser": "Trenord-Manual-Regex",
+      "parserType": "manual",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 5,
+      "info": "Strategy: precise regex parsing"
+    },
+    {
+      "file": "strike-detail-sciopero-del-trasporto-ferroviario-luned--30-sette.html",
+      "parser": "Trenord-Manual-Regex",
+      "parserType": "manual",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 5,
+      "info": "Strategy: precise regex parsing"
+    },
+    {
+      "file": "strike-detail-mercoled--19-marzo-dalle-ore-9-alle-ore-17-scioper.html",
+      "parser": "Trenord-Manual-Regex",
+      "parserType": "manual",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 5,
+      "info": "Strategy: precise regex parsing"
+    },
+    {
+      "file": "strike-detail-mercoled--6-settembre--sciopero-dei-treni-regional.html",
+      "parser": "Trenord-Manual-Regex",
+      "parserType": "manual",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 5,
+      "info": "Strategy: precise regex parsing"
+    },
+    {
+      "file": "strike-detail-mercoled--5-febbraio-sciopero-dei-treni-regionali.html",
+      "parser": "Trenord-Manual-Regex",
+      "parserType": "manual",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 8,
+      "info": "Strategy: precise regex parsing"
+    },
+    {
+      "file": "strike-detail-gioved--18-luglio-dalle-9-alle-13-sciopero-del-per.html",
+      "parser": "Trenord-Manual-Regex",
+      "parserType": "manual",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 8,
+      "info": "Strategy: precise regex parsing"
+    },
+    {
+      "file": "strike-detail-gioved--14-dicembre-dalle-ore-9-alle-ore-17-sciope.html",
+      "parser": "Trenord-Manual-Regex",
+      "parserType": "manual",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 5,
+      "info": "Strategy: precise regex parsing"
+    },
+    {
+      "file": "strike-detail-luned--16-giugno-sciopero-dei-treni-regionali.html",
+      "parser": "Trenord-Manual-Regex",
+      "parserType": "manual",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 6,
+      "info": "Strategy: precise regex parsing"
+    },
+    {
+      "file": "strike-detail-domenica-16-novembre-dalle-ore-10-alle-ore-18-scio.html",
+      "parser": "Trenord-Manual-Regex",
+      "parserType": "manual",
+      "score": 0.83,
+      "isExactMatch": false,
+      "differences": [
+        "startDate: Expected 2025-11-16 09:00:00, got 2025-11-16 10:00:00"
+      ],
+      "precision": 0.8333,
+      "recall": 0.8333,
+      "f1": 0.8333,
+      "durationMs": 5,
+      "info": "Strategy: precise regex parsing"
+    },
+    {
+      "file": "strike-detail-venerd--29-novembre-revocato-sciopero-ferrovienord.html",
+      "parser": "Trenord-Manual-Regex [CHAOS]",
+      "parserType": "manual",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 6
+    },
+    {
+      "file": "strike-detail-venerd--29-novembre-dalle-9-alle-13-sciopero-gener.html",
+      "parser": "Trenord-Manual-Regex [CHAOS]",
+      "parserType": "manual",
+      "score": 0,
+      "isExactMatch": false,
+      "differences": [
+        "isStrike: Expected true, got false"
+      ],
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "durationMs": 5
+    },
+    {
+      "file": "strike-detail-sciopero-uiltrasporti-e-orsa-domenica-16-giugno--p.html",
+      "parser": "Trenord-Manual-Regex [CHAOS]",
+      "parserType": "manual",
+      "score": 0,
+      "isExactMatch": false,
+      "differences": [
+        "isStrike: Expected true, got false"
+      ],
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "durationMs": 5
+    },
+    {
+      "file": "strike-detail-sciopero-nazionale-17-novembre-ore-9-13-personale-.html",
+      "parser": "Trenord-Manual-Regex [CHAOS]",
+      "parserType": "manual",
+      "score": 0,
+      "isExactMatch": false,
+      "differences": [
+        "isStrike: Expected true, got false"
+      ],
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "durationMs": 5
+    },
+    {
+      "file": "strike-detail-sciopero-del-trasporto-ferroviario-luned--30-sette.html",
+      "parser": "Trenord-Manual-Regex [CHAOS]",
+      "parserType": "manual",
+      "score": 0,
+      "isExactMatch": false,
+      "differences": [
+        "isStrike: Expected true, got false"
+      ],
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "durationMs": 9
+    },
+    {
+      "file": "strike-detail-mercoled--19-marzo-dalle-ore-9-alle-ore-17-scioper.html",
+      "parser": "Trenord-Manual-Regex [CHAOS]",
+      "parserType": "manual",
+      "score": 0,
+      "isExactMatch": false,
+      "differences": [
+        "isStrike: Expected true, got false"
+      ],
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "durationMs": 8
+    },
+    {
+      "file": "strike-detail-mercoled--6-settembre--sciopero-dei-treni-regional.html",
+      "parser": "Trenord-Manual-Regex [CHAOS]",
+      "parserType": "manual",
+      "score": 0,
+      "isExactMatch": false,
+      "differences": [
+        "isStrike: Expected true, got false"
+      ],
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "durationMs": 9
+    },
+    {
+      "file": "strike-detail-mercoled--5-febbraio-sciopero-dei-treni-regionali.html",
+      "parser": "Trenord-Manual-Regex [CHAOS]",
+      "parserType": "manual",
+      "score": 0,
+      "isExactMatch": false,
+      "differences": [
+        "isStrike: Expected true, got false"
+      ],
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "durationMs": 8
+    },
+    {
+      "file": "strike-detail-gioved--18-luglio-dalle-9-alle-13-sciopero-del-per.html",
+      "parser": "Trenord-Manual-Regex [CHAOS]",
+      "parserType": "manual",
+      "score": 0,
+      "isExactMatch": false,
+      "differences": [
+        "isStrike: Expected true, got false"
+      ],
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "durationMs": 9
+    },
+    {
+      "file": "strike-detail-gioved--14-dicembre-dalle-ore-9-alle-ore-17-sciope.html",
+      "parser": "Trenord-Manual-Regex [CHAOS]",
+      "parserType": "manual",
+      "score": 0,
+      "isExactMatch": false,
+      "differences": [
+        "isStrike: Expected true, got false"
+      ],
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "durationMs": 7
+    },
+    {
+      "file": "strike-detail-venerd--12-dicembre-da-mezzanotte-alle-21-sciopero.html",
+      "parser": "Trenord-Manual-Regex [CHAOS]",
+      "parserType": "manual",
+      "score": 0,
+      "isExactMatch": false,
+      "differences": [
+        "isStrike: Expected true, got false"
+      ],
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "durationMs": 8
+    },
+    {
+      "file": "strike-detail-luned--16-giugno-sciopero-dei-treni-regionali.html",
+      "parser": "Trenord-Manual-Regex [CHAOS]",
+      "parserType": "manual",
+      "score": 0,
+      "isExactMatch": false,
+      "differences": [
+        "isStrike: Expected true, got false"
+      ],
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "durationMs": 5
+    },
+    {
+      "file": "strike-detail-domenica-16-novembre-dalle-ore-10-alle-ore-18-scio.html",
+      "parser": "Trenord-Manual-Regex [CHAOS]",
+      "parserType": "manual",
+      "score": 0,
+      "isExactMatch": false,
+      "differences": [
+        "isStrike: Expected true, got false"
+      ],
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "durationMs": 5
+    }
+  ]
+}

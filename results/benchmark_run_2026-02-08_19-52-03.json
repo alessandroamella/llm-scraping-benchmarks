@@ -1,0 +1,3179 @@
+{
+  "timestamp": "2026-02-08T18:52:03.298Z",
+  "summary": {
+    "gpt-5-mini [html-to-markdown]": {
+      "totalScore": 13.5,
+      "count": 14,
+      "perfect": 12,
+      "avgPrecision": 0.9643,
+      "avgRecall": 0.9643,
+      "avgF1": 0.9643,
+      "avgDuration": 12400,
+      "errorRate": 0,
+      "totalCostUsd": 0.0455,
+      "costPerFile": 0.00325
+    },
+    "gpt-5-mini [basic-cleanup]": {
+      "totalScore": 13.25,
+      "count": 14,
+      "perfect": 11,
+      "avgPrecision": 0.9464,
+      "avgRecall": 0.9464,
+      "avgF1": 0.9464,
+      "avgDuration": 11311.43,
+      "errorRate": 0,
+      "totalCostUsd": 0.0615,
+      "costPerFile": 0.00439
+    },
+    "gpt-5-nano [html-to-markdown]": {
+      "totalScore": 13.3,
+      "count": 14,
+      "perfect": 11,
+      "avgPrecision": 0.95,
+      "avgRecall": 0.95,
+      "avgF1": 0.95,
+      "avgDuration": 18554.64,
+      "errorRate": 0,
+      "totalCostUsd": 0.0153,
+      "costPerFile": 0.0011
+    },
+    "gpt-5-nano [basic-cleanup]": {
+      "totalScore": 13.3,
+      "count": 14,
+      "perfect": 11,
+      "avgPrecision": 0.95,
+      "avgRecall": 0.95,
+      "avgF1": 0.95,
+      "avgDuration": 20426,
+      "errorRate": 0,
+      "totalCostUsd": 0.0211,
+      "costPerFile": 0.00151
+    },
+    "gemini-2.5-flash [html-to-markdown]": {
+      "totalScore": 13.5,
+      "count": 14,
+      "perfect": 12,
+      "avgPrecision": 0.9643,
+      "avgRecall": 0.9643,
+      "avgF1": 0.9643,
+      "avgDuration": 5397.57,
+      "errorRate": 0,
+      "totalCostUsd": 0.0263,
+      "costPerFile": 0.00188
+    },
+    "gemini-2.5-flash [basic-cleanup]": {
+      "totalScore": 13.75,
+      "count": 14,
+      "perfect": 13,
+      "avgPrecision": 0.9821,
+      "avgRecall": 0.9821,
+      "avgF1": 0.9821,
+      "avgDuration": 8261.71,
+      "errorRate": 0,
+      "totalCostUsd": 0.044,
+      "costPerFile": 0.00314
+    },
+    "gemini-2.5-flash-lite [html-to-markdown]": {
+      "totalScore": 13,
+      "count": 14,
+      "perfect": 9,
+      "avgPrecision": 0.9286,
+      "avgRecall": 0.9286,
+      "avgF1": 0.9286,
+      "avgDuration": 1377.5,
+      "errorRate": 0,
+      "totalCostUsd": 0.0083,
+      "costPerFile": 0.00059
+    },
+    "gemini-2.5-flash-lite [basic-cleanup]": {
+      "totalScore": 12.24,
+      "count": 14,
+      "perfect": 9,
+      "avgPrecision": 0.8786,
+      "avgRecall": 0.8714,
+      "avgF1": 0.8746,
+      "avgDuration": 1326.07,
+      "errorRate": 0,
+      "totalCostUsd": 0.0138,
+      "costPerFile": 0.00099
+    }
+  },
+  "details": [
+    {
+      "file": "strike-detail-venerd--29-novembre-revocato-sciopero-ferrovienord.html",
+      "parser": "gpt-5-mini [html-to-markdown]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 17253,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "gpt-5-mini",
+      "costUsd": {
+        "inputCost": 0.00119875,
+        "outputCost": 0.002248,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.00344675
+      },
+      "hash": "49dd1e3720b63c89849ca729bcc339ec",
+      "tokens": {
+        "input": 4795,
+        "output": 1124,
+        "total": 5919
+      }
+    },
+    {
+      "file": "strike-detail-venerd--29-novembre-revocato-sciopero-ferrovienord.html",
+      "parser": "gpt-5-mini [basic-cleanup]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 15191,
+      "preProcessingStrategy": "basic-cleanup",
+      "model": "gpt-5-mini",
+      "costUsd": {
+        "inputCost": 0.002409,
+        "outputCost": 0.002296,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.004705
+      },
+      "hash": "11ccdbe7281e5d84b2faae7dcbbd1994",
+      "tokens": {
+        "input": 9636,
+        "output": 1148,
+        "total": 10784
+      }
+    },
+    {
+      "file": "strike-detail-venerd--29-novembre-revocato-sciopero-ferrovienord.html",
+      "parser": "gpt-5-nano [html-to-markdown]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 36121,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "gpt-5-nano",
+      "costUsd": {
+        "inputCost": 0.00023975,
+        "outputCost": 0.0008592000000000001,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.00109895
+      },
+      "hash": "2783fc527e467cd1b57a4a740e6cb750",
+      "tokens": {
+        "input": 4795,
+        "output": 2148,
+        "total": 6943
+      }
+    },
+    {
+      "file": "strike-detail-venerd--29-novembre-revocato-sciopero-ferrovienord.html",
+      "parser": "gpt-5-nano [basic-cleanup]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 26636,
+      "preProcessingStrategy": "basic-cleanup",
+      "model": "gpt-5-nano",
+      "costUsd": {
+        "inputCost": 0.00048180000000000006,
+        "outputCost": 0.0012288000000000002,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0017106000000000003
+      },
+      "hash": "ffded60371fcb8d47b62c949819cc7c5",
+      "tokens": {
+        "input": 9636,
+        "output": 3072,
+        "total": 12708
+      }
+    },
+    {
+      "file": "strike-detail-venerd--29-novembre-revocato-sciopero-ferrovienord.html",
+      "parser": "gemini-2.5-flash [html-to-markdown]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 8150,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "gemini-2.5-flash",
+      "costUsd": {
+        "inputCost": 0.0014646,
+        "outputCost": 0.000015,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0014796
+      },
+      "hash": "e3de0174315eb59d0be4b2d8d771a737",
+      "tokens": {
+        "input": 4882,
+        "output": 6,
+        "total": 5612
+      }
+    },
+    {
+      "file": "strike-detail-venerd--29-novembre-revocato-sciopero-ferrovienord.html",
+      "parser": "gemini-2.5-flash [basic-cleanup]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 4024,
+      "preProcessingStrategy": "basic-cleanup",
+      "model": "gemini-2.5-flash",
+      "costUsd": {
+        "inputCost": 0.0026181,
+        "outputCost": 0.000015,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0026330999999999998
+      },
+      "hash": "2b0af95224d870f305d30791fe15e588",
+      "tokens": {
+        "input": 8727,
+        "output": 6,
+        "total": 9114
+      }
+    },
+    {
+      "file": "strike-detail-venerd--29-novembre-revocato-sciopero-ferrovienord.html",
+      "parser": "gemini-2.5-flash-lite [html-to-markdown]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 2779,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "gemini-2.5-flash-lite",
+      "costUsd": {
+        "inputCost": 0.00048820000000000005,
+        "outputCost": 0.000004000000000000001,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0004922
+      },
+      "hash": "afb62a3043c07b5277f5640a3a172615",
+      "tokens": {
+        "input": 4882,
+        "output": 10,
+        "total": 4892
+      }
+    },
+    {
+      "file": "strike-detail-venerd--29-novembre-revocato-sciopero-ferrovienord.html",
+      "parser": "gemini-2.5-flash-lite [basic-cleanup]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 2956,
+      "preProcessingStrategy": "basic-cleanup",
+      "model": "gemini-2.5-flash-lite",
+      "costUsd": {
+        "inputCost": 0.0008727000000000001,
+        "outputCost": 0.000004000000000000001,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0008767000000000001
+      },
+      "hash": "0e7b33de5c4932683ecf72d6a094a852",
+      "tokens": {
+        "input": 8727,
+        "output": 10,
+        "total": 8737
+      }
+    },
+    {
+      "file": "strike-detail-venerd--29-novembre-dalle-9-alle-13-sciopero-gener.html",
+      "parser": "gpt-5-mini [html-to-markdown]",
+      "parserType": "ai",
+      "score": 0.75,
+      "isExactMatch": false,
+      "differences": [
+        "locationType: Expected NATIONAL, got REGION"
+      ],
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "durationMs": 16406,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "gpt-5-mini",
+      "costUsd": {
+        "inputCost": 0.0013585,
+        "outputCost": 0.002372,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0037305
+      },
+      "hash": "32ab8bd992f6ef6eb6a60e274de927bd",
+      "tokens": {
+        "input": 5434,
+        "output": 1186,
+        "total": 6620
+      }
+    },
+    {
+      "file": "strike-detail-venerd--29-novembre-dalle-9-alle-13-sciopero-gener.html",
+      "parser": "gpt-5-mini [basic-cleanup]",
+      "parserType": "ai",
+      "score": 0.75,
+      "isExactMatch": false,
+      "differences": [
+        "locationType: Expected NATIONAL, got REGION"
+      ],
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "durationMs": 14802,
+      "preProcessingStrategy": "basic-cleanup",
+      "model": "gpt-5-mini",
+      "costUsd": {
+        "inputCost": 0.00259325,
+        "outputCost": 0.002304,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0048972500000000006
+      },
+      "hash": "eed68ea6c35bb38adbb0b1f9f3d4c3b0",
+      "tokens": {
+        "input": 10373,
+        "output": 1152,
+        "total": 11525
+      }
+    },
+    {
+      "file": "strike-detail-venerd--29-novembre-dalle-9-alle-13-sciopero-gener.html",
+      "parser": "gpt-5-nano [html-to-markdown]",
+      "parserType": "ai",
+      "score": 0.75,
+      "isExactMatch": false,
+      "differences": [
+        "locationType: Expected NATIONAL, got REGION"
+      ],
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "durationMs": 16090,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "gpt-5-nano",
+      "costUsd": {
+        "inputCost": 0.0002717,
+        "outputCost": 0.000758,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0010297
+      },
+      "hash": "3f136c1b9107f4d34657f4f179b0b0c1",
+      "tokens": {
+        "input": 5434,
+        "output": 1895,
+        "total": 7329
+      }
+    },
+    {
+      "file": "strike-detail-venerd--29-novembre-dalle-9-alle-13-sciopero-gener.html",
+      "parser": "gpt-5-nano [basic-cleanup]",
+      "parserType": "ai",
+      "score": 0.75,
+      "isExactMatch": false,
+      "differences": [
+        "locationType: Expected NATIONAL, got REGION"
+      ],
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "durationMs": 23866,
+      "preProcessingStrategy": "basic-cleanup",
+      "model": "gpt-5-nano",
+      "costUsd": {
+        "inputCost": 0.0005186500000000001,
+        "outputCost": 0.0010768,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.00159545
+      },
+      "hash": "2d12219d78e8e0965b81497874889f1d",
+      "tokens": {
+        "input": 10373,
+        "output": 2692,
+        "total": 13065
+      }
+    },
+    {
+      "file": "strike-detail-venerd--29-novembre-dalle-9-alle-13-sciopero-gener.html",
+      "parser": "gemini-2.5-flash [html-to-markdown]",
+      "parserType": "ai",
+      "score": 0.75,
+      "isExactMatch": false,
+      "differences": [
+        "locationType: Expected NATIONAL, got REGION"
+      ],
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "durationMs": 8811,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "gemini-2.5-flash",
+      "costUsd": {
+        "inputCost": 0.0016602,
+        "outputCost": 0.0004325,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0020927
+      },
+      "hash": "e81b384eed3b30f614545f7c0e9ef3b6",
+      "tokens": {
+        "input": 5534,
+        "output": 173,
+        "total": 7595
+      }
+    },
+    {
+      "file": "strike-detail-venerd--29-novembre-dalle-9-alle-13-sciopero-gener.html",
+      "parser": "gemini-2.5-flash [basic-cleanup]",
+      "parserType": "ai",
+      "score": 0.75,
+      "isExactMatch": false,
+      "differences": [
+        "locationType: Expected NATIONAL, got REGION"
+      ],
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "durationMs": 10476,
+      "preProcessingStrategy": "basic-cleanup",
+      "model": "gemini-2.5-flash",
+      "costUsd": {
+        "inputCost": 0.0028356,
+        "outputCost": 0.000345,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0031806
+      },
+      "hash": "ec9d56630363d8e8c888aeeb9c949707",
+      "tokens": {
+        "input": 9452,
+        "output": 138,
+        "total": 11994
+      }
+    },
+    {
+      "file": "strike-detail-venerd--29-novembre-dalle-9-alle-13-sciopero-gener.html",
+      "parser": "gemini-2.5-flash-lite [html-to-markdown]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 1022,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "gemini-2.5-flash-lite",
+      "costUsd": {
+        "inputCost": 0.0005534,
+        "outputCost": 0.0000488,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0006022
+      },
+      "hash": "b7d96d28225f2fc7fe2024842dfb02c2",
+      "tokens": {
+        "input": 5534,
+        "output": 122,
+        "total": 5656
+      }
+    },
+    {
+      "file": "strike-detail-venerd--29-novembre-dalle-9-alle-13-sciopero-gener.html",
+      "parser": "gemini-2.5-flash-lite [basic-cleanup]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 1725,
+      "preProcessingStrategy": "basic-cleanup",
+      "model": "gemini-2.5-flash-lite",
+      "costUsd": {
+        "inputCost": 0.0009452000000000001,
+        "outputCost": 0.0000872,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0010324000000000002
+      },
+      "hash": "edc71c2dd2814597779a970c8855d1e3",
+      "tokens": {
+        "input": 9452,
+        "output": 218,
+        "total": 9670
+      }
+    },
+    {
+      "file": "strike-detail-venerd--8-novembre-sciopero-del-personale-ferrovie.html",
+      "parser": "gpt-5-mini [html-to-markdown]",
+      "parserType": "ai",
+      "score": 0.75,
+      "isExactMatch": false,
+      "differences": [
+        "locationType: Expected NATIONAL, got REGION"
+      ],
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "durationMs": 11669,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "gpt-5-mini",
+      "costUsd": {
+        "inputCost": 0.00134625,
+        "outputCost": 0.001856,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0032022500000000002
+      },
+      "hash": "cb3e7a3cc211c8f806ed88a83723888f",
+      "tokens": {
+        "input": 5385,
+        "output": 928,
+        "total": 6313
+      }
+    },
+    {
+      "file": "strike-detail-venerd--8-novembre-sciopero-del-personale-ferrovie.html",
+      "parser": "gpt-5-mini [basic-cleanup]",
+      "parserType": "ai",
+      "score": 0.75,
+      "isExactMatch": false,
+      "differences": [
+        "locationType: Expected NATIONAL, got REGION"
+      ],
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "durationMs": 10473,
+      "preProcessingStrategy": "basic-cleanup",
+      "model": "gpt-5-mini",
+      "costUsd": {
+        "inputCost": 0.002575,
+        "outputCost": 0.001976,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0045509999999999995
+      },
+      "hash": "db5bfd503671d29b225a5312811d64bd",
+      "tokens": {
+        "input": 10300,
+        "output": 988,
+        "total": 11288
+      }
+    },
+    {
+      "file": "strike-detail-venerd--8-novembre-sciopero-del-personale-ferrovie.html",
+      "parser": "gpt-5-nano [html-to-markdown]",
+      "parserType": "ai",
+      "score": 0.75,
+      "isExactMatch": false,
+      "differences": [
+        "locationType: Expected NATIONAL, got REGION"
+      ],
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "durationMs": 23188,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "gpt-5-nano",
+      "costUsd": {
+        "inputCost": 0.00026925,
+        "outputCost": 0.0009068,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.00117605
+      },
+      "hash": "5d344bd946e2461ef0ff57c72afe81c7",
+      "tokens": {
+        "input": 5385,
+        "output": 2267,
+        "total": 7652
+      }
+    },
+    {
+      "file": "strike-detail-venerd--8-novembre-sciopero-del-personale-ferrovie.html",
+      "parser": "gpt-5-nano [basic-cleanup]",
+      "parserType": "ai",
+      "score": 0.75,
+      "isExactMatch": false,
+      "differences": [
+        "locationType: Expected NATIONAL, got REGION"
+      ],
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "durationMs": 19745,
+      "preProcessingStrategy": "basic-cleanup",
+      "model": "gpt-5-nano",
+      "costUsd": {
+        "inputCost": 0.000515,
+        "outputCost": 0.0007936000000000001,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0013086
+      },
+      "hash": "21ae98fb4dad473edb6c49a2094ad927",
+      "tokens": {
+        "input": 10300,
+        "output": 1984,
+        "total": 12284
+      }
+    },
+    {
+      "file": "strike-detail-venerd--8-novembre-sciopero-del-personale-ferrovie.html",
+      "parser": "gemini-2.5-flash [html-to-markdown]",
+      "parserType": "ai",
+      "score": 0.75,
+      "isExactMatch": false,
+      "differences": [
+        "locationType: Expected NATIONAL, got REGION"
+      ],
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "durationMs": 8339,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "gemini-2.5-flash",
+      "costUsd": {
+        "inputCost": 0.0016455,
+        "outputCost": 0.00038250000000000003,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0020280000000000003
+      },
+      "hash": "8988a27658116e2412bac3994033e835",
+      "tokens": {
+        "input": 5485,
+        "output": 153,
+        "total": 7296
+      }
+    },
+    {
+      "file": "strike-detail-venerd--8-novembre-sciopero-del-personale-ferrovie.html",
+      "parser": "gemini-2.5-flash [basic-cleanup]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 16622,
+      "preProcessingStrategy": "basic-cleanup",
+      "model": "gemini-2.5-flash",
+      "costUsd": {
+        "inputCost": 0.0028175999999999995,
+        "outputCost": 0.0004375,
+        "cachedCost": 0.00027903,
+        "thinkingCost": 0,
+        "totalCost": 0.0035341299999999995
+      },
+      "hash": "a0dfc3f7c1322c0d4cf4974e881188d7",
+      "tokens": {
+        "input": 9392,
+        "output": 175,
+        "total": 13102
+      }
+    },
+    {
+      "file": "strike-detail-venerd--8-novembre-sciopero-del-personale-ferrovie.html",
+      "parser": "gemini-2.5-flash-lite [html-to-markdown]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 1253,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "gemini-2.5-flash-lite",
+      "costUsd": {
+        "inputCost": 0.0005485,
+        "outputCost": 0.0000628,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0006113000000000001
+      },
+      "hash": "af599785b5ea4887658b8d6287dfcbf6",
+      "tokens": {
+        "input": 5485,
+        "output": 157,
+        "total": 5642
+      }
+    },
+    {
+      "file": "strike-detail-venerd--8-novembre-sciopero-del-personale-ferrovie.html",
+      "parser": "gemini-2.5-flash-lite [basic-cleanup]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 1547,
+      "preProcessingStrategy": "basic-cleanup",
+      "model": "gemini-2.5-flash-lite",
+      "costUsd": {
+        "inputCost": 0.0009392,
+        "outputCost": 0.0001068,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.001046
+      },
+      "hash": "99ddd982973cc3a4a9841ac9f1221dae",
+      "tokens": {
+        "input": 9392,
+        "output": 267,
+        "total": 9659
+      }
+    },
+    {
+      "file": "strike-detail-sciopero-uiltrasporti-e-orsa-domenica-16-giugno--p.html",
+      "parser": "gpt-5-mini [html-to-markdown]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 10203,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "gpt-5-mini",
+      "costUsd": {
+        "inputCost": 0.00128275,
+        "outputCost": 0.001586,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0028687499999999998
+      },
+      "hash": "4190e89cac3174f863d4e5271759947a",
+      "tokens": {
+        "input": 5131,
+        "output": 793,
+        "total": 5924
+      }
+    },
+    {
+      "file": "strike-detail-sciopero-uiltrasporti-e-orsa-domenica-16-giugno--p.html",
+      "parser": "gpt-5-mini [basic-cleanup]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 7220,
+      "preProcessingStrategy": "basic-cleanup",
+      "model": "gpt-5-mini",
+      "costUsd": {
+        "inputCost": 0.002517,
+        "outputCost": 0.001108,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.003625
+      },
+      "hash": "711bc6946e7cb18553c1dbd5423bd23c",
+      "tokens": {
+        "input": 10068,
+        "output": 554,
+        "total": 10622
+      }
+    },
+    {
+      "file": "strike-detail-sciopero-uiltrasporti-e-orsa-domenica-16-giugno--p.html",
+      "parser": "gpt-5-nano [html-to-markdown]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 17166,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "gpt-5-nano",
+      "costUsd": {
+        "inputCost": 0.00025655000000000003,
+        "outputCost": 0.0006516,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.00090815
+      },
+      "hash": "c5a2ed4a686eb0b50970d374b3ca54a4",
+      "tokens": {
+        "input": 5131,
+        "output": 1629,
+        "total": 6760
+      }
+    },
+    {
+      "file": "strike-detail-sciopero-uiltrasporti-e-orsa-domenica-16-giugno--p.html",
+      "parser": "gpt-5-nano [basic-cleanup]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 19416,
+      "preProcessingStrategy": "basic-cleanup",
+      "model": "gpt-5-nano",
+      "costUsd": {
+        "inputCost": 0.0005034000000000001,
+        "outputCost": 0.0008856,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.001389
+      },
+      "hash": "c1d24906fbb3136cb6c5ab72538de8e7",
+      "tokens": {
+        "input": 10068,
+        "output": 2214,
+        "total": 12282
+      }
+    },
+    {
+      "file": "strike-detail-sciopero-uiltrasporti-e-orsa-domenica-16-giugno--p.html",
+      "parser": "gemini-2.5-flash [html-to-markdown]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 2453,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "gemini-2.5-flash",
+      "costUsd": {
+        "inputCost": 0.0015705,
+        "outputCost": 0.0002525,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.001823
+      },
+      "hash": "e25d9c91d894eb37354eaa06249c9b81",
+      "tokens": {
+        "input": 5235,
+        "output": 101,
+        "total": 5728
+      }
+    },
+    {
+      "file": "strike-detail-sciopero-uiltrasporti-e-orsa-domenica-16-giugno--p.html",
+      "parser": "gemini-2.5-flash [basic-cleanup]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 4771,
+      "preProcessingStrategy": "basic-cleanup",
+      "model": "gemini-2.5-flash",
+      "costUsd": {
+        "inputCost": 0.0027459,
+        "outputCost": 0.00026,
+        "cachedCost": 0.00005049,
+        "thinkingCost": 0,
+        "totalCost": 0.0030563899999999995
+      },
+      "hash": "98d6fa33f9796315dbaa606f53220487",
+      "tokens": {
+        "input": 9153,
+        "output": 104,
+        "total": 10045
+      }
+    },
+    {
+      "file": "strike-detail-sciopero-uiltrasporti-e-orsa-domenica-16-giugno--p.html",
+      "parser": "gemini-2.5-flash-lite [html-to-markdown]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 1095,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "gemini-2.5-flash-lite",
+      "costUsd": {
+        "inputCost": 0.0005235,
+        "outputCost": 0.00005720000000000001,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0005807
+      },
+      "hash": "3827f6136dbe05e4c4d66df816d411a9",
+      "tokens": {
+        "input": 5235,
+        "output": 143,
+        "total": 5378
+      }
+    },
+    {
+      "file": "strike-detail-sciopero-uiltrasporti-e-orsa-domenica-16-giugno--p.html",
+      "parser": "gemini-2.5-flash-lite [basic-cleanup]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 1245,
+      "preProcessingStrategy": "basic-cleanup",
+      "model": "gemini-2.5-flash-lite",
+      "costUsd": {
+        "inputCost": 0.0009153,
+        "outputCost": 0.000054000000000000005,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0009693
+      },
+      "hash": "71aeb4d0411d87fef54d4cb0be00dfb2",
+      "tokens": {
+        "input": 9153,
+        "output": 135,
+        "total": 9288
+      }
+    },
+    {
+      "file": "strike-detail-sciopero-nazionale-17-novembre-ore-9-13-personale-.html",
+      "parser": "gpt-5-mini [html-to-markdown]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 14779,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "gpt-5-mini",
+      "costUsd": {
+        "inputCost": 0.001285,
+        "outputCost": 0.00233,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.003615
+      },
+      "hash": "d3f84d5611f258536a85e7d151341c54",
+      "tokens": {
+        "input": 5140,
+        "output": 1165,
+        "total": 6305
+      }
+    },
+    {
+      "file": "strike-detail-sciopero-nazionale-17-novembre-ore-9-13-personale-.html",
+      "parser": "gpt-5-mini [basic-cleanup]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 16564,
+      "preProcessingStrategy": "basic-cleanup",
+      "model": "gpt-5-mini",
+      "costUsd": {
+        "inputCost": 0.00252475,
+        "outputCost": 0.002622,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.00514675
+      },
+      "hash": "3d69842c5bcacfdcdeeeab260ef3e4f6",
+      "tokens": {
+        "input": 10099,
+        "output": 1311,
+        "total": 11410
+      }
+    },
+    {
+      "file": "strike-detail-sciopero-nazionale-17-novembre-ore-9-13-personale-.html",
+      "parser": "gpt-5-nano [html-to-markdown]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 11585,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "gpt-5-nano",
+      "costUsd": {
+        "inputCost": 0.000257,
+        "outputCost": 0.000564,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0008210000000000001
+      },
+      "hash": "dc23622edc954c6bbc4a0d93cb6bf86b",
+      "tokens": {
+        "input": 5140,
+        "output": 1410,
+        "total": 6550
+      }
+    },
+    {
+      "file": "strike-detail-sciopero-nazionale-17-novembre-ore-9-13-personale-.html",
+      "parser": "gpt-5-nano [basic-cleanup]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 17680,
+      "preProcessingStrategy": "basic-cleanup",
+      "model": "gpt-5-nano",
+      "costUsd": {
+        "inputCost": 0.00050495,
+        "outputCost": 0.0007936000000000001,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.00129855
+      },
+      "hash": "e24223ecf5f2f7662df2d85857f09436",
+      "tokens": {
+        "input": 10099,
+        "output": 1984,
+        "total": 12083
+      }
+    },
+    {
+      "file": "strike-detail-sciopero-nazionale-17-novembre-ore-9-13-personale-.html",
+      "parser": "gemini-2.5-flash [html-to-markdown]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 3967,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "gemini-2.5-flash",
+      "costUsd": {
+        "inputCost": 0.001575,
+        "outputCost": 0.00021500000000000002,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.00179
+      },
+      "hash": "df79636255bcc5a9e158fd9680500b9b",
+      "tokens": {
+        "input": 5250,
+        "output": 86,
+        "total": 6082
+      }
+    },
+    {
+      "file": "strike-detail-sciopero-nazionale-17-novembre-ore-9-13-personale-.html",
+      "parser": "gemini-2.5-flash [basic-cleanup]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 19674,
+      "preProcessingStrategy": "basic-cleanup",
+      "model": "gemini-2.5-flash",
+      "costUsd": {
+        "inputCost": 0.0027651,
+        "outputCost": 0.0003375,
+        "cachedCost": 0.00005055,
+        "thinkingCost": 0,
+        "totalCost": 0.00315315
+      },
+      "hash": "c56a153c7e95a91488061fa2bae153c3",
+      "tokens": {
+        "input": 9217,
+        "output": 135,
+        "total": 13586
+      }
+    },
+    {
+      "file": "strike-detail-sciopero-nazionale-17-novembre-ore-9-13-personale-.html",
+      "parser": "gemini-2.5-flash-lite [html-to-markdown]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 1013,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "gemini-2.5-flash-lite",
+      "costUsd": {
+        "inputCost": 0.0005250000000000001,
+        "outputCost": 0.00006120000000000001,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0005862
+      },
+      "hash": "4be236d640cc69ddd30d8cd7b062f04e",
+      "tokens": {
+        "input": 5250,
+        "output": 153,
+        "total": 5403
+      }
+    },
+    {
+      "file": "strike-detail-sciopero-nazionale-17-novembre-ore-9-13-personale-.html",
+      "parser": "gemini-2.5-flash-lite [basic-cleanup]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 979,
+      "preProcessingStrategy": "basic-cleanup",
+      "model": "gemini-2.5-flash-lite",
+      "costUsd": {
+        "inputCost": 0.0009217,
+        "outputCost": 0.0000552,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0009769
+      },
+      "hash": "9b3ead85b45f443597b3ad7742f72479",
+      "tokens": {
+        "input": 9217,
+        "output": 138,
+        "total": 9355
+      }
+    },
+    {
+      "file": "strike-detail-sciopero-del-trasporto-ferroviario-luned--30-sette.html",
+      "parser": "gpt-5-mini [html-to-markdown]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 11230,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "gpt-5-mini",
+      "costUsd": {
+        "inputCost": 0.001297,
+        "outputCost": 0.001908,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.003205
+      },
+      "hash": "4aa08373bcda17e1eee79727c7ce006c",
+      "tokens": {
+        "input": 5188,
+        "output": 954,
+        "total": 6142
+      }
+    },
+    {
+      "file": "strike-detail-sciopero-del-trasporto-ferroviario-luned--30-sette.html",
+      "parser": "gpt-5-mini [basic-cleanup]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 7408,
+      "preProcessingStrategy": "basic-cleanup",
+      "model": "gpt-5-mini",
+      "costUsd": {
+        "inputCost": 0.00253125,
+        "outputCost": 0.001246,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0037772500000000002
+      },
+      "hash": "678e5566a489a2b3280bf45257ae63d5",
+      "tokens": {
+        "input": 10125,
+        "output": 623,
+        "total": 10748
+      }
+    },
+    {
+      "file": "strike-detail-sciopero-del-trasporto-ferroviario-luned--30-sette.html",
+      "parser": "gpt-5-nano [html-to-markdown]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 14889,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "gpt-5-nano",
+      "costUsd": {
+        "inputCost": 0.0002594,
+        "outputCost": 0.0008108000000000001,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0010702
+      },
+      "hash": "9b7d0b5751266c5d8dfd77cfffe1c9b1",
+      "tokens": {
+        "input": 5188,
+        "output": 2027,
+        "total": 7215
+      }
+    },
+    {
+      "file": "strike-detail-sciopero-del-trasporto-ferroviario-luned--30-sette.html",
+      "parser": "gpt-5-nano [basic-cleanup]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 13948,
+      "preProcessingStrategy": "basic-cleanup",
+      "model": "gpt-5-nano",
+      "costUsd": {
+        "inputCost": 0.0005062500000000001,
+        "outputCost": 0.0006224000000000001,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0011286500000000001
+      },
+      "hash": "7306cb0c1719f09064334a29dbf5d2b3",
+      "tokens": {
+        "input": 10125,
+        "output": 1556,
+        "total": 11681
+      }
+    },
+    {
+      "file": "strike-detail-sciopero-del-trasporto-ferroviario-luned--30-sette.html",
+      "parser": "gemini-2.5-flash [html-to-markdown]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 3958,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "gemini-2.5-flash",
+      "costUsd": {
+        "inputCost": 0.0015911999999999999,
+        "outputCost": 0.00032750000000000005,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0019187
+      },
+      "hash": "fc09abf1e590ce63ae06760d54873b82",
+      "tokens": {
+        "input": 5304,
+        "output": 131,
+        "total": 6000
+      }
+    },
+    {
+      "file": "strike-detail-sciopero-del-trasporto-ferroviario-luned--30-sette.html",
+      "parser": "gemini-2.5-flash [basic-cleanup]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 3929,
+      "preProcessingStrategy": "basic-cleanup",
+      "model": "gemini-2.5-flash",
+      "costUsd": {
+        "inputCost": 0.0027678,
+        "outputCost": 0.00047,
+        "cachedCost": 0.00005055,
+        "thinkingCost": 0,
+        "totalCost": 0.0032883499999999998
+      },
+      "hash": "ed95b6a5ec467d3dd824f153877df322",
+      "tokens": {
+        "input": 9226,
+        "output": 188,
+        "total": 10120
+      }
+    },
+    {
+      "file": "strike-detail-sciopero-del-trasporto-ferroviario-luned--30-sette.html",
+      "parser": "gemini-2.5-flash-lite [html-to-markdown]",
+      "parserType": "ai",
+      "score": 0.8,
+      "isExactMatch": false,
+      "differences": [
+        "locationType: Expected REGION, got NATIONAL"
+      ],
+      "precision": 0.8,
+      "recall": 0.8,
+      "f1": 0.8,
+      "durationMs": 988,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "gemini-2.5-flash-lite",
+      "costUsd": {
+        "inputCost": 0.0005304,
+        "outputCost": 0.00008080000000000001,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0006112
+      },
+      "hash": "964d91c659fbfae492c2f61b40b6d47e",
+      "tokens": {
+        "input": 5304,
+        "output": 202,
+        "total": 5506
+      }
+    },
+    {
+      "file": "strike-detail-sciopero-del-trasporto-ferroviario-luned--30-sette.html",
+      "parser": "gemini-2.5-flash-lite [basic-cleanup]",
+      "parserType": "ai",
+      "score": 0.8,
+      "isExactMatch": false,
+      "differences": [
+        "locationType: Expected REGION, got NATIONAL"
+      ],
+      "precision": 0.8,
+      "recall": 0.8,
+      "f1": 0.8,
+      "durationMs": 1111,
+      "preProcessingStrategy": "basic-cleanup",
+      "model": "gemini-2.5-flash-lite",
+      "costUsd": {
+        "inputCost": 0.0009226,
+        "outputCost": 0.0000752,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0009978
+      },
+      "hash": "ccc597c53c6a6e5ebb860959f4f7b21c",
+      "tokens": {
+        "input": 9226,
+        "output": 188,
+        "total": 9414
+      }
+    },
+    {
+      "file": "strike-detail-mercoled--19-marzo-dalle-ore-9-alle-ore-17-scioper.html",
+      "parser": "gpt-5-mini [html-to-markdown]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 13748,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "gpt-5-mini",
+      "costUsd": {
+        "inputCost": 0.00127675,
+        "outputCost": 0.002754,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.00403075
+      },
+      "hash": "ebfe91d5cfff2d5883b93816c35594b9",
+      "tokens": {
+        "input": 5107,
+        "output": 1377,
+        "total": 6484
+      }
+    },
+    {
+      "file": "strike-detail-mercoled--19-marzo-dalle-ore-9-alle-ore-17-scioper.html",
+      "parser": "gpt-5-mini [basic-cleanup]",
+      "parserType": "ai",
+      "score": 0.75,
+      "isExactMatch": false,
+      "differences": [
+        "locationType: Expected NATIONAL, got REGION"
+      ],
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "durationMs": 16256,
+      "preProcessingStrategy": "basic-cleanup",
+      "model": "gpt-5-mini",
+      "costUsd": {
+        "inputCost": 0.002504,
+        "outputCost": 0.002246,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.004750000000000001
+      },
+      "hash": "986efa00f2af5108d5c8127470f9de08",
+      "tokens": {
+        "input": 10016,
+        "output": 1123,
+        "total": 11139
+      }
+    },
+    {
+      "file": "strike-detail-mercoled--19-marzo-dalle-ore-9-alle-ore-17-scioper.html",
+      "parser": "gpt-5-nano [html-to-markdown]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 23400,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "gpt-5-nano",
+      "costUsd": {
+        "inputCost": 0.00025535000000000005,
+        "outputCost": 0.0012448000000000001,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0015001500000000002
+      },
+      "hash": "b9736754915522c127734ae863750117",
+      "tokens": {
+        "input": 5107,
+        "output": 3112,
+        "total": 8219
+      }
+    },
+    {
+      "file": "strike-detail-mercoled--19-marzo-dalle-ore-9-alle-ore-17-scioper.html",
+      "parser": "gpt-5-nano [basic-cleanup]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 21022,
+      "preProcessingStrategy": "basic-cleanup",
+      "model": "gpt-5-nano",
+      "costUsd": {
+        "inputCost": 0.0005008,
+        "outputCost": 0.000998,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0014988
+      },
+      "hash": "dfd0b2e21d55e029b9a5e8481aa8ae2f",
+      "tokens": {
+        "input": 10016,
+        "output": 2495,
+        "total": 12511
+      }
+    },
+    {
+      "file": "strike-detail-mercoled--19-marzo-dalle-ore-9-alle-ore-17-scioper.html",
+      "parser": "gemini-2.5-flash [html-to-markdown]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 4054,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "gemini-2.5-flash",
+      "costUsd": {
+        "inputCost": 0.0015666,
+        "outputCost": 0.0002725,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0018391
+      },
+      "hash": "2c603beb7d12651d904967de11a86dcb",
+      "tokens": {
+        "input": 5222,
+        "output": 109,
+        "total": 6002
+      }
+    },
+    {
+      "file": "strike-detail-mercoled--19-marzo-dalle-ore-9-alle-ore-17-scioper.html",
+      "parser": "gemini-2.5-flash [basic-cleanup]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 5929,
+      "preProcessingStrategy": "basic-cleanup",
+      "model": "gemini-2.5-flash",
+      "costUsd": {
+        "inputCost": 0.0027357,
+        "outputCost": 0.00028,
+        "cachedCost": 0.000050459999999999995,
+        "thinkingCost": 0,
+        "totalCost": 0.00306616
+      },
+      "hash": "1bdf356095f2bf47e818915a92e82fb0",
+      "tokens": {
+        "input": 9119,
+        "output": 112,
+        "total": 10370
+      }
+    },
+    {
+      "file": "strike-detail-mercoled--19-marzo-dalle-ore-9-alle-ore-17-scioper.html",
+      "parser": "gemini-2.5-flash-lite [html-to-markdown]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 1213,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "gemini-2.5-flash-lite",
+      "costUsd": {
+        "inputCost": 0.0005222,
+        "outputCost": 0.00006120000000000001,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0005834
+      },
+      "hash": "03df014aa67bdae26f95e5e18358797d",
+      "tokens": {
+        "input": 5222,
+        "output": 153,
+        "total": 5375
+      }
+    },
+    {
+      "file": "strike-detail-mercoled--19-marzo-dalle-ore-9-alle-ore-17-scioper.html",
+      "parser": "gemini-2.5-flash-lite [basic-cleanup]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 1270,
+      "preProcessingStrategy": "basic-cleanup",
+      "model": "gemini-2.5-flash-lite",
+      "costUsd": {
+        "inputCost": 0.0009119000000000001,
+        "outputCost": 0.00006560000000000001,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0009775
+      },
+      "hash": "a1510ad6de7bba5efc72fb782cb0b16e",
+      "tokens": {
+        "input": 9119,
+        "output": 164,
+        "total": 9283
+      }
+    },
+    {
+      "file": "strike-detail-mercoled--6-settembre--sciopero-dei-treni-regional.html",
+      "parser": "gpt-5-mini [html-to-markdown]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 6570,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "gpt-5-mini",
+      "costUsd": {
+        "inputCost": 0.00129975,
+        "outputCost": 0.001262,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.00256175
+      },
+      "hash": "4bb0d0d927d5a5553fd041d28145e764",
+      "tokens": {
+        "input": 5199,
+        "output": 631,
+        "total": 5830
+      }
+    },
+    {
+      "file": "strike-detail-mercoled--6-settembre--sciopero-dei-treni-regional.html",
+      "parser": "gpt-5-mini [basic-cleanup]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 8054,
+      "preProcessingStrategy": "basic-cleanup",
+      "model": "gpt-5-mini",
+      "costUsd": {
+        "inputCost": 0.00253425,
+        "outputCost": 0.001426,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.00396025
+      },
+      "hash": "78f0a88f38f6a1a910166d239c909e88",
+      "tokens": {
+        "input": 10137,
+        "output": 713,
+        "total": 10850
+      }
+    },
+    {
+      "file": "strike-detail-mercoled--6-settembre--sciopero-dei-treni-regional.html",
+      "parser": "gpt-5-nano [html-to-markdown]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 15748,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "gpt-5-nano",
+      "costUsd": {
+        "inputCost": 0.00025995,
+        "outputCost": 0.000866,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0011259500000000001
+      },
+      "hash": "4e277f5db5f2947039223a961cf0cf06",
+      "tokens": {
+        "input": 5199,
+        "output": 2165,
+        "total": 7364
+      }
+    },
+    {
+      "file": "strike-detail-mercoled--6-settembre--sciopero-dei-treni-regional.html",
+      "parser": "gpt-5-nano [basic-cleanup]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 16341,
+      "preProcessingStrategy": "basic-cleanup",
+      "model": "gpt-5-nano",
+      "costUsd": {
+        "inputCost": 0.00050685,
+        "outputCost": 0.000848,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0013548499999999999
+      },
+      "hash": "7df7be1b26142331dc46b48cf387395a",
+      "tokens": {
+        "input": 10137,
+        "output": 2120,
+        "total": 12257
+      }
+    },
+    {
+      "file": "strike-detail-mercoled--6-settembre--sciopero-dei-treni-regional.html",
+      "parser": "gemini-2.5-flash [html-to-markdown]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 3389,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "gemini-2.5-flash",
+      "costUsd": {
+        "inputCost": 0.0015933,
+        "outputCost": 0.00034999999999999994,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0019432999999999998
+      },
+      "hash": "1383de6816cf1796fc7f04bf2e6e7b7e",
+      "tokens": {
+        "input": 5311,
+        "output": 140,
+        "total": 6028
+      }
+    },
+    {
+      "file": "strike-detail-mercoled--6-settembre--sciopero-dei-treni-regional.html",
+      "parser": "gemini-2.5-flash [basic-cleanup]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 4205,
+      "preProcessingStrategy": "basic-cleanup",
+      "model": "gemini-2.5-flash",
+      "costUsd": {
+        "inputCost": 0.0027728999999999996,
+        "outputCost": 0.00030750000000000005,
+        "cachedCost": 0.00005058,
+        "thinkingCost": 0,
+        "totalCost": 0.00313098
+      },
+      "hash": "9515be141e70034875acf56a2e15186c",
+      "tokens": {
+        "input": 9243,
+        "output": 123,
+        "total": 10059
+      }
+    },
+    {
+      "file": "strike-detail-mercoled--6-settembre--sciopero-dei-treni-regional.html",
+      "parser": "gemini-2.5-flash-lite [html-to-markdown]",
+      "parserType": "ai",
+      "score": 0.8,
+      "isExactMatch": false,
+      "differences": [
+        "locationType: Expected REGION, got NATIONAL"
+      ],
+      "precision": 0.8,
+      "recall": 0.8,
+      "f1": 0.8,
+      "durationMs": 908,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "gemini-2.5-flash-lite",
+      "costUsd": {
+        "inputCost": 0.0005311,
+        "outputCost": 0.0000776,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0006087
+      },
+      "hash": "130f44c4bb555a1c65a0be71f1b39908",
+      "tokens": {
+        "input": 5311,
+        "output": 194,
+        "total": 5505
+      }
+    },
+    {
+      "file": "strike-detail-mercoled--6-settembre--sciopero-dei-treni-regional.html",
+      "parser": "gemini-2.5-flash-lite [basic-cleanup]",
+      "parserType": "ai",
+      "score": 0.8,
+      "isExactMatch": false,
+      "differences": [
+        "locationType: Expected REGION, got NATIONAL"
+      ],
+      "precision": 0.8,
+      "recall": 0.8,
+      "f1": 0.8,
+      "durationMs": 871,
+      "preProcessingStrategy": "basic-cleanup",
+      "model": "gemini-2.5-flash-lite",
+      "costUsd": {
+        "inputCost": 0.0009243,
+        "outputCost": 0.0000752,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0009995
+      },
+      "hash": "5b5242133215e2584220db19a700741f",
+      "tokens": {
+        "input": 9243,
+        "output": 188,
+        "total": 9431
+      }
+    },
+    {
+      "file": "strike-detail-mercoled--5-febbraio-sciopero-dei-treni-regionali.html",
+      "parser": "gpt-5-mini [html-to-markdown]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 6776,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "gpt-5-mini",
+      "costUsd": {
+        "inputCost": 0.0012945,
+        "outputCost": 0.001194,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0024885000000000003
+      },
+      "hash": "d25661d33427fd03707b73676366ed62",
+      "tokens": {
+        "input": 5178,
+        "output": 597,
+        "total": 5775
+      }
+    },
+    {
+      "file": "strike-detail-mercoled--5-febbraio-sciopero-dei-treni-regionali.html",
+      "parser": "gpt-5-mini [basic-cleanup]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 7433,
+      "preProcessingStrategy": "basic-cleanup",
+      "model": "gpt-5-mini",
+      "costUsd": {
+        "inputCost": 0.00252375,
+        "outputCost": 0.001416,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.00393975
+      },
+      "hash": "c7a25deca7d3977f11ab23a5e418b2ec",
+      "tokens": {
+        "input": 10095,
+        "output": 708,
+        "total": 10803
+      }
+    },
+    {
+      "file": "strike-detail-mercoled--5-febbraio-sciopero-dei-treni-regionali.html",
+      "parser": "gpt-5-nano [html-to-markdown]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 21214,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "gpt-5-nano",
+      "costUsd": {
+        "inputCost": 0.0002589,
+        "outputCost": 0.0010612,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0013201
+      },
+      "hash": "fdc9c53b39206ee62f054155bfb56d40",
+      "tokens": {
+        "input": 5178,
+        "output": 2653,
+        "total": 7831
+      }
+    },
+    {
+      "file": "strike-detail-mercoled--5-febbraio-sciopero-dei-treni-regionali.html",
+      "parser": "gpt-5-nano [basic-cleanup]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 17603,
+      "preProcessingStrategy": "basic-cleanup",
+      "model": "gpt-5-nano",
+      "costUsd": {
+        "inputCost": 0.00050475,
+        "outputCost": 0.0009252,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0014299500000000001
+      },
+      "hash": "ec8c2286e1dd5f6e25a1cd78d6fe66d8",
+      "tokens": {
+        "input": 10095,
+        "output": 2313,
+        "total": 12408
+      }
+    },
+    {
+      "file": "strike-detail-mercoled--5-febbraio-sciopero-dei-treni-regionali.html",
+      "parser": "gemini-2.5-flash [html-to-markdown]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 2915,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "gemini-2.5-flash",
+      "costUsd": {
+        "inputCost": 0.0015828,
+        "outputCost": 0.000275,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0018578000000000002
+      },
+      "hash": "fc4a09b4df57143178636127864ad0de",
+      "tokens": {
+        "input": 5276,
+        "output": 110,
+        "total": 5874
+      }
+    },
+    {
+      "file": "strike-detail-mercoled--5-febbraio-sciopero-dei-treni-regionali.html",
+      "parser": "gemini-2.5-flash [basic-cleanup]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 4651,
+      "preProcessingStrategy": "basic-cleanup",
+      "model": "gemini-2.5-flash",
+      "costUsd": {
+        "inputCost": 0.0027522,
+        "outputCost": 0.000265,
+        "cachedCost": 0.00005052,
+        "thinkingCost": 0,
+        "totalCost": 0.00306772
+      },
+      "hash": "6d16a9fe9dbb40b1c8c604c7d349b1a8",
+      "tokens": {
+        "input": 9174,
+        "output": 106,
+        "total": 10130
+      }
+    },
+    {
+      "file": "strike-detail-mercoled--5-febbraio-sciopero-dei-treni-regionali.html",
+      "parser": "gemini-2.5-flash-lite [html-to-markdown]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 936,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "gemini-2.5-flash-lite",
+      "costUsd": {
+        "inputCost": 0.0005276,
+        "outputCost": 0.00007840000000000001,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.000606
+      },
+      "hash": "f680a26557c2a47383a60febd01e9c77",
+      "tokens": {
+        "input": 5276,
+        "output": 196,
+        "total": 5472
+      }
+    },
+    {
+      "file": "strike-detail-mercoled--5-febbraio-sciopero-dei-treni-regionali.html",
+      "parser": "gemini-2.5-flash-lite [basic-cleanup]",
+      "parserType": "ai",
+      "score": 0.4,
+      "isExactMatch": false,
+      "differences": [
+        "startDate: Expected 2025-02-05 03:00:00, got 2025-02-05 00:00:00",
+        "endDate: Expected 2025-02-06 02:00:00, got 2025-02-06 00:00:00",
+        "locationType: Expected REGION, got NATIONAL"
+      ],
+      "precision": 0.4,
+      "recall": 0.4,
+      "f1": 0.4,
+      "durationMs": 1209,
+      "preProcessingStrategy": "basic-cleanup",
+      "model": "gemini-2.5-flash-lite",
+      "costUsd": {
+        "inputCost": 0.0009174000000000001,
+        "outputCost": 0.0000668,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0009842000000000002
+      },
+      "hash": "1517027172fb25836d6ed8038f52516b",
+      "tokens": {
+        "input": 9174,
+        "output": 167,
+        "total": 9341
+      }
+    },
+    {
+      "file": "strike-detail-gioved--18-luglio-dalle-9-alle-13-sciopero-del-per.html",
+      "parser": "gpt-5-mini [html-to-markdown]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 15148,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "gpt-5-mini",
+      "costUsd": {
+        "inputCost": 0.00135075,
+        "outputCost": 0.00202,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.00337075
+      },
+      "hash": "3b28eda7e750849419041636f549423d",
+      "tokens": {
+        "input": 5403,
+        "output": 1010,
+        "total": 6413
+      }
+    },
+    {
+      "file": "strike-detail-gioved--18-luglio-dalle-9-alle-13-sciopero-del-per.html",
+      "parser": "gpt-5-mini [basic-cleanup]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 11710,
+      "preProcessingStrategy": "basic-cleanup",
+      "model": "gpt-5-mini",
+      "costUsd": {
+        "inputCost": 0.0025905,
+        "outputCost": 0.001996,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0045865
+      },
+      "hash": "b652d819f28ec9978109e161e84df17d",
+      "tokens": {
+        "input": 10362,
+        "output": 998,
+        "total": 11360
+      }
+    },
+    {
+      "file": "strike-detail-gioved--18-luglio-dalle-9-alle-13-sciopero-del-per.html",
+      "parser": "gpt-5-nano [html-to-markdown]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 15677,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "gpt-5-nano",
+      "costUsd": {
+        "inputCost": 0.00027015,
+        "outputCost": 0.0007536000000000001,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0010237500000000001
+      },
+      "hash": "49c9276769743c293941a3716a5bf21b",
+      "tokens": {
+        "input": 5403,
+        "output": 1884,
+        "total": 7287
+      }
+    },
+    {
+      "file": "strike-detail-gioved--18-luglio-dalle-9-alle-13-sciopero-del-per.html",
+      "parser": "gpt-5-nano [basic-cleanup]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 17402,
+      "preProcessingStrategy": "basic-cleanup",
+      "model": "gpt-5-nano",
+      "costUsd": {
+        "inputCost": 0.0005181,
+        "outputCost": 0.0009216000000000001,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0014397
+      },
+      "hash": "a819faf9c89e93ebbd24ded6bd860e34",
+      "tokens": {
+        "input": 10362,
+        "output": 2304,
+        "total": 12666
+      }
+    },
+    {
+      "file": "strike-detail-gioved--18-luglio-dalle-9-alle-13-sciopero-del-per.html",
+      "parser": "gemini-2.5-flash [html-to-markdown]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 3803,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "gemini-2.5-flash",
+      "costUsd": {
+        "inputCost": 0.0016538999999999998,
+        "outputCost": 0.00026,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0019138999999999998
+      },
+      "hash": "032f7419606d21fcc6e56cd4ec49f78e",
+      "tokens": {
+        "input": 5513,
+        "output": 104,
+        "total": 6246
+      }
+    },
+    {
+      "file": "strike-detail-gioved--18-luglio-dalle-9-alle-13-sciopero-del-per.html",
+      "parser": "gemini-2.5-flash [basic-cleanup]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 4971,
+      "preProcessingStrategy": "basic-cleanup",
+      "model": "gemini-2.5-flash",
+      "costUsd": {
+        "inputCost": 0.0028388999999999997,
+        "outputCost": 0.00021999999999999998,
+        "cachedCost": 0.00005079,
+        "thinkingCost": 0,
+        "totalCost": 0.00310969
+      },
+      "hash": "fe94e92602f4d7db134c7a9e8f3425cb",
+      "tokens": {
+        "input": 9463,
+        "output": 88,
+        "total": 10533
+      }
+    },
+    {
+      "file": "strike-detail-gioved--18-luglio-dalle-9-alle-13-sciopero-del-per.html",
+      "parser": "gemini-2.5-flash-lite [html-to-markdown]",
+      "parserType": "ai",
+      "score": 0.8,
+      "isExactMatch": false,
+      "differences": [
+        "locationType: Expected REGION, got NATIONAL"
+      ],
+      "precision": 0.8,
+      "recall": 0.8,
+      "f1": 0.8,
+      "durationMs": 1948,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "gemini-2.5-flash-lite",
+      "costUsd": {
+        "inputCost": 0.0005513,
+        "outputCost": 0.0000888,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0006401
+      },
+      "hash": "b3c250589f93e103edeb8354a5855441",
+      "tokens": {
+        "input": 5513,
+        "output": 222,
+        "total": 5735
+      }
+    },
+    {
+      "file": "strike-detail-gioved--18-luglio-dalle-9-alle-13-sciopero-del-per.html",
+      "parser": "gemini-2.5-flash-lite [basic-cleanup]",
+      "parserType": "ai",
+      "score": 0.8,
+      "isExactMatch": false,
+      "differences": [
+        "locationType: Expected REGION, got NATIONAL"
+      ],
+      "precision": 0.8,
+      "recall": 0.8,
+      "f1": 0.8,
+      "durationMs": 798,
+      "preProcessingStrategy": "basic-cleanup",
+      "model": "gemini-2.5-flash-lite",
+      "costUsd": {
+        "inputCost": 0.0009463,
+        "outputCost": 0.000050400000000000005,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0009966999999999999
+      },
+      "hash": "a7f259a4d6fa8f0dfab6457d1073b7e3",
+      "tokens": {
+        "input": 9463,
+        "output": 126,
+        "total": 9589
+      }
+    },
+    {
+      "file": "strike-detail-gioved--14-dicembre-dalle-ore-9-alle-ore-17-sciope.html",
+      "parser": "gpt-5-mini [html-to-markdown]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 12498,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "gpt-5-mini",
+      "costUsd": {
+        "inputCost": 0.0012675,
+        "outputCost": 0.002126,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0033935
+      },
+      "hash": "c988e1e5bb67b1ba02458b19810e8e4c",
+      "tokens": {
+        "input": 5070,
+        "output": 1063,
+        "total": 6133
+      }
+    },
+    {
+      "file": "strike-detail-gioved--14-dicembre-dalle-ore-9-alle-ore-17-sciope.html",
+      "parser": "gpt-5-mini [basic-cleanup]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 13560,
+      "preProcessingStrategy": "basic-cleanup",
+      "model": "gpt-5-mini",
+      "costUsd": {
+        "inputCost": 0.00249825,
+        "outputCost": 0.002458,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.004956250000000001
+      },
+      "hash": "784603b9547c8a2a1d1f5e830d6b0e54",
+      "tokens": {
+        "input": 9993,
+        "output": 1229,
+        "total": 11222
+      }
+    },
+    {
+      "file": "strike-detail-gioved--14-dicembre-dalle-ore-9-alle-ore-17-sciope.html",
+      "parser": "gpt-5-nano [html-to-markdown]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 18042,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "gpt-5-nano",
+      "costUsd": {
+        "inputCost": 0.0002535,
+        "outputCost": 0.0009416000000000001,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0011951000000000002
+      },
+      "hash": "d9e5b815ae178478a7971f89d2ed38e2",
+      "tokens": {
+        "input": 5070,
+        "output": 2354,
+        "total": 7424
+      }
+    },
+    {
+      "file": "strike-detail-gioved--14-dicembre-dalle-ore-9-alle-ore-17-sciope.html",
+      "parser": "gpt-5-nano [basic-cleanup]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 30028,
+      "preProcessingStrategy": "basic-cleanup",
+      "model": "gpt-5-nano",
+      "costUsd": {
+        "inputCost": 0.00049965,
+        "outputCost": 0.00162,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.00211965
+      },
+      "hash": "4f2726dfdfcd5cf12cbf3960f249eac2",
+      "tokens": {
+        "input": 9993,
+        "output": 4050,
+        "total": 14043
+      }
+    },
+    {
+      "file": "strike-detail-gioved--14-dicembre-dalle-ore-9-alle-ore-17-sciope.html",
+      "parser": "gemini-2.5-flash [html-to-markdown]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 12044,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "gemini-2.5-flash",
+      "costUsd": {
+        "inputCost": 0.0015557999999999998,
+        "outputCost": 0.0002975,
+        "cachedCost": 0.00004442999999999999,
+        "thinkingCost": 0,
+        "totalCost": 0.0018977299999999998
+      },
+      "hash": "f945438f3a374b19532583ab6bd4f02e",
+      "tokens": {
+        "input": 5186,
+        "output": 119,
+        "total": 7818
+      }
+    },
+    {
+      "file": "strike-detail-gioved--14-dicembre-dalle-ore-9-alle-ore-17-sciope.html",
+      "parser": "gemini-2.5-flash [basic-cleanup]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 7887,
+      "preProcessingStrategy": "basic-cleanup",
+      "model": "gemini-2.5-flash",
+      "costUsd": {
+        "inputCost": 0.0027321,
+        "outputCost": 0.0003725,
+        "cachedCost": 0.000050459999999999995,
+        "thinkingCost": 0,
+        "totalCost": 0.00315506
+      },
+      "hash": "cfcd926e406b1ab4d52bcd01a1be4a74",
+      "tokens": {
+        "input": 9107,
+        "output": 149,
+        "total": 10618
+      }
+    },
+    {
+      "file": "strike-detail-gioved--14-dicembre-dalle-ore-9-alle-ore-17-sciope.html",
+      "parser": "gemini-2.5-flash-lite [html-to-markdown]",
+      "parserType": "ai",
+      "score": 0.8,
+      "isExactMatch": false,
+      "differences": [
+        "locationType: Expected REGION, got NATIONAL"
+      ],
+      "precision": 0.8,
+      "recall": 0.8,
+      "f1": 0.8,
+      "durationMs": 1384,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "gemini-2.5-flash-lite",
+      "costUsd": {
+        "inputCost": 0.0005186,
+        "outputCost": 0.00006400000000000001,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0005826000000000001
+      },
+      "hash": "743696dddc330f3a1706b4fb5965804c",
+      "tokens": {
+        "input": 5186,
+        "output": 160,
+        "total": 5346
+      }
+    },
+    {
+      "file": "strike-detail-gioved--14-dicembre-dalle-ore-9-alle-ore-17-sciope.html",
+      "parser": "gemini-2.5-flash-lite [basic-cleanup]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 1100,
+      "preProcessingStrategy": "basic-cleanup",
+      "model": "gemini-2.5-flash-lite",
+      "costUsd": {
+        "inputCost": 0.0009107000000000001,
+        "outputCost": 0.0000772,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0009879
+      },
+      "hash": "ea5ada97c600eb6ddfff57d99f9c386d",
+      "tokens": {
+        "input": 9107,
+        "output": 193,
+        "total": 9300
+      }
+    },
+    {
+      "file": "strike-detail-venerd--12-dicembre-da-mezzanotte-alle-21-sciopero.html",
+      "parser": "gpt-5-mini [html-to-markdown]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 8100,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "gpt-5-mini",
+      "costUsd": {
+        "inputCost": 0.00132325,
+        "outputCost": 0.001532,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.00285525
+      },
+      "hash": "b67ce0c061cc807e672edcbf65eb30bc",
+      "tokens": {
+        "input": 5293,
+        "output": 766,
+        "total": 6059
+      }
+    },
+    {
+      "file": "strike-detail-venerd--12-dicembre-da-mezzanotte-alle-21-sciopero.html",
+      "parser": "gpt-5-mini [basic-cleanup]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 9539,
+      "preProcessingStrategy": "basic-cleanup",
+      "model": "gpt-5-mini",
+      "costUsd": {
+        "inputCost": 0.00256075,
+        "outputCost": 0.00156,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.00412075
+      },
+      "hash": "2b38c4d0229a2a17a6573e5b6eacd7c9",
+      "tokens": {
+        "input": 10243,
+        "output": 780,
+        "total": 11023
+      }
+    },
+    {
+      "file": "strike-detail-venerd--12-dicembre-da-mezzanotte-alle-21-sciopero.html",
+      "parser": "gpt-5-nano [html-to-markdown]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 17278,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "gpt-5-nano",
+      "costUsd": {
+        "inputCost": 0.00026465,
+        "outputCost": 0.0008784000000000001,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.00114305
+      },
+      "hash": "d01764cea902e1ecf60290e30ff8cb5a",
+      "tokens": {
+        "input": 5293,
+        "output": 2196,
+        "total": 7489
+      }
+    },
+    {
+      "file": "strike-detail-venerd--12-dicembre-da-mezzanotte-alle-21-sciopero.html",
+      "parser": "gpt-5-nano [basic-cleanup]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 25099,
+      "preProcessingStrategy": "basic-cleanup",
+      "model": "gpt-5-nano",
+      "costUsd": {
+        "inputCost": 0.0005121500000000001,
+        "outputCost": 0.001346,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.00185815
+      },
+      "hash": "7cccae3260afa6188aca26b5ba8b1495",
+      "tokens": {
+        "input": 10243,
+        "output": 3365,
+        "total": 13608
+      }
+    },
+    {
+      "file": "strike-detail-venerd--12-dicembre-da-mezzanotte-alle-21-sciopero.html",
+      "parser": "gemini-2.5-flash [html-to-markdown]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 3794,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "gemini-2.5-flash",
+      "costUsd": {
+        "inputCost": 0.0016244999999999999,
+        "outputCost": 0.00038250000000000003,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.002007
+      },
+      "hash": "81e35fc3ad94af445b5c75260cb533c9",
+      "tokens": {
+        "input": 5415,
+        "output": 153,
+        "total": 6249
+      }
+    },
+    {
+      "file": "strike-detail-venerd--12-dicembre-da-mezzanotte-alle-21-sciopero.html",
+      "parser": "gemini-2.5-flash [basic-cleanup]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 9476,
+      "preProcessingStrategy": "basic-cleanup",
+      "model": "gemini-2.5-flash",
+      "costUsd": {
+        "inputCost": 0.0027995999999999997,
+        "outputCost": 0.00043000000000000004,
+        "cachedCost": 0.000050669999999999994,
+        "thinkingCost": 0,
+        "totalCost": 0.00328027
+      },
+      "hash": "965a266c9a8565e4b03a03683888b31a",
+      "tokens": {
+        "input": 9332,
+        "output": 172,
+        "total": 11392
+      }
+    },
+    {
+      "file": "strike-detail-venerd--12-dicembre-da-mezzanotte-alle-21-sciopero.html",
+      "parser": "gemini-2.5-flash-lite [html-to-markdown]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 2061,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "gemini-2.5-flash-lite",
+      "costUsd": {
+        "inputCost": 0.0005415,
+        "outputCost": 0.00007640000000000001,
+        "cachedCost": 0.00000781,
+        "thinkingCost": 0,
+        "totalCost": 0.00062571
+      },
+      "hash": "13648e3896d2648c08ee7fde8a550075",
+      "tokens": {
+        "input": 5415,
+        "output": 191,
+        "total": 5606
+      }
+    },
+    {
+      "file": "strike-detail-venerd--12-dicembre-da-mezzanotte-alle-21-sciopero.html",
+      "parser": "gemini-2.5-flash-lite [basic-cleanup]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 1218,
+      "preProcessingStrategy": "basic-cleanup",
+      "model": "gemini-2.5-flash-lite",
+      "costUsd": {
+        "inputCost": 0.0009332,
+        "outputCost": 0.00007000000000000001,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0010032
+      },
+      "hash": "1dfdccfb5204cd9d6be895683d7a2dc8",
+      "tokens": {
+        "input": 9332,
+        "output": 175,
+        "total": 9507
+      }
+    },
+    {
+      "file": "strike-detail-luned--16-giugno-sciopero-dei-treni-regionali.html",
+      "parser": "gpt-5-mini [html-to-markdown]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 7815,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "gpt-5-mini",
+      "costUsd": {
+        "inputCost": 0.00129325,
+        "outputCost": 0.001314,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.00260725
+      },
+      "hash": "0c4976ce2674cd584b162e5cd2262688",
+      "tokens": {
+        "input": 5173,
+        "output": 657,
+        "total": 5830
+      }
+    },
+    {
+      "file": "strike-detail-luned--16-giugno-sciopero-dei-treni-regionali.html",
+      "parser": "gpt-5-mini [basic-cleanup]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 8145,
+      "preProcessingStrategy": "basic-cleanup",
+      "model": "gpt-5-mini",
+      "costUsd": {
+        "inputCost": 0.00252775,
+        "outputCost": 0.001274,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.00380175
+      },
+      "hash": "8bb89a1a449b8db58779a65fb39c7601",
+      "tokens": {
+        "input": 10111,
+        "output": 637,
+        "total": 10748
+      }
+    },
+    {
+      "file": "strike-detail-luned--16-giugno-sciopero-dei-treni-regionali.html",
+      "parser": "gpt-5-nano [html-to-markdown]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 13741,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "gpt-5-nano",
+      "costUsd": {
+        "inputCost": 0.00025864999999999997,
+        "outputCost": 0.000682,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0009406499999999999
+      },
+      "hash": "e10a1c5599df95942c0295539ac7514d",
+      "tokens": {
+        "input": 5173,
+        "output": 1705,
+        "total": 6878
+      }
+    },
+    {
+      "file": "strike-detail-luned--16-giugno-sciopero-dei-treni-regionali.html",
+      "parser": "gpt-5-nano [basic-cleanup]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 13491,
+      "preProcessingStrategy": "basic-cleanup",
+      "model": "gpt-5-nano",
+      "costUsd": {
+        "inputCost": 0.00050555,
+        "outputCost": 0.0006668,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.00117235
+      },
+      "hash": "d9261698bda037e4e2938dd5eed4a5bd",
+      "tokens": {
+        "input": 10111,
+        "output": 1667,
+        "total": 11778
+      }
+    },
+    {
+      "file": "strike-detail-luned--16-giugno-sciopero-dei-treni-regionali.html",
+      "parser": "gemini-2.5-flash [html-to-markdown]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 3261,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "gemini-2.5-flash",
+      "costUsd": {
+        "inputCost": 0.0015861,
+        "outputCost": 0.00033,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0019161
+      },
+      "hash": "3be98582a4582de68234df930a8e5670",
+      "tokens": {
+        "input": 5287,
+        "output": 132,
+        "total": 5923
+      }
+    },
+    {
+      "file": "strike-detail-luned--16-giugno-sciopero-dei-treni-regionali.html",
+      "parser": "gemini-2.5-flash [basic-cleanup]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 5367,
+      "preProcessingStrategy": "basic-cleanup",
+      "model": "gemini-2.5-flash",
+      "costUsd": {
+        "inputCost": 0.0027621,
+        "outputCost": 0.00047,
+        "cachedCost": 0.00005055,
+        "thinkingCost": 0,
+        "totalCost": 0.00328265
+      },
+      "hash": "48d44b150ab56cfd61bbbc98046722ae",
+      "tokens": {
+        "input": 9207,
+        "output": 188,
+        "total": 10315
+      }
+    },
+    {
+      "file": "strike-detail-luned--16-giugno-sciopero-dei-treni-regionali.html",
+      "parser": "gemini-2.5-flash-lite [html-to-markdown]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 1234,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "gemini-2.5-flash-lite",
+      "costUsd": {
+        "inputCost": 0.0005287,
+        "outputCost": 0.0000672,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0005959
+      },
+      "hash": "2d423154d14d7920470983448038b893",
+      "tokens": {
+        "input": 5287,
+        "output": 168,
+        "total": 5455
+      }
+    },
+    {
+      "file": "strike-detail-luned--16-giugno-sciopero-dei-treni-regionali.html",
+      "parser": "gemini-2.5-flash-lite [basic-cleanup]",
+      "parserType": "ai",
+      "score": 0.44,
+      "isExactMatch": false,
+      "differences": [
+        "startDate: Expected 2025-06-16 03:00:00, got 2025-06-16 00:00:00",
+        "locationType: Expected REGION, got NATIONAL",
+        "locationCodes: Expected [03], got []"
+      ],
+      "precision": 0.5,
+      "recall": 0.4,
+      "f1": 0.4444,
+      "durationMs": 1286,
+      "preProcessingStrategy": "basic-cleanup",
+      "model": "gemini-2.5-flash-lite",
+      "costUsd": {
+        "inputCost": 0.0009207,
+        "outputCost": 0.00007159999999999999,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0009923
+      },
+      "hash": "81b975e3ed34e8d2bdfcdf7408315808",
+      "tokens": {
+        "input": 9207,
+        "output": 179,
+        "total": 9386
+      }
+    },
+    {
+      "file": "strike-detail-domenica-16-novembre-dalle-ore-10-alle-ore-18-scio.html",
+      "parser": "gpt-5-mini [html-to-markdown]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 21405,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "gpt-5-mini",
+      "costUsd": {
+        "inputCost": 0.00126325,
+        "outputCost": 0.002824,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.004087250000000001
+      },
+      "hash": "d909b2df1bbd7227185efbff5d8197eb",
+      "tokens": {
+        "input": 5053,
+        "output": 1412,
+        "total": 6465
+      }
+    },
+    {
+      "file": "strike-detail-domenica-16-novembre-dalle-ore-10-alle-ore-18-scio.html",
+      "parser": "gpt-5-mini [basic-cleanup]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 12005,
+      "preProcessingStrategy": "basic-cleanup",
+      "model": "gpt-5-mini",
+      "costUsd": {
+        "inputCost": 0.00248875,
+        "outputCost": 0.002222,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.00471075
+      },
+      "hash": "61bbae145182e9e8ef2f9916946d7e92",
+      "tokens": {
+        "input": 9955,
+        "output": 1111,
+        "total": 11066
+      }
+    },
+    {
+      "file": "strike-detail-domenica-16-novembre-dalle-ore-10-alle-ore-18-scio.html",
+      "parser": "gpt-5-nano [html-to-markdown]",
+      "parserType": "ai",
+      "score": 0.8,
+      "isExactMatch": false,
+      "differences": [
+        "startDate: Expected 2025-11-16 09:00:00, got 2025-11-16 10:00:00"
+      ],
+      "precision": 0.8,
+      "recall": 0.8,
+      "f1": 0.8,
+      "durationMs": 15626,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "gpt-5-nano",
+      "costUsd": {
+        "inputCost": 0.00025265000000000004,
+        "outputCost": 0.0007252000000000001,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0009778500000000002
+      },
+      "hash": "b2bb0b8fc6701b70d5c47fff25ae57b5",
+      "tokens": {
+        "input": 5053,
+        "output": 1813,
+        "total": 6866
+      }
+    },
+    {
+      "file": "strike-detail-domenica-16-novembre-dalle-ore-10-alle-ore-18-scio.html",
+      "parser": "gpt-5-nano [basic-cleanup]",
+      "parserType": "ai",
+      "score": 0.8,
+      "isExactMatch": false,
+      "differences": [
+        "startDate: Expected 2025-11-16 09:00:00, got 2025-11-16 10:00:00"
+      ],
+      "precision": 0.8,
+      "recall": 0.8,
+      "f1": 0.8,
+      "durationMs": 23687,
+      "preProcessingStrategy": "basic-cleanup",
+      "model": "gpt-5-nano",
+      "costUsd": {
+        "inputCost": 0.00049775,
+        "outputCost": 0.0013336,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0018313500000000003
+      },
+      "hash": "e0fee12cef450acd63dc776db2246c01",
+      "tokens": {
+        "input": 9955,
+        "output": 3334,
+        "total": 13289
+      }
+    },
+    {
+      "file": "strike-detail-domenica-16-novembre-dalle-ore-10-alle-ore-18-scio.html",
+      "parser": "gemini-2.5-flash [html-to-markdown]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 6628,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "gemini-2.5-flash",
+      "costUsd": {
+        "inputCost": 0.0015549,
+        "outputCost": 0.0002725,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0018273999999999999
+      },
+      "hash": "51d6de9da4d88c998e62826090472205",
+      "tokens": {
+        "input": 5183,
+        "output": 109,
+        "total": 6682
+      }
+    },
+    {
+      "file": "strike-detail-domenica-16-novembre-dalle-ore-10-alle-ore-18-scio.html",
+      "parser": "gemini-2.5-flash [basic-cleanup]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 13682,
+      "preProcessingStrategy": "basic-cleanup",
+      "model": "gemini-2.5-flash",
+      "costUsd": {
+        "inputCost": 0.0027233999999999995,
+        "outputCost": 0.0002675,
+        "cachedCost": 0.000050429999999999997,
+        "thinkingCost": 0,
+        "totalCost": 0.0030413299999999996
+      },
+      "hash": "0a112a2fae948c36cc91a0278ab49668",
+      "tokens": {
+        "input": 9078,
+        "output": 107,
+        "total": 12245
+      }
+    },
+    {
+      "file": "strike-detail-domenica-16-novembre-dalle-ore-10-alle-ore-18-scio.html",
+      "parser": "gemini-2.5-flash-lite [html-to-markdown]",
+      "parserType": "ai",
+      "score": 0.8,
+      "isExactMatch": false,
+      "differences": [
+        "startDate: Expected 2025-11-16 09:00:00, got 2025-11-16 10:00:00"
+      ],
+      "precision": 0.8,
+      "recall": 0.8,
+      "f1": 0.8,
+      "durationMs": 1451,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "gemini-2.5-flash-lite",
+      "costUsd": {
+        "inputCost": 0.0005183000000000001,
+        "outputCost": 0.000058,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0005763000000000001
+      },
+      "hash": "7a873341fe04a5525b4404107cb61d72",
+      "tokens": {
+        "input": 5183,
+        "output": 145,
+        "total": 5328
+      }
+    },
+    {
+      "file": "strike-detail-domenica-16-novembre-dalle-ore-10-alle-ore-18-scio.html",
+      "parser": "gemini-2.5-flash-lite [basic-cleanup]",
+      "parserType": "ai",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "durationMs": 1250,
+      "preProcessingStrategy": "basic-cleanup",
+      "model": "gemini-2.5-flash-lite",
+      "costUsd": {
+        "inputCost": 0.0009078,
+        "outputCost": 0.00006840000000000001,
+        "cachedCost": 0,
+        "thinkingCost": 0,
+        "totalCost": 0.0009762
+      },
+      "hash": "65fdd0cc197084a1c021f4eff1ea8d72",
+      "tokens": {
+        "input": 9078,
+        "output": 171,
+        "total": 9249
+      }
+    }
+  ]
+}
