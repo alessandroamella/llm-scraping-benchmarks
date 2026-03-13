@@ -1,27 +1,15 @@
 {
-  "timestamp": "2026-03-13T15:15:48.768Z",
-  "isCacheHit": false,
+  "timestamp": "2026-03-13T22:25:34.448Z",
+  "isCacheHit": true,
   "request": {
     "sourceName": "Trenitalia",
     "fileName": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2026-1-13-sciopero-nazionale-del-trasport.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "dom-distillation",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"Trenitalia\" (Italy's national railway operator).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"> <h3>Context Metadata</h3> <ul><li>Page Title: SCIOPERO NAZIONALE PERSONALE AUTOFERROTRANVIERI</li></ul> </div><hr/><div> <div> <h1>SCIOPERO NAZIONALE PERSONALE AUTOFERROTRANVIERI</h1> <div> <span>In vigore: 13 GENNAIO 2026</span> </div> <div></div> <div> <div> Servizio: <strong>Bus</strong> </div> <div> Causa Modifica: <strong>Sciopero</strong> </div> <div> Impresa: <strong>Trenitalia</strong> </div> </div> </div> </div> <div> <div> <div> <p><b>Il giorno martedì 13 gennaio 2026</b> è stato indetto uno sciopero di 24 ore del personale delle imprese cui si applica il Contratto Collettivo Nazionale&nbsp;di Lavoro degli Autoferrotranvieri.</p> <p><b>I servizi bus programmati in orario possono subire variazioni o cancellazioni.</b></p> <p>Per i servizi in orario Trenitalia sono garantiti i servizi essenziali previsti in caso di sciopero nei giorni feriali dalle ore 6.00 alle ore 9.00 e dalle ore 18.00 alle ore 21.00 (come da Orario ufficiale Trenitalia e www.trenitalia.com).</p> <p><b>Nel rispetto delle fasce di garanzia, ci possono essere variazioni in base ai programmi locali.</b></p> <p>Lo sciopero può comportare modifiche al servizio anche prima dell’inizio e dopo la sua conclusione.</p> <p>Maggiori informazioni sui servizi minimi garantiti in caso di sciopero sono disponibili sui canali digitali di Trenitalia o rivolgendosi al personale di assistenza clienti e presso le biglietterie.</p> </div> </div> </div>"
   },
   "response": {
-    "rawOutput": {
-      "isStrike": true,
-      "strikeData": {
-        "startDate": "2026-01-13 00:00:00",
-        "endDate": "2026-01-13 23:59:59",
-        "locationType": "NATIONAL",
-        "guaranteedTimes": [
-          "06:00-09:00",
-          "18:00-21:00"
-        ]
-      }
-    },
     "parsedData": {
       "isStrike": true,
       "strikeData": {
@@ -36,19 +24,17 @@
     },
     "usage": {
       "input": 865,
-      "output": 123,
-      "cached": 0,
-      "thinking": 0,
-      "total": 988
+      "output": 131,
+      "total": 1444
     },
     "costUsd": {
       "inputCost": 0.00021625,
-      "outputCost": 0.0001845,
-      "thinkingCost": 0,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.000672,
       "cachedCost": 0,
-      "totalCost": 0.00040075
+      "totalCost": 0.00108475
     },
-    "durationMs": 1698,
-    "thoughts": ""
+    "durationMs": 4420,
+    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, let's break this down. The task at hand is to determine if this input is a strike announcement, and if so, to extract the relevant data and format it into a specific JSON structure. The input clearly says \"SCIOPERO NAZIONALE PERSONALE AUTOFERROTRANVIERI\" which immediately signals a national strike involving public transport workers. The date is \"13 GENNAIO 2026\" and the duration is \"24 ore\", further confirming this.\n\nSo, *yes*, this is definitely a strike announcement. Now, to translate this into the required JSON format. The `isStrike` field will be `true`, obviously.\n\nFor the `strikeData` object, I'll start with the date. Since it's a full-day strike, I'll set the `startDate` to \"2026-01-13 00:00:00\" and the `endDate` to \"2026-01-13 23:59:59\". The duration confirms a 24-hour strike. The location is \"NAZIONALE\", translating to a `locationType` of \"NATIONAL\". Since it's national, the `locationCodes` array should be `null`, as per the schema.\n\nFinally, regarding guaranteed service times, \"dalle ore 6.00 alle ore 9.00 e dalle ore 18.00 alle ore 21.00\" provides the information I need for the `guaranteedTimes` array. So, the array should be: [\"06:00-09:00\", \"18:00-21:00\"].\n\nThat should satisfy the schema requirements. Let's make sure the data is accurately represented.\n\n\n"
   }
 }

@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-03-13T15:16:40.286Z",
+  "timestamp": "2026-03-13T22:25:44.990Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "ATAC",
     "fileName": "sciopero_trasporto_pubblico_adesione_personale_atac_322.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "dom-distillation-markdown",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"ATAC\" (the public transport company of Rome, Lazio (12)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: Sciopero del trasporto pubblico, adesione personale Atac al 32,2% - Roma Servizi per la Mobilità\n\n* * *\n\n# Sciopero del trasporto pubblico, adesione personale Atac al 32,2%\n\nPubblicato il: 04/07/2024 - Aggiornato il: 06/11/2024\n\nL’adesione del personale Atac allo sciopero di oggi, rilevata in mattinata, è stata pari al 32,2%"
   },
   "response": {
@@ -16,16 +16,15 @@
     "usage": {
       "input": 586,
       "output": 10,
-      "total": 764
+      "total": 749
     },
     "costUsd": {
       "inputCost": 0.0001465,
       "outputCost": 0.000015,
-      "thinkingCost": 0.000252,
+      "thinkingCost": 0.0002295,
       "cachedCost": 0,
-      "totalCost": 0.0004135
+      "totalCost": 0.000391
     },
-    "durationMs": 3652,
-    "thoughts": "**Analyzing Strike Information**\n\nOkay, let's break this down. My primary objective is clear: I need to pull strike-related details from the text provided. The input is Italian, which is fine, I can handle that. The important bit is to get the information and put it into JSON format. That's the output requirement, straightforward.\n\nThe text itself, \"Sciopero del trasporto pubblico, adesione personale Atac al 32,2% - Roma Servizi per la Mobilità ... L’adesione del personale Atac allo sciopero di oggi, rilevata in mattinata, è stata pari al 32,2%\", describes a *participation* rate, or *adesione*, within a *strike that's already occurred* or is currently underway. The instructions are very explicit here; they guide me in how to evaluate the information and the nature of the strike. Given the emphasis on *participation* numbers *after* the strike or *during* a strike, I need to set the flag `isStrike` to `false`. It's not a strike announcement, but rather a report on the involvement. So the appropriate JSON response should reflect this.\n\n\n"
+    "durationMs": 3050
   }
 }

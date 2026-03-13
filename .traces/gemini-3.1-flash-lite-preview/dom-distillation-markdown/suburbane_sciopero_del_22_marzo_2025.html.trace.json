@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-03-13T15:14:35.667Z",
+  "timestamp": "2026-03-13T22:25:27.712Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "EAV",
     "fileName": "suburbane_sciopero_del_22_marzo_2025.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "dom-distillation-markdown",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"EAV\" (the public transport company of Campania (15)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: Linee Suburbane - Avviso di sciopero di 4 ore del 22 marzo 2025 - EAV srl\n\n* * *\n\n## Linee Suburbane – Avviso di sciopero di 4 ore del 22 marzo 2025\n\nData:  \n**17 Marzo 2025**\n\nSi comunica che per il giorno 22 marzo 2025 la O.S. OR.S.A. ha proclamato uno sciopero aziendale di 4 ore, dalle ore 19:40 alle ore 23:40, avente le seguenti motivazioni: problematiche organizzazione aziendale.\n\nDurante l’ultima proclamazione di sciopero della citata O.S., la percentuale di adesione è stata del 11.94% (scioperi di 24 e 4 ore del giorno 5 ottobre 2024)\n\nDi seguito vengono elencate le ultime e le prime partenze garantite in relazione alle fasce di garanzia.\n\nDurante l’orario di sciopero, l’effettuazione delle corse è subordinata al numero di lavoratori aderenti allo sciopero.\n\nUltime partenze garantite prima dello sciopero\n\n-   da Napoli per Piedimonte treno 7872 delle 19:03\n-   da Piedimonte per Napoli treno 7873 delle ore 17:21\n-   da Piedimonte per Caserta RFI treno 7875 delle 18:50\n\nIl treno 7878 delle ore 20:30 da Napoli per Piedimonte Matese verrà effettuato in quanto garantito in caso di sciopero.\n\nSulla linea **Napoli-Benevento** sarà garantito il servizio automobilistico sostitutivo come da programma feriale.  \nIl servizio è effettuato dalla società **D’Agostino Tours**.\n\n**Categoria:** [Trasporto pubblico](https://www.eavsrl.it/categoria-disservizio/trasporto-pubblico/)\n\n**Area:** [Linee Suburbane](https://www.eavsrl.it/area/linee-suburbane/)"
   },
   "response": {
@@ -23,17 +23,16 @@
     },
     "usage": {
       "input": 964,
-      "output": 93,
-      "total": 1728
+      "output": 99,
+      "total": 1527
     },
     "costUsd": {
       "inputCost": 0.000241,
-      "outputCost": 0.0001395,
-      "thinkingCost": 0.0010065,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.000696,
       "cachedCost": 0,
-      "totalCost": 0.001387
+      "totalCost": 0.0010855
     },
-    "durationMs": 10822,
-    "thoughts": "**Strike Announcement Analysis**\n\nOkay, let's break this down. My task is to analyze this text and determine if it's a strike announcement, and if so, extract the relevant information in the specified JSON format. The criteria are clear: `isStrike`, the strike details which are `startDate`, `endDate`, `locationType`, `locationCodes`, and optionally `guaranteedTimes`.\n\nThe input is a strike on March 22, 2025, lasting four hours, from 19:40 to 23:40, and the affected entity is EAV, located in Campania (15).\n\nReading the announcement: \"Si comunica che per il giorno 22 marzo 2025 la O.S. OR.S.A. ha proclamato uno sciopero aziendale di 4 ore, dalle ore 19:40 alle ore 23:40\" – yep, that's a strike announcement.  So, `isStrike` is true.\n\nNow, for the strike details.  `startDate` is clearly 2025-03-22 19:40:00. `endDate` is 2025-03-22 23:40:00.  The location is regional – \"EAV in Campania\" points to that, so `locationType` is REGIONAL and `locationCodes` is [\"15\"].\n\nThe tricky part is `guaranteedTimes`. The text mentions \"ultime partenze garantite\" and specific trains like \"il treno 7878... verrà effettuato in quanto garantito\".  The prompt says \"if not specified, omit\". However, the prompt is asking for time ranges. The provided text doesn't provide a general guarantee window or time range (fascia di garanzia) like \"06:00-09:00\".  Therefore, I'm going to omit `guaranteedTimes` because it's not a specified time range, and the prompt indicates to do so.\n\nSo, the strike data I've extracted are:\n\n*   `isStrike`: true\n*   `startDate`: \"2025-03-22 19:40:00\"\n*   `endDate`: \"2025-03-22 23:40:00\"\n*   `locationType`: \"REGIONAL\"\n*   `locationCodes`: [\"15\"]\n\nI have validated that it's valid JSON, with no comments, that `isStrike` is a boolean, that the date/time formats are correct (yyyy-MM-dd HH:mm:ss), that `locationType` is REGIONAL, and that `locationCodes` is an array of strings. Done.\n\n\n"
+    "durationMs": 6386
   }
 }

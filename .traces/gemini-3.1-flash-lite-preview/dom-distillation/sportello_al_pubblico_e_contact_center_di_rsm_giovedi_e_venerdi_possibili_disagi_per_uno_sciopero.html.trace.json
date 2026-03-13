@@ -1,26 +1,15 @@
 {
-  "timestamp": "2026-03-13T15:17:53.537Z",
-  "isCacheHit": false,
+  "timestamp": "2026-03-13T22:26:13.849Z",
+  "isCacheHit": true,
   "request": {
     "sourceName": "ATAC",
     "fileName": "sportello_al_pubblico_e_contact_center_di_rsm_giovedi_e_venerdi_possibili_disagi_per_uno_sciopero.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "dom-distillation",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"ATAC\" (the public transport company of Rome, Lazio (12)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"> <h3>Context Metadata</h3> <ul><li>Page Title: Sportello al Pubblico e contact center di Rsm, giovedì e venerdì possibili disagi per uno sciopero - Roma Servizi per la Mobilità</li></ul> </div><hr/><div> <div> <div> <div> <div> <div> </div> </div> </div> <div> <div> <div> <div> <h1>Sportello al Pubblico e contact center di Rsm, giovedì e venerdì possibili disagi per uno sciopero</h1> </div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div><p>Pubblicato il: 13/01/2025 - Aggiornato il: 14/01/2025</p></div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div> <span> </span> </div> </div> </div> <div> <div> <div></div> </div> </div> <div> <div> <p>Giovedì 16 e venerdì 17 gennaio, possibili disagi per le attività erogate dallo Sportello al Pubblico di Roma Servizi per la Mobilità, &nbsp;in via Silvio D’Amico 38, e per il contact center 0657003 a causa dello sciopero proclamato, per l’intero turno, dal sindacato Usb.</p> <p>Aggiornamenti sul sito <a href=\"romamobilita.it\">romamobilita.it</a></p> </div> </div> </div> </div> </div> </div>"
   },
   "response": {
-    "rawOutput": {
-      "isStrike": true,
-      "strikeData": {
-        "startDate": "2025-01-16 00:00:00",
-        "endDate": "2025-01-17 23:59:59",
-        "locationType": "REGIONAL",
-        "locationCodes": [
-          "12"
-        ]
-      }
-    },
     "parsedData": {
       "isStrike": true,
       "strikeData": {
@@ -34,19 +23,17 @@
     },
     "usage": {
       "input": 816,
-      "output": 93,
-      "cached": 0,
-      "thinking": 0,
-      "total": 909
+      "output": 99,
+      "total": 1423
     },
     "costUsd": {
       "inputCost": 0.000204,
-      "outputCost": 0.0001395,
-      "thinkingCost": 0,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.000762,
       "cachedCost": 0,
-      "totalCost": 0.0003435
+      "totalCost": 0.0011145
     },
-    "durationMs": 1274,
-    "thoughts": ""
+    "durationMs": 5471,
+    "thoughts": "**Strike Analysis: Roma Servizi per la Mobilità**\n\nOkay, let's break this down. My task is to analyze this text – a notice regarding a potential strike – from *Roma Servizi per la Mobilità* (Rsm). The desired output format is JSON, adhering to a specific schema, of course.\n\nThe text reads, \"Giovedì 16 e venerdì 17 gennaio, possibili disagi ... a causa dello sciopero proclamato, per l’intero turno, dal sindacato Usb.\" Right, so we have a strike announcement. My immediate interpretation is `isStrike: true`.\n\nI need to extract the specifics. The strike affects Rsm, obviously, and the dates are Thursday, January 16th, and Friday, January 17th, 2025. \"Per l'intero turno\" means the entire shift on both days. So, my initial thought is that the dates should span from the beginning of the 16th to the end of the 17th. I should reflect this in the output JSON.\n\nThe strike's scope is definitely Rome, and therefore impacts the Lazio region (code 12). Since it's affecting local public services, the location type is *REGIONAL*.\n\nSo, based on this, the JSON I'll output will contain:\n\n*   `isStrike`: true\n*   `strikeData`:\n    *   `startDate`: \"2025-01-16 00:00:00\"\n    *   `endDate`: \"2025-01-17 23:59:59\"\n    *   `locationType`: \"REGIONAL\"\n    *   `locationCodes`: [\"12\"]\n\nThere are no specified guaranteed times in the text, so I won't include anything for that. I need to make sure the output is structured correctly as JSON, and I should have all the necessary information, according to the schema. That's it, done.\n\n\n"
   }
 }

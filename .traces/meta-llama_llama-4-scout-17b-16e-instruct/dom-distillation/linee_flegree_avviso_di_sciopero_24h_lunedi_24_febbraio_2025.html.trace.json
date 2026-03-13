@@ -1,30 +1,15 @@
 {
-  "timestamp": "2026-03-13T15:14:27.915Z",
-  "isCacheHit": false,
+  "timestamp": "2026-03-13T22:25:26.559Z",
+  "isCacheHit": true,
   "request": {
     "sourceName": "EAV",
     "fileName": "linee_flegree_avviso_di_sciopero_24h_lunedi_24_febbraio_2025.html",
     "model": "meta-llama/llama-4-scout-17b-16e-instruct",
     "strategy": "dom-distillation",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"EAV\" (the public transport company of Campania (15)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"> <h3>Context Metadata</h3> <ul><li>Page Title: Linee Flegree: Avviso di sciopero 24h lunedì 24 febbraio 2025 - EAV srl</li></ul> </div><hr/><article> <section> <div> <div> <div> <h2> Linee Flegree: Avviso di sciopero 24h lunedì 24 febbraio 2025 </h2> </div> </div> </div> <div> <div> <p> <small>Data: </small><br> <small><strong>19 Febbraio 2025</strong></small> </p> </div> </div> </section> <section> <div> <div> <div> </div> </div> <div> <div> <section> <p>Per il giorno 24 febbraio 2025 la O.S. USB ha proclamato azione di sciopero per adesione a sciopero nazionale di 24 ore avente le seguenti motivazioni: per una maggiore sicurezza dei lavoratori e del servizio ed un incremento delle retribuzioni mensili.</p> <p>Durante l’ultima proclamazione di sciopero della O.S. USB, la percentuale di adesione è stata del 9,2% (sciopero generale nazionale di 24 ore del 13 dicembre 2024)</p> <p>Di seguito vengono elencate le ultime e le prime partenze garantite in relazione alle diverse fasce di garanzia. Durante l’orario di sciopero l’effettuazione delle corse è subordinata al numero di lavoratori aderenti allo sciopero.</p> <p><strong>Servizio garantito dalle ore 05:30 alle ore 8:30 e dalle ore 16:30 alle ore 19:30</strong></p> <p>Prime partenze garantite dopo lo sciopero – fascia operatività servizio dalle 5:30 alle 8:30</p> <ul> <li>da Montesanto per Torregaveta&nbsp; &nbsp; &nbsp;05:45</li> <li>da Fuorigrotta per Bagnoli&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;05:38</li> <li>da Quarto per Licola&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 05:42</li> <li>da Montesanto per Licola&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;05:36</li> <li></li> <li>da Fuorigrotta per Montesanto&nbsp; &nbsp; &nbsp;05:30</li> <li>da Torregaveta per Montesanto&nbsp; &nbsp; 05:38</li> <li>da Quarto per Montesanto&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;05:45</li> <li>da Licola per Montesanto&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;05:56</li> </ul> <p>Ultime partenze garantite prima dello sciopero – fascia operatività servizio dalle 5:30 alle 8:30</p> <ul> <li>da Montesanto per Torregaveta &nbsp; &nbsp;08:15</li> <li>da Montesanto per Bagnoli&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 08:30</li> <li>da Montesanto per Licola&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 08:24</li> <li></li> <li>per Montesanto da&nbsp;Torregaveta &nbsp;&nbsp;&nbsp;08:08</li> <li>per Montesanto da Licola&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 08:20</li> </ul> <p>Prime partenze garantite dopo lo sciopero – fascia operatività servizio dalle 16.30 alle 19.30</p> <ul> <li>da Montesanto per Bagnoli&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 16:30</li> <li>da Montesanto per Torregaveta&nbsp; &nbsp;16:45</li> <li>da Montesanto per Licola &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;16:48</li> <li></li> <li>per Montesanto da Torregaveta&nbsp; &nbsp;16:38</li> <li>per Montesanto da Bagnoli&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 16:47</li> <li>per Montesanto da Licola &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;16:44</li> </ul> <p>&nbsp;</p> <p>Ultime partenze garantite prima dello sciopero – fascia operatività servizio dalle 16.30 alle 19.30</p> <ul> <li>da Montesanto per Torregaveta &nbsp; 19:15</li> <li>da Montesanto per Bagnoli&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;19:30</li> <li>da Montesanto per Licola&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 19:12</li> <li></li> <li>per Montesanto da&nbsp;Torregaveta&nbsp;&nbsp; 19:08</li> <li>per Montesanto da Bagnoli&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 19:17</li> <li>per Montesanto da Licola&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 19:08</li> </ul> <p>Il servizio sostitutivo Gerolomini-Pozzuoli-Arco Felice non è interessato dallo sciopero.</p> <div> <div> <p><b>Categoria:&nbsp;</b><a href=\"https://www.eavsrl.it/categoria-disservizio/trasporto-pubblico/\">Trasporto pubblico</a></p> <p><b>Area:&nbsp;</b><a href=\"https://www.eavsrl.it/area/linee-flegree/\">Linee Flegree</a></p> </div> </div> <div></div> </section> </div> </div> </div> </section> </article>"
   },
   "response": {
-    "rawOutput": {
-      "isStrike": true,
-      "strikeData": {
-        "startDate": "2025-02-24 00:00:00",
-        "endDate": "2025-02-24 23:59:59",
-        "locationType": "REGIONAL",
-        "locationCodes": [
-          "15"
-        ],
-        "guaranteedTimes": [
-          "05:30-08:30",
-          "16:30-19:30"
-        ]
-      }
-    },
     "parsedData": {
       "isStrike": true,
       "strikeData": {
@@ -41,17 +26,17 @@
       }
     },
     "usage": {
-      "input": 2500,
+      "input": 2499,
       "output": 98,
-      "total": 2598
+      "total": 2597
     },
     "costUsd": {
-      "inputCost": 0.000275,
+      "inputCost": 0.00027489,
       "outputCost": 0.00003332,
       "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.00030832
+      "totalCost": 0.00030821
     },
-    "durationMs": 523
+    "durationMs": 907
   }
 }

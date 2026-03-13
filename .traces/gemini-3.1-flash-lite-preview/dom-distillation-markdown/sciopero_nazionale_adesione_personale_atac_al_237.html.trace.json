@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-03-13T15:16:27.558Z",
+  "timestamp": "2026-03-13T22:25:37.896Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "ATAC",
     "fileName": "sciopero_nazionale_adesione_personale_atac_al_237.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "dom-distillation-markdown",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"ATAC\" (the public transport company of Rome, Lazio (12)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: Sciopero nazionale, adesione personale Atac al 23,7% - Roma Servizi per la Mobilità\n\n* * *\n\n# Sciopero nazionale, adesione personale Atac al 23,7%\n\nPubblicato il: 22/09/2025 - Aggiornato il: 22/09/2025\n\nL’adesione complessiva del personale Atac allo sciopero nazionale di oggi, rilevata in mattinata, è stata del 23,7%"
   },
   "response": {
@@ -16,16 +16,15 @@
     "usage": {
       "input": 584,
       "output": 10,
-      "total": 764
+      "total": 769
     },
     "costUsd": {
       "inputCost": 0.000146,
       "outputCost": 0.000015,
-      "thinkingCost": 0.000255,
+      "thinkingCost": 0.0002625,
       "cachedCost": 0,
-      "totalCost": 0.000416
+      "totalCost": 0.0004235
     },
-    "durationMs": 3727,
-    "thoughts": "**Analyzing the Atac Strike Data**\n\nOkay, let's break this down. The input content clearly states, \"…di oggi\" – \"of today\" – and \"...è stata del 23,7%\" – \"...was 23.7%\". The language immediately tells me this is *retrospective* data. It's reporting on participation in a strike that has already concluded, not an announcement of a future event. My objective was to determine if this was an announcement of an upcoming strike. The constraint explicitly states that if the content is reporting *participation* of a past event, then `isStrike` must be `false`. Therefore, I've got to set the `isStrike` flag to `false`. Simple deduction. It's just a report on the *adesione* (participation) percentage, nothing more.\n\n\n"
+    "durationMs": 4030
   }
 }

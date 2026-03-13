@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-03-13T15:14:04.519Z",
+  "timestamp": "2026-03-13T22:25:21.709Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "Trenord",
     "fileName": "strike-detail-venerd--12-dicembre-da-mezzanotte-alle-21-sciopero.html",
     "model": "meta-llama/llama-4-scout-17b-16e-instruct",
     "strategy": "dom-distillation-markdown",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"Trenord\" (the public transport company of Lombardia (03)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: Venerdì 12 dicembre da mezzanotte alle 21 sciopero nazionaleUser-logged-no-picCloseSend-mail-OKAlert\n-   Date News: giovedì 11/12/2025\n-   Header: Venerdì 12 dicembre da mezzanotte alle 21 sciopero nazionale\n\n* * *\n\n# **Venerdì 12 dicembre da mezzanotte alle 21 sciopero nazionale**\n\ngiovedì 11/12/2025\n\n#### **Previste ripercussioni sul servizio regionale, suburbano, aeroportuale**\n\n#### **Dalle 21 a mezzanotte possibili ulteriori impatti su rete FERROVIENORD per lo sciopero del personale del gestore dell’infrastruttura**\n\n#### **Negli orari 6-9 e 18-21 viaggeranno i treni indicati nella lista dei servizi garantiti; informazioni disponibili su trenord.it e App**\n\n**Da mezzanotte alle 21 di venerdì 12 dicembre**, l’organizzazione sindacale CGIL ha indetto uno sciopero nazionale che avrà ripercussioni sulla circolazione dei treni regionali, suburbani e dei collegamenti aeroportuali Malpensa Express e S50 Malpensa Aeroporto-Bellinzona. Le corse potranno subire variazioni e cancellazioni.\n\nSulle linee che circolano su rete FERROVIENORD – le linee regionali da Milano Cadorna verso Novara Nord, Varese Nord, Laveno Mombello Lago, Como Lago, Asso, la Brescia-Iseo-Edolo, le suburbane S1, S2, S3, S4, S9, S12, S13, i collegamenti aeroportuali con Malpensa Aeroporto – sono possibili **ulteriori ripercussioni fra le ore 21 e la mezzanotte**, per il proseguire dello sciopero che potrà interessare il personale del gestore dell’infrastruttura.\n\n**Venerdì 12 negli orari 6-9 e 18-21 circoleranno i treni indicati nella lista delle corse garantite**, disponibile su trenord.it. Si invitano i passeggeri a consultare l’elenco prima di mettersi in viaggio.  \n\nNella notte fra giovedì 11 e venerdì 12 viaggeranno i convogli con orario di partenza entro l’inizio dello sciopero e arrivo alla destinazione finale entro la 1.\n\nSaranno previsti autobus sostitutivi, senza fermate intermedie, per le corse del servizio aeroportuale non effettuate tra Milano Cadorna (da via Paleocapa, 1) e Malpensa Aeroporto e tra Stabio e Malpensa Aeroporto.\n\nLe informazioni sulla circolazione saranno disponibili sulle pagine di ogni linea della App e del sito trenord.it.\n\nSi invitano i passeggeri a prestare attenzione ad annunci sonori e monitor di stazione.\n\n[Comunicato stampa Sciopero 12 dicembre](/fileadmin/contenuti/TRENORD/3-News/Trenord_Informa/Comunicati_stampa/2025/Trenord_251211_CS_Sciopero_12_dicembre_rev.pdf)\n\nPDF Document Found: /fileadmin/contenuti/TRENORD/3-News/Trenord\\_Informa/Comunicati\\_stampa/2025/Trenord\\_251211\\_CS\\_Sciopero\\_12\\_dicembre\\_rev.pdf"
   },
   "response": {
@@ -23,17 +23,17 @@
       }
     },
     "usage": {
-      "input": 1680,
+      "input": 1679,
       "output": 90,
-      "total": 1770
+      "total": 1769
     },
     "costUsd": {
-      "inputCost": 0.0001848,
+      "inputCost": 0.00018469,
       "outputCost": 0.0000306,
       "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.0002154
+      "totalCost": 0.00021529
     },
-    "durationMs": 576
+    "durationMs": 456
   }
 }

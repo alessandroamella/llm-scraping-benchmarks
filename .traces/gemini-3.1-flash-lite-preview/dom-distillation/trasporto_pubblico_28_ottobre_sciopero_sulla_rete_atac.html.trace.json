@@ -1,60 +1,31 @@
 {
-  "timestamp": "2026-03-13T15:17:45.373Z",
-  "isCacheHit": false,
+  "timestamp": "2026-03-13T22:26:11.298Z",
+  "isCacheHit": true,
   "request": {
     "sourceName": "ATAC",
     "fileName": "trasporto_pubblico_28_ottobre_sciopero_sulla_rete_atac.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "dom-distillation",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"ATAC\" (the public transport company of Rome, Lazio (12)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"> <h3>Context Metadata</h3> <ul><li>Page Title: Trasporto pubblico, il 28 ottobre sciopero sulla rete Atac - Roma Servizi per la Mobilità</li></ul> </div><hr/><div> <div> <div> <div> <div> <div> </div> </div> </div> <div> <div> <div> <div> <h1>Trasporto pubblico, il 28 ottobre sciopero sulla rete Atac</h1> </div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div><p>Pubblicato il: 22/10/2024 - Aggiornato il: 06/11/2024</p></div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div> <span> </span> </div> </div> </div> <div> <div> <div></div> </div> </div> <div> <div> <p><span>Lunedì 28 ottobre trasporto pubblico romano a rischio per lo sciopero di 24 ore indetto dai sindacati Usb e Orsa. L’agitazione interesserà la sola rete Atac. La protesta non coinvolgerà le linee periferiche gestite da operatori</span><br><span>privati. Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.</span></p> <p><span>Ulteriori informazioni sui siti atac.roma.it e romamobilita.it</span></p> </div> </div> </div> </div> </div> </div>"
   },
   "response": {
-    "rawOutput": {
-      "isStrike": true,
-      "strikeData": {
-        "startDate": "2024-10-28 00:00:00",
-        "endDate": "2024-10-28 23:59:59",
-        "locationType": "REGIONAL",
-        "locationCodes": [
-          "12"
-        ],
-        "guaranteedTimes": [
-          "00:00-08:30",
-          "17:00-20:00"
-        ]
-      }
-    },
     "parsedData": {
-      "isStrike": true,
-      "strikeData": {
-        "startDate": "2024-10-28 00:00:00",
-        "endDate": "2024-10-28 23:59:59",
-        "locationType": "REGIONAL",
-        "locationCodes": [
-          "12"
-        ],
-        "guaranteedTimes": [
-          "00:00-08:30",
-          "17:00-20:00"
-        ]
-      }
+      "isStrike": false
     },
     "usage": {
       "input": 799,
-      "output": 140,
-      "cached": 0,
-      "thinking": 0,
-      "total": 939
+      "output": 10,
+      "total": 1579
     },
     "costUsd": {
       "inputCost": 0.00019975,
-      "outputCost": 0.00021,
-      "thinkingCost": 0,
+      "outputCost": 0.000015,
+      "thinkingCost": 0.001155,
       "cachedCost": 0,
-      "totalCost": 0.00040975
+      "totalCost": 0.00136975
     },
-    "durationMs": 1254,
-    "thoughts": ""
+    "durationMs": 6724,
+    "thoughts": "**Analyzing a Public Transport Strike Announcement**\n\nOkay, here's the deal. I've got this text about a public transport strike to analyze, and the task is to figure out if it's an announcement for an *upcoming* strike. The criteria are clear: it needs to be about a strike that's in the future, from the perspective of when the announcement was made.\n\nThe input text is in Italian: \"Trasporto pubblico, il 28 ottobre sciopero sulla rete Atac.\" From there, I need to extract key details. The actual announcement, as I've parsed it, says \"Lunedì 28 ottobre trasporto pubblico romano a rischio per lo sciopero di 24 ore indetto dai sindacati Usb e Orsa.\" So, it's about a 24-hour strike.\n\nThe critical piece here is the date: October 28, 2024. The original text that I read was updated on 06/11/2024. So, October 28th has *already* passed relative to the update date. The location is Rome (Lazio), and there are guaranteed service bands – \"05:30-08:30\" and \"17:00-20:00\", which are typical for ATAC strikes.\n\nNow, the core of the problem. My instructions say to determine if this is an announcement about an *upcoming* strike. Even though the text *is* an announcement, the strike date (Oct 28) is in the past, relative to the document's update date (Nov 6). So, even though it was an *upcoming* strike at some point, it's no longer *upcoming*. Typically, real-time systems would disregard a past date. The document is an announcement but not of an *upcoming* strike. The instructions say if it is not an upcoming strike, return `isStrike: false`.\n\nAlright, let's verify. The prompt asks if this is an announcement of an upcoming strike. If the publication date is Oct 22 and it was updated on Nov 6, the strike on Oct 28 has passed.\n\nTherefore, the verdict is `isStrike: false`.\n\n\n"
   }
 }

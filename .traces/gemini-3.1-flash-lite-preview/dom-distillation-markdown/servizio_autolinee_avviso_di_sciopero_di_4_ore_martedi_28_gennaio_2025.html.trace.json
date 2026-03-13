@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-03-13T15:14:17.052Z",
+  "timestamp": "2026-03-13T22:25:25.887Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "EAV",
     "fileName": "servizio_autolinee_avviso_di_sciopero_di_4_ore_martedi_28_gennaio_2025.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "dom-distillation-markdown",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"EAV\" (the public transport company of Campania (15)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: Servizio Autolinee: Avviso di sciopero di 4 ore, martedì 28 gennaio 2025 - EAV srl\n\n* * *\n\n## Servizio Autolinee: Avviso di sciopero di 4 ore, martedì 28 gennaio 2025\n\nData:  \n**27 Gennaio 2025**\n\nSi comunica che, ai sensi dell’art. 2 comma 7 della L.146/90 (fattispecie: gravi eventi lesivi dell’incolumità e della sicurezza dei lavoratori) e delle integrazioni alla stessa della L.83/2000 e successive modifiche, per martedì 28 gennaio 2025 le OO.SS. ORSA, CONFAIL, Filt Cgil, Fit Cisl, Uiltrasporti, Ugl autoferro, Faisa Cisal e USB hanno proclamato uno sciopero aziendale di 4 ore, dalle ore 08:20 alle ore 12:20, avente le seguenti motivazioni: sicurezza sul posto di lavoro per il personale front-line di EAV S.r.l.\n\nDurante l’ultima proclamazione di sciopero delle citate OO.SS., la percentuale di adesione è stata la seguente:\n\n-   Or.S.A. e Confail: 15,5 % (sciopero di 4 ore del giorno 23 ottobre 2024)\n-   CGIL e UIL: 10,8% (sciopero di 4 ore del giorno 29 novembre 2024)\n-   CISL, CISAL e UGL: 42% (sciopero nazionale di 24 ore del giorno 8 novembre 2024)\n-   USB: 9,2% (sciopero generale nazionale di 24 ore del 13 dicembre 2024)\n\n**Non saranno garantite le corse durante l’orario di sciopero.**\n\n _Durante l’orario di sciopero l’effettuazione delle corse è subordinata al numero di lavoratori aderenti allo sciopero._\n\n**Categoria:** [Trasporto pubblico](https://www.eavsrl.it/categoria-disservizio/trasporto-pubblico/)\n\n**Area:** [EAV - Autobus Campania](https://www.eavsrl.it/area/eav-autobus-campania/)"
   },
   "response": {
@@ -24,16 +24,15 @@
     "usage": {
       "input": 1019,
       "output": 99,
-      "total": 1576
+      "total": 1569
     },
     "costUsd": {
       "inputCost": 0.00025475,
       "outputCost": 0.0001485,
-      "thinkingCost": 0.000687,
+      "thinkingCost": 0.0006765,
       "cachedCost": 0,
-      "totalCost": 0.00109025
+      "totalCost": 0.00107975
     },
-    "durationMs": 8843,
-    "thoughts": "**Analyzing the Strike Notice**\n\nOkay, here's the deal. I've got this input – a notice about a strike from EAV, specifically dated January 28, 2025. My primary goal is to extract the critical data points and structure them into the pre-defined JSON format.\n\nFirst, I need to confirm if it *is* a strike. The notice *is* an announcement of a strike, so `isStrike` is `true`. Good.\n\nNext, I need to parse the strike details. The notice explicitly states the strike duration: it's on January 28, 2025, lasting four hours, from 08:20 to 12:20. Thus, I'll set the `startDate` to \"2025-01-28 08:20:00\" and `endDate` to \"2025-01-28 12:20:00\".\n\nNow, about the location. EAV operates in the Campania region, code \"15\". This means `locationType` should be \"REGIONAL\" and `locationCodes` should be `[\"15\"]`.\n\nFinally, guaranteed times. The notice says \"Non saranno garantite le corse durante l’orario di sciopero,\" which translates to \"No trips will be guaranteed during the strike hours\". Therefore, I'll set `guaranteedTimes` to `None`, or rather omit it since it is not specified.\n\nSo, the key-value pairs need to be in JSON format. `isStrike` will be boolean. The `strikeData` needs to be an object. The data I've just processed neatly fits this structure, so it's a matter of ensuring the JSON output is well formed.\n\n\n"
+    "durationMs": 4946
   }
 }

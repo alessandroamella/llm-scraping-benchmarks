@@ -1,30 +1,38 @@
 {
-  "timestamp": "2026-03-13T15:14:03.797Z",
+  "timestamp": "2026-03-13T22:25:20.857Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "Trenord",
     "fileName": "strike-detail-sciopero-nazionale-17-novembre-ore-9-13-personale-.html",
     "model": "deepseek-chat",
     "strategy": "dom-distillation-markdown",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"Trenord\" (the public transport company of Lombardia (03)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: Sciopero Nazionale 17 novembre ore 9-13 personale Trenord non coinvoltoUser-logged-no-picCloseSend-mail-OKAlert\n-   Date News: giovedì 16/11/2023\n-   Header: Sciopero Nazionale 17 novembre ore 9-13 personale Trenord non coinvolto\n\n* * *\n\n# **Sciopero Nazionale 17 novembre ore 9-13 personale Trenord non coinvolto**\n\ngiovedì 16/11/2023\n\n**Potrà aderire il personale delle imprese che gestiscono le infrastrutture FERROVIENORD e RFI**\n\nIl personale di Trenord non è coinvolto nello sciopero nazionale indetto per venerdì 17 novembre tra le ore 9 e le ore 13 al quale, tuttavia, potrebbero aderire i lavoratori delle imprese che gestiscono l’infrastruttura ferroviaria, FERROVIENORD e RFI.\n\nL’eventuale adesione allo sciopero del personale dei gestori delle infrastrutture potrà ripercuotersi anche sul servizio offerto da Trenord, causando tra le ore 9 e le ore 13 limitazioni e cancellazioni dei treni regionali, suburbani e del collegamento aeroportuale Malpensa Express.\n\nNella mattina di venerdì, saranno garantiti i treni con orario di partenza entro le ore 9 e arrivo alla destinazione finale entro le ore 10.\n\nPer quanto riguarda il collegamento aeroportuale, saranno previsti autobus sostitutivi, senza fermate intermedie, per eventuali corse non effettuate tra Milano Cadorna e Malpensa Aeroporto – da Milano i bus partiranno da Via Paleocapa, 1 – e tra Busto Arsizio e Malpensa Aeroporto.\n\nInformazioni in tempo reale sulla circolazione saranno disponibili sulle pagine di ogni linea della App e del sito Trenord. Si invitano i passeggeri a prestare attenzione ad annunci sonori e monitor di stazione.\n\n­\n\n[Comunicato stampa sciopero 17 novembre](/fileadmin/contenuti/TRENORD/3-News/Trenord_Informa/Comunicati_stampa/2023/Trenord_231115_CS_Sciopero_nazionale.pdf)\n\nPDF Document Found: /fileadmin/contenuti/TRENORD/3-News/Trenord\\_Informa/Comunicati\\_stampa/2023/Trenord\\_231115\\_CS\\_Sciopero\\_nazionale.pdf"
   },
   "response": {
     "parsedData": {
-      "isStrike": false
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2023-11-17 09:00:00",
+        "endDate": "2023-11-17 13:00:00",
+        "locationType": "NATIONAL",
+        "guaranteedTimes": [
+          "09:00-10:00"
+        ]
+      }
     },
     "usage": {
-      "input": 1597,
-      "output": 14,
-      "total": 1611
+      "input": 1591,
+      "output": 92,
+      "total": 1683
     },
     "costUsd": {
-      "inputCost": 0.00004472,
-      "outputCost": 0.00000392,
+      "inputCost": 0.00004455,
+      "outputCost": 0.00002576,
       "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.00004864
+      "totalCost": 0.00007031
     },
-    "durationMs": 3065
+    "durationMs": 5158
   }
 }

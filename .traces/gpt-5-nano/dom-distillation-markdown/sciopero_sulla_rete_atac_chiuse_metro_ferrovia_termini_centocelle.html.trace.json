@@ -1,32 +1,30 @@
 {
-  "timestamp": "2026-03-13T15:17:34.765Z",
+  "timestamp": "2026-03-13T22:26:08.256Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "ATAC",
     "fileName": "sciopero_sulla_rete_atac_chiuse_metro_ferrovia_termini_centocelle.html",
     "model": "gpt-5-nano",
     "strategy": "dom-distillation-markdown",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"ATAC\" (the public transport company of Rome, Lazio (12)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: Sciopero sulla rete Atac, chiuse le metro e la ferrovia Termini-Centocelle - Roma Servizi per la Mobilità\n\n* * *\n\n# Sciopero sulla rete Atac, chiuse le metro e la ferrovia Termini-Centocelle\n\nPubblicato il: 04/07/2024 - Aggiornato il: 06/11/2024\n\nÈ in corso lo sciopero sulla rete Atac che si concluderà alle 16,30. Ecco la situazione:\n\nMetro A, B/B1, C: chiuse  \nFerrovia Termini-Centocelle: chiusa  \nBus e tram: possibili riduzioni di corse."
   },
   "response": {
     "parsedData": {
-      "isStrike": false,
-      "strikeData": null
+      "isStrike": false
     },
     "usage": {
-      "input": 1064,
-      "output": 420,
-      "total": 1484
+      "input": 978,
+      "output": 329,
+      "total": 1307
     },
     "costUsd": {
-      "inputCost": 0.0000532,
-      "outputCost": 0.000168,
+      "inputCost": 0.0000489,
+      "outputCost": 0.0001316,
       "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.0002212
+      "totalCost": 0.0001805
     },
-    "durationMs": 6157,
-    "thoughts": "**Ensuring output correctness**\n\nI’m checking the strike information, and it clearly states that it's ongoing, not upcoming. Therefore, isStrike should be false. I need to consider whether the content includes relevant times or details for the strike, but I shouldn't mark it as a strike since it's active. The example output I’m aiming for if it's not a strike is {\"isStrike\": false}. I must ensure the JSON is correctly formatted without any extra text. So, my final output will be:\n\n{\n  \"isStrike\": false\n}"
+    "durationMs": 8243
   }
 }

@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-03-13T15:14:03.928Z",
+  "timestamp": "2026-03-13T22:25:21.053Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "Trenord",
     "fileName": "strike-detail-mercoled--19-marzo-dalle-ore-9-alle-ore-17-scioper.html",
     "model": "gpt-5-nano",
     "strategy": "dom-distillation",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"Trenord\" (the public transport company of Lombardia (03)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"> <h3>Context Metadata</h3> <ul><li>Page Title: Mercoledì 19 marzo dalle ore 9 alle ore 17 Sciopero nazionale del trasporto ferroviarioUser-logged-no-picCloseSend-mail-OKAlert</li><li>Date News: lunedì 17/03/2025</li><li>Header: Mercoledì 19 marzo dalle ore 9 alle ore 17 Sciopero nazionale del trasporto ferroviario</li></ul> </div><hr/><div> <div> <h1> <b> Mercoledì 19 marzo dalle ore 9 alle ore 17 Sciopero nazionale del trasporto ferroviario </b> </h1> <p> lunedì 17/03/2025 </p> </div> <div> <!-- start simpleTextMedia --> <div> <div> <div> <div> <h4><strong>Per l’agitazione indetta da ORSA, UGL e FAST previste ripercussioni sul servizio regionale, suburbano, aeroportuale</strong></h4> <h4><strong>La mattina viaggeranno i treni con partenza prima delle 9 e arrivo entro le 10; informazioni disponibili su trenord.it e App</strong></h4> <p>Mercoledì 19 marzo, dalle ore 9 alle ore 17, è in programma uno sciopero nazionale proclamato dalle organizzazioni sindacali ORSA, UGL e FAST, che potrà avere ripercussioni sulla circolazione dei treni regionali, suburbani e sui collegamenti aeroportuali Malpensa Express e S50 Malpensa Aeroporto-Bellinzona. Le corse potranno subire variazioni e cancellazioni.</p> <p>La mattina viaggeranno i treni con orario di partenza dalla stazione di origine corsa prima delle ore 9 e arrivo a destinazione finale entro le ore 10.</p> <p>Saranno previsti autobus sostitutivi, senza fermate intermedie, per le corse del servizio aeroportuale non effettuate tra Milano Cadorna (da via Paleocapa, 1) e Malpensa Aeroporto e tra Stabio e Malpensa Aeroporto.</p> <p>Le informazioni sulla circolazione saranno disponibili sulle pagine di ogni linea della App e del sito Trenord.</p> <p>Si invitano i passeggeri a prestare attenzione ad annunci sonori e monitor di stazione.</p> <p><a href=\"/fileadmin/contenuti/TRENORD/3-News/Trenord_Informa/Comunicati_stampa/2025/Trenord_250317_CS_Sciopero_19_marzo.pdf\">Comunicato stampa Sciopero 19 marzo 2025</a></p> </div> </div> </div> </div> <!-- end simpleTextMedia --> </div> </div> <div>PDF Document Found: /fileadmin/contenuti/TRENORD/3-News/Trenord_Informa/Comunicati_stampa/2025/Trenord_250317_CS_Sciopero_19_marzo.pdf</div>"
   },
   "response": {
@@ -19,18 +19,18 @@
       }
     },
     "usage": {
-      "input": 1598,
-      "output": 2618,
-      "total": 4216
+      "input": 1512,
+      "output": 1834,
+      "total": 3346
     },
     "costUsd": {
-      "inputCost": 0.0000799,
-      "outputCost": 0.0010472,
+      "inputCost": 0.0000756,
+      "outputCost": 0.0007336,
       "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.0011271
+      "totalCost": 0.0008092
     },
-    "durationMs": 30110,
-    "thoughts": "**Determining strike details**\n\nI need to output JSON according to the strike extraction schema. The document talks about an upcoming national strike in Italy happening on Wednesday, March 19th, announced on March 17th. It’s from 9 AM to 5 PM and will impact various transportation services. Given that this is a national strike, I can confirm that `isStrike` should be true, and I’ll ensure to format the strike details with the correct date and time structure."
+    "durationMs": 16894,
+    "thoughts": "**Analyzing strike details**\n\nI need to output JSON according to the schema for strike extraction, focusing on whether there's a strike happening and including related data if it’s true. The content is in Italian and discusses a national railway strike on Wednesday, March 19, from 9 AM to 5 PM. It mentions that there will be disruptions to train services and mentions organizations that declared the strike. The date mentioned is Monday, March 17, 2025, confirming that this is indeed an upcoming strike. Therefore, isStrike should be true."
   }
 }

@@ -1,29 +1,15 @@
 {
-  "timestamp": "2026-03-13T15:17:05.955Z",
-  "isCacheHit": false,
+  "timestamp": "2026-03-13T22:25:59.023Z",
+  "isCacheHit": true,
   "request": {
     "sourceName": "ATAC",
     "fileName": "venerd_17_giugno_sciopero_4_ore_rete_atac_rischio_830_1230.html",
     "model": "gpt-5-nano",
     "strategy": "dom-distillation",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"ATAC\" (the public transport company of Rome, Lazio (12)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"> <h3>Context Metadata</h3> <ul><li>Page Title: Venerdì 17 giugno sciopero di 4 ore. Rete Atac a rischio dalle 8,30 alle 12,30 - Roma Servizi per la Mobilità</li></ul> </div><hr/><div> <div> <div> <div> <div> <div> </div> </div> </div> <div> <div> <div> <div> <h1>Venerdì 17 giugno sciopero di 4 ore. Rete Atac a rischio dalle 8,30 alle 12,30</h1> </div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div><p>Pubblicato il: 10/06/2022 - Aggiornato il: 25/01/2023</p></div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div> <span> </span> </div> </div> </div> <div> <div> <div></div> </div> </div> <div> <div> <p>Venerdì 17 giugno trasporto pubblico romano a rischio per lo sciopero di 4 ore, dalle 8,30 alle 12,30, indetto tra i lavoratori Atac dai sindacati Usb e Orsa Tpl. L’agitazione riguarderà la sola rete Atac. Non saranno invece interessate le linee periferiche gestite dalla Roma Tpl. Aggiornamenti in tempo reale su romamobilita.it</p> </div> </div> </div> </div> </div> </div>"
   },
   "response": {
-    "rawOutput": {
-      "isStrike": true,
-      "strikeData": {
-        "startDate": "2022-06-17 08:30:00",
-        "endDate": "2022-06-17 12:30:00",
-        "locationType": "REGIONAL",
-        "locationCodes": [
-          "12"
-        ],
-        "guaranteedTimes": [
-          "08:30-12:30"
-        ]
-      }
-    },
     "parsedData": {
       "isStrike": true,
       "strikeData": {
@@ -32,25 +18,22 @@
         "locationType": "REGIONAL",
         "locationCodes": [
           "12"
-        ],
-        "guaranteedTimes": [
-          "08:30-12:30"
         ]
       }
     },
     "usage": {
-      "input": 1309,
-      "output": 1243,
-      "total": 2552
+      "input": 1223,
+      "output": 1754,
+      "total": 2977
     },
     "costUsd": {
-      "inputCost": 0.00006545,
-      "outputCost": 0.0004972,
+      "inputCost": 0.00006115,
+      "outputCost": 0.0007016,
       "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.00056265
+      "totalCost": 0.00076275
     },
-    "durationMs": 17806,
-    "thoughts": "**Analyzing strike data**\n\nI’m looking at the instruction about setting isStrike to true for upcoming strikes, and this is indeed an announcement for one on Friday, June 17. So, I think isStrike should be true. I’ll need to extract the data like startDate, endDate, locationType, and locationCodes, while ensuring the dates are in the 'yyyy-MM-dd HH:mm:ss' format. The strike is scheduled from 8:30 to 12:30 on that date, which would be June 17, 2022. It seems the location should be regional, as it mentions the ATAC network, aligning with the Lazio region code of 12."
+    "durationMs": 20488,
+    "thoughts": "**Extracting strike data**\n\nI need to check if we should output JSON for a strike extraction. The content mentions a strike on Friday, June 17, from 8:30 to 12:30. Since the article was published on June 10, 2022, it confirms this is an upcoming strike. Therefore, I'll set isStrike to true. For strikeData, I’ll extract the date as 2022-06-17 and times from 08:30 to 12:30 in the correct format 'yyyy-MM-dd HH:mm:ss'."
   }
 }

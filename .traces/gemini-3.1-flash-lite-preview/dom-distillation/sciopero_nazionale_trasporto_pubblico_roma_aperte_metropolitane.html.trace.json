@@ -1,36 +1,31 @@
 {
-  "timestamp": "2026-03-13T15:16:48.286Z",
-  "isCacheHit": false,
+  "timestamp": "2026-03-13T22:25:49.389Z",
+  "isCacheHit": true,
   "request": {
     "sourceName": "ATAC",
     "fileName": "sciopero_nazionale_trasporto_pubblico_roma_aperte_metropolitane.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "dom-distillation",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"ATAC\" (the public transport company of Rome, Lazio (12)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"> <h3>Context Metadata</h3> <ul><li>Page Title: Sciopero nazionale del trasporto pubblico. A Roma aperte le metropolitane - Roma Servizi per la Mobilità</li></ul> </div><hr/><div> <div> <div> <div> <div> <div> </div> </div> </div> <div> <div> <div> <div> <h1>Sciopero nazionale del trasporto pubblico. A Roma aperte le metropolitane</h1> </div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div><p>Pubblicato il: 09/10/2023 - Aggiornato il: 09/10/2023</p></div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div> <span> </span> </div> </div> </div> <div> <div> <div></div> </div> </div> <div> <div> <p>status: 1 È in corso lo sciopero nazionale del trasporto pubblico. Ecco la situazione sulla rete romana. metro A: regolare. Chiuse stazioni Furio Camillo e Baldo degli Ubaldi -metro B e C: regolari -Termini-Centocelle: regolare -Bus e tram: possibili riduzioni di corse Aggiornamenti in tempo reale su romamobilita.it</p> </div> </div> </div> </div> </div> </div>"
   },
   "response": {
-    "rawOutput": {
-      "isStrike": false
-    },
     "parsedData": {
       "isStrike": false
     },
     "usage": {
       "input": 765,
       "output": 10,
-      "cached": 0,
-      "thinking": 0,
-      "total": 775
+      "total": 907
     },
     "costUsd": {
       "inputCost": 0.00019125,
       "outputCost": 0.000015,
-      "thinkingCost": 0,
+      "thinkingCost": 0.000198,
       "cachedCost": 0,
-      "totalCost": 0.00020625
+      "totalCost": 0.00040425
     },
-    "durationMs": 1434,
-    "thoughts": ""
+    "durationMs": 3454,
+    "thoughts": "**Analyzing the Roman Transit Strike Update**\n\nOkay, so I'm looking at this text, and it's describing a national transport strike in Rome. The title, \"Sciopero nazionale del trasporto pubblico. A Roma aperte le metropolitane,\" immediately tells me what it's about: a nationwide public transport strike with a focus on Rome. The text itself says \"È in corso lo sciopero nazionale del trasporto pubblico. Ecco la situazione sulla rete romana,\" meaning the strike is *ongoing* – that's crucial. Now, the instructions tell me that *if* the content provides real-time updates that would suggest that services are still being actively affected, I should set the strike flag, `isStrike`, to false. That is the thing, I need to know *what* those real-time updates are. Because this update, apparently, is saying that Rome's metro is, at least, not affected, as the text seems to imply. Therefore, I need to assume that `isStrike` is false. I'm going to have to dive deeper into the content to find out why. This is interesting.\n\n\n"
   }
 }

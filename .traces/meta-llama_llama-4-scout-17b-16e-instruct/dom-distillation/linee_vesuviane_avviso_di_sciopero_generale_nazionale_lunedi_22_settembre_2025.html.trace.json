@@ -1,27 +1,15 @@
 {
-  "timestamp": "2026-03-13T15:14:57.459Z",
-  "isCacheHit": false,
+  "timestamp": "2026-03-13T22:25:30.265Z",
+  "isCacheHit": true,
   "request": {
     "sourceName": "EAV",
     "fileName": "linee_vesuviane_avviso_di_sciopero_generale_nazionale_lunedi_22_settembre_2025.html",
     "model": "meta-llama/llama-4-scout-17b-16e-instruct",
     "strategy": "dom-distillation",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"EAV\" (the public transport company of Campania (15)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"> <h3>Context Metadata</h3> <ul><li>Page Title: Linee Vesuviane: Avviso di sciopero generale nazionale lunedì 22 settembre 2025 - EAV srl</li></ul> </div><hr/><article> <section> <div> <div> <div> <h2> Linee Vesuviane: Avviso di sciopero generale nazionale lunedì 22 settembre 2025 </h2> </div> </div> </div> <div> <div> <p> <small>Data: </small><br> <small><strong>17 Settembre 2025</strong></small> </p> </div> </div> </section> <section> <div> <div> <div> </div> </div> <div> <div> <section> <p>Per il giorno 22 settembre 2025 la O.S. USB ha proclamato azione di sciopero generale nazionale di tutte le categorie pubbliche e private avente le seguenti motivazioni: protesta per la guerra e per l’aggravarsi della situazione umanitaria nella striscia di Gaza.</p> <p>Lo sciopero sarà così articolato: 23 ore per il personale viaggiante e personale connesso alla circolazione e di 24 ore per tutto il restante personale.</p> <p>Durante l’ultima proclamazione di sciopero della O.S. USB, la percentuale di adesione è stata del 4,9% sciopero di 24 ore del 20 giugno 2025</p> <p>Di seguito vengono elencate le ultime e le prime partenze garantite in relazione alle fasce di garanzia.<br> Durante l’orario di sciopero l’effettuazione delle corse è subordinata al numero di lavoratori aderenti allo sciopero.</p> <p><strong>Servizio garantito dalle ore 05:30 alle ore 8:30 e dalle ore 16:30 alle ore 19:30</strong></p> <p><strong>Ultime partenze garantite prima dello sciopero – fascia operatività servizio dalle ore 5:30 alle ore 08:30</strong></p> <p><strong>da Napoli per</strong></p> <ul> <li>Sorrento:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;08:05</li> <li>Poggiomarino:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;08:14</li> <li>Sarno:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 08:10</li> <li>Torre Annunziata:&nbsp; &nbsp; &nbsp; 08:26 diretto</li> </ul> <p><strong>per Napoli da</strong></p> <ul> <li>Sorrento:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;08:14</li> <li>Poggiomarino:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;08:18</li> <li>Sarno:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 08:26</li> <li>Torre Annunziata:&nbsp; &nbsp; &nbsp; &nbsp;08:44 treno 4082 da Poggiomarino</li> </ul> <p><strong>Prime partenze garantite dopo lo sciopero – fascia operatività servizio dalle 16.30 alle 19.30</strong></p> <p><strong>da Napoli per</strong></p> <ul> <li>Sorrento:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 17:05</li> <li>Poggiomarino:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 16:38</li> <li>Torre Annunziata:&nbsp; &nbsp; &nbsp; 16:45</li> <li>Sarno:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;16:34</li> </ul> <p><strong>per Napoli da</strong></p> <ul> <li>Sorrento:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;16:38</li> <li>Poggiomarino:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;16:42</li> <li>Sarno:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 16:50</li> <li>Torre Annunziata:&nbsp; &nbsp; &nbsp;16:57</li> </ul> <p><strong>Ultime partenze garantite prima dello sciopero – fascia operatività servizio dalle 16.30 alle 19.30</strong></p> <p><strong>da Napoli per</strong></p> <ul> <li>Sorrento:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 19:29</li> <li>Poggiomarino:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 19:02</li> <li>Sarno:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;18:58</li> <li>Torre Annunziata:&nbsp; &nbsp;19:09</li> </ul> <p><strong>per Napoli da</strong></p> <ul> <li>Sorrento:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;19:02</li> <li>Poggiomarino:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;18:30</li> <li>Sarno:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 19:14</li> <li>Torre Annunziata:&nbsp; &nbsp;19:21</li> </ul> <p>&nbsp;</p> <p><strong>Servizio sostitutivo linea Napoli-Baiano</strong></p> <p>Le fasce di garanzia previste per i servizi automobilistici espletati sulla direttrice Napoli – Baiano da AIR Campania sono le seguenti:</p> <ul> <li>dalle ore 06:00 alle ore 08:00</li> <li>dalle ore 13:00 alle ore 15:00</li> <li>dalle ore 17.00 alle ore 19:00</li> </ul> <p>&nbsp;</p> <div> <div> <p><b>Categoria:&nbsp;</b><a href=\"https://www.eavsrl.it/categoria-disservizio/trasporto-pubblico/\">Trasporto pubblico</a></p> <p><b>Area:&nbsp;</b><a href=\"https://www.eavsrl.it/area/linee-vesuviane/\">Linee Vesuviane</a></p> </div> </div> <div></div> </section> </div> </div> </div> </section> </article>"
   },
   "response": {
-    "rawOutput": {
-      "isStrike": true,
-      "strikeData": {
-        "startDate": "2025-09-22 00:00:00",
-        "endDate": "2025-09-22 23:59:59",
-        "locationType": "NATIONAL",
-        "guaranteedTimes": [
-          "05:30-08:30",
-          "16:30-19:30"
-        ]
-      }
-    },
     "parsedData": {
       "isStrike": true,
       "strikeData": {
@@ -35,17 +23,17 @@
       }
     },
     "usage": {
-      "input": 2761,
-      "output": 90,
-      "total": 2851
+      "input": 2760,
+      "output": 97,
+      "total": 2857
     },
     "costUsd": {
-      "inputCost": 0.00030371,
-      "outputCost": 0.0000306,
+      "inputCost": 0.0003036,
+      "outputCost": 0.00003298,
       "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.00033431
+      "totalCost": 0.00033658
     },
-    "durationMs": 546
+    "durationMs": 553
   }
 }

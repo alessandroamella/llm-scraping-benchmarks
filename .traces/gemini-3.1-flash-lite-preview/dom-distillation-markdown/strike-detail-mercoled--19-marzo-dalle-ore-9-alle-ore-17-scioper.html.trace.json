@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-03-13T15:14:03.984Z",
+  "timestamp": "2026-03-13T22:25:21.155Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "Trenord",
     "fileName": "strike-detail-mercoled--19-marzo-dalle-ore-9-alle-ore-17-scioper.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "dom-distillation-markdown",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"Trenord\" (the public transport company of Lombardia (03)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: Mercoledì 19 marzo dalle ore 9 alle ore 17 Sciopero nazionale del trasporto ferroviarioUser-logged-no-picCloseSend-mail-OKAlert\n-   Date News: lunedì 17/03/2025\n-   Header: Mercoledì 19 marzo dalle ore 9 alle ore 17 Sciopero nazionale del trasporto ferroviario\n\n* * *\n\n# **Mercoledì 19 marzo dalle ore 9 alle ore 17 Sciopero nazionale del trasporto ferroviario**\n\nlunedì 17/03/2025\n\n#### **Per l’agitazione indetta da ORSA, UGL e FAST previste ripercussioni sul servizio regionale, suburbano, aeroportuale**\n\n#### **La mattina viaggeranno i treni con partenza prima delle 9 e arrivo entro le 10; informazioni disponibili su trenord.it e App**\n\nMercoledì 19 marzo, dalle ore 9 alle ore 17, è in programma uno sciopero nazionale proclamato dalle organizzazioni sindacali ORSA, UGL e FAST, che potrà avere ripercussioni sulla circolazione dei treni regionali, suburbani e sui collegamenti aeroportuali Malpensa Express e S50 Malpensa Aeroporto-Bellinzona. Le corse potranno subire variazioni e cancellazioni.\n\nLa mattina viaggeranno i treni con orario di partenza dalla stazione di origine corsa prima delle ore 9 e arrivo a destinazione finale entro le ore 10.\n\nSaranno previsti autobus sostitutivi, senza fermate intermedie, per le corse del servizio aeroportuale non effettuate tra Milano Cadorna (da via Paleocapa, 1) e Malpensa Aeroporto e tra Stabio e Malpensa Aeroporto.\n\nLe informazioni sulla circolazione saranno disponibili sulle pagine di ogni linea della App e del sito Trenord.\n\nSi invitano i passeggeri a prestare attenzione ad annunci sonori e monitor di stazione.\n\n[Comunicato stampa Sciopero 19 marzo 2025](/fileadmin/contenuti/TRENORD/3-News/Trenord_Informa/Comunicati_stampa/2025/Trenord_250317_CS_Sciopero_19_marzo.pdf)\n\nPDF Document Found: /fileadmin/contenuti/TRENORD/3-News/Trenord\\_Informa/Comunicati\\_stampa/2025/Trenord\\_250317\\_CS\\_Sciopero\\_19\\_marzo.pdf"
   },
   "response": {
@@ -20,17 +20,16 @@
     },
     "usage": {
       "input": 1047,
-      "output": 82,
-      "total": 1750
+      "output": 89,
+      "total": 1848
     },
     "costUsd": {
       "inputCost": 0.00026175,
-      "outputCost": 0.000123,
-      "thinkingCost": 0.0009315,
+      "outputCost": 0.0001335,
+      "thinkingCost": 0.001068,
       "cachedCost": 0,
-      "totalCost": 0.00131625
+      "totalCost": 0.00146325
     },
-    "durationMs": 9422,
-    "thoughts": "**Strike Announcement Analysis**\n\nOkay, let's break this down. My task is to analyze this text and determine if it's a strike announcement and then structure the information into a JSON object matching the defined schema. The crucial detail here is that the announcement must be for an *upcoming* strike. I have the news date (March 17, 2025) and the strike date (March 19, 2025), so that criterion is met.\n\nThe text reads: \"Mercoledì 19 marzo dalle ore 9 alle ore 17 Sciopero nazionale del trasporto ferroviario\". This clearly indicates a national railway strike. The date, March 19th, is explicit. The time frame is from 09:00 to 17:00. The scope is \"Sciopero nazionale,\" so I'm confident about the national scope. The company, from my understanding of the text context, is Trenord, operating in the Lombardia region of Italy, but the scope of the strike is national.\n\nNow, constructing the JSON object. `isStrike` will be `true`, because this text is a clear strike announcement. The `strikeData` object will require a `startDate` of \"2025-03-19 09:00:00\" and an `endDate` of \"2025-03-19 17:00:00\". The `locationType` is definitely \"NATIONAL,\" meaning I don't need `locationCodes`.\n\nRegarding guaranteed times, the text states \"La mattina viaggeranno i treni con orario di partenza dalla stazione di origine corsa prima delle ore 9 e arrivo a destinazione finale entro le ore 10.\" The strike starts at 09:00. While this mentions trains running until 09:00, it's not a standard \"guaranteed time band\" declaration like 06:00-09:00. According to the schema, `guaranteedTimes` is optional, so I will leave this field out to be strictly accurate and adhere to the schema's requirements.\n\nSo, I'm confirming: the `startDate`, `endDate`, and `locationType` fields are correct, and the strike is indeed upcoming. Finally, I will ensure this JSON is strictly valid; no extra comments, just the data formatted according to the schema.\n\n\n"
+    "durationMs": 7014
   }
 }

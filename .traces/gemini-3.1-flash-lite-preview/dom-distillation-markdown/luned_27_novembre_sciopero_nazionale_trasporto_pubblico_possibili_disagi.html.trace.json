@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-03-13T15:17:26.477Z",
+  "timestamp": "2026-03-13T22:26:05.571Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "ATAC",
     "fileName": "luned_27_novembre_sciopero_nazionale_trasporto_pubblico_possibili_disagi.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "dom-distillation-markdown",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"ATAC\" (the public transport company of Rome, Lazio (12)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: Lunedì 27 novembre sciopero nazionale del trasporto pubblico, possibili disagi - Roma Servizi per la Mobilità\n\n* * *\n\n# Lunedì 27 novembre sciopero nazionale del trasporto pubblico, possibili disagi\n\nPubblicato il: 21/11/2023 - Aggiornato il: 21/11/2023\n\nstatus: 1 Lunedì 27 novembre trasporto pubblico a rischio per lo sciopero nazionale di 24 ore proclamato dai sindacati Usb, Orsa, Sgb, Cub, Adl e Cobas. A Roma l’agitazione interesserà la rete Atac e i bus periferici della Roma Tpl. Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20. Aggiornamenti in tempo reale su romamobilita.it"
   },
   "response": {
@@ -24,17 +24,16 @@
     },
     "usage": {
       "input": 657,
-      "output": 123,
-      "total": 1457
+      "output": 131,
+      "total": 1416
     },
     "costUsd": {
       "inputCost": 0.00016425,
-      "outputCost": 0.0001845,
-      "thinkingCost": 0.0010155,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.000942,
       "cachedCost": 0,
-      "totalCost": 0.00136425
+      "totalCost": 0.00130275
     },
-    "durationMs": 6761,
-    "thoughts": "**Analyzing the Public Transport Strike Announcement**\n\nOkay, let's break this down systematically. The title itself, \"Lunedì 27 novembre sciopero nazionale del trasporto pubblico, possibili disagi - Roma Servizi per la Mobilità,\" clearly states there's a national transport strike on Monday, November 27th. Excellent, that's the starting point.\n\nThe core information is the announcement of a 24-hour national strike on November 27th, 2023. The unions involved are Usb, Orsa, Sgb, Cub, Adl, and Cobas. It specifies that, in Rome, the strike impacts the Atac network and peripheral buses (Roma Tpl).\n\nNow, the critical part: they're guaranteeing *some* service. \"Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" Right, so that translates to \"00:00-08:30\" and \"17:00-20:00\". Always good to get the timings precise.\n\nLet me organize this data now. I'm going to set `isStrike` to true, no doubt about it. The `startDate` is 2023-11-27 00:00:00 and the `endDate` needs to be 2023-11-27 23:59:59 because it's a 24-hour strike. Since it's national, the `locationType` is definitely \"NATIONAL\". `locationCodes` should be omitted when the location type is national. And then the guaranteed times are `guaranteedTimes`: [\"00:00-08:30\", \"17:00-20:00\"].\n\nJust to confirm, I'll double-check: \"fino alle 8:30\" does mean *up to* the start of the service, not including the strike. \"dalle 17 alle 20\" is definitely 17:00-20:00. And, yes, the date-time format is `yyyy-MM-dd HH:mm:ss`.\n\nSo, the strike data parameters are looking like this:\n\n*   `isStrike`: true\n*   `strikeData`:\n    *   `startDate`: \"2023-11-27 00:00:00\"\n    *   `endDate`: \"2023-11-27 23:59:59\"\n    *   `locationType`: \"NATIONAL\"\n    *   `guaranteedTimes`: [\"00:00-08:30\", \"17:00-20:00\"]\n\nI can confirm everything from the text: \"Lunedì 27 novembre trasporto pubblico a rischio per lo sciopero nazionale di 24 ore...\" – yep, it's a strike. And, the guaranteed times: \"Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" That is it!\n\n\n"
+    "durationMs": 6194
   }
 }

@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-03-13T15:14:37.661Z",
+  "timestamp": "2026-03-13T22:25:28.011Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "EAV",
     "fileName": "linea_metropolitana_avviso_di_sciopero_24h_domenica_11_maggio_2025.html",
     "model": "deepseek-chat",
     "strategy": "dom-distillation-markdown",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"EAV\" (the public transport company of Campania (15)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: Linea Metropolitana: avviso di sciopero 24h domenica 11 maggio 2025 - EAV srl\n\n* * *\n\n## Linea Metropolitana: avviso di sciopero 24h domenica 11 maggio 2025\n\nData:  \n**6 Maggio 2025**\n\nPer il giorno 11 maggio 2025 la O.S. Or.S.A. ha proclamato azione di sciopero aziendale di 24 ore avente le seguenti motivazioni: problematiche organizzazione aziendale.\n\n_Durante l’ultima proclamazione di sciopero della O.S. Or.S.A., la percentuale di adesione è stata del 40,31% (sciopero aziendale di 4 ore del 22 marzo 2025)_\n\nDi seguito vengono elencate le ultime e le prime partenze garantite in relazione alle fasce di garanzia. Durante l’orario di sciopero l’effettuazione delle corse è subordinata al numero di lavoratori aderenti allo sciopero.\n\n**Servizio garantito dalle ore 05:30 alle ore 8:30 e dalle ore 16:30 alle ore 19:30**\n\n**ULTIME PARTENZE GARANTITE PRIMA DELLO SCIOPERO**\n\nda Aversa per Piscinola     08.00\n\nda Piscinola per Aversa     08.15\n\n**PRIME PARTENZE GARANTITE DOPO LO SCIOPERO**\n\n_(fascia operatività servizio dalle 16.30 alle 19.30)_\n\nda Aversa per Piscinola      16.30\n\nda Piscinola per Aversa   16.45\n\n**ULTIME PARTENZE GARANTITE PRIMA DELLO SCIOPERO**\n\nda Aversa per Piscinola     19.00\n\nda Piscinola per Aversa  19.15\n\n**Categoria:** [Trasporto pubblico](https://www.eavsrl.it/categoria-disservizio/trasporto-pubblico/)\n\n**Area:** [M1 - Piscinola-Giugliano-Aversa-Napoli](https://www.eavsrl.it/area/m1-piscinola-giugliano-aversa-napoli/)"
   },
   "response": {
@@ -26,17 +26,17 @@
       }
     },
     "usage": {
-      "input": 1542,
+      "input": 1536,
       "output": 103,
-      "total": 1645
+      "total": 1639
     },
     "costUsd": {
-      "inputCost": 0.00004318,
+      "inputCost": 0.00004301,
       "outputCost": 0.00002884,
       "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.00007202
+      "totalCost": 0.00007185
     },
-    "durationMs": 6680
+    "durationMs": 6458
   }
 }

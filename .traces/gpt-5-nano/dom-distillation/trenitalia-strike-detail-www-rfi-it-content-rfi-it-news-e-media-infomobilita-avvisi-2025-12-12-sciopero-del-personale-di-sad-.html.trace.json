@@ -1,52 +1,31 @@
 {
-  "timestamp": "2026-03-13T15:15:46.991Z",
-  "isCacheHit": false,
+  "timestamp": "2026-03-13T22:25:33.883Z",
+  "isCacheHit": true,
   "request": {
     "sourceName": "Trenitalia",
     "fileName": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-12-12-sciopero-del-personale-di-sad-.html",
     "model": "gpt-5-nano",
     "strategy": "dom-distillation",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"Trenitalia\" (Italy's national railway operator).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"> <h3>Context Metadata</h3> <ul><li>Page Title: SCIOPERO DEL PERSONALE DI SAD E TRENTINO TRASPORTI / PERSONALSTREIK VON SAD UND TRENTINO TRASPORTI</li></ul> </div><hr/><div> <div> <h1>SCIOPERO DEL PERSONALE DI SAD E TRENTINO TRASPORTI / PERSONALSTREIK VON SAD UND TRENTINO TRASPORTI</h1> <div> <span>In vigore: 12 DICEMBRE 2025</span> </div> <div></div> <div> <div> Servizio: <strong>Regionale</strong> </div> <div> Causa Modifica: <strong>Sciopero</strong> </div> <div> Regione: <strong>Trentino Alto Adige, VENETO</strong> </div> <div> Impresa: <strong>SAD, TT– Trentino Trasporti</strong> </div> </div> </div> </div> <div> <div> <div> <p><b>Dalle ore 00:01 alle ore 21:00 del 12 dicembre 2025</b> è stato indetto uno sciopero del personale di <b>SAD</b>. I treni delle linee Bolzano – Trento, Bolzano – Merano, Merano – Malles, Brennero – Bolzano – Merano e Brunico – San Candido possono subire variazioni.</p> <p><b>Dalle ore 00:01 alle ore 23:59 del 12 dicembre 2025</b> è stato indetto uno sciopero del personale di <b>Trentino Trasporti</b>. I treni della linea Trento-Bassano del Grappa possono subire variazioni.</p> <p>Lo sciopero può comportare modifiche al servizio, <b>anche prima dell’inizio e dopo la sua conclusione.</b></p> <p><b>Von 00:01 Uhr bis 21:00 Uhr </b>am 12. Dezember 2025 wurde ein Streik des SAD-Personals ausgerufen.</p> <p>Bei den SAD-Zügen auf den Strecken Bozen - Trient, Bozen - Meran, Meran - Mals, Brenner - Bozen-Meran und Bruneck – Innichen kann es zu Änderungen kommen.</p> <p><b>Von 00:01 Uhr bis 23:59 Uhr am 12. Dezember 2025</b> wurde ein Streik des Trentino Trasporti-Personals ausgerufen. Bei den Trentino Trasporti-Zügen auf der Strecke Trient - Bassano del Grappa kann es zu Änderungen kommen.</p> <p>Der Streik kann <b>bereits vor Beginn und nach Beendigung </b>zu Änderungen des Dienstes führen.&nbsp;</p> <p>&nbsp;</p> </div> </div> </div>"
   },
   "response": {
-    "rawOutput": {
-      "isStrike": true,
-      "strikeData": {
-        "startDate": "2025-12-12 00:01:00",
-        "endDate": "2025-12-12 23:59:00",
-        "locationType": "REGIONAL",
-        "locationCodes": [
-          "04",
-          "05"
-        ]
-      }
-    },
     "parsedData": {
-      "isStrike": true,
-      "strikeData": {
-        "startDate": "2025-12-12 00:01:00",
-        "endDate": "2025-12-12 23:59:00",
-        "locationType": "REGIONAL",
-        "locationCodes": [
-          "04",
-          "05"
-        ]
-      }
+      "isStrike": false
     },
     "usage": {
-      "input": 1559,
-      "output": 3493,
-      "total": 5052
+      "input": 1473,
+      "output": 2886,
+      "total": 4359
     },
     "costUsd": {
-      "inputCost": 0.00007795,
-      "outputCost": 0.0013972,
+      "inputCost": 0.00007365,
+      "outputCost": 0.0011544,
       "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.00147515
+      "totalCost": 0.00122805
     },
-    "durationMs": 26437,
-    "thoughts": "**Parsing upcoming strike details**\n\nI'm working on outputting JSON according to the strike_extraction schema. The document mentions a strike for SAD and Trentino Trasporti, specifically from 00:01 to 21:00 on December 12, 2025. It confirms that a strike has been announced in multiple languages. The affected lines are specified, including routes in Bolzano–Trento and others. The location type is regional, and I see clear start and end times for the strike."
+    "durationMs": 37503,
+    "thoughts": "**Determining upcoming strike details**\n\nI need to confirm whether the document announces a new strike. It mentions \"SCIOPERO DEL PERSONALE DI SAD E TRENTINO TRASPORTI\" on December 12, 2025, from 12:01 AM to 9:00 PM. This indicates a future strike. The instructions tell me to set isStrike to true for an upcoming strike, and since this is indeed an announcement, I'll proceed to extract the necessary data like startDate, endDate, locationType, locationCodes, and guaranteedTimes while ensuring the correct date format."
   }
 }

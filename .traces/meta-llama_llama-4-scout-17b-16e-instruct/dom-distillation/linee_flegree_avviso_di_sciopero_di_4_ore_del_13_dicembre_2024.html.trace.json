@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-03-13T15:14:07.946Z",
+  "timestamp": "2026-03-13T22:25:24.445Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "EAV",
     "fileName": "linee_flegree_avviso_di_sciopero_di_4_ore_del_13_dicembre_2024.html",
     "model": "meta-llama/llama-4-scout-17b-16e-instruct",
     "strategy": "dom-distillation",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"EAV\" (the public transport company of Campania (15)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"> <h3>Context Metadata</h3> <ul><li>Page Title: Linee Flegree: Avviso di sciopero di 4 ore del 13 dicembre 2024 - EAV srl</li></ul> </div><hr/><article> <section> <div> <div> <div> <h2> Linee Flegree: Avviso di sciopero di 4 ore del 13 dicembre 2024 </h2> </div> </div> </div> <div> <div> <p> <small>Data: </small><br> <small><strong>11 Dicembre 2024</strong></small> </p> </div> </div> </section> <section> <div> <div> <div> </div> </div> <div> <div> <section> <p>Si comunica che, a seguito dell’ordinanza di precettazione da parte del Ministro delle infrastrutture e dei trasporti, lo sciopero generale nazionale di 24 ore proclamato per il giorno 13 dicembre 2024 dalla OS USB, <strong>è stato ridotto a 4 ore, dalle ore 09:00 alle ore 13:00.</strong></p> <p>Le motivazioni dello sciopero sono le seguenti:</p> <ul> <li>• Una nuova indicizzazione che leghi i salari all’aumento reale del costo della vita;</li> <li>• Un rinnovo contrattuale con incremento delle retribuzioni di 300 euro;</li> <li>• Il libero esercizio del diritto di sciopero senza il rispetto delle fasce di garanzia;</li> <li>• Riduzione dell’orario di lavoro a 32 ore a parità di salario;</li> <li>• La sicurezza dei lavoratori e del servizio;</li> <li>• Contro le guerre ed il genocidio del governo Israeliano nei confronti del popolo Palestinese;</li> <li>• Contro la manovra economica per il 2025 approvata dal Governo Meloni.</li> </ul> <p>Durante l’ultima proclamazione di sciopero della citata O.S., la percentuale di adesione è stata del 5,7% (sciopero di 4 ore del giorno 28 ottobre 2024)</p> <p>Di seguito vengono elencate le ultime e le prime partenze garantite in relazione alle fasce di garanzia.</p> <p>Durante l’orario di sciopero l’effettuazione delle corse è subordinata al numero di lavoratori aderenti allo sciopero.</p> <p><strong>Ultime partenze garantite prima dello sciopero</strong></p> <ul> <li>da Montesanto per Torregaveta&nbsp; &nbsp;08:41</li> <li>da Montesanto per Licola&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 08:48</li> <li>per Montesanto da Torregaveta&nbsp; &nbsp;08:54</li> <li>per Montesanto da Licola&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 08:44</li> </ul> <p><strong>Prime partenze garantite dopo lo sciopero</strong></p> <ul> <li>da Montesanto per Torregaveta 13:01</li> <li>da Montesanto per Licola &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;13:12</li> <li>per Montesanto da Torregaveta 13:14</li> <li>per Montesanto da Licola &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;13:08</li> </ul> <div></div> </section> </div> </div> </div> </section> </article>"
   },
   "response": {
@@ -21,23 +21,22 @@
         ],
         "guaranteedTimes": [
           "08:41-08:48",
-          "08:44-08:54",
           "13:01-13:14"
         ]
       }
     },
     "usage": {
-      "input": 1817,
-      "output": 107,
-      "total": 1924
+      "input": 1816,
+      "output": 98,
+      "total": 1914
     },
     "costUsd": {
-      "inputCost": 0.00019987,
-      "outputCost": 0.00003638,
+      "inputCost": 0.00019976,
+      "outputCost": 0.00003332,
       "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.00023625
+      "totalCost": 0.00023308
     },
-    "durationMs": 433
+    "durationMs": 618
   }
 }

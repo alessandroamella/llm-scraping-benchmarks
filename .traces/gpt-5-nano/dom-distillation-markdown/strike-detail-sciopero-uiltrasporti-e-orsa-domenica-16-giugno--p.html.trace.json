@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-03-13T15:14:03.601Z",
+  "timestamp": "2026-03-13T22:25:20.652Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "Trenord",
     "fileName": "strike-detail-sciopero-uiltrasporti-e-orsa-domenica-16-giugno--p.html",
     "model": "gpt-5-nano",
     "strategy": "dom-distillation-markdown",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"Trenord\" (the public transport company of Lombardia (03)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: sciopero uiltrasporti e orsa domenica 16 giugno.User-logged-no-picCloseSend-mail-OKAlert\n-   Date News: venerdì 14/06/2024\n-   Header: Sciopero Uiltrasporti e ORSA domenica 16 giugno. Previste ripercussioni sul servizio ferroviario lombardo\n\n* * *\n\n# **Sciopero Uiltrasporti e ORSA domenica 16 giugno. Previste ripercussioni sul servizio ferroviario lombardo**\n\nvenerdì 14/06/2024\n\n#### **Trattandosi di una giornata festiva, non sono attuabili fasce di garanzia**\n\n#### **Prima di mettersi in viaggio, si raccomanda ai passeggeri di verificare** **su trenord.it e App le informazioni sulle corse di proprio interesse**\n\nDalle ore 3 di domenica 16 giugno alle ore 2 di lunedì 17 giugno le organizzazioni sindacali Uiltrasporti e ORSA hanno indetto uno sciopero che, per l’intera giornata di domenica, avrà ripercussioni sulla circolazione dei treni regionali, suburbani, del collegamento aeroportuale Malpensa Express e sul servizio in territorio italiano della linea S50 Malpensa Aeroporto-Biasca. Le corse potranno subire variazioni e cancellazioni.\n\nTrattandosi di uno sciopero indetto in un giorno festivo, secondo quanto previsto dalla normativa vigente, l’azienda non potrà attuare alcun servizio minimo di garanzia.\n\nSaranno previsti autobus sostitutivi, senza fermate intermedie, per le corse del servizio aeroportuale non effettuate tra Milano Cadorna (da via Paleocapa, 1) e Malpensa Aeroporto e tra Stabio e Malpensa Aeroporto.\n\nPrima di mettersi in viaggio, si raccomanda ai passeggeri di verificare su trenord.it e App le informazioni relative alle corse di proprio interesse e di prestare attenzione agli annunci sonori nelle stazioni.\n\n* * *\n\n[Comunicato stampa sciopero 16 giugno 2024](/fileadmin/contenuti/TRENORD/3-News/Trenord_Informa/Comunicati_stampa/2024/Trenord_240614_CS_Sciopero_16giugno_def.pdf)\n\nPDF Document Found: /fileadmin/contenuti/TRENORD/3-News/Trenord\\_Informa/Comunicati\\_stampa/2024/Trenord\\_240614\\_CS\\_Sciopero\\_16giugno\\_def.pdf"
   },
   "response": {
@@ -22,18 +22,17 @@
       }
     },
     "usage": {
-      "input": 1486,
-      "output": 1255,
-      "total": 2741
+      "input": 1400,
+      "output": 1471,
+      "total": 2871
     },
     "costUsd": {
-      "inputCost": 0.0000743,
-      "outputCost": 0.000502,
+      "inputCost": 0.00007,
+      "outputCost": 0.0005884,
       "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.0005763
+      "totalCost": 0.0006584
     },
-    "durationMs": 18029,
-    "thoughts": "**Extracting strike data**\n\nI need to output JSON following the strike_extraction format and confirm this document announces an upcoming strike. The title indicates a strike from Sunday, June 16, to Monday, June 17, 2024. The text states it will impact services during that time, making isStrike = true.\n\nAs for the start date, it should be \"2024-06-16 03:00:00\" for Sunday at 3:00 AM, extending to “2024-06-17 02:00:00.” I’m making sure that’s accurately noted!"
+    "durationMs": 21970
   }
 }

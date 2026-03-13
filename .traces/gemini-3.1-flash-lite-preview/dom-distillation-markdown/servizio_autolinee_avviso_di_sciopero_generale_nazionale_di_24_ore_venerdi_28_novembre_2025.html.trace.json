@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-03-13T15:15:13.076Z",
+  "timestamp": "2026-03-13T22:25:32.161Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "EAV",
     "fileName": "servizio_autolinee_avviso_di_sciopero_generale_nazionale_di_24_ore_venerdi_28_novembre_2025.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "dom-distillation-markdown",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"EAV\" (the public transport company of Campania (15)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: Servizio Autolinee - Avviso di sciopero generale nazionale di 24 ore venerdì 28 novembre 2025 - EAV srl\n\n* * *\n\n## Servizio Autolinee – Avviso di sciopero generale nazionale di 24 ore venerdì 28 novembre 2025\n\nData:  \n**27 Novembre 2025**\n\nPer il giorno 28 novembre 2025 la O.S. USB ha proclamato azione di sciopero nazionale generale di 24 ore. Le motivazioni dello sciopero sono consultabili sul sito www.eavsrl.it\n\nIl servizio si svolge regolarmente nelle seguenti fasce di garanzia: **dalle ore 05:30 alle ore 8:30 e dalle ore 16:30 alle ore 19:30**\n\nDurante l’orario di sciopero l’effettuazione delle corse è subordinata al numero di lavoratori aderenti allo sciopero."
   },
   "response": {
@@ -24,17 +24,16 @@
     },
     "usage": {
       "input": 690,
-      "output": 123,
-      "total": 1190
+      "output": 131,
+      "total": 1320
     },
     "costUsd": {
       "inputCost": 0.0001725,
-      "outputCost": 0.0001845,
-      "thinkingCost": 0.0005655,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.0007485,
       "cachedCost": 0,
-      "totalCost": 0.0009225
+      "totalCost": 0.0011175
     },
-    "durationMs": 4186,
-    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, here's the breakdown of this strike notification. It's a national general strike, spanning a full 24 hours on November 28th, 2025. The company affected is EAV (Campania), which is a regional transport provider, but the strike is national in scope. The guaranteed service bands are standard: 05:30 to 08:30 and 16:30 to 19:30. That's what we'd expect for this type of strike.\n\nFrom the data structure, `isStrike` is correctly set to `true`, confirming it's an announcement for an upcoming strike. The `startDate` and `endDate` are accurately defined as the beginning and end of the day on November 28th, 2025. Given the `locationType` is \"NATIONAL\", the `locationCodes` should be omitted, which is correct. The `guaranteedTimes` are also parsed properly. Everything seems consistent with established strike parameters. Looks like a standard input with the usual checks. No issues so far.\n\n\n"
+    "durationMs": 6593
   }
 }

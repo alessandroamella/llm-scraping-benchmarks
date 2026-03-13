@@ -43,6 +43,18 @@ parser.add_argument(
 args = parser.parse_args()
 
 
+# Whitelist di strategie da includere nei grafici
+STRATEGY_WHITELIST = [
+    "basic-cleanup",
+    "html-to-markdown",
+    "jina-reader",
+    # "dom-distillation",
+    # "dom-distillation-markdown",
+    # "mineru-html",
+    # "html-to-markdown",
+]
+
+
 # Helper function to shorten model names
 def normalize_model_name(model_name: str) -> str:
     """Shorten long model names for better readability in charts"""
@@ -281,40 +293,71 @@ if args.save:
 if args.view:
     plt.show()
 
-# --- GRAFICO 2: FRONTIERA DI PARETO (COSTO VS ACCURATEZZA) ---
+# --- GRAFICO 2: FRONTIERA DI PARETO (EFFICIENZA VS ACCURATEZZA) ---
+# Filtriamo solo le strategie nel whitelist
+df_plot = df[df["Strategia"].isin(STRATEGY_WHITELIST)].copy()
+
+# Calcoliamo l'efficienza: quanti file possiamo processare con 1$
+df_plot["File_per_Dollaro"] = df_plot["Costo"].apply(
+    lambda x: 1 / x if x > 0 else float("nan")
+)
+df_plot = df_plot.dropna(subset=["File_per_Dollaro"])
+
 plt.figure(figsize=(12, 7))
 sns.scatterplot(
-    data=df, x="Costo", y="F1-Score", hue="Modello", style="Strategia", s=200
+    data=df_plot,
+    x="File_per_Dollaro",
+    y="F1-Score",
+    hue="Modello",
+    style="Strategia",
+    s=200,
 )
 
-plt.title("Costo/file vs. F1-Score", fontsize=16, fontweight="bold")
-plt.xlabel("Costo stimato per file ($) - valori decrescenti verso destra", fontsize=12)
+# plt.title("Efficienza economica vs. accuratezza", fontsize=16, fontweight="bold")
+plt.xlabel("Numero di file processabili con 1$", fontsize=12)
 plt.ylabel("F1-Score", fontsize=12)
 plt.grid(True, linestyle="--", alpha=0.7)
-plt.gca().invert_xaxis()  # Best values (low cost, high F1) in top-right
+
+# Aggiungiamo margini per dare spazio alle etichette
+plt.margins(x=0.15, y=0.15)
 
 # Annotazione dei punti con sfondo per migliore leggibilità
+# Una label per modello (il punto con il massimo F1-Score)
 texts = []
-for i in range(df.shape[0]):
+for model in df_plot["Modello"].unique():
+    model_data = df_plot[df_plot["Modello"] == model]
+    # Troviamo il punto con il massimo F1-Score per questo modello
+    best_point = model_data.loc[model_data["F1-Score"].idxmax()]
+
     texts.append(
         plt.text(
-            df.Costo[i],
-            df["F1-Score"][i],
-            f"{df.Modello[i]}",
+            best_point["File_per_Dollaro"],
+            best_point["F1-Score"],
+            f"{best_point['Modello']}",
             fontsize=9,
+            fontweight="bold",
             bbox=dict(
-                boxstyle="round,pad=0.3", facecolor="white", edgecolor="none", alpha=0.7
+                boxstyle="round,pad=0.3", facecolor="white", edgecolor="none", alpha=0.8
             ),
         )
     )
 
-# This automatically moves the labels to avoid overlaps
-adjust_text(texts, arrowprops=dict(arrowstyle="->", color="gray", lw=0.5))
+# Ora adjust_text funzionerà perfettamente senza warning perché la scala è lineare
+adjust_text(
+    texts,
+    arrowprops=dict(arrowstyle="-", color="gray", lw=0.5),
+    force_points=(0.5, 0.5),
+)
+
+# Mettiamo la legenda in basso a sinistra (lontano dall'angolo in alto a destra che è il "bersaglio")
+# plt.legend(loc="lower left", framealpha=0.95)
+plt.legend(loc="lower right", framealpha=0.95)
+
 
 plt.tight_layout()
 if args.save:
-    plt.savefig(charts_dir / "02_costo_vs_accuratezza.png", dpi=300)
-    print("Generato: charts/02_costo_vs_accuratezza.png")
+    plt.savefig(charts_dir / "02_efficienza_vs_accuratezza.png", dpi=300)
+    print("Generato: charts/02_efficienza_vs_accuratezza.png")
 if args.view:
     plt.show()
 

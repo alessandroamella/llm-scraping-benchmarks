@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-03-13T15:14:37.495Z",
+  "timestamp": "2026-03-13T22:25:27.984Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "EAV",
     "fileName": "linea_metropolitana_avviso_di_sciopero_24h_domenica_11_maggio_2025.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "dom-distillation-markdown",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"EAV\" (the public transport company of Campania (15)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: Linea Metropolitana: avviso di sciopero 24h domenica 11 maggio 2025 - EAV srl\n\n* * *\n\n## Linea Metropolitana: avviso di sciopero 24h domenica 11 maggio 2025\n\nData:  \n**6 Maggio 2025**\n\nPer il giorno 11 maggio 2025 la O.S. Or.S.A. ha proclamato azione di sciopero aziendale di 24 ore avente le seguenti motivazioni: problematiche organizzazione aziendale.\n\n_Durante l’ultima proclamazione di sciopero della O.S. Or.S.A., la percentuale di adesione è stata del 40,31% (sciopero aziendale di 4 ore del 22 marzo 2025)_\n\nDi seguito vengono elencate le ultime e le prime partenze garantite in relazione alle fasce di garanzia. Durante l’orario di sciopero l’effettuazione delle corse è subordinata al numero di lavoratori aderenti allo sciopero.\n\n**Servizio garantito dalle ore 05:30 alle ore 8:30 e dalle ore 16:30 alle ore 19:30**\n\n**ULTIME PARTENZE GARANTITE PRIMA DELLO SCIOPERO**\n\nda Aversa per Piscinola     08.00\n\nda Piscinola per Aversa     08.15\n\n**PRIME PARTENZE GARANTITE DOPO LO SCIOPERO**\n\n_(fascia operatività servizio dalle 16.30 alle 19.30)_\n\nda Aversa per Piscinola      16.30\n\nda Piscinola per Aversa   16.45\n\n**ULTIME PARTENZE GARANTITE PRIMA DELLO SCIOPERO**\n\nda Aversa per Piscinola     19.00\n\nda Piscinola per Aversa  19.15\n\n**Categoria:** [Trasporto pubblico](https://www.eavsrl.it/categoria-disservizio/trasporto-pubblico/)\n\n**Area:** [M1 - Piscinola-Giugliano-Aversa-Napoli](https://www.eavsrl.it/area/m1-piscinola-giugliano-aversa-napoli/)"
   },
   "response": {
@@ -27,17 +27,16 @@
     },
     "usage": {
       "input": 1036,
-      "output": 126,
+      "output": 140,
       "total": 1719
     },
     "costUsd": {
       "inputCost": 0.000259,
-      "outputCost": 0.000189,
-      "thinkingCost": 0.0008355,
+      "outputCost": 0.00021,
+      "thinkingCost": 0.0008145,
       "cachedCost": 0,
       "totalCost": 0.0012835
     },
-    "durationMs": 11867,
-    "thoughts": "**Strike Analysis: EAV Campania - May 11, 2025**\n\nOkay, let's break this down. My input is an announcement regarding a strike by Or.S.A. affecting the EAV network in the Campania region, scheduled for May 11th, 2025. My primary objective here is to parse this and extract the strike details, specifically if it *is* a strike, and then present it in clean JSON format.\n\nFirst, I confirm it's definitely a strike announcement. The language clearly states a \"sciopero aziendale,\" indicating an upcoming action. The date is May 11th, 2025. Given it's a 24-hour strike, I can safely infer the start time as 00:00:00 and the end time as 23:59:59 on that day – standard practice. The location is EAV, which I know corresponds to the Campania region, and its region code is 15. The announcement also mentions guaranteed service times, which I need to extract, and these are between 05:30-08:30 and 16:30-19:30.\n\nNow, let's assemble the JSON structure I need.  I need to report `isStrike: true`. Then, the `strikeData` object needs to hold `startDate: \"2025-05-11 00:00:00\"`, `endDate: \"2025-05-11 23:59:59\"`, `locationType: \"REGIONAL\"`, `locationCodes: [\"15\"]`, and `guaranteedTimes: [\"05:30-08:30\", \"16:30-19:30\"]`.\n\nFinally, I need to double-check that this meets all the criteria: it's a strike, the data types are correct, and there are no extraneous comments or additional text outside of the JSON structure itself. That's a clean, valid data output.\n\n\n"
+    "durationMs": 5995
   }
 }

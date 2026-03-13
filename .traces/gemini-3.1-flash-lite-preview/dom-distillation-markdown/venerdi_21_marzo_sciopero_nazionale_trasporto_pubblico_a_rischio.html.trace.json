@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-03-13T15:17:57.059Z",
+  "timestamp": "2026-03-13T22:26:14.810Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "ATAC",
     "fileName": "venerdi_21_marzo_sciopero_nazionale_trasporto_pubblico_a_rischio.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "dom-distillation-markdown",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"ATAC\" (the public transport company of Rome, Lazio (12)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: Venerdì 21 marzo sciopero nazionale. Trasporto pubblico a rischio - Roma Servizi per la Mobilità\n\n* * *\n\n# Venerdì 21 marzo sciopero nazionale. Trasporto pubblico a rischio\n\nPubblicato il: 16/03/2025 - Aggiornato il: 18/03/2025\n\n**Venerdì 21 marzo** trasporto pubblico a rischio per lo **sciopero nazionale di 24 ore** proclamato dai sindacati Cobas Lavoro Privato, Adl Cobas, Sgb e Cub Trasporti. \n\nA Roma l’agitazione coinvolgerà la rete Atac e i bus periferici gestiti dagli operatori privati. **Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.**  \nAggiornamenti su romamobilita.it"
   },
   "response": {
@@ -24,17 +24,16 @@
     },
     "usage": {
       "input": 665,
-      "output": 123,
-      "total": 1497
+      "output": 131,
+      "total": 1300
     },
     "costUsd": {
       "inputCost": 0.00016625,
-      "outputCost": 0.0001845,
-      "thinkingCost": 0.0010635,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0.000756,
       "cachedCost": 0,
-      "totalCost": 0.00141425
+      "totalCost": 0.00111875
     },
-    "durationMs": 6590,
-    "thoughts": "**Strike Data Structuring and Validation**\n\nOkay, let's break down this strike announcement. First, the core information: a 24-hour national strike is planned for Friday, March 21, 2025. It's ATAC in Rome (Lazio) that's the company involved.\n\nNow, let's translate this into a structured format for the database.  Since it's a national strike, I need to make sure I'm adhering to the schema rules. It seems I should represent this with the `locationType` set to \"NATIONAL\" and omit any `locationCodes`. Good, that's straightforward.\n\nThe strike's duration is 24 hours starting on March 21st, 2025. So, the `startDate` should be \"2025-03-21 00:00:00\" and the `endDate` should be \"2025-03-21 23:59:59\".  I'll double check the precise datetime format with the regex `^\\\\d{4}-\\\\d{2}-\\\\d{2} \\\\d{2}:\\\\d{2}:\\\\d{2}$` and it appears to be correct.\n\nThe guaranteed service windows need some attention. The announcement states \"regolare fino alle 8,30 e dalle 17 alle 20\". This translates to service being regular until 8:30 am and from 5 pm to 8 pm. So I need to set `guaranteedTimes` to  [\"00:00-08:30\", \"17:00-20:00\"].\n\nFinally, after verifying all of the above, my data structure looks like this:  `{\"isStrike\": true, \"strikeData\": {\"startDate\": \"2025-03-21 00:00:00\", \"endDate\": \"2025-03-21 23:59:59\", \"locationType\": \"NATIONAL\", \"guaranteedTimes\": [\"00:00-08:30\", \"17:00-20:00\"]}}`. I'm confident in this and ready to proceed.\n\n\n"
+    "durationMs": 5815
   }
 }

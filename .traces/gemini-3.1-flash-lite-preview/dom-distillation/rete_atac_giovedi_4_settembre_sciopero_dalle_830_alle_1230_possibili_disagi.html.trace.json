@@ -1,26 +1,15 @@
 {
-  "timestamp": "2026-03-13T15:17:59.196Z",
-  "isCacheHit": false,
+  "timestamp": "2026-03-13T22:26:15.777Z",
+  "isCacheHit": true,
   "request": {
     "sourceName": "ATAC",
     "fileName": "rete_atac_giovedi_4_settembre_sciopero_dalle_830_alle_1230_possibili_disagi.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "dom-distillation",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"ATAC\" (the public transport company of Rome, Lazio (12)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"> <h3>Context Metadata</h3> <ul><li>Page Title: Rete Atac, giovedì 4 settembre sciopero dalle 8,30 alle 12,30. Possibili disagi - Roma Servizi per la Mobilità</li></ul> </div><hr/><div> <div> <div> <div> <div> <div> </div> </div> </div> <div> <div> <div> <div> <h1>Rete Atac, giovedì 4 settembre sciopero dalle 8,30 alle 12,30. Possibili disagi</h1> </div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div><p>Pubblicato il: 29/08/2025 - Aggiornato il: 29/08/2025</p></div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div> <span> </span> </div> </div> </div> <div> <div> <div></div> </div> </div> <div> <div> <p>Giovedì 4 settembre trasporto pubblico romano a rischio per lo sciopero di 4 ore, dalle 8,30 alle 12,30, indetto dal sindacato Sul. L’agitazione interesserà solamente la rete Atac.<br>Ulteriori dettagli sui siti&nbsp;<a href=\"https://romamobilita.it/it\">romamobilita.it</a>&nbsp;e&nbsp;<a href=\"https://www.atac.roma.it/\">atac.roma.it</a></p> </div> </div> </div> </div> </div> </div>"
   },
   "response": {
-    "rawOutput": {
-      "isStrike": true,
-      "strikeData": {
-        "startDate": "2025-09-04 08:30:00",
-        "endDate": "2025-09-04 12:30:00",
-        "locationType": "REGIONAL",
-        "locationCodes": [
-          "12"
-        ]
-      }
-    },
     "parsedData": {
       "isStrike": true,
       "strikeData": {
@@ -34,19 +23,17 @@
     },
     "usage": {
       "input": 825,
-      "output": 93,
-      "cached": 0,
-      "thinking": 0,
-      "total": 918
+      "output": 99,
+      "total": 1285
     },
     "costUsd": {
       "inputCost": 0.00020625,
-      "outputCost": 0.0001395,
-      "thinkingCost": 0,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0.0005415,
       "cachedCost": 0,
-      "totalCost": 0.00034575
+      "totalCost": 0.00089625
     },
-    "durationMs": 993,
-    "thoughts": ""
+    "durationMs": 4450,
+    "thoughts": "**Strike Analysis: Rome, September 4th, 2025**\n\nOkay, let's break this down. First, I see an announcement about a strike impacting \"rete Atac\" – that immediately tells me this involves local transport within the Rome area. The date is clearly stated as \"giovedì 4 settembre,\" which translates to Thursday, September 4th. The time window is from 8:30 AM to 12:30 PM. Given the publication date of August 29th, 2025, the date is easy to parse.\n\nThis is a clear-cut strike; `isStrike` is definitely `true`. I need to extract the relevant details for the data structure. The `startDate` is \"2025-09-04 08:30:00\" and the `endDate` is \"2025-09-04 12:30:00.\" Since \"rete Atac\" refers to local transport, I'm categorizing the `locationType` as \"REGIONAL,\" specifically covering Rome, which I know codes as \"12.\" So, `locationCodes` is [\"12\"]. There's no mention of guaranteed service, so I'll leave `guaranteedTimes` as unspecified. Now, the key is to ensure this information is clean, structured, and ready for integration.\n\n\n"
   }
 }

@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-03-13T15:17:32.479Z",
+  "timestamp": "2026-03-13T22:26:07.458Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "ATAC",
     "fileName": "gioved_11_aprile_sciopero_nazionale_trasporto_pubblico_rischio_20_24.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "dom-distillation-markdown",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"ATAC\" (the public transport company of Rome, Lazio (12)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: Giovedì 11 aprile sciopero nazionale. Trasporto pubblico a rischio dalle 20 alle 24 - Roma Servizi per la Mobilità\n\n* * *\n\n# Giovedì 11 aprile sciopero nazionale. Trasporto pubblico a rischio dalle 20 alle 24\n\nPubblicato il: 05/04/2024 - Aggiornato il: 05/04/2024\n\nstatus: 1 Giovedì 11 aprile trasporto pubblico a rischio per lo sciopero di 4 ore, dalle 20 alle 24, proclamato a livello nazionale dai sindacati Cgil e Uil. A Roma l’agitazione interesserà le reti Atac (comprese le linee in regime di subaffidamento ad altri operatori), RomaTpl, ATI Autoservizi Troiani/Sap."
   },
   "response": {
@@ -14,23 +14,22 @@
       "isStrike": true,
       "strikeData": {
         "startDate": "2024-04-11 20:00:00",
-        "endDate": "2024-04-11 23:59:59",
+        "endDate": "2024-04-12 00:00:00",
         "locationType": "NATIONAL"
       }
     },
     "usage": {
       "input": 658,
-      "output": 82,
-      "total": 1322
+      "output": 89,
+      "total": 1482
     },
     "costUsd": {
       "inputCost": 0.0001645,
-      "outputCost": 0.000123,
-      "thinkingCost": 0.000873,
+      "outputCost": 0.0001335,
+      "thinkingCost": 0.0011025,
       "cachedCost": 0,
-      "totalCost": 0.0011605
+      "totalCost": 0.0014005
     },
-    "durationMs": 6355,
-    "thoughts": "**Strike Analysis: Italian National Public Transport**\n\nOkay, here's the breakdown. I've got a piece of content: \"Giovedì 11 aprile sciopero nazionale. Trasporto pubblico a rischio dalle 20 alle 24,\" published on May 5th, 2024. That translates to: a national strike is planned for Thursday, April 11th, impacting public transport from 8 PM to midnight.\n\nRight, so this is definitely a strike, `isStrike: true`. The scope is clearly national, *proclamato a livello nazionale*, affecting public transport. The target seems to be all public transport, ATAC, RomaTpl, and so on.\n\nThe key data points are: `startDate` is April 11th, 2024, at 8 PM, which is `2024-04-11 20:00:00`. The end time is a little ambiguous: *dalle 20 alle 24* is the phrase. Usually, midnight is interpreted as the end of the day, so the `endDate` is most accurately `2024-04-11 23:59:59`. The prompt format asks for `yyyy-MM-dd HH:mm:ss`, so that works.\n\nWe also have the `locationType`: it's \"NATIONAL\" because the strike is \"national\". There aren't any guaranteed times mentioned, which is typical for evening strikes, so that field gets omitted. No location codes seem applicable, so that can be omitted as well.\n\nTherefore, the complete `strikeData` object looks like this: `{ \"startDate\": \"2024-04-11 20:00:00\", \"endDate\": \"2024-04-11 23:59:59\", \"locationType\": \"NATIONAL\" }`.\n\nNow, let's confirm I have all the required fields: `isStrike` (boolean) - yes. `strikeData` (object) - yes. `startDate` (\"yyyy-MM-dd HH:mm:ss\") - yes. `endDate` (\"yyyy-MM-dd HH:mm:ss\") - yes. `locationType` (\"NATIONAL\" or \"REGIONAL\") - yes, \"NATIONAL.\" Everything is present and accounted for; ready to go.\n\n\n"
+    "durationMs": 7103
   }
 }

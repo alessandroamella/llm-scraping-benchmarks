@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-03-13T15:14:33.431Z",
+  "timestamp": "2026-03-13T22:25:27.435Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "EAV",
     "fileName": "autolinee_sciopero_del_22_marzo_2025.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "dom-distillation-markdown",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"EAV\" (the public transport company of Campania (15)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: Servizio Autolinee - Avviso di sciopero di 4 ore del 22 marzo 2025 - EAV srl\n\n* * *\n\n## Servizio Autolinee – Avviso di sciopero di 4 ore del 22 marzo 2025\n\nData:  \n**17 Marzo 2025**\n\nSi comunica che per il giorno 22 marzo 2025 la O.S. OR.S.A. ha proclamato uno sciopero aziendale di 4 ore, dalle ore 19:40 alle ore 23:40, avente le seguenti motivazioni: problematiche organizzazione aziendale.\n\nDurante l’ultima proclamazione di sciopero della citata O.S., la percentuale di adesione è stata del 11.94% (scioperi di 24 e 4 ore del giorno 5 ottobre 2024)\n\n**Non saranno garantite le corse durante l’orario di sciopero.**\n\nDurante l’orario di sciopero l’effettuazione delle corse è subordinata al numero di lavoratori aderenti allo sciopero.\n\n**Categoria:** [Trasporto pubblico](https://www.eavsrl.it/categoria-disservizio/trasporto-pubblico/)\n\n**Area:** [EAV - Autobus Campania](https://www.eavsrl.it/area/eav-autobus-campania/)"
   },
   "response": {
@@ -24,16 +24,15 @@
     "usage": {
       "input": 793,
       "output": 99,
-      "total": 1252
+      "total": 1774
     },
     "costUsd": {
       "inputCost": 0.00019825,
       "outputCost": 0.0001485,
-      "thinkingCost": 0.00054,
+      "thinkingCost": 0.001323,
       "cachedCost": 0,
-      "totalCost": 0.00088675
+      "totalCost": 0.00166975
     },
-    "durationMs": 8612,
-    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, let's break this down. I'm looking at the input content: \"Servizio Autolinee – Avviso di sciopero di 4 ore del 22 marzo 2025\" from EAV srl. My objective is to confirm if this is indeed an announcement about a strike and, if so, to extract the key details.\n\nThe first criterion, `isStrike`, hinges on whether it's a strike announcement. And yes, it clearly states \"Avviso di sciopero\" – strike announcement. Therefore, `isStrike` is true. We have a 4-hour strike confirmed for March 22, 2025.\n\nNext, I need to extract the specifics. I've pinpointed the `startDate` as 2025-03-22 19:40:00 and the `endDate` as 2025-03-22 23:40:00, based on the four-hour duration given in the original text. The strike's scope is `REGIONAL`, as it involves Autolinee (bus routes), which implies the region of Campania (code 15). So, `locationType` is set to \"REGIONAL\" and `locationCodes` is an array containing the appropriate code: [\"15\"]. Crucially, there's no mention of `guaranteedTimes` in the provided text.\n\nNow, let's assemble the results. Confirmed: `isStrike` is true. My schema dictates that I include `strikeData` if `isStrike` is true. Hence, I'll compile `strikeData`:\n\n*   `startDate`: \"2025-03-22 19:40:00\"\n*   `endDate`: \"2025-03-22 23:40:00\"\n*   `locationType`: \"REGIONAL\"\n*   `locationCodes`: [\"15\"]\n\nEverything lines up perfectly with the requirements. It's a straightforward strike notification, and I've extracted and structured the information correctly.\n\n\n"
+    "durationMs": 7321
   }
 }

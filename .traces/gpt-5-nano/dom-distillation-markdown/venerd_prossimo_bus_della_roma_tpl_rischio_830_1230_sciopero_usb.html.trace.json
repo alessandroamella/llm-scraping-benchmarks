@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-03-13T15:17:07.231Z",
+  "timestamp": "2026-03-13T22:25:59.646Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "ATAC",
     "fileName": "venerd_prossimo_bus_della_roma_tpl_rischio_830_1230_sciopero_usb.html",
     "model": "gpt-5-nano",
     "strategy": "dom-distillation-markdown",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"ATAC\" (the public transport company of Rome, Lazio (12)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: Venerdì prossimo bus della Roma Tpl a rischio dalle 8,30 alle 12,30 per lo sciopero dell’Usb - Roma Servizi per la Mobilità\n\n* * *\n\n# Venerdì prossimo bus della Roma Tpl a rischio dalle 8,30 alle 12,30 per lo sciopero dell’Usb\n\nPubblicato il: 18/10/2022 - Aggiornato il: 25/01/2023\n\nstatus: 1 Venerdì 21 ottobre linee periferiche romane a rischio per lo sciopero di 4 ore, dalle 8,30 alle 12,30, proclamato dal sindacato Usb tra i lavoratori del consorzio Roma Tpl. L’agitazione non interesserà i collegamenti gestiti dall’Atac che saranno regolarmente in servizio. Aggiornamenti in tempo reale e ulteriori dettagli su romamobilita.it"
   },
   "response": {
@@ -22,18 +22,17 @@
       }
     },
     "usage": {
-      "input": 1109,
-      "output": 2048,
-      "total": 3157
+      "input": 1023,
+      "output": 2123,
+      "total": 3146
     },
     "costUsd": {
-      "inputCost": 0.00005545,
-      "outputCost": 0.0008192,
+      "inputCost": 0.00005115,
+      "outputCost": 0.0008492,
       "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.00087465
+      "totalCost": 0.00090035
     },
-    "durationMs": 23218,
-    "thoughts": "**Analyzing strike announcement**\n\nI’m evaluating the document to see if it's announcing a new or upcoming strike. The title suggests that on Friday, October 21, the bus lines in Rome will be at risk from 8:30 AM to 12:30 PM due to a strike by the Usb union. It mentions that this will affect peripheral bus lines operated by Roma Tpl, but Atac connections will remain unaffected. There’s a promise for real-time updates on the situation at romamobilita.it."
+    "durationMs": 25465
   }
 }

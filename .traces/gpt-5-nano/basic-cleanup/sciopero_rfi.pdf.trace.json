@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-03-13T15:14:05.086Z",
+  "timestamp": "2026-03-13T22:25:22.281Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "Trenitalia TPER",
     "fileName": "sciopero rfi.pdf",
     "model": "gpt-5-nano",
     "strategy": "basic-cleanup",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"Trenitalia TPER\" (the public transport company of Emilia-Romagna (08)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: basic-cleanup):\nSCIOPERO DEL PERSONALE DI RFI S.p.A. REGIONE EMILIA ROMAGNA Dalle ore 9:01 alle ore 16:59 di venerdì 30 gennaio 2026, i treni possono subire cancellazioni o variazioni, per uno sciopero del personale dei RFI S.p.A. della regione Emilia Romagna. Per i treni regionali in Emilia Romagna e nelle regioni limitrofe possono verificarsi cancellazioni o variazioni. L’agitazione sindacale può comportare modifiche al servizio anche prima dell’inizio e dopo la sua conclusione. I passeggeri che intendono rinunciare al viaggio possono chiedere il rimborso a partire dalla dichiarazione di sciopero: - fino all’ora di partenza del treno prenotato, per i treni Intercity e Frecce; - fino alle ore 24:00 del giorno antecedente lo sciopero stesso, per i treni Regionali; in alternativa possono riprogrammare il viaggio, a condizioni di trasporto simili, non appena possibile, secondo la disponibilità dei posti. Informazioni su collegamenti e servizi anche attraverso l’app Trenitalia, la sezione Infomobilità del sito trenitalia.com, sito trenitaliatper.it, il numero verde gratuito 800 89 20 21, oltre che nelle biglietterie e presso il personale di assistenza clienti. 30 GENNAIO 2026 -- 1 of 1 --"
   },
   "response": {
@@ -22,18 +22,17 @@
       }
     },
     "usage": {
-      "input": 1225,
-      "output": 1317,
-      "total": 2542
+      "input": 1139,
+      "output": 1370,
+      "total": 2509
     },
     "costUsd": {
-      "inputCost": 0.00006125,
-      "outputCost": 0.0005268,
+      "inputCost": 0.00005695,
+      "outputCost": 0.000548,
       "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.00058805
+      "totalCost": 0.00060495
     },
-    "durationMs": 17190,
-    "thoughts": "**Extracting required data**\n\nI need to pull out the strikeData with startDate and endDate formatted as 'yyyy-MM-dd HH:mm:ss'. The date provided is \"Dalle ore 9:01 alle ore 16:59 di venerdì 30 gennaio 2026\", so I'll set startDate to 2026-01-30 09:01:00 and endDate to 2026-01-30 16:59:00. The location type is \"REGIONAL\" for Emilia Romagna, with the relevant region code being \"08\". However, there aren't guaranteed service times listed in the text due to potential cancellations."
+    "durationMs": 16466
   }
 }

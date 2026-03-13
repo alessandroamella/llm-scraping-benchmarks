@@ -1,27 +1,15 @@
 {
-  "timestamp": "2026-03-13T15:14:06.990Z",
-  "isCacheHit": false,
+  "timestamp": "2026-03-13T22:25:23.887Z",
+  "isCacheHit": true,
   "request": {
     "sourceName": "EAV",
     "fileName": "eav_autolinee_avviso_di_sciopero_di_24_ore_venerdi_13_dicembre_2024.html",
     "model": "gpt-5-nano",
     "strategy": "dom-distillation",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"EAV\" (the public transport company of Campania (15)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"> <h3>Context Metadata</h3> <ul><li>Page Title: Eav Autolinee - Avviso di sciopero di 24 ore venerdì 13 dicembre 2024 - EAV srl</li></ul> </div><hr/><article> <section> <div> <div> <div> <h2> Eav Autolinee – Avviso di sciopero di 24 ore venerdì 13 dicembre 2024 </h2> </div> </div> </div> <div> <div> <p> <small>Data: </small><br> <small><strong>9 Dicembre 2024</strong></small> </p> </div> </div> </section> <section> <div> <div> <div> </div> </div> <div> <div> <section> <p>LINEE AUTOMOBILISTICHE: AVVISO DI SCIOPERO venerdì 13 dicembre 2024</p> <p>&nbsp;</p> <p>Per il giorno 13 dicembre 2024 la OS USB ha proclamato Sciopero Generale nazionale di 24 ore.</p> <p>E’ possibile consultare le motivazioni dello sciopero sul sito www.eavsrl.it</p> <p>Durante l’ultima proclamazione di sciopero la percentuale di adesione per la citata OS è stata del 5,7% (sciopero di 4 ore del giorno 28 novembre 2024)</p> <p>Il servizio si svolge regolarmente nelle seguenti fasce di garanzia: dalle ore 05:30 alle ore 8:30 e dalle ore 16:30 alle ore 19:30</p> <p>Durante l’orario di sciopero l’effettuazione delle corse è subordinata al numero di lavoratori aderenti allo sciopero.</p> <div> <div> <p><b>Categoria:&nbsp;</b><a href=\"https://www.eavsrl.it/categoria-disservizio/trasporto-pubblico/\">Trasporto pubblico</a></p> <p><b>Area:&nbsp;</b><a href=\"https://www.eavsrl.it/area/campania/\">Campania</a></p> </div> </div> <div></div> </section> </div> </div> </div> </section> </article>"
   },
   "response": {
-    "rawOutput": {
-      "isStrike": true,
-      "strikeData": {
-        "startDate": "2024-12-13 00:00:00",
-        "endDate": "2024-12-13 23:59:59",
-        "locationType": "NATIONAL",
-        "guaranteedTimes": [
-          "05:30-08:30",
-          "16:30-19:30"
-        ]
-      }
-    },
     "parsedData": {
       "isStrike": true,
       "strikeData": {
@@ -35,18 +23,18 @@
       }
     },
     "usage": {
-      "input": 1432,
-      "output": 1415,
-      "total": 2847
+      "input": 1346,
+      "output": 1362,
+      "total": 2708
     },
     "costUsd": {
-      "inputCost": 0.0000716,
-      "outputCost": 0.000566,
+      "inputCost": 0.0000673,
+      "outputCost": 0.0005448,
       "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.0006376
+      "totalCost": 0.0006121
     },
-    "durationMs": 21875,
-    "thoughts": "**Extracting strike data**\n\nI need to format the information into JSON according to the strike_extraction schema. The document is clearly announcing a 24-hour strike on December 13, 2024, as stated in the text. I see it mentions specific time windows for disruption and provides reasons for the strike. Since the event is scheduled for the future relative to December 9, 2024, I can confirm that isStrike is true. Now, I’ll fill in the strikeData with the relevant details."
+    "durationMs": 19212,
+    "thoughts": "**Determining strike announcement**\n\nI need to confirm if this document announces a new upcoming strike. It’s Italian and mentions “Eav Autolinee – Avviso di sciopero di 24 ore venerdì 13 dicembre 2024,” stating the date as December 9, 2024. The text says “OS USB ha proclamato Sciopero Generale nazionale di 24 ore,\" indicating a national strike on December 13, 2024. It also outlines specific service hours. So yes, it’s definitely an announcement of an upcoming strike, making isStrike true."
   }
 }

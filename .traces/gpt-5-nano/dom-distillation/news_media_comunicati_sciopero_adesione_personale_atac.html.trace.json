@@ -1,36 +1,31 @@
 {
-  "timestamp": "2026-03-13T15:16:29.508Z",
-  "isCacheHit": false,
+  "timestamp": "2026-03-13T22:25:38.986Z",
+  "isCacheHit": true,
   "request": {
     "sourceName": "ATAC",
     "fileName": "news_media_comunicati_sciopero_adesione_personale_atac.html",
     "model": "gpt-5-nano",
     "strategy": "dom-distillation",
-    "useLenientSchema": false,
+    "useLenientSchema": true,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"ATAC\" (the public transport company of Rome, Lazio (12)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"> <h3>Context Metadata</h3> <ul><li>Page Title: Sciopero del trasporto pubblico, adesione personale Atac al 24,9% - Roma Servizi per la Mobilità</li></ul> </div><hr/><div> <div> <div> <div> <div> <div> </div> </div> </div> <div> <div> <div> <div> <h1>Sciopero del trasporto pubblico, adesione personale Atac al 24,9%</h1> </div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div><p>Pubblicato il: 21/03/2025 - Aggiornato il: 21/03/2025</p></div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div> <span> </span> </div> </div> </div> <div> <div> <div></div> </div> </div> <div> <div> <p><span>L’adesione del personale Atac all’odierno sciopero nazionale del trasporto pubblico, rilevata in mattinata, è stata pari al 24,9%</span></p> </div> </div> </div> </div> </div> </div>"
   },
   "response": {
-    "rawOutput": {
-      "isStrike": false,
-      "strikeData": null
-    },
     "parsedData": {
-      "isStrike": false,
-      "strikeData": null
+      "isStrike": false
     },
     "usage": {
-      "input": 1233,
-      "output": 415,
-      "total": 1648
+      "input": 1147,
+      "output": 435,
+      "total": 1582
     },
     "costUsd": {
-      "inputCost": 0.00006165,
-      "outputCost": 0.000166,
+      "inputCost": 0.00005735,
+      "outputCost": 0.000174,
       "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.00022765
+      "totalCost": 0.00023135
     },
-    "durationMs": 7457,
-    "thoughts": "**Analyzing strike announcement**\n\nI need to determine if this input is about a strike announcement or not. It’s in Italian and discusses participation by Atac personnel, with a reported percentage of 24.9%. The text mentions it’s about “today’s national strike” and provides an update on participation. Since it refers to a participation percentage of a strike that has already occurred or is ongoing, it seems like this wouldn’t be classified as an upcoming strike. Therefore, I should set isStrike to false."
+    "durationMs": 8145,
+    "thoughts": "**Evaluating strike announcement content**\n\nI need to check if this document announces a new or upcoming strike. The text talks about a public transport strike with a participation rate of 24.9% for Atac staff. It mentions the publication date being March 21, 2025. The details indicate it's about the participation rate in the current national strike rather than announcing a new one. So, I conclude it doesn't signal any upcoming strikes; it's about attendance in the current ongoing strike."
   }
 }

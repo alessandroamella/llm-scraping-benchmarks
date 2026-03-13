@@ -84,10 +84,10 @@ export class BenchmarksService implements OnModuleInit, OnModuleDestroy {
 
   // Toggle this to run benchmarks
   private readonly useLenientSchema = true;
-  private readonly includeManualInSuite = false;
+  private readonly includeManualInSuite = true;
   private readonly generateChaosDatasetFlag = false;
 
-  private readonly customReportName = 'run_all_STRICT_schema';
+  private readonly customReportName = 'run_all_maybe_last';
   // private readonly disabledChecks: string[] = ['locationType', 'locationCodes'];
   private readonly disabledChecks: string[] = [];
 
@@ -893,6 +893,18 @@ export class BenchmarksService implements OnModuleInit, OnModuleDestroy {
       });
     };
 
+    // Print Console Summary Table (before checking for duplicates)
+    console.table(
+      Object.entries(formattedSummary).map(([name, s]) => ({
+        Parser: name,
+        'F1 Score': s.avgF1,
+        Precision: s.avgPrecision,
+        Recall: s.avgRecall,
+        'Perf. Matches': `${s.perfect}/${s.count}`,
+        Cost: s.totalCostUsd || 'N/A',
+      })),
+    );
+
     // Check if an identical report already exists (based on quality metrics only)
     const reportHash = crypto
       .createHash('sha256')
@@ -936,17 +948,5 @@ export class BenchmarksService implements OnModuleInit, OnModuleDestroy {
     fs.writeFileSync(outputPath, JSON.stringify(report, null, 2));
 
     this.logger.log(chalk.bold.magenta(`\n💾 Report saved to: ${outputPath}`));
-
-    // Print Console Summary Table
-    console.table(
-      Object.entries(formattedSummary).map(([name, s]) => ({
-        Parser: name,
-        'F1 Score': s.avgF1,
-        Precision: s.avgPrecision,
-        Recall: s.avgRecall,
-        'Perf. Matches': `${s.perfect}/${s.count}`,
-        Cost: s.totalCostUsd || 'N/A',
-      })),
-    );
   }
 }
