@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-28 08:20:00",
+      "endDate": "2025-01-28 12:20:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24927,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005469,
+      "outputCost": 0.0012528,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0017997
+    },
+    "hash": "20972ea76e7aa5d5b83f116f0d2c5379",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_4_ore_martedi_28_gennaio_2025.html",
+    "thoughts": "**Clarifying strike details**\n\nIt looks like there’s an internal strike happening within the company, specifically in the Campania region, and it affects the \"Linee Suburbane\" but doesn’t seem to pertain to the \"Linea Metropolitana.\" Since it’s EAV operating around Naples, this might be a company-wide strike. I’m considering whether to label the locationType as \"NATIONAL\" or omit it. The instruction suggests null for national strikes, so I might need to set locationType to null instead, since it's company-specific.",
+    "tokens": {
+      "input": 10938,
+      "output": 3132,
+      "total": 14070
+    }
+  }
+}

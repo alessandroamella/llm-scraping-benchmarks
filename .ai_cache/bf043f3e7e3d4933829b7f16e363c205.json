@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8247,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003427,
+      "outputCost": 0.0001876,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0005303
+    },
+    "hash": "bf043f3e7e3d4933829b7f16e363c205",
+    "sourceFile": "eav_informa_servizio_automobilistico_integrativo_vico_equense_monte_faito_2.html",
+    "thoughts": "**Evaluating strike status**\n\nI need to\toutput JSON using the strike_extraction schema. The document I’m looking at is from \"EAV Informa\" and contains various content. At the bottom, it mentions \"sciopero revocato\" and \"sciopero sospeso differito,\" which are Italian phrases indicating a strike cancellation or suspension. Based on the instructions, since it states the strike is revoked, I should set isStrike to false because this indicates there won't be an upcoming strike.",
+    "tokens": {
+      "input": 6854,
+      "output": 469,
+      "total": 7323
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-24 00:00:00",
+      "endDate": "2025-02-24 23:59:59",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21317,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005363,
+      "outputCost": 0.0009176,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0014539
+    },
+    "hash": "3f180d9faf7ba59f330349695771a3b1",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_24h_lunedi_24_febbraio_2025.html",
+    "thoughts": "**Clarifying strike timings**\n\nI see that the page mentions “24h” and lists guaranteed service times like 06:03 and 07:47. It also references the Napoli-Benevento line but doesn’t specify start and end times for the strike. Since it’s a 24-hour strike, I think I should set the start date to 2025-02-24 00:00:00 and the end date to 2025-02-24 23:59:59. I just want to be precise with the format required: \"yyyy-MM-dd HH:mm:ss.\"",
+    "tokens": {
+      "input": 10726,
+      "output": 2294,
+      "total": 13020
+    }
+  }
+}

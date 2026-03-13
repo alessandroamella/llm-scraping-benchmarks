@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-20 00:00:00",
+      "endDate": "2025-06-21 00:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 27034,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000523,
+      "outputCost": 0.0009744,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0014974
+    },
+    "hash": "65eff4beda203d089c0b42cc8f178872",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_24h_giorno_venerdi_20_giugno_2025.html",
+    "thoughts": "**Extracting strike data**\n\nI’m examining the text about an upcoming strike on June 20, 2025, so isStrike should indeed be true. I need to extract details like startDate, endDate, locationType, locationCodes, and guaranteedTimes. The dates must follow the 'yyyy-MM-dd HH:mm:ss' format. The mention of the Friday strike suggests a range from 2025-06-20 00:00:00 to 2025-06-21 00:00:00. However, sometimes a 24-hour period starts at 00:00 and goes to 23:59:59 on the same day. I should confirm the guaranteed time slots for the strike.",
+    "tokens": {
+      "input": 10460,
+      "output": 2436,
+      "total": 12896
+    }
+  }
+}

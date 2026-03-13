@@ -1,0 +1,41 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-24 00:00:00",
+      "endDate": "2025-02-24 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:03-06:03",
+        "07:47-07:47",
+        "17:27-17:27",
+        "20:30-20:30",
+        "05:10-05:10",
+        "06:21-06:21",
+        "13:13-13:13",
+        "17:21-17:21"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21840,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00034765,
+      "outputCost": 0.0009188,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00126645
+    },
+    "hash": "4063df119e94f991162c78745f8432ed",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_24h_lunedi_24_febbraio_2025.html",
+    "thoughts": "**Extracting strike details**\n\nI need to format output in JSON according to their schema for strike extraction. The document is in Italian and announces a 24-hour strike on February 24, 2025, proclaimed by USB. It clearly states it's for a national strike. I’ll set the `isStrike` flag to true, and I'll need to extract relevant strike data: start and end dates with times, location type, and regional location codes. Since it’s national, I'll omit location codes.",
+    "tokens": {
+      "input": 6953,
+      "output": 2297,
+      "total": 9250
+    }
+  }
+}

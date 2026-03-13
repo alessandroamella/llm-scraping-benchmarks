@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-07-23 09:00:00",
+      "endDate": "2025-07-23 11:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 26226,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00033355,
+      "outputCost": 0.0010448,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00137835
+    },
+    "hash": "2f854d9421c6dbcbd72a8c08d2e0bde3",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_di_2_ore_mercoledi_23_luglio_2025.html",
+    "thoughts": "**Extracting strike data**\n\nI'm looking at JSON output requirements for strike data extraction. The content indicates it's announcing an upcoming strike with a notice for a 2-hour strike on July 23, 2025. The details show it's scheduled from 09:00 to 11:00, with services not guaranteed during that time. However, there are labels at the end mentioning \"sciopero revocato\" and \"sciopero sospeso differito,\" suggesting the strike might be revoked. I'll format this properly in JSON.",
+    "tokens": {
+      "input": 6671,
+      "output": 2612,
+      "total": 9283
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8477,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005104,
+      "outputCost": 0.0001448,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0006552
+    },
+    "hash": "2576e7863fd5ac249631f610f184cb28",
+    "sourceFile": "funivia_del_faito_sospensione_temporanea_del_servizio_funiviario_dalle_ore_1105.html",
+    "thoughts": "**Determining strike status**\n\nI need to output JSON following the strike_extraction schema. First, I'm checking if the document refers to a new or upcoming strike, but the content is in Italian and talks about a service suspension due to weather conditions. The title mentions the Funivia del Faito's service suspension from 11:05. Since this isn't related to a strike, the \"isStrike\" value should be false. Therefore, I'll output: {\"isStrike\": false}, ensuring there's no \"strikeData\" included.",
+    "tokens": {
+      "input": 10208,
+      "output": 362,
+      "total": 10570
+    }
+  }
+}

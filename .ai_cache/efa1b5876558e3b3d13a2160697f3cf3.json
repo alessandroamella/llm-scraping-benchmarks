@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 12126,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003432,
+      "outputCost": 0.0003588,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.000702
+    },
+    "hash": "efa1b5876558e3b3d13a2160697f3cf3",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_24h_venerdi_28_novembre_2025.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to output JSON based on the provided schema. The input content is in Italian, specifically about a nationwide strike set for November 28, 2025, by USB O.S. It indicates a 24-hour strike that impacts both rail and bus services, enforcing specific guaranteed service times. However, there are also notes at the end stating \"sciopero revocato\" and \"sciopero sospeso differito,\" which suggest that the strike might be canceled or postponed. So, the \"isStrike\" field should reflect that complexity.",
+    "tokens": {
+      "input": 6864,
+      "output": 897,
+      "total": 7761
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-05-11 00:00:00",
+      "endDate": "2025-05-11 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22649,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005459,
+      "outputCost": 0.0006212,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0011671
+    },
+    "hash": "386017d1ce1473cc92d5c58242f24cd9",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_24h_domenica_11_maggio_2025.html",
+    "thoughts": "**Clarifying strike period details**\n\nI’m looking at the instructions for startDate and endDate, which should be in the ISO format 'yyyy-MM-dd HH:mm:ss'. However, earlier examples show some variations in hours which confuse me! For a 24-hour strike on a single day, I believe startDate is 2025-05-11 00:00:00 and endDate is 2025-05-11 23:59:59, since they often specify “24 ore.” \n\nFor locationType, I can confirm \"REGIONAL\" works for Linee Vesuviane in Naples. About locationCodes, Campania’s code is \"15,\" which is indeed two digits as required.",
+    "tokens": {
+      "input": 10918,
+      "output": 1553,
+      "total": 12471
+    }
+  }
+}

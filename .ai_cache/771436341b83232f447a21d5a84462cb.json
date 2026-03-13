@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9891,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00033545,
+      "outputCost": 0.000276,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00061145
+    },
+    "hash": "771436341b83232f447a21d5a84462cb",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_24h_giorno_venerdi_20_giugno_2025.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to format the content in JSON according to the specifications. The content is Italian and discusses a strike notice proclaiming 24-hour action by the USB union on June 20, 2025, with specific service hours guaranteed. However, at the bottom, it mentions that the strike has been revoked and suspended. This tells me the strike won't happen. Based on the important instructions, since it's a cancellation, I should set \"isStrike\" to false.",
+    "tokens": {
+      "input": 6709,
+      "output": 690,
+      "total": 7399
+    }
+  }
+}

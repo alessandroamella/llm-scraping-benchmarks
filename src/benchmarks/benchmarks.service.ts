@@ -87,7 +87,7 @@ export class BenchmarksService implements OnModuleInit, OnModuleDestroy {
   private readonly includeManualInSuite = true;
   private readonly generateChaosDatasetFlag = false;
 
-  private readonly customReportName = 'eav_messed_dom_benchmarks';
+  private readonly customReportName = 'eav_messed_dom_fixed_less_chaos';
   // private readonly disabledChecks: string[] = ['locationType', 'locationCodes'];
   private readonly disabledChecks: string[] = [];
 

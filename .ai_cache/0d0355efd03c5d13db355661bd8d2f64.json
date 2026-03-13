@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18345,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005447,
+      "outputCost": 0.0005396,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0010843
+    },
+    "hash": "0d0355efd03c5d13db355661bd8d2f64",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_24h_per_venerdi_12_novembre_2025.html",
+    "thoughts": "**Determining strike announcement details**\n\nI'm analyzing a document titled \"Linee Suburbane: Avviso di sciopero di 24h per venerdì 12 dicembre 2025 - EAV srl.\" The body states a general national strike proclaimed by CGIL for December 12, 2025, with specified times for guaranteed service. It explicitly mentions a 24-hour strike for that date. So, it seems clear this is an announcement for an upcoming strike. I need to extract the start and end dates following the required schema.",
+    "tokens": {
+      "input": 10894,
+      "output": 1349,
+      "total": 12243
+    }
+  }
+}

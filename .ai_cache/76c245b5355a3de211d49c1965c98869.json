@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 25065,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003388,
+      "outputCost": 0.0009144,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0012532
+    },
+    "hash": "76c245b5355a3de211d49c1965c98869",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_di_4_ore_del_13_dicembre_2024.html",
+    "thoughts": "**Clarifying location and times**\n\nFor the location type, it should be \"NATIONAL\" and the locationCodes should be null. The schema supports null for locationCodes when it's national. \n\nNow about the guaranteed times: it mentions “il giorno 13 dicembre 2024,” and service isn’t guaranteed during the strike times. While there are usually guaranteed times during strikes, this text doesn't specify them, only noting that service is not guaranteed. The \"guaranteedTimes\" field is optional, and if included, should follow the \"HH:mm-HH:mm\" format.",
+    "tokens": {
+      "input": 6776,
+      "output": 2286,
+      "total": 9062
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-03 00:00:00",
+      "endDate": "2025-10-03 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 16744,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00059495,
+      "outputCost": 0.0006916,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00128655
+    },
+    "hash": "7c50fb1578447ecaa84840f8d4601cfa",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_generale_nazionale_di_24_ore_venerdi_03_ottobre_2025.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to decide if the content is announcing a new or upcoming strike based on the Italian text: \"Linee Flegree: Avviso di sciopero generale nazionale di 24 ore venerdì 03 ottobre 2025.\" It translates to \"Linee Flegree: Notice of a 24-hour general national strike on Friday, October 3, 2025.\" Since this article was published on October 2, 2025, it clearly indicates a national strike is happening on the 3rd. So, I’ll set isStrike to true and extract the strike data with the correct date format.",
+    "tokens": {
+      "input": 11899,
+      "output": 1729,
+      "total": 13628
+    }
+  }
+}

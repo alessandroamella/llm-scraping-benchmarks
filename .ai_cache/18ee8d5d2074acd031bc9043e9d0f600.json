@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-10 19:32:00",
+      "endDate": "2025-01-10 23:32:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20239,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003481,
+      "outputCost": 0.0006908,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0010389
+    },
+    "hash": "18ee8d5d2074acd031bc9043e9d0f600",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_4_ore_venerdi_10_gennaio_2025.html",
+    "thoughts": "**Considering service guarantees**\n\nThe content mentions conditions around the strike, indicating that service depends on the number of workers participating. However, it doesn't provide explicit \"time ranges\" for guaranteed service. The guideline states that \"guaranteedTimes must be arrays of 'HH:mm-HH:mm'\" and can be omitted if not specified. Given that there's no clear information about guaranteed windows, I'm thinking we should either omit that field or set it to null, following the instructions.",
+    "tokens": {
+      "input": 6962,
+      "output": 1727,
+      "total": 8689
+    }
+  }
+}

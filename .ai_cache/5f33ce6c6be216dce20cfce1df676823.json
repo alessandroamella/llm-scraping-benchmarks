@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-10 19:32:00",
+      "endDate": "2025-01-10 23:32:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 17504,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00053415,
+      "outputCost": 0.000686,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00122015
+    },
+    "hash": "5f33ce6c6be216dce20cfce1df676823",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_4_ore_10_gennaio_2025.html",
+    "thoughts": "**Extracting strike data**\n\nI need to output JSON based on the strike extraction schema. The document indicates a future strike, specifically, a 4-hour national strike occurring on January 10, 2025, as proclaimed by O.S. CONF.AIL. The strike is set to run from 19:32 to 23:32. I need to confirm that isStrike is true because it announces the upcoming strike and provides necessary details. I’ll extract strikeData for fields like startDate, endDate, locationType, locationCodes, and guaranteedTimes.",
+    "tokens": {
+      "input": 10683,
+      "output": 1715,
+      "total": 12398
+    }
+  }
+}

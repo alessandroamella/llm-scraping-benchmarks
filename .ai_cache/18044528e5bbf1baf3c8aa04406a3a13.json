@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7927,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00036025,
+      "outputCost": 0.0002384,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00059865
+    },
+    "hash": "18044528e5bbf1baf3c8aa04406a3a13",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_24h_lunedi_24_febbraio_2025.html",
+    "thoughts": "**Evaluating strike information**\n\nI need to format the strike extraction in JSON, including fields like isStrike and possibly strikeData. The page indicates a 24-hour strike on February 24, 2025, but it also mentions that the strike has been canceled and delayed. This suggests that the information does not announce an upcoming strike, meaning I should set isStrike to false. Therefore, the document doesn't indicate an active strike at this time.",
+    "tokens": {
+      "input": 7205,
+      "output": 596,
+      "total": 7801
+    }
+  }
+}

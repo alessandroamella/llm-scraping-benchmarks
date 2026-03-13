@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-20 00:00:00",
+      "endDate": "2025-06-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21707,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00058305,
+      "outputCost": 0.0008324,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00141545
+    },
+    "hash": "675b5be8c661f70a9802cbf3bae2d3ef",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_24h_venerdi_20_giugno_2025.html",
+    "thoughts": "**Parsing strike times**\n\nI’m examining the times for a 24-hour strike on June 20, 2025. It looks like it might start at midnight and run until 23:59:59. The text references guaranteed service from 05:30 to 08:30 and 16:30 to 19:30, which helps clarify the strike timeframe. I think I can set the start date as 2025-06-20 00:00:00 and the end date as 2025-06-20 23:59:59 since standard formatting is required.",
+    "tokens": {
+      "input": 11661,
+      "output": 2081,
+      "total": 13742
+    }
+  }
+}

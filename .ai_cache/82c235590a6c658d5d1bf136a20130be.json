@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19686,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00033595,
+      "outputCost": 0.0007264,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00106235
+    },
+    "hash": "82c235590a6c658d5d1bf136a20130be",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_generale_nazionale_di_24_ore_venerdi_28_novembre_2025.html",
+    "thoughts": "**Extracting strike details**\n\nI need to output JSON based on strike extraction rules. The content, which states that there's a general national strike on November 28, 2025, proclaimed by USB, indicates it is indeed an announcement. Since it's dated November 27, 2025, it’s an upcoming strike for the following day. I should set isStrike to true. Now I'll need to extract the strike details, including the start and end dates with their respective times.",
+    "tokens": {
+      "input": 6719,
+      "output": 1816,
+      "total": 8535
+    }
+  }
+}

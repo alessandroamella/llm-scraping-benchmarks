@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7343,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003455,
+      "outputCost": 0.0002056,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0005511
+    },
+    "hash": "47a2fe187270e4ac912b9d6f76f7fafb",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_di_2_ore_mercoledi_23_luglio_2025.html",
+    "thoughts": "**Deciding strike status**\n\nI'm assessing a document that mentions a planned strike but then revokes it. The instruction indicates I need to determine if this document announces an upcoming strike. Given the revocation, I should set isStrike to false. The content includes details about the strike, but since it’s revoked, it doesn't announce a new strike. Therefore, I will ensure the output follows the required JSON format: {\"isStrike\": false}.",
+    "tokens": {
+      "input": 6910,
+      "output": 514,
+      "total": 7424
+    }
+  }
+}

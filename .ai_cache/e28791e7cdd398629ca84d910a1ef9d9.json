@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9388,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00034365,
+      "outputCost": 0.0003236,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00066725
+    },
+    "hash": "e28791e7cdd398629ca84d910a1ef9d9",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_24h_venerdi_20_giugno_2025.html",
+    "thoughts": "**Analyzing strike information**\n\nI see mentions of \"sciopero revocato\" and \"sciopero sospeso differito\" in a cookie banner, suggesting a strike may be revoked or suspended. The instructions tell me to determine if this document announces a new strike. If it indicates a cancellation, I should set isStrike to false. The earlier notice says there's a strike on June 20, 2025, but since \"sciopero revocato\" appears, it likely indicates the strike has been revoked, meaning I should also set isStrike to false.",
+    "tokens": {
+      "input": 6873,
+      "output": 809,
+      "total": 7682
+    }
+  }
+}

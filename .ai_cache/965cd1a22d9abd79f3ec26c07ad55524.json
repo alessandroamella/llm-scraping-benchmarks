@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 16498,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003506,
+      "outputCost": 0.0007272,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0010778
+    },
+    "hash": "965cd1a22d9abd79f3ec26c07ad55524",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_24h_venerdi_28_novembre_2025.html",
+    "thoughts": "**Determining upcoming strike**\n\nI need to evaluate the document to see if it’s announcing a new strike. The Italian page refers to a 24-hour general strike on November 28, 2025, with guaranteed service times listed for specific hours. This clearly indicates it’s an upcoming strike. So, I’ll set isStrike to true. Next, I have to extract details for the strike, including start and end dates and any guarantees, converting dates into the required format.",
+    "tokens": {
+      "input": 7012,
+      "output": 1818,
+      "total": 8830
+    }
+  }
+}

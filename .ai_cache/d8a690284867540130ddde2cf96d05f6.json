@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 33325,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005354,
+      "outputCost": 0.0012988,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0018342
+    },
+    "hash": "d8a690284867540130ddde2cf96d05f6",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_di_4_ore_martedi_28_gennaio_2025.html",
+    "thoughts": "**Clarifying guaranteed service times**\n\nOkay, I'm trying to understand \"guaranteedTimes,\" which are defined as time ranges during which service is assured. For example, it could look like [\"08:20-12:20\"]. However, there's a note that service won't be guaranteed during a strike. The documentation says there's a strike declared from 08:20 to 12:20, implying that outside these hours, service should be guaranteed. So, am I right in thinking that \"guaranteedTimes\" should reflect times when service is actually provided?",
+    "tokens": {
+      "input": 10708,
+      "output": 3247,
+      "total": 13955
+    }
+  }
+}

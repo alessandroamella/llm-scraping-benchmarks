@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-10 19:32:00",
+      "endDate": "2025-01-10 23:32:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18094,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003425,
+      "outputCost": 0.0006724,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0010149
+    },
+    "hash": "37126a267c1fab5f75ad90947379dda6",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_di_4_ore10_gennaio_2025.html",
+    "thoughts": "**Determining JSON Fields**\n\nI'm starting with specifying the date and time for the strike: January 10, 2025, from 7:32 PM to 11:32 PM. The location type should be \"NATIONAL\" as per the schema, not \"Nazionale.\" For national strikes, the location codes should be omitted or set to null, and I'm thinking omitting it would align better with the instructions. However, since the schema requires a field, I might have to set it as null instead—just to follow the JSON structure correctly.",
+    "tokens": {
+      "input": 6850,
+      "output": 1681,
+      "total": 8531
+    }
+  }
+}

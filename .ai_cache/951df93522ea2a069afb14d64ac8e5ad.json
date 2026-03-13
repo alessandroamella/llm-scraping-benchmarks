@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19847,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000366,
+      "outputCost": 0.0006432,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0010092
+    },
+    "hash": "951df93522ea2a069afb14d64ac8e5ad",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_24_h_venerdi_12_dicembre_2025.html",
+    "thoughts": "**Clarifying strike data**\n\nI see the instruction states that guaranteed times must be arrays of “HH:mm-HH:mm”, not just strings. The example shows these as string arrays, so I think I should provide an array of strings. Since this is about a scheduled upcoming strike, I need to set isStrike to true. \n\nThe start date should be “2025-12-12 00:00:00” and the end date “2025-12-12 23:59:59.” For location type, I’ll use “NATIONAL” and keep location codes as null. I’ll include guaranteed times as “05:30-08:30” and “16:30-19:30.”",
+    "tokens": {
+      "input": 7320,
+      "output": 1608,
+      "total": 8928
+    }
+  }
+}

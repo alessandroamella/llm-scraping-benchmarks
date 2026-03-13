@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 34062,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00034045,
+      "outputCost": 0.0013852,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00172565
+    },
+    "hash": "1713d46d55a424f049fa984a8b877439",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_4_ore_venerdi_10_gennaio_2025.html",
+    "thoughts": "**Analyzing strike announcements**\n\nI'm looking at the page content which mentions \"sciopero revocato\" and \"sciopero sospeso differito.\" I need to determine which suggests that the strike was canceled. Both terms seem to imply a form of revocation or suspension, but there are no specific dates. The instruction says to set isStrike to true only if it's announcing an upcoming strike. Since the page does indicate an upcoming strike for January 10, 2025, I think we should treat it as such.",
+    "tokens": {
+      "input": 6809,
+      "output": 3463,
+      "total": 10272
+    }
+  }
+}

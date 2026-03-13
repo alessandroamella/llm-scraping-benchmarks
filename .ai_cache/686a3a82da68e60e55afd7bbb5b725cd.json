@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-07-23 09:00:00",
+      "endDate": "2025-07-23 11:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19206,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00036225,
+      "outputCost": 0.0009352,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00129745
+    },
+    "hash": "686a3a82da68e60e55afd7bbb5b725cd",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_2_ore_mercoledi_23_luglio_2025.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to output JSON based on the schema called strike_extraction, which includes isStrike and strikeData if there are details. The content I have indicates a new upcoming strike on July 23, 2025, declared by O.S. Faisa Confail, lasting two hours. This means isStrike should be true. The strikeData will also need to show the correct start and end dates in the specified format. I'll work on formatting that accordingly!",
+    "tokens": {
+      "input": 7245,
+      "output": 2338,
+      "total": 9583
+    }
+  }
+}

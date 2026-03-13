@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20015,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0006024,
+      "outputCost": 0.0007556,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.001358
+    },
+    "hash": "b8874d496943a1d318ddbab42b89614e",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_generale_nazionale_di_venerdi_12_dicembre_2025.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to figure out if the document is announcing an upcoming strike. It's an Italian page titled \"Linee Flegree: Avviso di sciopero generale nazionale di venerdì 12 dicembre 2025\" by EAV srl, clearly stating that there's a national general strike on Friday, December 12, 2025. The content mentions the date, and it confirms that the CGIL union has declared this strike. It also includes information on guaranteed service windows before and after the strike. Therefore, I should conclude that isStrike should be true and format the details correctly.",
+    "tokens": {
+      "input": 12048,
+      "output": 1889,
+      "total": 13937
+    }
+  }
+}

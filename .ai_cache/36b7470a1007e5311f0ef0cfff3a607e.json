@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19181,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003853,
+      "outputCost": 0.0005572,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0009425
+    },
+    "hash": "36b7470a1007e5311f0ef0cfff3a607e",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_generale_nazionale_di_24_ore_di_venerdi_28_novembre_2025.html",
+    "thoughts": "**Processing strike details**\n\nI need to output JSON for the isStrike and strikeData based on the Italian page about a general strike on November 28, 2025. The content mentions a 24-hour strike by the USB union, affecting rail and bus services. It lists guaranteed service times from 05:30 to 08:30 and 16:30 to 19:30. Since this is an announcement for an upcoming strike, isStrike should be true. I'll extract the start and end dates in the proper format.",
+    "tokens": {
+      "input": 7706,
+      "output": 1393,
+      "total": 9099
+    }
+  }
+}

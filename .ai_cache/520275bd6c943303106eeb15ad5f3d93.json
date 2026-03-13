@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-09-22 00:00:00",
+      "endDate": "2025-09-22 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20568,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00035015,
+      "outputCost": 0.0006596,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00100975
+    },
+    "hash": "520275bd6c943303106eeb15ad5f3d93",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_generale_nazionale_lunedi_22_settembre_2025.html",
+    "thoughts": "**Determining strike dates and times**\n\nThe content suggests the strike might last for 23-24 hours, but the exact start and end times aren't specified. I need to fill in the startDate and endDate in the format 'yyyy-MM-dd HH:mm:ss'. If times aren't mentioned, I think setting them from 2025-09-22 00:00:00 to 2025-09-22 23:59:59 could work, but it’s safer to use those specific hours instead to better align with service guarantees. It seems to be the best approach!",
+    "tokens": {
+      "input": 7003,
+      "output": 1649,
+      "total": 8652
+    }
+  }
+}

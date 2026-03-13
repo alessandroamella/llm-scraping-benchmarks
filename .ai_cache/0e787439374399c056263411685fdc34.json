@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 14219,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003581,
+      "outputCost": 0.0007656,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0011237
+    },
+    "hash": "0e787439374399c056263411685fdc34",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_24_ore_del_13_dicembre_2024_aggiornamento.html",
+    "thoughts": "**Deciding on a strike announcement**\n\nI need to figure out if the document is announcing a new strike. The content is in Italian and clearly states there's a 24-hour strike on December 13, 2024. The date listed is December 12, 2024, and it mentions that the strike is confirmed for tomorrow, which indicates it's an upcoming event. So, I should set isStrike to true. However, I notice there's no specific start time mentioned, just that it starts tomorrow.",
+    "tokens": {
+      "input": 7162,
+      "output": 1914,
+      "total": 9076
+    }
+  }
+}

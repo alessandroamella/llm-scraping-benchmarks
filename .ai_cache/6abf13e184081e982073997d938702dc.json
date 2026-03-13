@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-05-11 00:00:00",
+      "endDate": "2025-05-11 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19477,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003598,
+      "outputCost": 0.0007564,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0011162
+    },
+    "hash": "6abf13e184081e982073997d938702dc",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_24h_domenica_11_maggio_2025.html",
+    "thoughts": "**Evaluating strike announcement details**\n\nI need to extract the relevant JSON for the strike announcement. The content clearly indicates that there’s a 24-hour strike scheduled for May 11, 2025, by the Linee Vesuviane, with specified guaranteed service times. It looks like this is a regional strike related to the Linee Vesuviane in Naples. I should confirm details like whether it's labeled as a national or regional strike, and ensure my output includes fields for isStrike and strikeData where applicable.",
+    "tokens": {
+      "input": 7196,
+      "output": 1891,
+      "total": 9087
+    }
+  }
+}

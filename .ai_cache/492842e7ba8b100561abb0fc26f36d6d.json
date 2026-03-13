@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6447,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003331,
+      "outputCost": 0.0001648,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0004979
+    },
+    "hash": "492842e7ba8b100561abb0fc26f36d6d",
+    "sourceFile": "metropolitana_sciopero_del_22_marzo_2025.html",
+    "thoughts": "**Finalizing JSON output**\n\nThe instruction is clear: if it’s a cancellation of a strike, I need to set `isStrike` to false. So I'll output `{\"isStrike\": false}` without any extra data, like `strikeData`, since it's just a simple task. The context of a 4-hour strike doesn't change the output; \"revocato\" means cancellation, confirming that I should ensure the format is strict. I’ll provide that JSON object without any additional text.",
+    "tokens": {
+      "input": 6662,
+      "output": 412,
+      "total": 7074
+    }
+  }
+}

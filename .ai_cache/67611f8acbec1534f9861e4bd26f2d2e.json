@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21642,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00034865,
+      "outputCost": 0.0006368,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00098545
+    },
+    "hash": "67611f8acbec1534f9861e4bd26f2d2e",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_generale_di_24h_per_venerdi_12_dicembre_2025.html",
+    "thoughts": "**Deciding on strike announcement**\n\nI need to determine if the document is announcing a new or upcoming strike. The title suggests it’s about a general strike for December 12, 2025. It states CGIL has proclaimed a national strike and provides details about guaranteed times and service windows. This does seem like an announcement for an upcoming strike, so I should set isStrike to true. I need to extract specific strike data and format the dates correctly.",
+    "tokens": {
+      "input": 6973,
+      "output": 1592,
+      "total": 8565
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19484,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00035685,
+      "outputCost": 0.001032,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00138885
+    },
+    "hash": "33abdf7e864443c8164f038369b10188",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_24h_domenica_11_maggio_2025.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to output JSON using the specified format for strike extraction. The content I have is in Italian and announces \"Linee Flegree: avviso di sciopero 24h domenica 11 maggio 2025,\" which is a 24-hour strike scheduled for May 11, 2025. It mentions that the strike is called by O.S. Or.S.A. for organizational issues. I need to confirm that `isStrike` should be true and add the appropriate `startDate` in the \"yyyy-MM-dd HH:mm:ss\" format.",
+    "tokens": {
+      "input": 7137,
+      "output": 2580,
+      "total": 9717
+    }
+  }
+}

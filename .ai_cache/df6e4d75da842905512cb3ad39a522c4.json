@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-28 08:20:00",
+      "endDate": "2025-01-28 12:20:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 17687,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003581,
+      "outputCost": 0.0007284,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0010865
+    },
+    "hash": "df6e4d75da842905512cb3ad39a522c4",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_4_ore_martedi_28_gennaio_2025.html",
+    "thoughts": "**Analyzing service guarantees**\n\nI’m checking the text about the Napoli-Benevento line, which mentions that service is guaranteed. However, it seems the instruction states that \"guaranteedTimes\" should be an array of 'HH:mm-HH:mm', which isn’t clearly provided. It looks like there’s a specific mention of the strike duration from 08:20 to 12:20, but without guaranteed times listed. So, if those times aren't specified, it seems we can omit the \"guaranteedTimes\" field altogether. The schema allows that, right?",
+    "tokens": {
+      "input": 7162,
+      "output": 1821,
+      "total": 8983
+    }
+  }
+}

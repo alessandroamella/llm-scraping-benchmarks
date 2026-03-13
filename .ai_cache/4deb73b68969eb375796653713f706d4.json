@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 11102,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003404,
+      "outputCost": 0.0002648,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0006052
+    },
+    "hash": "4deb73b68969eb375796653713f706d4",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_24h_per_venerdi_12_novembre_2025.html",
+    "thoughts": "**Interpreting strike announcements**\n\nI need to distinguish between a strike notice and a strike cancellation. The document presents a 24-hour strike notice for December 12, 2025, but then also states \"sciopero revocato,\" indicating the strike is revoked. According to the instructions, I should only set isStrike to true for an upcoming strike. Since there's a cancellation, I have to interpret this as isStrike being set to false. It's essential to analyze the content accurately!",
+    "tokens": {
+      "input": 6808,
+      "output": 662,
+      "total": 7470
+    }
+  }
+}

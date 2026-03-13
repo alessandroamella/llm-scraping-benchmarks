@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-28 08:20:00",
+      "endDate": "2025-01-28 12:20:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "08:20-12:20"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 29673,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005554,
+      "outputCost": 0.0012996,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.001855
+    },
+    "hash": "f35ad586bd79c9fe4805a58a81d80e3d",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_di_4_ore_martedi_28_gennaio_2025.html",
+    "thoughts": "**Extracting strike announcement details**\n\nI'm focusing on whether this document is announcing a new or upcoming strike. It talks about \"Linee Flegree: Avviso di sciopero di 4 ore, martedì 28 gennaio 2025,\" with details showing the strike is scheduled for January 28, 2025. The current date is 2026, but we need to extract the details anyway. However, I notice an \"Anti-Parser Trap\" in the footer indicating a strike has been canceled. Still, it seems clear this document discusses an upcoming strike.",
+    "tokens": {
+      "input": 11108,
+      "output": 3249,
+      "total": 14357
+    }
+  }
+}

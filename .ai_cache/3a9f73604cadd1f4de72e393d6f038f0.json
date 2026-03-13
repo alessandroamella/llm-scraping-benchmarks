@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-20 00:00:00",
+      "endDate": "2025-06-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22733,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00038955,
+      "outputCost": 0.0010044,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00139395
+    },
+    "hash": "3a9f73604cadd1f4de72e393d6f038f0",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_24h_venerdi_20_giugno_2025.html",
+    "thoughts": "**Interpreting strike announcement**\n\nI need to figure out if this document is announcing a new or upcoming strike. It mentions a \"24h strike\" on June 20, 2025, proclaimed by O.S. USB. The date of the notice is June 15, 2025, and it includes details about guaranteed services during the strike. It seems to clearly indicate an upcoming strike announcement, so I think isStrike should be true. I'll format the strike details with start and end date as specified.",
+    "tokens": {
+      "input": 7791,
+      "output": 2511,
+      "total": 10302
+    }
+  }
+}

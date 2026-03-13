@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 13378,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003598,
+      "outputCost": 0.0003764,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0007362
+    },
+    "hash": "3a251f0ed23404e9c03ebc4b2b1f4af1",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_24_h_lunedi_24_febbraio_2025.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to determine if this document is announcing a new or upcoming strike. The content refers to a 24-hour strike on February 24, 2025, with motivations and details like last guaranteed departure times. However, at the bottom, it mentions \"sciopero revocato\" (strike revoked) and \"sciopero sospeso differito\" (strike suspended indefinitely). So, I have to conclude it's not announcing a new strike, meaning I should set isStrike to false.",
+    "tokens": {
+      "input": 7196,
+      "output": 941,
+      "total": 8137
+    }
+  }
+}

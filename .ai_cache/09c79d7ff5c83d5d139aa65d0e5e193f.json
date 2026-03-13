@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-03-22 19:40:00",
+      "endDate": "2025-03-22 23:40:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 16898,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00034505,
+      "outputCost": 0.0008292,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00117425
+    },
+    "hash": "09c79d7ff5c83d5d139aa65d0e5e193f",
+    "sourceFile": "suburbane_sciopero_del_22_marzo_2025.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to evaluate whether the document is announcing a new or upcoming strike. The provided content mentions a \"4-hour strike on March 22, 2025,\" setting the time frame from 19:40 to 23:40. Since this date is in the future relative to March 17, 2025, it confirms that it is indeed an upcoming strike and not a cancellation. Therefore, I should set isStrike to true and format the start date correctly as \"2025-03-22 19:40:00.\"",
+    "tokens": {
+      "input": 6901,
+      "output": 2073,
+      "total": 8974
+    }
+  }
+}

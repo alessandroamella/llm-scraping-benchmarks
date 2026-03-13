@@ -1,0 +1,41 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-24 00:00:00",
+      "endDate": "2025-02-24 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:03-06:03",
+        "07:47-07:47",
+        "17:27-17:27",
+        "20:30-20:30",
+        "05:10-05:10",
+        "06:21-06:21",
+        "13:13-13:13",
+        "17:21-17:21"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 26196,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00053305,
+      "outputCost": 0.0011016,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00163465
+    },
+    "hash": "f1a19b064ef934e7fd2c930ec871ea3a",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_24h_lunedi_24_febbraio_2025.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to check the provided content to determine if it's a strike announcement. The messy HTML page shows \"Aviso di sciopero\" for 24 hours on Monday, February 24, 2025. It mentions actions proclaimed by O.S. USB, giving details about guaranteed service times. Given that it includes confirmed strike details, it signals an upcoming strike notification rather than a cancellation. So, I’ll confirm that isStrike is true for this situation.",
+    "tokens": {
+      "input": 10661,
+      "output": 2754,
+      "total": 13415
+    }
+  }
+}

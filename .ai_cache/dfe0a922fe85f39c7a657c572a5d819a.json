@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-03-22 19:40:00",
+      "endDate": "2025-03-22 23:40:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19090,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00034845,
+      "outputCost": 0.0007584,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00110685
+    },
+    "hash": "dfe0a922fe85f39c7a657c572a5d819a",
+    "sourceFile": "vesuviane_sciopero_del_22_marzo_2025.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to confirm if the document is announcing a new strike. It mentions “Linee Vesuviane – Avviso di sciopero di 4 ore del 22 marzo 2025,” making it clear there's a strike planned for March 22, 2025, from 19:40 to 23:40. So, I’ll set isStrike to true. I must also extract the start and end dates in 'yyyy-MM-dd HH:mm:ss' format. The start date will be 2025-03-22 19:40:00, while the end date will be 2025-03-22 23:40:00.",
+    "tokens": {
+      "input": 6969,
+      "output": 1896,
+      "total": 8865
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7620,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00036695,
+      "outputCost": 0.0001784,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00054535
+    },
+    "hash": "db636d2dc8b03740b7352a77bd72c86b",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_24_ore_venerdi_13_dicembre_2024.html",
+    "thoughts": "**Analyzing strike information**\n\nI need to create JSON for the strike extraction. The instruction is clear: I'm assessing whether the document is announcing a new or upcoming strike. The content mentions a 24-hour strike on December 13, 2024, but also includes terms \"sciopero revocato\" and \"sciopero sospeso differito,\" which indicate that the strike has been canceled or postponed. Therefore, this is not an upcoming strike. \n\nSo, I’ll set isStrike to false and output:\n{\n  \"isStrike\": false\n}",
+    "tokens": {
+      "input": 7339,
+      "output": 446,
+      "total": 7785
+    }
+  }
+}

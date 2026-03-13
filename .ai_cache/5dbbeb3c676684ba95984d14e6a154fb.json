@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 11210,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00034125,
+      "outputCost": 0.0003256,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00066685
+    },
+    "hash": "5dbbeb3c676684ba95984d14e6a154fb",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_generale_di_24h_per_venerdi_12_dicembre_2025.html",
+    "thoughts": "**Determining strike status**\n\nI need to figure out if this document is announcing a new strike or if it's about a cancellation. It's mentioning a strike scheduled for December 12, 2025, but it also includes \"sciopero revocato,\" which hints at a cancellation. So, if it's about a canceled strike, I should set isStrike to false. This makes me question: what is the nature of the document? I think it suggests both an announcement and a revocation.",
+    "tokens": {
+      "input": 6825,
+      "output": 814,
+      "total": 7639
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20141,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00054845,
+      "outputCost": 0.0008136,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00136205
+    },
+    "hash": "49ee7802e27d0cef10cfe19aa2d7f956",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_24_ore_di_venerdi_28_novembre_2025.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to confirm if the document is announcing an upcoming strike. It’s an HTML page from EAV regarding \"Linee suburbane: Avviso di sciopero di 24 ore di venerdì 28 novembre 2025.\" The message indicates that USB has declared a 24-hour national strike for that date. It provides guaranteed service windows and conditions during the strike. So, it's clear this is announcing an upcoming strike, and I should mark `isStrike` as true and extract the relevant strike data.",
+    "tokens": {
+      "input": 10969,
+      "output": 2034,
+      "total": 13003
+    }
+  }
+}

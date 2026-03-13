@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9256,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00035005,
+      "outputCost": 0.0002176,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00056765
+    },
+    "hash": "b39cab51b2022a419c62525f89f1799b",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_di_24_ore_venerdi_13_dicembre_2024_aggiornamento.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to determine if this document is announcing a new or upcoming strike based on the content in Italian. It discusses a 24-hour strike on December 13, 2024, but then mentions \"sciopero revocato,\" indicating that the strike has been revoked. So, according to the instructions, since the document includes this revocation, I should set the \"isStrike\" value to false. Overall, it seems this document does not announce an active strike.",
+    "tokens": {
+      "input": 7001,
+      "output": 544,
+      "total": 7545
+    }
+  }
+}

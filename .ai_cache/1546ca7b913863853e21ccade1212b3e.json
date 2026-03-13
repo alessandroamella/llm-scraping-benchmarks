@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-28 08:20:00",
+      "endDate": "2025-01-28 12:20:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "08:20-12:20"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18186,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00057905,
+      "outputCost": 0.0006992,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00127825
+    },
+    "hash": "1546ca7b913863853e21ccade1212b3e",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_4_ore_martedi_28_gennaio_2025.html",
+    "thoughts": "**Extracting strike data**\n\nI need to output JSON in the required `strike_extraction` format based on an Italian page. The title indicates a 4-hour strike notice on January 28, 2025, from 08:20 to 12:20. This confirms that `isStrike` should indeed be true. \n\nI'll extract `strikeData` with the appropriate start and end dates in the specified format, and set `locationType` to \"REGIONAL\" because it's related to the Vesuvian lines in the Naples area, specifically Campania. The region code for Campania is 15, so I'll include that as well.",
+    "tokens": {
+      "input": 11581,
+      "output": 1748,
+      "total": 13329
+    }
+  }
+}

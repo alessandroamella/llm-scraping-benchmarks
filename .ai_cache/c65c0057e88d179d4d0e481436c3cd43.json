@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-03 00:00:00",
+      "endDate": "2025-10-03 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18472,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005249,
+      "outputCost": 0.000646,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0011709
+    },
+    "hash": "c65c0057e88d179d4d0e481436c3cd43",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_generale_nazionale_di_24_ore_venerdi_03_ottobre_2025.html",
+    "thoughts": "**Extracting strike data**\n\nI need to format the strike data correctly. The start date should be in 'yyyy-MM-dd HH:mm:ss' format. The strike is set for 24 hours on October 3, 2025, starting at 00:00 and ending at 23:59:59. The mentioned times might be service guarantees, but they don't affect the overall strike duration. Based on the context, I’ll set the start date to 2025-10-03 00:00:00 and end date to 2025-10-03 23:59:59. Plus, I need to determine if the location type should be REGIONAL or NATIONAL.",
+    "tokens": {
+      "input": 10498,
+      "output": 1615,
+      "total": 12113
+    }
+  }
+}

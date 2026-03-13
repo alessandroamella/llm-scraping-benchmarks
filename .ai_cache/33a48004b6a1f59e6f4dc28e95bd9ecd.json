@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-03 00:00:00",
+      "endDate": "2025-10-03 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 16973,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00052115,
+      "outputCost": 0.0006612,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00118235
+    },
+    "hash": "33a48004b6a1f59e6f4dc28e95bd9ecd",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_generale_nazionale_di_24_ore_venerdi_03_ottobre_2025.html",
+    "thoughts": "**Determining strike announcement details**\n\nI need to produce a JSON document based on a schema, deciding if it announces a new or upcoming strike. The content is in Italian and mentions a national strike for 24 hours on October 3, 2025. It references reports from the press about this strike being declared by specific unions. The date is noted as October 2, 2025. I need to clarify the start and end times, as it specifies 24 hours and includes guaranteed times.",
+    "tokens": {
+      "input": 10423,
+      "output": 1653,
+      "total": 12076
+    }
+  }
+}

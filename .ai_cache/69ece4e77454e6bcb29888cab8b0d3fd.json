@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-05-11 00:00:00",
+      "endDate": "2025-05-11 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22502,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00034895,
+      "outputCost": 0.0009368,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00128575
+    },
+    "hash": "69ece4e77454e6bcb29888cab8b0d3fd",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_24h_domenica_11_maggio_2025.html",
+    "thoughts": "**Determining strike dates and times**\n\nI should format the date and time according to \"yyyy-MM-dd HH:mm:ss.\" The content mentions a strike called for May 11, 2025, with timing details that confirm when service is guaranteed. Given that it's a 24-hour strike, I'll set the start date to 2025-05-11 00:00:00 and end it at 2025-05-11 23:59:59. I also need to ensure I'm correctly addressing exact times in this ISO format.",
+    "tokens": {
+      "input": 6979,
+      "output": 2342,
+      "total": 9321
+    }
+  }
+}

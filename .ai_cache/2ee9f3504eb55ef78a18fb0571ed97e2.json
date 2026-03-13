@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-05-11 00:00:00",
+      "endDate": "2025-05-11 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19533,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000546,
+      "outputCost": 0.0008172,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0013632
+    },
+    "hash": "2ee9f3504eb55ef78a18fb0571ed97e2",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_24h_domenica_11_maggio_2025.html",
+    "thoughts": "**Analyzing strike details**\n\nI’m looking at the strike schedule which guarantees service from 05:30 to 08:30 and again from 16:30 to 19:30. I need to confirm it's a 24-hour strike for the Vesuvian lines and others. It's important to clarify that it's not a cancellation or real-time update, just a notice. I should ensure the times refer specifically to the Campania region, while formatting dates properly. Finally, I’m preparing a JSON with the relevant strike data.",
+    "tokens": {
+      "input": 10920,
+      "output": 2043,
+      "total": 12963
+    }
+  }
+}

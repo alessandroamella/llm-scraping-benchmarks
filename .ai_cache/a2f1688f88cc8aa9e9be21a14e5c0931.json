@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-07-23 09:00:00",
+      "endDate": "2025-07-23 11:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "09:00-11:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 14536,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00052055,
+      "outputCost": 0.0006108,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00113135
+    },
+    "hash": "a2f1688f88cc8aa9e9be21a14e5c0931",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_di_2_ore_mercoledi_23_luglio_2025.html",
+    "thoughts": "**Processing strike notification**\n\nI need to format this as JSON according to the strike extraction schema. The document in question is Italian and announces a 2-hour strike on Wednesday, July 23, 2025, from 09:00 to 11:00, called by the Faisa Confail for EAV S.r.l. That's definitely an upcoming strike, so I’ll set isStrike to true. It’s important to clarify that EAV refers to Ente Autonomo Volturno in Campania. This document clearly communicates the scheduled strike.",
+    "tokens": {
+      "input": 10411,
+      "output": 1527,
+      "total": 11938
+    }
+  }
+}

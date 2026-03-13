@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-10 19:32:00",
+      "endDate": "2025-01-10 23:32:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20391,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003493,
+      "outputCost": 0.0007232,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0010725
+    },
+    "hash": "d120596769b2ba06ef3073986e6eb5f4",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_4_ore_10_gennaio_2025.html",
+    "thoughts": "**Formatting details for location data**\n\nI’m starting with the date format, which looks correct. For the end date, I’ve got it set too. Now, the location type seems to be straightforward; since it’s NATIONAL, I’ll keep it that way. \n\nAs for location codes, they should be null since it's national, adhering to the JSON structure. Finally, I noticed the guaranteed times are mentioned, but I’ll dig into that more. It looks like there's some specific wording about departures that needs careful attention.",
+    "tokens": {
+      "input": 6986,
+      "output": 1808,
+      "total": 8794
+    }
+  }
+}

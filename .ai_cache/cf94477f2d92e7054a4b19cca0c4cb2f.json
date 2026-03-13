@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 29951,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00057695,
+      "outputCost": 0.0011256,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00170255
+    },
+    "hash": "cf94477f2d92e7054a4b19cca0c4cb2f",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_24_h_venerdi_12_dicembre_2025.html",
+    "thoughts": "**Determining strike details**\n\nI need to check if this content is about an upcoming strike announcement. The page titled \"Linee Vesuviane\" mentions a 24-hour strike on December 12, 2025, declared by the CGIL union. So, it qualifies as an upcoming national strike, and I can set isStrike to true. Now, I need to extract the specific details according to the schema, including start and end dates and related fields, noting that it's a 24-hour strike.",
+    "tokens": {
+      "input": 11539,
+      "output": 2814,
+      "total": 14353
+    }
+  }
+}

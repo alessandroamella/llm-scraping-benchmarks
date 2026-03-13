@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-10 19:32:00",
+      "endDate": "2025-01-10 23:32:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "19:32-23:32"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18513,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003454,
+      "outputCost": 0.0005592,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0009046
+    },
+    "hash": "a2020f6e0054ef5347f7ed9cc02cc4ae",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_di_4_ore_giorno_10_gennaio_2025.html",
+    "thoughts": "**Structuring strike data**\n\nI need to set the strike data with a start date and end date. For the strike on January 10, 2025, the startDate should be \"2025-01-10 19:32:00\" and the endDate \"2025-01-10 23:32:00\". Since it's a national strike, the locationType will be \"NATIONAL\" and locationCodes should be null.\n\nNext, \"guaranteedTimes\" will involve an array detailing the times of guaranteed services before the strike, as per the article's mention of the last departures.",
+    "tokens": {
+      "input": 6908,
+      "output": 1398,
+      "total": 8306
+    }
+  }
+}

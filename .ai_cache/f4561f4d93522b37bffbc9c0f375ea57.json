@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 16494,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003424,
+      "outputCost": 0.0006832,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0010256
+    },
+    "hash": "f4561f4d93522b37bffbc9c0f375ea57",
+    "sourceFile": "eav_autolinee_avviso_di_sciopero_di_24_ore_venerdi_13_dicembre_2024.html",
+    "thoughts": "**Extracting strike details**\n\nI’m working on outputting a JSON based on the extraction from the Italian content about a strike announcement. It indicates a 24-hour general strike on December 13, 2024, with specified guaranteed times. This situation confirms that `isStrike` should be true. The `strikeData` will include a national designation. The location type might be null or labeled “NATIONAL” since the announcement specifies it as a “Sciopero Generale nazionale.” I need to make sure all date formats are correct as well.",
+    "tokens": {
+      "input": 6848,
+      "output": 1708,
+      "total": 8556
+    }
+  }
+}

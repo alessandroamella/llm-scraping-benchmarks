@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 05:30:00",
+      "endDate": "2025-12-12 19:30:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21089,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00059915,
+      "outputCost": 0.0010148,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00161395
+    },
+    "hash": "72b6e099a69cc40edc6bf6667443e43b",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_generale_nazionale_di_venerdi_12_dicembre_2025.html",
+    "thoughts": "**Identifying strike announcement**\n\nI need to determine if the document is announcing a new strike. The content is in Italian and mentions \"Linee Flegree: Avviso di sciopero generale nazionale di venerdì 12 dicembre 2025.\" It includes the CGIL proclamation for a strike on that date. The details suggest this is an upcoming national strike, marked by the date \"Data: 7 December 2025.\" The strike timing is specified as starting and ending at certain hours. So, I conclude that isStrike should be true.",
+    "tokens": {
+      "input": 11983,
+      "output": 2537,
+      "total": 14520
+    }
+  }
+}

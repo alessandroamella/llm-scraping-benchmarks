@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-20 00:00:00",
+      "endDate": "2025-06-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24706,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00034975,
+      "outputCost": 0.0007612,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00111095
+    },
+    "hash": "bbe0455e0c2b4170036cd0d5c44f831d",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_24h_venerdi_20_giugno_2025.html",
+    "thoughts": "**Clarifying strike parameters**\n\nI'm trying to establish the parameters for a national strike event. The end date can be set to June 20, 2025, at 23:59:59, which aligns with a 24-hour strike starting at 00:00 on that day. I also need to determine if the location type should be NATIONAL or REGIONAL. Since it's national, I should set locationType to \"NATIONAL,\" and the locationCodes should be omitted or set to null, following the example given.",
+    "tokens": {
+      "input": 6995,
+      "output": 1903,
+      "total": 8898
+    }
+  }
+}

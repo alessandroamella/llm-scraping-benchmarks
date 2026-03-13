@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-20 00:00:00",
+      "endDate": "2025-06-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20136,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005473,
+      "outputCost": 0.0008496,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0013969
+    },
+    "hash": "afb757ccc661c979e8f776c63f9aaff3",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_24_h_venerdi_20_giugno_2025.html",
+    "thoughts": "**Extracting strike announcement details**\n\nI need to output JSON based on the schema \"strike_extraction.\" The document appears to be an upcoming strike announcement. It states in Italian that there will be a 24-hour strike on Friday, June 20, 2025, organized by O.S. USB. It gives specific service times, indicating some services will be guaranteed. The posted date is also mentioned as June 15, 2025, confirming it's indeed an announcement for the upcoming strike.",
+    "tokens": {
+      "input": 10946,
+      "output": 2124,
+      "total": 13070
+    }
+  }
+}

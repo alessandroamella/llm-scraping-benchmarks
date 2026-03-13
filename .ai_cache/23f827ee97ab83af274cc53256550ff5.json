@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9159,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00033205,
+      "outputCost": 0.0002736,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00060565
+    },
+    "hash": "23f827ee97ab83af274cc53256550ff5",
+    "sourceFile": "linee_automobilistiche_avviso_di_sciopero_generale_di_24h_per_venerdi_12_dicembre_2025.html",
+    "thoughts": "**Understanding strike notification**\n\nI'm processing an instruction about strike classifications. If there's a cancellation or information about a past strike, I need to set `isStrike` to false. The document I reviewed is about a notice for a strike on December 12, 2025, but it mentions \"sciopero revocato,\" indicating it's been revoked. So, it's not an announcement for an upcoming strike, which means `isStrike` should be false. Hence, I will output `{\"isStrike\": false}`.",
+    "tokens": {
+      "input": 6641,
+      "output": 684,
+      "total": 7325
+    }
+  }
+}

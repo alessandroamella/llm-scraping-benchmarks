@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-01-19 00:00:00",
+      "endDate": "2026-01-19 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18450,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00036505,
+      "outputCost": 0.0006044,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00096945
+    },
+    "hash": "926bc3212e49c3e71de61738759ccfe1",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_aziendale_di_24_h_lunedi_19_gennaio_2026.html",
+    "thoughts": "**Assessing strike announcement**\n\nI need to figure out if the document is announcing a new strike. It mentions a strike by \"O.S. CONFAIL\" for 24 hours on January 19, 2026. The details confirm that this is an upcoming strike, and I’ll mark isStrike as true. \n\nI'll extract the dates for the strike, which requires the start and end dates in 'yyyy-MM-dd HH:mm:ss' format. The date given is January 19, 2026, and there's a reference date of January 13, 2026.",
+    "tokens": {
+      "input": 7301,
+      "output": 1511,
+      "total": 8812
+    }
+  }
+}

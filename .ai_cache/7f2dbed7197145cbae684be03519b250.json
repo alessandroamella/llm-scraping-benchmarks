@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-03 00:00:00",
+      "endDate": "2025-10-03 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18899,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00057955,
+      "outputCost": 0.0007904,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00136995
+    },
+    "hash": "7f2dbed7197145cbae684be03519b250",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_generale_nazionale_di_24_ore_venerdi_03_ottobre_2025.html",
+    "thoughts": "**Extracting strike details**\n\nI need to confirm if this document is announcing a new or upcoming strike, and it appears to be in Italian. The text states it's about a 24-hour national strike on October 3, 2025, proclaimed by unions. It also specifies guaranteed service times. Given that it's confirmed for October 3, 2025, I can set isStrike to true. Now, I'll need to extract the start date of the strike, which is clearly indicated.",
+    "tokens": {
+      "input": 11591,
+      "output": 1976,
+      "total": 13567
+    }
+  }
+}

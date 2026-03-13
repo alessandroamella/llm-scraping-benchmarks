@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-24 00:00:00",
+      "endDate": "2025-02-24 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 15061,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00051135,
+      "outputCost": 0.0007152,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00122655
+    },
+    "hash": "0f3811ff4c70f0d81d382d9db3369d26",
+    "sourceFile": "eav_autolinee_avviso_di_sciopero_di_24_ore_lunedi_24_febbraio_2025.html",
+    "thoughts": "**Extracting strike information**\n\nI need to figure out if the provided HTML content indicates a new or upcoming strike. The conditions are clear: if there's info about cancellation or participation, I set isStrike to false. However, since this document clearly announces a 24-hour strike on February 24, 2025, I’ll set isStrike to true. The JSON output will include details like startDate, endDate, locationType, locationCodes, and guaranteedTimes, which are provided in the content.",
+    "tokens": {
+      "input": 10227,
+      "output": 1788,
+      "total": 12015
+    }
+  }
+}

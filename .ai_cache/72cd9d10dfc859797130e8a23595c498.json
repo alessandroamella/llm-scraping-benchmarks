@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5974,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00035625,
+      "outputCost": 0.0001928,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00054905
+    },
+    "hash": "72cd9d10dfc859797130e8a23595c498",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_24_h_venerdi_12_dicembre_2025.html",
+    "thoughts": "**Determining strike status**\n\nI need to set the `isStrike` value to false, as it clearly indicates that there's no active strike. The example output shows I should return just the minimal information: `{\"isStrike\": false}`. It's important not to add any extra commentary or nuance. Since the announcement indicates a revoked strike, I'll make sure to keep my output to the required JSON format without anything additional. This way, I clarify the situation accurately!",
+    "tokens": {
+      "input": 7125,
+      "output": 482,
+      "total": 7607
+    }
+  }
+}

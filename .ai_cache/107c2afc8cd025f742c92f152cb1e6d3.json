@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8798,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003638,
+      "outputCost": 0.0003252,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.000689
+    },
+    "hash": "107c2afc8cd025f742c92f152cb1e6d3",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_24h_venerdi_20_giugno_2025.html",
+    "thoughts": "**Determining strike status**\n\nI’m noting that there's a mention of revocation at the bottom of the notice, which might imply it’s not a new strike but rather a cancellation. The instructions say that if it’s a revocation of a strike, I should set \"isStrike\" to false. The phrase \"sciopero revocato\" indicates this cancellation, so I’ll output: {\"isStrike\": false}. I won’t include any extra explanations since that’s not needed here.",
+    "tokens": {
+      "input": 7276,
+      "output": 813,
+      "total": 8089
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7469,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003288,
+      "outputCost": 0.0002096,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0005384
+    },
+    "hash": "f520fbcc90720727d0f3383f10a8f4c2",
+    "sourceFile": "eav_autolinee_avviso_di_sciopero_di_24_ore_lunedi_24_febbraio_2025.html",
+    "thoughts": "**Deciding on strike extraction**\n\nI need to output JSON based on the strike extraction format. It looks like the document is announcing a 24-hour strike on February 24, 2025. The USB union is involved, and there are specific service times mentioned. However, it also says \"sciopero revocato,\" meaning the strike has been canceled or postponed. So, even though it appears to announce a strike, the presence of \"revoked\" indicates that it won't happen. I’ll make sure to reflect this in the output.",
+    "tokens": {
+      "input": 6576,
+      "output": 524,
+      "total": 7100
+    }
+  }
+}

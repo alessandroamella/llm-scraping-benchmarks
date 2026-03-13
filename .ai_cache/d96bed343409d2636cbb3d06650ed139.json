@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 15714,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00060235,
+      "outputCost": 0.0007968,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00139915
+    },
+    "hash": "d96bed343409d2636cbb3d06650ed139",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_24_ore_venerdi_13_dicembre_2024.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to output JSON in the strike_extraction format according to the spec. The article titled \"Linee Vesuviane: Avviso di sciopero di 24 ore venerdì 13 dicembre 2024\" announces a 24-hour strike occurring on December 13, 2024, by OS USB. It mentions the reasons for the strike and lists guaranteed service hours. The task is to determine if this is a new and upcoming strike announcement, which it appears to be, while dismissing any cancellation or past strike participation.",
+    "tokens": {
+      "input": 12047,
+      "output": 1992,
+      "total": 14039
+    }
+  }
+}

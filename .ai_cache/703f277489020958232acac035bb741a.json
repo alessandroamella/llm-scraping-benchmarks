@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7066,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00036565,
+      "outputCost": 0.000178,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00054365
+    },
+    "hash": "703f277489020958232acac035bb741a",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_generale_nazionale_di_venerdi_12_dicembre_2025.html",
+    "thoughts": "**Determining strike status**\n\nI need to output JSON based on strike extraction. The document's content is in Italian and discusses a strike on December 12, 2025. However, there are indications that the strike has been revoked or suspended, as shown by phrases like \"sciopero revocato.\" This clearly suggests that I should set isStrike to false. The only output I need is the JSON object: {\"isStrike\": false}, formatted correctly, without any additional data or details.",
+    "tokens": {
+      "input": 7313,
+      "output": 445,
+      "total": 7758
+    }
+  }
+}

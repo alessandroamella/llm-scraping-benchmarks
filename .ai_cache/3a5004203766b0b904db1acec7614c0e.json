@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-05-11 00:00:00",
+      "endDate": "2025-05-11 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 28194,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000543,
+      "outputCost": 0.0012464,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0017894
+    },
+    "hash": "3a5004203766b0b904db1acec7614c0e",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_24h_domenica_11_maggio_2025.html",
+    "thoughts": "**Deciding strike times**\n\nI think the strike start time is set for 2025-05-11 05:30:00, but I need to be cautious. The \"guaranteedTimes\" refers to when service is assured. The \"startDate\" for the strike should likely begin at 2025-05-11 00:00:00 to cover the whole day. The example had a \"startDate\" and \"endDate,\" so I wonder if I should format it as \"2025-05-11 00:00:00\" and \"2025-05-11 23:59:59\" for clarity. It seems important to reflect the entire duration.",
+    "tokens": {
+      "input": 10860,
+      "output": 3116,
+      "total": 13976
+    }
+  }
+}

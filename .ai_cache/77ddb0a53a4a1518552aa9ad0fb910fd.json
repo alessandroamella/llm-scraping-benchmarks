@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-05-11 00:00:00",
+      "endDate": "2025-05-11 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20334,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005379,
+      "outputCost": 0.0010496,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0015875
+    },
+    "hash": "77ddb0a53a4a1518552aa9ad0fb910fd",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_24h_domenica_11_maggio_2025.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to check if this document is announcing an upcoming strike. The HTML page seems to contain an article about a 24-hour strike set for May 11, 2025. It mentions the reasons for the strike regarding organizational issues and provides specifics about guaranteed service times. Since it states the date of the strike and outlines the reasons, it’s clearly an announcement of an upcoming strike. I'll need to extract the necessary strike data, confirming if isStrike is true.",
+    "tokens": {
+      "input": 10758,
+      "output": 2624,
+      "total": 13382
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24545,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00060885,
+      "outputCost": 0.0008632,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00147205
+    },
+    "hash": "bc3b1de295c6dec14975a071ed49551b",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_generale_nazionale_di_24_ore_di_venerdi_28_novembre_2025.html",
+    "thoughts": "**Considering date and location settings**\n\nI'm thinking about how to set the end date to November 28, 2025, at 23:59:59 to represent a full day. But there's potentially some ambiguity with how different places might interpret the date format. In Italy, it looks like the time would indeed be from 00:00 to 23:59 on that day. I'm deciding to set the start date accordingly. For the location type, \"NATIONAL\" seems appropriate, and I’ll leave location codes as null. Then, I’ll consider the guaranteed times mentioned in the text.",
+    "tokens": {
+      "input": 12177,
+      "output": 2158,
+      "total": 14335
+    }
+  }
+}

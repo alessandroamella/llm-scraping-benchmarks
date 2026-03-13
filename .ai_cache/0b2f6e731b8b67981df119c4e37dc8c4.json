@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9275,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00053375,
+      "outputCost": 0.0002868,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00082055
+    },
+    "hash": "0b2f6e731b8b67981df119c4e37dc8c4",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_24h_venerdi_28_novembre_2025.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to produce a JSON response according to the schema for strike extraction, which has an isStrike boolean and strikeData if applicable. The Italian page discusses a strike notice for November 28, 2025, implying an upcoming strike. However, it also mentions \"sciopero revocato\" or \"strike revoked\" at the bottom, suggesting a cancellation or postponement. So, I must determine if the document announces a new strike or if it’s announcing a cancellation, which would mean isStrike would be false.",
+    "tokens": {
+      "input": 10675,
+      "output": 717,
+      "total": 11392
+    }
+  }
+}

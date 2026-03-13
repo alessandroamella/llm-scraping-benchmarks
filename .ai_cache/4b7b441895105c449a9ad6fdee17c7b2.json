@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-10 19:32:00",
+      "endDate": "2025-01-10 23:32:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 16485,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005318,
+      "outputCost": 0.0007884,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0013202
+    },
+    "hash": "4b7b441895105c449a9ad6fdee17c7b2",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_di_4_ore10_gennaio_2025.html",
+    "thoughts": "**Extracting strike information**\n\nI need to parse the HTML content since the user wants to extract strike information. The announcement is in Italian, indicating a 4-hour national strike on January 10, 2025, from 19:32 to 23:32. It seems to address local public transport issues, which justifies the strike's announcement. Given these details, the isStrike variable should be true because it indeed refers to an upcoming strike.",
+    "tokens": {
+      "input": 10636,
+      "output": 1971,
+      "total": 12607
+    }
+  }
+}

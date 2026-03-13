@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-20 00:00:00",
+      "endDate": "2025-06-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19009,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00058975,
+      "outputCost": 0.000548,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00113775
+    },
+    "hash": "4b10b98e116d1cad83e75274af166ad0",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_24h_venerdi_20_giugno_2025.html",
+    "thoughts": "**Extracting strike details**\n\nI need to convert the document into JSON according to the strike extraction schema. The title indicates a notice for a strike on June 20, 2025, confirming it's announcing a new upcoming strike. Since the content includes details about a national 24-hour strike, I’ll set the `isStrike` key to true. I'll extract the start and end date as \"yyyy-MM-dd HH:mm:ss,\" and check for the start time from the guaranteed service hours mentioned in the content.",
+    "tokens": {
+      "input": 11795,
+      "output": 1370,
+      "total": 13165
+    }
+  }
+}

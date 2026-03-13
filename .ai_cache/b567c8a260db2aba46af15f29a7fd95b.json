@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-28 08:20:00",
+      "endDate": "2025-01-28 12:20:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 28119,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000345,
+      "outputCost": 0.0012576,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0016026
+    },
+    "hash": "b567c8a260db2aba46af15f29a7fd95b",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_di_4_ore_martedi_28_gennaio_2025.html",
+    "thoughts": "**Understanding strike announcements**\n\nI need to output a JSON format regarding strike extraction. The content is in Italian and indicates a four-hour strike scheduled for January 28, 2025. User instructions guide me to determine if this is an upcoming strike. Since it's announcing this future strike, I should set isStrike to true. I also have to note details like the date, time, and the reasons for the strike. The text confirms that services won’t be guaranteed during the strike time.",
+    "tokens": {
+      "input": 6900,
+      "output": 3144,
+      "total": 10044
+    }
+  }
+}

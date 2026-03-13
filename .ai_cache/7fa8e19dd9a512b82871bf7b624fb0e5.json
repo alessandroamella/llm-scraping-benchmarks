@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-09-22 00:00:00",
+      "endDate": "2025-09-22 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21763,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005879,
+      "outputCost": 0.0007944,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0013823
+    },
+    "hash": "7fa8e19dd9a512b82871bf7b624fb0e5",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_generale_nazionale_lunedi_22_settembre_2025.html",
+    "thoughts": "**Extracting strike data**\n\nI need to extract the strike data, focusing on the start and end dates. The page indicates a strike on September 22, 2025, with varying durations for different staff: 23 hours for traveling personnel and 24 hours for others. It mentions service guarantees during specific hours (5:30-8:30 and 16:30-19:30), which clarifies the timing. So, I’ll set the startDate to September 22, 2025, and capture the duration to finalize the endDate accordingly.",
+    "tokens": {
+      "input": 11758,
+      "output": 1986,
+      "total": 13744
+    }
+  }
+}

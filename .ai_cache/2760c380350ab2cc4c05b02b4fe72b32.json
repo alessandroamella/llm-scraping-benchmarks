@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-07-23 09:00:00",
+      "endDate": "2025-07-23 11:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24012,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00035345,
+      "outputCost": 0.0010916,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00144505
+    },
+    "hash": "2760c380350ab2cc4c05b02b4fe72b32",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_di_2_ore_mercoledi_23_luglio_2025.html",
+    "thoughts": "**Extracting strike data**\n\nI need to output JSON for a strike notice about \"Linea Metropolitana,\" announcing a 2-hour strike on July 23, 2025, specifically from 09:00 to 11:00. The details I have include the date of the notice (July 22, 2025) and the reasons for the strike. Since it's a clear strike announcement, I want to set isStrike to true. Now, I’ll format the start and end dates as “2025-07-23 09:00:00” and “2025-07-23 11:00:00.”",
+    "tokens": {
+      "input": 7069,
+      "output": 2729,
+      "total": 9798
+    }
+  }
+}

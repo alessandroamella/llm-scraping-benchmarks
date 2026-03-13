@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18454,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005496,
+      "outputCost": 0.0007356,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0012852
+    },
+    "hash": "a6c8b1c7fbd613be6582a2f680040452",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_di_24_ore_venerdi_13_dicembre_2024_aggiornamento.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to output JSON according to the schema based on the user's request regarding whether the document announces a new or upcoming strike. I'm looking at an Italian article titled \"Linea Metropolitana: Avviso di sciopero di 24 ore venerdì 13 dicembre 2024 - Aggiornamento,\" dated December 12, 2024. The article mentions that, due to a decision by the TAR del Lazio, the announced strike for December 13 is confirmed for 24 hours, making it clear that this is indeed an announcement for the upcoming strike.",
+    "tokens": {
+      "input": 10992,
+      "output": 1839,
+      "total": 12831
+    }
+  }
+}

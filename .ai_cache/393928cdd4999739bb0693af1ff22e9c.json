@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-07-23 09:00:00",
+      "endDate": "2025-07-23 11:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "09:00-11:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 15375,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00054575,
+      "outputCost": 0.0005252,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00107095
+    },
+    "hash": "393928cdd4999739bb0693af1ff22e9c",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_di_2_ore_mercoledi_23_luglio_2025.html",
+    "thoughts": "**Crafting JSON for strike data**\n\nI'm working on crafting a JSON structure for a strike event. The start date is July 23, 2025, at 09:00, ending the same day at 11:00. I'm confirming the format as \"YYYY-MM-DD HH:mm:ss,\" which is indeed correct. I need to ensure all the details are quoted accurately in the JSON format. It's good to double-check everything, especially for timelines, and I think I'm ready to produce the final structure!",
+    "tokens": {
+      "input": 10915,
+      "output": 1313,
+      "total": 12228
+    }
+  }
+}

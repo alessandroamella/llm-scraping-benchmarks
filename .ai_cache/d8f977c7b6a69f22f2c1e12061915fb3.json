@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-12 00:00:00",
+      "endDate": "2025-11-12 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24349,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005877,
+      "outputCost": 0.0010604,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0016481
+    },
+    "hash": "d8f977c7b6a69f22f2c1e12061915fb3",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_aziendale_di_24_h_di_mercoledi_12_11_2025.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI’m analyzing this document, which clearly announces an upcoming strike on 12 November 2025 for 24 hours on Vesuviane lines. The instructions guide me to determine if it’s announcing a new strike. Since it does, I need to set isStrike to true. I’ll extract the strike data, noting that the start date and end date are both 12 November 2025, based on the indication of \"24 h.\" Okay, I’m confirming that!",
+    "tokens": {
+      "input": 11754,
+      "output": 2651,
+      "total": 14405
+    }
+  }
+}

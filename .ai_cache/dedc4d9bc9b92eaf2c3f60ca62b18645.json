@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8317,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003379,
+      "outputCost": 0.0002756,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0006135
+    },
+    "hash": "dedc4d9bc9b92eaf2c3f60ca62b18645",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_di_4_ore_giorno_10_gennaio_2025.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to output JSON according to the strike extraction spec. The content mentions a planned strike on January 10, 2025, for 4 hours, announced by O.S. CONF.A.I.L. It includes details about the time and a declaration from January 5, 2025. However, there are also notes indicating that the strike has been revoked or suspended. Based on these details, I'll determine that this document is not announcing a new strike, so isStrike should be false.",
+    "tokens": {
+      "input": 6758,
+      "output": 689,
+      "total": 7447
+    }
+  }
+}

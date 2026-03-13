@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22171,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003741,
+      "outputCost": 0.0010076,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0013817
+    },
+    "hash": "3e56b314abc7bcacc3b2941d6cf2c54c",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_24_ore_del_13_dicembre_2024_aggiornamento.html",
+    "thoughts": "**Determining if a strike is upcoming**\n\nI'm assessing whether the document announces a new or upcoming strike. The content says \"Linee Vesuviane: 24-hour strike notice for December 13, 2024 - Update.\" It mentions that due to a court ruling, the strike for tomorrow, December 13, has been confirmed for 24 hours again. So, it looks like it's indeed an announcement about the upcoming strike. Therefore, I should conclude that the variable isStrike should be true.",
+    "tokens": {
+      "input": 7482,
+      "output": 2519,
+      "total": 10001
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 13280,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003428,
+      "outputCost": 0.000376,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0007188
+    },
+    "hash": "f551b6d5cd825ed6082c4f717a927bd1",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_24h_lunedi_24_febbraio_2025.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to determine if this document is announcing a new or upcoming strike. The content states \"Linea Metropolitana: Avviso di sciopero 24h lunedì 24 febbraio 2025,\" indicating a 24-hour strike on February 24, 2025. However, there are later mentions of \"sciopero revocato\" and \"sciopero sospeso differito,\" which suggest a strike revocation. According to the instructions, if this document actually announces a cancellation or revocation, then I should set isStrike to false.",
+    "tokens": {
+      "input": 6856,
+      "output": 940,
+      "total": 7796
+    }
+  }
+}

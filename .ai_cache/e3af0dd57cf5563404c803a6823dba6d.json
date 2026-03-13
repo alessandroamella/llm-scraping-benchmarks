@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-24 00:00:00",
+      "endDate": "2025-02-24 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 16931,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003689,
+      "outputCost": 0.0006484,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0010173
+    },
+    "hash": "e3af0dd57cf5563404c803a6823dba6d",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_24_h_lunedi_24_febbraio_2025.html",
+    "thoughts": "**Clarifying strike details**\n\nI'm figuring out the date and time formats for a 24-hour strike. It seems like to cover the whole day, I should set the `startDate` to 2025-02-24 00:00:00 and the `endDate` to 2025-02-24 23:59:59. The format requires 'yyyy-MM-dd HH:mm:ss', and it doesn't mention if it's inclusive, so I believe this is safe. I also need to consider the location type, which seems to indicate it's a national strike, but it's specific to the \"Linee Vesuviane\" region.",
+    "tokens": {
+      "input": 7378,
+      "output": 1621,
+      "total": 8999
+    }
+  }
+}

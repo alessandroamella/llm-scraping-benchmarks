@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-03 00:00:00",
+      "endDate": "2025-10-03 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 17785,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005448,
+      "outputCost": 0.0006516,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0011964
+    },
+    "hash": "112c26c3b9f46071422b86855895e5a2",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_generale_nazionale_di_24_ore_venerdi_03_ottobre_2025.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to determine if this content is related to an upcoming strike. It looks like it’s an official announcement titled \"Avviso di sciopero generale nazionale di 24 ore venerdì 03 ottobre 2025,\" which indicates a national strike on October 3, 2025. We’ll extract the necessary details from the document, so the `isStrike` field should be set to true since it confirms a future strike. Everything points to an upcoming event!",
+    "tokens": {
+      "input": 10896,
+      "output": 1629,
+      "total": 12525
+    }
+  }
+}

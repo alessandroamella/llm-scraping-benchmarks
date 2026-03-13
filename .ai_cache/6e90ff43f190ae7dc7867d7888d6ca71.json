@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8690,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00037275,
+      "outputCost": 0.0002128,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00058555
+    },
+    "hash": "6e90ff43f190ae7dc7867d7888d6ca71",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_24_h_venerdi_28_novembre_2025.html",
+    "thoughts": "**Determining strike status**\n\nI need to figure out if the document is announcing a new or upcoming strike. It mentions \"Avviso di sciopero di 24 h\" and lists the date. However, there's also the mention of \"sciopero revocato\" and \"sciopero sospeso differito,\" which suggests the strike is revoked or suspended. So, I’d conclude that this document is not announcing a new strike but rather indicating a cancellation or a suspension. I'll set isStrike to false accordingly.",
+    "tokens": {
+      "input": 7455,
+      "output": 532,
+      "total": 7987
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-09-22 00:00:00",
+      "endDate": "2025-09-23 00:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21021,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005364,
+      "outputCost": 0.0011512,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0016876
+    },
+    "hash": "25276b5570a3798be3359d7cfe568377",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_generale_nazionale_lunedi_22_settembre_2025.html",
+    "thoughts": "**Formatting strike data**\n\nI must follow the schema to output data for the strike. I'm filling in the `startDate` and `endDate` in the correct format, 'yyyy-MM-dd HH:mm:ss.' The article mentions details about service on September 22, 2025, highlighting that the strike spans 23 hours for travel personnel. \n\nWhile it seems there’s a guaranteed service window mentioned, I need to clarify if the strike lasts 23 or 24 hours. The exact start time isn't specified, but I have some service operational hours.",
+    "tokens": {
+      "input": 10728,
+      "output": 2878,
+      "total": 13606
+    }
+  }
+}

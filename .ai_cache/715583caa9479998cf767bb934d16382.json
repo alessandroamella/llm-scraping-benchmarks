@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 29501,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005248,
+      "outputCost": 0.0009948,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0015196
+    },
+    "hash": "715583caa9479998cf767bb934d16382",
+    "sourceFile": "eav_autolinee_avviso_di_sciopero_di_24_ore_venerdi_13_dicembre_2024.html",
+    "thoughts": "**Analyzing strike announcements**\n\nI'm noticing that the terms \"revocato\" and \"sospeso differito\" suggest the strike might have been revoked or suspended. The document states there’s a 24-hour strike on December 13, 2024. I should only set isStrike to true if it indicates an upcoming strike. If it mentions revocation, then isStrike should be false. The bottom explicitly states \"sciopero revocato,\" suggesting a cancellation. Still, the overall content hints at a strike announcement, which complicates things. I’m wondering if that \"sciopero revocato\" is part of a status update.",
+    "tokens": {
+      "input": 10496,
+      "output": 2487,
+      "total": 12983
+    }
+  }
+}

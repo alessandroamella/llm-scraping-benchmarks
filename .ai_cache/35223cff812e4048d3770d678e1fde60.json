@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-07-23 09:00:00",
+      "endDate": "2025-07-23 11:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18495,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005427,
+      "outputCost": 0.0008036,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0013463
+    },
+    "hash": "35223cff812e4048d3770d678e1fde60",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_2_ore_mercoledi_23_luglio_2025.html",
+    "thoughts": "**Extracting strike details**\n\nI need to check if this document is announcing an upcoming strike. The content appears to be Italian and mentions a \"Notice of 2-hour strike Wednesday 23 July 2025.\" It looks like it confirms a strike announcement by O.S. Faisa Confail for that date, specifically from 09:00 to 11:00. The page is dated \"22 Luglio 2025,\" so it’s set for the future. Therefore, I’ll mark isStrike as true and extract the required dates in the specified format.",
+    "tokens": {
+      "input": 10854,
+      "output": 2009,
+      "total": 12863
+    }
+  }
+}

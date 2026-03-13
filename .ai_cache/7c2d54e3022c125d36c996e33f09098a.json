@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 11871,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003478,
+      "outputCost": 0.000306,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0006538
+    },
+    "hash": "7c2d54e3022c125d36c996e33f09098a",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_2_ore_mercoledi_23_luglio_2025.html",
+    "thoughts": "**Analyzing strike announcement content**\n\nI need to match the content to the strike_extraction schema. The document is in Italian and mentions a two-hour strike scheduled for July 23, 2025. However, there also seem to be phrases indicating that the strike may have been canceled or postponed, like \"sciopero revocato.\" Based on this, it looks like I need to determine if the document is announcing a new strike or if it’s actually a cancellation. If it’s canceled, I'll mark isStrike as false.",
+    "tokens": {
+      "input": 6956,
+      "output": 765,
+      "total": 7721
+    }
+  }
+}

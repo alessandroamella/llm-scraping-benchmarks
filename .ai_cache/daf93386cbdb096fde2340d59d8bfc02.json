@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 27412,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00037625,
+      "outputCost": 0.000762,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00113825
+    },
+    "hash": "daf93386cbdb096fde2340d59d8bfc02",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_generale_nazionale_di_venerdi_12_dicembre_2025.html",
+    "thoughts": "**Determining strike dates**\n\nI need to establish a start date and end date for the strike. The content indicates the strike is for \"per venerdì 12 dicembre 2025\" and suggests a 24-hour duration. The guidelines mention guaranteed times and the sub-link confirms a 24-hour strike. So, I think setting the start for 2025-12-12 at midnight and the end for the same day at 23:59:59 makes sense. The examples provided show seconds included, so I'll apply that format too.",
+    "tokens": {
+      "input": 7525,
+      "output": 1905,
+      "total": 9430
+    }
+  }
+}

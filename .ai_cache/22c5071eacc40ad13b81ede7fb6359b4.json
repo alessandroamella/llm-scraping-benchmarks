@@ -1,0 +1,48 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-07-23 09:00:00",
+      "endDate": "2025-07-23 11:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "08:41-08:41",
+        "08:57-08:57",
+        "08:50-08:50",
+        "08:46-08:46",
+        "11:05-11:05",
+        "11:13-11:13",
+        "11:50-11:50",
+        "11:10-11:10",
+        "11:14-11:14",
+        "11:33-11:33",
+        "11:18-11:18",
+        "11:26-11:26"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 35544,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005712,
+      "outputCost": 0.0015392,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0021104
+    },
+    "hash": "22c5071eacc40ad13b81ede7fb6359b4",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_2_ore_mercoledi_23_luglio_2025.html",
+    "thoughts": "**Determining strike announcement**\n\nI’m checking if the content is a strike announcement since it's in Italian. The title \"Linee Vesuviane: Avviso di sciopero di 2 ore mercoledì 23 luglio 2025 - EAV srl\" translates to a notice about a two-hour strike on July 23, 2025. The content confirms the strike proclaimed by Faisa Confail, running from 9:00 to 11:00. Since this is indeed a strike announcement, I'll set isStrike to true!",
+    "tokens": {
+      "input": 11424,
+      "output": 3848,
+      "total": 15272
+    }
+  }
+}

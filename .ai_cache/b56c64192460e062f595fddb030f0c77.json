@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 27955,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005337,
+      "outputCost": 0.0009788,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0015125
+    },
+    "hash": "b56c64192460e062f595fddb030f0c77",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_generale_di_24h_per_venerdi_12_dicembre_2025.html",
+    "thoughts": "**Evaluating strike announcements**\n\nThe text I found is in the HTML, near the bottom, in a hidden cookie UI area, which makes it part of the extracted content. The instruction is clear: only set isStrike to true for upcoming strikes. I see the phrase regarding a general strike announcement for December 12, 2025. However, there's also a \"sciopero revocato\" tag, indicating revocation. I need to figure out if that revocation overshadows the announcement and which should take priority.",
+    "tokens": {
+      "input": 10674,
+      "output": 2447,
+      "total": 13121
+    }
+  }
+}

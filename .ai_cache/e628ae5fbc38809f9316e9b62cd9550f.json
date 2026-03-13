@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 11502,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003501,
+      "outputCost": 0.0002632,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0006133
+    },
+    "hash": "e628ae5fbc38809f9316e9b62cd9550f",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_24_ore_del_13_dicembre_2024_aggiornamento.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI'm looking at JSON output requirements with content in Italian. It seems to be a strike announcement for December 13, 2024, but there's conflicting information. It says the strike is planned for 24 hours, yet \"sciopero revocato\" suggests it's canceled or suspended. It also states the date as December 12, 2024. I need to decide if this document indicates a new strike or just updates about one that has been canceled, meaning `isStrike` should be false.",
+    "tokens": {
+      "input": 7002,
+      "output": 658,
+      "total": 7660
+    }
+  }
+}

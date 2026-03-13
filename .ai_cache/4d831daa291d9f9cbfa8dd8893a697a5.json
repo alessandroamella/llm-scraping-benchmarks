@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21708,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000342,
+      "outputCost": 0.000998,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00134
+    },
+    "hash": "4d831daa291d9f9cbfa8dd8893a697a5",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_24h_domenica_11_maggio_2025.html",
+    "thoughts": "**Clarifying location codes**\n\nThe document mentions \"Area: M1 - Piscinola-Giugliano-Aversa-Napoli,\" which indicates a specific urban area rather than a whole region. It falls under the REGIONAL category, and it seems like the location codes should be the 2-digit ISTAT codes for regions. \n\nSince this area isn't an entire region but part of a metro line, I'm considering that I might need to either use its corresponding ISTAT code or omit the locationCodes entirely if they don't fit.",
+    "tokens": {
+      "input": 6840,
+      "output": 2495,
+      "total": 9335
+    }
+  }
+}

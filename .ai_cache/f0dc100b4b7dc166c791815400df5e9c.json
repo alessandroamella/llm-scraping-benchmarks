@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 13533,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003571,
+      "outputCost": 0.0006048,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0009619
+    },
+    "hash": "f0dc100b4b7dc166c791815400df5e9c",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_di_4_ore_martedi_28_gennaio_2025.html",
+    "thoughts": "Based on the user's request, I need to provide a JSON output that includes extracted strike details. I'll focus on delivering just the JSON data without any extra text or commentary. Here's the crafted JSON:\n\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-01-28 08:20:00\",\n    \"endDate\": \"2025-01-28 12:20:00\",\n    \"locationType\": null,\n    \"locationCodes\": null,\n    \"guaranteedTimes\": [\"08:20-12:20\"]\n  }\n}\n\nNow, I’ll double-check that correct spacing and quotes are used.",
+    "tokens": {
+      "input": 7142,
+      "output": 1512,
+      "total": 8654
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-20 00:00:00",
+      "endDate": "2025-06-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 17223,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00054045,
+      "outputCost": 0.000736,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00127645
+    },
+    "hash": "7289a32f47630fe116c9aa7cdb698f0a",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_24h_venerdi_20_giugno_2025.html",
+    "thoughts": "**Parsing strike announcement**\n\nI need to check the content for a strike announcement. The title indicates it's about a 24-hour strike on June 20, 2025, with a source from EAV srl. The body mentions the Union's declaration for the strike for safety reasons and specifies service times. It implies that this is indeed an announcement for an upcoming 24-hour strike. So, I should set isStrike to true, and I’ll extract the strike start and end dates accordingly.",
+    "tokens": {
+      "input": 10809,
+      "output": 1840,
+      "total": 12649
+    }
+  }
+}

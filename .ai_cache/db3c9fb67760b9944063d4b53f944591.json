@@ -1,0 +1,49 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-13 08:30:00",
+      "endDate": "2025-10-13 12:30:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "08:05-08:05",
+        "08:10-08:10",
+        "08:26-08:26",
+        "08:14-08:14",
+        "08:18-08:18",
+        "08:44-08:44",
+        "12:53-12:53",
+        "13:34-13:34",
+        "13:02-13:02",
+        "12:33-12:33",
+        "13:14-13:14",
+        "12:30-12:30",
+        "12:45-12:45"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 30386,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005591,
+      "outputCost": 0.0015396,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0020987
+    },
+    "hash": "db3c9fb67760b9944063d4b53f944591",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_4_ore_del_13_ottobre_2025.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to determine if this content is a new strike announcement. The page title indicates a strike on October 13, 2025, from 08:30 to 12:30, affecting the personnel of the Linee Vesuviane. Since the details confirm it’s a scheduled strike, I should set `isStrike` to true and provide the `strikeData` with the start and end dates in the specified format. So, the startDate will be 2025-10-13 08:30:00.",
+    "tokens": {
+      "input": 11182,
+      "output": 3849,
+      "total": 15031
+    }
+  }
+}

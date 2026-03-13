@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-01-19 00:00:00",
+      "endDate": "2026-01-19 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18652,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005844,
+      "outputCost": 0.000728,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0013124
+    },
+    "hash": "54c586d88bd58b1962dbe28e8e60e8b5",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_aziendale_di_24_h_lunedi_19_gennaio_2026.html",
+    "thoughts": "**Extracting strike information**\n\nI need to determine if the document is announcing a new or upcoming strike. The content mentions a 24-hour company strike scheduled for January 19, 2026, specifically involving the Vesuviane lines. The organization behind it indicates there are issues with company organization. This announcement confirms that there is indeed an upcoming strike, so I’ll note that isStrike should be true. I’ll also extract the start and end dates in the required format.",
+    "tokens": {
+      "input": 11688,
+      "output": 1820,
+      "total": 13508
+    }
+  }
+}

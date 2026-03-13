@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 16321,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003708,
+      "outputCost": 0.0007592,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00113
+    },
+    "hash": "040bf75aa50e069135881e6ac47865df",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_di_24_ore_del_13_dicembre_2024_aggiornamento.html",
+    "thoughts": "**Deciding on strike announcement**\n\nI need to determine if the document is announcing a new strike. The content indicates a 24-hour strike on December 13, 2024, due to an update regarding the acceptance of a request. It confirms that it’s an announcement of the upcoming strike. So, I should set isStrike to true. Now, I have to fill in the strikeData with the start and end dates formatted as 'yyyy-MM-dd HH:mm:ss'.",
+    "tokens": {
+      "input": 7416,
+      "output": 1898,
+      "total": 9314
+    }
+  }
+}

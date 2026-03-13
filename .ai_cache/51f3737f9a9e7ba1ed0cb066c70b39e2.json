@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 10394,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00035765,
+      "outputCost": 0.0002908,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00064845
+    },
+    "hash": "51f3737f9a9e7ba1ed0cb066c70b39e2",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_aziendale_di_24_h_lunedi_19_gennaio_2026.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to output the information in JSON format according to the strike_extraction guidelines. The document indicates a planned 24-hour strike by O.S. CONFAIL affecting Vesuvian lines on January 19, 2026. However, while it initially appears to be an announcement, the bottom of the document reveals that the strike is \"revoked\" and \"suspended.\" This means it's not announcing a new strike but rather canceling one. So, I should set isStrike to false.",
+    "tokens": {
+      "input": 7153,
+      "output": 727,
+      "total": 7880
+    }
+  }
+}

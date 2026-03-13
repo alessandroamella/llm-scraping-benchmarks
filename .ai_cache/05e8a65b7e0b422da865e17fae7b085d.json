@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-03-22 19:40:00",
+      "endDate": "2025-03-22 23:40:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 16685,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003381,
+      "outputCost": 0.0007568,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0010949
+    },
+    "hash": "05e8a65b7e0b422da865e17fae7b085d",
+    "sourceFile": "autolinee_sciopero_del_22_marzo_2025.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to determine if the content is about an upcoming strike. The Italian text states there's a four-hour strike announced for March 22, 2025, from 19:40 to 23:40 due to organizational issues. It clarifies that services won’t be guaranteed during that time. Since this is a future proclamation announced on March 17, it seems clear that this is indeed an upcoming strike. So, I should set isStrike to true based on this information.",
+    "tokens": {
+      "input": 6762,
+      "output": 1892,
+      "total": 8654
+    }
+  }
+}

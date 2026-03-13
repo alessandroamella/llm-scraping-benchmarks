@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18436,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003392,
+      "outputCost": 0.0006756,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0010148
+    },
+    "hash": "a1b754fdc6ba27520b87c3aa9d0ec8af",
+    "sourceFile": "linee_automobilistiche_avviso_di_sciopero_generale_di_24h_per_venerdi_12_dicembre_2025.html",
+    "thoughts": "**Considering date formats and requirements**\n\nI need to format the dates as 'yyyy-MM-dd HH:mm:ss'. For the end date, it should be \"2025-12-12 23:59:59\" to capture the whole day because there's no \"24:00:00\" in the format. I'll also ensure to include the guaranteed times like \"05:30-08:30\" and \"16:30-19:30\" into an array. The output should be structured as JSON with isStrike set to true for the strike announcement. Lastly, I note that the input is Italian, not Spanish.",
+    "tokens": {
+      "input": 6784,
+      "output": 1689,
+      "total": 8473
+    }
+  }
+}

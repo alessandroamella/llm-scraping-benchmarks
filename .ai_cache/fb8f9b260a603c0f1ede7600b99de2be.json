@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18246,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00052785,
+      "outputCost": 0.000732,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00125985
+    },
+    "hash": "fb8f9b260a603c0f1ede7600b99de2be",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_di_4_ore_del_13_dicembre_2024.html",
+    "thoughts": "**Clarifying strike details**\n\nThis is a national strike reduced from 24 hours to 4 hours, meaning it's on a national level. The instructions say that if it's national, locationCodes should be omitted since the locationType must be set to \"NATIONAL.\" The document supports only \"REGIONAL\" or \"NATIONAL,\" so I need to confirm that the locationType is correctly set to \"NATIONAL\" with locationCodes as null. The date format for start and end dates is 'yyyy-MM-dd HH:mm:ss,' with the specific date being 2024-12-13.",
+    "tokens": {
+      "input": 10557,
+      "output": 1830,
+      "total": 12387
+    }
+  }
+}

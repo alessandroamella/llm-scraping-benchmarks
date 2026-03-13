@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-20 00:00:00",
+      "endDate": "2025-06-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18557,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00037175,
+      "outputCost": 0.0006124,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00098415
+    },
+    "hash": "f76fc173bec7eaaefb1e99199ba3c0f4",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_24h_venerdi_20_giugno_2025.html",
+    "thoughts": "**Determining strike dates**\n\nI need to define the startDate and endDate for a 24-hour strike on June 20, 2025. The page mentions \"Linee Vesuviane: Avviso di Sciopero 24h venerdì 20 giugno 2025,\" indicating a national strike. Since it’s national, locationType should be set to NATIONAL, and locationCodes can be null. The actual startDate could be June 20 at midnight, with endDate potentially being June 20 at 23:59:59, but I’m not sure if I should consider June 21 as well.",
+    "tokens": {
+      "input": 7435,
+      "output": 1531,
+      "total": 8966
+    }
+  }
+}

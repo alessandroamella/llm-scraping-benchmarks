@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-10 19:32:00",
+      "endDate": "2025-01-10 23:32:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21984,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00055395,
+      "outputCost": 0.0008668,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00142075
+    },
+    "hash": "4e4112a690eaa51a7774a5b4f82c3d02",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_4_ore_venerdi_10_gennaio_2025.html",
+    "thoughts": "**Clarifying location codes and guaranteed times**\n\nI'm thinking about how to handle location codes. The instruction says to use a 2-digit ISTAT code for regions or set to null for national strikes. If we're dealing with a national strike, the location type should be \"NATIONAL,\" and location codes can be omitted. The input \"sciopero nazionale\" confirms this. \n\nFor \"guaranteedTimes,\" I need to provide last departure times before the strike in the \"HH:mm-HH:mm\" format using the list displayed on the page.",
+    "tokens": {
+      "input": 11079,
+      "output": 2167,
+      "total": 13246
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-20 00:00:00",
+      "endDate": "2025-06-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22422,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005258,
+      "outputCost": 0.0006348,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0011606
+    },
+    "hash": "3533951f615960b65c6d40f007335714",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_24h_giorno_venerdi_20_giugno_2025.html",
+    "thoughts": "**Clarifying strike timings**\n\nI'm figuring out the start and end times for a 24-hour strike on June 20, 2025. The \"startDate\" should be 2025-06-20 00:00:00 and the \"endDate\" 2025-06-20 23:59:59. The format must be \"yyyy-MM-dd HH:mm:ss\", and it seems like the end time is typically inclusive. For the location type, it should be \"NATIONAL,\" as it references a nation-wide strike without needing location codes.",
+    "tokens": {
+      "input": 10516,
+      "output": 1587,
+      "total": 12103
+    }
+  }
+}

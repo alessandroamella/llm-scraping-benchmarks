@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-03 00:00:00",
+      "endDate": "2025-10-03 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 17833,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00034125,
+      "outputCost": 0.0006708,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00101205
+    },
+    "hash": "4e9f13a83ba1469f21db2083c44dfc9e",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_generale_nazionale_di_24_ore_venerdi_03_ottobre_2025.html",
+    "thoughts": "**Parsing strike announcement details**\n\nI'm examining a content piece about the \"24-hour national strike\" set for October 3, 2025, declared by the unions CGIL and USB in response to the Gaza war. The notice mentions that services on rail and roads will be affected, but there are guaranteed service windows from 5:30 to 8:30 and 16:30 to 19:30. Since this is indeed an announcement for an upcoming strike, I can confirm that isStrike should be set to true.",
+    "tokens": {
+      "input": 6825,
+      "output": 1677,
+      "total": 8502
+    }
+  }
+}

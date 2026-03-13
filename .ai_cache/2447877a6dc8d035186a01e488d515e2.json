@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-03 00:00:00",
+      "endDate": "2025-10-03 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19483,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003683,
+      "outputCost": 0.0006296,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0009979
+    },
+    "hash": "2447877a6dc8d035186a01e488d515e2",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_generale_nazionale_di_24_ore_venerdi_03_ottobre_2025.html",
+    "thoughts": "**Determining strike announcement**\n\nI'm working on formatting JSON according to the schema. I see an announcement for a general strike on October 3, 2025. Since it's a 24-hour strike, I'll mark `isStrike` as true. Now, I need to figure out the `startDate` and `endDate`. They’ve mentioned it's for the whole day, so I guess I’ll have to specify the exact times in the format 'yyyy-MM-dd HH:mm:ss'. Hmm, I need to decide what hours to use for this 24-hour duration.",
+    "tokens": {
+      "input": 7366,
+      "output": 1574,
+      "total": 8940
+    }
+  }
+}

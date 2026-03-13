@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 13072,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00050615,
+      "outputCost": 0.0004108,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00091695
+    },
+    "hash": "349d501fd49e83f5b1af8d4f27fe7f64",
+    "sourceFile": "eav_informa_sciopero_di_4_ore_del_28_01_2025.html",
+    "thoughts": "**Evaluating strike status**\n\nI’m considering whether the strike status should be set to true or false based on different scenarios. If it’s a cancellation, revocation, or just informational, then isStrike should be false. It seems there’s an upcoming strike on January 28, 2025, but it's indicated as “revocato” or postponed. The instruction is to set isStrike to true only if it's an announcement of a new strike, not just updates on existing or canceled ones.",
+    "tokens": {
+      "input": 10123,
+      "output": 1027,
+      "total": 11150
+    }
+  }
+}

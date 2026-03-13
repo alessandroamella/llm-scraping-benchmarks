@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-07-23 09:00:00",
+      "endDate": "2025-07-23 11:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22185,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005243,
+      "outputCost": 0.000988,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0015123
+    },
+    "hash": "18262858a474e0e5060ceccd92786df5",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_di_2_ore_mercoledi_23_luglio_2025.html",
+    "thoughts": "**Extracting strike information**\n\nI need to output JSON based on the strike_extraction schema. The content is in Italian and announces a 2-hour strike on July 23, 2025, proclaimed by Faisa Confail. This means we set isStrike to true. I'll extract the strikeData with startDate and endDate, which is from 09:00 to 11:00 local time. So, I'll format these as 'yyyy-MM-dd HH:mm:ss': the startDate will be 2025-07-23 09:00:00, and the endDate will be 2025-07-23 11:00:00.",
+    "tokens": {
+      "input": 10486,
+      "output": 2470,
+      "total": 12956
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-10 19:32:00",
+      "endDate": "2025-01-10 23:32:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "19:32-23:32"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20872,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000536,
+      "outputCost": 0.0008208,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0013568
+    },
+    "hash": "ef25373615473d5a74b16eb1c803746c",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_di_4_ore_giorno_10_gennaio_2025.html",
+    "thoughts": "**Extracting strike information**\n\nI need to output JSON based on the strike extraction. It seems the document is announcing an upcoming strike. It’s an HTML page from EAV srl titled “Linee Flegree: Avviso di sciopero di 4 ore, venerdì 10 gennaio 2025”. The document notes a 4-hour strike on January 10, 2025, from 19:32 to 23:32, as proclaimed by O.S. CONF.A.I.L. This indicates that isStrike should be true, and I need to extract the start and end dates with their respective times.",
+    "tokens": {
+      "input": 10720,
+      "output": 2052,
+      "total": 12772
+    }
+  }
+}

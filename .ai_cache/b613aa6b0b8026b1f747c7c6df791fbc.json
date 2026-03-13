@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-28 08:20:00",
+      "endDate": "2025-01-28 12:20:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "08:20-12:20"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 13968,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00037235,
+      "outputCost": 0.0003732,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00074555
+    },
+    "hash": "b613aa6b0b8026b1f747c7c6df791fbc",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_4_ore_martedi_28_gennaio_2025.html",
+    "thoughts": "**Determining strike announcement details**\n\nI need to confirm if the document is announcing a new strike. The text mentions \"Avviso di sciopero di 4 ore\" for January 28, 2025, with details about the duration and timing. So, this is indeed an announcement for an upcoming strike. I’ll set isStrike to true and extract the strike data to ensure the start and end dates are formatted as 'yyyy-MM-dd HH:mm:ss'. Since it mentions \"sciopero aziendale,\" this indicates it's a company-level strike for the local EAV in Campania.",
+    "tokens": {
+      "input": 7447,
+      "output": 933,
+      "total": 8380
+    }
+  }
+}

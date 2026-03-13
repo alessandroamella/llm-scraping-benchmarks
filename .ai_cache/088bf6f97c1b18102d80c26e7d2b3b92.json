@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-24 00:00:00",
+      "endDate": "2025-02-24 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20921,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003689,
+      "outputCost": 0.000682,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0010509
+    },
+    "hash": "088bf6f97c1b18102d80c26e7d2b3b92",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_24h_lunedi_24_febbraio_2025.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to analyze the content to determine if it's announcing a new strike. The content is titled \"Avviso di sciopero 24h lunedì 24 febbraio 2025\" for Linee Flegree, dated February 19, 2025. It seems to announce a 24-hour strike on February 24, 2025, called by USB. There’s a guarantee of part service during certain windows. I think we can conclude that this is indeed an announcement for an upcoming strike, so the variable `isStrike` should be set to true. I'll extract the start and end dates in the specified format.",
+    "tokens": {
+      "input": 7378,
+      "output": 1705,
+      "total": 9083
+    }
+  }
+}

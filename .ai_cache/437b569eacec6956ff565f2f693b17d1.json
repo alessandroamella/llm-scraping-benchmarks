@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18298,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00052165,
+      "outputCost": 0.0005988,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00112045
+    },
+    "hash": "437b569eacec6956ff565f2f693b17d1",
+    "sourceFile": "linee_automobilistiche_avviso_di_sciopero_generale_di_24h_per_venerdi_12_dicembre_2025.html",
+    "thoughts": "**Clarifying Date Formats**\n\nI’m looking at the format for specifying dates, which must be in 'yyyy-MM-dd HH:mm:ss'. It mentions end dates, so I’m considering if I should include the whole day up to 23:59:59 or just the whole hour. The instructions suggest using 23:59:59 for coverage. \n\nFor the guaranteed times in Italy, it’s unclear if \"fasce di garanzia\" represents when service is guaranteed despite the strike or simply times of service. It's a bit ambiguous!",
+    "tokens": {
+      "input": 10433,
+      "output": 1497,
+      "total": 11930
+    }
+  }
+}

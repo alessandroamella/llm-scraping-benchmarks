@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-09-22 00:00:00",
+      "endDate": "2025-09-22 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 23225,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005328,
+      "outputCost": 0.00111,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0016428
+    },
+    "hash": "c3f7f3a0f06101c8ab125711fc7dd406",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_generale_nazionale_lunedi_22_settembre_2025.html",
+    "thoughts": "**Parsing strike announcement**\n\nI need to analyze this content carefully as it’s in Italian, and it’s about an announcement for a national strike on September 22, 2025. The details indicate that the USB union has declared a general strike with guaranteed service windows from 5:30 AM to 8:30 AM and 4:30 PM to 7:30 PM. So, it looks like I should set isStrike to true and ensure to extract the necessary strike data fields, especially the start date in the correct format.",
+    "tokens": {
+      "input": 10656,
+      "output": 2775,
+      "total": 13431
+    }
+  }
+}

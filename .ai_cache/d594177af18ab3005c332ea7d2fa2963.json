@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5792,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000359,
+      "outputCost": 0.0001592,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0005182
+    },
+    "hash": "d594177af18ab3005c332ea7d2fa2963",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_di_24h_giorno_22_settembre_2025.html",
+    "thoughts": "**Deciding on strike status**\n\nThe instruction is clear: I need to determine if the document indicates a new or upcoming strike. Since it's revoked, I conclude that `isStrike` should be false. Therefore, the output will be formatted as a JSON string: `{\"isStrike\": false}`. I must also confirm that there's no need to mention anything about revocation, as the instruction specifies that when revoked, `isStrike` is indeed false. So, I'll deliver just the JSON response.",
+    "tokens": {
+      "input": 7180,
+      "output": 398,
+      "total": 7578
+    }
+  }
+}

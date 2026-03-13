@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-07-23 09:00:00",
+      "endDate": "2025-07-23 11:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 17368,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00054225,
+      "outputCost": 0.0007788,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00132105
+    },
+    "hash": "c30db4fec6c7cb45cfc54d2ed135fac3",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_di_2_ore_mercoledi_23_luglio_2025.html",
+    "thoughts": "**Extracting strike information**\n\nI need to determine if the document announces a new or upcoming strike. It's in Italian and states there's a 2-hour strike scheduled by Faisa Confail on Wednesday, July 23, 2025, from 09:00 to 11:00. So, yes, it's announcing an upcoming strike. I need to pull out the strike data, including start and end times. I will set the startDate to \"2025-07-23 09:00:00\" and endDate to \"2025-07-23 11:00:00.\"",
+    "tokens": {
+      "input": 10845,
+      "output": 1947,
+      "total": 12792
+    }
+  }
+}

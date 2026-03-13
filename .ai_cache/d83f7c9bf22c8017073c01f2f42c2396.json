@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8400,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003285,
+      "outputCost": 0.0002232,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0005517
+    },
+    "hash": "d83f7c9bf22c8017073c01f2f42c2396",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_generale_nazionale_di_24_ore_venerdi_28_novembre_2025.html",
+    "thoughts": "**Analyzing strike information**\n\nIf the information is regarding a strike that has already occurred, then I should set isStrike to false. The phrase \"sciopero revocato\" indicates cancellation, confirming that we need to set isStrike to false. The content mentions an initial announcement but concludes with a revocation, meaning there isn’t an upcoming strike. So, I’ll output: {\"isStrike\": false}, following the JSON format without any extra commentary.",
+    "tokens": {
+      "input": 6570,
+      "output": 558,
+      "total": 7128
+    }
+  }
+}

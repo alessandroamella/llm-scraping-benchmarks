@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19678,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00051695,
+      "outputCost": 0.0006772,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00119415
+    },
+    "hash": "8911c99dcdbc69f3077fe65921dee778",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_generale_nazionale_di_24_ore_venerdi_28_novembre_2025.html",
+    "thoughts": "**Analyzing strike data announcement**\n\nI need to output JSON with information about a strike, which is in Italian. It looks to be announcing a 24-hour national strike on November 28, 2025, by O.S. USB. It mentions that services will run regularly during certain hours, and the date referenced is November 27, 2025, indicating that it’s an upcoming event. Based on the instructions, I’ll set isStrike to true and gather relevant strike data like startDate, endDate, locationType, locationCodes, and guaranteedTimes.",
+    "tokens": {
+      "input": 10339,
+      "output": 1693,
+      "total": 12032
+    }
+  }
+}

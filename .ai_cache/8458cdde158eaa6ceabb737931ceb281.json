@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 09:00:00",
+      "endDate": "2024-12-13 13:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "09:00-13:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 17039,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000353,
+      "outputCost": 0.0008112,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0011642
+    },
+    "hash": "8458cdde158eaa6ceabb737931ceb281",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_4_ore_del_13_dicembre_2024.html",
+    "thoughts": "**Ensuring JSON format**\n\nI need to make sure the JSON complies with the \"strike_extraction\" schema. I'm crafting it to reflect a national strike on December 13, 2024, with specific start and end times. The guaranteed times mentioned in the announcement clarify that there are set departures during the strike window. So, the \"startDate\" and \"endDate\" correctly represent the strike hours. I’ll finalize that JSON format as requested by the user.",
+    "tokens": {
+      "input": 7060,
+      "output": 2028,
+      "total": 9088
+    }
+  }
+}

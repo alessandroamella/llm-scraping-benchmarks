@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19778,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005368,
+      "outputCost": 0.0006632,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0012
+    },
+    "hash": "f9e597e53db4e784ac65ce1ebb461e54",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_generale_di_24h_per_venerdi_12_dicembre_2025.html",
+    "thoughts": "**Clarifying location settings**\n\nOkay, I'm working on setting the location for this national strike. The instructions specify that the locationType should be \"NATIONAL,\" and if that's the case, locationCodes should either be omitted or set to null. The schema supports this, describing locationCodes as optional. So, it looks like I should include locationType as \"NATIONAL\" and set locationCodes to null.  \n\nNext, the guaranteed times indicate two specific windows: 05:30-08:30 and 16:30-19:30. The schema requires these to be formatted as an array of strings.",
+    "tokens": {
+      "input": 10736,
+      "output": 1658,
+      "total": 12394
+    }
+  }
+}

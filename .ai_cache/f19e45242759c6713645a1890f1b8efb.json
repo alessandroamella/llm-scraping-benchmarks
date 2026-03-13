@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 32236,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00056925,
+      "outputCost": 0.001198,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00176725
+    },
+    "hash": "f19e45242759c6713645a1890f1b8efb",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_24_ore_del_13_dicembre_2024_aggiornamento.html",
+    "thoughts": "**Determining strike details**\n\nI need to check if the document is announcing a new or upcoming strike based on the JSON schema for strike extraction. The Italian document mentions a 24-hour strike on December 13, 2024, and states that the strike issued for tomorrow is confirmed to be 24 hours. The date referenced in the article is December 12, 2024. It also includes details about guaranteed service hours, which are 5:30 AM to 8:30 AM and 4:30 PM to 7:30 PM.",
+    "tokens": {
+      "input": 11385,
+      "output": 2995,
+      "total": 14380
+    }
+  }
+}

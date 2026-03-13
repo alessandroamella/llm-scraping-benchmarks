@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20959,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00034795,
+      "outputCost": 0.0006468,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00099475
+    },
+    "hash": "72009c13588bf38292d20aacefb97b51",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_24h_per_venerdi_12_novembre_2025.html",
+    "thoughts": "**Extracting strike data**\n\nI need to output JSON for strike extraction, specifically to determine if this document is announcing an upcoming strike. It clearly states there's a 24-hour strike on December 12, 2025. The document includes details about service times and mentions the O.S. CGIL declaring a national general strike. There's also a reference to the \"Linee Vesuviane.\" So, I'll set isStrike to true and extract the necessary strike data including that it pertains to suburban lines.",
+    "tokens": {
+      "input": 6959,
+      "output": 1617,
+      "total": 8576
+    }
+  }
+}

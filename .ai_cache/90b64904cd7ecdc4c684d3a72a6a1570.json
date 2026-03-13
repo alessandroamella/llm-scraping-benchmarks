@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-05-11 00:00:00",
+      "endDate": "2025-05-11 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 31872,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005348,
+      "outputCost": 0.0014396,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0019744
+    },
+    "hash": "90b64904cd7ecdc4c684d3a72a6a1570",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_24h_domenica_11_maggio_2025.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to determine if the document is actually announcing a new strike. The guideline is clear: If it's a cancellation, participation info, or ongoing updates, then `isStrike` should be false. The content specifies an announcement for a 24-hour strike on May 11, 2025, which means `isStrike` should indeed be true. I also need to extract relevant details like start date, end date, location type, and format everything correctly.",
+    "tokens": {
+      "input": 10696,
+      "output": 3599,
+      "total": 14295
+    }
+  }
+}

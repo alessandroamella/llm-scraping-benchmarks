@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 23922,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00035315,
+      "outputCost": 0.001134,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00148715
+    },
+    "hash": "737d9145675f41badccb9a1892e751e4",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_2_ore_mercoledi_23_luglio_2025.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to work on outputting JSON for a strike extraction based on the provided Italian content. The title indicates a strike on \"July 23, 2025,\" and the details confirm it's happening from 09:00 to 11:00. It looks like this is indeed an upcoming strike. I'll set `isStrike` to true and extract the strike data with the correct date format, providing it as \"2025-07-23 09:00:00\" to \"2025-07-23 11:00:00.\" That sounds straightforward!",
+    "tokens": {
+      "input": 7063,
+      "output": 2835,
+      "total": 9898
+    }
+  }
+}

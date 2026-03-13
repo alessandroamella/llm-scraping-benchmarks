@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-03 00:00:00",
+      "endDate": "2025-10-03 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18525,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000541,
+      "outputCost": 0.0006024,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0011434
+    },
+    "hash": "fb791a840891bf66dbb9f29eb6b32ff6",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_generale_nazionale_di_24_ore_venerdi_03_ottobre_2025.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to output JSON per the schema based on the content I'm reviewing. It indicates a general national strike scheduled for October 3, 2025. The document mentions specific service times for guaranteed operation. However, there's a lot of text, including phrases like \"sciopero revocato\" hidden within a cookie policy overlay. I need to determine if this means the strike is canceled or delayed. So, I’m double-checking to confirm whether it’s truly announcing an upcoming strike.",
+    "tokens": {
+      "input": 10820,
+      "output": 1506,
+      "total": 12326
+    }
+  }
+}

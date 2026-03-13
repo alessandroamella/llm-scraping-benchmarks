@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5184,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00035885,
+      "outputCost": 0.0001556,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00051445
+    },
+    "hash": "750a7a964f5120403674565139498c56",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_generale_nazionale_di_24_ore_venerdi_03_ottobre_2025.html",
+    "thoughts": "**Clarifying strike status**\n\nI need to confirm that there’s no ongoing strike, so I’ll set \"isStrike\" to false. The information shows that there was a 24-hour national strike announced for October 3, 2025, but the message at the bottom indicates it has been revoked. The directive only allows me to mark “isStrike” as true if there's an upcoming strike. Since it’s been canceled, I’ll keep the output minimal in JSON format: {\"isStrike\": false}. Alright, let's finalize this!",
+    "tokens": {
+      "input": 7177,
+      "output": 389,
+      "total": 7566
+    }
+  }
+}

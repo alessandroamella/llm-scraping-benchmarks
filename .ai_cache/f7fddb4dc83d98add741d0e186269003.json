@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9439,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003219,
+      "outputCost": 0.0002468,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0005687
+    },
+    "hash": "f7fddb4dc83d98add741d0e186269003",
+    "sourceFile": "eav_informa_sciopero_di_4_ore_del_28_01_2025.html",
+    "thoughts": "**Analyzing strike information**\n\nI need to output JSON based on whether there's a strike, using the `isStrike` flag and `strikeData` if true. Analyzing the content, it talks about a 4-hour strike on January 28, 2025. However, there are lines indicating the strike is canceled or postponed, which means `isStrike` should be set to false. So, it seems to announce a strike, but ultimately it's about the cancellation, so no active strike is happening.",
+    "tokens": {
+      "input": 6438,
+      "output": 617,
+      "total": 7055
+    }
+  }
+}

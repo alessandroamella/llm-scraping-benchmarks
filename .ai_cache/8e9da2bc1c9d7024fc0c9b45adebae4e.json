@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 17529,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00051855,
+      "outputCost": 0.000592,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00111055
+    },
+    "hash": "8e9da2bc1c9d7024fc0c9b45adebae4e",
+    "sourceFile": "linee_automobilistiche_avviso_di_sciopero_generale_di_24h_per_venerdi_12_dicembre_2025.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to confirm if this document is about an upcoming strike. The content is messy HTML from an announcement titled \"Linee Automobilistiche: Avviso di sciopero generale di 24h per venerdì 12 dicembre 2025.\" It seems to announce a 24-hour strike by the CGIL union on December 12, 2025. With a date noted as December 7, it’s clear this is indeed an upcoming strike. Now, I need to set isStrike to true.",
+    "tokens": {
+      "input": 10371,
+      "output": 1480,
+      "total": 11851
+    }
+  }
+}

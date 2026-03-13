@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9441,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003224,
+      "outputCost": 0.0002156,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.000538
+    },
+    "hash": "84536219d18eff8831699acb0961d8dc",
+    "sourceFile": "funivia_del_faito_sospensione_temporanea_del_servizio_funiviario_dalle_ore_1105.html",
+    "thoughts": "**Analyzing strike status**\n\nI'm looking at the content to determine if there's an upcoming strike, but it seems there's a report about a strike being canceled instead. Instruction 1 specifies that I should only set isStrike to true for future announcements. Since the mention of \"sciopero revocato\" indicates a cancellation, I can set isStrike to false. I’ll summarize my findings in a JSON format as instructed. \n\nSo my output will be:\n\n{\n  \"isStrike\": false\n} \n\nNo strikeData.",
+    "tokens": {
+      "input": 6448,
+      "output": 539,
+      "total": 6987
+    }
+  }
+}

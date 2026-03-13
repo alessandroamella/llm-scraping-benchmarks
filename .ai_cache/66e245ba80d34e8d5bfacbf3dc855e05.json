@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-20 00:00:00",
+      "endDate": "2025-06-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 15806,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003492,
+      "outputCost": 0.0006984,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0010476
+    },
+    "hash": "66e245ba80d34e8d5bfacbf3dc855e05",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_24_h_venerdi_20_giugno_2025.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to determine if the document signifies an upcoming strike. The content mentions a notice for a 24-hour national strike scheduled for June 20, 2025, by USB. It includes guaranteed times and links to related pages, indicating the nature of the announcement. Since this clearly outlines a planned event, I conclude that this is indeed an announcement for an upcoming strike. Thus, I should set isStrike to true.",
+    "tokens": {
+      "input": 6984,
+      "output": 1746,
+      "total": 8730
+    }
+  }
+}

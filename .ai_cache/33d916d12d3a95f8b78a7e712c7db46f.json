@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 09:00:00",
+      "endDate": "2024-12-13 13:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 13574,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003465,
+      "outputCost": 0.0006216,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0009681
+    },
+    "hash": "33d916d12d3a95f8b78a7e712c7db46f",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_di_4_ore_del_13_dicembre_2024.html",
+    "thoughts": "**Outputting strike extraction data**\n\nI need to format the provided content into JSON for a strike extraction. The content states there’s a 4-hour national strike on December 13, 2024, from 09:00 to 13:00, reduced from a planned 24-hour strike. It indicates that no service will be guaranteed during the strike. Since this is indeed an announcement about an upcoming strike, I’ll confirm that the location type should be NATIONAL, given the details mentioned in the text.",
+    "tokens": {
+      "input": 6930,
+      "output": 1554,
+      "total": 8484
+    }
+  }
+}
