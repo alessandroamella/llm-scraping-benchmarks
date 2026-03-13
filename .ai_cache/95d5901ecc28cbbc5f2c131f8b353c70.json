@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 17368,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00055095,
+      "outputCost": 0.0006928,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00124375
+    },
+    "hash": "95d5901ecc28cbbc5f2c131f8b353c70",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_24_ore_di_venerdi_28_novembre_2025.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to decide if this document announces an upcoming strike. The title clearly states that there’s a 24-hour strike set for November 28, 2025. The date of the article, November 23, 2025, means the strike is indeed forthcoming. So, I should note that isStrike should be true. Now, I have to extract the start and end times for the strike mentioned in the article, along with any guaranteed service times for that day.",
+    "tokens": {
+      "input": 11019,
+      "output": 1732,
+      "total": 12751
+    }
+  }
+}

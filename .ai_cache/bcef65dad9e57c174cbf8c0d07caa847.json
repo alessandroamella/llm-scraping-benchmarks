@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-03 00:00:00",
+      "endDate": "2025-10-03 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19149,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003331,
+      "outputCost": 0.0008064,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0011395
+    },
+    "hash": "bcef65dad9e57c174cbf8c0d07caa847",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_generale_nazionale_di_24_ore_venerdi_03_ottobre_2025.html",
+    "thoughts": "**Interpreting strike announcement**\n\nI need to ensure that I'm outputting the JSON according to the extraction specifications. The document appears to be announcing an upcoming strike in Italy, specifically a 24-hour national general strike on Friday, October 3, 2025. There's a date mentioned: October 2, 2025, and additional details about the strike, like specific times when services will operate regularly. It seems crucial to capture these details accurately in the output.",
+    "tokens": {
+      "input": 6662,
+      "output": 2016,
+      "total": 8678
+    }
+  }
+}

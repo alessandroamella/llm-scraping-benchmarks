@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-28 08:20:00",
+      "endDate": "2025-01-28 12:20:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20885,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005508,
+      "outputCost": 0.0007876,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0013384
+    },
+    "hash": "b77bd1b4b3afb7bcd9b191f5a6f9ba81",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_di_4_ore_martedi_28_gennaio_2025.html",
+    "thoughts": "**Determining strike classification**\n\nI'm considering that \"azienda\" might imply national relevance, especially since EAV operates regionally. Usually, if a strike affects the entire company in a region, it could be classified as NATIONAL. The instructions specify using 2-digit ISTAT codes for regions, but if it's a national strike, those should be omitted. Since it’s a \"sciopero aziendale,\" or company-wide strike, I'll mark it as NATIONAL. It does seem consistent with EAV's scope, and it's announced for January 27, 2025.",
+    "tokens": {
+      "input": 11016,
+      "output": 1969,
+      "total": 12985
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-07-23 09:00:00",
+      "endDate": "2025-07-23 11:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "09:00-11:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 15608,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00054045,
+      "outputCost": 0.0007252,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00126565
+    },
+    "hash": "0342acdcb6106a1edd70f01120e3e82b",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_2_ore_mercoledi_23_luglio_2025.html",
+    "thoughts": "**Determining strike type**\n\nI see that \"uno sciopero aziendale\" means it's a company-wide strike, not just regional. It mentions \"Linee Suburbane,\" which seems to apply to the entire company, indicating this is a national strike. According to the guidelines, since this is across the whole system, I should mark locationType as NATIONAL. The locationCodes should be null in this case, and the guaranteed times are from 09:00 to 11:00, as stated in the text.",
+    "tokens": {
+      "input": 10809,
+      "output": 1813,
+      "total": 12622
+    }
+  }
+}

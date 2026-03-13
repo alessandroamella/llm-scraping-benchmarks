@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 16038,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000368,
+      "outputCost": 0.0005364,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0009044
+    },
+    "hash": "e44961b1eb8ca61055ddddad7c579092",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_24_ore_venerdi_13_dicembre_2024.html",
+    "thoughts": "**Determining regional strike details**\n\nI need to provide the location type as \"REGIONAL\" and include the ISTAT codes for the affected regions. Since the strike involves \"Linee Vesuviane,\" I know this is in Campania (code 15). The user asked for 2-digit ISTAT codes for regional strikes. I’ll include location codes: [\"15\"]. The strike is set for 24 hours on December 13, 2024, so I need to format the start and end times correctly for that date.",
+    "tokens": {
+      "input": 7360,
+      "output": 1341,
+      "total": 8701
+    }
+  }
+}

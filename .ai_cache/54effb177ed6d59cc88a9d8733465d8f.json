@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-03 00:00:00",
+      "endDate": "2025-10-03 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 16152,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003615,
+      "outputCost": 0.0007248,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0010863
+    },
+    "hash": "54effb177ed6d59cc88a9d8733465d8f",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_generale_nazionale_di_24_ore_venerdi_03_ottobre_2025.html",
+    "thoughts": "**Determining strike announcement details**\n\nI need to output a JSON structure in a specific schema. The content indicates an upcoming national strike on October 3, 2025. I see repeated mentions of a 24-hour strike and critical details about guaranteed services. The times are specified: service is guaranteed from 5:30 AM to 8:30 AM and again from 4:30 PM to 7:30 PM. Since it’s national, I’m wondering if I should classify the location type as REGIONAL or NATIONAL.",
+    "tokens": {
+      "input": 7230,
+      "output": 1812,
+      "total": 9042
+    }
+  }
+}

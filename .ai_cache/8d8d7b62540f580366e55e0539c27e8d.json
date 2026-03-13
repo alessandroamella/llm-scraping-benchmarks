@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-20 00:00:00",
+      "endDate": "2025-06-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 15555,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00054005,
+      "outputCost": 0.0005856,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00112565
+    },
+    "hash": "8d8d7b62540f580366e55e0539c27e8d",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_24h_venerdi_20_giugno_2025.html",
+    "thoughts": "**Identifying upcoming strike announcement**\n\nI need to check if a document announces an upcoming strike, specifically in Italian. The content mentions \"Linea Metropolitana: Avviso di sciopero 24h venerdì 20 giugno 2025,\" indicating a strike on that date. It also specifies guaranteed service hours during the strike, which supports the conclusion. This confirms that it is, indeed, an announcement of a strike scheduled for June 20, 2025. So, I can say that isStrike is true.",
+    "tokens": {
+      "input": 10801,
+      "output": 1464,
+      "total": 12265
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-09-22 00:00:00",
+      "endDate": "2025-09-22 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18092,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00034265,
+      "outputCost": 0.0007468,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00108945
+    },
+    "hash": "41128ea5035eaace1e871f78f33b4763",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_generale_nazionale_lunedi_22_settembre_2025.html",
+    "thoughts": "**Parsing strike announcement**\n\nIt looks like there's an announcement for a national strike on September 22, 2025. The guidelines state that isStrike should be true for such announcements, so I’ll set isStrike to true. \n\nNow, I need to populate \"strikeData\" with details. The start date and time are mentioned as \"Per il giorno 22 settembre 2025.\" It also provides guaranteed service times: from 5:30 AM to 8:30 AM and again from 4:30 PM to 7:30 PM. So, these are the confirmed service times during the strike.",
+    "tokens": {
+      "input": 6853,
+      "output": 1867,
+      "total": 8720
+    }
+  }
+}

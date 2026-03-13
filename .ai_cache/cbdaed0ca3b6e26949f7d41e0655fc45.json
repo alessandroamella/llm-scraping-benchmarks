@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 15029,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003271,
+      "outputCost": 0.0004772,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008043
+    },
+    "hash": "cbdaed0ca3b6e26949f7d41e0655fc45",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_generale_nazionale_di_24_ore_venerdi_28_novembre_2025.html",
+    "thoughts": "**Extracting strike information**\n\nI need to format information into JSON using the specified schema for strike extraction. The content indicates an upcoming strike, as it mentions a 24-hour national general strike on November 28, 2025, proclaimed by the USB union. The service operates during certain hours, and the announcement confirms this is indeed about a forthcoming strike. Therefore, I need to set \"isStrike\" to true and extract the relevant strike data, including the start date—I'm confirming the date is structured correctly as “2025-11-28 05:30:00.”",
+    "tokens": {
+      "input": 6542,
+      "output": 1193,
+      "total": 7735
+    }
+  }
+}

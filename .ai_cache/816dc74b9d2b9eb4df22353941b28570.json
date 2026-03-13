@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8268,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003411,
+      "outputCost": 0.0001244,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0004655
+    },
+    "hash": "816dc74b9d2b9eb4df22353941b28570",
+    "sourceFile": "eav_informa_servizio_automobilistico_integrativo_vico_equense_monte_faito_3.html",
+    "thoughts": "**Confirming JSON Output**\n\nI need to make sure that I output JSON according to the strike_extraction schema. From my analysis, the content doesn't focus on an upcoming strike but instead talks about a new bus service. Though \"Avvisi di Sciopero\" is mentioned, it doesn't relate to a strike announcement. It seems like the article is purely informational, so I'll determine that `isStrike` should be false. Therefore, the output will be: { \"isStrike\": false }. I'll double-check the JSON format to ensure it's precise.",
+    "tokens": {
+      "input": 6822,
+      "output": 311,
+      "total": 7133
+    }
+  }
+}

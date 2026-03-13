@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24812,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00034815,
+      "outputCost": 0.000916,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00126415
+    },
+    "hash": "6d8ab3290e73677d8c107a893e32f802",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_di_4_ore_martedi_28_gennaio_2025.html",
+    "thoughts": "**Clarifying strike logistics**\n\nI’m thinking it’s best to set locationType and locationCodes to null since this is a company-wide situation. The instructions indicate that I should set things to true only for upcoming strikes. \n\nFor guaranteedTimes, the notice mentions times from \"08:20 to 12:20\" and the concept of \"ultimate guaranteed departures.\" I need to fill guaranteedTimes with the range of these hours and ensure it’s formatted correctly, as the specs suggest an array format like \"HH:mm-HH:mm.\"",
+    "tokens": {
+      "input": 6963,
+      "output": 2290,
+      "total": 9253
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 14931,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000605,
+      "outputCost": 0.0006868,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0012918
+    },
+    "hash": "361a9af33f49f7aaf727ff7c1279058c",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_generale_nazionale_di_venerdi_12_dicembre_2025.html",
+    "thoughts": "**Extracting strike details**\n\nI need to identify if a new strike is announced. There's HTML content referring to a national strike on December 12, 2025, organized by EAV srl. This is indeed an upcoming strike announcement. I need to set isStrike to true and gather details like startDate, endDate, locationType, locationCodes, and guaranteedTimes. Since it’s a \"sciopero generale nazionale,\" it'll be a national strike, so locationType is likely NATIONAL with locationCodes remaining null.",
+    "tokens": {
+      "input": 12100,
+      "output": 1717,
+      "total": 13817
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18424,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00061585,
+      "outputCost": 0.0007312,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00134705
+    },
+    "hash": "feb947bc386608e822e96a89d178806b",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_generale_nazionale_di_24_ore_di_venerdi_28_novembre_2025.html",
+    "thoughts": "**Clarifying strike data formats**\n\nI'm checking the date format, and it needs to be in 'yyyy-MM-dd HH:mm:ss'. For this assignment, I’ll set the start date to \"2025-11-28 00:00:00\" and the end date to \"2025-11-28 23:59:59\". The location type should be “NATIONAL” because it’s a general strike. Also, the instructions say location codes should be null. So, I’ll make sure the strike data reflects that with locationType as \"NATIONAL\" and locationCodes as null.",
+    "tokens": {
+      "input": 12317,
+      "output": 1828,
+      "total": 14145
+    }
+  }
+}

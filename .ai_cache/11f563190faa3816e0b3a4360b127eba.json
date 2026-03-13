@@ -1,0 +1,41 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-24 00:00:00",
+      "endDate": "2025-02-24 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:03-06:03",
+        "07:47-07:47",
+        "17:27-17:27",
+        "20:30-20:30",
+        "05:10-05:10",
+        "06:21-06:21",
+        "13:13-13:13",
+        "17:21-17:21"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19456,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00033915,
+      "outputCost": 0.0008076,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00114675
+    },
+    "hash": "11f563190faa3816e0b3a4360b127eba",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_24h_lunedi_24_febbraio_2025.html",
+    "thoughts": "**Clarifying guaranteed times**\n\nI need to ensure we're handling the time zone correctly, as it hasn't been specified, so I'll use the local time zone. The note mentions guaranteedTimes, which are supposed to be formatted as ranges like \"HH:mm-HH:mm.\" However, the provided times, such as 06:03, 07:47, etc., are individual departure times, not ranges. I’m thinking we might treat each time as both the start and end of a range since the guidance is unclear on this point.",
+    "tokens": {
+      "input": 6783,
+      "output": 2019,
+      "total": 8802
+    }
+  }
+}

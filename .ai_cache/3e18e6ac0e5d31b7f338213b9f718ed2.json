@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20717,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003579,
+      "outputCost": 0.0009412,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0012991
+    },
+    "hash": "3e18e6ac0e5d31b7f338213b9f718ed2",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_24_h_venerdi_12_dicembre_2025.html",
+    "thoughts": "**Setting event details**\n\nI'm looking at the event schedule, which starts at midnight on December 12, 2025, and ends just before midnight the same day. The end time is fixed at 23:59:59. The guaranteed times are from 05:30 to 08:30 and again from 16:30 to 19:30, so I'll list these as [\"05:30-08:30\", \"16:30-19:30\"]. The location type will be \"NATIONAL,\" and we'll set the location codes to null. Lastly, the strike data will include all these details with \"isStrike\" set to true.",
+    "tokens": {
+      "input": 7158,
+      "output": 2353,
+      "total": 9511
+    }
+  }
+}

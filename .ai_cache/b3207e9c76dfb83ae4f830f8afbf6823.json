@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-10 19:32:00",
+      "endDate": "2025-01-10 23:32:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 34181,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00053705,
+      "outputCost": 0.0014272,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00196425
+    },
+    "hash": "b3207e9c76dfb83ae4f830f8afbf6823",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_4_ore_10_gennaio_2025.html",
+    "thoughts": "**Reviewing location and times**\n\nI’m setting the locationType to \"NATIONAL,\" which is valid since the schema accepts it as a string or null. I’ll use \"NATIONAL\" with null for locationCodes. The example for a strike mentions required \"startDate\" and \"endDate\" times, specifically on 2025-01-10 from 19:32 to 23:32. It seems there’s only one interval, as the text indicates. About guaranteed times, the saved article discusses certain train departures but doesn’t specify all guaranteed times for the lines mentioned.",
+    "tokens": {
+      "input": 10741,
+      "output": 3568,
+      "total": 14309
+    }
+  }
+}

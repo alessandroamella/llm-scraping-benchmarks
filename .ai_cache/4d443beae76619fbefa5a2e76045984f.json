@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-03 00:00:00",
+      "endDate": "2025-10-03 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 16985,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005228,
+      "outputCost": 0.0008124,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0013352
+    },
+    "hash": "4d443beae76619fbefa5a2e76045984f",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_generale_nazionale_di_24_ore_venerdi_03_ottobre_2025.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to output JSON in the specified format to determine if this document is announcing a new strike. It looks like an Italian page from EAV srl about a 24-hour national general strike on October 3, 2025, proclaimed by CGIL and USB due to the Gaza war. The document includes the times and guaranteed service times. So, it’s confirmed as an announcement for an upcoming strike. I’ll extract the relevant strike data like start date, end date, location type, and guaranteed times.",
+    "tokens": {
+      "input": 10456,
+      "output": 2031,
+      "total": 12487
+    }
+  }
+}

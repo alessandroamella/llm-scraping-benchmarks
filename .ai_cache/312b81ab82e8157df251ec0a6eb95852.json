@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-03 00:00:00",
+      "endDate": "2025-10-03 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 14719,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00036215,
+      "outputCost": 0.00061,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00097215
+    },
+    "hash": "312b81ab82e8157df251ec0a6eb95852",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_generale_nazionale_di_24_ore_venerdi_03_ottobre_2025.html",
+    "thoughts": "**Determining strike announcement details**\n\nI need to output a JSON based on the given content and assess if it announces an upcoming strike. The content mentions a national strike announcement for October 3, 2025, indicating it's a 24-hour strike. The data also states the date as October 2, 2025, and mentions coverage for specific times. Since it's clearly announcing a strike, I’ll set `isStrike` to true and include the necessary `strikeData` fields like start and end dates, location types, and guaranteed times.",
+    "tokens": {
+      "input": 7243,
+      "output": 1525,
+      "total": 8768
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22759,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00034815,
+      "outputCost": 0.0009076,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00125575
+    },
+    "hash": "4fc07e73aec98c8489b606fedd1a2b70",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_24_ore_del_13_dicembre_2024_aggiornamento.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to output JSON based on the prescribed strike_extraction schema using the given Italian content. The details show a 24-hour strike announced for December 13, 2024. It clearly states an upcoming strike, not a cancellation, so I should set isStrike to true according to the instructions. There's plenty of information confirming this is an announcement rather than something ongoing. I want to make sure everything is accurate in the output!",
+    "tokens": {
+      "input": 6963,
+      "output": 2269,
+      "total": 9232
+    }
+  }
+}

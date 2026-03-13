@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-12 00:00:00",
+      "endDate": "2025-11-12 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18485,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005962,
+      "outputCost": 0.0005652,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0011614
+    },
+    "hash": "e079c7bd6af5966d0eadae210f005dd2",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_aziendale_di_24_h_di_mercoledi_12_11_2025.html",
+    "thoughts": "**Extracting strike information**\n\nI need to pull details about the upcoming strike from the HTML content regarding \"Linee Vesuviane.\" It's about a 24-hour strike planned for Wednesday, November 12, 2025. The announcement confirms the strike, and I'll set isStrike to true. It includes specific guaranteed service times around the strike, like 05:30-08:30 and 16:30-19:30, detailing last and first departures. This is clearly an announcement of a future strike, so isStrike is indeed true.",
+    "tokens": {
+      "input": 11924,
+      "output": 1413,
+      "total": 13337
+    }
+  }
+}

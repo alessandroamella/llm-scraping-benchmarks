@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 26243,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00034275,
+      "outputCost": 0.0009536,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00129635
+    },
+    "hash": "7f786740f608adc79a6a110a0e4387c1",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_di_4_ore_martedi_28_gennaio_2025.html",
+    "thoughts": "**Ensuring Date Formatting**\n\nI need to confirm that the \"startDate\" and \"endDate\" fields are formatted as strings according to the schema, which requires the format 'yyyy-MM-dd HH:mm:ss'. For example, I'm using \"2025-01-28 08:20:00\" for the start and \"2025-01-28 12:20:00\" for the end.\n\nThe JSON must maintain the expected structure with locationType and locationCodes set to null. Plus, I should remember that the timing indicates the strike starts on January 28, 2025, from 08:20 to 12:20.",
+    "tokens": {
+      "input": 6855,
+      "output": 2384,
+      "total": 9239
+    }
+  }
+}

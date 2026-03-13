@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20001,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00053485,
+      "outputCost": 0.0008188,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00135365
+    },
+    "hash": "8eadba40a97bba2d6056a30bade9abad",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_generale_di_24h_per_venerdi_12_dicembre_2025.html",
+    "thoughts": "**Setting strike parameters**\n\nI’m figuring out how to set the date for a 24-hour strike on December 12, 2025. I'll go with a start time of midnight and an end time just before midnight on the same day. I’ll make sure the dates are in the right format as specified. There are specific times guaranteed for service windows from 05:30 to 08:30 and again from 16:30 to 19:30, so I'll set those up too. For location type, since it's a national strike, I'll mark it as “NATIONAL” and omit location codes.",
+    "tokens": {
+      "input": 10697,
+      "output": 2047,
+      "total": 12744
+    }
+  }
+}

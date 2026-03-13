@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-05-11 00:00:00",
+      "endDate": "2025-05-11 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21303,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00051865,
+      "outputCost": 0.0009068,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00142545
+    },
+    "hash": "3e68739deea99039b043305724beb2d9",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_24h_domenica_11_maggio_2025.html",
+    "thoughts": "**Determining strike announcement details**\n\nI'm looking at a document in Italian that seems to announce a 24-hour strike for Sunday, May 11, 2025, for EAV srl. It mentions that \"Os Or.S.A. has proclaimed a 24-hour company strike.\" So, this is indeed an upcoming strike announcement. Since the date is May 11, 2025, it confirms that isStrike should be true. I need to extract the details such as startDate, endDate, and location information to ensure it’s formatted correctly.",
+    "tokens": {
+      "input": 10373,
+      "output": 2267,
+      "total": 12640
+    }
+  }
+}

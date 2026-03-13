@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-07-23 09:00:00",
+      "endDate": "2025-07-23 11:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "09:00-11:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 15100,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00052135,
+      "outputCost": 0.0005832,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00110455
+    },
+    "hash": "137346bbbd3cc562e47d778032a57417",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_di_2_ore_mercoledi_23_luglio_2025.html",
+    "thoughts": "**Formulating strike data JSON**\n\nI need to confirm that the input is about an upcoming strike. The next step is to create a JSON object that fits the strike_extraction schema. I'll ensure that I meet all the requirements, including types for fields like \"startDate\", \"endDate\", \"locationType\", \"locationCodes\", and \"guaranteedTimes\". Yes, I should include start and end times even if they're on the same day. Finally, I'll ensure to present just the JSON object without any additional text.",
+    "tokens": {
+      "input": 10427,
+      "output": 1458,
+      "total": 11885
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-03 00:00:00",
+      "endDate": "2025-10-03 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22155,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00053355,
+      "outputCost": 0.0007856,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00131915
+    },
+    "hash": "e1ac008e3fe5cb1a84e7739291956c54",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_generale_nazionale_di_venerdi_03_ottobre_2025.html",
+    "thoughts": "**Extracting strike information**\n\nI need to check if the document is announcing an upcoming strike. The content is in Italian from EAV srl, stating it’s a notice about a general national strike on October 3, 2025. The details mention the date as October 2, 2025, and reference reports about the strike, which is set for a 24-hour period due to issues related to the Gaza conflict. It also notes that the strike will affect both rail and bus services while respecting certain guarantees.",
+    "tokens": {
+      "input": 10671,
+      "output": 1964,
+      "total": 12635
+    }
+  }
+}

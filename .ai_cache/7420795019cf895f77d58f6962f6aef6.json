@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-12 00:00:00",
+      "endDate": "2025-11-12 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 17908,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00036405,
+      "outputCost": 0.000768,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00113205
+    },
+    "hash": "7420795019cf895f77d58f6962f6aef6",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_aziendale_di_24_h_di_mercoledi_12_11_2025.html",
+    "thoughts": "**Determining date formatting**\n\nI need to format startDate and endDate in 'yyyy-MM-dd HH:mm:ss'. The provided information mentions the date and service hours for November 12, 2025. Since the strike is 24 hours that day, I think startDate should be set as 2025-11-12 00:00:00 and endDate as 2025-11-12 23:59:59 or maybe 23:59:00. The instructions say seconds aren't specified, but the examples have them. I need to figure out what's more appropriate.",
+    "tokens": {
+      "input": 7281,
+      "output": 1920,
+      "total": 9201
+    }
+  }
+}

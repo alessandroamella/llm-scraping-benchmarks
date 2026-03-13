@@ -27,6 +27,7 @@ import {
 } from './definitions/strike-parser.interface';
 import { ATACManualParser } from './parsers/atac/atac-manual.parser';
 import { ConfigurableAiParser } from './parsers/configurable-ai.parser';
+import { EavManualParser } from './parsers/eav/eav-manual.parser';
 import { PreComputedFileParser } from './parsers/precomputed-file-parser';
 import { TrenordManualParser } from './parsers/trenord/trenord-manual.parser';
 import { BenchmarkStrike } from './schemas/benchmark-strike.schema';
@@ -83,16 +84,16 @@ export class BenchmarksService implements OnModuleInit, OnModuleDestroy {
 
   // Toggle this to run benchmarks
   private readonly useLenientSchema = true;
-  private readonly includeManualInSuite = false;
+  private readonly includeManualInSuite = true;
   private readonly generateChaosDatasetFlag = false;
 
-  private readonly customReportName = 'chaos_resilience_test_with_distillation';
+  private readonly customReportName = 'eav_messed_dom_benchmarks';
   // private readonly disabledChecks: string[] = ['locationType', 'locationCodes'];
   private readonly disabledChecks: string[] = [];
 
-  private readonly enableResilienceSuite = false; // Toggle Resilience Suite
+  private readonly enableResilienceSuite = true; // Toggle Resilience Suite
   private readonly enableAiSuites = true; // Toggle AI Suites
-  private readonly enableSlmSuites = true; // Toggle SLM Suites (MinerU and Jina)
+  private readonly enableSlmSuites = false; // Toggle SLM Suites (MinerU and Jina)
 
   // -----------------
   private readonly baseDir = path.join(process.cwd(), 'data');
@@ -105,6 +106,7 @@ export class BenchmarksService implements OnModuleInit, OnModuleDestroy {
   constructor(
     private readonly trenordManual: TrenordManualParser,
     private readonly atacManual: ATACManualParser,
+    private readonly eavManual: EavManualParser,
     private readonly aiRunner: BenchmarkAiRunnerService,
     private readonly envsService: EnvsService,
   ) {
@@ -122,6 +124,9 @@ export class BenchmarksService implements OnModuleInit, OnModuleDestroy {
 
   private readonly atacDir = path.join(this.baseDir, 'ATAC');
   private readonly atacMessedDir = path.join(this.baseDir, 'ATAC-Messed');
+
+  private readonly eavDir = path.join(this.baseDir, 'EAV');
+  private readonly eavMessedDir = path.join(this.baseDir, 'EAV-Messed');
 
   private getAiParsersForCompany(
     company: Company,
@@ -321,10 +326,12 @@ export class BenchmarksService implements OnModuleInit, OnModuleDestroy {
     );
 
     // Preparazione parser EAV
-    const eavParsers = this.getAiParsersForCompany(
-      'EAV',
-      models,
-      baseStrategies,
+    const eavParsers: IStrikeParser[] = [];
+    if (this.includeManualInSuite) {
+      eavParsers.push(this.eavManual);
+    }
+    eavParsers.push(
+      ...this.getAiParsersForCompany('EAV', models, baseStrategies),
     );
 
     // Preparazione parser ATAC
@@ -498,6 +505,50 @@ export class BenchmarksService implements OnModuleInit, OnModuleDestroy {
           parser: `${d.parser} [CHAOS]`,
         })),
       );
+
+      // Suite 6: Resilienza EAV (DOM Changes)
+      this.logger.log(
+        chalk.bgRed.white.bold(
+          '\n--- Running Suite: EAV RESILIENCE (Messed DOM) ---',
+        ),
+      );
+
+      const eavResilienceParsers: IStrikeParser[] = [this.eavManual];
+      // dynamic
+      for (const strategy of [
+        'basic-cleanup',
+        'html-to-markdown',
+      ] as PreProcessingStrategy[]) {
+        // all models!
+        for (const model of models) {
+          eavResilienceParsers.push(
+            new ConfigurableAiParser(
+              this.aiRunner,
+              strategy,
+              'EAV',
+              model,
+              this.useLenientSchema,
+            ),
+          );
+        }
+      }
+
+      const resultsEavChaos = await this.runSuite(
+        'EAV', // Usa ground truth di EAV
+        eavResilienceParsers,
+        {
+          customSuiteName: 'EAV Resilience (Chaos DOM)',
+          directoryOverride: this.eavMessedDir,
+        },
+      );
+
+      this.mergeStats(summaryStats, resultsEavChaos.stats, ' [CHAOS]');
+      allDetails.push(
+        ...resultsEavChaos.details.map((d) => ({
+          ...d,
+          parser: `${d.parser} [CHAOS]`,
+        })),
+      );
     }
 
     // Save Final Report
@@ -513,13 +564,19 @@ export class BenchmarksService implements OnModuleInit, OnModuleDestroy {
     const pairs = [
       { src: this.trenordDir, dest: this.trenordMessedDir },
       { src: this.atacDir, dest: this.atacMessedDir },
+      { src: this.eavDir, dest: this.eavMessedDir },
     ];
 
     for (const pair of pairs) {
       if (!fs.existsSync(pair.dest))
         fs.mkdirSync(pair.dest, { recursive: true });
       const files = fs.readdirSync(pair.src).filter((f) => f.endsWith('.html'));
-      for (const file of files) {
+      for (const [i, file] of files.entries()) {
+        this.logger.log(
+          chalk.gray(
+            `Processing ${file} (${i + 1}/${files.length}) in ${pair.src} -> ${pair.dest}`,
+          ),
+        );
         const content = fs.readFileSync(path.join(pair.src, file), 'utf-8');
         fs.writeFileSync(
           path.join(pair.dest, file),
@@ -528,9 +585,7 @@ export class BenchmarksService implements OnModuleInit, OnModuleDestroy {
         );
       }
     }
-    this.logger.log(
-      chalk.magenta('✅ Generated chaos dataset for Trenord and ATAC.'),
-    );
+    this.logger.log(chalk.magenta('✅ Generated chaos dataset'));
   }
 
   private async runSuite(
@@ -610,7 +665,9 @@ export class BenchmarksService implements OnModuleInit, OnModuleDestroy {
       const filePath = path.join(companyDir, file);
 
       if (!fs.existsSync(filePath)) {
-        this.logger.warn(`File not found: ${file}`);
+        this.logger.warn(
+          `File not found: ${file} (path: ${filePath}), skipping...`,
+        );
         return [];
       }
 

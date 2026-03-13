@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-03 00:00:00",
+      "endDate": "2025-10-03 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21747,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003444,
+      "outputCost": 0.000744,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0010884
+    },
+    "hash": "0c4c961357b088e5caf33cc6f449ed7b",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_generale_nazionale_di_24_ore_venerdi_03_ottobre_2025.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to output JSON based on the strike_extraction schema. I must decide if the document announces a new strike. The content is in Italian and includes a notice for a general national 24-hour strike on October 3, 2025. The data section shows the date as October 2, 2025. It mentions the strike is called in response to events related to Gaza. So, this is definitely an announcement for an upcoming national strike. Therefore, isStrike should be true.",
+    "tokens": {
+      "input": 6888,
+      "output": 1860,
+      "total": 8748
+    }
+  }
+}

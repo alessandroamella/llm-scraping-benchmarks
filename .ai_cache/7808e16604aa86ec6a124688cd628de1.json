@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-29 00:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 17057,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00034235,
+      "outputCost": 0.0006508,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00099315
+    },
+    "hash": "7808e16604aa86ec6a124688cd628de1",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_24h_venerdi_28_novembre_2025.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to process the JSON output concerning the strike info. The announcement is titled \"Avviso di sciopero 24h venerdì 28 novembre 2025\" from EAV srl Linea Metropolitana, indicating a 24-hour strike on November 28, 2025. It provides details like guaranteed service times and mentions various line categories involved. I see that I should only set the isStrike to true if this content relates to an upcoming strike announcement. Let's ensure I capture all relevant aspects!",
+    "tokens": {
+      "input": 6847,
+      "output": 1627,
+      "total": 8474
+    }
+  }
+}

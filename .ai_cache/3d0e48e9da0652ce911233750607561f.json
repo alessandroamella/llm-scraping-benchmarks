@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-05-11 00:00:00",
+      "endDate": "2025-05-11 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 23266,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00054725,
+      "outputCost": 0.0010944,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00164165
+    },
+    "hash": "3d0e48e9da0652ce911233750607561f",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_24h_domenica_11_maggio_2025.html",
+    "thoughts": "**Extracting strike data**\n\nI'm working on extracting the strike data. For the start and end dates, they require the 'yyyy-MM-dd HH:mm:ss' format. The strike is for 24 hours on May 11, 2025. It seems like the start time could be from 00:00 to 23:59:59, and the end would be 23:59:59 on the same day. According to the guidelines, I think I can input the start date as \"2025-05-11 00:00:00\" and the end date as \"2025-05-11 23:59:59.\" Location type appears to be regional, specifically related to the Linee Flegree in Naples.",
+    "tokens": {
+      "input": 10945,
+      "output": 2736,
+      "total": 13681
+    }
+  }
+}

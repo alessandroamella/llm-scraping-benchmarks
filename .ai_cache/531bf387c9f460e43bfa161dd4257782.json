@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-13 08:30:00",
+      "endDate": "2025-10-13 12:30:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "08:30-12:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21268,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00056045,
+      "outputCost": 0.0005928,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00115325
+    },
+    "hash": "531bf387c9f460e43bfa161dd4257782",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_4_ore_del_13_ottobre_2025.html",
+    "thoughts": "**Extracting strike announcement details**\n\nI need to output JSON that fits the strike_extraction schema. The content is about an upcoming strike: \"Linee Vesuviane: Avviso di sciopero di 4 ore del 13 ottobre 2025.\" It tells us there's a strike on Monday, October 13, 2025, lasting from 08:30 to 12:30. Since this is indeed an announcement for a future strike, I can confirm that isStrike is true. Now, I must extract the start and end dates in the correct format.",
+    "tokens": {
+      "input": 11209,
+      "output": 1482,
+      "total": 12691
+    }
+  }
+}

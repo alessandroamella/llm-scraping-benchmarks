@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-24 00:00:00",
+      "endDate": "2025-02-24 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18451,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003273,
+      "outputCost": 0.0006492,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0009765
+    },
+    "hash": "87249355f631454cfb9caf4ed46582a8",
+    "sourceFile": "eav_autolinee_avviso_di_sciopero_di_24_ore_lunedi_24_febbraio_2025.html",
+    "thoughts": "**Extracting strike data**\n\nI see that the notice is in Italian, and I need to extract some specific data about a strike. It mentions a 24-hour national strike but also provides certain times where service is guaranteed. I’m thinking that for a 24-hour strike, the start date could be 2025-02-24 at 00:00:00 and the end date at 2025-02-24 at 23:59:59. But the guarantee times show service will be performed from 05:30-08:30 and 16:30-19:30, so I'm trying to reconcile that.",
+    "tokens": {
+      "input": 6546,
+      "output": 1623,
+      "total": 8169
+    }
+  }
+}

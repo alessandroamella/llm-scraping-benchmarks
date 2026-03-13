@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-05-11 00:00:00",
+      "endDate": "2025-05-11 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18668,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00054645,
+      "outputCost": 0.0006452,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00119165
+    },
+    "hash": "afee72be785634e4a312db7d638e8b8f",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_24h_domenica_11_maggio_2025.html",
+    "thoughts": "**Determining upcoming strike announcement**\n\nI need to figure out if the document is announcing a new strike. It’s a messy HTML page from EAV srl, and the title suggests a 24-hour strike notice on May 11, 2025. The announcement specifically states that OS Or.S.A. will strike for 24 hours on that date. With the post date being May 6, 2025, it confirms that it’s indeed an upcoming strike. So, I’ll extract that the isStrike value is true!",
+    "tokens": {
+      "input": 10929,
+      "output": 1613,
+      "total": 12542
+    }
+  }
+}

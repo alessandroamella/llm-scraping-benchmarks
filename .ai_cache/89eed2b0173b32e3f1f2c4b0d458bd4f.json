@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-24 00:00:00",
+      "endDate": "2025-02-24 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 17204,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00059255,
+      "outputCost": 0.0006792,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00127175
+    },
+    "hash": "89eed2b0173b32e3f1f2c4b0d458bd4f",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_24_h_lunedi_24_febbraio_2025.html",
+    "thoughts": "**Extracting strike information**\n\nI need to output JSON according to the strike_extraction schema based on this Italian webpage about a strike. The title indicates a 24-hour strike is set for February 24, 2025, proclaimed by O.S. USB, which aligns with a national strike. It includes guaranteed service times from 05:30-08:30 and 16:30-19:30. The article repeats details about the strike and its motivations. Overall, it definitely confirms that this is an upcoming strike, so isStrike should be true.",
+    "tokens": {
+      "input": 11851,
+      "output": 1698,
+      "total": 13549
+    }
+  }
+}

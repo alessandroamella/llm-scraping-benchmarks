@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 30491,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00057805,
+      "outputCost": 0.0011736,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00175165
+    },
+    "hash": "7154584a1e9c45ea7e2f0a7441ac1870",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_24_ore_del_13_dicembre_2024_aggiornamento.html",
+    "thoughts": "**Interpreting strike announcements**\n\nI noticed the page has a date of \"12 Dicembre 2024\" mentioning a strike set for \"domani 13 dicembre.\" The content indicates that the strike is actually going to last 24 hours due to the TAR Lazio's acceptance of the USB's request to suspend a precautionary order. This is indeed an update on an upcoming strike. Given this update clarifies the strike duration, I think it's fair to say that the isStrike should be set to true.",
+    "tokens": {
+      "input": 11561,
+      "output": 2934,
+      "total": 14495
+    }
+  }
+}

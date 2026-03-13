@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-09-22 00:00:00",
+      "endDate": "2025-09-23 00:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22436,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005336,
+      "outputCost": 0.001038,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0015716
+    },
+    "hash": "995171f383021c3f071eb7e513178870",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_generale_nazionale_lunedi_22_settembre_2025.html",
+    "thoughts": "**Structuring JSON for strike data**\n\nI need to produce JSON following a specific schema. The required fields include `isStrike`, `strikeData`, and details like `startDate`, `endDate`, and `guaranteedTimes`. The article indicates the strike begins on September 22, 2025. The guaranteed service times are from 05:30 to 08:30 and 16:30 to 19:30. It seems the duration of the strike is 23 hours for operational staff and 24 for others based on prior announcements. I'll ensure the format is correct for dates and times.",
+    "tokens": {
+      "input": 10672,
+      "output": 2595,
+      "total": 13267
+    }
+  }
+}

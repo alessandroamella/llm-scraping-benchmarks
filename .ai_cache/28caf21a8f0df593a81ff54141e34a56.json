@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 10681,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00034855,
+      "outputCost": 0.0005852,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00093375
+    },
+    "hash": "28caf21a8f0df593a81ff54141e34a56",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_24_ore_di_venerdi_28_novembre_2025.html",
+    "thoughts": "**Formatting JSON for strike data**\n\nI’m preparing to fill guaranteedTimes as an array with \"05:30-08:30\" and \"16:30-19:30\" in the required 'HH:mm-HH:mm' format. I’ll ensure to set \"isStrike\" to true and include the \"strikeData\" details like startDate, endDate, and location type correctly. The locationType will be \"NATIONAL,\" and locationCodes will be null. I'll also confirm the time format for the dates, ensuring to follow the specified format for the final JSON object string.",
+    "tokens": {
+      "input": 6971,
+      "output": 1463,
+      "total": 8434
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-28 08:20:00",
+      "endDate": "2025-01-28 12:20:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "08:20-12:20"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 15820,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00036335,
+      "outputCost": 0.0005524,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00091575
+    },
+    "hash": "ad5bae0fe26de5e188e48678096a12b3",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_4_ore_martedi_28_gennaio_2025.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to determine if the document is announcing a new strike. The Italian text mentions a 4-hour strike on January 28, 2025, involving various trade unions like ORSA and Filt Cgil. The document confirms guaranteed departures and strike details. Given this, it seems to clearly indicate an upcoming strike, so I’ll mark \"isStrike\" as true. This is a regional strike for the Campania region, meaning \"locationType\" should be set to REGIONAL.",
+    "tokens": {
+      "input": 7267,
+      "output": 1381,
+      "total": 8648
+    }
+  }
+}

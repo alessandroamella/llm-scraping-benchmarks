@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-07-23 09:00:00",
+      "endDate": "2025-07-23 11:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "08"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 16780,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003464,
+      "outputCost": 0.000676,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0010224
+    },
+    "hash": "6cd3babaa8a2a5d17905cb0ee35eb0c0",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_2_ore_mercoledi_23_luglio_2025.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to output JSON for strike extraction with fields like isStrike and possibly strikeData. The content I'm analyzing is in Italian, stating there's a strike on Wednesday, July 23, 2025, for 2 hours from 09:00 to 11:00. It's announced by O.S. Faisa Confail for EAV S.r.l. The page also mentions the date, \"Data: 22 Luglio 2025.\" Since it's an upcoming strike, isStrike should be true. I also need to extract strikeData with startDate and endDate in the 'yyyy-MM-dd HH:mm:ss' format.",
+    "tokens": {
+      "input": 6928,
+      "output": 1690,
+      "total": 8618
+    }
+  }
+}

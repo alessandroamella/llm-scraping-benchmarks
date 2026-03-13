@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-03 00:00:00",
+      "endDate": "2025-10-03 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 16639,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003385,
+      "outputCost": 0.0005144,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008529
+    },
+    "hash": "580a5a1910adbd0de7539a5097f3101b",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_generale_nazionale_di_venerdi_03_ottobre_2025.html",
+    "thoughts": "**Extracting strike details**\n\nI need to output JSON for the strike extraction based on the given instructions. This pertains to an announcement for a general national strike in Italy on October 3, 2025. It mentions a 24-hour strike called by CGIL and USB. It states guaranteed service times from 5:30 AM to 8:30 AM and then again from 4:30 PM to 7:30 PM. I’ll structure the details accordingly in the JSON format to clearly represent the information.",
+    "tokens": {
+      "input": 6770,
+      "output": 1286,
+      "total": 8056
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-03-22 19:40:00",
+      "endDate": "2025-03-22 23:40:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "19:40-23:40"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 14347,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00032945,
+      "outputCost": 0.0004548,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00078425
+    },
+    "hash": "cd1fb97426b82ceca03b0474e0c32691",
+    "sourceFile": "autolinee_sciopero_del_22_marzo_2025.html",
+    "thoughts": "**Extracting strike information**\n\nI need to output JSON according to the given instructions for strike extraction. The content mentions a four-hour strike on March 22, 2025, by OR.S.A., which is in the future from March 17, 2025. So, it is indeed an announcement of an upcoming strike. The instruction specifies that \"isStrike\" should be true only for an upcoming strike, and since this meets that criterion, I can set \"isStrike\" to true. I’ll need to pull \"strikeData\" with relevant details too.",
+    "tokens": {
+      "input": 6589,
+      "output": 1137,
+      "total": 7726
+    }
+  }
+}

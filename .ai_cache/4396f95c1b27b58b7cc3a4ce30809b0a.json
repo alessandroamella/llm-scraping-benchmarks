@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-28 08:20:00",
+      "endDate": "2025-01-28 12:20:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "08:20-12:20"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 14220,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00058145,
+      "outputCost": 0.0005548,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00113625
+    },
+    "hash": "4396f95c1b27b58b7cc3a4ce30809b0a",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_4_ore_martedi_28_gennaio_2025.html",
+    "thoughts": "**Extracting strike details**\n\nI need to format the output as JSON based on the schema for the upcoming strike announcement. The content in Italian indicates a 4-hour strike on January 28, 2025, which confirms we indeed have an upcoming event. Since it's a formal notice, I can set isStrike to true. I'll extract the necessary strike data including start and end times, which are from 08:20 to 12:20 on that date. This will help clarify the specifics for the announcement.",
+    "tokens": {
+      "input": 11629,
+      "output": 1387,
+      "total": 13016
+    }
+  }
+}

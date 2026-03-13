@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-20 00:00:00",
+      "endDate": "2025-06-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19374,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003848,
+      "outputCost": 0.0007804,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0011652
+    },
+    "hash": "9ac2d05c8da86bce7994730e4ed0aabc",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_24h_venerdi_20_giugno_2025.html",
+    "thoughts": "**Processing strike details**\n\nI need to output JSON that indicates whether there’s a strike, showing `isStrike` as true or false, and possibly including `strikeData` if it’s true. The content is about an upcoming 24-hour strike on June 20, 2025. It mentions the O.S. USB declaring this strike, and provides details like guaranteed service hours and initial departures after the strike. It’s clear that this announcement qualifies as a future strike, so I would set `isStrike` to true.",
+    "tokens": {
+      "input": 7696,
+      "output": 1951,
+      "total": 9647
+    }
+  }
+}

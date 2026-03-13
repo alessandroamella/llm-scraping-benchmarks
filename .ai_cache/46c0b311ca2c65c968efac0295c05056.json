@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-28 08:20:00",
+      "endDate": "2025-01-28 12:20:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21208,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005363,
+      "outputCost": 0.000836,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0013723
+    },
+    "hash": "46c0b311ca2c65c968efac0295c05056",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_di_4_ore_martedi_28_gennaio_2025.html",
+    "thoughts": "**Evaluating strike data settings**\n\nI'm extracting strike data with specific start and end dates in the format 'yyyy-MM-dd HH:mm:ss'. The location type is listed as \"azienda,\" which might imply either \"REGIONAL\" or \"NATIONAL\". Given \"aziendale\" suggests company-wide, I’m leaning toward NATIONAL. The instructions clarify that for national strikes, locationCodes should be null. Since \"aziendale\" indicates it's internal to the company, I think it's safer to set locationType as NATIONAL with locationCodes set to null.",
+    "tokens": {
+      "input": 10726,
+      "output": 2090,
+      "total": 12816
+    }
+  }
+}

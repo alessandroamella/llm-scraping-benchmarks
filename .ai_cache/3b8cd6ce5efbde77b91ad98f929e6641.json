@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-20 00:00:00",
+      "endDate": "2025-06-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18800,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005226,
+      "outputCost": 0.0008664,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.001389
+    },
+    "hash": "3b8cd6ce5efbde77b91ad98f929e6641",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_24h_giorno_venerdi_20_giugno_2025.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI've got a document here that seems to announce an upcoming strike. The Italian text translates to \"Notice of a 24-hour strike on Friday, June 20, 2025,\" related to a national strike by O.S. USB. It's clear that this is for 24 hours and includes specific time frames for limited services. So, I can confidently say this is an announcement of the strike, making `isStrike = true`. Now, I need to extract the strike data in the right format.",
+    "tokens": {
+      "input": 10452,
+      "output": 2166,
+      "total": 12618
+    }
+  }
+}

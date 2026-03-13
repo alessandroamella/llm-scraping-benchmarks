@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24379,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00055055,
+      "outputCost": 0.0009984,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00154895
+    },
+    "hash": "2a4830b7269b6b59d4e0d106b0e947fb",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_di_24_ore_venerdi_13_dicembre_2024_aggiornamento.html",
+    "thoughts": "**Determining strike announcement**\n\nThe document is in Italian and discusses an upcoming strike, specifically \"Linea Metropolitana: Avviso di sciopero di 24 ore venerdì 13 dicembre 2024 - Aggiornamento - EAV srl.\" It mentions that the strike on December 13 is reinstated as a 24-hour strike due to a ruling from the Lazio TAR. Since it clearly announces the strike for tomorrow, it seems like I should mark isStrike as true. The article's date is December 12, 2024.",
+    "tokens": {
+      "input": 11011,
+      "output": 2496,
+      "total": 13507
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22279,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005711,
+      "outputCost": 0.0006372,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0012083
+    },
+    "hash": "1f9ee19b2af629b8d437dd3ea894f431",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_di_24_ore_del_13_dicembre_2024_aggiornamento.html",
+    "thoughts": "**Clarifying strike details**\n\nI’m noting that \"24 ore\" translates to 24 hours in Italian, and the content mentions a guarantee of service during the strike. They specify guaranteed service times: 05:30 to 08:30 and 16:30 to 19:30, and detail last departures. For the strike data, I need to determine the start date: it’s set to begin on December 13, 2024, at 00:00 local time. It should run for 24 hours until 23:59:59, formatted as 'yyyy-MM-dd HH:mm:ss'.",
+    "tokens": {
+      "input": 11422,
+      "output": 1593,
+      "total": 13015
+    }
+  }
+}

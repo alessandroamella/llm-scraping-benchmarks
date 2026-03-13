@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 17832,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000365,
+      "outputCost": 0.0005584,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0009234
+    },
+    "hash": "c11b1d967c54abfa1b7bd9ead6e2ecbb",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_24_ore_del_13_dicembre_2024_aggiornamento.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to check if this content is about an upcoming strike announcement. The title mentions a 24-hour strike on December 13, 2024, and it looks like the details provide an update about this. It seems it was previously stated as four hours? The update confirms it’s back to 24 hours. It also specifies guaranteed service times. Overall, it clearly indicates a strike announcement for December 13, 2024, so I’d say isStrike should be true.",
+    "tokens": {
+      "input": 7300,
+      "output": 1396,
+      "total": 8696
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18506,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00053125,
+      "outputCost": 0.0006736,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00120485
+    },
+    "hash": "c3ccdda1bb054a4db5e8aaf74785f200",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_di_24_ore_del_13_dicembre_2024_aggiornamento.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to determine if this document is announcing a new or upcoming strike, and it looks like the content is in Italian. The title indicates a 24-hour strike on December 13, 2024. The text mentions that a request for suspension has been accepted, which suggests the strike will indeed occur as originally planned. It seems clear this document serves as a notice of a confirmed 24-hour strike. I'll make sure to format this correctly in JSON as required!",
+    "tokens": {
+      "input": 10625,
+      "output": 1684,
+      "total": 12309
+    }
+  }
+}

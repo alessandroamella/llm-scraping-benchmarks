@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 17406,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00033975,
+      "outputCost": 0.0006704,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00101015
+    },
+    "hash": "46db3024046819827272323566fd255d",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_generale_di_24h_per_venerdi_12_dicembre_2025.html",
+    "thoughts": "**Processing strike announcement**\n\nI'm noting that there's an announcement for a 24-hour general strike on Friday, December 12, 2025, proclaimed by CGIL. It indicates future service times, so I need to confirm that isStrike is true. I must ensure the required format for strikeData with startDate and endDate in 'yyyy-MM-dd HH:mm:ss'. The location type is \"NATIONAL\" based on the content mentioning \"nazionale.\" This strike is for all categories, both public and private, as stated in the announcement.",
+    "tokens": {
+      "input": 6795,
+      "output": 1676,
+      "total": 8471
+    }
+  }
+}

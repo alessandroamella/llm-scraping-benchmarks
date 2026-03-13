@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-20 00:00:00",
+      "endDate": "2025-06-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 17952,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00033285,
+      "outputCost": 0.0006516,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00098445
+    },
+    "hash": "e68878a0ec0fe91c4fd551b013937d7d",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_24h_giorno_venerdi_20_giugno_2025.html",
+    "thoughts": "**Extracting strike data**\n\nI'm looking at the details for a 24-hour strike on June 20, 2025. The required format for dates is 'yyyy-MM-dd HH:mm:ss', but there’s no specified start time. Typically, for a 24-hour strike in Italian union actions, it's from 00:00 to 23:59. So, I might set the start date as 2025-06-20 00:00:00 and the end date as 2025-06-20 23:59:59. This aligns with the content saying it's a 24-hour day strike on that Friday. It's also a national strike.",
+    "tokens": {
+      "input": 6657,
+      "output": 1629,
+      "total": 8286
+    }
+  }
+}

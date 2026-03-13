@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18233,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00033355,
+      "outputCost": 0.0008056,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00113915
+    },
+    "hash": "35285ee6648546ee58937889cdb87c70",
+    "sourceFile": "eav_autolinee_avviso_di_sciopero_di_24_ore_venerdi_13_dicembre_2024.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to format the output as JSON according to the strike_extraction schema. The notice is in Italian, announcing a 24-hour strike on Friday, December 13, 2024. This is an upcoming event rather than a cancellation. It mentions a national strike led by OS USB. The announcement includes service guarantee times from 5:30 AM to 8:30 AM and again from 4:30 PM to 7:30 PM, depending on how many workers participate. The date mentioned is December 9, 2024.",
+    "tokens": {
+      "input": 6671,
+      "output": 2014,
+      "total": 8685
+    }
+  }
+}

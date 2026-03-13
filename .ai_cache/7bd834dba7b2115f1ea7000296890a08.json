@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21239,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00034895,
+      "outputCost": 0.0007068,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00105575
+    },
+    "hash": "7bd834dba7b2115f1ea7000296890a08",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_di_24_ore_venerdi_13_dicembre_2024_aggiornamento.html",
+    "thoughts": "**Extracting strike information**\n\nI need to figure out if the document is announcing an upcoming strike. It’s an Italian page saying there'll be a 24-hour strike on December 13, 2024. The text states “lo sciopero proclamato per domani” meaning it’s definitely an announcement for tomorrow, from the perspective of December 12. The page gives essential details like motivations and guaranteed service times, and it even starts listing some lines affected. It confirms that this is indeed an upcoming strike.",
+    "tokens": {
+      "input": 6979,
+      "output": 1767,
+      "total": 8746
+    }
+  }
+}

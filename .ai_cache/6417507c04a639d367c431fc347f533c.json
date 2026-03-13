@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-09-22 00:00:00",
+      "endDate": "2025-09-22 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20171,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00053685,
+      "outputCost": 0.0006824,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00121925
+    },
+    "hash": "6417507c04a639d367c431fc347f533c",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_generale_nazionale_lunedi_22_settembre_2025.html",
+    "thoughts": "**Clarifying strike details**\n\nI’m checking the details about the strike on September 22, 2025. It looks like there are two guaranteed times: \"05:30-08:30\" and \"16:30-19:30.\" However, the HTML has some non-ASCII spaces that need to be extracted. For the dates, it seems like the start date could be \"2025-09-22 00:00:00,\" but I'm a bit unsure about the timing since the announcement mentions it lasts for 23 and 24 hours. I'll ensure the format is correct: 'yyyy-MM-dd HH:mm:ss.'",
+    "tokens": {
+      "input": 10737,
+      "output": 1706,
+      "total": 12443
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-24 00:00:00",
+      "endDate": "2025-02-24 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 15434,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00054345,
+      "outputCost": 0.0006968,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00124025
+    },
+    "hash": "e5a79b3f5a95998df0df83ad5286a53d",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_24h_lunedi_24_febbraio_2025.html",
+    "thoughts": "**Interpreting location and time codes**\n\nI’m exploring how to handle location codes for different types of strikes. For regional strikes, I need a 2-digit ISTAT code, but for national strikes, I should omit it and set the location type to \"NATIONAL.\" The schema specifies values like \"REGIONAL\" or \"NATIONAL,\" so I need to ensure that I set these correctly. For guaranteed times, I should follow the provided times and format, so I’ll include those as an array of strings.",
+    "tokens": {
+      "input": 10869,
+      "output": 1742,
+      "total": 12611
+    }
+  }
+}

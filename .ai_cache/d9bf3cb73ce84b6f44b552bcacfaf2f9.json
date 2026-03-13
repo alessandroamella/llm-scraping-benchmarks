@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-01-19 00:00:00",
+      "endDate": "2026-01-19 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 17647,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003594,
+      "outputCost": 0.0008968,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0012562
+    },
+    "hash": "d9bf3cb73ce84b6f44b552bcacfaf2f9",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_aziendale_di_24_h_lunedi_19_gennaio_2026.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to extract details in JSON format for a potential strike from EAV srl regarding the Italian content about a 24-hour strike on January 19, 2026. It mentions guaranteed service times from 5:30 AM to 8:30 AM and from 4:30 PM to 7:30 PM. Given these specifics, it’s clear that this is an announcement of an upcoming strike. So, I'll set isStrike to true and format the start and end dates accordingly.",
+    "tokens": {
+      "input": 7188,
+      "output": 2242,
+      "total": 9430
+    }
+  }
+}

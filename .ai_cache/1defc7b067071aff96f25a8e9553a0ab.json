@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 14383,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00036535,
+      "outputCost": 0.0006764,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00104175
+    },
+    "hash": "1defc7b067071aff96f25a8e9553a0ab",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_generale_nazionale_di_venerdi_12_dicembre_2025.html",
+    "thoughts": "**Extracting strike data**\n\nI need to produce a JSON following the schema in strike_extraction. I’m looking at this document that announces a national general strike on December 12, 2025. It mentions the strike is proclaimed by CGIL, affects both railway and road services, and will respect guaranteed time slots. It also provides details like guaranteed service times and departures. This confirms it’s an announcement of an upcoming strike, so I’m noting that isStrike should be true. Now, I’ll extract the relevant dates in the required format.",
+    "tokens": {
+      "input": 7307,
+      "output": 1691,
+      "total": 8998
+    }
+  }
+}

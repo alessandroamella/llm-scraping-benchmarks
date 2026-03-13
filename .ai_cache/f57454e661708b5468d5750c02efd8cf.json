@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-09-22 00:00:00",
+      "endDate": "2025-09-22 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 17196,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00035845,
+      "outputCost": 0.0006732,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00103165
+    },
+    "hash": "f57454e661708b5468d5750c02efd8cf",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_di_24h_giorno_22_settembre_2025.html",
+    "thoughts": "**Evaluating strike details**\n\nI'm noticing that the document doesn’t provide a start time, but it mentions guaranteed times during the strike, which is common in transit contexts. My current plan is to set the startDate to 2025-09-22 00:00:00 and endDate to 2025-09-22 23:59:59, ensuring that I use the correct format. However, since there's no explicit start time, I’m not sure if we should include it. The schema seems to require both dates, but that’s a bit confusing!",
+    "tokens": {
+      "input": 7169,
+      "output": 1683,
+      "total": 8852
+    }
+  }
+}

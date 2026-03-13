@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-07-23 09:00:00",
+      "endDate": "2025-07-23 11:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22971,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005555,
+      "outputCost": 0.0010676,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0016231
+    },
+    "hash": "29d61955ec964c6bfe5ec3b92a2c94ce",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_di_2_ore_giorno_23_luglio_2025.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to confirm if the document announces a new strike. The title indicates a strike announcement in Italian for July 23, 2025, from 09:00 to 11:00, by O.S. CONF.A.I.L. \n\nThe document includes sections about the strike details, confirming it is indeed an announcement. I’ll set isStrike to true and extract the necessary strike data, like the start and end time, location, and any time zone considerations necessary.",
+    "tokens": {
+      "input": 11110,
+      "output": 2669,
+      "total": 13779
+    }
+  }
+}

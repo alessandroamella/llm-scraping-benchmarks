@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-20 00:00:00",
+      "endDate": "2025-06-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 16522,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0003653,
+      "outputCost": 0.0006636,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0010289
+    },
+    "hash": "152344ed8e40fb02c5c4d873dc950f76",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_24h_venerdi_20_giugno_2025.html",
+    "thoughts": "**Evaluating location type for strikes**\n\nI'm considering how to handle the locationType for a national strike. The schema allows for \"REGIONAL,\" \"NATIONAL,\" or null, while it seems the instructions suggest that location codes should be omitted for national strikes. So, for a national strike, should I set locationType to null or \"NATIONAL\"? My gut says it might be fitting to choose \"NATIONAL\" and keep locationCodes as null. There's some nuance here, and I’m weighing the instructions carefully.",
+    "tokens": {
+      "input": 7306,
+      "output": 1659,
+      "total": 8965
+    }
+  }
+}

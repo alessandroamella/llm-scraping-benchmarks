@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-01-19 00:00:00",
+      "endDate": "2026-01-19 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21018,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00059055,
+      "outputCost": 0.0008292,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00141975
+    },
+    "hash": "4420cbd61d16665af2a1cac7b15d499d",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_aziendale_di_24_h_lunedi_19_gennaio_2026.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to figure out if this document announces an upcoming strike. The title translates to \"Notice of 24-hour company strike on Monday 19 January 2026.\" The content confirms that a strike has been proclaimed for that date, affecting only the travel staff of the Vesuviane lines due to organizational issues. It includes guaranteed service times and their last departures. Since it clearly announces a strike on 19 January 2026, I'll conclude that the variable \"isStrike\" should be true.",
+    "tokens": {
+      "input": 11811,
+      "output": 2073,
+      "total": 13884
+    }
+  }
+}

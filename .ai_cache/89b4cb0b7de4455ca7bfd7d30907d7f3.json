@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-09-22 00:00:00",
+      "endDate": "2025-09-22 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18545,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00056115,
+      "outputCost": 0.000872,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00143315
+    },
+    "hash": "89b4cb0b7de4455ca7bfd7d30907d7f3",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_di_24h_giorno_22_settembre_2025.html",
+    "thoughts": "**Determining strike announcement details**\n\nI need to format the output in JSON according to the specified schema. The content I have is in Italian, announcing a national general strike on September 22, 2025. The document mentions reasons for the strike: a protest against war and the worsening humanitarian situation. It also provides a schedule for service. This is clearly an announcement for an upcoming strike, so I should ensure the JSON reflects that.",
+    "tokens": {
+      "input": 11223,
+      "output": 2180,
+      "total": 13403
+    }
+  }
+}

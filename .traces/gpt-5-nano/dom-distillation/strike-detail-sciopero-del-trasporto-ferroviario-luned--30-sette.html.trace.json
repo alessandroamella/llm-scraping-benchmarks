@@ -1,30 +1,15 @@
 {
-  "timestamp": "2026-03-13T00:12:36.036Z",
-  "isCacheHit": false,
+  "timestamp": "2026-03-13T01:39:58.741Z",
+  "isCacheHit": true,
   "request": {
     "sourceName": "Trenord",
     "fileName": "strike-detail-sciopero-del-trasporto-ferroviario-luned--30-sette.html",
     "model": "gpt-5-nano",
     "strategy": "dom-distillation",
     "useLenientSchema": true,
-    "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"Trenord\" (the public transport company of Lombardia (03)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"> <h3>Context Metadata</h3> <ul><li>Page Title: Sciopero 30 settembreUser-logged-no-picCloseSend-mail-OKAlert</li></ul> </div><hr/><div> <div> <h1> <div><span> Sciopero del trasporto ferroviario lunedì 30 settembre </span></div> </h1> <span> </span> <div><span> giovedì 26/09/2024 </span></div> <span> </span> </div> <div> <!-- start simpleTextMedia --> <div> <div> <div> <div> <div><span>L’agitazione indetta da ORSA e Uiltrasporti&nbsp;</span><div><span>dalle ore 3 del 30 settembre alle ore 2 del 1° ottobre</span></div></div> <div>&nbsp;</div> <span><span>Si invitano i passeggeri a consultare su trenord.it l’elenco dei treni garantiti negli orari 6-9 e 18-21, con particolare attenzione alle corse serali</span></span> <div>&nbsp;</div> <div><span>Dalle ore 3 di lunedì 30 settembre alle ore 2 di martedì 1° ottobre le organizzazioni sindacali ORSA e Uiltrasporti hanno indetto uno sciopero che, per l’intera giornata di lunedì, avrà ripercussioni sulla circolazione dei treni regionali, suburbani e dei collegamenti aeroportuali Malpensa Express e S50 Malpensa Aeroporto-Bellinzona. Le corse subiranno variazioni e cancellazioni.</span></div> <div>&nbsp;</div> <div>Negli orari 6-9 e 18-21 circoleranno i treni indicati nella lista delle corse garantite, disponibile su trenord.it. <div><span>Si invitano i passeggeri a consultare l’elenco prima di mettersi in viaggio nella giornata di lunedì, con particolare attenzione alle corse serali per il rientro</span></div>.</div> <div>&nbsp;</div> <div><span>In particolare, la mattina viaggeranno i convogli con orario di partenza dalla stazione di origine dopo le 6 e arrivo alla destinazione finale entro le 9. Nella fascia pomeridiana, circoleranno quelli con partenza prevista dopo le 18 e con arrivo entro le 21.</span></div> <span>&nbsp;</span> <div><span>Tutte le altre corse previste da orario non potranno essere garantite.</span></div> <span>&nbsp;</span> <div><span>Saranno previsti autobus sostitutivi, senza fermate intermedie, per le corse non effettuate tra Milano Cadorna (da via Paleocapa, 1) e Malpensa Aeroporto e tra Busto FS e Malpensa Aeroporto.</span></div> <span>&nbsp;</span> <div><span>Le informazioni sulla circolazione saranno disponibili sulle pagine di ogni linea della App e del sito Trenord.</span></div> <span>&nbsp;</span> <span>Si invitano i passeggeri a prestare attenzione ad annunci sonori e monitor di stazione.</span> <span>&nbsp;</span> <hr> <span><a href=\"/fileadmin/contenuti/TRENORD/3-News/Trenord_Informa/Comunicati_stampa/2024/Trenord_240926_CS_Sciopero_30settembre_def.pdf\">Comunicato stampa sciopero 30 settembre 2024</a></span> </div> </div> </div> </div> <!-- end simpleTextMedia --> </div> </div> <div>PDF Document Found: /fileadmin/contenuti/TRENORD/3-News/Trenord_Informa/Comunicati_stampa/2024/Trenord_240926_CS_Sciopero_30settembre_def.pdf</div>"
+    "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"Trenord\" (the public transport company of Lombardia (03)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"> <h3>Context Metadata</h3> <ul><li>Page Title: Sciopero 30 settembreUser-logged-no-picCloseSend-mail-OKAlert</li><li>Date News: giovedì 26/09/2024</li><li>Header: Sciopero del trasporto ferroviario lunedì 30 settembre</li></ul> </div><hr/><div> <div> <h1> <b> Sciopero del trasporto ferroviario lunedì 30 settembre </b> </h1> <p> giovedì 26/09/2024 </p> </div> <div> <!-- start simpleTextMedia --> <div> <div> <div> <div> <h4><strong>L’agitazione indetta da ORSA e Uiltrasporti&nbsp;</strong><strong>dalle ore 3 del 30 settembre alle ore 2 del 1° ottobre</strong></h4> <h4><strong>Si invitano i passeggeri a consultare su trenord.it l’elenco dei treni garantiti negli orari 6-9 e 18-21, con particolare attenzione alle corse serali</strong></h4> <p>Dalle ore 3 di lunedì 30 settembre alle ore 2 di martedì 1° ottobre le organizzazioni sindacali ORSA e Uiltrasporti hanno indetto uno sciopero che, per l’intera giornata di lunedì, avrà ripercussioni sulla circolazione dei treni regionali, suburbani e dei collegamenti aeroportuali Malpensa Express e S50 Malpensa Aeroporto-Bellinzona. Le corse subiranno variazioni e cancellazioni.</p> <p>Negli orari 6-9 e 18-21 circoleranno i treni indicati nella lista delle corse garantite, disponibile su trenord.it. <strong>Si invitano i passeggeri a consultare l’elenco prima di mettersi in viaggio nella giornata di lunedì, con particolare attenzione alle corse serali per il rientro</strong>.</p> <p>In particolare, la mattina viaggeranno i convogli con orario di partenza dalla stazione di origine dopo le 6 e arrivo alla destinazione finale entro le 9. Nella fascia pomeridiana, circoleranno quelli con partenza prevista dopo le 18 e con arrivo entro le 21.</p> <p>Tutte le altre corse previste da orario non potranno essere garantite.</p> <p>Saranno previsti autobus sostitutivi, senza fermate intermedie, per le corse non effettuate tra Milano Cadorna (da via Paleocapa, 1) e Malpensa Aeroporto e tra Busto FS e Malpensa Aeroporto.</p> <p>Le informazioni sulla circolazione saranno disponibili sulle pagine di ogni linea della App e del sito Trenord.</p> <p>Si invitano i passeggeri a prestare attenzione ad annunci sonori e monitor di stazione.</p> <hr> <p><a href=\"/fileadmin/contenuti/TRENORD/3-News/Trenord_Informa/Comunicati_stampa/2024/Trenord_240926_CS_Sciopero_30settembre_def.pdf\">Comunicato stampa sciopero 30 settembre 2024</a></p> </div> </div> </div> </div> <!-- end simpleTextMedia --> </div> </div> <div>PDF Document Found: /fileadmin/contenuti/TRENORD/3-News/Trenord_Informa/Comunicati_stampa/2024/Trenord_240926_CS_Sciopero_30settembre_def.pdf</div>"
   },
   "response": {
-    "rawOutput": {
-      "isStrike": true,
-      "strikeData": {
-        "startDate": "2024-09-30 03:00:00",
-        "endDate": "2024-10-01 02:00:00",
-        "locationType": "REGIONAL",
-        "locationCodes": [
-          "03"
-        ],
-        "guaranteedTimes": [
-          "06:00-09:00",
-          "18:00-21:00"
-        ]
-      }
-    },
     "parsedData": {
       "isStrike": true,
       "strikeData": {
@@ -41,18 +26,18 @@
       }
     },
     "usage": {
-      "input": 1708,
-      "output": 1222,
-      "total": 2930
+      "input": 1638,
+      "output": 1662,
+      "total": 3300
     },
     "costUsd": {
-      "inputCost": 0.0000854,
-      "outputCost": 0.0004888,
+      "inputCost": 0.0000819,
+      "outputCost": 0.0006648,
       "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.0005742
+      "totalCost": 0.0007467
     },
-    "durationMs": 19096,
-    "thoughts": "**Determining upcoming strike details**\n\nI need to generate a JSON output based on the information provided. The content clearly indicates an upcoming strike: \"Sciopero del trasporto ferroviario lunedì 30 settembre\" with specified dates from 3 AM on September 30 to 2 AM on October 1. It's organized by the ORSA and Uiltrasporti unions. It mentions guaranteed trains in specific time windows. So, yes, it’s definitely an announcement about the strike. I’ll format the dates to 'yyyy-MM-dd HH:mm:ss'."
+    "durationMs": 18676,
+    "thoughts": "**Analyzing strike data**\n\nI see that the text is about a strike affecting the \"trasporto ferroviario\" in the Lombardy region, mentioning places like Milano Cadorna and Malpensa, which confirms it’s regional. The instruction is to set \"isStrike\" to true for the announcement and provide strike data with specific dates. The start date is September 30, 2024, at 03:00 and the end date is October 1, 2024, at 02:00. I'll format those dates as per the requirement."
   }
 }

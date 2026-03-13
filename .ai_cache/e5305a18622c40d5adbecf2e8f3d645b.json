@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 25868,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00051405,
+      "outputCost": 0.0009204,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00143445
+    },
+    "hash": "e5305a18622c40d5adbecf2e8f3d645b",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_generale_nazionale_di_24_ore_venerdi_28_novembre_2025.html",
+    "thoughts": "**Extracting strike information**\n\nI need to pull strike information from a webpage about Italian public transport. The title mentions a general 24-hour strike on November 28, 2025, declared by the USB union. The service will operate regularly during certain guaranteed hours, specifically from 5:30 AM to 8:30 AM and 4:30 PM to 7:30 PM. Since this is an upcoming strike, I'm confirming that the isStrike flag should definitely be set to true.",
+    "tokens": {
+      "input": 10281,
+      "output": 2301,
+      "total": 12582
+    }
+  }
+}

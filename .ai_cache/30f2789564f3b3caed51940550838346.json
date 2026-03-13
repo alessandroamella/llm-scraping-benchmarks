@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-07-23 09:00:00",
+      "endDate": "2025-07-23 11:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "08:45-09:00",
+        "11:15-11:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 23808,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00034455,
+      "outputCost": 0.0011672,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00151175
+    },
+    "hash": "30f2789564f3b3caed51940550838346",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_di_2_ore_mercoledi_23_luglio_2025.html",
+    "thoughts": "**Extracting strike data**\n\nI need to construct a JSON output following the schema for strike extraction, which includes a boolean value for isStrike and potentially strikeData if it’s true. The content details an upcoming 2-hour company strike in Italy on July 23, 2025, for safety reasons. I confirm that isStrike should be true. The strike type is \"azienda,\" and it’s in the Campania region. I need to check how locationType and locationCodes are structured too, as they may need specific formats.",
+    "tokens": {
+      "input": 6891,
+      "output": 2918,
+      "total": 9809
+    }
+  }
+}
