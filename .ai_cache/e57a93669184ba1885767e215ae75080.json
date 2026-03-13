@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-05-11 00:00:00",
+      "endDate": "2025-05-11 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22984,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000955,
+      "outputCost": 0.0006768,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0007723
+    },
+    "hash": "e57a93669184ba1885767e215ae75080",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_24h_domenica_11_maggio_2025.html",
+    "thoughts": "**Clarifying date and time formats**\n\nThe \"24 ore\" suggests a full day's timeframe. The guaranteed service times are 05:30-08:30 and 16:30-19:30, covering certain hours but not the entire day. For a 24-hour period on 11 May 2025, I could set startDate to 2025-05-11 00:00:00 and endDate to 2025-05-11 23:59:59. It seems like all the formats need to conform to 'yyyy-MM-dd HH:mm:ss'. Regarding locationType, it likely refers to \"REGIONAL\" since the document is about \"Linee Vesuviane\" in the Naples area.",
+    "tokens": {
+      "input": 1910,
+      "output": 1692,
+      "total": 3602
+    }
+  }
+}

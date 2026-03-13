@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6094,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006455,
+      "outputCost": 0.0001492,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00021375
+    },
+    "hash": "9aa58bb659a8917bd07757b99e5a6ed7",
+    "sourceFile": "sciopero_trasporto_pubblico_aperte_metropolitane.html",
+    "thoughts": "**Analyzing strike information**\n\nI need to output JSON based on the article titled \"Sciopero del trasporto pubblico, aperte le metropolitane.\" It mentions a \"24-hour strike\" currently in progress, so I'll note that as an ongoing situation. Because it's about a real-time update for an ongoing strike, I should set `isStrike` to false. Since there's no mention of an upcoming strike, the output will be: `{\"isStrike\": false}`. Let’s make sure it reflects the correct status!",
+    "tokens": {
+      "input": 1291,
+      "output": 373,
+      "total": 1664
+    }
+  }
+}

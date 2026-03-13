@@ -1,0 +1,32 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 26927,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000618,
+      "outputCost": 0.0007568,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008186
+    },
+    "hash": "25d9cdaef2a478466ea6d6ff062e149e",
+    "sourceFile": "eav_informa_sciopero_di_4_ore_del_28_01_2025.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to respond using the JSON format for strike extraction. The content indicates an upcoming strike on January 28, 2025, lasting for 4 hours. The Italian text states that the strike won’t affect substitute bus services, so they’ll run normally. Given that there’s a planned strike for tomorrow, it confirms that it’s forthcoming. Therefore, I should set isStrike to true. However, I should check if it specifies exact start and end times.",
+    "tokens": {
+      "input": 1236,
+      "output": 1892,
+      "total": 3128
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8503,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006105,
+      "outputCost": 0.000176,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00023705
+    },
+    "hash": "180140060b214c2fc292e73be152f076",
+    "sourceFile": "sciopero_del_trasporto_pubblico_adesione_personale_atac_al_121.html",
+    "thoughts": "**Evaluating strike information**\n\nI need to format the output as JSON following the strike_extraction schema. The Italian text indicates a public transport strike and mentions participation at 12.1%, which refers to a strike that already occurred, not one that is upcoming. So, I conclude that \"isStrike\" should be false since there’s no announcement of a new strike and no specific start or end date provided. The output will be:  \n{\"isStrike\": false}",
+    "tokens": {
+      "input": 1221,
+      "output": 440,
+      "total": 1661
+    }
+  }
+}

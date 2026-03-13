@@ -1,15 +1,23 @@
 {
-  "timestamp": "2026-03-09T19:15:45.077Z",
-  "isCacheHit": true,
+  "timestamp": "2026-03-13T15:15:47.591Z",
+  "isCacheHit": false,
   "request": {
     "sourceName": "Trenitalia",
     "fileName": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-12-12-sciopero-nazionale-del-traspor.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "dom-distillation",
-    "useLenientSchema": true,
+    "useLenientSchema": false,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"Trenitalia\" (Italy's national railway operator).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"> <h3>Context Metadata</h3> <ul><li>Page Title: SCIOPERO NAZIONALE DEL TRASPORTO FERROVIARIO</li></ul> </div><hr/><div> <div> <h1>SCIOPERO NAZIONALE DEL TRASPORTO FERROVIARIO</h1> <div> <span>In vigore: 12 DICEMBRE 2025</span> </div> <div></div> <div> <div> Servizio: <strong>Alta Velocità, Lunga percorrenza, Regionale</strong> </div> <div> Causa Modifica: <strong>Sciopero</strong> </div> <div> Impresa: <strong>Gruppo FS Italiane, Italo Nuovo Trasporto Viaggiatori, Trenord</strong> </div> </div> </div> </div> <div> <div> <div> <p><b>Dalle ore 00:01 alle ore 21:00 di venerdì 12 dicembre 2025</b> è stato indetto uno sciopero del personale del <b>Gruppo FS Italiane, Italo e Trenord.</b></p> <p>Lo sciopero può comportare modifiche al servizio, <b>anche prima dell’inizio e dopo la sua conclusione.</b></p> <p>Maggiori informazioni sui servizi garantiti in caso di sciopero sono disponibili sui canali digitali delle Imprese ferroviarie o presso il personale di assistenza clienti e le biglietterie.</p> </div> </div> </div>"
   },
   "response": {
+    "rawOutput": {
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2025-12-12 00:01:00",
+        "endDate": "2025-12-12 21:00:00",
+        "locationType": "NATIONAL"
+      }
+    },
     "parsedData": {
       "isStrike": true,
       "strikeData": {
@@ -20,17 +28,19 @@
     },
     "usage": {
       "input": 763,
-      "output": 89,
-      "total": 1397
+      "output": 82,
+      "cached": 0,
+      "thinking": 0,
+      "total": 845
     },
     "costUsd": {
       "inputCost": 0.00019075,
-      "outputCost": 0.0001335,
-      "thinkingCost": 0.0008175,
+      "outputCost": 0.000123,
+      "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.00114175
+      "totalCost": 0.00031375
     },
-    "durationMs": 5442,
-    "thoughts": "**Strike Analysis and JSON Output**\n\nOkay, let's break this down. My task is to verify if this text describes an upcoming strike and, if so, format the information into a JSON structure based on the provided schema. The input is pretty straightforward: it's announcing a \"SCIOPERO NAZIONALE DEL TRASPORTO FERROVIARIO\" – a national railway strike – scheduled for December 12, 2025.\n\nFirst, the criteria. National strike? Check. Specific date: December 12, 2025? Check. Timeframe: 00:01 to 21:00 on that date? Check. Yep, it's definitely an upcoming strike.\n\nNow, to extract the relevant data: The date is unambiguously Friday, December 12, 2025. The start time is 00:01, which converts neatly to \"2025-12-12 00:01:00\". The end time is 21:00, or \"2025-12-12 21:00:00\". The strike is identified as \"Nazionale,\" meaning it is \"National\" in scope.  Guaranteed times? No, that information isn't present in the text, so that field will be null, or omitted to stay concise.\n\nFinally, let's assemble the JSON output. We've got `isStrike: true`. The `strikeData` object needs the `startDate`, which is \"2025-12-12 00:01:00\", and the `endDate`, which is \"2025-12-12 21:00:00\". The `locationType` is \"NATIONAL,\" and since there are no location codes provided in the text, `locationCodes` should be set to null.\n\nLet me double-check the date formats: yyyy-MM-dd HH:mm:ss for both start and end dates. Looks correct. And the `locationType`? \"NATIONAL\" is the right translation.\n\nPutting it all together, the finalized JSON is:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-12-12 00:01:00\",\n    \"endDate\": \"2025-12-12 21:00:00\",\n    \"locationType\": \"NATIONAL\",\n    \"locationCodes\": null\n  }\n}\n```\n\nThis is the output, matching the schema.\n\n\n"
+    "durationMs": 1241,
+    "thoughts": ""
   }
 }

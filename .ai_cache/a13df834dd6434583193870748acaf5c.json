@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-10 19:32:00",
+      "endDate": "2025-01-10 23:32:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "19:32-23:32"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19909,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000776,
+      "outputCost": 0.0005428,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0006204
+    },
+    "hash": "a13df834dd6434583193870748acaf5c",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_di_4_ore10_gennaio_2025.html",
+    "thoughts": "**Determining strike details**\n\nI need to confirm if the document announces a new or upcoming strike. It’s in Italian and states there's a national strike for 4 hours on January 10, 2025, organized by O.S. CONF.A.I.L. The strike times are from 19:32 to 23:32, and it provides guaranteed departure details. This indicates it’s definitely an announcement, so I’m setting isStrike to true. I’ll extract strike data and ensure the dates are in the correct format!",
+    "tokens": {
+      "input": 1552,
+      "output": 1357,
+      "total": 2909
+    }
+  }
+}

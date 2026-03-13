@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8761,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006115,
+      "outputCost": 0.0001808,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00024195
+    },
+    "hash": "5eb8fd1a0ba36a7eaac6748f73efa53a",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_279.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to determine whether the document is referencing a new or upcoming strike. It discusses \"Sciopero del trasporto pubblico, adesione personale Atac al 27,9%,\" indicating participation in a strike that took place, showing a 27.9% adherence by Atac personnel.\n\nSince it's clearly dated today and regards past participation, I can conclude this isn't about an upcoming strike. The \"isStrike\" value should be set to false, and I’ll format the JSON output accordingly.",
+    "tokens": {
+      "input": 1223,
+      "output": 452,
+      "total": 1675
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-12-02 00:00:00",
+      "endDate": "2022-12-02 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24819,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000653,
+      "outputCost": 0.0010568,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0011221
+    },
+    "hash": "c220fc9435be5bfca11f2eef7c778190",
+    "sourceFile": "venerd_2_dicembre_sciopero_generale_nazionale_24_ore_rischio_trasporto_pubblico_romano.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to figure out if the document announces a new strike. It mentions a general strike on Friday, December 2, stating that public transport in Rome will be affected and that this strike is supported by unions. Real-time updates are available on romamobilita.it. The content clearly says it's regarding an upcoming strike, so I should set the isStrike variable to true. It looks like this is confirming the strike announcement for that specified date.",
+    "tokens": {
+      "input": 1306,
+      "output": 2642,
+      "total": 3948
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6216,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006185,
+      "outputCost": 0.000126,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00018785
+    },
+    "hash": "8af5aefb7b99bbae050a0fb161dd3e3e",
+    "sourceFile": "sospeso_sciopero_atac_16_gennaio_servizio_sar_regolare.html",
+    "thoughts": "**Processing strike information**\n\nI need to output JSON according to the strike extraction schema. The Italian content indicates that the Atac strike on January 16 has been suspended, which means it's not upcoming. The instructions state that if a strike is canceled, I should set `isStrike` to false. The body confirms that public transport will run regularly on that day. Therefore, my JSON output should reflect that there is no strike, so I'll set:\n\n{\n  \"isStrike\": false\n}",
+    "tokens": {
+      "input": 1237,
+      "output": 315,
+      "total": 1552
+    }
+  }
+}

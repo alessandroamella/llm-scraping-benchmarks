@@ -1,15 +1,26 @@
 {
-  "timestamp": "2026-03-09T19:15:42.310Z",
-  "isCacheHit": true,
+  "timestamp": "2026-03-13T15:14:35.894Z",
+  "isCacheHit": false,
   "request": {
     "sourceName": "EAV",
     "fileName": "linee_suburbane_avviso_di_sciopero_24h_domenica_11_maggio_2025.html",
     "model": "gpt-5-nano",
     "strategy": "dom-distillation",
-    "useLenientSchema": true,
+    "useLenientSchema": false,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"EAV\" (the public transport company of Campania (15)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"> <h3>Context Metadata</h3> <ul><li>Page Title: Linee Suburbane: avviso di sciopero 24h domenica 11 maggio 2025 - EAV srl</li></ul> </div><hr/><article> <section> <div> <div> <div> <h2> Linee Suburbane: avviso di sciopero 24h domenica 11 maggio 2025 </h2> </div> </div> </div> <div> <div> <p> <small>Data: </small><br> <small><strong>6 Maggio 2025</strong></small> </p> </div> </div> </section> <section> <div> <div> <div> </div> </div> <div> <div> <section> <p>Per il giorno 11 maggio 2025 la O.S. Or.S.A. ha proclamato azione di sciopero aziendale di 24 ore avente le seguenti motivazioni: problematiche organizzazione aziendale.</p> <p>Durante l’ultima proclamazione di sciopero della O.S. Or.S.A., la percentuale di adesione è stata del 40,31% (sciopero aziendale di 4 ore del 22 marzo 2025)</p> <p>Sulla linea NAPOLI-PIEDIMONTE MATESE sarà garantito il servizio automobilistico sostitutivo come da programma domenicale e festivo.</p> <p>&nbsp;</p> <p>Sulla linea NAPOLI-BENEVENTO non sarà effettuato servizio sostitutivo in quanto giornata festiva.</p> <div> <div> <p><b>Categoria:&nbsp;</b><a href=\"https://www.eavsrl.it/categoria-disservizio/trasporto-pubblico/\">Trasporto pubblico</a></p> <p><b>Area:&nbsp;</b><a href=\"https://www.eavsrl.it/area/linee-suburbane/\">Linee Suburbane</a></p> </div> </div> <div></div> </section> </div> </div> </div> </section> </article>"
   },
   "response": {
+    "rawOutput": {
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2025-05-11 00:00:00",
+        "endDate": "2025-05-11 23:59:59",
+        "locationType": "REGIONAL",
+        "locationCodes": [
+          "15"
+        ]
+      }
+    },
     "parsedData": {
       "isStrike": true,
       "strikeData": {
@@ -22,18 +33,18 @@
       }
     },
     "usage": {
-      "input": 1307,
-      "output": 2014,
-      "total": 3321
+      "input": 1393,
+      "output": 1654,
+      "total": 3047
     },
     "costUsd": {
-      "inputCost": 0.00006535,
-      "outputCost": 0.0008056,
+      "inputCost": 0.00006965,
+      "outputCost": 0.0006616,
       "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.00087095
+      "totalCost": 0.00073125
     },
-    "durationMs": 24251,
-    "thoughts": "**Clarifying date formats**\n\nIt looks like the dates in the instruction should be in ISO 8601 format for the strikeData, with startDate and endDate specified as \"yyyy-MM-dd HH:mm:ss.\" The content mentions 24 hours on Sunday, May 11, 2025, so I think startDate would be 2025-05-11 00:00:00 and endDate at 2025-05-11 23:59:59. However, there’s ambiguity in the times mentioned for the guaranteedTimes arrays. I need to verify whether to include or omit them based on the instructions."
+    "durationMs": 21325,
+    "thoughts": "**Deciding on strike announcement**\n\nI need to see if the document announces an upcoming strike. The Italian text translates to a notice of a 24-hour strike on Sunday, May 11, 2025. Given that today’s date is May 6, 2025, this is indeed an upcoming strike. The relevant details confirm it will last 24 hours. I need to format the start and end dates as \"yyyy-MM-dd HH:mm:ss\" for clarity. So it's safe to say that `isStrike` should be true."
   }
 }

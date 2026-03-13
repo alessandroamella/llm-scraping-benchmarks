@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 10523,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000665,
+      "outputCost": 0.000236,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0003025
+    },
+    "hash": "ea9b230f4cd4639185c9da8a54e69035",
+    "sourceFile": "sciopero_del_trasporto_pubblico_metro_aperte_chiusa_la_termini_centocelle.html",
+    "thoughts": "**Determining strike status**\n\nI need to produce JSON according to the strike_extraction schema. The document talks about a public transport strike with ongoing conditions and updates. It mentions that metros are open, but the Termini-Centocelle line is closed. The text clearly indicates there's an ongoing national strike, so it’s not announcing an upcoming one. According to the instructions, since it's currently happening, I’ll set isStrike as false. I’ll prepare the JSON accordingly!",
+    "tokens": {
+      "input": 1330,
+      "output": 590,
+      "total": 1920
+    }
+  }
+}

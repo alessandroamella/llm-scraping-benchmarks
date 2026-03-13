@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:01:00",
+      "endDate": "2025-12-12 21:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24484,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006305,
+      "outputCost": 0.0007224,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00078545
+    },
+    "hash": "21716149aefd7f5e4e18b7847ee82333",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-12-12-sciopero-nazionale-del-traspor.html",
+    "thoughts": "**Determining strike announcement details**\n\nI'm working on producing a JSON based on the strike_extraction schema. The context suggests there’s an upcoming national railway strike in Italy on December 12, 2025. The phrase \"è stato indetto uno sciopero\" clearly indicates a strike announcement. The specified time is from 00:01 to 21:00 on that day. I’ll convert the dates to the needed format, creating startDate as \"2025-12-12 00:01:00\" and endDate as \"2025-12-12 21:00:00\". Additionally, I need to confirm if this is a national strike.",
+    "tokens": {
+      "input": 1261,
+      "output": 1806,
+      "total": 3067
+    }
+  }
+}

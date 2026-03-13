@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-03 00:00:00",
+      "endDate": "2025-10-03 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19123,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000667,
+      "outputCost": 0.0005212,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0005879
+    },
+    "hash": "abb922db2bd894797cd3ad3b3357e5c7",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_generale_nazionale_di_24_ore_venerdi_03_ottobre_2025.html",
+    "thoughts": "**Setting strike dates and times**\n\nOkay, I need to confirm the start and end times for the strike period. The instructions specify that dates must be in the format 'yyyy-MM-dd HH:mm:ss'. For the 24-hour strike on October 3, 2025, that means I’ll set startDate to 2025-10-03 00:00:00 and endDate to 2025-10-03 23:59:59. Since it's a national strike, the locationType should be \"NATIONAL,\" and locationCodes should be set to null.",
+    "tokens": {
+      "input": 1334,
+      "output": 1303,
+      "total": 2637
+    }
+  }
+}

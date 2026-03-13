@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22428,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0001466,
+      "outputCost": 0.0005804,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.000727
+    },
+    "hash": "9c68c56df4b18aaec05a124abaa3b3f3",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_24_ore_venerdi_13_dicembre_2024.html",
+    "thoughts": "**Processing strike announcement**\n\nI need to output JSON that indicates whether this document announces a new or upcoming strike. The content states there will be a 24-hour strike on Friday, December 13, 2024. Since it clearly announces a strike, I’ll set isStrike to true. I also need to extract strikeData, which includes details like startDate, endDate, locationType, locationCodes, and guaranteedTimes. I'll convert the dates to the required format as necessary. It looks like there are guaranteed service times mentioned as well.",
+    "tokens": {
+      "input": 2932,
+      "output": 1451,
+      "total": 4383
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7484,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006165,
+      "outputCost": 0.0001664,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00022805
+    },
+    "hash": "366e046cfb203fd1897740675acef693",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_191.html",
+    "thoughts": "**Determining strike status**\n\nI'm working to output JSON following the strike extraction format. The Italian content is indicating participation in a public transport strike by Atac personnel at 19.1%, but the reporting is about a strike that occurred today, January 24, 2024. Since this is not an upcoming strike, I’ll set `isStrike` to false. Therefore, the output I’ll provide will be: {\"isStrike\": false}.",
+    "tokens": {
+      "input": 1233,
+      "output": 416,
+      "total": 1649
+    }
+  }
+}

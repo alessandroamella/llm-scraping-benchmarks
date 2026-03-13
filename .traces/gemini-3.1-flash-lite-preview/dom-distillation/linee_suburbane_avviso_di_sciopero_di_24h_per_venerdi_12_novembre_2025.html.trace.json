@@ -1,15 +1,27 @@
 {
-  "timestamp": "2026-03-09T19:15:44.332Z",
-  "isCacheHit": true,
+  "timestamp": "2026-03-13T15:15:15.539Z",
+  "isCacheHit": false,
   "request": {
     "sourceName": "EAV",
     "fileName": "linee_suburbane_avviso_di_sciopero_di_24h_per_venerdi_12_novembre_2025.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "dom-distillation",
-    "useLenientSchema": true,
+    "useLenientSchema": false,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"EAV\" (the public transport company of Campania (15)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"> <h3>Context Metadata</h3> <ul><li>Page Title: Linee Suburbane: Avviso di sciopero di 24h per venerdì 12 dicembre 2025 - EAV srl</li></ul> </div><hr/><article> <section> <div> <div> <div> <h2> Linee Suburbane: Avviso di sciopero di 24h per venerdì 12 dicembre 2025 </h2> </div> </div> </div> <div> <div> <p> <small>Data: </small><br> <small><strong>7 Dicembre 2025</strong></small> </p> </div> </div> </section> <section> <div> <div> <div> </div> </div> <div> <div> <section> <p>Per il giorno 12 dicembre 2025 la O.S. CGIL ha proclamato azione di sciopero generale nazionale di tutte le categorie pubbliche e private avente le seguenti motivazioni: contro la manovra finanziaria del Governo. Lo sciopero, che interesserà sia i servizi ferroviari che su gomma, prevede comunque il rispetto delle fasce di garanzia</p> <p>Durante l’ultima proclamazione di sciopero della O.S. CGIL la percentuale di adesione è stata del 14,50% (sciopero del 3 ottobre 2025)</p> <p>Di seguito vengono elencate le ultime e le prime partenze garantite in relazione alle fasce di garanzia.<br> Durante l’orario di sciopero l’effettuazione delle corse è subordinata al numero di lavoratori aderenti allo sciopero.</p> <p><strong><em>Servizio garantito dalle ore 05:30 alle ore 8:30 e dalle ore 16:30 alle ore 19:30</em></strong></p> <p><strong><u>Corse garantite</u></strong></p> <p><strong>da Cancello per</strong></p> <p>Piedimonte 06:03</p> <p><strong>da Napoli per&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong></p> <ul> <li>Piedimonte&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 07:47</li> <li>Piedimonte&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 17:27</li> <li>Piedimonte&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 20:30</li> </ul> <p><strong>&nbsp;</strong><strong>per Napoli da</strong></p> <ul> <li>Piedimonte&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 05:10</li> <li>Piedimonte&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 06:21</li> <li>Piedimonte&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 13:13</li> <li>Piedimonte&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 17:21</li> </ul> <p><strong>&nbsp;</strong><strong>Sulla Linea <u>NAPOLI- BENEVENTO</u> sarà garantito il servizio automobilistico sostitutivo come da programma feriale.</strong></p> <div></div> </section> </div> </div> </div> </section> </article>"
   },
   "response": {
+    "rawOutput": {
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2025-12-12 00:00:00",
+        "endDate": "2025-12-12 23:59:59",
+        "locationType": "NATIONAL",
+        "guaranteedTimes": [
+          "05:30-08:30",
+          "16:30-19:30"
+        ]
+      }
+    },
     "parsedData": {
       "isStrike": true,
       "strikeData": {
@@ -24,17 +36,19 @@
     },
     "usage": {
       "input": 1359,
-      "output": 131,
-      "total": 1773
+      "output": 123,
+      "cached": 0,
+      "thinking": 0,
+      "total": 1482
     },
     "costUsd": {
       "inputCost": 0.00033975,
-      "outputCost": 0.0001965,
-      "thinkingCost": 0.0004245,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.00096075
+      "totalCost": 0.00052425
     },
-    "durationMs": 4195,
-    "thoughts": "**Analyzing the EAV Strike on December 12, 2025**\n\nOkay, let's break this down. EAV, the public transport provider for Campania (Region 15), is reporting a national general strike. The date is Friday, December 12th, 2025, and it's a full 24-hour event, starting at midnight and running until the end of the day.\n\nThe key takeaway is, unequivocally, that there *is* a strike. The data confirms this directly: `isStrike`: true.\n\nThe timeframe is precisely defined: `startDate` is midnight on the 12th, and `endDate` is 11:59:59 PM that same day. The strike's scope is confirmed to be national via `locationType`: NATIONAL. There are no specific location codes provided, which makes sense for a national event, so `locationCodes` is `null`.\n\nCrucially, they're specifying guaranteed service windows. The information highlights two periods where service *should* be operational: 05:30 to 08:30 and 16:30 to 19:30. These are the \"guaranteed times\" identified as: `guaranteedTimes`: [\"05:30-08:30\", \"16:30-19:30\"]. This is essential information to communicate to users, clearly delineating when they can reasonably expect transport to be available, and when service will be disrupted. This should be added to any advisory systems!\n\n\n"
+    "durationMs": 964,
+    "thoughts": ""
   }
 }

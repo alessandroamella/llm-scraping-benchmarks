@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 11513,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000609,
+      "outputCost": 0.0001868,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002477
+    },
+    "hash": "4dd931e499804582210b59cbbab0b906",
+    "sourceFile": "sciopero_generale_nazionale_adesione_personale_atac_23.html",
+    "thoughts": "**Interpreting strike information**\n\nI need to produce JSON that indicates whether there’s a strike. The document discusses a general national strike and mentions that Atac staff's participation was at 23%. The title references participation, not an upcoming strike or cancellation, and lacks dates for any future strikes. So according to the instructions, it seems best to conclude that this isn’t announcing a new strike, and therefore, I’ll set the isStrike boolean to false.",
+    "tokens": {
+      "input": 1218,
+      "output": 467,
+      "total": 1685
+    }
+  }
+}

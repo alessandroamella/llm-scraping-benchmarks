@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-11-08 00:00:00",
+      "endDate": "2024-11-08 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 30340,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006765,
+      "outputCost": 0.0012736,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00134125
+    },
+    "hash": "1389f54b3c1323b8248abd992964698b",
+    "sourceFile": "venerdi_8_novembre_sciopero_nazionale_del_trasporto_pubblico_servizio_a_rischio_per_24_ore.html",
+    "thoughts": "**Analyzing upcoming strike announcement**\n\nI need to create a JSON output based on the strike_extraction schema. The document is in Italian, announcing a national public transport strike on Friday, November 8th, lasting 24 hours. The content mentions that it affects Rome's Atac and private operators with some essential services during specific hours. This indicates that it's indeed announcing an upcoming strike. I'll make sure to format the JSON properly and capture all relevant details.",
+    "tokens": {
+      "input": 1353,
+      "output": 3184,
+      "total": 4537
+    }
+  }
+}

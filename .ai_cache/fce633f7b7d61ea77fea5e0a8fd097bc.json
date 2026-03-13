@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-20 00:00:00",
+      "endDate": "2025-06-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 17211,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0001388,
+      "outputCost": 0.0007356,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008744
+    },
+    "hash": "fce633f7b7d61ea77fea5e0a8fd097bc",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_24h_venerdi_20_giugno_2025.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to output JSON based on the specified schema since I'm a data extraction algorithm. The document seems to announce an upcoming strike in Italian, noting \"24h strike Friday, June 20, 2025.\" It mentions a national strike with guaranteed service details, indicating it's a new strike rather than a cancellation or ongoing situation. So, I can confidently assign the value of isStrike as true!",
+    "tokens": {
+      "input": 2776,
+      "output": 1839,
+      "total": 4615
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-05-11 00:00:00",
+      "endDate": "2025-05-11 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 15140,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008565,
+      "outputCost": 0.0005012,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00058685
+    },
+    "hash": "18e78468f9fb75382eb7e2f9e5ce282a",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_24h_domenica_11_maggio_2025.html",
+    "thoughts": "**Extracting strike data**\n\nI need to create JSON data based on the defined schema. The document indicates an upcoming strike announcement for May 11, 2025, which is for a full 24 hours due to organizational issues. It includes guaranteed service times from 5:30 AM to 8:30 AM and from 4:30 PM to 7:30 PM. So, I should appropriately set isStrike to true and extract the relevant strike data, including startDate, endDate, locationType, locationCodes, and guaranteedTimes.",
+    "tokens": {
+      "input": 1713,
+      "output": 1253,
+      "total": 2966
+    }
+  }
+}

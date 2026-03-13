@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-12-07 09:00:00",
+      "endDate": "2023-12-07 13:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "09:00-13:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 17988,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006345,
+      "outputCost": 0.0004944,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00055785
+    },
+    "hash": "aeb09074dd6830018c12bea0dc7bb913",
+    "sourceFile": "gioved_sciopero_regionale_4_ore_trasporto_pubblico_rischio.html",
+    "thoughts": "**Setting strike details**\n\nI need to ensure I have the correct start and end dates. For a one-day strike on December 7, 2023, the format will be \"2023-12-07 09:00:00\" for startDate and \"2023-12-07 13:00:00\" for endDate. It looks like this is indeed an upcoming strike announcement, so I'll set isStrike to true. I’ll create the necessary JSON structure with these details, making sure everything aligns correctly with the provided instructions and event date.",
+    "tokens": {
+      "input": 1269,
+      "output": 1236,
+      "total": 2505
+    }
+  }
+}

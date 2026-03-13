@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-08 00:00:00",
+      "endDate": "2025-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "20"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22325,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00020875,
+      "outputCost": 0.0010528,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00126155
+    },
+    "hash": "6b1daa52ff5debee94ab97a2918ed6f7",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-10-8-linee-della-sardegna--treni-gar.html",
+    "thoughts": "**Parsing strike announcement**\n\nI need to determine if this document is announcing a new or upcoming strike. The title indicates it covers guaranteed train services during potential strike days in Sardegna from October 8, 2025, to December 13, 2025. The content mentions specific timeframes and lists trains that will be guaranteed even during strikes. It seems to be more of a service plan rather than a strike announcement itself, but it still provides important details about strike-related services.",
+    "tokens": {
+      "input": 4175,
+      "output": 2632,
+      "total": 6807
+    }
+  }
+}

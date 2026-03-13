@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-07-07 00:00:00",
+      "endDate": "2023-07-07 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 29093,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000649,
+      "outputCost": 0.00129,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0013549
+    },
+    "hash": "0d42811ebe7a88bb103aa174a5693901",
+    "sourceFile": "venerd_7_luglio_trasporto_pubblico_rischio_sciopero_nazionale_24_ore_della_faisa_confail.html",
+    "thoughts": "**Clarifying location and dates**\n\nI’m looking at instructions about locationType and locationCodes. If I set locationType to \"NATIONAL,\" locationCodes must be explicitly set to null. For the dates, I need them in the 'yyyy-MM-dd HH:mm:ss' format. The article mentions a 24-hour strike on Friday, July 7, which suggests my start and end dates should be from July 7, 00:00 to July 7, 23:59. They also mentioned regular service until 8:30 and then again from 17:00 to 20:00, which might be important too.",
+    "tokens": {
+      "input": 1298,
+      "output": 3225,
+      "total": 4523
+    }
+  }
+}

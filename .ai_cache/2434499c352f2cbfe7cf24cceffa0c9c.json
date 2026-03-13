@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-03 00:00:00",
+      "endDate": "2025-10-03 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21684,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006325,
+      "outputCost": 0.0006664,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00072965
+    },
+    "hash": "2434499c352f2cbfe7cf24cceffa0c9c",
+    "sourceFile": "sciopero_generale_nazionale_domani_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Formatting strike data**\n\nI need to format the output in JSON according to specified guidelines. The Italian input indicates there’s an upcoming general national strike tomorrow, which means isStrike should be true. The publication dates are from October 2 to October 3, 2025. Since it's a 24-hour strike, I think the startDate should be 2025-10-03 00:00:00 and the endDate 2025-10-03 23:59:59. Now I need to confirm the exact details for locationType and locationCodes.",
+    "tokens": {
+      "input": 1265,
+      "output": 1666,
+      "total": 2931
+    }
+  }
+}

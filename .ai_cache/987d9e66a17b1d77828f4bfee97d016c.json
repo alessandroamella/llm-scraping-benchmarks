@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-07-18 08:30:00",
+      "endDate": "2024-07-18 12:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19383,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000654,
+      "outputCost": 0.0006484,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0007138
+    },
+    "hash": "987d9e66a17b1d77828f4bfee97d016c",
+    "sourceFile": "trasporto_pubblico_gioved_sciopero_nazionale_830_1230_servizio_rischio.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to produce JSON in a specific format. The Italian article indicates an upcoming national strike related to public transport on Thursday, July 18, from 8:30 to 12:30. This signals a 4-hour interruption of services. The context confirms it's indeed an announcement for this strike. According to the instructions, since it is declaring an upcoming strike, I should set the isStrike value to true. It looks clear-cut based on the details!",
+    "tokens": {
+      "input": 1308,
+      "output": 1621,
+      "total": 2929
+    }
+  }
+}

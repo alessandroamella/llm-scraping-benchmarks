@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-03-12T01:45:28.019Z",
+  "timestamp": "2026-03-13T15:17:09.784Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "ATAC",
     "fileName": "venerd_16_dicembre_sciopero_generale_regionale_trasporto_pubblico_rischio_20_24.html",
     "model": "meta-llama/llama-4-scout-17b-16e-instruct",
     "strategy": "dom-distillation-markdown",
-    "useLenientSchema": true,
+    "useLenientSchema": false,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"ATAC\" (the public transport company of Rome, Lazio (12)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: Venerdì 16 dicembre sciopero generale regionale. Trasporto pubblico a rischio dalle 20 alle 24 - Roma Servizi per la Mobilità\n\n* * *\n\n# Venerdì 16 dicembre sciopero generale regionale. Trasporto pubblico a rischio dalle 20 alle 24\n\nPubblicato il: 09/12/2022 - Aggiornato il: 25/01/2023\n\nstatus: 1 Venerdì 16 dicembre trasporto pubblico romano a rischio per lo sciopero generale regionale di 4 ore, dalle 20 alle 24, indetto da Filt Cgil e Uiltrasporti. L’agitazione coinvolgerà la rete Atac e i bus periferici della Roma Tpl."
   },
   "response": {
@@ -18,21 +18,22 @@
         "locationType": "REGIONAL",
         "locationCodes": [
           "12"
-        ]
+        ],
+        "guaranteedTimes": []
       }
     },
     "usage": {
-      "input": 1119,
-      "output": 82,
+      "input": 1120,
+      "output": 81,
       "total": 1201
     },
     "costUsd": {
-      "inputCost": 0.00012309,
-      "outputCost": 0.00002788,
+      "inputCost": 0.0001232,
+      "outputCost": 0.00002754,
       "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.00015097
+      "totalCost": 0.00015074
     },
-    "durationMs": 561
+    "durationMs": 402
   }
 }

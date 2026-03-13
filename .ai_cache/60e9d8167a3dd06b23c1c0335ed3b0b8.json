@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-02-04 08:30:00",
+      "endDate": "2022-02-04 12:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 29102,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000639,
+      "outputCost": 0.0011364,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0012003
+    },
+    "hash": "60e9d8167a3dd06b23c1c0335ed3b0b8",
+    "sourceFile": "4_febbraio_sciopera_4_ore_sindacato_usb_trasporto_pubblico_rischio.html",
+    "thoughts": "**Extracting strike information**\n\nI need to output JSON according to the strike_extraction schema. The content in Italian indicates an announcement for an upcoming strike on February 4, with a timeframe of 8:30 to 12:30. It's about ATAC, the public transport operator in Rome. Since it’s a national strike organized by the union USB, the location type should be NATIONAL. I'll set LocationCodes to null as required. Time to format this correctly!",
+    "tokens": {
+      "input": 1278,
+      "output": 2841,
+      "total": 4119
+    }
+  }
+}

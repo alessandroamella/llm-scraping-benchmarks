@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 11141,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000635,
+      "outputCost": 0.0001988,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002623
+    },
+    "hash": "19145302aea3dd4776854bdf1466c9b0",
+    "sourceFile": "sciopero_trasporto_pubblico_aperte_metropolitane_possibili_riduzioni_bus_tram.html",
+    "thoughts": "**Extracting strike information**\n\nI need to create a JSON object for strike extraction, including a boolean for **isStrike** and possibly **strikeData**. The content, which is in Italian, relates to a public transport strike that’s ongoing and will end at 12:30 PM on February 5, 2023. It seems like there's a typo with \"È un corso lo sciopero,\" which should probably be \"È in corso lo sciopero.” This indicates that services continue regularly, but there could be reductions for buses and trams.",
+    "tokens": {
+      "input": 1270,
+      "output": 497,
+      "total": 1767
+    }
+  }
+}

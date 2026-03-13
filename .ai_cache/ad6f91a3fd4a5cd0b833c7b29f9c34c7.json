@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-03 00:00:00",
+      "endDate": "2025-10-03 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 13014,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000864,
+      "outputCost": 0.00043,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0005164
+    },
+    "hash": "ad6f91a3fd4a5cd0b833c7b29f9c34c7",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_generale_nazionale_di_24_ore_venerdi_03_ottobre_2025.html",
+    "thoughts": "**Setting date ranges and location codes**\n\nI need to clarify the date format for the strike. The startDate will be 2025-10-03 00:00:00 and the endDate should be 2025-10-03 23:59:59, as the user stated it's for a 24-hour event. The example mentions 12:30:00, but since this is a full day, I'll stick with 23:59:59. Also, for national strikes, the locationCodes must be explicitly set to null. So it'll be locationType: \"NATIONAL\" and locationCodes: null.",
+    "tokens": {
+      "input": 1728,
+      "output": 1075,
+      "total": 2803
+    }
+  }
+}

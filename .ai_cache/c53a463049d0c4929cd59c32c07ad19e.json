@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-09-29 00:00:00",
+      "endDate": "2023-09-29 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24646,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006385,
+      "outputCost": 0.0006952,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00075905
+    },
+    "hash": "c53a463049d0c4929cd59c32c07ad19e",
+    "sourceFile": "venerd_29_settembre_sciopero_nazionale_trasporto_pubblico_possibili_disagi.html",
+    "thoughts": "**Determining strike details**\n\nI’m looking at the description \"sciopero nazionale di 24 ore proclamato,\" which indicates a strike. Since it mentions an upcoming strike on September 29, it looks like I should set isStrike to true. I’ll extract strike data, including start and end dates. The text indicates a 24-hour strike, so I think startDate should be 2023-09-29 00:00:00 and endDate 2023-09-30 00:00:00. I need to ensure the date format is 'yyyy-MM-dd HH:mm:ss'.",
+    "tokens": {
+      "input": 1277,
+      "output": 1738,
+      "total": 3015
+    }
+  }
+}

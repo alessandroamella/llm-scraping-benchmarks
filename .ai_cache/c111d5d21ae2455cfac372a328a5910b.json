@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9034,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000615,
+      "outputCost": 0.000212,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002735
+    },
+    "hash": "c111d5d21ae2455cfac372a328a5910b",
+    "sourceFile": "sciopero_trasporto_pubblico_ha_aderito_135_personale_atac.html",
+    "thoughts": "**Evaluating strike announcement details**\n\nI need to follow the JSON schema for strike extraction. The content I have is Italian, discussing public transport strikes in Rome, with a participation rate of 13.5%. The date indicates that this was about a strike that already occurred, not an upcoming one. This means my output should reflect that it’s not an ongoing event. So, I’ll set isStrike to false, resulting in: {\"isStrike\": false}.",
+    "tokens": {
+      "input": 1230,
+      "output": 530,
+      "total": 1760
+    }
+  }
+}

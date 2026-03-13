@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5503,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000612,
+      "outputCost": 0.0001796,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002408
+    },
+    "hash": "1ecbd0da7768f64bfe54e3d98da5f18c",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_22.html",
+    "thoughts": "**Crafting JSON response**\n\nI need to output exactly the minimal JSON without any additional fields. The input mentions a date of 17/02/2023, but there are no details about an upcoming strike, so I'll mark it as not a strike. The JSON will be:  \n{\"isStrike\": false}  \n\nI should be cautious about the references to ATAC as it involves the public transport company, but I don't need to include that since we're not extracting a strike. Just confirming that it isn't a strike works for this context!",
+    "tokens": {
+      "input": 1224,
+      "output": 449,
+      "total": 1673
+    }
+  }
+}

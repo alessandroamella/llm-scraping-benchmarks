@@ -1,21 +1,39 @@
 {
-  "timestamp": "2026-03-09T19:15:41.708Z",
-  "isCacheHit": true,
+  "timestamp": "2026-03-13T15:14:27.521Z",
+  "isCacheHit": false,
   "request": {
     "sourceName": "EAV",
     "fileName": "linee_vesuviane_avviso_di_sciopero_di_24_h_lunedi_24_febbraio_2025.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "dom-distillation",
-    "useLenientSchema": true,
+    "useLenientSchema": false,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"EAV\" (the public transport company of Campania (15)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"> <h3>Context Metadata</h3> <ul><li>Page Title: Linee Vesuviane: Avviso di sciopero di 24 h lunedì 24 febbraio 2025 - EAV srl</li></ul> </div><hr/><article> <section> <div> <div> <div> <h2> Linee Vesuviane: Avviso di sciopero di 24 h lunedì 24 febbraio 2025 </h2> </div> </div> </div> <div> <div> <p> <small>Data: </small><br> <small><strong>19 Febbraio 2025</strong></small> </p> </div> </div> </section> <section> <div> <div> <div> </div> </div> <div> <div> <section> <p>Per il giorno 24 febbraio 2025 la O.S. USB ha proclamato azione di sciopero per adesione a sciopero nazionale di 24 ore avente le seguenti motivazioni: per una maggiore sicurezza dei lavoratori e del servizio ed un incremento delle retribuzioni mensili.</p> <p>Durante l’ultima proclamazione di sciopero della O.S. USB, la percentuale di adesione è stata del 9,2% (sciopero generale nazionale di 24 ore del 13 dicembre 2024)</p> <p>&nbsp;</p> <p>Di seguito vengono elencate le ultime e le prime partenze garantite in relazione alle fasce di garanzia. Durante l’orario di sciopero l’effettuazione delle corse è subordinata al numero di lavoratori aderenti allo sciopero.</p> <p><strong>Servizio garantito dalle ore 05:30 alle ore 8:30 e dalle ore 16:30 alle ore 19:30</strong></p> <p>Ultime partenze garantite prima dello sciopero – fascia operatività servizio dalle ore 5:30 alle ore 08:30</p> <p>da Napoli per</p> <ul> <li>Sorrento&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;08:05</li> <li>Poggiomarino&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;08:14</li> <li>Sarno&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;08:10</li> <li>Torre Annunziata&nbsp; &nbsp; &nbsp;08:26 diretto</li> <li>per Baiano&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;07:43</li> </ul> <p>per Napoli da</p> <ul> <li>Sorrento&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 08:14</li> <li>Poggiomarino&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 08:18</li> <li>Sarno&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;08:26</li> <li>Torre Annunziata&nbsp;&nbsp;&nbsp; 08:44 treno 4082 da Poggiomarino</li> <li>da Baiano per San Giorgio 08:15</li> </ul> <p>Prime partenze garantite dopo lo sciopero – fascia operatività servizio dalle 16.30 alle 19.30</p> <p>da Napoli per</p> <ul> <li>Sorrento&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 17:05</li> <li>Poggiomarino&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;16:38</li> <li>Torre Annunziata 16:45</li> <li>Sarno&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 16:34</li> <li>da San Giorgio per Baiano&nbsp; 16:30</li> </ul> <p>per Napoli da</p> <ul> <li>Sorrento&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;16:38</li> <li>Poggiomarino&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 16:42</li> <li>Sarno&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;16:50</li> <li>Torre Annunziata&nbsp;&nbsp;&nbsp; 16:57</li> <li>da Baiano per San Giorgio&nbsp; 16:39</li> </ul> <p>Ultime partenze garantite prima dello sciopero – fascia operatività servizio dalle 16.30 alle 19.30</p> <p>da Napoli per</p> <ul> <li>Sorrento&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 19:29</li> <li>Poggiomarino&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 19:02</li> <li>Sarno&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 18:58</li> <li>Torre Annunziata&nbsp;&nbsp;&nbsp; 19:09</li> <li>da San Giorgio per Baiano 18:54</li> </ul> <p>per Napoli da</p> <ul> <li>Sorrento&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 19:02</li> <li>Poggiomarino&nbsp; &nbsp; &nbsp; &nbsp; 19:06</li> <li>Sarno&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 19:14</li> <li>Torre Annunziata&nbsp;&nbsp;&nbsp; 19:32 treno 4190 da Poggiomarino</li> <li>Baiano&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;19:03</li> </ul> <div> <div> <p><b>Categoria:&nbsp;</b><a href=\"https://www.eavsrl.it/categoria-disservizio/trasporto-pubblico/\">Trasporto pubblico</a></p> <p><b>Area:&nbsp;</b><a href=\"https://www.eavsrl.it/area/linee-vesuviane/\">Linee Vesuviane</a></p> </div> </div> <div></div> </section> </div> </div> </div> </section> </article>"
   },
   "response": {
+    "rawOutput": {
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2025-02-24 00:00:00",
+        "endDate": "2025-02-24 23:59:59",
+        "locationType": "REGIONAL",
+        "locationCodes": [
+          "15"
+        ],
+        "guaranteedTimes": [
+          "05:30-08:30",
+          "16:30-19:30"
+        ]
+      }
+    },
     "parsedData": {
       "isStrike": true,
       "strikeData": {
         "startDate": "2025-02-24 00:00:00",
         "endDate": "2025-02-24 23:59:59",
-        "locationType": "NATIONAL",
+        "locationType": "REGIONAL",
+        "locationCodes": [
+          "15"
+        ],
         "guaranteedTimes": [
           "05:30-08:30",
           "16:30-19:30"
@@ -24,17 +42,19 @@
     },
     "usage": {
       "input": 2178,
-      "output": 131,
-      "total": 2920
+      "output": 140,
+      "cached": 0,
+      "thinking": 0,
+      "total": 2318
     },
     "costUsd": {
       "inputCost": 0.0005445,
-      "outputCost": 0.0001965,
-      "thinkingCost": 0.0009165,
+      "outputCost": 0.00021,
+      "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.0016575
+      "totalCost": 0.0007545
     },
-    "durationMs": 5882,
-    "thoughts": "**My Analysis of the EAV Strike Announcement**\n\nOkay, let's break this down. My objective is to extract information about a transport strike from an EAV announcement – specifically, this one regarding a strike on February 24, 2025. My target format is JSON.\n\nFirst, I've confirmed it's indeed a strike. The text explicitly uses \"sciopero\" (strike) and details the duration: \"24 h.\" The date is clear: February 24, 2025. The announcement includes guaranteed service times: \"dalle ore 05:30 alle ore 8:30 e dalle ore 16:30 alle ore 19:30.\"\n\nNow, for the key details. The duration is 24 hours. The date is February 24, 2025. The guaranteed times are as stated above. The location is Campania, and since EAV is the regional transport provider, that’s my key.\n\nThe tricky part is \"locationType.\" The announcement mentions \"sciopero nazionale\" (national strike), but it's *EAV* that's announcing it. The schema wants either \"NATIONAL\" or \"REGIONAL\". If NATIONAL, `locationCodes` should be null. If REGIONAL, `locationCodes` would be \"15\" (Campania's region code as the user specifically mentioned). However, the text explicitly refers to a *national* strike. Based on past experience with these announcements, I'm leaning toward defining the `locationType` as \"NATIONAL\" and consequently keeping `locationCodes` as null. It's a national strike, but EAV is detailing the *impact* on their services. Therefore, I will define it as `locationType` \"NATIONAL\" and `locationCodes` to null.\n\nSo, I'm structuring my JSON output like this:\n\n*   `isStrike`: true\n*   `startDate`: 2025-02-24 00:00:00 (I’m assuming the strike starts at midnight and ends at the end of that day, unless there are explicit details to change this assumption)\n*   `endDate`: 2025-02-24 23:59:59\n*   `locationType`: \"NATIONAL\"\n*   `locationCodes`: null\n*   `guaranteedTimes`: [\"05:30-08:30\", \"16:30-19:30\"]\n\nThis should provide a clean and accurate representation of the strike information.\n\n\n"
+    "durationMs": 1174,
+    "thoughts": ""
   }
 }

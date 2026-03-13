@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-03-12T01:45:03.803Z",
+  "timestamp": "2026-03-13T15:14:04.796Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "Trenord",
     "fileName": "strike-detail-domenica-16-novembre-dalle-ore-10-alle-ore-18-scio.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "dom-distillation-markdown",
-    "useLenientSchema": true,
+    "useLenientSchema": false,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"Trenord\" (the public transport company of Lombardia (03)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: Domenica 16 novembre dalle ore 10 alle ore 18 sciopero dei treni regionali in LombardiaUser-logged-no-picCloseSend-mail-OKAlert\n-   Date News: venerdì 14/11/2025\n-   Header: Domenica 16 novembre dalle ore 10 alle ore 18 sciopero dei treni regionali in Lombardia\n\n* * *\n\n# **Domenica 16 novembre dalle ore 10 alle ore 18 sciopero dei treni regionali in Lombardia**\n\nvenerdì 14/11/2025\n\n#### **Per l’agitazione indetta da ORSA previste ripercussioni sul servizio regionale, suburbano, aeroportuale**\n\nDalle ore 9 alle ore 18 di domenica 16 novembre l’organizzazione sindacale ORSA ha indetto uno sciopero che potrà avere ripercussioni sulla circolazione dei treni regionali, suburbani, a lunga percorrenza e dei collegamenti aeroportuali e S50 Malpensa Aeroporto-Bellinzona. Le corse potranno subire variazioni e cancellazioni.\n\nLa mattina viaggeranno i treni con orario di partenza dalla stazione di origine corsa prima delle ore 10 e arrivo a destinazione entro le ore 11.\n\nSaranno previsti autobus sostitutivi, senza fermate intermedie, per le corse del servizio aeroportuale non effettuate tra Milano Cadorna (da via Paleocapa, 1) e Malpensa Aeroporto e tra Stabio e Malpensa Aeroporto.\n\nLe informazioni sulla circolazione saranno disponibili sul sito Trenord e tramite gli aggiornamenti in “real-time” sull’App.\n\nSi invitano i passeggeri a prestare attenzione agli annunci sonori e ai monitor di stazione.\n\n[Comunicato stampa Sciopero 16 novembre 2025](/fileadmin/contenuti/TRENORD/3-News/Trenord_Informa/Comunicati_stampa/2025/Trenord_251114_CS_Sciopero_16_novembre_def.pdf)\n\nPDF Document Found: /fileadmin/contenuti/TRENORD/3-News/Trenord\\_Informa/Comunicati\\_stampa/2025/Trenord\\_251114\\_CS\\_Sciopero\\_16\\_novembre\\_def.pdf"
   },
   "response": {
@@ -24,15 +24,16 @@
     "usage": {
       "input": 1017,
       "output": 93,
-      "total": 1472
+      "total": 1550
     },
     "costUsd": {
       "inputCost": 0.00025425,
       "outputCost": 0.0001395,
-      "thinkingCost": 0.000543,
+      "thinkingCost": 0.00066,
       "cachedCost": 0,
-      "totalCost": 0.00093675
+      "totalCost": 0.00105375
     },
-    "durationMs": 4589
+    "durationMs": 6066,
+    "thoughts": "**Strike Analysis: Trenord - Lombardia**\n\nOkay, let's break this down. My task is to identify and extract key information from this text regarding a potential strike announcement. The input is news about a strike impacting Trenord, specifically in Lombardia. It's happening on Sunday, November 16, 2025.\n\nFirst, the key takeaway: **isStrike: true**. Confirmed, it's a strike. Next, I need the details. The strike starts at 09:00 and ends at 18:00 on that Sunday, November 16th, 2025. That gives us **startDate: \"2025-11-16 09:00:00\"** and **endDate: \"2025-11-16 18:00:00\"**.\n\nNow, for location. The text clearly indicates this is a regional strike affecting Lombardia. Since Lombardia's region code is \"03\" that means **locationType: \"REGIONAL\"** and **locationCodes: [\"03\"]**.\n\nFinally, I need to address the \"guaranteed times\". The text mentions some trains will run *before* 10:00, but the typical guaranteed bands are, generally, 6-9/18-21. The prompt requires the information to be in the \"HH:mm-HH:mm\" format. Although the text has some implications, it doesn't explicitly state the classic time bands required, so I'll need to omit this as it doesn't align with the format. So, no **guaranteedTimes** field is needed.\n\n\n"
   }
 }

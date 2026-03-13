@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7540,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000067,
+      "outputCost": 0.00012,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.000187
+    },
+    "hash": "6c87276d70a93ee72e57ee0e6c55df27",
+    "sourceFile": "sciopero_trasporto_pubblico_aperte_metropolitane_bb1_c.html",
+    "thoughts": "**Evaluating strike extraction**\n\nI need to output a JSON format according to the strike_extraction requirements. I'm looking at content that discusses an ongoing public transport strike, specifically noting that it's a 24-hour strike happening right now. Since it's currently in progress, I should set isStrike to false as the instruction states not to consider it an upcoming strike. So, I'm concluding with {\"isStrike\": false}. I just need to ensure clarity in that it's ongoing with updates.",
+    "tokens": {
+      "input": 1340,
+      "output": 300,
+      "total": 1640
+    }
+  }
+}

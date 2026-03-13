@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6863,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006095,
+      "outputCost": 0.0001444,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00020535
+    },
+    "hash": "20eed0ae2b273beb0b9fee37185d5431",
+    "sourceFile": "sciopero_generale_nazionale_adesione_del_personale_atac_al_182.html",
+    "thoughts": "**Preparing JSON output**\n\nI need to return the JSON in the required \"strike_extraction\" format, which should look like this: {\"isStrike\": false}. I'm considering the date and time, which is \"Pubblicato il: 29/11/2024 - Aggiornato il: 03/12/2024.\" However, since this is after the event, it doesn’t indicate an upcoming strike. I’ll treat it as a non-strike, and now I’m ready to prepare the final answer and proceed with the output.",
+    "tokens": {
+      "input": 1219,
+      "output": 361,
+      "total": 1580
+    }
+  }
+}

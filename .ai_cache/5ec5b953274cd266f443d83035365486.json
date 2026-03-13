@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-09-04 08:30:00",
+      "endDate": "2025-09-04 12:30:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "08:30-12:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 25625,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000066,
+      "outputCost": 0.0005088,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0005748
+    },
+    "hash": "5ec5b953274cd266f443d83035365486",
+    "sourceFile": "rete_atac_giovedi_4_settembre_sciopero_dalle_830_alle_1230_possibili_disagi.html",
+    "thoughts": "**Extracting strike information**\n\nI need to check if this this is a strike announcement based on the content about the public transport strike on September 4. The details confirm it's happening from 8:30 to 12:30. So, I can set isStrike to true. \n\nNow, I need to extract the strike data. I figured since the page was published on August 29, 2025, the date refers to September 4, 2025. That will help me format the start and end times correctly. \n\nI should note the location type too.",
+    "tokens": {
+      "input": 1320,
+      "output": 1272,
+      "total": 2592
+    }
+  }
+}

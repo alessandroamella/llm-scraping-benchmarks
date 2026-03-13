@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-06-17 08:30:00",
+      "endDate": "2022-06-17 12:30:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "08:30-12:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 17806,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006545,
+      "outputCost": 0.0004972,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00056265
+    },
+    "hash": "488819e93424241c803106cb20cf8c24",
+    "sourceFile": "venerd_17_giugno_sciopero_4_ore_rete_atac_rischio_830_1230.html",
+    "thoughts": "**Analyzing strike data**\n\nI’m looking at the instruction about setting isStrike to true for upcoming strikes, and this is indeed an announcement for one on Friday, June 17. So, I think isStrike should be true. I’ll need to extract the data like startDate, endDate, locationType, and locationCodes, while ensuring the dates are in the 'yyyy-MM-dd HH:mm:ss' format. The strike is scheduled from 8:30 to 12:30 on that date, which would be June 17, 2022. It seems the location should be regional, as it mentions the ATAC network, aligning with the Lazio region code of 12.",
+    "tokens": {
+      "input": 1309,
+      "output": 1243,
+      "total": 2552
+    }
+  }
+}

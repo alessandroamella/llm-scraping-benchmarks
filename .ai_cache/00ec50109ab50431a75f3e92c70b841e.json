@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7604,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006525,
+      "outputCost": 0.0001396,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00020485
+    },
+    "hash": "00ec50109ab50431a75f3e92c70b841e",
+    "sourceFile": "sciopero_21_marzo_metropolitane.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to determine if the document reports an upcoming strike. The Italian content indicates an ongoing 24-hour public transportation strike, meaning it’s not a new announcement. The statuses confirm it’s still in progress, which means isStrike should be false. I’ll output this as {\"isStrike\": false}. It’s interesting that real-time updates might not even count as a strike announcement according to the rules. I’m noting that for future reference!",
+    "tokens": {
+      "input": 1305,
+      "output": 349,
+      "total": 1654
+    }
+  }
+}

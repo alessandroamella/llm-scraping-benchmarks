@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-30 20:00:00",
+      "endDate": "2025-10-31 00:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "20:00-24:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 28419,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006395,
+      "outputCost": 0.0010632,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00112715
+    },
+    "hash": "ae23c7ef7b2b9f77294744a95b7c1093",
+    "sourceFile": "domani_sciopero_serale_di_4_ore_a_rischio_i_bus_del_deposito_magliana.html",
+    "thoughts": "**Clarifying date formatting**\n\nI'm trying to figure out the correct date and time format. Based on the content, \"Domani\" refers to October 30, 2025, local time. The stated event runs from 20:00 to 24:00. However, since ISO 8601 typically doesn’t recognize 24:00, it should technically say 2025-10-31 00:00:00 for the end time. Yet, the instructions specify 'yyyy-MM-dd HH:mm:ss', so I’m wondering whether to use the 24:00 notation or adjust it to the next day. It's a bit confusing!",
+    "tokens": {
+      "input": 1279,
+      "output": 2658,
+      "total": 3937
+    }
+  }
+}

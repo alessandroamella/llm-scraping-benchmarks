@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5221,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006105,
+      "outputCost": 0.0001224,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00018345
+    },
+    "hash": "0a56dbef7fa5229dec6c4e2404978373",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_154.html",
+    "thoughts": "**Producing JSON output**\n\nI realize I need to format my output as JSON. Specifically, I should use the structure that shows whether it's a strike or not. Based on the example, I see the required output is:  \n```  \n{  \n  \"isStrike\": false  \n}  \n```  \nSo, I’ll make sure to output exactly that, nothing extra. It’s critical to follow the formatting precisely, possibly with a newline, and provide it as plain text. Let’s get this done!",
+    "tokens": {
+      "input": 1221,
+      "output": 306,
+      "total": 1527
+    }
+  }
+}

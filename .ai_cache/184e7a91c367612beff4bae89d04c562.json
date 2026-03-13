@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-05-20 00:00:00",
+      "endDate": "2022-05-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 23057,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000652,
+      "outputCost": 0.0008932,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0009584
+    },
+    "hash": "184e7a91c367612beff4bae89d04c562",
+    "sourceFile": "venerd_20_maggio_sciopero_24_ore_trasporto_pubblico_rischio.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI’m processing whether this is a strike announcement, which it seems to be. The instruction indicates that if it’s announcing an upcoming strike, then isStrike should be true. The article mentions \"Venerdì 20 maggio,\" which translates to May 20, 2022. There's a 24-hour strike mentioned. Although the specific start and end times aren’t given, it implies service will be regular until 8:30 AM, then restricted outside of 5 PM to 8 PM. I just need to solidify the start and end dates with their respective times.",
+    "tokens": {
+      "input": 1304,
+      "output": 2233,
+      "total": 3537
+    }
+  }
+}

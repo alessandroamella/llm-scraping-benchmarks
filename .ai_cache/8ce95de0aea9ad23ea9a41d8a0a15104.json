@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-05-02 08:30:00",
+      "endDate": "2023-05-02 12:30:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "08:30-12:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19591,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000639,
+      "outputCost": 0.0005124,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0005763
+    },
+    "hash": "8ce95de0aea9ad23ea9a41d8a0a15104",
+    "sourceFile": "martedi_2_maggio_sciopero_nazionale_4_ore_trasporto_pubblico_romano_rischio.html",
+    "thoughts": "**Setting strike details**\n\nThe strike lasts from 8:30 to 12:30 on May 2, 2023. Based on this, I determine the start date and end date as 2023-05-02 08:30:00 and 2023-05-02 12:30:00 respectively. It’s a national strike, so the location type should be \"NATIONAL,\" which means the locationCodes must be explicitly null. For guaranteed service times, I need to convert the Italian style \"8,30\" to the correct format: \"08:30-12:30\".",
+    "tokens": {
+      "input": 1278,
+      "output": 1281,
+      "total": 2559
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-02-17 00:00:00",
+      "endDate": "2023-02-17 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 23308,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006445,
+      "outputCost": 0.0010288,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00109325
+    },
+    "hash": "a1288862ef6dcc8ded8d76341610598f",
+    "sourceFile": "venerd_17_febbraio_sciopero_nazionale_usb_24_ore_trasporto_pubblico_rischio.html",
+    "thoughts": "**Processing strike announcement**\n\nI need to format the output as JSON according to the strike_extraction guideline. The content in Italian announces a nationwide 24-hour strike on February 17, indicating that public transport will be at risk. The publication date is relevant, along with the status update. It clarifies that the transport network in Rome will be affected, detailing service hours. This announcement is forecasting the strike rather than providing real-time updates about an ongoing event.",
+    "tokens": {
+      "input": 1289,
+      "output": 2572,
+      "total": 3861
+    }
+  }
+}

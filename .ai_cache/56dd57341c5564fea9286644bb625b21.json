@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-03 00:00:00",
+      "endDate": "2025-10-03 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20113,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0001246,
+      "outputCost": 0.0005312,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0006558
+    },
+    "hash": "56dd57341c5564fea9286644bb625b21",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_generale_nazionale_di_24_ore_venerdi_03_ottobre_2025.html",
+    "thoughts": "**Considering strike announcement**\n\nI need to confirm if the document announces a strike. The content clearly states a national strike for 24 hours starting on October 3, 2025. I see specific times mentioned, so I should set the start date as \"2025-10-03 00:00:00\" and the end date as \"2025-10-04 00:00:00\" for a full 24 hours. According to the instructions, I have to format the dates correctly, keeping in mind that it starts from midnight to 23:59.",
+    "tokens": {
+      "input": 2492,
+      "output": 1328,
+      "total": 3820
+    }
+  }
+}

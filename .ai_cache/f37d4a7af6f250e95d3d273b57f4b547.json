@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-24 00:00:00",
+      "endDate": "2025-02-24 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21701,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000665,
+      "outputCost": 0.0006148,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0006813
+    },
+    "hash": "f37d4a7af6f250e95d3d273b57f4b547",
+    "sourceFile": "eav_autolinee_avviso_di_sciopero_di_24_ore_lunedi_24_febbraio_2025.html",
+    "thoughts": "**Determining strike details**\n\nIt seems the exact start time for the 24-hour national strike isn't specified, but typically it begins at midnight. The date provided is February 24, 2025, and it mentions adherence to a 24-hour strike. I think it's safe to set the start date to 2025-02-24 00:00:00 and the end date to 2025-02-24 23:59:59 in the required format. For location type, since it’s national, I’ll set locationCodes to null, as specified. All fields are required, and null is for missing values.",
+    "tokens": {
+      "input": 1330,
+      "output": 1537,
+      "total": 2867
+    }
+  }
+}

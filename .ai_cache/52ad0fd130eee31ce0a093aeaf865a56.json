@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-01-14 08:30:00",
+      "endDate": "2022-01-14 12:30:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "08:30-12:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20947,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006515,
+      "outputCost": 0.0007316,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00079675
+    },
+    "hash": "52ad0fd130eee31ce0a093aeaf865a56",
+    "sourceFile": "venerdi_14_gennaio_sciopero_nazionale_4_ore_trasporto_pubblico_rischio.html",
+    "thoughts": "**Determining strike announcement status**\n\nI need to check the document for a possible strike announcement following the strike_extraction schema. The content is about a past national strike that occurred on January 14, 2022, which was a four-hour event affecting public transport in Rome. Since the event already happened and the date is in the past relative to 2026, I can conclude that this isn’t an announcement for an upcoming strike, so “isStrike” should be set to false.",
+    "tokens": {
+      "input": 1303,
+      "output": 1829,
+      "total": 3132
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-10-20 00:00:00",
+      "endDate": "2023-10-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 26229,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000639,
+      "outputCost": 0.0012236,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0012875
+    },
+    "hash": "07bcba41bc42e193e2d0055ff0be88c8",
+    "sourceFile": "venerd_20_ottobre_sciopero_generale_nazionale_trasporto_pubblico_rischio.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to output JSON in the specified format and determine whether this document is announcing an upcoming strike. The text mentions a general strike on \"Friday, October 20,\" indicating it's related to a nationwide strike with public transport at risk. It’s clear that this is an announcement of an upcoming strike since it states the date of October 20. The publication date is October 13, 2023, so it fits the criteria.",
+    "tokens": {
+      "input": 1278,
+      "output": 3059,
+      "total": 4337
+    }
+  }
+}

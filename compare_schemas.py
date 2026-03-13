@@ -136,7 +136,7 @@ def create_comparison_plot(
         plt.ylim(0, 1.15)
 
     plt.xticks(rotation=25, ha="right")
-    plt.legend(title="Schema", loc="upper left")
+    plt.legend(title="Schema", loc="upper center", ncol=2, fontsize=10)
 
     # Aggiunta valori sopra le barre
     for p in ax.patches:

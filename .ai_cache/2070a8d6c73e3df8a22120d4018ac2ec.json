@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-10 00:00:00",
+      "endDate": "2025-10-10 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24819,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000629,
+      "outputCost": 0.0011348,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0011977
+    },
+    "hash": "2070a8d6c73e3df8a22120d4018ac2ec",
+    "sourceFile": "venerdi_10_sciopero_del_trasporto_pubblico_rete_atac_a_rischio.html",
+    "thoughts": "**Analyzing strike data**\n\nI need to output JSON that includes `isStrike` and potentially `strikeData` if `isStrike` is true. The content discusses an upcoming strike affecting public transport in Italy on October 10. The strike will last for 24 and 4 hours, with the Atac network being the focus. Service is expected to be normal until 8:30 AM and then again from 5 PM to 8 PM. I'll need to collect details like start and end dates, location type, and guaranteed times for the `strikeData`.",
+    "tokens": {
+      "input": 1258,
+      "output": 2837,
+      "total": 4095
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-02-25 08:30:00",
+      "endDate": "2022-02-25 23:59:59",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 35501,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000662,
+      "outputCost": 0.0015108,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.001577
+    },
+    "hash": "8b113eb5ca92844c7c5e6f587e246e67",
+    "sourceFile": "trasporto_pubblico_venerdi_25_febbraio_sciopero_nazionale_24_ore.html",
+    "thoughts": "**Clarifying parameters for national strikes**\n\nI need to make sure I fill in the startDate and endDate in the format 'yyyy-MM-dd HH:mm:ss'. \n\nSince the text mentions national strikes proclaimed by unions, I should set locationType to \"NATIONAL\". \n\nThe locationCodes need to be null because, per the spec, for NATIONAL, this must be explicitly null. It’s required in the JSON schema, but only as null for a national classification.\n\nI also need an array for guaranteedTimes, based on the specified time ranges mentioned in the article.",
+    "tokens": {
+      "input": 1324,
+      "output": 3777,
+      "total": 5101
+    }
+  }
+}

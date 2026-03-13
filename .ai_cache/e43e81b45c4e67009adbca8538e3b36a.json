@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7464,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006335,
+      "outputCost": 0.0001292,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00019255
+    },
+    "hash": "e43e81b45c4e67009adbca8538e3b36a",
+    "sourceFile": "sciopero_trasporto_aperte_metro_ferrovia_termini_centocelle.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to check if the document is about a new or upcoming strike. The content mentions an ongoing strike in Rome, specifically saying \"È in corso lo sciopero,\" which indicates it's not an upcoming strike but currently happening. Based on instructions, since it's an ongoing strike, I must set isStrike to false. The updates on metro and bus services also confirm it's not an announcement for a future strike. Thus, I’m outputting: {\"isStrike\": false}.",
+    "tokens": {
+      "input": 1267,
+      "output": 323,
+      "total": 1590
+    }
+  }
+}

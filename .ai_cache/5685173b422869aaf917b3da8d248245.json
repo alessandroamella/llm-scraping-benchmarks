@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-11-27 00:00:00",
+      "endDate": "2023-11-28 00:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 23898,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006465,
+      "outputCost": 0.0010724,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00113705
+    },
+    "hash": "5685173b422869aaf917b3da8d248245",
+    "sourceFile": "luned_27_novembre_sciopero_nazionale_trasporto_pubblico_possibili_disagi.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to check if the given document is announcing a new or upcoming strike. The Italian content mentions a national public transport strike on Monday, November 27, which suggests that it is indeed an announcement. The document states that services in Rome will be affected but will remain regular until 8:30 AM and again from 5 PM to 8 PM. Given the details, I can confirm that this is an upcoming strike announcement, meaning I need to set isStrike to true and extract additional strike details.",
+    "tokens": {
+      "input": 1293,
+      "output": 2681,
+      "total": 3974
+    }
+  }
+}

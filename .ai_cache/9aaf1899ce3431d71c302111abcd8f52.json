@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:01:00",
+      "endDate": "2025-12-12 23:59:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "04",
+        "05"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 26437,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007795,
+      "outputCost": 0.0013972,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00147515
+    },
+    "hash": "9aaf1899ce3431d71c302111abcd8f52",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-12-12-sciopero-del-personale-di-sad-.html",
+    "thoughts": "**Parsing upcoming strike details**\n\nI'm working on outputting JSON according to the strike_extraction schema. The document mentions a strike for SAD and Trentino Trasporti, specifically from 00:01 to 21:00 on December 12, 2025. It confirms that a strike has been announced in multiple languages. The affected lines are specified, including routes in Bolzano–Trento and others. The location type is regional, and I see clear start and end times for the strike.",
+    "tokens": {
+      "input": 1559,
+      "output": 3493,
+      "total": 5052
+    }
+  }
+}

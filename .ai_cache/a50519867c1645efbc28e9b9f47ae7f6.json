@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 09:00:00",
+      "endDate": "2024-12-13 13:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 23964,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000752,
+      "outputCost": 0.000654,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0007292
+    },
+    "hash": "a50519867c1645efbc28e9b9f47ae7f6",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_di_4_ore_del_13_dicembre_2024.html",
+    "thoughts": "**Extracting strike data**\n\nI need to output a JSON structure for a strike announcement. The content indicates there will be a 4-hour strike on December 13, 2024, but it was initially planned for 24 hours and has been shortened due to an ordinance. This confirms it is indeed a strike announcement. Since it’s set for 9:00 AM to 1:00 PM, I'll set `isStrike` to true. I also need to structure the strike data with start and end dates in the correct format.",
+    "tokens": {
+      "input": 1504,
+      "output": 1635,
+      "total": 3139
+    }
+  }
+}

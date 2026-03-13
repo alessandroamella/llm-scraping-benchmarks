@@ -1,15 +1,30 @@
 {
-  "timestamp": "2026-03-09T19:16:05.985Z",
-  "isCacheHit": true,
+  "timestamp": "2026-03-13T15:17:04.549Z",
+  "isCacheHit": false,
   "request": {
     "sourceName": "ATAC",
     "fileName": "martedi_29_marzo_sciopera_24_ore_trasporto_pubblico_servizio_rischio.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "dom-distillation",
-    "useLenientSchema": true,
+    "useLenientSchema": false,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"ATAC\" (the public transport company of Rome, Lazio (12)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"> <h3>Context Metadata</h3> <ul><li>Page Title: Martedì 29 marzo sciopera 24 ore il trasporto pubblico. Servizio a rischio - Roma Servizi per la Mobilità</li></ul> </div><hr/><div> <div> <div> <div> <div> <div> </div> </div> </div> <div> <div> <div> <div> <h1>Martedì 29 marzo sciopera 24 ore il trasporto pubblico. Servizio a rischio</h1> </div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div><p>Pubblicato il: 24/03/2022 - Aggiornato il: 25/01/2023</p></div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div> <span> </span> </div> </div> </div> <div> <div> <div></div> </div> </div> <div> <div> <p>Martedì 29 marzo trasporto pubblico a rischio per lo sciopero di 24 ore indetto tra i lavoratori dell’Atac dal sindacato Faisa Cisal. L’agitazione interesserà l’intera rete Atac. Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20. Lo sciopero non coinvolgerà le linee periferiche gestite dalla Roma Tpl. Aggiornamenti in tempo reale su romamobilita.it</p> </div> </div> </div> </div> </div> </div>"
   },
   "response": {
+    "rawOutput": {
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2022-03-29 00:00:00",
+        "endDate": "2022-03-29 23:59:59",
+        "locationType": "REGIONAL",
+        "locationCodes": [
+          "12"
+        ],
+        "guaranteedTimes": [
+          "00:00-08:30",
+          "17:00-20:00"
+        ]
+      }
+    },
     "parsedData": {
       "isStrike": true,
       "strikeData": {
@@ -27,17 +42,19 @@
     },
     "usage": {
       "input": 796,
-      "output": 140,
-      "total": 1692
+      "output": 126,
+      "cached": 0,
+      "thinking": 0,
+      "total": 922
     },
     "costUsd": {
       "inputCost": 0.000199,
-      "outputCost": 0.00021,
-      "thinkingCost": 0.001134,
+      "outputCost": 0.000189,
+      "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.001543
+      "totalCost": 0.000388
     },
-    "durationMs": 7201,
-    "thoughts": "**Strike Analysis: Rome Transport - March 29, 2022**\n\nOkay, let's break this down. My task is to determine if this text describes an upcoming strike, and if so, to extract the relevant strike information in JSON format. The core criteria is a boolean `isStrike` flag, and an associated `strikeData` object if `isStrike` is true. We're looking for *upcoming* strike announcements specifically, and anything related to cancellations, participation, real-time updates, or general service info should result in `isStrike: false`. The target region is Rome (Lazio, code \"12\").\n\nThe input text states, \"Martedì 29 marzo sciopera 24 ore il trasporto pubblico. Servizio a rischio\" and \"Martedì 29 marzo trasporto pubblico a rischio per lo sciopero di 24 ore indetto tra i lavoratori dell’Atac dal sindacato Faisa Cisal. L’agitazione interesserà l’intera rete Atac. Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.\" That sounds like a strike announcement.\n\nGiven the published date of March 24, 2022, and the event date of March 29th, I'm inferring the year is 2022. The announcement specifically mentions a 24-hour strike. A 24-hour strike in Rome typically begins at midnight and ends just before the next midnight, so let's pin down the start and end times.  That means the strike starts on 2022-03-29 00:00:00 and ends on 2022-03-29 23:59:59.  The location is Rome (Lazio, code \"12\").\n\nThe text also mentions guaranteed service times: \"fino alle 8,30 e dalle 17 alle 20.\" This translates to a guaranteed service window of \"00:00-08:30\" and a second window \"17:00-20:00\".\n\nNow, let's assemble the data.  Based on the announcement, the details point to an upcoming strike, so `isStrike` will be true. Here's what I've got:\n\n*   `isStrike`: `true`\n*   `startDate`: \"2022-03-29 00:00:00\"\n*   `endDate`: \"2022-03-29 23:59:59\"\n*   `locationType`: \"REGIONAL\"\n*   `locationCodes`: [\"12\"]\n*   `guaranteedTimes`: [\"00:00-08:30\", \"17:00-20:00\"]\n\nDoes this meet all the criteria? It *should* be valid JSON. The date format is correct, region code matches, and the guaranteed times are accurately extracted. Yep, it seems I've got a complete and accurate response. I'm ready to proceed.\n\n\n"
+    "durationMs": 1204,
+    "thoughts": ""
   }
 }

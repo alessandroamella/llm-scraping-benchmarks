@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24893,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0001098,
+      "outputCost": 0.000724,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008338
+    },
+    "hash": "6d6fc35e216b82ed7b38e3e8c53b362e",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_di_24_ore_del_13_dicembre_2024_aggiornamento.html",
+    "thoughts": "**Extracting strike announcement details**\n\nI need to determine if this document is announcing an upcoming strike. The text is in Italian and confirms a 24-hour strike for December 13, 2024. It mentions the TAR del Lazio accepted a request to suspend an order from the Ministry of Transport, meaning the strike is indeed happening. So, it looks like this is confirming the strike is set for the entire day on the 13th. I’ll log the start date as December 13, 2024.",
+    "tokens": {
+      "input": 2196,
+      "output": 1810,
+      "total": 4006
+    }
+  }
+}

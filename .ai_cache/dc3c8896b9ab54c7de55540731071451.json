@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7475,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006125,
+      "outputCost": 0.000152,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00021325
+    },
+    "hash": "dc3c8896b9ab54c7de55540731071451",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_186.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI’m working with a document in Italian about a public transport strike, specifically mentioning that Atac personnel's participation was at 18.6%. It seems to focus on their participation level rather than announcing a new strike. The publication dates suggest it reflects either an ongoing or completed strike, not a new announcement. The instruction indicates that I should only mark it as an upcoming strike if that’s what’s being conveyed. So, I shouldn’t set isStrike to true.",
+    "tokens": {
+      "input": 1225,
+      "output": 380,
+      "total": 1605
+    }
+  }
+}

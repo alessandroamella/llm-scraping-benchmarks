@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8471,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000643,
+      "outputCost": 0.000224,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002883
+    },
+    "hash": "ab8d600c6d833da9f8ced054fbfbec66",
+    "sourceFile": "sciopero_nazionale_tpl_chiuse_metro_ferrovia_termini_centocelle.html",
+    "thoughts": "**Analyzing ongoing strike updates**\n\nI'm looking at real-time updates about an ongoing strike, noted to conclude at 16:30. Since it's still happening, I determine that `isStrike` should be `false` as per the instructions—this isn't an upcoming strike announcement. I also need to confirm that we don't include any strike data. The public transport company mentioned is ATAC and while \"Sciopero nazionale del Tpl\" is general, it references services within Rome. So, my output will be formatted as proper JSON: {\"isStrike\": false}.",
+    "tokens": {
+      "input": 1286,
+      "output": 560,
+      "total": 1846
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20160,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006425,
+      "outputCost": 0.00069,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00075425
+    },
+    "hash": "f1faac072ef1f74f34f2191ff766168c",
+    "sourceFile": "roma_servizi_mobilit_domani_attivit_rischio_sciopero.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to format the output as JSON based on the strike_extraction schema. The document's title indicates that there might be a strike. It mentions that due to a strike by the USB union tomorrow, there could be disruptions with Roma Servizi per la Mobilità. This suggests it is an announcement about an upcoming strike, not an ongoing one. Therefore, I conclude that isStrike should be set to true.",
+    "tokens": {
+      "input": 1285,
+      "output": 1725,
+      "total": 3010
+    }
+  }
+}

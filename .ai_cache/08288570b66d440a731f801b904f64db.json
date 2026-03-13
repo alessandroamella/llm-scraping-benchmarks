@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-11-29 00:00:00",
+      "endDate": "2024-11-29 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24199,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006375,
+      "outputCost": 0.000858,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00092175
+    },
+    "hash": "08288570b66d440a731f801b904f64db",
+    "sourceFile": "venerdi_29_novembre_sciopero_generale_nazionale_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Assessing upcoming strike announcement**\n\nI need to determine if the content indicates an upcoming strike. The Italian news states there's a general strike in Rome on Friday, November 29, which means it qualifies as such. It's officially a 24-hour strike, and the announcement mentions specific service times when transportation will operate regularly. Therefore, the isStrike flag should be set to true since it clearly announces an upcoming strike.",
+    "tokens": {
+      "input": 1275,
+      "output": 2145,
+      "total": 3420
+    }
+  }
+}

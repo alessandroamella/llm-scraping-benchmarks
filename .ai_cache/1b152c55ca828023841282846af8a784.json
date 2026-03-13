@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21875,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000716,
+      "outputCost": 0.000566,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0006376
+    },
+    "hash": "1b152c55ca828023841282846af8a784",
+    "sourceFile": "eav_autolinee_avviso_di_sciopero_di_24_ore_venerdi_13_dicembre_2024.html",
+    "thoughts": "**Extracting strike data**\n\nI need to format the information into JSON according to the strike_extraction schema. The document is clearly announcing a 24-hour strike on December 13, 2024, as stated in the text. I see it mentions specific time windows for disruption and provides reasons for the strike. Since the event is scheduled for the future relative to December 9, 2024, I can confirm that isStrike is true. Now, I’ll fill in the strikeData with the relevant details.",
+    "tokens": {
+      "input": 1432,
+      "output": 1415,
+      "total": 2847
+    }
+  }
+}

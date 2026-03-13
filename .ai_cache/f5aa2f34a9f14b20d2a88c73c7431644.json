@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-03-08 00:00:00",
+      "endDate": "2023-03-08 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24645,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000642,
+      "outputCost": 0.0008556,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0009198
+    },
+    "hash": "f5aa2f34a9f14b20d2a88c73c7431644",
+    "sourceFile": "mercoled_8_marzo_sciopero_nazionale_cub_trasporto_pubblico_rischio_24_ore.html",
+    "thoughts": "**Extracting strike data**\n\nI’m confirming that isStrike should be true. I need to extract the strike data for startDate and endDate in the format \"yyyy-MM-dd HH:mm:ss.\" The article discusses a 24-hour nationwide strike on March 8, with regular service only until 8:30 and from 17:00 to 20:00. I'm considering that the startDate is March 8 at 00:00 and the endDate is March 8 at 23:59:59. I should ensure that the format matches what’s required.",
+    "tokens": {
+      "input": 1284,
+      "output": 2139,
+      "total": 3423
+    }
+  }
+}

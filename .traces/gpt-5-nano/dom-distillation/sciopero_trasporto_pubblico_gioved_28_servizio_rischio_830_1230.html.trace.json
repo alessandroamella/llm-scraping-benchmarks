@@ -1,39 +1,44 @@
 {
-  "timestamp": "2026-03-09T19:16:06.041Z",
-  "isCacheHit": true,
+  "timestamp": "2026-03-13T15:17:04.796Z",
+  "isCacheHit": false,
   "request": {
     "sourceName": "ATAC",
     "fileName": "sciopero_trasporto_pubblico_gioved_28_servizio_rischio_830_1230.html",
     "model": "gpt-5-nano",
     "strategy": "dom-distillation",
-    "useLenientSchema": true,
+    "useLenientSchema": false,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"ATAC\" (the public transport company of Rome, Lazio (12)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"> <h3>Context Metadata</h3> <ul><li>Page Title: Sciopero del trasporto pubblico, giovedì 28 servizio a rischio dalle 8,30 alle 12,30 - Roma Servizi per la Mobilità</li></ul> </div><hr/><div> <div> <div> <div> <div> <div> </div> </div> </div> <div> <div> <div> <div> <h1>Sciopero del trasporto pubblico, giovedì 28 servizio a rischio dalle 8,30 alle 12,30</h1> </div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div><p>Pubblicato il: 22/04/2022 - Aggiornato il: 25/01/2023</p></div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div> <span> </span> </div> </div> </div> <div> <div> <div></div> </div> </div> <div> <div> <p>Giovedì 28 aprile trasporto pubblico romano a rischio per lo sciopero nazionale di 4 ore, dalle 8,30 alle 12,30, proclamato dal sindacato Faisa Confail. L’agitazione coinvolgerà la rete Atac (bus, tram, metropolitane, ferrovie concesse), e le linee periferiche gestite dalla Roma Tpl.</p> </div> </div> </div> </div> </div> </div>"
   },
   "response": {
+    "rawOutput": {
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2022-04-28 08:30:00",
+        "endDate": "2022-04-28 12:30:00",
+        "locationType": "NATIONAL"
+      }
+    },
     "parsedData": {
       "isStrike": true,
       "strikeData": {
         "startDate": "2022-04-28 08:30:00",
         "endDate": "2022-04-28 12:30:00",
-        "locationType": "NATIONAL",
-        "guaranteedTimes": [
-          "08:30-12:30"
-        ]
+        "locationType": "NATIONAL"
       }
     },
     "usage": {
-      "input": 1204,
-      "output": 1533,
-      "total": 2737
+      "input": 1290,
+      "output": 2039,
+      "total": 3329
     },
     "costUsd": {
-      "inputCost": 0.0000602,
-      "outputCost": 0.0006132,
+      "inputCost": 0.0000645,
+      "outputCost": 0.0008156,
       "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.0006734
+      "totalCost": 0.0008801
     },
-    "durationMs": 22635,
-    "thoughts": "**Extracting strike details**\n\nI need to output JSON that indicates if there’s a strike, with a boolean for isStrike and possibly some strikeData. The context seems to refer to a public transport strike happening on Thursday, April 28, from 8:30 to 12:30. Since it's a planned strike, isStrike should be true. I must also extract strikeData like startDate, endDate, locationType, and possibly locationCodes. Given that this is a national strike, locationCodes could be omitted."
+    "durationMs": 24910,
+    "thoughts": "**Analyzing strike announcement**\n\nI need to format the information into JSON per the strike extraction requirements. The announcement is written in Italian and states that there's an upcoming public transport strike on Thursday, April 28, for four hours, from 8:30 AM to 12:30 PM. This is proclaimed by the Faisa Confail union and affects the Atac network. The context indicates it’s likely referring to April 28, 2022, given the article was published in 2022 and updated in 2023."
   }
 }

@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7641,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006135,
+      "outputCost": 0.0001588,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00022015
+    },
+    "hash": "90d983e3feeb809d25c8b9c2575d5341",
+    "sourceFile": "sciopero_del_trasporto_pubblico_adesione_personale_atac_al_532.html",
+    "thoughts": "**Analyzing strike notification**\n\nI need to respond using the JSON format per the strike_extraction schema. The document mentions a public transport strike in Italy and states that participation was at 53.2%, but it does not announce a new strike. Instead, it indicates the participation rate of employees at Atac, implying that the strike has already occurred or is still ongoing. Since the information is about participation, I’ll set isStrike to false according to the instructions.",
+    "tokens": {
+      "input": 1227,
+      "output": 397,
+      "total": 1624
+    }
+  }
+}

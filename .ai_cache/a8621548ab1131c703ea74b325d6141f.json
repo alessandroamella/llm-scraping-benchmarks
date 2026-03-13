@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7757,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006165,
+      "outputCost": 0.0001216,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00018325
+    },
+    "hash": "a8621548ab1131c703ea74b325d6141f",
+    "sourceFile": "sciopero_nazionale_trasporto_pubblico_ha_aderito_101_personale_atac.html",
+    "thoughts": "**Processing strike extraction**\n\nI need to output JSON according to the strike_extraction format. The document talks about a national public transport strike in Italy, detailing a 10.1% participation rate from the personnel. It mentions that this strike occurred this morning, so it isn't upcoming. Therefore, I need to set `isStrike` to false. Since `isStrike` is false, no additional strike data is needed. I'll output the JSON precisely: {\"isStrike\": false}.",
+    "tokens": {
+      "input": 1233,
+      "output": 304,
+      "total": 1537
+    }
+  }
+}

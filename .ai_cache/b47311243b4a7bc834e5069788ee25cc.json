@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-24 00:00:00",
+      "endDate": "2025-02-24 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22835,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00013105,
+      "outputCost": 0.0005484,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00067945
+    },
+    "hash": "b47311243b4a7bc834e5069788ee25cc",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_24_h_lunedi_24_febbraio_2025.html",
+    "thoughts": "**Interpreting strike details**\n\nThe \"fasce di garanzia\" hours from 05:30-08:30 and 16:30-19:30 show the guaranteed service hours during the strike, but the start and end times are unclear. The document states a \"24 h\" period for February 24, 2025, so I’m thinking of setting the startDate at 2025-02-24 00:00:00 and endDate at 2025-02-24 23:59:59. I need the locationType to be \"NATIONAL\" since it's for a national strike, and locationCodes should be explicitly null.",
+    "tokens": {
+      "input": 2621,
+      "output": 1371,
+      "total": 3992
+    }
+  }
+}

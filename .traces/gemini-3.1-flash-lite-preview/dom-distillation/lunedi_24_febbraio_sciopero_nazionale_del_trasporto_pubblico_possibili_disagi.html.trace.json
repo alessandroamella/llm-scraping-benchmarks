@@ -1,15 +1,27 @@
 {
-  "timestamp": "2026-03-10T18:45:02.767Z",
-  "isCacheHit": true,
+  "timestamp": "2026-03-13T15:17:55.427Z",
+  "isCacheHit": false,
   "request": {
     "sourceName": "ATAC",
     "fileName": "lunedi_24_febbraio_sciopero_nazionale_del_trasporto_pubblico_possibili_disagi.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "dom-distillation",
-    "useLenientSchema": true,
+    "useLenientSchema": false,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"ATAC\" (the public transport company of Rome, Lazio (12)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"> <h3>Context Metadata</h3> <ul><li>Page Title: Lunedì 24 febbraio sciopero nazionale del trasporto pubblico. Possibili disagi - Roma Servizi per la Mobilità</li></ul> </div><hr/><div> <div> <div> <div> <div> <div> </div> </div> </div> <div> <div> <div> <div> <h1>Lunedì 24 febbraio sciopero nazionale del trasporto pubblico. Possibili disagi</h1> </div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div><p>Pubblicato il: 18/02/2025 - Aggiornato il: 18/02/2025</p></div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div> <span> </span> </div> </div> </div> <div> <div> <div></div> </div> </div> <div> <div> <p><strong>Lunedi 24 febbraio</strong> trasporto pubblico a rischio per lo <strong>sciopero nazionale di 24 or</strong>e indetto dal sindacato Usb. A Roma l’agitazione interesserà la rete Atac e le linee periferiche gestite da operatori privati. <strong>Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.&nbsp;</strong><br>Sempre a causa dello sciopero possibili disagi per le attività dello sportello al Pubblico di Roma Servizi per la Mobilità, in via Silvio D’Amico 38, e per il Contact Center 06/57003.</p> <p>Aggiornamenti su romamobilita.it</p> </div> </div> </div> </div> </div> </div>"
   },
   "response": {
+    "rawOutput": {
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2025-02-24 00:00:00",
+        "endDate": "2025-02-24 23:59:59",
+        "locationType": "NATIONAL",
+        "guaranteedTimes": [
+          "00:00-08:30",
+          "17:00-20:00"
+        ]
+      }
+    },
     "parsedData": {
       "isStrike": true,
       "strikeData": {
@@ -24,17 +36,19 @@
     },
     "usage": {
       "input": 846,
-      "output": 131,
-      "total": 1626
+      "output": 123,
+      "cached": 0,
+      "thinking": 0,
+      "total": 969
     },
     "costUsd": {
       "inputCost": 0.0002115,
-      "outputCost": 0.0001965,
-      "thinkingCost": 0.0009735,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.0013815
+      "totalCost": 0.000396
     },
-    "durationMs": 7215,
-    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, let's break this down. My task is clear: determine if this text announces a strike and, if so, format the information into a JSON object adhering to a strict schema. The input is short, mentioning a \"Lunedì 24 febbraio\" strike for public transport. Given the provided schema, this seems straightforward, but I need to be precise.\n\nFirst, I note the provided date of publication is 18/02/2025. This means the strike date is the specified date, 24/02/2025. The text clearly indicates a strike, so `isStrike` will be `true`. The page title confirms this – \"Lunedì 24 febbraio sciopero nazionale del trasporto pubblico. Possibili disagi\". The strike is stated to be \"24 ore\" long. Also it is \"nazionale\" or national, so `locationType` should be \"NATIONAL\".\n\nNow, for the details. \"24 febbraio\" translates to the strike date, which, given the publication date, is 2025-02-24. Since it's a 24-hour strike, the `startDate` is 2025-02-24 00:00:00 and the `endDate` is 2025-02-24 23:59:59. `locationCodes` will be `null` because the strike is \"nazionale.\"\n\nThe text mentions \"fino alle 8,30\" and \"dalle 17 alle 20\", which translates to the guaranteed service windows. I need to format this correctly for `guaranteedTimes`, so I'll render that as [\"00:00-08:30\", \"17:00-20:00\"].\n\nFinally, even though the strike is national, the prompt mentions the service in Rome \"ATAC\". I need to keep that in mind. The `locationType` should be \"NATIONAL\".\n\nOkay, with all that in mind, I'm ready to craft the JSON output.\n\n\n"
+    "durationMs": 1029,
+    "thoughts": ""
   }
 }

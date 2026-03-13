@@ -1,31 +1,44 @@
 {
-  "timestamp": "2026-03-09T19:15:42.115Z",
-  "isCacheHit": true,
+  "timestamp": "2026-03-13T15:14:32.471Z",
+  "isCacheHit": false,
   "request": {
     "sourceName": "EAV",
     "fileName": "autolinee_sciopero_del_22_marzo_2025.html",
     "model": "gpt-5-nano",
     "strategy": "dom-distillation",
-    "useLenientSchema": true,
+    "useLenientSchema": false,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"EAV\" (the public transport company of Campania (15)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"> <h3>Context Metadata</h3> <ul><li>Page Title: Servizio Autolinee - Avviso di sciopero di 4 ore del 22 marzo 2025 - EAV srl</li></ul> </div><hr/><article> <section> <div> <div> <div> <h2> Servizio Autolinee – Avviso di sciopero di 4 ore del 22 marzo 2025 </h2> </div> </div> </div> <div> <div> <p> <small>Data: </small><br> <small><strong>17 Marzo 2025</strong></small> </p> </div> </div> </section> <section> <div> <div> <div> </div> </div> <div> <div> <section> <p>Si comunica che per il giorno 22 marzo 2025 la O.S. OR.S.A. ha proclamato uno sciopero aziendale di 4 ore, dalle ore 19:40 alle ore 23:40, avente le seguenti motivazioni: problematiche organizzazione aziendale.</p> <p>Durante l’ultima proclamazione di sciopero della citata O.S., la percentuale di adesione è stata del 11.94% (scioperi di 24 e 4 ore del giorno 5 ottobre 2024)</p> <p><strong>Non saranno garantite le corse durante l’orario di sciopero.</strong></p> <p>Durante l’orario di sciopero l’effettuazione delle corse è subordinata al numero di lavoratori aderenti allo sciopero.</p> <div> <div> <p><b>Categoria:&nbsp;</b><a href=\"https://www.eavsrl.it/categoria-disservizio/trasporto-pubblico/\">Trasporto pubblico</a></p> <p><b>Area:&nbsp;</b><a href=\"https://www.eavsrl.it/area/eav-autobus-campania/\">EAV - Autobus Campania</a></p> </div> </div> <div></div> </section> </div> </div> </div> </section> </article>"
   },
   "response": {
+    "rawOutput": {
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2025-03-22 19:40:00",
+        "endDate": "2025-03-22 23:40:00",
+        "locationType": "NATIONAL"
+      }
+    },
     "parsedData": {
-      "isStrike": false
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2025-03-22 19:40:00",
+        "endDate": "2025-03-22 23:40:00",
+        "locationType": "NATIONAL"
+      }
     },
     "usage": {
-      "input": 1309,
-      "output": 1058,
-      "total": 2367
+      "input": 1395,
+      "output": 2031,
+      "total": 3426
     },
     "costUsd": {
-      "inputCost": 0.00006545,
-      "outputCost": 0.0004232,
+      "inputCost": 0.00006975,
+      "outputCost": 0.0008124,
       "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.00048865
+      "totalCost": 0.00088215
     },
-    "durationMs": 9929,
-    "thoughts": "**Setting parameters for strike data**\n\nI think it’s best to set `locationType` to null. The message indicates that guaranteed times may be nonexistent during a strike, so I should set `guaranteedTimes` to null as well. The format for `startDate` and `endDate` needs to include seconds, so I'll provide the necessary timestamps. Since it's an announcement of an upcoming strike, `isStrike` will be true. I'll double-check if `locationCodes` can also be null."
+    "durationMs": 23452,
+    "thoughts": "**Determining strike details**\n\nI need to follow the JSON schema for `strike_extraction` and see if `isStrike` should be true or false. The content is an Italian notice about a four-hour strike on March 22, 2025, from 19:40 to 23:40. Since it's announcing this strike, `isStrike` should indeed be true. I'll extract `startDate` and `endDate` in the required format: \"2025-03-22 19:40:00\" and \"2025-03-22 23:40:00.\" For `locationType`, it could be either \"NATIONAL\" or \"REGIONAL.\""
   }
 }

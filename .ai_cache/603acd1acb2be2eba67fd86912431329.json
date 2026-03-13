@@ -1,0 +1,32 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 42896,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006355,
+      "outputCost": 0.000714,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00077755
+    },
+    "hash": "603acd1acb2be2eba67fd86912431329",
+    "sourceFile": "sportello_al_pubblico_e_contact_center_di_rsm_servizi_non_attivi_causa_sciopero.html",
+    "thoughts": "**Analyzing strike announcement**\n\nIt looks like the service is closed due to a strike, and they're saying there’s a protest planned for tomorrow too. This suggests that there’s an ongoing strike but also something scheduled for the next day. I’m not certain if they’ve mentioned specific start or end times. It appears to be about Rsm Roma Servizi per la Mobilità. The instruction says to only set isStrike to true if it’s an announcement of an upcoming strike, but this seems to fit that criteria.",
+    "tokens": {
+      "input": 1271,
+      "output": 1785,
+      "total": 3056
+    }
+  }
+}

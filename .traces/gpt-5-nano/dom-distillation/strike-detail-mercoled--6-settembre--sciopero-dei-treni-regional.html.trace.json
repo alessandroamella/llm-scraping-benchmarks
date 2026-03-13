@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-03-13T01:39:59.019Z",
+  "timestamp": "2026-03-13T15:14:04.030Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "Trenord",
     "fileName": "strike-detail-mercoled--6-settembre--sciopero-dei-treni-regional.html",
     "model": "gpt-5-nano",
     "strategy": "dom-distillation",
-    "useLenientSchema": true,
+    "useLenientSchema": false,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"Trenord\" (the public transport company of Lombardia (03)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"> <h3>Context Metadata</h3> <ul><li>Page Title: 6 settembre, sciopero dei treni regionaliUser-logged-no-picCloseSend-mail-OKAlert</li><li>Date News: lunedì 04/09/2023</li><li>Header: Mercoledì 6 settembre, sciopero dei treni regionali</li></ul> </div><hr/><div> <div> <h1> <b> Mercoledì 6 settembre, sciopero dei treni regionali </b> </h1> <p> lunedì 04/09/2023 </p> </div> <div> <!-- start simpleTextMedia --> <div> <div> <div> <div> <h4><strong>L’agitazione indetta da ORSA, Uiltrasporti, FAST, FAISA CISAL&nbsp;</strong><strong>dalle ore 3 del 6 alle ore 2 del 7 settembre</strong></h4> <h4><strong>Si invitano i passeggeri a consultare su trenord.it l’elenco dei treni garantiti negli orari 6-9 e 18-21, con particolare attenzione alle corse serali</strong></h4> <p>Dalle ore 3 di mercoledì 6 alle ore 2 di giovedì 7 settembre le organizzazioni sindacali ORSA, Uiltrasporti, FAST, FAISA CISAL hanno indetto uno sciopero che per l’intera giornata di mercoledì potrà generare ripercussioni sulla circolazione dei treni regionali, suburbani e sui collegamenti aeroportuali Malpensa Express e S50 Malpensa Aeroporto-Bellinzona.</p> <p>Negli orari 6-9 e 18-21 circoleranno i treni indicati nella lista delle corse garantite, disponibile su trenord.it. Si invitano i passeggeri a consultare l’elenco, con particolare attenzione alle corse serali per il rientro.</p> <p>In particolare, la mattina viaggeranno i convogli con orario di partenza dalla stazione di origine dopo le 6 e arrivo alla destinazione finale entro le 9. Nella fascia pomeridiana, circoleranno quelli con partenza prevista dopo le 18 e con arrivo entro le 21.</p> <p>Saranno previsti autobus sostitutivi, senza fermate intermedie, per le corse non effettuate tra Milano Cadorna (da via Paleocapa, 1) e Malpensa Aeroporto e tra Busto FS e Malpensa Aeroporto.</p> <p>Le informazioni sulla circolazione saranno disponibili sulle pagine di ogni linea della App e del sito Trenord.</p> <p>Si invitano i passeggeri a prestare attenzione ad annunci sonori e monitor di stazione.</p> <p>­</p> <p><a href=\"/fileadmin/contenuti/TRENORD/3-News/Trenord_Informa/Comunicati_stampa/2023/Trenord_230904_CS_Sciopero_6sett.pdf\">Comunicato stampa sciopero 6 settembre 2023</a></p> </div> </div> </div> </div> <!-- end simpleTextMedia --> </div> </div> <div>PDF Document Found: /fileadmin/contenuti/TRENORD/3-News/Trenord_Informa/Comunicati_stampa/2023/Trenord_230904_CS_Sciopero_6sett.pdf</div>"
   },
   "response": {
@@ -26,18 +26,18 @@
       }
     },
     "usage": {
-      "input": 1613,
-      "output": 1360,
-      "total": 2973
+      "input": 1699,
+      "output": 998,
+      "total": 2697
     },
     "costUsd": {
-      "inputCost": 0.00008065,
-      "outputCost": 0.000544,
+      "inputCost": 0.00008495,
+      "outputCost": 0.0003992,
       "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.00062465
+      "totalCost": 0.00048415
     },
-    "durationMs": 18340,
-    "thoughts": "**Determining strike announcement details**\n\nI need to format the output in JSON according to the specified strike_extraction requirements. The document's content is in Italian and indicates a train strike from September 6 at 3:00 AM until September 7 at 2:00 AM. It provides guaranteed times between 6-9 AM and 6-9 PM. The dates are confirmed with \"Mercoledì 6 settembre\" and \"pagina titolo 4/09/2023\" indicating this is for 2023. I’ll ensure all these details are properly presented!"
+    "durationMs": 16934,
+    "thoughts": "**Determining upcoming strike dates**\n\nI need to output structured JSON for a document discussing an upcoming train strike. The content specifies that the strike is from 3:00 AM on September 6 to 2:00 AM on September 7. This confirms that it is indeed an upcoming strike in 2023. The page date is April 9, 2023, which gives context for when this information is relevant. I'm preparing the start and end date times in the required format."
   }
 }

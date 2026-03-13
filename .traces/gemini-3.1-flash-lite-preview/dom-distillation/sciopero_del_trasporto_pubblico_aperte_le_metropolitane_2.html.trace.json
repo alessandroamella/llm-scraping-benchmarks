@@ -1,31 +1,36 @@
 {
-  "timestamp": "2026-03-09T19:15:45.985Z",
-  "isCacheHit": true,
+  "timestamp": "2026-03-13T15:16:24.033Z",
+  "isCacheHit": false,
   "request": {
     "sourceName": "ATAC",
     "fileName": "sciopero_del_trasporto_pubblico_aperte_le_metropolitane_2.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "dom-distillation",
-    "useLenientSchema": true,
+    "useLenientSchema": false,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"ATAC\" (the public transport company of Rome, Lazio (12)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"> <h3>Context Metadata</h3> <ul><li>Page Title: Sciopero del trasporto pubblico, aperte le metropolitane - Roma Servizi per la Mobilità</li></ul> </div><hr/><div> <div> <div> <div> <div> <div> </div> </div> </div> <div> <div> <div> <div> <h1>Sciopero del trasporto pubblico, aperte le metropolitane</h1> </div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div><p>Pubblicato il: 28/11/2025 - Aggiornato il: 28/11/2025</p></div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div> <span> </span> </div> </div> </div> <div> <div> <div></div> </div> </div> <div> <div> <p>È in corso lo sciopero generale nazionale di 24 ore. Ecco la situazione sulla rete romana del trasporto pubblico.</p> <p>Metro A-B/B1 e ferrovia Termini-Centocelle: proseguono servizio con possibile riduzione di corse;</p> <p>-metro C: regolare</p> <p>-bus e tram: possibile riduzione di servizio.</p> <p></p> </div> </div> </div> </div> </div> </div>"
   },
   "response": {
+    "rawOutput": {
+      "isStrike": false
+    },
     "parsedData": {
       "isStrike": false
     },
     "usage": {
       "input": 759,
       "output": 10,
-      "total": 979
+      "cached": 0,
+      "thinking": 0,
+      "total": 769
     },
     "costUsd": {
       "inputCost": 0.00018975,
       "outputCost": 0.000015,
-      "thinkingCost": 0.000315,
+      "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.00051975
+      "totalCost": 0.00020475
     },
-    "durationMs": 4026,
-    "thoughts": "**Analyzing the Strike Notification**\n\nOkay, here's the deal. My primary task is to figure out if this text is announcing an *upcoming* strike. The input text is in Italian: \"Sciopero del trasporto pubblico, aperte le metropolitane\" followed by \"È in corso lo sciopero generale nazionale di 24 ore.\" (Public transport strike, subways open, The national general strike of 24 hours is in progress). I need to return a JSON object with `isStrike` as a boolean, and a `strikeData` object if `isStrike` is true.\n\nThe key is that the input *explicitly* states \"È in corso\" – \"is in progress\". Now, the instructions tell me that if the text describes a *current* situation, a real-time update, then I should set `isStrike` to *false*.\n\nTherefore, I'm interpreting this as a status report, not an advance warning. The text is providing real-time information about the metro service during the strike. So, my result is `isStrike: false`. My analysis is complete.\n\n\n"
+    "durationMs": 2496,
+    "thoughts": ""
   }
 }

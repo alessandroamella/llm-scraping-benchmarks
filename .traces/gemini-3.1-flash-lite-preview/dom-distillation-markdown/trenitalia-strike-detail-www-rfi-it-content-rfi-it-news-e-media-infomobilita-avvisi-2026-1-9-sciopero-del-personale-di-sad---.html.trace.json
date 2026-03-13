@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-03-12T01:45:11.709Z",
+  "timestamp": "2026-03-13T15:15:51.703Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "Trenitalia",
     "fileName": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2026-1-9-sciopero-del-personale-di-sad---.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "dom-distillation-markdown",
-    "useLenientSchema": true,
+    "useLenientSchema": false,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"Trenitalia\" (Italy's national railway operator).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: SCIOPERO DEL PERSONALE DI SAD E TRENTINO TRASPORTI / PERSONALSTREIK VON SAD UND TRENTINO TRASPORTI\n\n* * *\n\n# SCIOPERO DEL PERSONALE DI SAD E TRENTINO TRASPORTI / PERSONALSTREIK VON SAD UND TRENTINO TRASPORTI\n\nIn vigore: 9 GENNAIO 2026 - 10 GENNAIO 2026\n\nServizio: **Regionale**\n\nCausa Modifica: **Sciopero**\n\nRegione: **Trentino Alto Adige, VENETO**\n\nImpresa: **SAD, TT– Trentino Trasporti**\n\n**Dalle ore 21:00 del 9 gennaio alle ore 20:59 del 10 gennaio 2026** è stato indetto uno sciopero del personale di **SAD**. I treni delle linee Bolzano – Trento, Bolzano – Merano, Merano – Malles, Brennero – Bolzano – Merano e Brunico – San Candido possono subire variazioni. \n\n**Dalle ore 00:01 alle ore 23:59 del 10 gennaio 2026** è stato indetto uno sciopero del personale di **Trentino Trasporti**. I treni della linea Trento-Bassano del Grappa possono subire variazioni.\n\nLo sciopero può comportare modifiche al servizio, **anche prima dell’inizio e dopo la sua conclusione**.\n\nMaggiori informazioni presso il personale di assistenza clienti e le biglietterie di Trenitalia.\n\n**Von 21:00 Uhr am 9. Januar bis 20:59 Uhr am 10. Januar 2026** wurde ein Streik des SAD-Personals ausgerufen. Bei den **SAD-Zügen** auf den Strecken Bozen - Trient, Bozen - Meran, Meran - Mals, Brenner - Bozen-Meran und Bruneck – Innichen kann es zu Änderungen kommen. \n\n**Von 00:01 Uhr bis 23:59 Uhr am 10. Januar 2026** wurde ein Streik des Trentino Trasporti-Personals ausgerufen. Bei den **Trentino Trasporti-Zügen** auf der Strecke Trient - Bassano del Grappa kann es zu Änderungen kommen\n\nDer Streik kann **bereits vor Beginn und nach Beendigung** zu Änderungen des Dienstes führen. \n\nWeitere Informationen erhalten Sie beim Kundenservice und an den Fahrkartenschaltern von Trenitalia."
   },
   "response": {
@@ -25,15 +25,16 @@
     "usage": {
       "input": 1033,
       "output": 106,
-      "total": 1684
+      "total": 1649
     },
     "costUsd": {
       "inputCost": 0.00025825,
       "outputCost": 0.000159,
-      "thinkingCost": 0.0008175,
+      "thinkingCost": 0.000765,
       "cachedCost": 0,
-      "totalCost": 0.00123475
+      "totalCost": 0.00118225
     },
-    "durationMs": 6806
+    "durationMs": 5612,
+    "thoughts": "**Strike Analysis: January 2026**\n\nOkay, let's break this down. My task is to definitively determine if this text describes an upcoming strike and, if so, extract the necessary data into a clean, parseable JSON format. The core requirement is precision: a valid JSON output, adhering strictly to the schema, with no extraneous text.\n\nThe page title, \"SCIOPERO DEL PERSONALE DI SAD E TRENTINO TRASPORTI,\" immediately flags a potential strike (\"Sciopero\" means strike in Italian), concerning personnel of SAD and Trentino Trasporti. The dates are critical: January 9th to 10th, 2026. This confirms it's an upcoming event, which is essential to determine.\n\nNow, let's analyze the details. The strike duration for SAD starts at 21:00 on January 9th and ends at 20:59 on January 10th. Trentino Trasporti's strike runs from 00:01 to 23:59 on January 10th. The region impacted is Trentino-Alto Adige (Code 04) and Veneto (Code 05). That's regional coverage.\n\nBased on this information, the JSON output is confirmed. `isStrike` is true.\n\nThe calculated start date is \"2026-01-09 21:00:00\" (earliest start time) and the end date is \"2026-01-10 23:59:00\" (latest end time). The `locationType` is unequivocally \"REGIONAL\" since the strike affects multiple regions. The `locationCodes` are \"04\" and \"05,\" corresponding to Trentino-Alto Adige and Veneto. Guaranteed times are not specified.\n\nFinally, let's verify that the JSON is valid. The required fields are present and correctly formatted (`yyyy-MM-dd HH:mm:ss`), there's no extraneous text, and the `locationCodes` are correct. Confirmed. We are all set.\n\n\n"
   }
 }

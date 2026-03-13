@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-24 00:00:00",
+      "endDate": "2025-02-24 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 23187,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008465,
+      "outputCost": 0.00065,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00073465
+    },
+    "hash": "b7928e8bb1bb84239a60377aab355483",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_24h_lunedi_24_febbraio_2025.html",
+    "thoughts": "**Clarifying time details**\n\nThe text mentions \"24h\" for February 24, 2025. I'm considering whether it means starting at 00:00 or if it runs from 00:00 to 23:59. The common understanding is that it's a 24-hour period on that date. Meanwhile, the \"guaranteed times\" field lists ranges, like \"06:00-09:00\". The example includes guaranteed ranges from 05:30 to 08:30 and 16:30 to 19:30. It seems there are guaranteed times provided as an array of strings in the document.",
+    "tokens": {
+      "input": 1693,
+      "output": 1625,
+      "total": 3318
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-12-16 20:00:00",
+      "endDate": "2022-12-16 24:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "20:00-24:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19702,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000635,
+      "outputCost": 0.0005212,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0005847
+    },
+    "hash": "e8eb2ccd0a636fc33ed43909720c4fbf",
+    "sourceFile": "venerd_16_dicembre_sciopero_generale_regionale_trasporto_pubblico_rischio_20_24.html",
+    "thoughts": "**Formatting date for event**\n\nI'm focusing on the event date of Friday, December 16, 2022. The required format is 'yyyy-MM-dd HH:mm:ss.' The article was published on December 9, 2022, but the strike is indeed on the 16th. Now, I need to figure out how to handle the time. Standard practice suggests using 23:59:59 instead of 24:00 for the end time. I think my best option is to use 2022-12-16 20:00:00 to 2022-12-16 23:59:59. I want to ensure I get this right.",
+    "tokens": {
+      "input": 1270,
+      "output": 1303,
+      "total": 2573
+    }
+  }
+}

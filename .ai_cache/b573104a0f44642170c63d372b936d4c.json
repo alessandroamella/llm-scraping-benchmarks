@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-10-13 08:30:00",
+      "endDate": "2025-10-13 12:30:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19262,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0001028,
+      "outputCost": 0.0009204,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0010232
+    },
+    "hash": "b573104a0f44642170c63d372b936d4c",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_4_ore_del_13_ottobre_2025.html",
+    "thoughts": "**Determining JSON Output for Strike Announcement**\n\nI need to output JSON following a specific schema for a strike announcement. The content indicates that Os Faisa Confail has proclaimed a 4-hour strike on October 13, 2025, for operational staff on vesuviane lines, from 08:30 to 12:30. Since it's clearly an upcoming strike announcement, I’ll set `isStrike` to true. I'll extract the `strikeData`, ensuring the dates are in the correct format, and figure out the location type.",
+    "tokens": {
+      "input": 2056,
+      "output": 2301,
+      "total": 4357
+    }
+  }
+}

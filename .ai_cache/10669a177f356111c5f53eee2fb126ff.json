@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 09:00:00",
+      "endDate": "2024-12-13 13:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22424,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008605,
+      "outputCost": 0.0006356,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00072165
+    },
+    "hash": "10669a177f356111c5f53eee2fb126ff",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_4_ore_del_13_dicembre_2024.html",
+    "thoughts": "**Determining strike details**\n\nI'm working on identifying if the document announces an upcoming strike. The content mentions a general strike on December 13, 2024, reduced to 4 hours, from 09:00 to 13:00. So this indicates an upcoming strike, which means isStrike should be true.\n\nNow, I have to ensure the dates are in the 'yyyy-MM-dd HH:mm:ss' format. For locationType, it mentions a general national strike, so locationCodes must be explicitly null since it's national.",
+    "tokens": {
+      "input": 1721,
+      "output": 1589,
+      "total": 3310
+    }
+  }
+}

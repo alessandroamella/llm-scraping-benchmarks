@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-04-11 20:00:00",
+      "endDate": "2024-04-12 00:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22108,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000644,
+      "outputCost": 0.000952,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0010164
+    },
+    "hash": "234def4a504758ce31cf8b2e6e04e6f6",
+    "sourceFile": "gioved_11_aprile_sciopero_nazionale_trasporto_pubblico_rischio_20_24.html",
+    "thoughts": "**Extracting strike data**\n\nI need to format the information on an upcoming strike into JSON according to the specified schema. The content reveals that there's a national strike on Thursday, April 11, from 20:00 to 24:00, which threatens public transport services in Rome. It includes details about affected networks as well. Therefore, I can confirm that isStrike should be marked as true, and I'll need to fill in the strikeData fields accordingly. Let's get this structured right!",
+    "tokens": {
+      "input": 1288,
+      "output": 2380,
+      "total": 3668
+    }
+  }
+}

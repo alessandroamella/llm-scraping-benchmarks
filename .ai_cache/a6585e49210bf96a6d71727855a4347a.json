@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5461,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000645,
+      "outputCost": 0.000166,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002305
+    },
+    "hash": "a6585e49210bf96a6d71727855a4347a",
+    "sourceFile": "sciopero_trasporto_pubblico_chiusa_metro_aperte_b_c_termini_centocelle.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to check if the document is about a new or upcoming strike. It mentions \"Sciopero del trasporto pubblico\" and indicates an ongoing strike as of 06/05/2024. The status clearly states that it's currently underway, not announcing any future events. Thus, following the guidance that labels real-time updates about ongoing strikes as isStrike false, I can confidently conclude that isStrike is indeed false.",
+    "tokens": {
+      "input": 1290,
+      "output": 415,
+      "total": 1705
+    }
+  }
+}

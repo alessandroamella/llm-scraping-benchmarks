@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9009,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000613,
+      "outputCost": 0.0002052,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002665
+    },
+    "hash": "72886d4390bab9afefa728df152f508d",
+    "sourceFile": "sciopero_nazionale_trasporto_pubblico_adesione_personale_atac_al_274.html",
+    "thoughts": "**Finalizing JSON output**\n\nI need to generate a JSON output indicating \"isStrike\": false. This is pretty straightforward. The instructions say it must be strictly formatted for “strike_extraction.” I should double-check the context about \"Sciopero nazionale trasporto pubblico,\" which refers to participation rather than announcing an upcoming strike. It looks like the strike may have happened earlier or is ongoing, but I can confirm it’s not an announcement. Therefore, I'll responsibly output isStrike as false.",
+    "tokens": {
+      "input": 1226,
+      "output": 513,
+      "total": 1739
+    }
+  }
+}

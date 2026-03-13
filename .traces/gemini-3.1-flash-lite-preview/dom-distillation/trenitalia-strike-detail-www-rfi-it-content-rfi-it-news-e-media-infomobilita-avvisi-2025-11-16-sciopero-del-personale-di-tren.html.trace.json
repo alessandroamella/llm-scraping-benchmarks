@@ -1,15 +1,30 @@
 {
-  "timestamp": "2026-03-09T19:15:44.732Z",
-  "isCacheHit": true,
+  "timestamp": "2026-03-13T15:15:45.378Z",
+  "isCacheHit": false,
   "request": {
     "sourceName": "Trenitalia",
     "fileName": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-11-16-sciopero-del-personale-di-tren.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "dom-distillation",
-    "useLenientSchema": true,
+    "useLenientSchema": false,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"Trenitalia\" (Italy's national railway operator).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"> <h3>Context Metadata</h3> <ul><li>Page Title: SCIOPERO DEL PERSONALE DI TRENORD</li></ul> </div><hr/><div> <div> <h1>SCIOPERO DEL PERSONALE DI TRENORD</h1> <div> <span>In vigore: 16 NOVEMBRE 2025</span> </div> <div></div> <div> <div> Servizio: <strong>Lunga percorrenza, Regionale</strong> </div> <div> Causa Modifica: <strong>Sciopero</strong> </div> <div> Regione: <strong>Emilia Romagna, LIGURIA, LOMBARDIA, PIEMONTE, VENETO</strong> </div> <div> Impresa: <strong>Trenitalia, Trenord</strong> </div> </div> </div> </div> <div> <div> <div> <p><b>Dalle ore 10:00 alle ore 17:59 di domenica 16 novembre 2025</b> è stato indetto uno sciopero del personale di Trenord.</p> <p>Lo sciopero può comportare modifiche al servizio, anche prima dell’inizio e dopo la sua conclusione. <b>Possibili cancellazioni o variazioni in Lombardia e nelle regioni limitrofe.</b></p> <p>I treni Regionali, Suburbani, Lunga Percorrenza di Trenord e i collegamenti aeroportuali <b>Milano - Malpensa Aeroporto e Malpensa Aeroporto - Bellinzona</b> possono subire variazioni.</p> <p>Lo sciopero ricade in una fascia oraria senza treni garantiti.</p> <p>Per garantire il collegamento con l’aeroporto, in caso di cancellazione dei treni, sarà istituito un servizio bus senza fermate intermedie tra Milano Cadorna (via Paleocapa,1) e Malpensa Aeroporto, e tra Stabio e Malpensa Aeroporto.</p> <p>Anche <b>i treni del Regionale di Trenitalia della relazione Milano - Domodossola possono subire variazioni.</b></p> <p>Maggiori informazioni sui canali digitali di Trenord o presso il personale di assistenza clienti e le biglietterie.&nbsp;</p> </div> </div> </div>"
   },
   "response": {
+    "rawOutput": {
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2025-11-16 10:00:00",
+        "endDate": "2025-11-16 17:59:00",
+        "locationType": "REGIONAL",
+        "locationCodes": [
+          "08",
+          "07",
+          "03",
+          "01",
+          "05"
+        ]
+      }
+    },
     "parsedData": {
       "isStrike": true,
       "strikeData": {
@@ -27,17 +42,19 @@
     },
     "usage": {
       "input": 937,
-      "output": 131,
-      "total": 1597
+      "output": 123,
+      "cached": 0,
+      "thinking": 0,
+      "total": 1060
     },
     "costUsd": {
       "inputCost": 0.00023425,
-      "outputCost": 0.0001965,
-      "thinkingCost": 0.0007935,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.00122425
+      "totalCost": 0.00041875
     },
-    "durationMs": 6385,
-    "thoughts": "**Strike Analysis & JSON Output**\n\nOkay, let's break this down. My task is to definitively determine if this text represents a strike announcement, and if so, to craft a valid JSON object based on the schema I'm given. The input content clearly indicates a strike by Trenord/Trenitalia personnel. The page title \"SCIOPERO DEL PERSONALE DI TRENORD\" is the first red flag, followed by the explicit date and time range: \"Dalle ore 10:00 alle ore 17:59 di domenica 16 novembre 2025.\" That's a solid start.\n\nThe locations are also specified: Emilia Romagna, Liguria, Lombardia, Piemonte, and Veneto. This confirms the scope is regional/interregional; more than one region is involved. The phrase \"Lo sciopero ricade in una fascia oraria senza treni garantiti\" is key – it explicitly states there are *no* guaranteed train services during the strike. That's a crucial piece of information.\n\nTherefore, `isStrike` is definitely `true`. The `startDate` is \"2025-11-16 10:00:00\" and the `endDate` is \"2025-11-16 17:59:00\", as extracted. Since specific regions are listed, even if multiple, the `locationType` is definitely \"REGIONAL\". I need to find the location codes too. Emilia-Romagna is 08, Liguria is 07, Lombardia is 03, Piemonte is 01, and Veneto is 05, so the `locationCodes` array will be [\"08\", \"07\", \"03\", \"01\", \"05\"]. Because no guaranteed times are mentioned in the text, I'll set `guaranteedTimes` to `null` or omit it. The schema says that is an option.\n\nNow, I can build my output JSON:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-11-16 10:00:00\",\n    \"endDate\": \"2025-11-16 17:59:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\n      \"08\",\n      \"07\",\n      \"03\",\n      \"01\",\n      \"05\"\n    ],\n    \"guaranteedTimes\": null\n  }\n}\n```\nThat should be a clean and correct JSON response.\n\n\n"
+    "durationMs": 2336,
+    "thoughts": ""
   }
 }

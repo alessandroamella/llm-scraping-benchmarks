@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-09-16 08:30:00",
+      "endDate": "2022-09-16 16:30:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "08:30-16:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21220,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000066,
+      "outputCost": 0.00054,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.000606
+    },
+    "hash": "bf9b04752f9494f7080416d1a4efb45a",
+    "sourceFile": "venerd_16_settembre_sciopero_nazionale_8_ore_trasporto_pubblico_romano_rischio.html",
+    "thoughts": "**Outputting JSON for strike announcement**\n\nI need to format this into JSON based on the specifications. The content is in Italian, and the title indicates there’s an upcoming strike on September 16, 2022, which could affect public transport in Rome. It mentions the risk to local transport due to a national strike from 8:30 to 16:30. So, I’m concluding that this is indeed an announcement of an upcoming strike, and I’ll mark isStrike as true.",
+    "tokens": {
+      "input": 1320,
+      "output": 1350,
+      "total": 2670
+    }
+  }
+}

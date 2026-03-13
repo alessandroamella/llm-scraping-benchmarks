@@ -1,35 +1,45 @@
 {
-  "timestamp": "2026-03-09T19:15:41.081Z",
-  "isCacheHit": true,
+  "timestamp": "2026-03-13T15:14:09.160Z",
+  "isCacheHit": false,
   "request": {
     "sourceName": "EAV",
     "fileName": "linea_metropolitana_avvisi_di_sciopero_di_4_ore_del_13_dicembre_2024.html",
     "model": "deepseek-chat",
     "strategy": "dom-distillation",
-    "useLenientSchema": true,
+    "useLenientSchema": false,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"EAV\" (the public transport company of Campania (15)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"> <h3>Context Metadata</h3> <ul><li>Page Title: Linea Metropolitana: Avvisi di sciopero di 4 ore del 13 dicembre 2024 - EAV srl</li></ul> </div><hr/><article> <section> <div> <div> <div> <h2> Linea Metropolitana: Avvisi di sciopero di 4 ore del 13 dicembre 2024 </h2> </div> </div> </div> <div> <div> <p> <small>Data: </small><br> <small><strong>11 Dicembre 2024</strong></small> </p> </div> </div> </section> <section> <div> <div> <div> </div> </div> <div> <div> <section> <p>Si comunica che, a seguito dell’ordinanza di precettazione da parte del Ministro delle infrastrutture e dei trasporti, lo sciopero generale nazionale di 24 ore proclamato per il giorno 13 dicembre 2024 dalla OS USB,<strong> è stato ridotto a 4 ore, dalle ore 09:00 alle ore 13:00.</strong></p> <p>Le motivazioni dello sciopero sono le seguenti:</p> <p>• Una nuova indicizzazione che leghi i salari all’aumento reale del costo della vita;<br> • Un rinnovo contrattuale con incremento delle retribuzioni di 300 euro;<br> • Il libero esercizio del diritto di sciopero senza il rispetto delle fasce di garanzia;<br> • Riduzione dell’orario di lavoro a 32 ore a parità di salario;<br> • La sicurezza dei lavoratori e del servizio;<br> • Contro le guerre ed il genocidio del governo Israeliano nei confronti del popolo Palestinese;<br> • Contro la manovra economica per il 2025 approvata dal Governo Meloni.<br> Durante l’ultima proclamazione di sciopero della citata O.S., la percentuale di adesione è stata del 5,7% (sciopero di 4 ore del giorno 28 ottobre 2024)</p> <p>Di seguito vengono elencate le ultime e le prime partenze garantite in relazione alle fasce di garanzia.</p> <p>Durante l’orario di sciopero l’effettuazione delle corse è subordinata al numero di lavoratori aderenti allo sciopero.</p> <p><strong>Ultime partenze prima dello sciopero</strong></p> <ul> <li>da Aversa per Piscinola 08:45</li> <li>da Piscinola per Aversa 08:45</li> </ul> <p><strong>Prime partenze dopo lo sciopero</strong></p> <ul> <li>da Aversa per Piscinola&nbsp; 13:00</li> <li>da Piscinola per Aversa&nbsp; 13:15</li> </ul> <div></div> </section> </div> </div> </div> </section> </article>"
   },
   "response": {
+    "rawOutput": {
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2024-12-13 09:00:00",
+        "endDate": "2024-12-13 13:00:00",
+        "locationType": "NATIONAL",
+        "guaranteedTimes": []
+      }
+    },
     "parsedData": {
       "isStrike": true,
       "strikeData": {
         "startDate": "2024-12-13 09:00:00",
         "endDate": "2024-12-13 13:00:00",
-        "locationType": "NATIONAL"
+        "locationType": "NATIONAL",
+        "guaranteedTimes": []
       }
     },
     "usage": {
-      "input": 1743,
-      "output": 85,
-      "total": 1828
+      "input": 1749,
+      "output": 77,
+      "total": 1826
     },
     "costUsd": {
-      "inputCost": 0.0000488,
-      "outputCost": 0.0000238,
+      "inputCost": 0.00004897,
+      "outputCost": 0.00002156,
       "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.0000726
+      "totalCost": 0.00007053
     },
-    "durationMs": 4054
+    "durationMs": 5623
   }
 }

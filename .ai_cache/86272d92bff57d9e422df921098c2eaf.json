@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 9444,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000647,
+      "outputCost": 0.0001984,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002631
+    },
+    "hash": "86272d92bff57d9e422df921098c2eaf",
+    "sourceFile": "sciopero_trasporto_pubblico_chiuse_metro_b1_c_aperte_linea_b_ferrovia_termini_centocelle.html",
+    "thoughts": "**Clarifying strike status**\n\nI’m confirming that isStrike should be set to false. The output should reflect that by providing this JSON: {\"isStrike\": false}. Since the user's request specifies no additional fields, I don't need to include strikeData. \n\nI'll focus on the ongoing situation and ensure the response is minimal and straightforward. It’s essential to follow the required format, so my crafted response will be:  \n{  \n  \"isStrike\": false  \n}  \nAnd I need to avoid any trailing content.",
+    "tokens": {
+      "input": 1294,
+      "output": 496,
+      "total": 1790
+    }
+  }
+}

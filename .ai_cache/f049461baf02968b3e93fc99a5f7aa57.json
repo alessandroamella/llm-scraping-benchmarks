@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7457,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006165,
+      "outputCost": 0.000166,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00022765
+    },
+    "hash": "f049461baf02968b3e93fc99a5f7aa57",
+    "sourceFile": "news_media_comunicati_sciopero_adesione_personale_atac.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to determine if this input is about a strike announcement or not. It’s in Italian and discusses participation by Atac personnel, with a reported percentage of 24.9%. The text mentions it’s about “today’s national strike” and provides an update on participation. Since it refers to a participation percentage of a strike that has already occurred or is ongoing, it seems like this wouldn’t be classified as an upcoming strike. Therefore, I should set isStrike to false.",
+    "tokens": {
+      "input": 1233,
+      "output": 415,
+      "total": 1648
+    }
+  }
+}

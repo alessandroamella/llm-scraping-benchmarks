@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-07-04 08:30:00",
+      "endDate": "2024-07-04 16:30:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "08:30-16:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21268,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000063,
+      "outputCost": 0.0006156,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0006786
+    },
+    "hash": "4aa9c27abce84bd1b92ffd8ee104375f",
+    "sourceFile": "trasporto_pubblico_domani_sciopero_8_ore_sulla_rete_atac.html",
+    "thoughts": "**Extracting strike information**\n\nI need to format a JSON based on the strike_extraction schema. The content is Italian and the title indicates an upcoming strike with public transport affected for 8 hours. The publication date is 03/07/2024 and it's updated on 06/11/2024. The body explains that transport will be at risk tomorrow from 8:30 to 16:30 due to a strike called by the unions. The Atac network will be involved. So, this is definitely an announcement for an upcoming strike.",
+    "tokens": {
+      "input": 1260,
+      "output": 1539,
+      "total": 2799
+    }
+  }
+}

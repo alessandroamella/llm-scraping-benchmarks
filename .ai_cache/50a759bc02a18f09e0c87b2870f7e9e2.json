@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-28 08:20:00",
+      "endDate": "2025-01-28 12:20:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "08:20-12:20"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20938,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008175,
+      "outputCost": 0.0005752,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00065695
+    },
+    "hash": "50a759bc02a18f09e0c87b2870f7e9e2",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_di_4_ore_martedi_28_gennaio_2025.html",
+    "thoughts": "**Determining strike categorization**\n\nI'm tackling whether the strike by EAV Srl in Campania is national or regional. Since EAV is a local company, I'd guess it's REGIONAL. The locationCodes are based on ISTAT region codes, and for Campania, the code is 15, not 8 as I initially thought. I double-checked a list of regions, confirming that Campania corresponds to 15. Also, the guaranteed times for the strike are from 08:20 to 12:20, and these need to be formatted correctly as optional strings.",
+    "tokens": {
+      "input": 1635,
+      "output": 1438,
+      "total": 3073
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-10 08:30:00",
+      "endDate": "2025-01-10 12:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21450,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000642,
+      "outputCost": 0.0007292,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0007934
+    },
+    "hash": "60f6620e4c81e912a3453ea9eae961e7",
+    "sourceFile": "trasporto_pubblico_venerdi_10_gennaio_sciopero_nazionale_di_4_ore.html",
+    "thoughts": "**Extracting strike information**\n\nI need to output JSON for the extraction related to strikes. The document indicates an upcoming national strike for public transport on January 10, from 8:30 to 12:30, declared by the Faisa Confail union. The announcement specifies that this is a national event affecting various transit networks. That means the `isStrike` value should be true. I'll also need to make sure to capture the start and end date in the correct format.",
+    "tokens": {
+      "input": 1284,
+      "output": 1823,
+      "total": 3107
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 10169,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000639,
+      "outputCost": 0.0002132,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002771
+    },
+    "hash": "a27c7ed2d0aee6c73f4c4779b751e6ec",
+    "sourceFile": "sciopero_trasporto_pubblico_aperta_metro_b_chiuse_c.html",
+    "thoughts": "**Extracting strike information**\n\nI need to output a JSON structure that follows the strike_extraction schema. My focus is to analyze Italian content about a potential strike from ATAC. The title indicates a public transport strike situation, with some metro lines closed and one opened. The body confirms it’s an ongoing national transport strike ending at 13:00. The date of updates is December 15, 2023, which is crucial for accurate reporting. Now, I'll gather this information to create the JSON properly.",
+    "tokens": {
+      "input": 1278,
+      "output": 533,
+      "total": 1811
+    }
+  }
+}

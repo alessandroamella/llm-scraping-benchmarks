@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6990,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000636,
+      "outputCost": 0.00012,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0001836
+    },
+    "hash": "e83fedeb49e81fb25f720bcf56bd1b51",
+    "sourceFile": "sciopero_trasporto_pubblico_chiusa_metro_c.html",
+    "thoughts": "**Evaluating strike status**\n\nI need to determine if we should output JSON regarding a public transport strike. The content mentions \"ongoing national strike concluding at 12:30,\" indicating it’s happening now, not upcoming. The rule states that \"isStrike\" should be true only if it’s an upcoming strike, so in this case, \"isStrike\" should be false. I'll format the output as a JSON object string:  \n```json  \n{\"isStrike\": false}  \n```  \nThis meets the specified format and requirements!",
+    "tokens": {
+      "input": 1272,
+      "output": 300,
+      "total": 1572
+    }
+  }
+}

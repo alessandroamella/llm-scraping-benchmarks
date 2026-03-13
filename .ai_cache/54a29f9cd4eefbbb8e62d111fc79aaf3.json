@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-24 00:00:00",
+      "endDate": "2025-02-24 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 25166,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006755,
+      "outputCost": 0.0006384,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00070595
+    },
+    "hash": "54a29f9cd4eefbbb8e62d111fc79aaf3",
+    "sourceFile": "lunedi_24_febbraio_sciopero_nazionale_del_trasporto_pubblico_possibili_disagi.html",
+    "thoughts": "**Extracting strike data**\n\nI need to output this in JSON format according to the strike extraction requirements. The document clearly announces a national strike in Italy on Monday, February 24, 2025, lasting for 24 hours. It specifies that public transport services will be regular until 8:30 AM and between 5:00 PM and 8:00 PM. This is definitely an upcoming strike, so I should mark `isStrike` as true and prepare to extract the necessary `strikeData`, specifically the start and end dates in the required format.",
+    "tokens": {
+      "input": 1351,
+      "output": 1596,
+      "total": 2947
+    }
+  }
+}

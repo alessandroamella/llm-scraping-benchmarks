@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6698,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006305,
+      "outputCost": 0.0001624,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00022545
+    },
+    "hash": "b5f3851138b0f323b3fec935ea8d8a8b",
+    "sourceFile": "sciopero_attive_metro_b_chiusa_c.html",
+    "thoughts": "**Determining strike status**\n\nI need to format the output as JSON based on the instructions. The document discusses an ongoing strike, as indicated by the content in Italian, which translates to \"Strike, metro A and B active, C closed.\" The update informs us that the strike is currently happening, expected to conclude at 13. Since it’s about an ongoing event, not an announcement of a future strike, I should set isStrike to false. Therefore, the appropriate output is {\"isStrike\": false}.",
+    "tokens": {
+      "input": 1261,
+      "output": 406,
+      "total": 1667
+    }
+  }
+}

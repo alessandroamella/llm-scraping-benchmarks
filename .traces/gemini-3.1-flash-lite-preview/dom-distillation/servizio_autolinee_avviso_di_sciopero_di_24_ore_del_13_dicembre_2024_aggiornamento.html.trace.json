@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-03-09T19:15:40.536Z",
+  "timestamp": "2026-03-13T15:14:06.471Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "EAV",
     "fileName": "servizio_autolinee_avviso_di_sciopero_di_24_ore_del_13_dicembre_2024_aggiornamento.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "dom-distillation",
-    "useLenientSchema": true,
+    "useLenientSchema": false,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"EAV\" (the public transport company of Campania (15)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"> <h3>Context Metadata</h3> <ul><li>Page Title: Servizio Autolinee: Avviso di sciopero di 24 ore del 13 dicembre 2024 - Aggiornamento - EAV srl</li></ul> </div><hr/><article> <section> <div> <div> <div> <h2> Servizio Autolinee: Avviso di sciopero di 24 ore del 13 dicembre 2024 – Aggiornamento </h2> </div> </div> </div> <div> <div> <p> <small>Data: </small><br> <small><strong>12 Dicembre 2024</strong></small> </p> </div> </div> </section> <section> <div> <div> <div> </div> </div> <div> <div> <section> <p>Si comunica che, in seguito all’accoglimento da parte del TAR del Lazio della richiesta dell’USB di sospendere l’ordinanza di precettazione del Ministero dei Trasporti, lo sciopero proclamato per domani 13 dicembre torna ad essere di 24 ore.</p> <p>Lo sciopero ha le seguenti motivazioni:</p> <ul> <li>• Una nuova indicizzazione che leghi i salari all’aumento reale del costo della vita;</li> <li>• Un rinnovo contrattuale con incremento delle retribuzioni di 300 euro</li> <li>• il libero esercizio del diritto di sciopero senza il rispetto delle fasce di garanzia</li> <li>• Riduzione dell’orario di lavoro a 32 ore a parità di salario;</li> <li>• la sicurezza dei lavoratori e del servizio</li> <li>• Contro le guerre ed il genocidio del governo Israeliano nei confronti del popolo Palestinese;</li> <li>• Contro la manovra economica per il 2025 approvata dal Governo Meloni.</li> </ul> <p>Durante l’ultima proclamazione di sciopero delle citate OO.SS., la percentuale di adesione è stata del 5,7% (sciopero di 4 ore del giorno 28 ottobre 2024)</p> <p><strong>Il servizio è garantito nelle seguenti fasce di garanzia: dalle ore 05:30 alle ore 08:30 e dalle ore 16:30 alle ore 19:30.</strong></p> <p>Durante l’orario di sciopero l’effettuazione delle corse è subordinata al numero di lavoratori aderenti allo sciopero.</p> <div></div> </section> </div> </div> </div> </section> </article>"
   },
   "response": {
@@ -27,17 +27,17 @@
     },
     "usage": {
       "input": 1031,
-      "output": 140,
-      "total": 1754
+      "output": 126,
+      "total": 1730
     },
     "costUsd": {
       "inputCost": 0.00025775,
-      "outputCost": 0.00021,
-      "thinkingCost": 0.0008745,
+      "outputCost": 0.000189,
+      "thinkingCost": 0.0008595,
       "cachedCost": 0,
-      "totalCost": 0.00134225
+      "totalCost": 0.00130625
     },
-    "durationMs": 5655,
-    "thoughts": "**Analyzing the EAV Strike Announcement**\n\nOkay, let's break this down systematically. I'm looking at an announcement from EAV, which, if my understanding is correct, operates in Campania, region code 15. The title clearly indicates a \"Servizio Autolinee: Avviso di sciopero,\" meaning a strike notice for bus services, specifically for December 13th, 2024.\n\nThe announcement states a 24-hour strike, which is straightforward. It explicitly mentions guaranteed service bands, from 05:30 to 08:30 and 16:30 to 19:30. That's key for operational planning. Given the 24-hour timeframe, and the presence of service at the beginning and end of the day, I'm going to assume, as per standard interpretations, that the strike covers the entire operational day, starting at 00:00:00 and ending at 23:59:59 on December 13th, 2024. This matches the standard definition of a 24-hour strike.\n\nThe strike's scope is regional; given EAV's location, the \"15\" likely signifies Campania. It seems to pertain to their transport services. I'm inferring the following structured data from this information:\n\n*   `isStrike`: true\n*   `strikeData`:\n    *   `startDate`: \"2024-12-13 00:00:00\"\n    *   `endDate`: \"2024-12-13 23:59:59\"\n    *   `locationType`: \"REGIONAL\"\n    *   `locationCodes`: [\"15\"]\n    *   `guaranteedTimes`: [\"05:30-08:30\", \"16:30-19:30\"]\n\nI've verified the data's format and validity (dates, location type, codes, guaranteed times); I'm confident in the derived information. This allows for clear representation in our systems.\n\n\n"
+    "durationMs": 5430,
+    "thoughts": "**Processing the EAV Strike Announcement**\n\nOkay, let's see. I've got an announcement from EAV about a strike happening on December 13, 2024. The task is to parse this into a specific JSON format, which I'm familiar with. The instructions are pretty clear.\n\nFirst, I need to confirm if it's an upcoming strike; yes, it is. The date is December 13, 2024. A 24-hour strike, I know this, starts at the beginning of the service and ends at the end of the service. I'll translate that to `startDate` as \"2024-12-13 00:00:00\" and `endDate` as \"2024-12-13 23:59:59\".\n\nThe location is EAV, which I recall is in Campania, coded as \"15\" according to the location type. This makes the `locationType` \"REGIONAL\", and `locationCodes` is `[\"15\"]`.\n\nFinally, the instructions specify the guaranteed service times. The provided times are: \"05:30-08:30\" and \"16:30-19:30\".\n\nPutting it all together, here's the JSON I'll construct:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-13 00:00:00\",\n    \"endDate\": \"2024-12-13 23:59:59\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\n      \"15\"\n    ],\n    \"guaranteedTimes\": [\n      \"05:30-08:30\",\n      \"16:30-19:30\"\n    ]\n  }\n}\n```\n\nNow, I need to check the JSON for validity, that’s done. No comments required, and since this is a single strike entry, I'm returning the object directly as per schema.\n\n\n"
   }
 }

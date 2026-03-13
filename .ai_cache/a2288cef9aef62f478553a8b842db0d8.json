@@ -1,0 +1,41 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-24 00:00:00",
+      "endDate": "2025-02-24 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:03-06:03",
+        "07:47-07:47",
+        "17:27-17:27",
+        "20:30-20:30",
+        "05:10-05:10",
+        "06:21-06:21",
+        "13:13-13:13",
+        "17:21-17:21"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18571,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008165,
+      "outputCost": 0.0007772,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00085885
+    },
+    "hash": "a2288cef9aef62f478553a8b842db0d8",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_24h_lunedi_24_febbraio_2025.html",
+    "thoughts": "**Extracting strike data**\n\nI need to output JSON according to the strike extraction schema for the upcoming 24-hour strike on February 24, 2025. The input mentions that the OS USB has called for this action, so I need to set `isStrike` to true. The start and end dates will be \"2025-02-24 00:00:00\" and \"2025-02-24 23:59:59,\" and I have to ensure that I'm including all necessary data like location and guaranteed times. This information is straightforward, but I want to ensure I get it right!",
+    "tokens": {
+      "input": 1633,
+      "output": 1943,
+      "total": 3576
+    }
+  }
+}

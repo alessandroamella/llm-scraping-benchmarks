@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8221,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006095,
+      "outputCost": 0.0001872,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00024815
+    },
+    "hash": "417febe4addb3345fd6e07c93aa9ed7c",
+    "sourceFile": "sciopero_generale_nazionale_adesione_personale_atac_al_26.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI'm figuring out how to format a JSON response according to the strike_extraction schema. The content indicates an ongoing national strike, with participation from Atac staff at 26%. The text mentions that this participation is measured today, so it's not about an upcoming strike but rather a current event. Based on the instructions, since it’s an update on participation, I’ll set isStrike to false.",
+    "tokens": {
+      "input": 1219,
+      "output": 468,
+      "total": 1687
+    }
+  }
+}

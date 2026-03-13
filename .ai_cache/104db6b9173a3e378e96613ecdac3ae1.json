@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-12 00:00:00",
+      "endDate": "2025-11-12 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22127,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0001332,
+      "outputCost": 0.0006764,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008096
+    },
+    "hash": "104db6b9173a3e378e96613ecdac3ae1",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_aziendale_di_24_h_di_mercoledi_12_11_2025.html",
+    "thoughts": "**Clarifying time and location details**\n\nI believe 24 hours exactly would be noted as 2025-11-12 23:59:59 since systems don't typically use 24:00:00. So, endDate will be set as 2025-11-12 23:59:59, which reflects a 24-hour period minus one second. The date format follows 'yyyy-MM-dd HH:mm:ss', and I think this precision is fine. \n\nFor locationType, I'm identifying it as \"REGIONAL\" since it's related to the Vesuviane lines in the Campania region, confirming it's not national.",
+    "tokens": {
+      "input": 2664,
+      "output": 1691,
+      "total": 4355
+    }
+  }
+}

@@ -1,15 +1,26 @@
 {
-  "timestamp": "2026-03-09T19:15:40.961Z",
-  "isCacheHit": true,
+  "timestamp": "2026-03-13T15:14:08.291Z",
+  "isCacheHit": false,
   "request": {
     "sourceName": "EAV",
     "fileName": "linee_suburbane_avviso_di_sciopero_di_4_ore_del_13_dicembre_2024.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "dom-distillation",
-    "useLenientSchema": true,
+    "useLenientSchema": false,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"EAV\" (the public transport company of Campania (15)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"> <h3>Context Metadata</h3> <ul><li>Page Title: Linee Suburbane: Avviso di sciopero di 4 ore del 13 dicembre 2024 - EAV srl</li></ul> </div><hr/><article> <section> <div> <div> <div> <h2> Linee Suburbane: Avviso di sciopero di 4 ore del 13 dicembre 2024 </h2> </div> </div> </div> <div> <div> <p> <small>Data: </small><br> <small><strong>11 Dicembre 2024</strong></small> </p> </div> </div> </section> <section> <div> <div> <div> </div> </div> <div> <div> <section> <p>Si comunica che, a seguito dell’ordinanza di precettazione da parte del Ministro delle infrastrutture e dei trasporti, lo sciopero generale nazionale di 24 ore proclamato per il giorno 13 dicembre 2024 dalla OS USB, <strong>è stato ridotto a 4 ore, dalle ore 09:00 alle ore 13:00.</strong></p> <p>Le motivazioni dello sciopero sono le seguenti:</p> <ul> <li>• Una nuova indicizzazione che leghi i salari all’aumento reale del costo della vita;</li> <li>• Un rinnovo contrattuale con incremento delle retribuzioni di 300 euro;</li> <li>• Il libero esercizio del diritto di sciopero senza il rispetto delle fasce di garanzia;</li> <li>• Riduzione dell’orario di lavoro a 32 ore a parità di salario;</li> <li>• La sicurezza dei lavoratori e del servizio;</li> <li>• Contro le guerre ed il genocidio del governo Israeliano nei confronti del popolo Palestinese;</li> <li>• Contro la manovra economica per il 2025 approvata dal Governo Meloni.</li> </ul> <p>Durante l’ultima proclamazione di sciopero della citata O.S., la percentuale di adesione è stata del 5,7% (sciopero di 4 ore del giorno 28 ottobre 2024)</p> <p>Di seguito vengono elencate le ultime e le prime partenze garantite in relazione alle fasce di garanzia.</p> <p>Durante l’orario di sciopero l’effettuazione delle corse è subordinata al numero di lavoratori aderenti allo sciopero.</p> <p><strong>Ultime partenze prima dello sciopero</strong></p> <ul> <li>da Napoli per&nbsp; Piedimonte treno 7862 delle&nbsp;08:36</li> <li>Per Napoli da&nbsp;Piedimonte treno 7863 delle&nbsp; 08:27</li> </ul> <p><strong>Prime partenze dopo lo sciopero</strong></p> <ul> <li>da Napoli per Piedimonte&nbsp;treno&nbsp;7866 delle&nbsp;13:02</li> <li>Per Napoli da&nbsp;Piedimonte&nbsp;&nbsp; treno&nbsp;7867&nbsp;delle&nbsp;13:13</li> </ul> <p>Sulla Linea <strong>NAPOLI – BENEVENTO</strong> sarà garantito il servizio automobilistico sostitutivo come da programma feriale. Il servizio è effettuato dalla società D’AGOSTINO TOURS.</p> <div></div> </section> </div> </div> </div> </section> </article>"
   },
   "response": {
+    "rawOutput": {
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2024-12-13 09:00:00",
+        "endDate": "2024-12-13 13:00:00",
+        "locationType": "REGIONAL",
+        "locationCodes": [
+          "15"
+        ]
+      }
+    },
     "parsedData": {
       "isStrike": true,
       "strikeData": {
@@ -24,16 +35,18 @@
     "usage": {
       "input": 1240,
       "output": 99,
-      "total": 1848
+      "cached": 0,
+      "thinking": 0,
+      "total": 1339
     },
     "costUsd": {
       "inputCost": 0.00031,
       "outputCost": 0.0001485,
-      "thinkingCost": 0.0007635,
+      "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.001222
+      "totalCost": 0.0004585
     },
-    "durationMs": 5927,
-    "thoughts": "**Analyzing the EAV Strike Announcement**\n\nOkay, let's break this down. I've got an announcement from EAV, the public transport company in Campania (Region 15), regarding a strike. The title is \"Linee Suburbane: Avviso di sciopero di 4 ore del 13 dicembre 2024,\" which tells me it's a strike affecting suburban lines, scheduled for December 13th, 2024.\n\nInitially, there was a mention of a 24-hour national general strike, but it has been shortened to 4 hours. Specifically, this EAV strike will be from 09:00 to 13:00 on December 13th, 2024. The task is to confirm if it's a strike, extract details, and format the information as a JSON object.\n\nSo, *is* it a strike? Yes, absolutely. The announcement clearly states a strike is happening.\n\nNow for the details:\n*   `isStrike`:  This is straightforward; it's `true`.\n*   `startDate`:  The strike begins at 09:00 on December 13th, 2024, so it's `2024-12-13 09:00:00`.\n*   `endDate`: The strike ends at 13:00 on the same day, making it `2024-12-13 13:00:00`.\n*   `locationType`: The text indicates a \"sciopero generale nazionale\" (national general strike). However, since this notice is specific to EAV, which operates within Campania, I'm classifying this as REGIONAL with code [\"15\"]. It's a national strike, but it's *about* a regional service, so REGIONAL is the right classification.\n*   `locationCodes`:  Because it's EAV in Campania, the location code is [\"15\"].\n*   `guaranteedTimes`: The text mentions \"fasce di garanzia,\" but it states that there's no adherence to it \"libero esercizio del diritto di sciopero senza il rispetto delle fasce di garanzia.\" Since these times aren't explicitly provided, I'll omit this field to avoid any potential misinterpretation.\n\nTherefore, here's how I'll structure the data:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-13 09:00:00\",\n    \"endDate\": \"2024-12-13 13:00:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"15\"]\n  }\n}\n```\n\nThat should be the completed data output.\n\n\n"
+    "durationMs": 1796,
+    "thoughts": ""
   }
 }

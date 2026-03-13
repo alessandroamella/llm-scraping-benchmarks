@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6697,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000639,
+      "outputCost": 0.0001224,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0001863
+    },
+    "hash": "b9e104ed944ad7a61071137069b7e102",
+    "sourceFile": "sciopero_nazionale_trasporto_pubblico_roma_aperte_metropolitane.html",
+    "thoughts": "**Determining strike status**\n\nI need to output JSON based on the document's information regarding the strike. The content mentions a national transport strike in Rome, indicating it is currently in progress, as shown by the status update. According to the instructions, I should only set `isStrike` to true if it's an announcement of an upcoming strike. Since this is ongoing, `isStrike` should be false. Therefore, my output will be: `{\"isStrike\": false}`.",
+    "tokens": {
+      "input": 1278,
+      "output": 306,
+      "total": 1584
+    }
+  }
+}

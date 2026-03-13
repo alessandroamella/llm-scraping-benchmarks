@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 09:00:00",
+      "endDate": "2024-12-13 13:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 23717,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000967,
+      "outputCost": 0.0004976,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0005943
+    },
+    "hash": "a5d97beee4ce17e0fc3b66ae308f4dfa",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_4_ore_del_13_dicembre_2024.html",
+    "thoughts": "**Determining strike details**\n\nI need to output JSON based on the schema regarding a strike announcement about \"Linee Vesuviane\". It mentions a general strike proclaimed by OS USB that is reduced to 4 hours on December 13, 2024, from 09:00 to 13:00. The announcement confirms the date of December 11, 2024, and provides information about departures. Since it’s an upcoming strike, I can conclude that isStrike should be true. Next, I’ll format the start date accordingly.",
+    "tokens": {
+      "input": 1934,
+      "output": 1244,
+      "total": 3178
+    }
+  }
+}

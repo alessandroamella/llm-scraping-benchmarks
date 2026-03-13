@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-01-09 21:00:00",
+      "endDate": "2026-01-10 21:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 25220,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006375,
+      "outputCost": 0.0005144,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00057815
+    },
+    "hash": "1474149a6ce2c9eea9ea8b18e0f4958e",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2026-1-9-sciopero-nazionale-del-trasporto.html",
+    "thoughts": "**Deciding on strike data output**\n\nI need to extract JSON data for a strike announcement. The Italian text mentions a national railway strike set for January 9-10, 2026, starting at 21:00 Friday and ending at 21:00 Saturday. This indicates that it’s an upcoming strike. I’ll set the isStrike flag to true and fill the strikeData with the formatted start and end times. I should make sure to follow the specified format, including seconds, like \"2026-01-09 21:00:00\" and \"2026-01-10 21:00:00.\"",
+    "tokens": {
+      "input": 1275,
+      "output": 1286,
+      "total": 2561
+    }
+  }
+}

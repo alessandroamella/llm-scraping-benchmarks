@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-01-13 00:00:00",
+      "endDate": "2026-01-13 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21010,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006825,
+      "outputCost": 0.0008128,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00088105
+    },
+    "hash": "b41399ed125a9bb9b7d77ad6c17f9f03",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2026-1-13-sciopero-nazionale-del-trasport.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to figure out if the document is announcing a new or upcoming strike. The Italian text mentions \"SCIOPERO NAZIONALE PERSONALE AUTOFERROTRANVIERI,\" indicating a national strike by autoferrotranviers workers. It says it's effective on \"13 GENNAIO 2026,\" and that \"on Tuesday, January 13, 2026, a 24-hour strike was called,\" using the past tense for its announcement. So, this does confirm a scheduled strike, which means I would set isStrike to true for this upcoming event.",
+    "tokens": {
+      "input": 1365,
+      "output": 2032,
+      "total": 3397
+    }
+  }
+}

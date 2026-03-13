@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-07-23 09:00:00",
+      "endDate": "2025-07-23 11:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20700,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006775,
+      "outputCost": 0.0005892,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00065695
+    },
+    "hash": "09c7be41337a3451c070d07d9e992575",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_di_2_ore_mercoledi_23_luglio_2025.html",
+    "thoughts": "**Clarifying guaranteed times**\n\nThe notice indicates there are no guaranteed service times during the strike. I initially thought to set guaranteedTimes to [\"09:00-11:00\"], but that could confuse things since it actually represents the strike times, not guaranteed service. Based on the instructions, if guaranteed service isn’t available, I need to set guaranteedTimes to null. Even if null is required, I must include it as part of the object. Meanwhile, the startDate and endDate fields should still be provided with the relevant times.",
+    "tokens": {
+      "input": 1355,
+      "output": 1473,
+      "total": 2828
+    }
+  }
+}

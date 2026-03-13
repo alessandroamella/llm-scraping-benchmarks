@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-03-21 00:00:00",
+      "endDate": "2025-03-21 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 28672,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000657,
+      "outputCost": 0.0009252,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0009909
+    },
+    "hash": "ed64cf8a636feea68d512b13942cdff0",
+    "sourceFile": "venerdi_21_marzo_sciopero_nazionale_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Determining upcoming strike announcement**\n\nI need to output JSON according to the strike_extraction schema. The document mentions a national strike planned for \"Venerdì 21 marzo,\" which poses a risk to public transportation. The content clearly indicates it's announcing this upcoming strike, set for March 21, and is relevant as it was published and updated just a few days before. Based on this, I'll set isStrike to true since it confirms the announcement of an upcoming strike.",
+    "tokens": {
+      "input": 1314,
+      "output": 2313,
+      "total": 3627
+    }
+  }
+}

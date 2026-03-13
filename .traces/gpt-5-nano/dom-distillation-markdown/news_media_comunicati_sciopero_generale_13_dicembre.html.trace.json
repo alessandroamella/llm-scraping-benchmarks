@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-03-12T01:45:35.767Z",
+  "timestamp": "2026-03-13T15:17:51.282Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "ATAC",
     "fileName": "news_media_comunicati_sciopero_generale_13_dicembre.html",
     "model": "gpt-5-nano",
     "strategy": "dom-distillation-markdown",
-    "useLenientSchema": true,
+    "useLenientSchema": false,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"ATAC\" (the public transport company of Rome, Lazio (12)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: Sciopero generale, venerdì protesta dalle 9 alle 13 dopo ordinanza del ministero - Roma Servizi per la Mobilità\n\n* * *\n\n# Sciopero generale, venerdì protesta dalle 9 alle 13 dopo ordinanza del ministero\n\nPubblicato il: 12/12/2024 - Aggiornato il: 12/12/2024\n\nVenerdì 13 dicembre trasporto pubblico a rischio per lo sciopero generale nazionale proclamato dal sindacato Usb. Per effetto dell’ordinanza del ministero delle Infrastrutture e Trasporti l’agitazione è stata ridotta a 4 ore: dalle 9 alle 13. A Roma la protesta coinvolgerà la rete Atac e le linee periferiche gestite da operatori privati."
   },
   "response": {
@@ -15,24 +15,22 @@
       "strikeData": {
         "startDate": "2024-12-13 09:00:00",
         "endDate": "2024-12-13 13:00:00",
-        "locationType": "NATIONAL",
-        "guaranteedTimes": [
-          "09:00-13:00"
-        ]
+        "locationType": "NATIONAL"
       }
     },
     "usage": {
-      "input": 998,
-      "output": 1080,
-      "total": 2078
+      "input": 1084,
+      "output": 1341,
+      "total": 2425
     },
     "costUsd": {
-      "inputCost": 0.0000499,
-      "outputCost": 0.000432,
+      "inputCost": 0.0000542,
+      "outputCost": 0.0005364,
       "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.0004819
+      "totalCost": 0.0005906
     },
-    "durationMs": 15848
+    "durationMs": 23147,
+    "thoughts": "**Setting strike details**\n\nThe publication date is 12/12/2024, but the actual strike date is Friday, 13 December 2024. The time specified is from 09:00 to 13:00, which is 4 hours. So, I’ll set the start date as 2024-12-13 09:00:00 and the end date as 2024-12-13 13:00:00. For the location type, it’s a national general strike, so I’ll set locationType to \"NATIONAL\" and explicitly set locationCodes to null as per the requirements. I need to check if guaranteed times are provided."
   }
 }

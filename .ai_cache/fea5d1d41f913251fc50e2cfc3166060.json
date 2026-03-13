@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 09:00:00",
+      "endDate": "2024-12-13 13:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "09:00-13:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19031,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000798,
+      "outputCost": 0.000574,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0006538
+    },
+    "hash": "fea5d1d41f913251fc50e2cfc3166060",
+    "sourceFile": "linea_metropolitana_avvisi_di_sciopero_di_4_ore_del_13_dicembre_2024.html",
+    "thoughts": "**Outputting JSON for a Strike Announcement**\n\nI need to format a JSON output based on the provided input, which is in Italian about a strike announcement. The input states that a 24-hour strike has been shortened to 4 hours on December 13, 2024, from 9:00 AM to 1:00 PM. This indicates it's an announcement for an upcoming strike, so I'll set isStrike to true. It’s essential to follow the specified schema accurately while capturing the right details.",
+    "tokens": {
+      "input": 1596,
+      "output": 1435,
+      "total": 3031
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6892,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000643,
+      "outputCost": 0.0001556,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002199
+    },
+    "hash": "8dfd51dbaa4e07f796af3842158b7592",
+    "sourceFile": "sciopero_del_trasporto_pubblico_aperta_la_metro_b_chiuse_linee_a_c_e_termini_centocelle.html",
+    "thoughts": "**Evaluating strike status**\n\nI need to determine if we're looking at an upcoming strike according to the extraction specifications. The input indicates an ongoing national strike in Italy, detailing the current status of public transport. Given that the instruction specifies that if there's a current strike, I should set isStrike to false. So, since this is an ongoing situation, I’ll output {\"isStrike\": false}.",
+    "tokens": {
+      "input": 1286,
+      "output": 389,
+      "total": 1675
+    }
+  }
+}

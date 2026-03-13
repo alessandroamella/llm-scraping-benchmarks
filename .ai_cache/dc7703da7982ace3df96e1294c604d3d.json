@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-03-29 00:00:00",
+      "endDate": "2022-03-29 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 15837,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000648,
+      "outputCost": 0.0007992,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.000864
+    },
+    "hash": "dc7703da7982ace3df96e1294c604d3d",
+    "sourceFile": "martedi_29_marzo_sciopera_24_ore_trasporto_pubblico_servizio_rischio.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to output a JSON format for the specified strike extraction based on the document in Italian. The title suggests there's a 24-hour strike for public transport on March 29. The content confirms that it's about an upcoming strike initiated by the union. It details that while the entire Atac network will be affected, service will function normally until 8:30 and from 5 PM to 8 PM. So, yes, this is indeed an announcement for an upcoming strike.",
+    "tokens": {
+      "input": 1296,
+      "output": 1998,
+      "total": 3294
+    }
+  }
+}

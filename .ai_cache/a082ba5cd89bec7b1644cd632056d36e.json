@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-05-11 00:00:00",
+      "endDate": "2025-05-11 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21325,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006965,
+      "outputCost": 0.0006616,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00073125
+    },
+    "hash": "a082ba5cd89bec7b1644cd632056d36e",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_24h_domenica_11_maggio_2025.html",
+    "thoughts": "**Deciding on strike announcement**\n\nI need to see if the document announces an upcoming strike. The Italian text translates to a notice of a 24-hour strike on Sunday, May 11, 2025. Given that today’s date is May 6, 2025, this is indeed an upcoming strike. The relevant details confirm it will last 24 hours. I need to format the start and end dates as \"yyyy-MM-dd HH:mm:ss\" for clarity. So it's safe to say that `isStrike` should be true.",
+    "tokens": {
+      "input": 1393,
+      "output": 1654,
+      "total": 3047
+    }
+  }
+}

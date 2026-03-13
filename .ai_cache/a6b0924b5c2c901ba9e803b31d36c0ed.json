@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22864,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000671,
+      "outputCost": 0.0005264,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0005935
+    },
+    "hash": "a6b0924b5c2c901ba9e803b31d36c0ed",
+    "sourceFile": "linee_automobilistiche_avviso_di_sciopero_generale_di_24h_per_venerdi_12_dicembre_2025.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to output JSON in the specified format regarding whether this document is announcing a new strike. The content is in Italian and discusses a general strike for 24 hours on December 12, 2025, proclaimed by CGIL. It includes details about the regular service hours during the strike and mentions potential disruptions. This seems like a clear announcement regarding the strike and its implications for public transport services.",
+    "tokens": {
+      "input": 1342,
+      "output": 1316,
+      "total": 2658
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-10-05 00:00:00",
+      "endDate": "2024-10-05 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 23623,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000643,
+      "outputCost": 0.0008292,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008935
+    },
+    "hash": "c60b6b531c0d1285d48c83786c99aca1",
+    "sourceFile": "trasporto_pubblico_sabato_5_ottobre_sciopero_nazionale_24_ore_servizio_rischio.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to output JSON that indicates whether there’s an upcoming strike based on the provided Italian text. It mentions a 24-hour strike on Saturday, October 5, which is relevant to public transportation and specifically affects Atac. The service will be operating normally until certain times of the day, so I need to set isStrike to true since it is an announcement of an upcoming strike. I’ll also include the relevant strike data in the JSON response.",
+    "tokens": {
+      "input": 1286,
+      "output": 2073,
+      "total": 3359
+    }
+  }
+}

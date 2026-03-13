@@ -129,15 +129,23 @@ for line in ax.lines:
     line.set_color("red")
     line.set_linewidth(2.5)
 
-plt.title(
-    "Accuratezza per modello",
-    fontsize=16,
-    fontweight="bold",
-)
+# plt.title(
+#     "Accuratezza per modello",
+#     fontsize=16,
+#     fontweight="bold",
+# )
 plt.ylabel("Punteggio (0.0 - 1.0)", fontsize=12)
 plt.xlabel("Modello AI", fontsize=12)
 plt.ylim(0, 1.1)  # Spazio per le etichette
-plt.legend(title="Metrica", bbox_to_anchor=(1.05, 1), loc="upper left")
+# plt.legend(title="Metrica", bbox_to_anchor=(1.05, 1), loc="upper left")
+
+# Legenda DENTRO il grafico (no bbox_to_anchor), metti in alto in mezzo, fai che siano orizzontali
+plt.legend(
+    title="Metrica",
+    loc="upper center",
+    ncol=3,
+    fontsize=10,
+)
 
 # Aggiunta dei valori sopra le barre
 for p in ax.patches:

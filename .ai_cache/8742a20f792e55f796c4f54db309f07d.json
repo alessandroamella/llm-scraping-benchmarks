@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2022-03-08 00:00:00",
+      "endDate": "2022-03-08 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24155,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000645,
+      "outputCost": 0.0007932,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008577
+    },
+    "hash": "8742a20f792e55f796c4f54db309f07d",
+    "sourceFile": "martedi_8_marzo_sciopero_generale_24_ore_rischio_trasporto_pubblico.html",
+    "thoughts": "**Evaluating upcoming strikes**\n\nI need to output JSON for the strike extraction format. The content is in Italian and discusses an upcoming general strike on March 8, stating, \"Martedì 8 marzo sciopero generale di 24 ore.\" It mentions risks to public transport and regular service until 8:30 and from 17:00 to 20:00. Since this relates to a future strike, and it's not a cancellation, I'm concluding that this document is announcing a new strike event.",
+    "tokens": {
+      "input": 1290,
+      "output": 1983,
+      "total": 3273
+    }
+  }
+}

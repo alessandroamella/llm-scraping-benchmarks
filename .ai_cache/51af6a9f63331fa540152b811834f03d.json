@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6575,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006185,
+      "outputCost": 0.0001528,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00021465
+    },
+    "hash": "51af6a9f63331fa540152b811834f03d",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_212.html",
+    "thoughts": "**Producing strike information JSON**\n\nI need to ensure the formatting matches the \"strike_extraction\" schema exactly. The top-level should be a JSON object with the isStrike boolean set to false because the content from Italian says \"adesione personale Atac al 21,2%\" for 2023, indicating participation rather than an upcoming strike. So, the response should solely consist of the JSON, without any extra explanation. Here it is:\n\n{\n  \"isStrike\": false\n}",
+    "tokens": {
+      "input": 1237,
+      "output": 382,
+      "total": 1619
+    }
+  }
+}

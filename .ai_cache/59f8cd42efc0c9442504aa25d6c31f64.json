@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-12-15 00:00:00",
+      "endDate": "2023-12-15 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 29513,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006455,
+      "outputCost": 0.0008508,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00091535
+    },
+    "hash": "59f8cd42efc0c9442504aa25d6c31f64",
+    "sourceFile": "venerd_sciopero_nazionale_trasporto_pubblico_servizio_rischio.html",
+    "thoughts": "**Analyzing strike details**\n\nThe national strike is scheduled for 24 hours on Friday, December 15, 2023. It seems like the service will run regularly until 8:30 AM and then again from 5 PM to 8 PM, but there's some ambiguity around the word \"garantite.\" I need to confirm guaranteed times based on the provided Italian content. The key dates should be formatted as \"yyyy-MM-dd HH:mm:ss,\" setting the start date to 2023-12-15 00:00:00 and the end date to 2023-12-15 23:59:59 for the 24-hour strike.",
+    "tokens": {
+      "input": 1291,
+      "output": 2127,
+      "total": 3418
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8462,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006445,
+      "outputCost": 0.0001248,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00018925
+    },
+    "hash": "2bbc9e15921bb1ce4d84ba721c82db35",
+    "sourceFile": "sciopero_trasporto_pubblico_aggiornamento_riapertura_stazione_repubblica.html",
+    "thoughts": "**Outputting JSON for strike info**\n\nI need to format this information as per the strike_extraction schema. The title indicates an ongoing public transport strike in Italy that will end at 1 PM. Since it's an update on an ongoing situation, I realize the value of \"isStrike\" should be false. This means it's not an announcement for a future strike, just a real-time update. I'll follow the formatting guidelines and produce strict JSON like this:\n\n{\n  \"isStrike\": false\n}",
+    "tokens": {
+      "input": 1289,
+      "output": 312,
+      "total": 1601
+    }
+  }
+}

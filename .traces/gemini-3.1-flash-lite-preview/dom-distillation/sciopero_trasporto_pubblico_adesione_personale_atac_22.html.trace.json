@@ -1,31 +1,36 @@
 {
-  "timestamp": "2026-03-09T19:16:02.650Z",
-  "isCacheHit": true,
+  "timestamp": "2026-03-13T15:16:51.846Z",
+  "isCacheHit": false,
   "request": {
     "sourceName": "ATAC",
     "fileName": "sciopero_trasporto_pubblico_adesione_personale_atac_22.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "dom-distillation",
-    "useLenientSchema": true,
+    "useLenientSchema": false,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"ATAC\" (the public transport company of Rome, Lazio (12)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"> <h3>Context Metadata</h3> <ul><li>Page Title: Sciopero del trasporto pubblico, adesione personale Atac al 22% - Roma Servizi per la Mobilità</li></ul> </div><hr/><div> <div> <div> <div> <div> <div> </div> </div> </div> <div> <div> <div> <div> <h1>Sciopero del trasporto pubblico, adesione personale Atac al 22%</h1> </div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div><p>Pubblicato il: 17/02/2023 - Aggiornato il: 17/02/2023</p></div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div> <span> </span> </div> </div> </div> <div> <div> <div></div> </div> </div> <div> <div> <p>status: 1 L’adesione del personale Atac allo sciopero del trasporto pubblico, rilevata in mattinata, è stata pari al 22%</p> </div> </div> </div> </div> </div> </div>"
   },
   "response": {
+    "rawOutput": {
+      "isStrike": false
+    },
     "parsedData": {
       "isStrike": false
     },
     "usage": {
       "input": 716,
       "output": 10,
-      "total": 918
+      "cached": 0,
+      "thinking": 0,
+      "total": 726
     },
     "costUsd": {
       "inputCost": 0.000179,
       "outputCost": 0.000015,
-      "thinkingCost": 0.000288,
+      "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.000482
+      "totalCost": 0.000194
     },
-    "durationMs": 3870,
-    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, here's what I've got. The input content is an announcement regarding some kind of transportation disruption, specifically mentioning \"adesione personale Atac al 22%\". My immediate goal is to figure out whether this is an *announcement* of a *future* strike, or something else entirely. The instructions I've got are pretty clear: if it's a cancellation notice, a participation report, or a real-time update, then it's *not* an announcement of a future strike. Only if it's explicitly about a *future* strike do I mark it as `isStrike: true`.\n\nNow, looking at the text itself: \"Sciopero del trasporto pubblico, adesione personale Atac al 22%\" and the date, 17/02/2023. The key phrase here is \"l'adesione ... rilevata in mattinata, è stata pari al 22%.\" It is reporting on the participation. It's quantifying the participation of employees, specifically that it was \"rilevata in mattinata\" (assessed this morning). This suggests a real-time situation or a report on an ongoing or already-occurred strike. This is *not* an announcement for an upcoming strike. This is clearly a participation report.\n\nTherefore, following the instructions and analysis, I am setting `isStrike` to `false`.\n\n\n"
+    "durationMs": 1137,
+    "thoughts": ""
   }
 }

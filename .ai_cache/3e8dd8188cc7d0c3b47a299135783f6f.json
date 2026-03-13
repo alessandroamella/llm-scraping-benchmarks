@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 5611,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006125,
+      "outputCost": 0.0001364,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00019765
+    },
+    "hash": "3e8dd8188cc7d0c3b47a299135783f6f",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_209.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI'm examining whether this document indicates a new strike. It’s an Italian document titled \"Sciopero del trasporto pubblico, adesione personale Atac al 20,9% - Roma Servizi per la Mobilità.\" The content mentions the participation level of Atac staff in a strike that has already occurred, with a figure of 20.9%. Since this is an update on participation rather than a new announcement, I can conclude that `isStrike` should be set to false, leading to an output of {\"isStrike\": false}.",
+    "tokens": {
+      "input": 1225,
+      "output": 341,
+      "total": 1566
+    }
+  }
+}

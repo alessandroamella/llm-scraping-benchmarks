@@ -1,15 +1,30 @@
 {
-  "timestamp": "2026-03-09T19:15:45.171Z",
-  "isCacheHit": true,
+  "timestamp": "2026-03-13T15:15:48.338Z",
+  "isCacheHit": false,
   "request": {
     "sourceName": "Trenitalia",
     "fileName": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2026-1-12-sciopero-del-personale-di-treno.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "dom-distillation",
-    "useLenientSchema": true,
+    "useLenientSchema": false,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"Trenitalia\" (Italy's national railway operator).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"> <h3>Context Metadata</h3> <ul><li>Page Title: SCIOPERO REGIONALE DEL TRASPORTO FERROVIARIO - REGIONE LOMBARDIA</li></ul> </div><hr/><div> <div> <h1>SCIOPERO REGIONALE DEL TRASPORTO FERROVIARIO - REGIONE LOMBARDIA</h1> <div> <span>In vigore: 12 GENNAIO 2026 - 13 GENNAIO 2026</span> </div> <div></div> <div> <div> Servizio: <strong>Regionale, Lunga percorrenza</strong> </div> <div> Causa Modifica: <strong>Sciopero</strong> </div> <div> Regione: <strong>Emilia Romagna, LIGURIA, LOMBARDIA, PIEMONTE, VENETO</strong> </div> <div> Impresa: <strong>Trenord, Italo Nuovo Trasporto Viaggiatori, Gruppo FS Italiane, Trenitalia</strong> </div> </div> </div> </div> <div> <div> <div> <p><b>Dalle ore 03:00 di lunedì 12 gennaio alle ore 02:00 di martedì 13 gennaio 2026</b> è stato indetto uno sciopero del personale del Gruppo FS Italiane, Italo e Trenord della Lombardia che potrà comportare variazioni anche nelle regioni limitrofe.</p> <p>Lo sciopero può comportare modifiche al servizio, <b>anche prima dell’inizio e dopo la sua conclusione.</b></p> <p>Maggiori informazioni sui servizi garantiti in caso di sciopero sono disponibili sui canali digitali delle Imprese ferroviarie o presso il personale di assistenza clienti e le biglietterie.</p> </div> </div> </div>"
   },
   "response": {
+    "rawOutput": {
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2026-01-12 03:00:00",
+        "endDate": "2026-01-13 02:00:00",
+        "locationType": "REGIONAL",
+        "locationCodes": [
+          "08",
+          "07",
+          "03",
+          "01",
+          "05"
+        ]
+      }
+    },
     "parsedData": {
       "isStrike": true,
       "strikeData": {
@@ -28,16 +43,18 @@
     "usage": {
       "input": 834,
       "output": 123,
-      "total": 1152
+      "cached": 0,
+      "thinking": 0,
+      "total": 957
     },
     "costUsd": {
       "inputCost": 0.0002085,
       "outputCost": 0.0001845,
-      "thinkingCost": 0.0002925,
+      "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.0006855
+      "totalCost": 0.000393
     },
-    "durationMs": 4355,
-    "thoughts": "**Analyzing a Strike Announcement: A JSON-Centric Approach**\n\nOkay, let's break this down. My primary task is to interpret this text – which, from the looks of it, concerns a rail strike – and distill the information into a properly formatted JSON object. The text mentions a rail strike in Lombardia and neighboring regions, which strongly suggests we're dealing with an announcement. The provided schema is key here, guiding how I structure the output. I need to ensure it's valid JSON; that's the bottom line.\n\nFirst, I'm confirming that the 'isStrike' flag is `True`, given the subject matter. Now for the details: the strike data itself. The text specifies the dates are January 12th, 2026, starting at 3:00 AM, and concluding on January 13th at 2:00 AM. I'll translate those into the `startDate` and `endDate` fields in the `YYYY-MM-DD HH:MM:SS` format – as requested in the schema.\n\nThe location is clearly regional. It refers to Lombardia and \"neighboring regions,\" which I'll interpret as encompassing the Emilia Romagna, Liguria, Piemonte, and Veneto regions as well, since they border Lombardia. Therefore, I need to set `locationType` to `REGIONAL` and include the respective codes: Emilia Romagna (08), Liguria (07), Lombardia (03), Piemonte (01), and Veneto (05) in the `locationCodes` array.\n\nFinally, the text does *not* provide any information on \"guaranteed times,\" so I will assume that the value needs to be an empty string, as no information is available.\n\nWith this analysis in mind, I'm confident I can construct the JSON object required.\n\n\n"
+    "durationMs": 1420,
+    "thoughts": ""
   }
 }

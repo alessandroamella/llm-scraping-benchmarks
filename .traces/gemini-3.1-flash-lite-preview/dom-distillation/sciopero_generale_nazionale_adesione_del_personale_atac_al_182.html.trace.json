@@ -1,31 +1,36 @@
 {
-  "timestamp": "2026-03-09T19:15:58.235Z",
-  "isCacheHit": true,
+  "timestamp": "2026-03-13T15:16:34.460Z",
+  "isCacheHit": false,
   "request": {
     "sourceName": "ATAC",
     "fileName": "sciopero_generale_nazionale_adesione_del_personale_atac_al_182.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "dom-distillation",
-    "useLenientSchema": true,
+    "useLenientSchema": false,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"ATAC\" (the public transport company of Rome, Lazio (12)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"> <h3>Context Metadata</h3> <ul><li>Page Title: Sciopero generale nazionale, adesione del personale Atac al 18,2% - Roma Servizi per la Mobilità</li></ul> </div><hr/><div> <div> <div> <div> <div> <div> </div> </div> </div> <div> <div> <div> <div> <h1>Sciopero generale nazionale, adesione del personale Atac al 18,2%</h1> </div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div><p>Pubblicato il: 29/11/2024 - Aggiornato il: 03/12/2024</p></div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div> <span> </span> </div> </div> </div> <div> <div> <div></div> </div> </div> <div> <div> <p>L’adesione complessiva del personale Atac allo sciopero generale nazionale di questa mattina è stata pari al 18,2%</p> </div> </div> </div> </div> </div> </div>"
   },
   "response": {
+    "rawOutput": {
+      "isStrike": false
+    },
     "parsedData": {
       "isStrike": false
     },
     "usage": {
       "input": 715,
       "output": 10,
-      "total": 980
+      "cached": 0,
+      "thinking": 0,
+      "total": 725
     },
     "costUsd": {
       "inputCost": 0.00017875,
       "outputCost": 0.000015,
-      "thinkingCost": 0.0003825,
+      "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.00057625
+      "totalCost": 0.00019375
     },
-    "durationMs": 4881,
-    "thoughts": "**Analyzing the ATAC Strike Announcement**\n\nOkay, let's break this down. My task is clear: determine if this ATAC text represents an *announcement* of a future strike. The input is a brief text, and the critical piece of information here is the reported participation rate: 18.2% in a \"general national strike *this morning*.\" Hmm, \"this morning\" is the key. That already suggests this is *post-strike*, doesn't it? It's describing an event that has *already* transpired, not one scheduled for the future.\n\nThe title, \"Sciopero generale nazionale, adesione del personale Atac al 18,2%\" – translates to \"General national strike, Atac staff participation at 18.2%\" - reinforces this conclusion. It's a statement *about* the strike, not a pre-emptive alert. The content confirms it: \"L’adesione complessiva del personale Atac allo sciopero generale nazionale di questa mattina è stata pari al 18,2%\" means \"The overall participation of Atac staff in *this morning's* general national strike was 18.2%\". That's a report of facts, not a call to action or a warning. The provided dates—published on 29/11/2024, updated 03/12/2024—further solidify it as information *about* an event, perhaps a follow-up or a clarification.\n\nTherefore, the conclusion is straightforward: this is *not* an announcement of an upcoming strike. It's information about participation in a strike that has already taken place. The `isStrike` field in the JSON should be set to `false`, and the `strikeData` field can be omitted, as it's not relevant to an upcoming strike.\n\n\n"
+    "durationMs": 1080,
+    "thoughts": ""
   }
 }

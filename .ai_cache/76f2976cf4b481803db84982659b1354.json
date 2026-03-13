@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-01-24 00:00:00",
+      "endDate": "2024-01-24 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22134,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000655,
+      "outputCost": 0.0008752,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0009407
+    },
+    "hash": "76f2976cf4b481803db84982659b1354",
+    "sourceFile": "sciopero_nazionale_24_gennaio_trasporto_pubblico_rischio.html",
+    "thoughts": "**Determining strike details**\n\nI need to output JSON according to the strike_extraction schema. The document is announcing an upcoming national strike for transport on January 24, 2024. It states that public transport will be at risk for 24 hours due to union proclamations. I see it mentions what the guaranteed service times are. I'll mark isStrike as true and include details like startDate, endDate, and the times the service will be regular. I need to clarify the date formats based on the context given.",
+    "tokens": {
+      "input": 1310,
+      "output": 2188,
+      "total": 3498
+    }
+  }
+}

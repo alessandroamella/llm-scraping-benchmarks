@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21117,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007575,
+      "outputCost": 0.0007108,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00078655
+    },
+    "hash": "77abce624c6000c9a087b58609f2197b",
+    "sourceFile": "servizio_autolinee_avviso_di_sciopero_di_24_ore_del_13_dicembre_2024_aggiornamento.html",
+    "thoughts": "**Parsing strike notice**\n\nI need to output a JSON for the strike extraction specifications. This document is in Italian and announces a new 24-hour strike scheduled for December 13, 2024. The title indicates it's an update regarding the strike. The content mentions that the strike is confirmed for tomorrow following a decision from TAR Lazio. It also notes that certain services will be guaranteed during specific time windows. Overall, it confirms an upcoming 24-hour strike.",
+    "tokens": {
+      "input": 1515,
+      "output": 1777,
+      "total": 3292
+    }
+  }
+}

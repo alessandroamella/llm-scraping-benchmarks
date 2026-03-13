@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21840,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00011335,
+      "outputCost": 0.0007508,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00086415
+    },
+    "hash": "3150ebbccfee7164f0308e794dd0d7f2",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_24_ore_del_13_dicembre_2024_aggiornamento.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to output JSON according to a strict schema. I'm determining whether \"isStrike\" is true or false based on the input. The title mentions a 24-hour strike on December 13, 2024, and the content states that the strike has been confirmed for 24 hours after an update. This implies there was a change in the strike's duration, but it remains a 24-hour strike, indicating it's an announcement about the upcoming strike. No cancellations are mentioned.",
+    "tokens": {
+      "input": 2267,
+      "output": 1877,
+      "total": 4144
+    }
+  }
+}

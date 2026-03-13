@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 09:00:00",
+      "endDate": "2024-12-13 13:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21278,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000651,
+      "outputCost": 0.0005692,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0006343
+    },
+    "hash": "7d58b394b29671cceba96f2fe8108a8f",
+    "sourceFile": "news_media_comunicati_sciopero_generale_13_dicembre.html",
+    "thoughts": "**Extracting strike data**\n\nI need to extract the strike data fields like startDate and endDate in the format 'yyyy-MM-dd HH:mm:ss' (24h). The locationType is \"NATIONAL\" for this strike, so locationCodes must be null. The instruction mentions that all fields are required, and the date from the article points to December 13, 2024, from 9 AM to 1 PM. I’ll format the start date as 2024-12-13 09:00:00 and end date as 2024-12-13 13:00:00. However, “guaranteedTimes” is not clearly defined in the text.",
+    "tokens": {
+      "input": 1302,
+      "output": 1423,
+      "total": 2725
+    }
+  }
+}

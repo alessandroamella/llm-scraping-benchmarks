@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18498,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000919,
+      "outputCost": 0.0004356,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0005275
+    },
+    "hash": "b570493169f34f92ae7921e36d788e07",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_24h_per_venerdi_12_novembre_2025.html",
+    "thoughts": "**Extracting strike data**\n\nI’m confirming that isStrike is true, and I need to extract fields for the strike event. It's scheduled for a full 24 hours on Friday, December 12, 2025. The service will operate during specific hours: from 5:30 AM to 8:30 AM and from 4:30 PM to 7:30 PM. I'm thinking of setting the startDate to \"2025-12-12 00:00:00\" and the endDate to \"2025-12-12 23:59:59\" since it's a single-day event. That fits the required format!",
+    "tokens": {
+      "input": 1838,
+      "output": 1089,
+      "total": 2927
+    }
+  }
+}

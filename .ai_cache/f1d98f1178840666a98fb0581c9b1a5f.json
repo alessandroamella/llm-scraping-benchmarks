@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8770,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000826,
+      "outputCost": 0.0002368,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0003194
+    },
+    "hash": "f1d98f1178840666a98fb0581c9b1a5f",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-11-28-sciopero-del-personale-di-sad-.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI see that the document states a strike was announced for November 28, 2025, but since the current date is March 13, 2026, that strike is in the past, not upcoming. The instruction requires me to assess if it's a new or future strike, and since it's already happened, I should set isStrike to false. This means it's more of a historical announcement. So, I'll output {\"isStrike\": false}.",
+    "tokens": {
+      "input": 1652,
+      "output": 592,
+      "total": 2244
+    }
+  }
+}

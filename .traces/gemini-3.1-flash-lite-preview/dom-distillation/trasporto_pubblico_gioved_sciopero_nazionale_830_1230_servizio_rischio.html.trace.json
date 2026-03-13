@@ -1,15 +1,23 @@
 {
-  "timestamp": "2026-03-10T18:45:00.605Z",
-  "isCacheHit": true,
+  "timestamp": "2026-03-13T15:17:38.221Z",
+  "isCacheHit": false,
   "request": {
     "sourceName": "ATAC",
     "fileName": "trasporto_pubblico_gioved_sciopero_nazionale_830_1230_servizio_rischio.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "dom-distillation",
-    "useLenientSchema": true,
+    "useLenientSchema": false,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"ATAC\" (the public transport company of Rome, Lazio (12)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"> <h3>Context Metadata</h3> <ul><li>Page Title: Trasporto pubblico, giovedì sciopero nazionale dalle 8,30 alle 12,30. Servizio a rischio - Roma Servizi per la Mobilità</li></ul> </div><hr/><div> <div> <div> <div> <div> <div> </div> </div> </div> <div> <div> <div> <div> <h1>Trasporto pubblico, giovedì sciopero nazionale dalle 8,30 alle 12,30. Servizio a rischio</h1> </div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div><p>Pubblicato il: 12/07/2024 - Aggiornato il: 06/11/2024</p></div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div> <span> </span> </div> </div> </div> <div> <div> <div></div> </div> </div> <div> <div> <p>Giovedì 18 luglio trasporto pubblico a rischio per lo sciopero nazionale di 4 ore, dalle 8,30 alle 12,30, indetto dai sindacati Cgil, Cisl, Uil, Ugl e Cisal. A Roma l’agitazione interesserà la rete Atac e i bus periferici gestiti da RomaTpl, ATI Autoservizi Troiani/Sap.</p> <p>Informazioni in tempo reale su romamobilita</p> </div> </div> </div> </div> </div> </div>"
   },
   "response": {
+    "rawOutput": {
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2024-07-18 08:30:00",
+        "endDate": "2024-07-18 12:30:00",
+        "locationType": "NATIONAL"
+      }
+    },
     "parsedData": {
       "isStrike": true,
       "strikeData": {
@@ -20,17 +28,19 @@
     },
     "usage": {
       "input": 811,
-      "output": 89,
-      "total": 1334
+      "output": 82,
+      "cached": 0,
+      "thinking": 0,
+      "total": 893
     },
     "costUsd": {
       "inputCost": 0.00020275,
-      "outputCost": 0.0001335,
-      "thinkingCost": 0.000651,
+      "outputCost": 0.000123,
+      "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.00098725
+      "totalCost": 0.00032575
     },
-    "durationMs": 5180,
-    "thoughts": "**Strike Announcement Analysis: A Quick Diagnostic**\n\nOkay, let's break this down. My primary task is to identify and process strike announcements, and this one's pretty straightforward. The input text is concise: \"Trasporto pubblico, giovedì sciopero nazionale dalle 8,30 alle 12,30. Servizio a rischio.\" My initial parsing focuses on the key elements – date, time, scope, and potential impact.\n\nRight away, I see \"giovedì\" (Thursday), which, considering the publication date of July 12, 2024, I'm inferring means July 18th, 2024. The time frame is clear: 8:30 to 12:30. \"Sciopero nazionale\" immediately flags this as a national strike, which simplifies the location determination. No need to look for specific codes, and with that I immediately know the scope, the time and the date.\n\nNow, translating this into a structured JSON output is the critical step. I'll need to set `isStrike` to `true`, of course. Then, I can construct the `strikeData` object. I am inferring the `startDate` to be \"2024-07-18 08:30:00\" and `endDate` to be \"2024-07-18 12:30:00\" based on my parsing. The `locationType` is definitely \"NATIONAL,\" as indicated by the text. Since it's national, `locationCodes` is `null`. I did not see any guaranteed times specified in the text, so I would have to set that to \"Not specified in text\" or null, depending on the requirements of the code, as the output.\n\nFinally, I need to validate the structure. Based on the rules of my program: Is it valid JSON? Check. No extraneous comments? Check. No control tokens interfering with the core data? Check. All fields are present and correctly formatted? Check. Done. I've successfully extracted the essential information and formatted it appropriately. Ready to proceed.\n\n\n"
+    "durationMs": 1187,
+    "thoughts": ""
   }
 }

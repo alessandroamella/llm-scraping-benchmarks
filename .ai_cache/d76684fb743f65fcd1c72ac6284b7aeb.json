@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 27567,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000082,
+      "outputCost": 0.0005892,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0006712
+    },
+    "hash": "d76684fb743f65fcd1c72ac6284b7aeb",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_generale_di_24h_per_venerdi_12_dicembre_2025.html",
+    "thoughts": "**Determining strike details**\n\nI need to respond in JSON according to the strike extraction schema. The document indicates an upcoming 24-hour strike on Friday, December 12, 2025, announced by CGIL. The content mentions a general national strike affecting both public and private sectors, along with essential service guarantees from 5:30 to 8:30 and 16:30 to 19:30. It also highlights information on last departures before and first departures after the strike. This seems like a clear announcement of a new strike.",
+    "tokens": {
+      "input": 1640,
+      "output": 1473,
+      "total": 3113
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-12-13 00:00:00",
+      "endDate": "2024-12-13 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21003,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000924,
+      "outputCost": 0.0007868,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008792
+    },
+    "hash": "61a3846e67a8accf08c1922aa9b8eed0",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_24_ore_del_13_dicembre_2024_aggiornamento.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to assess whether the document is announcing an upcoming strike. The Italian text mentions a 24-hour strike on December 13, 2024, indicating it's an update rather than a cancellation. So, yes, this confirms it is indeed a strike announcement. I should mark `isStrike` as true. Next, I need to gather relevant strike data such as start date, end date, location type, location codes, and guaranteed times, which are specified in the content.",
+    "tokens": {
+      "input": 1848,
+      "output": 1967,
+      "total": 3815
+    }
+  }
+}

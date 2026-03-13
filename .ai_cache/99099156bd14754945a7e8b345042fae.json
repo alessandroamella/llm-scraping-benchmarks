@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-07-24 08:30:00",
+      "endDate": "2023-07-24 12:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19973,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006455,
+      "outputCost": 0.0005884,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00065295
+    },
+    "hash": "99099156bd14754945a7e8b345042fae",
+    "sourceFile": "luned_24_luglio_sciopero_nazionale_tpl_roma_servizio_rischio_830_1230.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to respond with JSON based on the strike_extraction schema. The content I have is in Italian, discussing a national strike on Monday, July 24, affecting public transport in Rome from 8:30 to 12:30. It confirms that this is an official strike announcement, detailing that the USB union has declared a four-hour strike and that updates can be found on romamobilita.it. This is definitely a strike announcement I need to communicate!",
+    "tokens": {
+      "input": 1291,
+      "output": 1471,
+      "total": 2762
+    }
+  }
+}

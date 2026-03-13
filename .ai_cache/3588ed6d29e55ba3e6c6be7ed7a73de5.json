@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-10-28 00:00:00",
+      "endDate": "2024-10-28 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 23040,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006515,
+      "outputCost": 0.0012004,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00126555
+    },
+    "hash": "3588ed6d29e55ba3e6c6be7ed7a73de5",
+    "sourceFile": "trasporto_pubblico_28_ottobre_sciopero_sulla_rete_atac.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to format the information as JSON. The document discusses a public transport strike scheduled for October 28th, including specific details such as it being a 24-hour strike by unions. It's dated October 22, 2024, and updated on November 6, 2024. Since it talks about the strike occurring after the announcement date but before the update, it indicates that yes, this is indeed announcing an upcoming strike. So, I’ll set isStrike to true.",
+    "tokens": {
+      "input": 1303,
+      "output": 3001,
+      "total": 4304
+    }
+  }
+}

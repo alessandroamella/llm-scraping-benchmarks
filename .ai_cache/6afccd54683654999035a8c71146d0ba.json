@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-07-23 09:00:00",
+      "endDate": "2025-07-23 11:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21448,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0001172,
+      "outputCost": 0.000694,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008112
+    },
+    "hash": "6afccd54683654999035a8c71146d0ba",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_2_ore_mercoledi_23_luglio_2025.html",
+    "thoughts": "**Extracting strike data**\n\nI need to extract JSON data according to the given schema. The content mentions a strike announcement by Linee Vesuviane for two hours on July 23, 2025. The strike starts at 09:00 and ends at 11:00, so that means it's an upcoming strike announcement, making isStrike = true. \n\nThe startDate should be formatted as \"2025-07-23 09:00:00\" and ends at \"2025-07-23 11:00:00\". The strike is at the company level, so the locationType is \"REGIONAL\" based on the context of EAV lines Vesuviane.",
+    "tokens": {
+      "input": 2344,
+      "output": 1735,
+      "total": 4079
+    }
+  }
+}

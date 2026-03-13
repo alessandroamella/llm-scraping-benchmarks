@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-07-23 09:00:00",
+      "endDate": "2025-07-23 11:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22946,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000851,
+      "outputCost": 0.0010676,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0011527
+    },
+    "hash": "6339a2fd8044dddd271c9bf9a2519342",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_di_2_ore_mercoledi_23_luglio_2025.html",
+    "thoughts": "**Formatting strike extraction**\n\nI need to output JSON according to the strike_extraction schema. The page title indicates there's a strike announcement for \"Linee Suburbane\" on July 23, 2025, from 9:00 AM to 11:00 AM, lasting 2 hours. So, I can set isStrike to true and provide the strike data with start and end dates. I'll need to determine the location type since it's a company-wide strike, which may affect whether I classify it as REGIONAL or NATIONAL, with necessary location codes for REGIONAL.",
+    "tokens": {
+      "input": 1702,
+      "output": 2669,
+      "total": 4371
+    }
+  }
+}

@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-03-12T01:45:30.230Z",
+  "timestamp": "2026-03-13T15:17:21.481Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "ATAC",
     "fileName": "venerd_29_settembre_sciopero_nazionale_trasporto_pubblico_possibili_disagi.html",
     "model": "meta-llama/llama-4-scout-17b-16e-instruct",
     "strategy": "dom-distillation-markdown",
-    "useLenientSchema": true,
+    "useLenientSchema": false,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"ATAC\" (the public transport company of Rome, Lazio (12)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: Venerdì 29 settembre sciopero nazionale del trasporto pubblico. Possibili disagi - Roma Servizi per la Mobilità\n\n* * *\n\n# Venerdì 29 settembre sciopero nazionale del trasporto pubblico. Possibili disagi\n\nPubblicato il: 25/09/2023 - Aggiornato il: 26/09/2023\n\nstatus: 1 Venerdì 29 settembre possibili disagi per gli utenti del trasporto pubblico a causa dello sciopero nazionale di 24 ore proclamato dal sindacato Usb. A Roma l’agitazione potrebbe interessare la rete Atac e i bus periferici gestiti dalla Roma Tpl. Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20."
   },
   "response": {
@@ -23,17 +23,17 @@
       }
     },
     "usage": {
-      "input": 1122,
-      "output": 97,
-      "total": 1219
+      "input": 1123,
+      "output": 90,
+      "total": 1213
     },
     "costUsd": {
-      "inputCost": 0.00012342,
-      "outputCost": 0.00003298,
+      "inputCost": 0.00012353,
+      "outputCost": 0.0000306,
       "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.0001564
+      "totalCost": 0.00015413
     },
-    "durationMs": 723
+    "durationMs": 471
   }
 }

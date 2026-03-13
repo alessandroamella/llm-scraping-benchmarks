@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7471,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000634,
+      "outputCost": 0.0001912,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002546
+    },
+    "hash": "bcc83b5e562f5bdb43ff70286d90b69d",
+    "sourceFile": "sciopero_trasporto_pubblico_attive_metropolitane_termini_centocelle.html",
+    "thoughts": "**Parsing strike information**\n\nI’m focusing on outputting JSON per the strike_extraction schema. First, we have to determine if this is an announcement for a strike. The Italian title mentions a public transport strike in Rome, ongoing until 12:30, which is crucial information.\n\nThe bullet points confirm that some services are still running, indicating this is a real-time update, not an announcement of a future strike. The instruction clearly states that \"isStrike\" should only be true for upcoming announcements. So here, I won't set it as true.",
+    "tokens": {
+      "input": 1268,
+      "output": 478,
+      "total": 1746
+    }
+  }
+}

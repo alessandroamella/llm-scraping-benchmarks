@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-01-10 19:32:00",
+      "endDate": "2025-01-10 23:32:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24175,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007965,
+      "outputCost": 0.0006608,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00074045
+    },
+    "hash": "a48076b32a36b6019a1bc104b300debd",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_di_4_ore_giorno_10_gennaio_2025.html",
+    "thoughts": "**Extracting strike details**\n\nI need to output JSON following the schema for strike extraction. The document indicates an upcoming strike: \"Avviso di sciopero di 4 ore\" on January 10, 2025. It details a national strike lasting 4 hours from 19:32 to 23:32. \n\nSince this is a national strike, I should set locationType to \"NATIONAL.\" They mention \"ULTIME PARTENZE GARANTITE PRIMA DELLO SCIOPERO,\" but do not specify exact \"guaranteedTimes.\" If the strike status is true, I’ll need to extract details such as startDate and endDate too!",
+    "tokens": {
+      "input": 1593,
+      "output": 1652,
+      "total": 3245
+    }
+  }
+}

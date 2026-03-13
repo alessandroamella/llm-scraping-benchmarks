@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8775,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000636,
+      "outputCost": 0.000118,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0001816
+    },
+    "hash": "c3cf175121142671f4ba701502ffd89b",
+    "sourceFile": "sciopero_del_trasporto_pubblico_aperte_le_metropolitane_2.html",
+    "thoughts": "We need to structure our output in JSON following the strike extraction format. The content discusses a 24-hour general strike in the public transport sector, published on November 28, 2025. It's clear that this is a real-time update, not an upcoming strike. Therefore, according to instructions, I should set \"isStrike\" to false. I'll finalize the JSON object as {\"isStrike\": false}. It’s important to ensure it’s valid JSON with proper formatting.",
+    "tokens": {
+      "input": 1272,
+      "output": 295,
+      "total": 1567
+    }
+  }
+}

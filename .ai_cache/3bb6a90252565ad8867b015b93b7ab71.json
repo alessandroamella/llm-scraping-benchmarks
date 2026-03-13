@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-29 00:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 25140,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000639,
+      "outputCost": 0.00095,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0010139
+    },
+    "hash": "3bb6a90252565ad8867b015b93b7ab71",
+    "sourceFile": "venerdi_28_novembre_sciopero_generale_nazionale_trasporto_pubblico_a_rischio.html",
+    "thoughts": "**Parsing guaranteed service times**\n\nI need to determine the guaranteed service times from the phrase \"fino alle 8,30 e dalle 17 alle 20.\" This seems to indicate service is available until 8:30 and from 17:00 to 20:00. I’m wondering if “regular” suggests guaranteed times, but it’s not clear. I should also define the start and end date for the 24-hour nationwide strike on November 28. The start date would be 2025-11-28 00:00:00 and the end date 2025-11-29 00:00:00.",
+    "tokens": {
+      "input": 1278,
+      "output": 2375,
+      "total": 3653
+    }
+  }
+}

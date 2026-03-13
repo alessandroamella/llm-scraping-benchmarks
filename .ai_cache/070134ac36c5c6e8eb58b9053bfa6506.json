@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-09-09 08:30:00",
+      "endDate": "2024-09-09 16:30:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19356,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006545,
+      "outputCost": 0.0009224,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00098785
+    },
+    "hash": "070134ac36c5c6e8eb58b9053bfa6506",
+    "sourceFile": "luned_9_settembre_sciopero_nazionale_trasporto_pubblico_servizio_rischio.html",
+    "thoughts": "**Extracting strike information**\n\nI need to format the information into a JSON structure according to the \"strike_extraction\" schema. The document is about a public transport strike in Italy on September 9, 2024, which is definitely an upcoming strike. The relevant details include the date, with the strike running from 08:30 to 16:30 in Rome, affecting the Atac transport network. Thus, I can confirm this is indeed an announcement of an upcoming strike.",
+    "tokens": {
+      "input": 1309,
+      "output": 2306,
+      "total": 3615
+    }
+  }
+}

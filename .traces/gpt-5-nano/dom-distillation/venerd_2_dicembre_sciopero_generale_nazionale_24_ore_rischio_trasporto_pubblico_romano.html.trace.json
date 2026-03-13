@@ -1,15 +1,27 @@
 {
-  "timestamp": "2026-03-10T18:44:56.775Z",
-  "isCacheHit": true,
+  "timestamp": "2026-03-13T15:17:08.348Z",
+  "isCacheHit": false,
   "request": {
     "sourceName": "ATAC",
     "fileName": "venerd_2_dicembre_sciopero_generale_nazionale_24_ore_rischio_trasporto_pubblico_romano.html",
     "model": "gpt-5-nano",
     "strategy": "dom-distillation",
-    "useLenientSchema": true,
+    "useLenientSchema": false,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"ATAC\" (the public transport company of Rome, Lazio (12)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"> <h3>Context Metadata</h3> <ul><li>Page Title: Venerdì 2 dicembre sciopero generale nazionale di 24 ore. A rischio anche il trasporto pubblico romano - Roma Servizi per la Mobilità</li></ul> </div><hr/><div> <div> <div> <div> <div> <div> </div> </div> </div> <div> <div> <div> <div> <h1>Venerdì 2 dicembre sciopero generale nazionale di 24 ore. A rischio anche il trasporto pubblico romano</h1> </div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div><p>Pubblicato il: 25/11/2022 - Aggiornato il: 11/04/2023</p></div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div> <span> </span> </div> </div> </div> <div> <div> <div></div> </div> </div> <div> <div> <p>Venerdì 2 dicembre trasporto pubblico romano a rischio per l'adesione dei sindacati Usb, Cobas, Cub Trasporti, Sgb, Alcobas e Orsa allo sciopero generale nazionale di 24 ore. L'agitazione interesserà la rete Atac e i bus periferici della Roma Tpl. Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20. Aggiornamenti in tempo reale su romamobilita.it</p> </div> </div> </div> </div> </div> </div>"
   },
   "response": {
+    "rawOutput": {
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2022-12-02 00:00:00",
+        "endDate": "2022-12-02 23:59:59",
+        "locationType": "NATIONAL",
+        "guaranteedTimes": [
+          "00:00-08:30",
+          "17:00-20:00"
+        ]
+      }
+    },
     "parsedData": {
       "isStrike": true,
       "strikeData": {
@@ -23,18 +35,18 @@
       }
     },
     "usage": {
-      "input": 1220,
-      "output": 2103,
-      "total": 3323
+      "input": 1306,
+      "output": 2642,
+      "total": 3948
     },
     "costUsd": {
-      "inputCost": 0.000061,
-      "outputCost": 0.0008412,
+      "inputCost": 0.0000653,
+      "outputCost": 0.0010568,
       "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.0009022
+      "totalCost": 0.0011221
     },
-    "durationMs": 19673,
-    "thoughts": "**Analyzing strike details**\n\nI'm looking into an upcoming strike (sciopero nazionale di 24 ore) that affects Atac. It mentions \"a rischio,\" meaning service is at risk. The guaranteed service times are until 8:30 AM and from 5 PM to 8 PM. I need to check the requirements for strike data like startDate, endDate, and locationType. If it’s a national strike, locationType should be \"NATIONAL\" in all caps, and location codes would be null. If isStrike is true, I'll extract the details."
+    "durationMs": 24819,
+    "thoughts": "**Determining strike announcement**\n\nI need to figure out if the document announces a new strike. It mentions a general strike on Friday, December 2, stating that public transport in Rome will be affected and that this strike is supported by unions. Real-time updates are available on romamobilita.it. The content clearly says it's regarding an upcoming strike, so I should set the isStrike variable to true. It looks like this is confirming the strike announcement for that specified date."
   }
 }

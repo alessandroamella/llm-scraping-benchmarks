@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-09 00:00:00",
+      "endDate": "2025-12-09 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 38770,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006265,
+      "outputCost": 0.0013996,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00146225
+    },
+    "hash": "b20d5e624ed851a1a34ca83bd710d13c",
+    "sourceFile": "martedi_9_dicembre_sciopero_del_trasporto_pubblico_possibili_stop_per_24_ore.html",
+    "thoughts": "**Extracting strike details**\n\nI need to respond in JSON format for the extraction of the strike announcement. The document mentions a 24-hour public transport strike in Rome on December 9, with details about timing and impact specifically on the Atac network. It looks like this is an upcoming strike. The wording clearly indicates it’s announced, which means I should structure the response accordingly for clarity on the strike's implications and timelines.",
+    "tokens": {
+      "input": 1253,
+      "output": 3499,
+      "total": 4752
+    }
+  }
+}

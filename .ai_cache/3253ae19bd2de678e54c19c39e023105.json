@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-09-20 00:00:00",
+      "endDate": "2024-09-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 31477,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006735,
+      "outputCost": 0.0013156,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00138295
+    },
+    "hash": "3253ae19bd2de678e54c19c39e023105",
+    "sourceFile": "venerd_20_settembre_sciopero_nazionale_24_ore_trasporto_pubblico_servizio_rischio.html",
+    "thoughts": "**Extracting strike information**\n\nI need to output the JSON in the correct format based on the strike extraction needs, which requires an isStrike boolean and strikeData if it’s true. The document is announcing a national 24-hour strike on public transport in Rome on September 20, which is happening according to the provided context. I’ll include the relevant details about the strike and its associated risks of service disruption in the output.",
+    "tokens": {
+      "input": 1347,
+      "output": 3289,
+      "total": 4636
+    }
+  }
+}

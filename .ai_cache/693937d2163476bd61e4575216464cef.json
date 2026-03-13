@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-20 00:00:00",
+      "endDate": "2025-06-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 23327,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008775,
+      "outputCost": 0.0006316,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00071935
+    },
+    "hash": "693937d2163476bd61e4575216464cef",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_24h_venerdi_20_giugno_2025.html",
+    "thoughts": "**Extracting strike information**\n\nI need to output JSON according to the specified schema for strike extraction. This content is a strike announcement in Italian, indicating a 24-hour strike starting June 20, 2025, proclaimed by O.S. USB. The guaranteed service times are set from 05:30 to 08:30 and 16:30 to 19:30. Since it clearly outlines an upcoming strike, I can conclude that isStrike is true. I’ll prepare the strikeData with startDate and endDate formatted properly.",
+    "tokens": {
+      "input": 1755,
+      "output": 1579,
+      "total": 3334
+    }
+  }
+}

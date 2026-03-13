@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 26424,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00012805,
+      "outputCost": 0.0007636,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00089165
+    },
+    "hash": "f7dccc4d952d963f4ee7419a49850639",
+    "sourceFile": "linee_vesuviane_avviso_di_sciopero_di_24_h_venerdi_12_dicembre_2025.html",
+    "thoughts": "**Extracting strike data**\n\nOkay, so I’m confirming that isStrike should be true since this is an announcement about an upcoming strike. I’ll extract necessary strike data which includes the start and end dates, location type, location codes, and guaranteed times. \n\nThe date is December 12, 2025, with guarantee times from 05:30 to 08:30 and later from 16:30 to 19:30. It looks like this strike is national, so I'll set locationType to NATIONAL and leave locationCodes as null.",
+    "tokens": {
+      "input": 2561,
+      "output": 1909,
+      "total": 4470
+    }
+  }
+}

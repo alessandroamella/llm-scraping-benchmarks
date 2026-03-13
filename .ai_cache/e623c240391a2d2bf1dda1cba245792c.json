@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7873,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000653,
+      "outputCost": 0.0001508,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002161
+    },
+    "hash": "e623c240391a2d2bf1dda1cba245792c",
+    "sourceFile": "sciopero_trasporto_pubblico_aperte_metropolitane_situazione_sulla_rete_15.html",
+    "thoughts": "**Extracting strike data**\n\nI need to format the output in JSON according to the strike_extraction format. The user wants me to act as a data extraction algorithm. They mentioned a 24-hour strike happening in Rome, specifically noted as “È in corso lo sciopero del trasporto pubblico di 24 ore,” meaning it’s ongoing. I’ve determined that this document isn’t announcing a new strike but rather reporting on the current situation, so I’ll set isStrike to false. It’s all about real-time updates!",
+    "tokens": {
+      "input": 1306,
+      "output": 377,
+      "total": 1683
+    }
+  }
+}

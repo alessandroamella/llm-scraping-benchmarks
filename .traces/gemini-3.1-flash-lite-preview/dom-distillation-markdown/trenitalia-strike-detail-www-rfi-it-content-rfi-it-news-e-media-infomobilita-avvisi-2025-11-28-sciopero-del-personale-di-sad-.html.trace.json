@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-03-12T01:45:11.085Z",
+  "timestamp": "2026-03-13T15:15:46.475Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "Trenitalia",
     "fileName": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-11-28-sciopero-del-personale-di-sad-.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "dom-distillation-markdown",
-    "useLenientSchema": true,
+    "useLenientSchema": false,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"Trenitalia\" (Italy's national railway operator).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation-markdown):\n### Context Metadata\n\n-   Page Title: SCIOPERO DEL PERSONALE DI SAD E TRENTINO TRASPORTI / PERSONALSTREIK VON SAD UND TRENTINO TRASPORTI\n\n* * *\n\n# SCIOPERO DEL PERSONALE DI SAD E TRENTINO TRASPORTI / PERSONALSTREIK VON SAD UND TRENTINO TRASPORTI\n\nIn vigore: 28 NOVEMBRE 2025\n\nServizio: **Regionale**\n\nCausa Modifica: **Sciopero**\n\nRegione: **Trentino Alto Adige, VENETO**\n\nImpresa: **SAD, TT– Trentino Trasporti**\n\n**Dalle ore 00:00 alle ore 23:59 del 28 novembre 2025** è stato indetto uno sciopero del personale di **SAD** e **Trentino Trasporti.**\n\n•I treni **SAD** delle linee Bolzano – Trento, Bolzano – Merano, Merano – Malles, Brennero – Bolzano – Merano e Brunico – San Candido possono subire variazioni.\n\n•I treni di **Trentino Trasporti** i treni della linea Trento-Bassano del Grappa possono subire variazioni\n\nLo sciopero può comportare modifiche al servizio, **anche prima dell’inizio e dopo la sua conclusione**.\n\nMaggiori informazioni sui servizi garantiti in caso di sciopero sono disponibili sui canali digitali delle Imprese ferroviarie o presso il personale di assistenza clienti e le biglietterie Trenitalia e Trentino Trasporti.\n\n**Für Freitag, den 28. November 2025, ist von 00:00 bis 23:59 Uhr** ein **Personalstreik** von **SAD** und **Trentino Trasporti** ausgerufen worden.\n\n•**Bei den SAD**\\-Zügen auf den Strecken Bozen - Trient, Bozen - Meran, Meran - Mals, Brenner - Bozen-Meran und Bruneck – Innichen kann es zu Änderungen kommen.\n\n•Bei den **Trentino Trasporti-**Zügen auf der Strecke Trient - Bassano del Grappa kann es zu Änderungen kommen.\n\nDer Streik kann **bereits vor Beginn und nach Beendigung** zu Änderungen des Dienstes führen. \n\nWeitere Informationen über garantierte Mindestdienstleistungen im Streikfall sind auf den digitalen Kanälen der Eisenbahnunternehmen, beim Personal der Kundenbetreuung und an den Fahrkartenschaltern von Trenitalia und Trentino Trasporti  erhältlich."
   },
   "response": {
@@ -24,16 +24,17 @@
     },
     "usage": {
       "input": 1017,
-      "output": 113,
-      "total": 1606
+      "output": 106,
+      "total": 1643
     },
     "costUsd": {
       "inputCost": 0.00025425,
-      "outputCost": 0.0001695,
-      "thinkingCost": 0.000714,
+      "outputCost": 0.000159,
+      "thinkingCost": 0.00078,
       "cachedCost": 0,
-      "totalCost": 0.00113775
+      "totalCost": 0.00119325
     },
-    "durationMs": 6410
+    "durationMs": 5686,
+    "thoughts": "**Strike Announcement Analysis: A Deep Dive**\n\nOkay, let's break this down. My task is to process this text and extract information about a strike, specifically identifying and structuring the details for a strike announcement. The critical condition here is that `isStrike` is only true if the announcement refers to an *upcoming* strike.\n\nFrom the text provided, I need to extract the `startDate`, `endDate`, `locationType`, `locationCodes`, and any `guaranteedTimes`, all formatted as JSON.\n\nThe key pieces of information are: the strike is titled \"SCIOPERO DEL PERSONALE DI SAD E TRENTINO TRASPORTI,\" it's on November 28, 2025, from 00:00 to 23:59. It affects the regions of Trentino-Alto Adige (Code 04) and Veneto (Code 05), involving the operators SAD and Trentino Trasporti. The text explicitly states this is an *announcement* of a strike, so `isStrike` is definitively `true`.\n\nNow to structure the data properly. The `startDate` is \"2025-11-28 00:00:00\", and the `endDate` is \"2025-11-28 23:59:00\". The `locationType` is clearly \"REGIONAL\", and the `locationCodes` are [\"04\", \"05\"] corresponding to Trentino-Alto Adige and Veneto, respectively.\n\nRegarding `guaranteedTimes`, the text mentions that \"Maggiori informazioni sui servizi garantiti... sono disponibili sui canali digitali...\", but it doesn't give specific guaranteed times. Since this data is not present, I will omit the `guaranteedTimes` field from the final JSON output.\n\nTherefore, the final structure will look like this, incorporating all the verified details:\n\n```json\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2025-11-28 00:00:00\",\n    \"endDate\": \"2025-11-28 23:59:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"04\", \"05\"]\n  }\n}\n```\n\nI've verified that the JSON is valid, the date format is correct (yyyy-MM-dd HH:mm:ss), and the location codes are accurate. This is the complete and validated output I need.\n\n\n"
   }
 }

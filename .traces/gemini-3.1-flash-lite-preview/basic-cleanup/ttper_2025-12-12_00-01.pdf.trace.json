@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-03-09T18:59:03.365Z",
+  "timestamp": "2026-03-13T15:14:05.207Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "Trenitalia TPER",
     "fileName": "ttper_2025-12-12_00-01.pdf",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "basic-cleanup",
-    "useLenientSchema": true,
+    "useLenientSchema": false,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"Trenitalia TPER\" (the public transport company of Emilia-Romagna (08)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: basic-cleanup):\nSCIOPERO NAZIONALE DEL TRASPORTO FERROVIARIO PERSONALE DEL GRUPPO FS E TRENORD Dalle ore 00:01 alle ore 21:00 di venerdì 12 dicembre 2025, i treni possono subire cancellazioni o variazioni, per uno sciopero nazionale del personale del Gruppo FS, Trenitalia, Trenitalia Tper e Trenord. Per il trasporto Regionale di Trenitalia, Trenitalia Tper e Trenord sono garantiti i servizi essenziali previsti in caso di sciopero nei giorni feriali dalle ore 6:00 alle ore 9:00 e dalle ore 18:00 alle ore 21:00. Gli elenchi dei servizi garantiti sono consultabili sull’Orario ufficiale Trenitalia e su www.trenitalia.com, per Trenord sul sito www.trenord.it e per Trenitalia Tper sul sito www.trenitaliatper.it. L’agitazione sindacale può comportare modifiche al servizio anche prima dell’inizio e dopo la sua conclusione. I passeggeri che intendono rinunciare al viaggio possono chiedere il rimborso a partire dalla dichiarazione di sciopero: - fino all’ora di partenza del treno prenotato, per i treni Intercity e Frecce; - fino alle ore 24:00 del giorno antecedente lo sciopero stesso, per i treni Regionali; in alternativa possono riprogrammare il viaggio, a condizioni di trasporto simili, non appena possibile, secondo la disponibilità dei posti. Informazioni su collegamenti e servizi anche attraverso l’app Trenitalia, la sezione Infomobilità del sito trenitalia.com, il sito www.trenord.it o tramite l’App di Trenord, sito trenitaliatper.it, il numero verde gratuito 800 89 20 21, oltre che nelle biglietterie e presso il personale di assistenza clienti. 12 DICEMBRE 2025 -- 1 of 1 --"
   },
   "response": {
@@ -24,16 +24,17 @@
     },
     "usage": {
       "input": 908,
-      "output": 131,
-      "total": 1387
+      "output": 123,
+      "total": 1283
     },
     "costUsd": {
       "inputCost": 0.000227,
-      "outputCost": 0.0001965,
-      "thinkingCost": 0.000522,
+      "outputCost": 0.0001845,
+      "thinkingCost": 0.000378,
       "cachedCost": 0,
-      "totalCost": 0.0009455
+      "totalCost": 0.0007895
     },
-    "durationMs": 4525
+    "durationMs": 5613,
+    "thoughts": "**Analyzing the Railway Strike Announcement**\n\nOkay, so I've got this announcement about a national strike affecting FS Group, Trenitalia, Trenitalia Tper, and Trenord. Immediately, my brain kicks into gear: *Friday, December 12th, 2025. National strike, from 00:01 to 21:00*.  Essentially, it's a full-day disruption, but with guaranteed services during peak hours.\n\nLet's break this down further. The *isStrike* flag needs to be set to true, obviously. Then, I need to extract the start and end dates and times for the strike which I've got as \"2025-12-12 00:01:00\" and \"2025-12-12 21:00:00\" respectively. The term \"SCIOPERO NAZIONALE\" confirms this is a *NATIONAL* strike, so the *locationType* should be set to \"NATIONAL\", and I'll omit the *locationCodes* as that's correct for a national event.\n\nFinally, the guaranteed services window. These are the key times: 06:00-09:00 and 18:00-21:00. This data needs to be stored as the *guaranteedTimes* field so the system can use it appropriately. Essentially, this data confirms service guarantees within those windows, even amidst the strike.\n\n\n"
   }
 }

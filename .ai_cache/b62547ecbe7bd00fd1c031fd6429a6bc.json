@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6745,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000675,
+      "outputCost": 0.0001388,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002063
+    },
+    "hash": "b62547ecbe7bd00fd1c031fd6429a6bc",
+    "sourceFile": "sciopero_del_trasporto_pubblico_chiuse_le_metropolitane_e_la_ferrovia_termini_centocelle_2.html",
+    "thoughts": "**Determining strike status**\n\nI need to output JSON according to the strike extraction format. The title mentions an ongoing national public transport strike in Rome. It states that several metro lines and the Termini-Centocelle railway are closed, which indicates the situation is active. The instructions say that if there are real-time updates about an ongoing strike, I should set isStrike to false, since it’s currently happening. So, I’ll output {\"isStrike\": false}.",
+    "tokens": {
+      "input": 1350,
+      "output": 347,
+      "total": 1697
+    }
+  }
+}

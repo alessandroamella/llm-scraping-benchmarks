@@ -84,14 +84,14 @@ export class BenchmarksService implements OnModuleInit, OnModuleDestroy {
 
   // Toggle this to run benchmarks
   private readonly useLenientSchema = true;
-  private readonly includeManualInSuite = true;
+  private readonly includeManualInSuite = false;
   private readonly generateChaosDatasetFlag = false;
 
-  private readonly customReportName = 'eav_messed_dom_fixed_less_chaos';
+  private readonly customReportName = 'run_all_STRICT_schema';
   // private readonly disabledChecks: string[] = ['locationType', 'locationCodes'];
   private readonly disabledChecks: string[] = [];
 
-  private readonly enableResilienceSuite = true; // Toggle Resilience Suite
+  private readonly enableResilienceSuite = false; // Toggle Resilience Suite
   private readonly enableAiSuites = true; // Toggle AI Suites
   private readonly enableSlmSuites = false; // Toggle SLM Suites (MinerU and Jina)
 

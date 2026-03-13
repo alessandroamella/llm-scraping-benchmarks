@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7088,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006125,
+      "outputCost": 0.0001392,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00020045
+    },
+    "hash": "fd1f98bc228c86b6961347aa9f684e88",
+    "sourceFile": "sciopero_trasporto_pubblico_adesione_personale_atac_302.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to output JSON based on the defined schema. The content discusses a public transport strike in Italy, specifically mentioning, \"Sciopero del trasporto pubblico, adesione personale Atac al 30,2%,\" with the dates published and updated. This indicates a participation rate, not a new strike announcement. It reflects on how many staff members participated, not something happening in real-time. Therefore, isStrike should be set to false. \n\nSo I'll output:\n\n{\n  \"isStrike\": false\n}",
+    "tokens": {
+      "input": 1225,
+      "output": 348,
+      "total": 1573
+    }
+  }
+}

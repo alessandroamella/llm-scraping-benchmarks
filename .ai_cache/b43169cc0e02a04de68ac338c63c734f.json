@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8244,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006355,
+      "outputCost": 0.0001852,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00024875
+    },
+    "hash": "b43169cc0e02a04de68ac338c63c734f",
+    "sourceFile": "sciopero_sulla_rete_atac_chiuse_metro_ferrovia_termini_centocelle.html",
+    "thoughts": "**Deciding on strike JSON output**\n\nI need to format the output as JSON based on the strike_extraction schema. The document title indicates it's about a strike on the ATAC network, mentioning closed metros and a railway. The text says it's ongoing and will conclude at 16:30. So, I'm concluding that this is indeed real-time information about an ongoing strike, rather than announcing something upcoming. The details confirm it's current and relevant.",
+    "tokens": {
+      "input": 1271,
+      "output": 463,
+      "total": 1734
+    }
+  }
+}

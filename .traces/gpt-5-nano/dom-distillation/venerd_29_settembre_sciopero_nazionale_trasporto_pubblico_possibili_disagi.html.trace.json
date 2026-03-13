@@ -1,20 +1,32 @@
 {
-  "timestamp": "2026-03-10T18:44:58.386Z",
-  "isCacheHit": true,
+  "timestamp": "2026-03-13T15:17:20.575Z",
+  "isCacheHit": false,
   "request": {
     "sourceName": "ATAC",
     "fileName": "venerd_29_settembre_sciopero_nazionale_trasporto_pubblico_possibili_disagi.html",
     "model": "gpt-5-nano",
     "strategy": "dom-distillation",
-    "useLenientSchema": true,
+    "useLenientSchema": false,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"ATAC\" (the public transport company of Rome, Lazio (12)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"> <h3>Context Metadata</h3> <ul><li>Page Title: Venerdì 29 settembre sciopero nazionale del trasporto pubblico. Possibili disagi - Roma Servizi per la Mobilità</li></ul> </div><hr/><div> <div> <div> <div> <div> <div> </div> </div> </div> <div> <div> <div> <div> <h1>Venerdì 29 settembre sciopero nazionale del trasporto pubblico. Possibili disagi</h1> </div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div><p>Pubblicato il: 25/09/2023 - Aggiornato il: 26/09/2023</p></div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div> <span> </span> </div> </div> </div> <div> <div> <div></div> </div> </div> <div> <div> <p>status: 1 Venerdì 29 settembre possibili disagi per gli utenti del trasporto pubblico a causa dello sciopero nazionale di 24 ore proclamato dal sindacato Usb. A Roma l’agitazione potrebbe interessare la rete Atac e i bus periferici gestiti dalla Roma Tpl. Il servizio sarà comunque regolare fino alle 8,30 e dalle 17 alle 20.</p> </div> </div> </div> </div> </div> </div>"
   },
   "response": {
+    "rawOutput": {
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2023-09-29 00:00:00",
+        "endDate": "2023-09-29 23:59:59",
+        "locationType": "NATIONAL",
+        "guaranteedTimes": [
+          "00:00-08:30",
+          "17:00-20:00"
+        ]
+      }
+    },
     "parsedData": {
       "isStrike": true,
       "strikeData": {
         "startDate": "2023-09-29 00:00:00",
-        "endDate": "2023-09-30 00:00:00",
+        "endDate": "2023-09-29 23:59:59",
         "locationType": "NATIONAL",
         "guaranteedTimes": [
           "00:00-08:30",
@@ -23,18 +35,18 @@
       }
     },
     "usage": {
-      "input": 1191,
-      "output": 2866,
-      "total": 4057
+      "input": 1277,
+      "output": 1738,
+      "total": 3015
     },
     "costUsd": {
-      "inputCost": 0.00005955,
-      "outputCost": 0.0011464,
+      "inputCost": 0.00006385,
+      "outputCost": 0.0006952,
       "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.00120595
+      "totalCost": 0.00075905
     },
-    "durationMs": 35117,
-    "thoughts": "**Considering guaranteed times**\n\nI’m thinking it might be better to set guaranteed times to [\"00:00-08:30\", \"17:00-20:00\"]. For the national strike, it looks like they meant a full 24 hours from 00:00 to 23:59 on the strike date. So during that time, I have regular service from 00:00 to 08:30 and again from 17:00 to 20:00. But from 08:30 to 17:00, service might not be guaranteed. I have to make sure these times are accurate for the strike date."
+    "durationMs": 24646,
+    "thoughts": "**Determining strike details**\n\nI’m looking at the description \"sciopero nazionale di 24 ore proclamato,\" which indicates a strike. Since it mentions an upcoming strike on September 29, it looks like I should set isStrike to true. I’ll extract strike data, including start and end dates. The text indicates a 24-hour strike, so I think startDate should be 2023-09-29 00:00:00 and endDate 2023-09-30 00:00:00. I need to ensure the date format is 'yyyy-MM-dd HH:mm:ss'."
   }
 }

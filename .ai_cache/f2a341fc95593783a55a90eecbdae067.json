@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-07-23 09:00:00",
+      "endDate": "2025-07-23 11:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19867,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000099,
+      "outputCost": 0.0009972,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0010962
+    },
+    "hash": "f2a341fc95593783a55a90eecbdae067",
+    "sourceFile": "linee_flegree_avviso_di_sciopero_di_2_ore_giorno_23_luglio_2025.html",
+    "thoughts": "**Clarifying location codes**\n\nI'm looking at the instructions that indicate that locationCodes should be two-digit ISTAT codes for regional options or explicitly null for national strikes. So, I need to ensure that if the locationType is NATIONAL, then locationCodes must be set to null. \n\nRegarding guaranteed times, the article mentions that service is subject to the number of workers participating in the strike and lists a specific time window for the national strike from 09:00 to 11:00. This is likely the guaranteed time range.",
+    "tokens": {
+      "input": 1980,
+      "output": 2493,
+      "total": 4473
+    }
+  }
+}

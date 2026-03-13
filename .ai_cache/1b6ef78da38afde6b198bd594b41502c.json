@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 10088,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000678,
+      "outputCost": 0.0001488,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0002166
+    },
+    "hash": "1b6ef78da38afde6b198bd594b41502c",
+    "sourceFile": "sciopero_nazionale_trasporto_chiuse_metro_bb1_linea_c_corso_lavori_prolungamento_colosseo.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to check if the document is announcing a new or upcoming strike. The Italian article discusses an ongoing public transport strike, updating the current situation as of 6/11/2024. It outlines service statuses and closures, indicating it’s not announcing an upcoming strike. Instead, it’s reporting on the current situation. According to instructions, if there are real-time updates about an ongoing strike, I must set `isStrike` to false. So, I’ll output `{\"isStrike\": false}` as required.",
+    "tokens": {
+      "input": 1356,
+      "output": 372,
+      "total": 1728
+    }
+  }
+}

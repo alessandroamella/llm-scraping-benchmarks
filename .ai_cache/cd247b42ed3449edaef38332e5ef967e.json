@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-07-23 09:00:00",
+      "endDate": "2025-07-23 11:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "15"
+      ],
+      "guaranteedTimes": [
+        "09:00-11:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21588,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000879,
+      "outputCost": 0.0005824,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0006703
+    },
+    "hash": "cd247b42ed3449edaef38332e5ef967e",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_di_2_ore_mercoledi_23_luglio_2025.html",
+    "thoughts": "**Extracting strike information**\n\nI need to output the necessary JSON according to the specified schema for strike extraction. In this case, the document outlines an upcoming strike in Italian that indicates a two-hour strike on July 23, 2025, proclaimed by OS Faisa Confail. Therefore, I'll set isStrike to true. I need to extract the relevant strike data, including the start and end dates in the appropriate format. However, I'm a bit confused about the two different dates mentioned.",
+    "tokens": {
+      "input": 1758,
+      "output": 1456,
+      "total": 3214
+    }
+  }
+}

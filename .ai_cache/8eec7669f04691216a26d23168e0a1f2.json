@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-20 00:00:00",
+      "endDate": "2025-06-20 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19779,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00009465,
+      "outputCost": 0.0006092,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00070385
+    },
+    "hash": "8eec7669f04691216a26d23168e0a1f2",
+    "sourceFile": "linee_suburbane_avviso_di_sciopero_24_h_venerdi_20_giugno_2025.html",
+    "thoughts": "**Evaluating strike announcement**\n\nI need to output JSON based on the strike extraction schema. The content indicates a strike announcement for June 20, 2025, stating a 24-hour strike from a specific organization. The date stamp is June 15, 2025. \n\nIt describes guaranteed service times and details about the strike's conditions.  \n\nSince this is indeed an announcement, I'll set isStrike to true and fill out strikeData with startDate, endDate, locationType, locationCodes, and guaranteedTimes in the required format.",
+    "tokens": {
+      "input": 1893,
+      "output": 1523,
+      "total": 3416
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7613,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006155,
+      "outputCost": 0.000182,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00024355
+    },
+    "hash": "3cdc3e1e39cb6108844485f065ea3297",
+    "sourceFile": "comunicato_stampa_sciopero_trasporto_pubblico.html",
+    "thoughts": "**Extracting strike data**\n\nI need to output JSON according to the strike_extraction schema. I’m looking at an Italian article that discusses a public transport strike by Atac staff. The participation was 53.2%, but it seems like this is for a strike that already happened, rather than one that's upcoming. Since it’s not an ongoing strike, I will set isStrike to false. So, my output will be: {\"isStrike\": false}. That's straightforward!",
+    "tokens": {
+      "input": 1231,
+      "output": 455,
+      "total": 1686
+    }
+  }
+}

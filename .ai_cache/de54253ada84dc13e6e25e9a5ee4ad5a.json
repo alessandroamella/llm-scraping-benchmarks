@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-01-08 09:01:00",
+      "endDate": "2026-01-08 17:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "07"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 23944,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000632,
+      "outputCost": 0.0007276,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0007908
+    },
+    "hash": "de54253ada84dc13e6e25e9a5ee4ad5a",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2026-1-8-sciopero-del-personale-mobile-in.html",
+    "thoughts": "**Processing location data**\n\nI have a list of Italian locations by code, with Liguria as code 07. I need to format data for a specific time period, starting from 9:01 AM until 5:00 PM on January 8, 2026. So, I’ll format the start date as \"2026-01-08 09:01:00\" and the end date as \"2026-01-08 17:00:00\". It looks like these dates are likely in local time. I also have to check for the \"guaranteedTimes\" field concerning service availability.",
+    "tokens": {
+      "input": 1264,
+      "output": 1819,
+      "total": 3083
+    }
+  }
+}

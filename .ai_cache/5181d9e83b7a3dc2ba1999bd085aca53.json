@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-12-15 00:00:00",
+      "endDate": "2023-12-15 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 23494,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000651,
+      "outputCost": 0.0009584,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0010235
+    },
+    "hash": "5181d9e83b7a3dc2ba1999bd085aca53",
+    "sourceFile": "trasporto_pubblico_sciopero_nazionale_differito_15_dicembre.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to respond using JSON in the strike_extraction format. The document is an Italian article announcing that a national public transport strike has been postponed to December 15, initially scheduled for November 27. This postponement is significant since it confirms the upcoming nature of the strike. It’s detailed that it’ll be a 24-hour strike affecting the Rome network with specific service hours. I can clearly conclude that this document is indeed announcing a new upcoming strike.",
+    "tokens": {
+      "input": 1302,
+      "output": 2396,
+      "total": 3698
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-28 00:00:00",
+      "endDate": "2025-11-28 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "05:30-08:30",
+        "16:30-19:30"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 30661,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000834,
+      "outputCost": 0.0005576,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.000641
+    },
+    "hash": "ab059e44fce9ae395e12620d52e383bb",
+    "sourceFile": "linea_metropolitana_avviso_di_sciopero_24h_venerdi_28_novembre_2025.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to figure out if the document is announcing an upcoming strike. The title indicates it's an \"avviso di sciopero\" (notice of strike) for 24 hours on November 28, 2025. Since the date is November 23, 2025, it looks like a valid announcement. It mentions a national strike affecting public and private sectors, with guaranteed service times. So, I confirm that this document is indeed announcing a strike and will format the output according to the required schema.",
+    "tokens": {
+      "input": 1668,
+      "output": 1394,
+      "total": 3062
+    }
+  }
+}

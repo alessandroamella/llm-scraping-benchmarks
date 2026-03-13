@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 8024,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000643,
+      "outputCost": 0.00012,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0001843
+    },
+    "hash": "b6ba9675a01afbced345d23271cf6a74",
+    "sourceFile": "sciopero_trasporto_pubblico_chiuse_metro_c_attiva_b.html",
+    "thoughts": "**Outputting JSON for strike status**\n\nI need to output in the strike_extraction JSON format. The document indicates an ongoing strike with status \"1 È in corso lo sciopero,\" meaning it's currently happening. This isn't an announcement for an upcoming strike; instead, it's real-time updates. The body confirms the strike is in progress until 12:30. Thus, I’ll set isStrike to false. The final output should simply be: {\"isStrike\": false}. I’ll stick to that format, no extra commentary!",
+    "tokens": {
+      "input": 1286,
+      "output": 300,
+      "total": 1586
+    }
+  }
+}

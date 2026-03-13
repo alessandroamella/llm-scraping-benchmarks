@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-10-09 00:00:00",
+      "endDate": "2023-10-09 23:59:59",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 30993,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000648,
+      "outputCost": 0.0008232,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.000888
+    },
+    "hash": "95734bc9949e950344c9d717f16d7b25",
+    "sourceFile": "luned_9_ottobre_sciopero_nazionale_trasporto_pubblico_possibili_disagi_24_ore.html",
+    "thoughts": "**Clarifying location settings**\n\nIt looks like for the locationType, it should be set to \"NATIONAL\" and locationCodes should be null. The guidelines indicate that if the locationType is REGIONAL, I need an array of region codes, but for NATIONAL, it specifically states locationCodes must be null. So that means I should explicitly set locationCodes to null. Next, I'll need to check on startDate and endDate, especially since the documents mention a national strike without specifying times.",
+    "tokens": {
+      "input": 1296,
+      "output": 2058,
+      "total": 3354
+    }
+  }
+}

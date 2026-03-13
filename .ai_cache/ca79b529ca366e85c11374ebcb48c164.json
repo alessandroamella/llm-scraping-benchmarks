@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-11-29 09:00:00",
+      "endDate": "2024-11-29 13:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "09:00-13:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 16610,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000067,
+      "outputCost": 0.0004972,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0005642
+    },
+    "hash": "ca79b529ca366e85c11374ebcb48c164",
+    "sourceFile": "sciopero_generale_nazionale.html",
+    "thoughts": "**Clarifying location parameters**\n\nI should set locationType to \"NATIONAL\" and make locationCodes explicitly null, following the instruction's clarity. Now, for guaranteedTimes, the article says the protest is reduced to 4 hours from 9 to 13. So, I can format that as an array of time ranges: [\"09:00-13:00\"]. Regarding startDate and endDate, since it's a general strike for those hours, the date would be tomorrow, 29/11/2024, in local time. I'll assume that's the correct timezone!",
+    "tokens": {
+      "input": 1340,
+      "output": 1243,
+      "total": 2583
+    }
+  }
+}

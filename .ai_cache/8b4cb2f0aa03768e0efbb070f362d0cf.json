@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-14 00:00:00",
+      "endDate": "2025-11-14 23:59:59",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "12"
+      ],
+      "guaranteedTimes": [
+        "00:00-08:30",
+        "17:00-20:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 28261,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006505,
+      "outputCost": 0.0009304,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00099545
+    },
+    "hash": "8b4cb2f0aa03768e0efbb070f362d0cf",
+    "sourceFile": "trasporto_pubblico_venerdi_prossimo_sciopero_di_24_ore_servizio_a_rischio.html",
+    "thoughts": "**Extracting strike information**\n\nI need to determine if the document is announcing a new or upcoming strike. The content is in Italian, with the title indicating a 24-hour strike next Friday and a potential risk to public transport services. The details mention that the strike, proclaimed by the unions, will mainly affect the Atac network but will have regular services available until specific hours. It’s essential to format this into JSON to capture the necessary information succinctly.",
+    "tokens": {
+      "input": 1301,
+      "output": 2326,
+      "total": 3627
+    }
+  }
+}

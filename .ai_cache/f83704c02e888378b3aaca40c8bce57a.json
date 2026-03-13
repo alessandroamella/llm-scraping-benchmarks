@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2026-01-12 03:00:00",
+      "endDate": "2026-01-13 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 22981,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006655,
+      "outputCost": 0.0007188,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00078535
+    },
+    "hash": "f83704c02e888378b3aaca40c8bce57a",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2026-1-12-sciopero-del-personale-di-treno.html",
+    "thoughts": "**Processing strike announcement**\n\nI need to output a JSON format for the strike extraction based on this job. First, I must determine if it’s announcing a strike. The content includes a title about a regional strike in the Lombardy area, scheduled from January 12 to January 13, 2026. It involves several transport companies like Trenord and Trenitalia. Since it's announcing an upcoming strike with clear dates mentioned, I can confirm that the isStrike should indeed be true.",
+    "tokens": {
+      "input": 1331,
+      "output": 1797,
+      "total": 3128
+    }
+  }
+}

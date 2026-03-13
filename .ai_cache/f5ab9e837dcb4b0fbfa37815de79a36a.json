@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-16 10:00:00",
+      "endDate": "2025-11-16 17:59:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "01",
+        "03",
+        "05",
+        "07",
+        "08"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 24088,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00007215,
+      "outputCost": 0.0008932,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00096535
+    },
+    "hash": "f5ab9e837dcb4b0fbfa37815de79a36a",
+    "sourceFile": "trenitalia-strike-detail-www-rfi-it-content-rfi-it-news-e-media-infomobilita-avvisi-2025-11-16-sciopero-del-personale-di-tren.html",
+    "thoughts": "**Extracting Strike Information**\n\nI need to format the data in JSON according to the strike_extraction schema. The document in Italian announces a strike involving Trenord personnel, scheduled for November 16, 2025, from 10:00 to 17:59. It specifically mentions regions such as Emilia Romagna, Liguria, Lombardia, Piemonte, and Veneto, with possible cancellations or disruptions indicated. Notably, no trains are guaranteed during this time. So, it’s clear: this is indeed an announcement of an upcoming strike.",
+    "tokens": {
+      "input": 1443,
+      "output": 2233,
+      "total": 3676
+    }
+  }
+}

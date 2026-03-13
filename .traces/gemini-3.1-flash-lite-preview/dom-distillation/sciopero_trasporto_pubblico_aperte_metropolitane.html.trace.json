@@ -1,31 +1,36 @@
 {
-  "timestamp": "2026-03-09T19:16:05.852Z",
-  "isCacheHit": true,
+  "timestamp": "2026-03-13T15:17:03.964Z",
+  "isCacheHit": false,
   "request": {
     "sourceName": "ATAC",
     "fileName": "sciopero_trasporto_pubblico_aperte_metropolitane.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "dom-distillation",
-    "useLenientSchema": true,
+    "useLenientSchema": false,
     "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"ATAC\" (the public transport company of Rome, Lazio (12)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"> <h3>Context Metadata</h3> <ul><li>Page Title: Sciopero del trasporto pubblico, aperte le metropolitane - Roma Servizi per la Mobilità</li></ul> </div><hr/><div> <div> <div> <div> <div> <div> </div> </div> </div> <div> <div> <div> <div> <h1>Sciopero del trasporto pubblico, aperte le metropolitane</h1> </div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div><p>Pubblicato il: 29/03/2022 - Aggiornato il: 25/01/2023</p></div> </div> </div> </div> </div> </div> <div> <div> <div> <div> <div> <div> <span> </span> </div> </div> </div> <div> <div> <div></div> </div> </div> <div> <div> <p>*È in corso lo sciopero di 24 ore del trasporto pubblico indetto dalla Faisa Cisal. Ecco la situazione sulla rete:* *Metro A:* regolare *Metro B/B1:* attiva *Metro C:* regolare *Ferrovia Roma-Lido:* regolare *Ferrovia Roma-Viterbo metropolitano e regionale:* regolare *Termini-Centocelle:* attiva *Servizio bus e tram:* possibili riduzioni di corse e/o sospensione di linee</p> </div> </div> </div> </div> </div> </div>"
   },
   "response": {
+    "rawOutput": {
+      "isStrike": false
+    },
     "parsedData": {
       "isStrike": false
     },
     "usage": {
       "input": 776,
       "output": 10,
-      "total": 933
+      "cached": 0,
+      "thinking": 0,
+      "total": 786
     },
     "costUsd": {
       "inputCost": 0.000194,
       "outputCost": 0.000015,
-      "thinkingCost": 0.0002205,
+      "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.0004295
+      "totalCost": 0.000209
     },
-    "durationMs": 3859,
-    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, my primary goal here is to figure out if this text is *announcing* a strike that's about to happen, or if it's reporting on one that's already in progress. Let's break this down. The title, \"Sciopero del trasporto pubblico, aperte le metropolitane,\" immediately gives me some context: public transport strike, and the fact that the subways are open. This suggests that the strike is happening but some services are running.\n\nNow, looking at the body, \"*È in corso lo sciopero di 24 ore...*\" (The 24-hour public transport strike is *ongoing*...), that \"in corso\" is key. The phrase “in corso” is like a flashing neon sign – it indicates that the strike is *ongoing* right now, as the text is being written, rather than announcing a future event.\n\nGiven this real-time reporting of a live situation, the instruction is clear: if the content is giving me real-time updates on an ongoing strike, then my `isStrike` variable should be set to `false`. Therefore, I'm setting `isStrike` to `false`. This isn't a strike *announcement*, it's a strike *update*.\n\n\n"
+    "durationMs": 2269,
+    "thoughts": ""
   }
 }

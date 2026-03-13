@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isStrike": false,
+    "strikeData": null
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 7296,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00006815,
+      "outputCost": 0.000184,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00025215
+    },
+    "hash": "e001bb02b27017f1c66cf0fdfda045cf",
+    "sourceFile": "sciopero_generale_aperte_le_metropolitane_e_la_ferrovia_termini_centocelle.html",
+    "thoughts": "**Determining strike information**\n\nI need to check if the document is announcing a new or upcoming strike based on the given content in Italian. It says there's an ongoing general strike affecting public transport, which means it isn’t announcing a future strike. So, the `isStrike` value should be set to false. \n\nI’ll make sure to structure the output in JSON format as follows: { \"isStrike\": false }. This aligns with the guidelines about strike announcements!",
+    "tokens": {
+      "input": 1363,
+      "output": 460,
+      "total": 1823
+    }
+  }
+}
