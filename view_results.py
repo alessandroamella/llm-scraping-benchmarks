@@ -608,7 +608,7 @@ if resilience_data_raw:
     #     fontsize=16,
     #     fontweight="bold",
     # )
-    plt.ylabel("F1-Score medio", fontsize=12)
+    plt.ylabel("F1-Score medio (aggregato sui modelli AI)", fontsize=12)
     plt.xlabel("Metodo / Strategia di pre-processing", fontsize=12)
     plt.ylim(0, 1.15)  # Spazio extra per annotazioni
     plt.legend(loc="upper right")
