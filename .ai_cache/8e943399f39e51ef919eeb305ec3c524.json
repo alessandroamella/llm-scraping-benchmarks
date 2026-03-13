@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 21:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18278,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005442,
+      "outputCost": 0.0007812,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0013254
+    },
+    "hash": "8e943399f39e51ef919eeb305ec3c524",
+    "sourceFile": "strike-detail-venerd--12-dicembre-da-mezzanotte-alle-21-sciopero.html",
+    "thoughts": "**Determining strike parameters**\n\nI'm working with details about a train strike scheduled from midnight until 21:00 on December 12, 2025. I need to set the correct start and end dates: starting at 00:00 on December 12 and ending at 21:00 the same day. The location type is \"nazionale\" (national), meaning the locationType should be \"NATIONAL\" with locationCodes set to null. It seems I need to confirm this is consistent with the guidelines.",
+    "tokens": {
+      "input": 10884,
+      "output": 1953,
+      "total": 12837
+    }
+  }
+}

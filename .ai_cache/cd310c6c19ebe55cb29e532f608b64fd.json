@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-07-18 09:00:00",
+      "endDate": "2024-07-18 13:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 14831,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00055065,
+      "outputCost": 0.0005744,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00112505
+    },
+    "hash": "cd310c6c19ebe55cb29e532f608b64fd",
+    "sourceFile": "strike-detail-gioved--18-luglio-dalle-9-alle-13-sciopero-del-per.html",
+    "thoughts": "**Interpreting strike announcement**\n\nI need to parse this HTML content to see if it's announcing a new or upcoming strike. The content is from a Trenord news page, and it clearly states there's a strike on Thursday, July 18, from 9 AM to 1 PM. It mentions that the strike could involve FERROVIENORD staff, which may affect some train lines, but not Trenord staff. This confirms it's an upcoming strike, so I'll mark isStrike as true and extract the strike data, noting the start and end times.",
+    "tokens": {
+      "input": 11013,
+      "output": 1436,
+      "total": 12449
+    }
+  }
+}

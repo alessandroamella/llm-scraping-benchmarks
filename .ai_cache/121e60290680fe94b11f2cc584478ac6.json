@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-12-14 09:00:00",
+      "endDate": "2023-12-14 17:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "09:00-10:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19077,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0002628,
+      "outputCost": 0.0009936,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0012564
+    },
+    "hash": "121e60290680fe94b11f2cc584478ac6",
+    "sourceFile": "strike-detail-gioved--14-dicembre-dalle-ore-9-alle-ore-17-sciope.html",
+    "thoughts": "**Deciding on strike announcement**\n\nI need to determine if the document is announcing a new upcoming strike. The Italian text indicates there's a strike for regional trains on December 14, 2023, from 9 AM to 5 PM. It mentions that several unions are involved and that there could be impacts on train services. So, I’ll set isStrike to true. Now I have to extract the strike details, including start and end dates, location types, and guaranteed times, ensuring I format the dates correctly.",
+    "tokens": {
+      "input": 5256,
+      "output": 2484,
+      "total": 7740
+    }
+  }
+}

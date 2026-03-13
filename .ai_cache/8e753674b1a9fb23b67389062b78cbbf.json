@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-11-29 09:00:00",
+      "endDate": "2024-11-29 13:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "09:00-13:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 25334,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00028155,
+      "outputCost": 0.0005256,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00080715
+    },
+    "hash": "8e753674b1a9fb23b67389062b78cbbf",
+    "sourceFile": "strike-detail-venerd--29-novembre-dalle-9-alle-13-sciopero-gener.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to output JSON according to the schema I have. The document is about an upcoming strike on Friday, 29 November, from 9 to 13, specifically labeled as \"sciopero generale.\" The content indicates that it will impact Ferrovienord services but not Trenord staff. It's an announcement of a general strike affecting specific lines, clarifying that Trenord personnel won't be involved. Therefore, it confirms that this isn't a cancellation but a strike notice.",
+    "tokens": {
+      "input": 5631,
+      "output": 1314,
+      "total": 6945
+    }
+  }
+}

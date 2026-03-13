@@ -1,15 +1,26 @@
 {
-  "timestamp": "2026-03-09T19:15:39.423Z",
-  "isCacheHit": true,
+  "timestamp": "2026-03-13T00:12:41.600Z",
+  "isCacheHit": false,
   "request": {
     "sourceName": "Trenord",
     "fileName": "strike-detail-gioved--14-dicembre-dalle-ore-9-alle-ore-17-sciope.html",
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "dom-distillation",
     "useLenientSchema": true,
-    "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"Trenord\" (the public transport company of Lombardia (03)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"> <h3>Context Metadata</h3> <ul><li>Page Title: Giovedì 14 dicembre dalle ore 9 alle ore 17 sciopero dei treni regionaliUser-logged-no-picCloseSend-mail-OKAlert</li><li>Date News: martedì 12/12/2023</li><li>Header: Giovedì 14 dicembre dalle ore 9 alle ore 17 sciopero dei treni regionali</li></ul> </div><hr/><div> <div> <h1> <b> Giovedì 14 dicembre dalle ore 9 alle ore 17 sciopero dei treni regionali </b> </h1> <p> martedì 12/12/2023 </p> </div> <div> <!-- start simpleTextMedia --> <div> <div> <div> <div> <h4><strong>Informazioni in tempo reale sulla circolazione su trenord.it e App</strong></h4> <p>Giovedì 14 dicembre dalle ore 9 alle ore 17 è in programma uno sciopero proclamato da alcune sigle sindacali, che potrà avere ripercussioni sulla circolazione dei treni regionali, suburbani, sui servizi di Lunga Percorrenza di Trenord e sui collegamenti aeroportuali Malpensa Express e S50 Malpensa Aeroporto-Bellinzona.</p> <p>La mattina viaggeranno i treni con orario di partenza dalla stazione di origine corsa prima delle ore 9 e arrivo a destinazione finale entro le ore 10.</p> <p>Per garantire il collegamento con l’Aeroporto Internazionale di Malpensa, saranno previsti autobus sostitutivi senza fermate intermedie per le corse non effettuate sui collegamenti Malpensa Aeroporto - Milano Cadorna (partenza e arrivo in Via Paleocapa 1) e S50 Malpensa Aeroporto - Stabio.</p> <p>Informazioni in tempo reale sulla circolazione saranno disponibili sulle pagine di ogni linea della App e del sito Trenord.</p> <p>Durante lo sciopero e alla ripresa del servizio, si invitano i passeggeri a prestare attenzione ad annunci sonori e monitor di stazione.</p> <p>­</p> <p><a href=\"/fileadmin/contenuti/TRENORD/3-News/Trenord_Informa/Comunicati_stampa/2023/Trenord_231212_CS_Sciopero14.pdf\">Comunicato stampa sciopero 14 dicembre 2023</a></p> </div> </div> </div> </div> <!-- end simpleTextMedia --> </div> </div> <div>PDF Document Found: /fileadmin/contenuti/TRENORD/3-News/Trenord_Informa/Comunicati_stampa/2023/Trenord_231212_CS_Sciopero14.pdf</div>"
+    "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"Trenord\" (the public transport company of Lombardia (03)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"> <h3>Context Metadata</h3> <ul><li>Page Title: Giovedì 14 dicembre dalle ore 9 alle ore 17 sciopero dei treni regionaliUser-logged-no-picCloseSend-mail-OKAlert</li></ul> </div><hr/><div> <div> <h1> <span> Giovedì 14 dicembre dalle ore 9 alle ore 17 sciopero dei treni regionali </span> </h1> <span> </span> <span> martedì 12/12/2023 </span> <div> </div> </div> <div> <!-- start simpleTextMedia --> <div> <div> <div> <div> <div><div><span>Informazioni in tempo reale sulla circolazione su trenord.it e App</span></div></div> <span>&nbsp;</span> <span>Giovedì 14 dicembre dalle ore 9 alle ore 17 è in programma uno sciopero proclamato da alcune sigle sindacali, che potrà avere ripercussioni sulla circolazione dei treni regionali, suburbani, sui servizi di Lunga Percorrenza di Trenord e sui collegamenti aeroportuali Malpensa Express e S50 Malpensa Aeroporto-Bellinzona.</span> <span>&nbsp;</span> <span>La mattina viaggeranno i treni con orario di partenza dalla stazione di origine corsa prima delle ore 9 e arrivo a destinazione finale entro le ore 10.</span> <span>&nbsp;</span> <div><span>Per garantire il collegamento con l’Aeroporto Internazionale di Malpensa, saranno previsti autobus sostitutivi senza fermate intermedie per le corse non effettuate sui collegamenti Malpensa Aeroporto - Milano Cadorna (partenza e arrivo in Via Paleocapa 1) e S50 Malpensa Aeroporto - Stabio.</span></div> <span>&nbsp;</span> <div><span>Informazioni in tempo reale sulla circolazione saranno disponibili sulle pagine di ogni linea della App e del sito Trenord.</span></div> <span>&nbsp;</span> <span>Durante lo sciopero e alla ripresa del servizio, si invitano i passeggeri a prestare attenzione ad annunci sonori e monitor di stazione.</span> <div><span>­</span></div> <div><a href=\"/fileadmin/contenuti/TRENORD/3-News/Trenord_Informa/Comunicati_stampa/2023/Trenord_231212_CS_Sciopero14.pdf\">Comunicato stampa sciopero 14 dicembre 2023</a></div> <div>&nbsp;</div> </div> </div> </div> </div> <!-- end simpleTextMedia --> </div> </div> <div>PDF Document Found: /fileadmin/contenuti/TRENORD/3-News/Trenord_Informa/Comunicati_stampa/2023/Trenord_231212_CS_Sciopero14.pdf</div>"
   },
   "response": {
+    "rawOutput": {
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2023-12-14 09:00:00",
+        "endDate": "2023-12-14 17:00:00",
+        "locationType": "REGIONAL",
+        "locationCodes": [
+          "03"
+        ]
+      }
+    },
     "parsedData": {
       "isStrike": true,
       "strikeData": {
@@ -22,18 +33,20 @@
       }
     },
     "usage": {
-      "input": 1099,
+      "input": 1088,
       "output": 99,
-      "total": 1648
+      "cached": 0,
+      "thinking": 0,
+      "total": 1187
     },
     "costUsd": {
-      "inputCost": 0.00027475,
+      "inputCost": 0.000272,
       "outputCost": 0.0001485,
-      "thinkingCost": 0.000675,
+      "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.00109825
+      "totalCost": 0.0004205
     },
-    "durationMs": 4908,
-    "thoughts": "**Strike Analysis: Trenord Regional Service (Lombardia)**\n\nOkay, let's break this down. The primary task is to confirm if this text announces an upcoming strike. The target is Trenord, specifically their regional services in Lombardia (region code \"03\"). The text itself, dated December 12th, 2023, states \"Giovedì 14 dicembre dalle ore 9 alle ore 17 sciopero dei treni regionali\" which translates to \"Thursday, December 14th, from 9 AM to 5 PM, regional train strike.\"\n\nTherefore, **isStrike** is definitively `True`.\n\nFrom this information, I can extract the strike details:\n\n*   **startDate**: \"2023-12-14 09:00:00\"\n*   **endDate**: \"2023-12-14 17:00:00\"\n*   **locationType**: \"REGIONAL\"\n*   **locationCodes**: \\[\"03\"] (Lombardia)\n\nWhile the text mentions that trains departing their origin station *before* 9 AM and arriving *before* 10 AM will be running, this doesn't explicitly guarantee a typical \"peak hour\" window.  Hence, I'm omitting a `guaranteedTimes` parameter because the usual peak window guarantee isn't there. We know that services after 9:00 AM are disrupted, and that services before 9:00 AM are expected to operate as normal.\n\nSo, the strike data I'm storing is:\n\n*   **isStrike**: `true`\n*   **strikeData**:\n    *   **startDate**: \"2023-12-14 09:00:00\"\n    *   **endDate**: \"2023-12-14 17:00:00\"\n    *   **locationType**: \"REGIONAL\"\n    *   **locationCodes**: [\"03\"]\n\n\n"
+    "durationMs": 1005,
+    "thoughts": ""
   }
 }

@@ -1,0 +1,1006 @@
+{
+  "timestamp": "2026-03-13T00:11:17.163Z",
+  "summary": {
+    "Trenord-Manual-Regex [CHAOS]": {
+      "totalScore": 1,
+      "count": 13,
+      "perfect": 1,
+      "avgPrecision": 0.0769,
+      "avgRecall": 0.0769,
+      "avgF1": 0.0769,
+      "avgDuration": 7.88,
+      "errorRate": 0
+    },
+    "deepseek-chat [html-to-markdown] (Lenient) [CHAOS]": {
+      "totalScore": 11.27,
+      "count": 13,
+      "perfect": 9,
+      "avgPrecision": 0.8667,
+      "avgRecall": 0.8667,
+      "avgF1": 0.8667,
+      "avgDuration": 6804.08,
+      "errorRate": 0,
+      "totalCostUsd": 0.0023,
+      "costPerFile": 0.00018
+    },
+    "deepseek-chat [dom-distillation] (Lenient) [CHAOS]": {
+      "totalScore": 12.07,
+      "count": 13,
+      "perfect": 9,
+      "avgPrecision": 0.9282,
+      "avgRecall": 0.9282,
+      "avgF1": 0.9282,
+      "avgDuration": 4040.92,
+      "errorRate": 0,
+      "totalCostUsd": 0.001,
+      "costPerFile": 0.00008
+    }
+  },
+  "details": [
+    {
+      "file": "strike-detail-venerd--29-novembre-revocato-sciopero-ferrovienord.html",
+      "source": "Trenord",
+      "parser": "Trenord-Manual-Regex [CHAOS]",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "parserType": "manual",
+      "durationMs": 47
+    },
+    {
+      "file": "strike-detail-venerd--29-novembre-dalle-9-alle-13-sciopero-gener.html",
+      "source": "Trenord",
+      "parser": "Trenord-Manual-Regex [CHAOS]",
+      "score": 0,
+      "isExactMatch": false,
+      "differences": [
+        "isStrike: Expected true, got false"
+      ],
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "parserType": "manual",
+      "durationMs": 6
+    },
+    {
+      "file": "strike-detail-sciopero-uiltrasporti-e-orsa-domenica-16-giugno--p.html",
+      "source": "Trenord",
+      "parser": "Trenord-Manual-Regex [CHAOS]",
+      "score": 0,
+      "isExactMatch": false,
+      "differences": [
+        "isStrike: Expected true, got false"
+      ],
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "parserType": "manual",
+      "durationMs": 5
+    },
+    {
+      "file": "strike-detail-sciopero-nazionale-17-novembre-ore-9-13-personale-.html",
+      "source": "Trenord",
+      "parser": "Trenord-Manual-Regex [CHAOS]",
+      "score": 0,
+      "isExactMatch": false,
+      "differences": [
+        "isStrike: Expected true, got false"
+      ],
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "parserType": "manual",
+      "durationMs": 5
+    },
+    {
+      "file": "strike-detail-sciopero-del-trasporto-ferroviario-luned--30-sette.html",
+      "source": "Trenord",
+      "parser": "Trenord-Manual-Regex [CHAOS]",
+      "score": 0,
+      "isExactMatch": false,
+      "differences": [
+        "isStrike: Expected true, got false"
+      ],
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "parserType": "manual",
+      "durationMs": 4
+    },
+    {
+      "file": "strike-detail-mercoled--19-marzo-dalle-ore-9-alle-ore-17-scioper.html",
+      "source": "Trenord",
+      "parser": "Trenord-Manual-Regex [CHAOS]",
+      "score": 0,
+      "isExactMatch": false,
+      "differences": [
+        "isStrike: Expected true, got false"
+      ],
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "parserType": "manual",
+      "durationMs": 4
+    },
+    {
+      "file": "strike-detail-mercoled--6-settembre--sciopero-dei-treni-regional.html",
+      "source": "Trenord",
+      "parser": "Trenord-Manual-Regex [CHAOS]",
+      "score": 0,
+      "isExactMatch": false,
+      "differences": [
+        "isStrike: Expected true, got false"
+      ],
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "parserType": "manual",
+      "durationMs": 5
+    },
+    {
+      "file": "strike-detail-mercoled--5-febbraio-sciopero-dei-treni-regionali.html",
+      "source": "Trenord",
+      "parser": "Trenord-Manual-Regex [CHAOS]",
+      "score": 0,
+      "isExactMatch": false,
+      "differences": [
+        "isStrike: Expected true, got false"
+      ],
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "parserType": "manual",
+      "durationMs": 4
+    },
+    {
+      "file": "strike-detail-gioved--18-luglio-dalle-9-alle-13-sciopero-del-per.html",
+      "source": "Trenord",
+      "parser": "Trenord-Manual-Regex [CHAOS]",
+      "score": 0,
+      "isExactMatch": false,
+      "differences": [
+        "isStrike: Expected true, got false"
+      ],
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "parserType": "manual",
+      "durationMs": 4
+    },
+    {
+      "file": "strike-detail-gioved--14-dicembre-dalle-ore-9-alle-ore-17-sciope.html",
+      "source": "Trenord",
+      "parser": "Trenord-Manual-Regex [CHAOS]",
+      "score": 0,
+      "isExactMatch": false,
+      "differences": [
+        "isStrike: Expected true, got false"
+      ],
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "parserType": "manual",
+      "durationMs": 4
+    },
+    {
+      "file": "strike-detail-venerd--29-novembre-revocato-sciopero-ferrovienord.html",
+      "source": "Trenord",
+      "parser": "deepseek-chat [html-to-markdown] (Lenient) [CHAOS]",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "parserType": "ai",
+      "durationMs": 4093,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "deepseek-chat",
+      "costUsd": {
+        "inputCost": 0.00014244,
+        "outputCost": 0.00000392,
+        "thinkingCost": 0,
+        "cachedCost": 0,
+        "totalCost": 0.00014636
+      },
+      "hash": "5b04e42f8766c7e35376152e59f0d2a0",
+      "sourceFile": "strike-detail-venerd--29-novembre-revocato-sciopero-ferrovienord.html",
+      "tokens": {
+        "input": 5087,
+        "output": 14,
+        "total": 5101
+      }
+    },
+    {
+      "file": "strike-detail-venerd--29-novembre-dalle-9-alle-13-sciopero-gener.html",
+      "source": "Trenord",
+      "parser": "deepseek-chat [html-to-markdown] (Lenient) [CHAOS]",
+      "score": 0.8,
+      "isExactMatch": false,
+      "differences": [
+        "locationType: Expected NATIONAL, got REGIONAL"
+      ],
+      "precision": 0.8,
+      "recall": 0.8,
+      "f1": 0.8,
+      "parserType": "ai",
+      "durationMs": 6862,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "deepseek-chat",
+      "costUsd": {
+        "inputCost": 0.00016178,
+        "outputCost": 0.00002436,
+        "thinkingCost": 0,
+        "cachedCost": 0,
+        "totalCost": 0.00018614
+      },
+      "hash": "9db595df8d0ef783b9d1a191e9abb12c",
+      "sourceFile": "strike-detail-venerd--29-novembre-dalle-9-alle-13-sciopero-gener.html",
+      "tokens": {
+        "input": 5778,
+        "output": 87,
+        "total": 5865
+      }
+    },
+    {
+      "file": "strike-detail-venerd--29-novembre-revocato-sciopero-ferrovienord.html",
+      "source": "Trenord",
+      "parser": "deepseek-chat [dom-distillation] (Lenient) [CHAOS]",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "parserType": "ai",
+      "durationMs": 2327,
+      "preProcessingStrategy": "dom-distillation",
+      "model": "deepseek-chat",
+      "costUsd": {
+        "inputCost": 0.0000366,
+        "outputCost": 0.00000392,
+        "thinkingCost": 0,
+        "cachedCost": 0,
+        "totalCost": 0.00004052
+      },
+      "hash": "6b15047dba497c0d0acb032381314de9",
+      "sourceFile": "strike-detail-venerd--29-novembre-revocato-sciopero-ferrovienord.html",
+      "tokens": {
+        "input": 1307,
+        "output": 14,
+        "total": 1321
+      }
+    },
+    {
+      "file": "strike-detail-sciopero-uiltrasporti-e-orsa-domenica-16-giugno--p.html",
+      "source": "Trenord",
+      "parser": "deepseek-chat [html-to-markdown] (Lenient) [CHAOS]",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "parserType": "ai",
+      "durationMs": 7244,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "deepseek-chat",
+      "costUsd": {
+        "inputCost": 0.00015285,
+        "outputCost": 0.00002436,
+        "thinkingCost": 0,
+        "cachedCost": 0,
+        "totalCost": 0.00017721
+      },
+      "hash": "896d56a654cfeda11ceba5d23bab5bc9",
+      "sourceFile": "strike-detail-sciopero-uiltrasporti-e-orsa-domenica-16-giugno--p.html",
+      "tokens": {
+        "input": 5459,
+        "output": 87,
+        "total": 5546
+      }
+    },
+    {
+      "file": "strike-detail-sciopero-nazionale-17-novembre-ore-9-13-personale-.html",
+      "source": "Trenord",
+      "parser": "deepseek-chat [html-to-markdown] (Lenient) [CHAOS]",
+      "score": 0,
+      "isExactMatch": false,
+      "differences": [
+        "isStrike: Expected true, got false"
+      ],
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "parserType": "ai",
+      "durationMs": 3856,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "deepseek-chat",
+      "costUsd": {
+        "inputCost": 0.00015344,
+        "outputCost": 0.00000392,
+        "thinkingCost": 0,
+        "cachedCost": 0,
+        "totalCost": 0.00015736
+      },
+      "hash": "51e28e03a02ffae1111e6667d58d2ce7",
+      "sourceFile": "strike-detail-sciopero-nazionale-17-novembre-ore-9-13-personale-.html",
+      "tokens": {
+        "input": 5480,
+        "output": 14,
+        "total": 5494
+      }
+    },
+    {
+      "file": "strike-detail-sciopero-uiltrasporti-e-orsa-domenica-16-giugno--p.html",
+      "source": "Trenord",
+      "parser": "deepseek-chat [dom-distillation] (Lenient) [CHAOS]",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "parserType": "ai",
+      "durationMs": 3487,
+      "preProcessingStrategy": "dom-distillation",
+      "model": "deepseek-chat",
+      "costUsd": {
+        "inputCost": 0.00004981,
+        "outputCost": 0.00002436,
+        "thinkingCost": 0,
+        "cachedCost": 0,
+        "totalCost": 0.00007417
+      },
+      "hash": "a745caa39efb21634b4ee9f27d28eeed",
+      "sourceFile": "strike-detail-sciopero-uiltrasporti-e-orsa-domenica-16-giugno--p.html",
+      "tokens": {
+        "input": 1779,
+        "output": 87,
+        "total": 1866
+      }
+    },
+    {
+      "file": "strike-detail-venerd--29-novembre-dalle-9-alle-13-sciopero-gener.html",
+      "source": "Trenord",
+      "parser": "deepseek-chat [dom-distillation] (Lenient) [CHAOS]",
+      "score": 0.8,
+      "isExactMatch": false,
+      "differences": [
+        "locationType: Expected NATIONAL, got REGIONAL"
+      ],
+      "precision": 0.8,
+      "recall": 0.8,
+      "f1": 0.8,
+      "parserType": "ai",
+      "durationMs": 4316,
+      "preProcessingStrategy": "dom-distillation",
+      "model": "deepseek-chat",
+      "costUsd": {
+        "inputCost": 0.00005984,
+        "outputCost": 0.00002436,
+        "thinkingCost": 0,
+        "cachedCost": 0,
+        "totalCost": 0.0000842
+      },
+      "hash": "af5f343bea7db9c85e498adde1c778b0",
+      "sourceFile": "strike-detail-venerd--29-novembre-dalle-9-alle-13-sciopero-gener.html",
+      "tokens": {
+        "input": 2137,
+        "output": 87,
+        "total": 2224
+      }
+    },
+    {
+      "file": "strike-detail-sciopero-nazionale-17-novembre-ore-9-13-personale-.html",
+      "source": "Trenord",
+      "parser": "deepseek-chat [dom-distillation] (Lenient) [CHAOS]",
+      "score": 0.8,
+      "isExactMatch": false,
+      "differences": [
+        "guaranteedTimes: Expected undefined, got 09:00-10:00"
+      ],
+      "precision": 0.8,
+      "recall": 0.8,
+      "f1": 0.8,
+      "parserType": "ai",
+      "durationMs": 3678,
+      "preProcessingStrategy": "dom-distillation",
+      "model": "deepseek-chat",
+      "costUsd": {
+        "inputCost": 0.0000492,
+        "outputCost": 0.00002576,
+        "thinkingCost": 0,
+        "cachedCost": 0,
+        "totalCost": 0.00007496
+      },
+      "hash": "5980ecbd33602e6643ea7f7ddb9bf2a7",
+      "sourceFile": "strike-detail-sciopero-nazionale-17-novembre-ore-9-13-personale-.html",
+      "tokens": {
+        "input": 1757,
+        "output": 92,
+        "total": 1849
+      }
+    },
+    {
+      "file": "strike-detail-sciopero-del-trasporto-ferroviario-luned--30-sette.html",
+      "source": "Trenord",
+      "parser": "deepseek-chat [html-to-markdown] (Lenient) [CHAOS]",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "parserType": "ai",
+      "durationMs": 7671,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "deepseek-chat",
+      "costUsd": {
+        "inputCost": 0.00015403,
+        "outputCost": 0.00002884,
+        "thinkingCost": 0,
+        "cachedCost": 0,
+        "totalCost": 0.00018287
+      },
+      "hash": "ac4ca9df51ccfd8ba811945bdd1da170",
+      "sourceFile": "strike-detail-sciopero-del-trasporto-ferroviario-luned--30-sette.html",
+      "tokens": {
+        "input": 5501,
+        "output": 103,
+        "total": 5604
+      }
+    },
+    {
+      "file": "strike-detail-sciopero-del-trasporto-ferroviario-luned--30-sette.html",
+      "source": "Trenord",
+      "parser": "deepseek-chat [dom-distillation] (Lenient) [CHAOS]",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "parserType": "ai",
+      "durationMs": 3976,
+      "preProcessingStrategy": "dom-distillation",
+      "model": "deepseek-chat",
+      "costUsd": {
+        "inputCost": 0.00005426,
+        "outputCost": 0.00002884,
+        "thinkingCost": 0,
+        "cachedCost": 0,
+        "totalCost": 0.0000831
+      },
+      "hash": "abac952fe3576b31367c1fc59e265495",
+      "sourceFile": "strike-detail-sciopero-del-trasporto-ferroviario-luned--30-sette.html",
+      "tokens": {
+        "input": 1938,
+        "output": 103,
+        "total": 2041
+      }
+    },
+    {
+      "file": "strike-detail-mercoled--19-marzo-dalle-ore-9-alle-ore-17-scioper.html",
+      "source": "Trenord",
+      "parser": "deepseek-chat [html-to-markdown] (Lenient) [CHAOS]",
+      "score": 0.8,
+      "isExactMatch": false,
+      "differences": [
+        "guaranteedTimes: Expected undefined, got 09:00-10:00"
+      ],
+      "precision": 0.8,
+      "recall": 0.8,
+      "f1": 0.8,
+      "parserType": "ai",
+      "durationMs": 7876,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "deepseek-chat",
+      "costUsd": {
+        "inputCost": 0.00015224,
+        "outputCost": 0.00002576,
+        "thinkingCost": 0,
+        "cachedCost": 0,
+        "totalCost": 0.000178
+      },
+      "hash": "eddba1532b8b8be6063e378cc7864850",
+      "sourceFile": "strike-detail-mercoled--19-marzo-dalle-ore-9-alle-ore-17-scioper.html",
+      "tokens": {
+        "input": 5437,
+        "output": 92,
+        "total": 5529
+      }
+    },
+    {
+      "file": "strike-detail-mercoled--6-settembre--sciopero-dei-treni-regional.html",
+      "source": "Trenord",
+      "parser": "deepseek-chat [html-to-markdown] (Lenient) [CHAOS]",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "parserType": "ai",
+      "durationMs": 7546,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "deepseek-chat",
+      "costUsd": {
+        "inputCost": 0.0001542,
+        "outputCost": 0.00002884,
+        "thinkingCost": 0,
+        "cachedCost": 0,
+        "totalCost": 0.00018304
+      },
+      "hash": "54a6aee3a54e7e06503d9ac05444e98f",
+      "sourceFile": "strike-detail-mercoled--6-settembre--sciopero-dei-treni-regional.html",
+      "tokens": {
+        "input": 5507,
+        "output": 103,
+        "total": 5610
+      }
+    },
+    {
+      "file": "strike-detail-gioved--18-luglio-dalle-9-alle-13-sciopero-del-per.html",
+      "source": "Trenord",
+      "parser": "deepseek-chat [html-to-markdown] (Lenient) [CHAOS]",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "parserType": "ai",
+      "durationMs": 6366,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "deepseek-chat",
+      "costUsd": {
+        "inputCost": 0.00016122,
+        "outputCost": 0.00002436,
+        "thinkingCost": 0,
+        "cachedCost": 0,
+        "totalCost": 0.00018558
+      },
+      "hash": "b54873a81cc82d669578d8d900fe617c",
+      "sourceFile": "strike-detail-gioved--18-luglio-dalle-9-alle-13-sciopero-del-per.html",
+      "tokens": {
+        "input": 5758,
+        "output": 87,
+        "total": 5845
+      }
+    },
+    {
+      "file": "strike-detail-mercoled--5-febbraio-sciopero-dei-treni-regionali.html",
+      "source": "Trenord",
+      "parser": "deepseek-chat [html-to-markdown] (Lenient) [CHAOS]",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "parserType": "ai",
+      "durationMs": 8548,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "deepseek-chat",
+      "costUsd": {
+        "inputCost": 0.00015408,
+        "outputCost": 0.00002884,
+        "thinkingCost": 0,
+        "cachedCost": 0,
+        "totalCost": 0.00018292
+      },
+      "hash": "c4bbb92f9d597a37306dd2483c3af474",
+      "sourceFile": "strike-detail-mercoled--5-febbraio-sciopero-dei-treni-regionali.html",
+      "tokens": {
+        "input": 5503,
+        "output": 103,
+        "total": 5606
+      }
+    },
+    {
+      "file": "strike-detail-gioved--14-dicembre-dalle-ore-9-alle-ore-17-sciope.html",
+      "source": "Trenord",
+      "parser": "deepseek-chat [html-to-markdown] (Lenient) [CHAOS]",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "parserType": "ai",
+      "durationMs": 7027,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "deepseek-chat",
+      "costUsd": {
+        "inputCost": 0.00015061,
+        "outputCost": 0.00002436,
+        "thinkingCost": 0,
+        "cachedCost": 0,
+        "totalCost": 0.00017497
+      },
+      "hash": "9bffb3901d2c7d54fd2f6cd901827c87",
+      "sourceFile": "strike-detail-gioved--14-dicembre-dalle-ore-9-alle-ore-17-sciope.html",
+      "tokens": {
+        "input": 5379,
+        "output": 87,
+        "total": 5466
+      }
+    },
+    {
+      "file": "strike-detail-venerd--12-dicembre-da-mezzanotte-alle-21-sciopero.html",
+      "source": "Trenord",
+      "parser": "Trenord-Manual-Regex [CHAOS]",
+      "score": 0,
+      "isExactMatch": false,
+      "differences": [
+        "isStrike: Expected true, got false"
+      ],
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "parserType": "manual",
+      "durationMs": 5
+    },
+    {
+      "file": "strike-detail-luned--16-giugno-sciopero-dei-treni-regionali.html",
+      "source": "Trenord",
+      "parser": "Trenord-Manual-Regex [CHAOS]",
+      "score": 0,
+      "isExactMatch": false,
+      "differences": [
+        "isStrike: Expected true, got false"
+      ],
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "parserType": "manual",
+      "durationMs": 4
+    },
+    {
+      "file": "strike-detail-domenica-16-novembre-dalle-ore-10-alle-ore-18-scio.html",
+      "source": "Trenord",
+      "parser": "Trenord-Manual-Regex [CHAOS]",
+      "score": 0,
+      "isExactMatch": false,
+      "differences": [
+        "isStrike: Expected true, got false"
+      ],
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "parserType": "manual",
+      "durationMs": 4
+    },
+    {
+      "file": "strike-detail-venerd--12-dicembre-da-mezzanotte-alle-21-sciopero.html",
+      "source": "Trenord",
+      "parser": "deepseek-chat [html-to-markdown] (Lenient) [CHAOS]",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "parserType": "ai",
+      "durationMs": 7469,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "deepseek-chat",
+      "costUsd": {
+        "inputCost": 0.00015781,
+        "outputCost": 0.00002828,
+        "thinkingCost": 0,
+        "cachedCost": 0,
+        "totalCost": 0.00018609
+      },
+      "hash": "ee7008af0c18139882b30fcf5364d71f",
+      "sourceFile": "strike-detail-venerd--12-dicembre-da-mezzanotte-alle-21-sciopero.html",
+      "tokens": {
+        "input": 5636,
+        "output": 101,
+        "total": 5737
+      }
+    },
+    {
+      "file": "strike-detail-luned--16-giugno-sciopero-dei-treni-regionali.html",
+      "source": "Trenord",
+      "parser": "deepseek-chat [html-to-markdown] (Lenient) [CHAOS]",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "parserType": "ai",
+      "durationMs": 7556,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "deepseek-chat",
+      "costUsd": {
+        "inputCost": 0.00015406,
+        "outputCost": 0.00002884,
+        "thinkingCost": 0,
+        "cachedCost": 0,
+        "totalCost": 0.0001829
+      },
+      "hash": "88a8f4138c5d61c34a8c95186f41db97",
+      "sourceFile": "strike-detail-luned--16-giugno-sciopero-dei-treni-regionali.html",
+      "tokens": {
+        "input": 5502,
+        "output": 103,
+        "total": 5605
+      }
+    },
+    {
+      "file": "strike-detail-domenica-16-novembre-dalle-ore-10-alle-ore-18-scio.html",
+      "source": "Trenord",
+      "parser": "deepseek-chat [html-to-markdown] (Lenient) [CHAOS]",
+      "score": 0.67,
+      "isExactMatch": false,
+      "differences": [
+        "startDate: Expected 2025-11-16 09:00:00, got 2025-11-16 10:00:00",
+        "guaranteedTimes: Expected undefined, got 09:00-11:00"
+      ],
+      "precision": 0.6667,
+      "recall": 0.6667,
+      "f1": 0.6667,
+      "parserType": "ai",
+      "durationMs": 6339,
+      "preProcessingStrategy": "html-to-markdown",
+      "model": "deepseek-chat",
+      "costUsd": {
+        "inputCost": 0.00015084,
+        "outputCost": 0.00002632,
+        "thinkingCost": 0,
+        "cachedCost": 0,
+        "totalCost": 0.00017716
+      },
+      "hash": "f1a3e88f107bd0f1dfff26e51c7b554d",
+      "sourceFile": "strike-detail-domenica-16-novembre-dalle-ore-10-alle-ore-18-scio.html",
+      "tokens": {
+        "input": 5387,
+        "output": 94,
+        "total": 5481
+      }
+    },
+    {
+      "file": "strike-detail-mercoled--19-marzo-dalle-ore-9-alle-ore-17-scioper.html",
+      "source": "Trenord",
+      "parser": "deepseek-chat [dom-distillation] (Lenient) [CHAOS]",
+      "score": 0.8,
+      "isExactMatch": false,
+      "differences": [
+        "guaranteedTimes: Expected undefined, got 00:00-09:00"
+      ],
+      "precision": 0.8,
+      "recall": 0.8,
+      "f1": 0.8,
+      "parserType": "ai",
+      "durationMs": 4386,
+      "preProcessingStrategy": "dom-distillation",
+      "model": "deepseek-chat",
+      "costUsd": {
+        "inputCost": 0.00004917,
+        "outputCost": 0.00002576,
+        "thinkingCost": 0,
+        "cachedCost": 0,
+        "totalCost": 0.00007493
+      },
+      "hash": "419ed377822ce9942c56ac976ed7c9b7",
+      "sourceFile": "strike-detail-mercoled--19-marzo-dalle-ore-9-alle-ore-17-scioper.html",
+      "tokens": {
+        "input": 1756,
+        "output": 92,
+        "total": 1848
+      }
+    },
+    {
+      "file": "strike-detail-mercoled--6-settembre--sciopero-dei-treni-regional.html",
+      "source": "Trenord",
+      "parser": "deepseek-chat [dom-distillation] (Lenient) [CHAOS]",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "parserType": "ai",
+      "durationMs": 4280,
+      "preProcessingStrategy": "dom-distillation",
+      "model": "deepseek-chat",
+      "costUsd": {
+        "inputCost": 0.00005244,
+        "outputCost": 0.00002884,
+        "thinkingCost": 0,
+        "cachedCost": 0,
+        "totalCost": 0.00008128
+      },
+      "hash": "693724e5ec997ec143d7973700aa57d3",
+      "sourceFile": "strike-detail-mercoled--6-settembre--sciopero-dei-treni-regional.html",
+      "tokens": {
+        "input": 1873,
+        "output": 103,
+        "total": 1976
+      }
+    },
+    {
+      "file": "strike-detail-mercoled--5-febbraio-sciopero-dei-treni-regionali.html",
+      "source": "Trenord",
+      "parser": "deepseek-chat [dom-distillation] (Lenient) [CHAOS]",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "parserType": "ai",
+      "durationMs": 4273,
+      "preProcessingStrategy": "dom-distillation",
+      "model": "deepseek-chat",
+      "costUsd": {
+        "inputCost": 0.00005258,
+        "outputCost": 0.00002884,
+        "thinkingCost": 0,
+        "cachedCost": 0,
+        "totalCost": 0.00008142
+      },
+      "hash": "4f5d9977f6ff0d32b46dc1249ffa5e8c",
+      "sourceFile": "strike-detail-mercoled--5-febbraio-sciopero-dei-treni-regionali.html",
+      "tokens": {
+        "input": 1878,
+        "output": 103,
+        "total": 1981
+      }
+    },
+    {
+      "file": "strike-detail-domenica-16-novembre-dalle-ore-10-alle-ore-18-scio.html",
+      "source": "Trenord",
+      "parser": "deepseek-chat [dom-distillation] (Lenient) [CHAOS]",
+      "score": 0.67,
+      "isExactMatch": false,
+      "differences": [
+        "startDate: Expected 2025-11-16 09:00:00, got 2025-11-16 10:00:00",
+        "guaranteedTimes: Expected undefined, got 09:00-11:00"
+      ],
+      "precision": 0.6667,
+      "recall": 0.6667,
+      "f1": 0.6667,
+      "parserType": "ai",
+      "durationMs": 3790,
+      "preProcessingStrategy": "dom-distillation",
+      "model": "deepseek-chat",
+      "costUsd": {
+        "inputCost": 0.00004802,
+        "outputCost": 0.00002632,
+        "thinkingCost": 0,
+        "cachedCost": 0,
+        "totalCost": 0.00007434
+      },
+      "hash": "21b017e9773ff032b186e01c2bc89b4a",
+      "sourceFile": "strike-detail-domenica-16-novembre-dalle-ore-10-alle-ore-18-scio.html",
+      "tokens": {
+        "input": 1715,
+        "output": 94,
+        "total": 1809
+      }
+    },
+    {
+      "file": "strike-detail-luned--16-giugno-sciopero-dei-treni-regionali.html",
+      "source": "Trenord",
+      "parser": "deepseek-chat [dom-distillation] (Lenient) [CHAOS]",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "parserType": "ai",
+      "durationMs": 4217,
+      "preProcessingStrategy": "dom-distillation",
+      "model": "deepseek-chat",
+      "costUsd": {
+        "inputCost": 0.00005303,
+        "outputCost": 0.00002884,
+        "thinkingCost": 0,
+        "cachedCost": 0,
+        "totalCost": 0.00008187
+      },
+      "hash": "7926510ce7acd3f4345dff04a7e17c12",
+      "sourceFile": "strike-detail-luned--16-giugno-sciopero-dei-treni-regionali.html",
+      "tokens": {
+        "input": 1894,
+        "output": 103,
+        "total": 1997
+      }
+    },
+    {
+      "file": "strike-detail-gioved--14-dicembre-dalle-ore-9-alle-ore-17-sciope.html",
+      "source": "Trenord",
+      "parser": "deepseek-chat [dom-distillation] (Lenient) [CHAOS]",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "parserType": "ai",
+      "durationMs": 4434,
+      "preProcessingStrategy": "dom-distillation",
+      "model": "deepseek-chat",
+      "costUsd": {
+        "inputCost": 0.00004782,
+        "outputCost": 0.00002436,
+        "thinkingCost": 0,
+        "cachedCost": 0,
+        "totalCost": 0.00007218
+      },
+      "hash": "0eb8e60e751a4c87621f023b51d92ff8",
+      "sourceFile": "strike-detail-gioved--14-dicembre-dalle-ore-9-alle-ore-17-sciope.html",
+      "tokens": {
+        "input": 1708,
+        "output": 87,
+        "total": 1795
+      }
+    },
+    {
+      "file": "strike-detail-venerd--12-dicembre-da-mezzanotte-alle-21-sciopero.html",
+      "source": "Trenord",
+      "parser": "deepseek-chat [dom-distillation] (Lenient) [CHAOS]",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "parserType": "ai",
+      "durationMs": 4487,
+      "preProcessingStrategy": "dom-distillation",
+      "model": "deepseek-chat",
+      "costUsd": {
+        "inputCost": 0.00005762,
+        "outputCost": 0.00002828,
+        "thinkingCost": 0,
+        "cachedCost": 0,
+        "totalCost": 0.0000859
+      },
+      "hash": "800ad4ebcf5e700c57ae0208d571ad28",
+      "sourceFile": "strike-detail-venerd--12-dicembre-da-mezzanotte-alle-21-sciopero.html",
+      "tokens": {
+        "input": 2058,
+        "output": 101,
+        "total": 2159
+      }
+    },
+    {
+      "file": "strike-detail-gioved--18-luglio-dalle-9-alle-13-sciopero-del-per.html",
+      "source": "Trenord",
+      "parser": "deepseek-chat [dom-distillation] (Lenient) [CHAOS]",
+      "score": 1,
+      "isExactMatch": true,
+      "differences": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "parserType": "ai",
+      "durationMs": 4881,
+      "preProcessingStrategy": "dom-distillation",
+      "model": "deepseek-chat",
+      "costUsd": {
+        "inputCost": 0.00005888,
+        "outputCost": 0.00002436,
+        "thinkingCost": 0,
+        "cachedCost": 0,
+        "totalCost": 0.00008324
+      },
+      "hash": "5a40dcc9c5769186796f696077d18b05",
+      "sourceFile": "strike-detail-gioved--18-luglio-dalle-9-alle-13-sciopero-del-per.html",
+      "tokens": {
+        "input": 2103,
+        "output": 87,
+        "total": 2190
+      }
+    }
+  ]
+}

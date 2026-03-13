@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-09-06 03:00:00",
+      "endDate": "2023-09-07 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 26341,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008295,
+      "outputCost": 0.0008584,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00094135
+    },
+    "hash": "1e6229af2db4ccf4ff619e4954cdba9b",
+    "sourceFile": "strike-detail-mercoled--6-settembre--sciopero-dei-treni-regional.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to output JSON following the strike_extraction schema, which includes a boolean for isStrike and possibly some strikeData. The content is in Italian, mentioning a regional train strike occurring \"Mercoledì 6 settembre.\" It indicates that there's indeed an upcoming strike from 03:00 on September 6 to 02:00 on September 7, confirming it's an announcement about future disruptions. The details specify guaranteed times for possible disruptions during the strike.",
+    "tokens": {
+      "input": 1659,
+      "output": 2146,
+      "total": 3805
+    }
+  }
+}

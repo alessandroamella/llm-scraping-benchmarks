@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-11-29 09:00:00",
+      "endDate": "2024-11-29 13:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "00:00-09:00",
+        "13:00-23:59"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21906,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000943,
+      "outputCost": 0.0009644,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0010587
+    },
+    "hash": "f9745f130361d5d30848dc7069d93634",
+    "sourceFile": "strike-detail-venerd--29-novembre-dalle-9-alle-13-sciopero-gener.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to check if this is a strike announcement based on the content. It mentions an upcoming general strike in Italy scheduled for Friday, November 29, from 9 AM to 1 PM, impacting the Ferrovienord network. Trenord personnel aren’t involved, but there could be delays. Given the user’s instruction, it looks like I should confirm that this document is indeed announcing an upcoming strike. So, I should set isStrike to true.",
+    "tokens": {
+      "input": 1886,
+      "output": 2411,
+      "total": 4297
+    }
+  }
+}

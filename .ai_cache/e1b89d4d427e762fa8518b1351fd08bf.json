@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-02-05 03:00:00",
+      "endDate": "2025-02-06 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 16818,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00008245,
+      "outputCost": 0.0006008,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00068325
+    },
+    "hash": "e1b89d4d427e762fa8518b1351fd08bf",
+    "sourceFile": "strike-detail-mercoled--5-febbraio-sciopero-dei-treni-regionali.html",
+    "thoughts": "**Determining strike status**\n\nI need to decide if we should output that the strike is true with related data or false only. The content is about a train strike on Wednesday, February 5th, detailed in a news article. It mentions a strike announced by the union ORSA, affecting train circulation from 3 AM on February 5 until 2 AM on February 6. Since it confirms there’s a strike, I’ll mark isStrike as true with the strike data.",
+    "tokens": {
+      "input": 1649,
+      "output": 1502,
+      "total": 3151
+    }
+  }
+}

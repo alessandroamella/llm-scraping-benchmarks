@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-09-06 03:00:00",
+      "endDate": "2023-09-07 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20038,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0002693,
+      "outputCost": 0.0005216,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0007909
+    },
+    "hash": "f1dbdaa5e816aebdc920babe69828b40",
+    "sourceFile": "strike-detail-mercoled--6-settembre--sciopero-dei-treni-regional.html",
+    "thoughts": "**Extracting strike information**\n\nI need to output the data in JSON format for a strike extraction analysis. It looks like the content is announcing an upcoming strike for regional trains on September 6 from 3:00 PM to September 7 at 2:00 AM. It confirms that this is indeed an announcement for an upcoming strike, so I set `isStrike` to true. I also need to extract details like the dates in the correct format, marking it as a regional strike in Lombardia with the code \"03.\"",
+    "tokens": {
+      "input": 5386,
+      "output": 1304,
+      "total": 6690
+    }
+  }
+}

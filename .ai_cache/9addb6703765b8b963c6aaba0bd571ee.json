@@ -1,0 +1,35 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-12-12 00:00:00",
+      "endDate": "2025-12-12 21:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 30900,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000905,
+      "outputCost": 0.00084,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0009305
+    },
+    "hash": "9addb6703765b8b963c6aaba0bd571ee",
+    "sourceFile": "strike-detail-venerd--12-dicembre-da-mezzanotte-alle-21-sciopero.html",
+    "thoughts": "**Clarifying strike details**\n\nThe date is set for December 12, 2025, with a national strike occurring from midnight to 21:00. For this, I need to classify the location type correctly as either \"REGIONAL\" or \"NATIONAL.\" Since it’s a national strike, I should set the location type to \"NATIONAL\" and omit location codes—there’s no need for them in this case. It's important to follow the instructions clearly to ensure everything aligns with the stated guidelines.",
+    "tokens": {
+      "input": 1810,
+      "output": 2100,
+      "total": 3910
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-11-29 09:00:00",
+      "endDate": "2024-11-29 13:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 16938,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005521,
+      "outputCost": 0.000496,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0010481
+    },
+    "hash": "577294e5f6ab0e9346bc1ce75bc4cce0",
+    "sourceFile": "strike-detail-venerd--29-novembre-dalle-9-alle-13-sciopero-gener.html",
+    "thoughts": "**Parsing strike announcement**\n\nI need to determine if the content is about a new upcoming strike. It mentions a general strike on Friday, November 29, from 9 to 13, impacting the Ferrovienord network but not Trenord. This is clearly announcing a future strike, providing details like start and end times. It looks like it's relevant to a regional area in Lombardy and involves specific lines like S3 and S4. The ISTAT region code for Lombardia is 03, which could be important.",
+    "tokens": {
+      "input": 11042,
+      "output": 1240,
+      "total": 12282
+    }
+  }
+}

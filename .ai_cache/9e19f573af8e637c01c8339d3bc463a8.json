@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-09-30 03:00:00",
+      "endDate": "2024-10-01 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 20983,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0002691,
+      "outputCost": 0.0006244,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0008935
+    },
+    "hash": "9e19f573af8e637c01c8339d3bc463a8",
+    "sourceFile": "strike-detail-sciopero-del-trasporto-ferroviario-luned--30-sette.html",
+    "thoughts": "**Extracting strike data**\n\nI need to gather some specific strike data based on the instructions. The Italian content announces a railway strike from Monday, September 30, 2024, to October 1. It mentions the strike will start at 3 AM on September 30 and end at 2 AM on October 1. The extracted data will include start and end dates in the specified format, along with a likely regional designation since it covers various train services, including airport connections.",
+    "tokens": {
+      "input": 5382,
+      "output": 1561,
+      "total": 6943
+    }
+  }
+}

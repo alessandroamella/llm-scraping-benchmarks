@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-16 03:00:00",
+      "endDate": "2025-06-17 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18705,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005401,
+      "outputCost": 0.0005324,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0010725
+    },
+    "hash": "da077254130c51624f879ca3dab221b5",
+    "sourceFile": "strike-detail-luned--16-giugno-sciopero-dei-treni-regionali.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to output JSON based on the schema. I'm analyzing the content to see if it's announcing a strike. The piece from Trenord titled \"Lunedì 16 giugno sciopero dei treni regionali\" clearly states that there will be a train strike on June 16, 2025, from 3:00 AM on Monday until 2:00 AM on Tuesday. The organization ORSA is leading this strike, and it's confirmed as an announcement of an upcoming strike.",
+    "tokens": {
+      "input": 10802,
+      "output": 1331,
+      "total": 12133
+    }
+  }
+}

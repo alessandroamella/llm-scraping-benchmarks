@@ -1,0 +1,31 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-03-19 09:00:00",
+      "endDate": "2025-03-19 17:00:00",
+      "locationType": "NATIONAL"
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 25404,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00026545,
+      "outputCost": 0.0006656,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00093105
+    },
+    "hash": "fc5ae8d560bcf88e06e812e8c1e21229",
+    "sourceFile": "strike-detail-mercoled--19-marzo-dalle-ore-9-alle-ore-17-scioper.html",
+    "thoughts": "**Clarifying specification details**\n\nI'm noticing the description states to \"strike details object\" when `isStrike` is true and return null when it's false. Location codes should be null if `locationType` is NATIONAL or unspecified, so I need to set it as NATIONAL with null for locationCodes. For dates, I must follow the 'yyyy-MM-dd HH:mm:ss' format.  \n\nAbout \"guaranteedTimes,\" it mentions possible variations and cancellations but not guaranteed times. Thus, I should omit the field if it's not specified. So for a strike, I'll include only the relevant fields present.",
+    "tokens": {
+      "input": 5309,
+      "output": 1664,
+      "total": 6973
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "isStrike": false
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 6756,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00051455,
+      "outputCost": 0.000234,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00074855
+    },
+    "hash": "8bafa6e0b78c262f8dd24a8812bfce2f",
+    "sourceFile": "strike-detail-venerd--29-novembre-revocato-sciopero-ferrovienord.html",
+    "thoughts": "**Analyzing strike content**\n\nI need to parse the HTML content regarding a potential strike from Trenord Lombardia. Specifically, I'm determining if the document is announcing a new or upcoming strike, or if it’s about cancellation or updates. The document’s title indicates a revocation of a previously announced strike on November 29. Since the strike is canceled, I will set `isStrike` to false and ensure I extract relevant details, adhering to the required JSON schema for output.",
+    "tokens": {
+      "input": 10291,
+      "output": 585,
+      "total": 10876
+    }
+  }
+}

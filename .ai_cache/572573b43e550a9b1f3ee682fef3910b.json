@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-06-16 03:00:00",
+      "endDate": "2024-06-17 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18896,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0002663,
+      "outputCost": 0.0004984,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0007647
+    },
+    "hash": "572573b43e550a9b1f3ee682fef3910b",
+    "sourceFile": "strike-detail-sciopero-uiltrasporti-e-orsa-domenica-16-giugno--p.html",
+    "thoughts": "**Considering guaranteed times**\n\nThe article mentions that due to the holiday, there can't be any guaranteed service times. So, it seems we should omit `guaranteedTimes` entirely if they're not specified. The schema allows for either an array of strings or null. Since there’s no guaranteed service, I think we should set `guaranteedTimes` to null. It’s a bit ambiguous, but the instruction is clear: use null if it’s not specified. In this case, it definitely isn't specified.",
+    "tokens": {
+      "input": 5326,
+      "output": 1246,
+      "total": 6572
+    }
+  }
+}

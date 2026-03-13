@@ -1,15 +1,30 @@
 {
-  "timestamp": "2026-03-09T19:15:39.512Z",
-  "isCacheHit": true,
+  "timestamp": "2026-03-13T00:12:55.668Z",
+  "isCacheHit": false,
   "request": {
     "sourceName": "Trenord",
     "fileName": "strike-detail-luned--16-giugno-sciopero-dei-treni-regionali.html",
     "model": "gpt-5-nano",
     "strategy": "dom-distillation",
     "useLenientSchema": true,
-    "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"Trenord\" (the public transport company of Lombardia (03)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"> <h3>Context Metadata</h3> <ul><li>Page Title: Lunedì 16 giugno sciopero dei treni regionaliUser-logged-no-picCloseSend-mail-OKAlert</li><li>Date News: venerdì 13/06/2025</li><li>Header: Lunedì 16 giugno sciopero dei treni regionali</li></ul> </div><hr/><div> <div> <h1> <b> Lunedì 16 giugno sciopero dei treni regionali </b> </h1> <p> venerdì 13/06/2025 </p> </div> <div> <!-- start simpleTextMedia --> <div> <div> <div> <div> <h4><strong>Per l’agitazione indetta da ORSA previste ripercussioni sul servizio regionale, suburbano, aeroportuale</strong></h4> <h4><strong>Negli orari 6-9 e 18-21 viaggeranno i treni indicati nella lista dei servizi garantiti; informazioni disponibili su trenord.it e App</strong></h4> <p>Dalle ore 3 di lunedì 16 alle ore 2 di martedì 17 giugno l’organizzazione sindacale ORSA ha indetto uno sciopero che, per l’intera giornata di lunedì, avrà ripercussioni sulla circolazione dei treni regionali, suburbani e dei collegamenti aeroportuali Malpensa Express e S50 Malpensa Aeroporto-Bellinzona. Le corse potranno subire variazioni e cancellazioni.</p> <p>Negli orari 6-9 e 18-21 circoleranno i treni indicati nella lista delle corse garantite, disponibile su trenord.it. Si invitano i passeggeri a consultare l’elenco, con particolare attenzione alle corse serali per il rientro.</p> <p>In particolare, la mattina viaggeranno i convogli con orario di partenza dalla stazione di origine dopo le 6 e arrivo alla destinazione finale entro le 9. Nella fascia serale, circoleranno quelli con partenza prevista dopo le 18 e con arrivo entro le 21; le corse con orario di arrivo a destinazione dopo le ore 21 non saranno garantite.</p> <p>Saranno previsti autobus sostitutivi, senza fermate intermedie, per le corse del servizio aeroportuale non effettuate tra Milano Cadorna (da via Paleocapa, 1) e Malpensa Aeroporto e tra Stabio e Malpensa Aeroporto.</p> <p>Le informazioni sulla circolazione saranno disponibili sulle pagine di ogni linea della App e del sito Trenord.</p> <p>Si invitano i passeggeri a prestare attenzione ad annunci sonori e monitor di stazione.</p> <p><a href=\"/fileadmin/contenuti/TRENORD/3-News/Trenord_Informa/Comunicati_stampa/2025/Trenord_250613_CS_Sciopero_16_giugno.pdf\">Comunicato stampa sciopero 16 giugno 2025</a></p> </div> </div> </div> </div> <!-- end simpleTextMedia --> </div> </div> <div>PDF Document Found: /fileadmin/contenuti/TRENORD/3-News/Trenord_Informa/Comunicati_stampa/2025/Trenord_250613_CS_Sciopero_16_giugno.pdf</div>"
+    "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"Trenord\" (the public transport company of Lombardia (03)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: dom-distillation):\n<div class=\"extracted-context\"> <h3>Context Metadata</h3> <ul><li>Page Title: Lunedì 16 giugno sciopero dei treni regionaliUser-logged-no-picCloseSend-mail-OKAlert</li></ul> </div><hr/><div> <div> <h1> <div><span> Lunedì 16 giugno sciopero dei treni regionali </span></div> </h1> <span> </span> <span> venerdì 13/06/2025 </span> <div> </div> </div> <div> <!-- start simpleTextMedia --> <div> <div> <div> <div> <span><span>Per l’agitazione indetta da ORSA previste ripercussioni sul servizio regionale, suburbano, aeroportuale</span></span> <span><span>Negli orari 6-9 e 18-21 viaggeranno i treni indicati nella lista dei servizi garantiti; informazioni disponibili su trenord.it e App</span></span> <span>&nbsp;</span> <span>Dalle ore 3 di lunedì 16 alle ore 2 di martedì 17 giugno l’organizzazione sindacale ORSA ha indetto uno sciopero che, per l’intera giornata di lunedì, avrà ripercussioni sulla circolazione dei treni regionali, suburbani e dei collegamenti aeroportuali Malpensa Express e S50 Malpensa Aeroporto-Bellinzona. Le corse potranno subire variazioni e cancellazioni.</span> <span>&nbsp;</span> <div><span>Negli orari 6-9 e 18-21 circoleranno i treni indicati nella lista delle corse garantite, disponibile su trenord.it. Si invitano i passeggeri a consultare l’elenco, con particolare attenzione alle corse serali per il rientro.</span></div> <div>&nbsp;</div> <div><span>In particolare, la mattina viaggeranno i convogli con orario di partenza dalla stazione di origine dopo le 6 e arrivo alla destinazione finale entro le 9. Nella fascia serale, circoleranno quelli con partenza prevista dopo le 18 e con arrivo entro le 21; le corse con orario di arrivo a destinazione dopo le ore 21 non saranno garantite.</span></div> <span>&nbsp;</span> <div><span>Saranno previsti autobus sostitutivi, senza fermate intermedie, per le corse del servizio aeroportuale non effettuate tra Milano Cadorna (da via Paleocapa, 1) e Malpensa Aeroporto e tra Stabio e Malpensa Aeroporto.</span></div> <span>&nbsp;</span> <div><span>Le informazioni sulla circolazione saranno disponibili sulle pagine di ogni linea della App e del sito Trenord.</span></div> <div>&nbsp;</div> <div><span>Si invitano i passeggeri a prestare attenzione ad annunci sonori e monitor di stazione.</span></div> <span>&nbsp;</span> <div>&nbsp;</div> <span><a href=\"/fileadmin/contenuti/TRENORD/3-News/Trenord_Informa/Comunicati_stampa/2025/Trenord_250613_CS_Sciopero_16_giugno.pdf\">Comunicato stampa sciopero 16 giugno 2025</a></span> <div>&nbsp;</div> <span>&nbsp;</span> </div> </div> </div> </div> <!-- end simpleTextMedia --> </div> </div> <div>PDF Document Found: /fileadmin/contenuti/TRENORD/3-News/Trenord_Informa/Comunicati_stampa/2025/Trenord_250613_CS_Sciopero_16_giugno.pdf</div>"
   },
   "response": {
+    "rawOutput": {
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2025-06-16 03:00:00",
+        "endDate": "2025-06-17 02:00:00",
+        "locationType": "REGIONAL",
+        "locationCodes": [
+          "03"
+        ],
+        "guaranteedTimes": [
+          "06:00-09:00",
+          "18:00-21:00"
+        ]
+      }
+    },
     "parsedData": {
       "isStrike": true,
       "strikeData": {
@@ -26,18 +41,18 @@
       }
     },
     "usage": {
-      "input": 1603,
-      "output": 1657,
-      "total": 3260
+      "input": 1668,
+      "output": 1397,
+      "total": 3065
     },
     "costUsd": {
-      "inputCost": 0.00008015,
-      "outputCost": 0.0006628,
+      "inputCost": 0.0000834,
+      "outputCost": 0.0005588,
       "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.00074295
+      "totalCost": 0.0006422
     },
-    "durationMs": 24093,
-    "thoughts": "**Determining strike details**\n\nI see that there’s a regional strike in Lombardia, so isStrike should be true since it’s an announcement for an upcoming strike. I need to fill in the strike data with details like start date, end date, location type, location codes, and guaranteed times. The content is in Italian, and based on the context, I’ll set the start date as \"2025-06-16 03:00:00\" and the end date as \"2025-06-17 02:00:00.\""
+    "durationMs": 21528,
+    "thoughts": "**Deciding on a Strike Announcement**\n\nI'm looking into whether this document is announcing a new strike. The content is in Italian and mentions a strike on \"Monday, 16 June\" for regional trains. The details indicate it runs from 3:00 AM on Monday until 2:00 AM on Tuesday, impacting the entire day. It lists specific guaranteed services as well. So, this does confirm it's an upcoming strike announcement for the dates mentioned. I'll need to extract details like start and end times, location, and guaranteed times accordingly."
   }
 }

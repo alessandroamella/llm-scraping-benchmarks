@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-07-18 09:00:00",
+      "endDate": "2024-07-18 13:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 18691,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00009215,
+      "outputCost": 0.0006336,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00072575
+    },
+    "hash": "a97ee278ee5c93023bebf3c8c9c26a29",
+    "sourceFile": "strike-detail-gioved--18-luglio-dalle-9-alle-13-sciopero-del-per.html",
+    "thoughts": "**Clarifying guaranteed times**\n\nI'm thinking about whether to include \"guaranteedTimes.\" The schema indicates that it's optional and should be omitted if not specified, so it seems safer to exclude it. The instruction says it can be null, but since the examples included \"guaranteedTimes,\" I wonder if that means we need to include it if it's present. For the other fields, I’ll make sure to supply the correct location codes and format the start and end dates properly.",
+    "tokens": {
+      "input": 1843,
+      "output": 1584,
+      "total": 3427
+    }
+  }
+}

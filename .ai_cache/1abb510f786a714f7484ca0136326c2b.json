@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-09-30 03:00:00",
+      "endDate": "2024-10-01 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 12285,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0005398,
+      "outputCost": 0.0005652,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.001105
+    },
+    "hash": "1abb510f786a714f7484ca0136326c2b",
+    "sourceFile": "strike-detail-sciopero-del-trasporto-ferroviario-luned--30-sette.html",
+    "thoughts": "**Formatting JSON for time ranges**\n\nI’m working on formatting a JSON response related to specific times for a strike. The instructions are clear: we need to include designated time ranges like 06:00-09:00 and 18:00-21:00. Also, for the specified dates, the times outside of these may have cancellations.\n\nI need to ensure the JSON uses double quotes correctly and adheres to the required date format. The final output will just be the JSON structure, with no extra text!",
+    "tokens": {
+      "input": 10796,
+      "output": 1413,
+      "total": 12209
+    }
+  }
+}

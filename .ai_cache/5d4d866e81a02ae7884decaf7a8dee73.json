@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-09-30 03:00:00",
+      "endDate": "2024-10-01 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 19096,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000854,
+      "outputCost": 0.0004888,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0005742
+    },
+    "hash": "5d4d866e81a02ae7884decaf7a8dee73",
+    "sourceFile": "strike-detail-sciopero-del-trasporto-ferroviario-luned--30-sette.html",
+    "thoughts": "**Determining upcoming strike details**\n\nI need to generate a JSON output based on the information provided. The content clearly indicates an upcoming strike: \"Sciopero del trasporto ferroviario lunedì 30 settembre\" with specified dates from 3 AM on September 30 to 2 AM on October 1. It's organized by the ORSA and Uiltrasporti unions. It mentions guaranteed trains in specific time windows. So, yes, it’s definitely an announcement about the strike. I’ll format the dates to 'yyyy-MM-dd HH:mm:ss'.",
+    "tokens": {
+      "input": 1708,
+      "output": 1222,
+      "total": 2930
+    }
+  }
+}

@@ -598,11 +598,6 @@ Input Content (Pre-processing: ${preProcessingStrategy}):
 
         return converted;
       }
-      case 'flat-json':
-        this.logger.warn(
-          `Strategy ${strategy} is not implemented, falling back to basic-cleanup`,
-        );
-        return $.html().replace(/\s+/g, ' ').trim();
       default:
         return content;
     }

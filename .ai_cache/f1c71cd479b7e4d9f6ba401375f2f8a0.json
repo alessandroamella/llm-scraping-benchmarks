@@ -1,0 +1,37 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-11-16 10:00:00",
+      "endDate": "2025-11-16 18:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "10:00-18:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 34585,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.000531,
+      "outputCost": 0.0011272,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0016582
+    },
+    "hash": "f1c71cd479b7e4d9f6ba401375f2f8a0",
+    "sourceFile": "strike-detail-domenica-16-novembre-dalle-ore-10-alle-ore-18-scio.html",
+    "thoughts": "**Determining strike announcement**\n\nI need to check if this document is announcing a new strike. The content mentions a strike for regional trains in Lombardy on Sunday, November 16, from 10 AM to 6 PM. Since it explicitly states \"sciopero dei treni regionali in Lombardia,\" it looks like a valid strike announcement. The text indicates the strike is organized by ORSA and could affect services. So, I’ll set the isStrike parameter to true and extract the start and end times for the strike data.",
+    "tokens": {
+      "input": 10620,
+      "output": 2818,
+      "total": 13438
+    }
+  }
+}

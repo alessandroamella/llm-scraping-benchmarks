@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2024-06-16 03:00:00",
+      "endDate": "2024-06-17 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 15343,
+    "preProcessingStrategy": "basic-cleanup",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00053655,
+      "outputCost": 0.0005276,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00106415
+    },
+    "hash": "2a8579258ffacded3e55a5c738c5eee7",
+    "sourceFile": "strike-detail-sciopero-uiltrasporti-e-orsa-domenica-16-giugno--p.html",
+    "thoughts": "**Analyzing strike announcement**\n\nI need to determine whether this document is about an upcoming strike. The content is in Italian and seems to be from a Trenord news page about a strike scheduled for June 16th, 2024. It states that the strike will occur from 3 AM on that Sunday until 2 AM on Monday, affecting services in Lombardy. Since it's indeed an announcement, I should note that `isStrike` should be true and then extract the start and end dates in the specified format.",
+    "tokens": {
+      "input": 10731,
+      "output": 1319,
+      "total": 12050
+    }
+  }
+}

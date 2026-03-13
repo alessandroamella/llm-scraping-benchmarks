@@ -488,7 +488,7 @@ if args.view:
     plt.show()
 
 # --- GRAFICO 6: RESILIENZA AL DOM CHAOS ---
-resilience_data = []
+resilience_data_raw = {}
 
 # Cerchiamo le coppie standard vs chaos
 for name, metrics in summary.items():
@@ -498,42 +498,97 @@ for name, metrics in summary.items():
 
         # Se esiste la controparte standard nel report
         if base_name in summary:
-            # Normalize the model name and extract strategy
-            model_part = normalize_model_name(base_name.split(" [")[0])
-            strategy_part = normalize_strategy_name(
-                base_name.split("[")[-1].replace("]", "")
-            )
-            normalized_parser_name = f"{model_part} [{strategy_part}]"
-
             std_score = summary[base_name]["avgF1"]
             chaos_score = metrics["avgF1"]
 
-            # Calcolo perdita di performance
-            drop = std_score - chaos_score
-            drop_pct = (drop / std_score * 100) if std_score > 0 else 0
+            if "Manual" in name:
+                group_name = "Parser manuale\n(regex)"
+            else:
+                # Estraiamo la strategia dal nome base, es: "gpt-5-nano [html-to-markdown] (Lenient)"
+                try:
+                    # Prende ciò che c'è tra le parentesi quadre
+                    strategy_raw = base_name.split("[")[1].split("]")[0]
+                    strategy = normalize_strategy_name(strategy_raw).strip()
+                except IndexError:
+                    strategy = "Altro"
 
-            # Aggiungiamo riga Standard
-            resilience_data.append(
-                {
-                    "Parser": normalized_parser_name,
-                    "Condizione": "DOM normale",
-                    "F1-Score": std_score,
-                    "Delta %": 0,
-                }
-            )
+                # # Mappiamo le strategie a nomi leggibili per il grafico
+                # No non è vero, lascialo uguale
+                if "html-to-markdown" in strategy:
+                    # group_name = "AI\n(HTML to MD)"
+                    group_name = "AI\n(html-to-markdown)"
+                elif "dom-distillation-markdown" in strategy:
+                    # group_name = "AI\n(DOM Distill. MD)"
+                    group_name = "AI\n(dom-distillation-markdown)"
+                elif "dom-distillation" in strategy:
+                    # group_name = "AI\n(DOM Distillation)"
+                    group_name = "AI\n(dom-distillation)"
+                elif "basic-cleanup" in strategy:
+                    # group_name = "AI\n(Basic Cleanup)"
+                    group_name = "AI\n(basic-cleanup)"
+                elif "mineru" in strategy.lower():
+                    # group_name = "SLM\n(MinerU)"
+                    group_name = "SLM\n(mineru-html)"
+                elif "jina" in strategy.lower():
+                    # group_name = "VLM\n(Jina Reader)"
+                    group_name = "VLM\n(jina-reader)"
+                else:
+                    group_name = f"AI\n({strategy})"
 
-            # Aggiungiamo riga Chaos
-            resilience_data.append(
-                {
-                    "Parser": normalized_parser_name,
-                    "Condizione": "DOM modificato",
-                    "F1-Score": chaos_score,
-                    "Delta %": -drop_pct,
-                }
-            )
+            if group_name not in resilience_data_raw:
+                resilience_data_raw[group_name] = {"std": [], "chaos": []}
 
-if resilience_data:
+            resilience_data_raw[group_name]["std"].append(std_score)
+            resilience_data_raw[group_name]["chaos"].append(chaos_score)
+
+resilience_data = []
+
+if resilience_data_raw:
+    # Calcoliamo le medie per ogni gruppo
+    for group, scores in resilience_data_raw.items():
+        avg_std = sum(scores["std"]) / len(scores["std"])
+        avg_chaos = sum(scores["chaos"]) / len(scores["chaos"])
+
+        # Aggiungiamo riga Standard
+        resilience_data.append(
+            {
+                "Metodo/Strategia": group,
+                "Condizione": "DOM normale",
+                "F1-Score": avg_std,
+            }
+        )
+
+        # Aggiungiamo riga Chaos
+        resilience_data.append(
+            {
+                "Metodo/Strategia": group,
+                "Condizione": "DOM modificato",
+                "F1-Score": avg_chaos,
+            }
+        )
+
     df_resilience = pd.DataFrame(resilience_data)
+
+    # Funzione di ordinamento personalizzata per dare un senso logico all'asse X
+    def sort_logic(x):
+        if "Manuale" in x:
+            return 0
+        if "HTML to MD" in x:
+            return 1
+        if "Basic" in x:
+            return 2
+        if "DOM" in x:
+            return 3
+        if "SLM" in x or "VLM" in x:
+            return 4
+        return 5
+
+    models_order = sorted(df_resilience["Metodo/Strategia"].unique(), key=sort_logic)
+
+    df_resilience["Metodo/Strategia"] = pd.Categorical(
+        df_resilience["Metodo/Strategia"], categories=models_order, ordered=True
+    )
+    df_resilience = df_resilience.sort_values("Metodo/Strategia")
 
     plt.figure(figsize=(12, 7))
 
@@ -542,29 +597,27 @@ if resilience_data:
 
     ax = sns.barplot(
         data=df_resilience,
-        x="Parser",
+        x="Metodo/Strategia",
         y="F1-Score",
         hue="Condizione",
         palette=custom_palette,
     )
 
-    plt.title(
-        "Resilienza ai cambiamenti del DOM",
-        fontsize=16,
-        fontweight="bold",
-    )
-    plt.ylabel("F1-Score", fontsize=12)
-    plt.xlabel("Parser / modello [strategia]", fontsize=12)
+    # plt.title(
+    #     "Resilienza ai cambiamenti del DOM per strategia (media aggregata dei modelli AI)",
+    #     fontsize=16,
+    #     fontweight="bold",
+    # )
+    plt.ylabel("F1-Score medio", fontsize=12)
+    plt.xlabel("Metodo / Strategia di pre-processing", fontsize=12)
     plt.ylim(0, 1.15)  # Spazio extra per annotazioni
     plt.legend(loc="upper right")
-    plt.xticks(rotation=15)  # Rotazione leggera per leggere meglio i nomi lunghi
+    plt.xticks(rotation=0)
 
     # Annotazioni sulle barre
-    # Iteriamo sulle patches (barre) per aggiungere i valori
-    # Nota: Seaborn non garantisce l'ordine, quindi usiamo l'altezza della barra
     for p in ax.patches:
         height = p.get_height()
-        if height > 0:  # Evita annotazioni su barre a 0
+        if pd.notna(height) and height > 0:
             ax.annotate(
                 f"{height:.2f}",
                 (p.get_x() + p.get_width() / 2.0, height),
@@ -572,14 +625,14 @@ if resilience_data:
                 va="bottom",
                 xytext=(0, 5),
                 textcoords="offset points",
-                fontsize=10,
+                fontsize=11,
                 fontweight="bold",
             )
 
     plt.tight_layout()
     if args.save:
-        plt.savefig(charts_dir / "06_resilienza_dom.png", dpi=300)
-        print("Generato: charts/06_resilienza_dom.png")
+        plt.savefig(charts_dir / "06_resilienza_dom_strategie.png", dpi=300)
+        print("Generato: charts/06_resilienza_dom_strategie.png")
     if args.view:
         plt.show()
 else:

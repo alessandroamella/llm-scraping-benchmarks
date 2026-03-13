@@ -86,7 +86,7 @@ export class BenchmarksService implements OnModuleInit, OnModuleDestroy {
   private readonly includeManualInSuite = false;
   private readonly generateChaosDatasetFlag = false;
 
-  private readonly customReportName = 'all_all_maybe_fix_jina';
+  private readonly customReportName = 'chaos_resilience_test_with_distillation';
   // private readonly disabledChecks: string[] = ['locationType', 'locationCodes'];
   private readonly disabledChecks: string[] = [];
 
@@ -399,8 +399,8 @@ export class BenchmarksService implements OnModuleInit, OnModuleDestroy {
         ),
       );
 
-      // Parser per ATAC
-      const atacResilienceParsers: IStrikeParser[] = [
+      // Parser per ATAC - per ora disabilitato
+      const _atacResilienceParsers: IStrikeParser[] = [
         this.atacManual,
         new ConfigurableAiParser(
           this.aiRunner,
@@ -412,22 +412,22 @@ export class BenchmarksService implements OnModuleInit, OnModuleDestroy {
       ];
 
       // Esegui la suite per ATAC
-      const resultsAtacChaos = await this.runSuite(
-        'ATAC',
-        atacResilienceParsers,
-        {
-          customSuiteName: 'ATAC Resilience (Chaos DOM)',
-          directoryOverride: this.atacMessedDir,
-        },
-      );
+      // const resultsAtacChaos = await this.runSuite(
+      //   'ATAC',
+      //   atacResilienceParsers,
+      //   {
+      //     customSuiteName: 'ATAC Resilience (Chaos DOM)',
+      //     directoryOverride: this.atacMessedDir,
+      //   },
+      // );
 
-      this.mergeStats(summaryStats, resultsAtacChaos.stats, ' [CHAOS]');
-      allDetails.push(
-        ...resultsAtacChaos.details.map((d) => ({
-          ...d,
-          parser: `${d.parser} [CHAOS]`,
-        })),
-      );
+      // this.mergeStats(summaryStats, resultsAtacChaos.stats, ' [CHAOS]');
+      // allDetails.push(
+      //   ...resultsAtacChaos.details.map((d) => ({
+      //     ...d,
+      //     parser: `${d.parser} [CHAOS]`,
+      //   })),
+      // );
 
       // Suite 5: Resilienza (DOM Changes) (ora solo per Trenord)
       this.logger.log(
@@ -442,14 +442,40 @@ export class BenchmarksService implements OnModuleInit, OnModuleDestroy {
       const trenordResilienceParsers: IStrikeParser[] = [
         this.trenordManual,
         // facciamo solo deepseek perché va bene e costa poco
-        new ConfigurableAiParser(
-          this.aiRunner,
-          'html-to-markdown',
-          'Trenord',
-          'deepseek-chat',
-          this.useLenientSchema,
-        ),
+        // new ConfigurableAiParser(
+        //   this.aiRunner,
+        //   'html-to-markdown',
+        //   'Trenord',
+        //   'deepseek-chat',
+        //   this.useLenientSchema,
+        // ),
+        // // mostriamo anche dom-distillation, pure lui dovrebbe crollare
+        // new ConfigurableAiParser(
+        //   this.aiRunner,
+        //   'dom-distillation',
+        //   'Trenord',
+        //   'deepseek-chat',
+        //   this.useLenientSchema,
+        // ),
       ];
+      // dynamic
+      for (const strategy of [
+        'basic-cleanup',
+        'html-to-markdown',
+      ] as PreProcessingStrategy[]) {
+        // all models!
+        for (const model of models) {
+          trenordResilienceParsers.push(
+            new ConfigurableAiParser(
+              this.aiRunner,
+              strategy,
+              'Trenord',
+              model,
+              this.useLenientSchema,
+            ),
+          );
+        }
+      }
 
       // Nota: Passiamo 'Trenord-Messed' come nome della "company" per farlo cercare nella cartella giusta
       // Ma dobbiamo "ingannare" il runSuite perché groundTruth ha le chiavi basate sui file originali.

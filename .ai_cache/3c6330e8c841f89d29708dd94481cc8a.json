@@ -1,0 +1,34 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2023-11-17 09:00:00",
+      "endDate": "2023-11-17 13:00:00",
+      "locationType": "NATIONAL",
+      "guaranteedTimes": [
+        "09:00-10:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 21757,
+    "preProcessingStrategy": "dom-distillation",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.0000761,
+      "outputCost": 0.0009212,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0009973
+    },
+    "hash": "3c6330e8c841f89d29708dd94481cc8a",
+    "sourceFile": "strike-detail-sciopero-nazionale-17-novembre-ore-9-13-personale-.html",
+    "thoughts": "**Parsing strike information**\n\nAlright, I'm looking at a page discussing a national strike on November 17, 2023, involving Trenord, but it seems they're not directly involved — contractors might be affected. The instructions tell me to check if the strike is upcoming, and it indeed is. So, that means isStrike is true! Next, I need to extract details like the start and end dates, which will be from 9 AM to 1 PM on the 17th. Since it's a national strike, locationCodes will be omitted.",
+    "tokens": {
+      "input": 1522,
+      "output": 2303,
+      "total": 3825
+    }
+  }
+}

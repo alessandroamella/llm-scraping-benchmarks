@@ -1,0 +1,38 @@
+{
+  "data": {
+    "isStrike": true,
+    "strikeData": {
+      "startDate": "2025-06-16 03:00:00",
+      "endDate": "2025-06-17 02:00:00",
+      "locationType": "REGIONAL",
+      "locationCodes": [
+        "03"
+      ],
+      "guaranteedTimes": [
+        "06:00-09:00",
+        "18:00-21:00"
+      ]
+    }
+  },
+  "metadata": {
+    "parserType": "ai",
+    "durationMs": 27725,
+    "preProcessingStrategy": "html-to-markdown",
+    "model": "gpt-5-nano",
+    "costUsd": {
+      "inputCost": 0.00026885,
+      "outputCost": 0.0006736,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00094245
+    },
+    "hash": "e3fa205ea2d5fec8e6e6b0dae63e6172",
+    "sourceFile": "strike-detail-luned--16-giugno-sciopero-dei-treni-regionali.html",
+    "thoughts": "**Extracting strike information**\n\nI need to output JSON in the specified format for strike extraction. The document is announcing an upcoming strike, so I’ll mark `isStrike` as true. Based on the Italian text, it mentions a regional train strike set to occur on Monday, June 16, 2025. The article details the strike's timing and impacts on train services. This confirms it’s an announcement of an upcoming strike, with specific times provided for affected services.",
+    "tokens": {
+      "input": 5377,
+      "output": 1684,
+      "total": 7061
+    }
+  }
+}
