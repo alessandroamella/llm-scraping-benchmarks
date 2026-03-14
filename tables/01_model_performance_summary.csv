@@ -1,0 +1,17 @@
+Model,Strategy,F1-Score,Precision,Recall,Latency (s),Cost per File ($),Files per 1$,Hallucination Rate (%),Phantom Strike Rate (%)
+gemini-3.1-flash-lite-preview,dom-distillation-markdown,0.9669,0.9709,0.9642,5.4657,0.0009,1111.1111,2.9100,0.4274
+gemini-3.1-flash-lite-preview,dom-distillation,0.9660,0.9695,0.9636,4.9829,0.0010,1041.6667,3.0500,0.4274
+gpt-5-nano,dom-distillation-markdown,0.9539,0.9587,0.9505,17.7648,0.0006,1724.1379,4.1300,0.0000
+deepseek-chat,dom-distillation,0.9530,0.9568,0.9502,3.4871,0.0001,16666.6667,4.3200,0.8547
+deepseek-chat,dom-distillation-markdown,0.9507,0.9531,0.9489,4.6404,0.0001,16666.6667,4.6900,0.4274
+gpt-5-nano,html-to-markdown,0.9455,0.9510,0.9417,17.6498,0.0010,1030.9278,4.9000,0.0000
+gemini-3.1-flash-lite-preview,html-to-markdown,0.9430,0.9465,0.9405,3.8660,0.0028,354.6099,5.3500,0.4274
+deepseek-chat,basic-cleanup,0.9404,0.9429,0.9387,6.6232,0.0004,2222.2222,5.7100,0.4082
+gemini-3.1-flash-lite-preview,basic-cleanup,0.9379,0.9395,0.9367,5.0241,0.0040,250.0000,6.0500,0.4082
+gpt-5-nano,dom-distillation,0.9376,0.9449,0.9325,17.8665,0.0006,1562.5000,5.5100,0.8547
+gpt-5-nano,basic-cleanup,0.9341,0.9383,0.9310,19.5828,0.0014,735.2941,6.1700,0.8163
+deepseek-chat,html-to-markdown,0.9299,0.9337,0.9273,5.6227,0.0003,3703.7037,6.6300,0.0000
+llama-4-scout-17b,dom-distillation,0.9094,0.9122,0.9075,0.6251,0.0002,5263.1579,8.7800,0.0000
+llama-4-scout-17b,dom-distillation-markdown,0.9032,0.9063,0.9010,1.6889,0.0002,6250.0000,9.3700,0.0000
+llama-4-scout-17b,html-to-markdown,0.8902,0.8944,0.8875,4.1377,0.0010,1041.6667,10.5600,0.0000
+llama-4-scout-17b,basic-cleanup,0.8847,0.8885,0.8820,5.3093,0.0017,598.8024,11.1500,0.0000

@@ -1048,3 +1048,221 @@ if file_stats:
     print("!" * 80 + "\n")
 else:
     print("⚠️ Nessun dato trovato per generare la classifica dei file peggiori.")
+
+# --- EXPORT TO CSV TABLES ---
+
+
+def export_all_csv_tables(data, base_dir="tables"):
+    """Generates analytical CSV tables from the benchmark data"""
+    tables_dir = Path(base_dir)
+    tables_dir.mkdir(exist_ok=True)
+
+    summary = data.get("summary", {})
+    details = data.get("details", [])
+
+    print(f"\n{'-'*40}\nExporting CSV tables to '{tables_dir}'...\n{'-'*40}")
+
+    # --- TABLE 1: Overall Performance, Economics & Errors ---
+    # Pre-calculate phantom strikes per parser
+    phantom_counts = {}
+    for d in details:
+        parser = d.get("parser", "")
+        if parser not in phantom_counts:
+            phantom_counts[parser] = {"total": 0, "phantoms": 0}
+
+        phantom_counts[parser]["total"] += 1
+        for diff in d.get("differences", []):
+            if "isStrike: Expected false, got true" in diff:
+                phantom_counts[parser]["phantoms"] += 1
+
+    perf_rows = []
+    for name, metrics in summary.items():
+        if "Manual" in name or "CHAOS" in name:
+            continue
+
+        model_part = normalize_model_name(name.split(" [")[0])
+        try:
+            strategy_part = normalize_strategy_name(
+                name.split("[")[-1].replace("]", "")
+            )
+        except IndexError:
+            strategy_part = "Altro"
+
+        # Safe metric extraction
+        cost_per_file = metrics.get("costPerFile", 0)
+        files_per_dollar = (1 / cost_per_file) if cost_per_file > 0 else float("inf")
+
+        phantoms = phantom_counts.get(name, {"total": 0, "phantoms": 0})
+        phantom_rate = (
+            (phantoms["phantoms"] / phantoms["total"] * 100)
+            if phantoms["total"] > 0
+            else 0
+        )
+        hallucination_rate = (1 - metrics.get("avgPrecision", 0)) * 100
+
+        perf_rows.append(
+            {
+                "Model": model_part,
+                "Strategy": strategy_part,
+                "F1-Score": metrics.get("avgF1", 0),
+                "Precision": metrics.get("avgPrecision", 0),
+                "Recall": metrics.get("avgRecall", 0),
+                "Latency (s)": metrics.get("avgDuration", 0) / 1000,
+                "Cost per File ($)": cost_per_file,
+                "Files per 1$": (
+                    files_per_dollar if files_per_dollar != float("inf") else "N/A"
+                ),
+                "Hallucination Rate (%)": hallucination_rate,
+                "Phantom Strike Rate (%)": phantom_rate,
+            }
+        )
+
+    # Inizializziamo df_perf per poterlo riutilizzare dopo
+    df_perf = None
+
+    if perf_rows:
+        df_perf = pd.DataFrame(perf_rows)
+        df_perf_sorted = df_perf.sort_values("F1-Score", ascending=False)
+        out_path = tables_dir / "01_model_performance_summary.csv"
+        df_perf_sorted.to_csv(out_path, index=False, float_format="%.4f")
+        print(f"✅ Generated: {out_path}")
+
+    # --- TABLE 2: DOM Chaos Resilience ---
+    resilience_rows = []
+    for name, metrics in summary.items():
+        if "[CHAOS]" in name:
+            base_name = name.replace(" [CHAOS]", "")
+            if base_name in summary:
+                base_metrics = summary[base_name]
+
+                model_part = normalize_model_name(base_name.split(" [")[0])
+                try:
+                    strategy_part = normalize_strategy_name(
+                        base_name.split("[")[-1].replace("]", "")
+                    )
+                except IndexError:
+                    strategy_part = "Altro"
+
+                base_f1 = base_metrics.get("avgF1", 0)
+                chaos_f1 = metrics.get("avgF1", 0)
+                abs_drop = base_f1 - chaos_f1
+                rel_drop = (abs_drop / base_f1 * 100) if base_f1 > 0 else 0
+
+                resilience_rows.append(
+                    {
+                        "Model": model_part,
+                        "Strategy": strategy_part,
+                        "Standard F1-Score": base_f1,
+                        "Chaos F1-Score": chaos_f1,
+                        "Absolute Drop": abs_drop,
+                        "Relative Drop (%)": rel_drop,
+                    }
+                )
+
+    if resilience_rows:
+        df_res = pd.DataFrame(resilience_rows).sort_values(
+            "Relative Drop (%)", ascending=True
+        )
+        out_path = tables_dir / "02_dom_chaos_resilience.csv"
+        df_res.to_csv(out_path, index=False, float_format="%.4f")
+        print(f"✅ Generated: {out_path}")
+
+    # --- TABLE 3: Worst Parsed Files ---
+    file_stats = {}
+    for d in details:
+        parser_name = d.get("parser", "")
+        if "Manual" in parser_name or "CHAOS" in parser_name:
+            continue
+
+        filename = d.get("file", "Sconosciuto")
+        if filename not in file_stats:
+            file_stats[filename] = {
+                "Source": d.get("source", "Sconosciuta"),
+                "f1_sum": 0.0,
+                "count": 0,
+                "total_differences": 0,
+            }
+
+        file_stats[filename]["f1_sum"] += d.get("f1", 0)
+        file_stats[filename]["count"] += 1
+        file_stats[filename]["total_differences"] += len(d.get("differences", []))
+
+    worst_rows = []
+    for filename, stats in file_stats.items():
+        avg_f1 = stats["f1_sum"] / stats["count"] if stats["count"] > 0 else 0
+        worst_rows.append(
+            {
+                "Filename": filename,
+                "Source": stats["Source"],
+                "Average F1-Score": avg_f1,
+                "Total Errors Aggregated": stats["total_differences"],
+                "Times Evaluated": stats["count"],
+            }
+        )
+
+    if worst_rows:
+        df_worst = pd.DataFrame(worst_rows).sort_values(
+            by=["Average F1-Score", "Total Errors Aggregated"], ascending=[True, False]
+        )
+        out_path = tables_dir / "03_worst_parsed_files.csv"
+        df_worst.to_csv(out_path, index=False, float_format="%.4f")
+        print(f"✅ Generated: {out_path}")
+
+    # --- TABLE 4: Error Rates per Field ---
+    error_counts = {}
+    total_evals = 0
+
+    for d in details:
+        parser_name = d.get("parser", "")
+        if "Manual" in parser_name or "CHAOS" in parser_name:
+            continue
+
+        total_evals += 1
+        for diff in d.get("differences", []):
+            if ":" in diff:
+                field = diff.split(":")[0].strip()
+                error_counts[field] = error_counts.get(field, 0) + 1
+
+    field_rows = []
+    for field, count in error_counts.items():
+        field_rows.append(
+            {
+                "JSON Field": field,
+                "Total Error Occurrences": count,
+                "Failure Rate (%)": (
+                    (count / total_evals) * 100 if total_evals > 0 else 0
+                ),
+            }
+        )
+
+    if field_rows:
+        df_fields = pd.DataFrame(field_rows).sort_values(
+            "Failure Rate (%)", ascending=False
+        )
+        out_path = tables_dir / "04_error_rates_per_field.csv"
+        df_fields.to_csv(out_path, index=False, float_format="%.2f")
+        print(f"✅ Generated: {out_path}")
+
+    # --- TABLE 5 & 6: Latency Analysis ---
+    if df_perf is not None:
+        # Table 5: Latency per (Model, Strategy) pair
+        df_latency_pair = (
+            df_perf.groupby(["Model", "Strategy"])["Latency (s)"].mean().reset_index()
+        )
+        # Ordiniamo prima per modello e poi per latenza (dal più veloce al più lento per quel modello)
+        df_latency_pair = df_latency_pair.sort_values(by=["Model", "Latency (s)"])
+        out_path_5 = tables_dir / "05_latency_per_model_and_strategy.csv"
+        df_latency_pair.to_csv(out_path_5, index=False, float_format="%.3f")
+        print(f"✅ Generated: {out_path_5}")
+
+        # Table 6: Latency per Model (Aggregated across all strategies)
+        df_latency_model = df_perf.groupby("Model")["Latency (s)"].mean().reset_index()
+        # Ordiniamo dal modello più veloce in assoluto al più lento
+        df_latency_model = df_latency_model.sort_values(by="Latency (s)")
+        out_path_6 = tables_dir / "06_latency_per_model_aggregated.csv"
+        df_latency_model.to_csv(out_path_6, index=False, float_format="%.3f")
+        print(f"✅ Generated: {out_path_6}")
+
+# Call the function if saving is enabled
+if args.save:
+    export_all_csv_tables(data)
