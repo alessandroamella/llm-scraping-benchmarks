@@ -34,7 +34,6 @@ import {
 import {
   AdapterGenerationResult,
   AiModelAdapter,
-  ProviderName,
   TokenUsage,
 } from './adapters/ai-adapter.interface';
 import { DeepSeekAdapter } from './adapters/deepseek.adapter';
@@ -203,7 +202,24 @@ export class BenchmarkAiRunnerService implements OnModuleInit {
     // Get the geographic context to help the LLM infer the right region code
     const companyContext = this.getCompanyContext(sourceName);
 
-    const getPromptFirstPart = (_provider: ProviderName) =>
+    // This was used in an older version, it shows that a bad prompt that
+    // doesn't explicitly ask the model to determine if it's a strike or not,
+    // and just assumes it is, leads to hallucinated strikes with made-up dates
+    // and details, setting "isStrike" to true even with non-strike
+    // announcements.
+    const _getBadPromptFirstPart = () =>
+      `You are a precise data extraction algorithm.
+Analyze the following content regarding a strike from "${sourceName}".
+
+Extract the strike details according to the schema.
+- Dates must be in 'yyyy-MM-dd HH:mm:ss'.
+- Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).
+- Location codes should be: 2-digit ISTAT for regions (e.g., "03" for Lombardia), 2-letter for provinces (e.g., "MI" for Milan), or omitted for national strikes.
+
+Input Content (Pre-processing: ${preProcessingStrategy}):
+`.trim();
+
+    const getPromptFirstPart = () =>
       `You are a precise data extraction algorithm.
 Analyze the following content regarding a possible strike from "${sourceName}" (${companyContext}).
 
@@ -240,8 +256,10 @@ Example Output if IS a strike:
 Input Content (Pre-processing: ${preProcessingStrategy}):
 `.trim();
 
-    const prompt =
-      `${getPromptFirstPart(adapter.provider)}\n${cleanedContent}`.trim();
+    const prompt = `${getPromptFirstPart()}\n${cleanedContent}`.trim();
+
+    // Test with worse prompt
+    // const prompt = `${getBadPromptFirstPart()}\n${cleanedContent}`.trim();
 
     return this.runPipeline(
       adapter,

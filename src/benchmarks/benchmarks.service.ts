@@ -84,10 +84,10 @@ export class BenchmarksService implements OnModuleInit, OnModuleDestroy {
 
   // Toggle this to run benchmarks
   private readonly useLenientSchema = true;
-  private readonly includeManualInSuite = true;
+  private readonly includeManualInSuite = false;
   private readonly generateChaosDatasetFlag = false;
 
-  private readonly customReportName = 'run_all_maybe_last_actual_all';
+  private readonly customReportName = 'strict_with_SLM_all';
   // private readonly disabledChecks: string[] = ['locationType', 'locationCodes'];
   private readonly disabledChecks: string[] = [];
 

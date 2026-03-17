@@ -65,67 +65,151 @@ BASELINE_KB = 271.65  # media
 # Calcoliamo il peso processato scalato rispetto alla baseline
 df["Processato_Norm_KB"] = df["Processato_KB"] * (BASELINE_KB / df["Originale_KB"])
 
+# Converti percentuale (0-100) a frazione (0-1)
+df["Riduzione"] = df["Riduzione_%"] / 100
+
 # Ordiniamo per riduzione (dal peggiore al migliore) per una lettura visiva più pulita
-df = df.sort_values("Riduzione_%")
+df = df.sort_values("Riduzione")
 
-# --- CREAZIONE GRAFICO ---
-plt.figure(figsize=(12, 7))
+# --- CREAZIONE GRAFICO CON BROKEN AXIS ---
+fig, (ax1, ax2) = plt.subplots(
+    2, 1, sharex=True, figsize=(12, 8), gridspec_kw={"height_ratios": [3, 1]}
+)
+fig.subplots_adjust(hspace=-0.03)
 
-# Usiamo la palette 'crest' che hai usato per i token, rende bene per i dati di "efficienza"
-ax = sns.barplot(
+# Disegniamo sui due assi
+sns.barplot(
     data=df,
     x="Strategia",
-    y="Riduzione_%",
+    y="Riduzione",
     hue="Strategia",
     palette="crest",
     legend=False,
+    ax=ax1,
+)
+sns.barplot(
+    data=df,
+    x="Strategia",
+    y="Riduzione",
+    hue="Strategia",
+    palette="crest",
+    legend=False,
+    ax=ax2,
 )
 
-# plt.title(
-#     "Compressione media per strategia di pre-processing sull'intero dataset",
-#     fontsize=15,
-#     fontweight="bold",
-# )
-plt.ylabel("Riduzione della dimensione (%)", fontsize=12)
-plt.xlabel("Strategia di pre-processing", fontsize=12)
+# Impostiamo i limiti (zoom in alto, base in basso)
+ax1.set_ylim(0.825, 1)  # Zoom sulla zona di interesse
+ax2.set_ylim(0, 0.1)  # Base vuota
 
-# Spazio extra in cima per le label
-plt.ylim(0, 115)
-plt.xticks(rotation=25, ha="right")
+# Nascondiamo i bordi tra i due grafici
+ax1.spines["bottom"].set_visible(False)
+ax2.spines["top"].set_visible(False)
+ax1.xaxis.tick_top()
+ax1.tick_params(labeltop=False)
+ax2.xaxis.tick_bottom()
+
+# --- 1. PRIMA formattiamo le error bars ---
+for ax in [ax1, ax2]:
+    for line in ax.lines:
+        line.set_color("red")
+        line.set_linewidth(2.0)
+
+# --- 2. Bisciolina bianca sui bordi di taglio (intervallo omesso) ---
+wave_amp = 0.028
+num_waves = 21
+x_points = []
+y_wave_top = []
+y_wave_bottom = []
+
+# Limita la bisciolina all'area coperta dalle barre (senza toccare gli assi laterali)
+first_bar = ax1.patches[0]
+last_bar = ax1.patches[len(df) - 1]
+left_data = first_bar.get_x()
+right_data = last_bar.get_x() + last_bar.get_width()
+
+left_axes = ax1.transAxes.inverted().transform(ax1.transData.transform((left_data, 0)))[
+    0
+]
+right_axes = ax1.transAxes.inverted().transform(
+    ax1.transData.transform((right_data, 0))
+)[0]
+
+# Un minimo margine interno, per restare "attaccata" alle barre senza debordare
+left_axes += 0.003
+right_axes -= 0.003
+
+for i in range(num_waves):
+    x_norm = left_axes + (right_axes - left_axes) * (i / (num_waves - 1))
+    y_offset = wave_amp if i % 2 == 0 else -wave_amp
+    x_points.append(x_norm)
+    # Sul bordo inferiore del pannello alto (y=0) e sul bordo superiore del pannello basso (y=1)
+    y_wave_top.append(0 + y_offset)
+    y_wave_bottom.append(1 + y_offset)
+
+# Estensione limitata ai margini delle barre
+x_points.insert(0, left_axes)
+y_wave_top.insert(0, 0)
+y_wave_bottom.insert(0, 1)
+x_points.append(right_axes)
+y_wave_top.append(0)
+y_wave_bottom.append(1)
+
+wave_style_top = dict(
+    transform=ax1.transAxes, color="white", clip_on=False, lw=4.6, zorder=20
+)
+wave_style_bottom = dict(
+    transform=ax2.transAxes, color="white", clip_on=False, lw=4.6, zorder=20
+)
+ax1.plot(x_points, y_wave_top, **wave_style_top)
+ax2.plot(x_points, y_wave_bottom, **wave_style_bottom)
+
+# Etichette
+ax1.set_ylabel("Riduzione della dimensione (0.0 - 1.0)", fontsize=12)
+ax2.set_ylabel("")
+ax2.set_xlabel("Strategia di pre-processing", fontsize=12)
+ax2.tick_params(axis="x", rotation=25)
 
 # --- ANNOTAZIONI ---
-for i, p in enumerate(ax.patches):
-    height = p.get_height()
-    # Prendiamo il valore normalizzato per stamparlo
-    processed_kb = df.iloc[i]["Processato_Norm_KB"]
+# Annotazioni solo sull'asse superiore
+# for i, p in enumerate(ax1.patches):
+#     height = p.get_height()
+#     if height > 0:
+#         # Valore in frazione (da 0 a 1)
+#         ax1.annotate(
+#             f"{height:.3f}",
+#             (p.get_x() + p.get_width() / 2.0, height),
+#             ha="center",
+#             va="bottom",
+#             xytext=(0, 5),
+#             textcoords="offset points",
+#             fontsize=9,
+#             fontweight="bold",
+#         )
 
-    # 1. Percentuale di riduzione (Sopra la barra)
-    ax.annotate(
-        f"{height:.2f}%",
-        (p.get_x() + p.get_width() / 2.0, height),
+# Annotazioni sull'asse inferiore con consumo token
+for i, p in enumerate(ax2.patches):
+    # Calcoliamo il consumo di token
+    processato_kb = df.iloc[i]["Processato_KB"]
+    token_estimate = processato_kb * 1000 / 3.8
+    # Arrotonda al multiplo di 10 più vicino
+    token_rounded = round(token_estimate / 10) * 10
+
+    # Annotiamo al centro di ciascuna barra dell'asse inferiore
+    ax2.annotate(
+        f"Consumo medio\ntoken: {int(token_rounded)}",
+        (p.get_x() + p.get_width() / 2.0, 0.05),
         ha="center",
-        va="bottom",
-        xytext=(0, 5),
-        textcoords="offset points",
-        fontsize=10,
+        va="center",
+        color="white",
+        fontsize=9,
         fontweight="bold",
+        bbox=dict(
+            boxstyle="round,pad=0.4", facecolor="#333333", alpha=0.75, edgecolor="none"
+        ),
     )
 
-    # 2. Peso finale normalizzato (All'interno/sotto la cima della barra)
-    # ax.annotate(
-    #     f"Peso finale:\n{processed_kb:.2f} KB",
-    #     (p.get_x() + p.get_width() / 2.0, height / 2),
-    #     ha="center",
-    #     va="center",
-    #     color="white",
-    #     fontsize=10,
-    #     fontweight="bold",
-    #     bbox=dict(
-    #         boxstyle="round,pad=0.4", facecolor="black", alpha=0.45, edgecolor="none"
-    #     ),
-    # )
-
-plt.tight_layout()
+# Layout esplicito: evita che tight_layout riapra il gap tra i due pannelli
+fig.subplots_adjust(left=0.09, right=0.985, top=0.97, bottom=0.20, hspace=-0.03)
 
 # Salvataggio e visualizzazione
 output_file = charts_dir / "10_compressione_strategie_normalizzata.png"

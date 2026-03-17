@@ -4,6 +4,7 @@ import json
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+from matplotlib.ticker import FuncFormatter
 from pathlib import Path
 from adjustText import adjust_text
 import argparse
@@ -114,7 +115,7 @@ for name, metrics in summary.items():
             "Strategia": strategy_part,
             "Precision": metrics["avgPrecision"],
             "Recall": metrics["avgRecall"],
-            "F1-Score": metrics["avgF1"],
+            "F1-score": metrics["avgF1"],
             "Costo": metrics.get("costPerFile", 0),
             "Latenza": metrics["avgDuration"] / 1000,  # Convertiamo in secondi
         }
@@ -125,7 +126,7 @@ df = pd.DataFrame(df_list)
 # --- GRAFICO 1: CONFRONTO METRICHE DI ACCURATEZZA (CON ASSE SPEZZATO) ---
 df_metrics = df.melt(
     id_vars=["Modello", "Strategia"],
-    value_vars=["Precision", "Recall", "F1-Score"],
+    value_vars=["Precision", "Recall", "F1-score"],
     var_name="Metrica",
     value_name="Punteggio",
 )
@@ -134,7 +135,7 @@ df_metrics = df.melt(
 fig, (ax1, ax2) = plt.subplots(
     2, 1, sharex=True, figsize=(14, 8), gridspec_kw={"height_ratios": [3, 1]}
 )
-fig.subplots_adjust(hspace=0.05)  # Spazio ridotto tra i due assi
+fig.subplots_adjust(hspace=-0.02)  # Pannelli attaccati, senza gap visivo
 
 # Disegniamo gli stessi dati su entrambi gli assi
 sns.barplot(
@@ -155,8 +156,19 @@ sns.barplot(
 )
 
 # Impostiamo i limiti (zoom in alto, base in basso)
-ax1.set_ylim(0.85, 1)  # Parte alta (zoom aggressivo: 0.85 - 1.05)
+ax1.set_ylim(0.8, 1)  # Parte alta (zoom aggressivo: 0.8 - 1.05)
 ax2.set_ylim(0, 0.1)  # Base ancorata allo zero
+
+# Nascondiamo le etichette y al bordo del taglio per evitare overlap (es. 0.100 / 0.800)
+seam_top = ax1.get_ylim()[0]
+seam_bottom = ax2.get_ylim()[1]
+eps = 1e-9
+ax1.yaxis.set_major_formatter(
+    FuncFormatter(lambda y, _: "" if abs(y - seam_top) < eps else f"{y:.3f}")
+)
+ax2.yaxis.set_major_formatter(
+    FuncFormatter(lambda y, _: "" if abs(y - seam_bottom) < eps else f"{y:.3f}")
+)
 
 # Nascondiamo i bordi tra i due grafici
 ax1.spines["bottom"].set_visible(False)
@@ -171,14 +183,53 @@ for ax in [ax1, ax2]:
         line.set_color("red")
         line.set_linewidth(2.0)
 
-# --- 2. DOPO disegniamo i "fulmini" (linee di interruzione dell'asse) ---
-d = 0.012  # dimensione delle linee
-kwargs = dict(transform=ax1.transAxes, color="#444444", clip_on=False, lw=1.5)
-ax1.plot((-d, +d), (-d, +d), **kwargs)  # top-left
-ax1.plot((1 - d, 1 + d), (-d, +d), **kwargs)  # top-right
-kwargs.update(transform=ax2.transAxes)
-ax2.plot((-d, +d), (1 - d, 1 + d), **kwargs)  # bottom-left
-ax2.plot((1 - d, 1 + d), (1 - d, 1 + d), **kwargs)  # bottom-right
+# --- 2. Bisciolina bianca sui bordi di taglio (intervallo omesso) ---
+d = 0.012
+wave_amp = 0.028
+num_waves = 21
+x_points = []
+y_wave_top = []
+y_wave_bottom = []
+
+# Limita la bisciolina all'area coperta dalle barre (senza toccare gli assi laterali)
+first_bar = ax1.patches[0]
+last_bar = ax1.patches[
+    len(df_metrics["Modello"].unique()) * len(df_metrics["Metrica"].unique()) - 1
+]
+left_data = first_bar.get_x()
+right_data = last_bar.get_x() + last_bar.get_width()
+
+left_axes = ax1.transAxes.inverted().transform(ax1.transData.transform((left_data, 0)))[
+    0
+]
+right_axes = ax1.transAxes.inverted().transform(
+    ax1.transData.transform((right_data, 0))
+)[0]
+left_axes += 0.003
+right_axes -= 0.003
+
+for i in range(num_waves):
+    x_norm = left_axes + (right_axes - left_axes) * (i / (num_waves - 1))
+    y_offset = wave_amp if i % 2 == 0 else -wave_amp
+    x_points.append(x_norm)
+    y_wave_top.append(0 + y_offset)
+    y_wave_bottom.append(1 + y_offset)
+
+x_points.insert(0, left_axes)
+y_wave_top.insert(0, 0)
+y_wave_bottom.insert(0, 1)
+x_points.append(right_axes)
+y_wave_top.append(0)
+y_wave_bottom.append(1)
+
+wave_style_top = dict(
+    transform=ax1.transAxes, color="white", clip_on=False, lw=4.6, zorder=20
+)
+wave_style_bottom = dict(
+    transform=ax2.transAxes, color="white", clip_on=False, lw=4.6, zorder=20
+)
+ax1.plot(x_points, y_wave_top, **wave_style_top)
+ax2.plot(x_points, y_wave_bottom, **wave_style_bottom)
 
 ax1.set_ylabel("Punteggio (0.0 - 1.0)", fontsize=12)
 ax2.set_ylabel("")
@@ -186,31 +237,15 @@ ax2.set_xlabel("Modello AI", fontsize=12)
 ax1.legend(title="Metrica", loc="upper center", ncol=3, fontsize=10)
 ax2.get_legend().remove()
 
-# Aggiunta valori sopra le barre (solo nell'asse superiore)
-for p in ax1.patches:
-    if p.get_height() > 0:
-        ax1.annotate(
-            format(p.get_height(), ".3f"),
-            (p.get_x() + p.get_width() / 2.0, p.get_height()),
-            ha="center",
-            va="bottom",
-            xytext=(0, 5),
-            textcoords="offset points",
-            fontsize=9,
-        )
 
 if args.save:
     plt.savefig(charts_dir / "01_accuratezza_modelli.png", dpi=300, bbox_inches="tight")
 
 # --- GRAFICO 1.1: ACCURATEZZA PER STRATEGIA (CON ASSE SPEZZATO) ---
-df_strategy_grouped = (
-    df.groupby("Strategia")
-    .agg({"Precision": "mean", "Recall": "mean", "F1-Score": "mean"})
-    .reset_index()
-)
-df_strategy_metrics = df_strategy_grouped.melt(
-    id_vars=["Strategia"],
-    value_vars=["Precision", "Recall", "F1-Score"],
+# Usiamo i dati non aggregati per mantenere le barre di deviazione standard visibili
+df_strategy_metrics = df.melt(
+    id_vars=["Modello", "Strategia"],
+    value_vars=["Precision", "Recall", "F1-score"],
     var_name="Metrica",
     value_name="Punteggio",
 )
@@ -218,7 +253,7 @@ df_strategy_metrics = df_strategy_grouped.melt(
 fig, (ax1, ax2) = plt.subplots(
     2, 1, sharex=True, figsize=(12, 8), gridspec_kw={"height_ratios": [3, 1]}
 )
-fig.subplots_adjust(hspace=0.05)
+fig.subplots_adjust(hspace=-0.02)
 
 sns.barplot(
     data=df_strategy_metrics,
@@ -226,6 +261,8 @@ sns.barplot(
     y="Punteggio",
     hue="Metrica",
     palette="viridis",
+    errorbar="sd",
+    capsize=0.08,
     ax=ax1,
 )
 sns.barplot(
@@ -234,11 +271,24 @@ sns.barplot(
     y="Punteggio",
     hue="Metrica",
     palette="viridis",
+    errorbar="sd",
+    capsize=0.08,
     ax=ax2,
 )
 
-ax1.set_ylim(0.75, 1.05)
+ax1.set_ylim(0.8, 1)
 ax2.set_ylim(0, 0.1)
+
+# Nascondiamo le etichette y al bordo del taglio per evitare overlap (es. 0.100 / 0.800)
+seam_top = ax1.get_ylim()[0]
+seam_bottom = ax2.get_ylim()[1]
+eps = 1e-9
+ax1.yaxis.set_major_formatter(
+    FuncFormatter(lambda y, _: "" if abs(y - seam_top) < eps else f"{y:.3f}")
+)
+ax2.yaxis.set_major_formatter(
+    FuncFormatter(lambda y, _: "" if abs(y - seam_bottom) < eps else f"{y:.3f}")
+)
 
 ax1.spines["bottom"].set_visible(False)
 ax2.spines["top"].set_visible(False)
@@ -252,33 +302,74 @@ for ax in [ax1, ax2]:
         line.set_color("red")
         line.set_linewidth(2.0)
 
-# --- 2. DOPO disegniamo i "fulmini" (linee di interruzione dell'asse) ---
-d = 0.012  # dimensione delle linee
-kwargs = dict(transform=ax1.transAxes, color="#444444", clip_on=False, lw=1.5)
-ax1.plot((-d, +d), (-d, +d), **kwargs)
-ax1.plot((1 - d, 1 + d), (-d, +d), **kwargs)
-kwargs.update(transform=ax2.transAxes)
-ax2.plot((-d, +d), (1 - d, 1 + d), **kwargs)
-ax2.plot((1 - d, 1 + d), (1 - d, 1 + d), **kwargs)
+# --- 2. Bisciolina bianca sui bordi di taglio (intervallo omesso) ---
+d = 0.012
+wave_amp = 0.028
+num_waves = 21
+x_points = []
+y_wave_top = []
+y_wave_bottom = []
+
+# Limita la bisciolina all'area coperta dalle barre (senza toccare gli assi laterali)
+first_bar = ax1.patches[0]
+last_bar = ax1.patches[
+    len(df_strategy_metrics["Strategia"].unique())
+    * len(df_strategy_metrics["Metrica"].unique())
+    - 1
+]
+left_data = first_bar.get_x()
+right_data = last_bar.get_x() + last_bar.get_width()
+
+left_axes = ax1.transAxes.inverted().transform(ax1.transData.transform((left_data, 0)))[
+    0
+]
+right_axes = ax1.transAxes.inverted().transform(
+    ax1.transData.transform((right_data, 0))
+)[0]
+left_axes += 0.003
+right_axes -= 0.003
+
+for i in range(num_waves):
+    x_norm = left_axes + (right_axes - left_axes) * (i / (num_waves - 1))
+    y_offset = wave_amp if i % 2 == 0 else -wave_amp
+    x_points.append(x_norm)
+    y_wave_top.append(0 + y_offset)
+    y_wave_bottom.append(1 + y_offset)
+
+x_points.insert(0, left_axes)
+y_wave_top.insert(0, 0)
+y_wave_bottom.insert(0, 1)
+x_points.append(right_axes)
+y_wave_top.append(0)
+y_wave_bottom.append(1)
+
+wave_style_top = dict(
+    transform=ax1.transAxes, color="white", clip_on=False, lw=4.6, zorder=20
+)
+wave_style_bottom = dict(
+    transform=ax2.transAxes, color="white", clip_on=False, lw=4.6, zorder=20
+)
+ax1.plot(x_points, y_wave_top, **wave_style_top)
+ax2.plot(x_points, y_wave_bottom, **wave_style_bottom)
 
 ax1.set_ylabel("Punteggio medio (0.0 - 1.0)", fontsize=12)
 ax2.set_ylabel("")
 ax2.set_xlabel("Strategia di pre-processing", fontsize=12)
 ax2.tick_params(axis="x", rotation=15)
-ax1.legend(title="Metrica", loc="upper center", ncol=3, fontsize=10)
+ax1.legend(title="Metrica", loc="upper left", fontsize=10)
 ax2.get_legend().remove()
 
-for p in ax1.patches:
-    if p.get_height() > 0:
-        ax1.annotate(
-            format(p.get_height(), ".3f"),
-            (p.get_x() + p.get_width() / 2.0, p.get_height()),
-            ha="center",
-            va="bottom",
-            xytext=(0, 5),
-            textcoords="offset points",
-            fontsize=9,
-        )
+# for p in ax1.patches:
+#     if p.get_height() > 0:
+#         ax1.annotate(
+#             format(p.get_height(), ".3f"),
+#             (p.get_x() + p.get_width() / 2.0, p.get_height()),
+#             ha="center",
+#             va="bottom",
+#             xytext=(0, 5),
+#             textcoords="offset points",
+#             fontsize=9,
+#         )
 
 if args.save:
     plt.savefig(
@@ -291,7 +382,7 @@ plt.figure(figsize=(14, 8))
 ax = sns.barplot(
     data=df,
     x="Modello",
-    y="F1-Score",
+    y="F1-score",
     hue="Strategia",
     palette="Set2",
 )
@@ -306,24 +397,12 @@ plt.title(
     fontsize=16,
     fontweight="bold",
 )
-plt.ylabel("F1-Score (0.0 - 1.0)", fontsize=12)
+plt.ylabel("F1-score (0.0 - 1.0)", fontsize=12)
 plt.xlabel("Modello AI", fontsize=12)
 plt.ylim(0, 1.1)  # Spazio per le etichette
 plt.legend(title="Strategia", bbox_to_anchor=(1.05, 1), loc="upper left")
 plt.xticks(rotation=25, ha="right")
 
-# Aggiunta dei valori sopra le barre
-for p in ax.patches:
-    if p.get_height() > 0:
-        ax.annotate(
-            format(p.get_height(), ".2f"),
-            (p.get_x() + p.get_width() / 2.0, p.get_height()),
-            ha="center",
-            va="bottom",
-            xytext=(0, 8),
-            textcoords="offset points",
-            fontsize=8,
-        )
 
 plt.tight_layout()
 if args.save:
@@ -346,7 +425,7 @@ plt.figure(figsize=(12, 7))
 sns.scatterplot(
     data=df_plot,
     x="File_per_Dollaro",
-    y="F1-Score",
+    y="F1-score",
     hue="Modello",
     style="Strategia",
     s=200,
@@ -354,24 +433,24 @@ sns.scatterplot(
 
 # plt.title("Efficienza economica vs. accuratezza", fontsize=16, fontweight="bold")
 plt.xlabel("Numero di file processabili con 1$", fontsize=12)
-plt.ylabel("F1-Score", fontsize=12)
+plt.ylabel("F1-score", fontsize=12)
 plt.grid(True, linestyle="--", alpha=0.7)
 
 # Aggiungiamo margini per dare spazio alle etichette
 plt.margins(x=0.15, y=0.15)
 
 # Annotazione dei punti con sfondo per migliore leggibilità
-# Una label per modello (il punto con il massimo F1-Score)
+# Una label per modello (il punto con il massimo F1-score)
 texts = []
 for model in df_plot["Modello"].unique():
     model_data = df_plot[df_plot["Modello"] == model]
-    # Troviamo il punto con il massimo F1-Score per questo modello
-    best_point = model_data.loc[model_data["F1-Score"].idxmax()]
+    # Troviamo il punto con il massimo F1-score per questo modello
+    best_point = model_data.loc[model_data["F1-score"].idxmax()]
 
     texts.append(
         plt.text(
             best_point["File_per_Dollaro"],
-            best_point["F1-Score"],
+            best_point["F1-score"],
             f"{best_point['Modello']}",
             fontsize=9,
             fontweight="bold",
@@ -404,12 +483,13 @@ if args.view:
 plt.figure(figsize=(12, 6))
 df_sorted_time = df.sort_values("Latenza")
 sns.barplot(
-    data=df_sorted_time, x="Latenza", y="Modello", hue="Strategia", palette="magma"
+    data=df_sorted_time, x="Modello", y="Latenza", hue="Strategia", palette="magma"
 )
 
 # plt.title("Velocità media (secondi/file)", fontsize=16, fontweight="bold")
-plt.xlabel("Tempo in secondi", fontsize=12)
-plt.ylabel("Modello", fontsize=12)
+plt.xlabel("Modello", fontsize=12)
+plt.ylabel("Tempo in secondi", fontsize=12)
+plt.xticks(rotation=25, ha="right")
 
 plt.tight_layout()
 if args.save:
@@ -437,19 +517,22 @@ plt.ylim(
     0, max(df["Hallucination Rate"].max() * 1.2, 0.1)
 )  # Lascia spazio per il testo in alto
 
-for p in ax.patches:
-    height = p.get_height()
-    if height > 0:
-        ax.annotate(
-            format(height, ".3f"),
-            (p.get_x() + p.get_width() / 2.0, height),
-            ha="center",
-            va="bottom",
-            xytext=(0, 5),
-            textcoords="offset points",
-            fontsize=10,
-            fontweight="bold",
-        )
+# plt.ylim(0, 0.15)
+
+# Aggiunta valori sopra le barre
+# for p in ax.patches:
+#     height = p.get_height()
+#     if height > 0:
+#         ax.annotate(
+#             format(height, ".3f"),
+#             (p.get_x() + p.get_width() / 2.0, height),
+#             ha="center",
+#             va="bottom",
+#             xytext=(0, 5),
+#             textcoords="offset points",
+#             fontsize=10,
+#             fontweight="bold",
+#         )
 
 plt.tight_layout()
 if args.save:
@@ -492,12 +575,11 @@ df_phantoms = pd.DataFrame(phantom_rows).sort_values(
 )
 
 plt.figure(figsize=(10, 6))
+colors = sns.color_palette("Reds_r", len(df_phantoms))
 bars = plt.bar(
     df_phantoms["Modello"],
     df_phantoms["Phantom Strike Rate"],
-    color=df_phantoms["Phantom Strike Rate"].apply(
-        lambda x: "#2ecc71" if x == 0 else "#e74c3c" if x >= 0.5 else "#f39c12"
-    ),
+    color=colors,
 )
 
 # Titolo commentato per LaTeX
@@ -509,29 +591,29 @@ plt.xticks(rotation=15, ha="right")
 # TODO rm Zoom estremo richiesto (massimo 0.009)
 # plt.ylim(0, 0.009)
 
-for bar, rate, count, total in zip(
-    bars,
-    df_phantoms["Phantom Strike Rate"],
-    df_phantoms["Phantom Count"],
-    df_phantoms["Total Tests"],
-):
-    height = bar.get_height()
-    label = f"{rate:.3f}\n({int(count)}/{int(total)})"
-
-    # Se per caso un valore supera il limite del grafico (0.009),
-    # blocchiamo il testo appena sotto il bordo (0.008) affinché non venga tagliato via.
-    y_pos = height if height < 0.0085 else 0.008
-
-    plt.annotate(
-        label,
-        (bar.get_x() + bar.get_width() / 2.0, y_pos),
-        ha="center",
-        va="bottom",
-        xytext=(0, 5),
-        textcoords="offset points",
-        fontsize=10,
-        fontweight="bold",
-    )
+# for bar, rate, count, total in zip(
+#     bars,
+#     df_phantoms["Phantom Strike Rate"],
+#     df_phantoms["Phantom Count"],
+#     df_phantoms["Total Tests"],
+# ):
+#     height = bar.get_height()
+#     label = f"{rate:.3f}\n({int(count)}/{int(total)})"
+#
+#     # Se per caso un valore supera il limite del grafico (0.009),
+#     # blocchiamo il testo appena sotto il bordo (0.008) affinché non venga tagliato via.
+#     y_pos = height if height < 0.0085 else 0.008
+#
+#     plt.annotate(
+#         label,
+#         (bar.get_x() + bar.get_width() / 2.0, y_pos),
+#         ha="center",
+#         va="bottom",
+#         xytext=(0, 5),
+#         textcoords="offset points",
+#         fontsize=10,
+#         fontweight="bold",
+#     )
 
 plt.tight_layout()
 if args.save:
@@ -604,7 +686,7 @@ if resilience_data_raw:
             {
                 "Metodo/Strategia": group,
                 "Condizione": "DOM normale",
-                "F1-Score": avg_std,
+                "F1-score": avg_std,
             }
         )
 
@@ -613,7 +695,7 @@ if resilience_data_raw:
             {
                 "Metodo/Strategia": group,
                 "Condizione": "DOM modificato",
-                "F1-Score": avg_chaos,
+                "F1-score": avg_chaos,
             }
         )
 
@@ -648,7 +730,7 @@ if resilience_data_raw:
     ax = sns.barplot(
         data=df_resilience,
         x="Metodo/Strategia",
-        y="F1-Score",
+        y="F1-score",
         hue="Condizione",
         palette=custom_palette,
     )
@@ -658,7 +740,7 @@ if resilience_data_raw:
     #     fontsize=16,
     #     fontweight="bold",
     # )
-    plt.ylabel("F1-Score medio (aggregato sui modelli AI)", fontsize=12)
+    plt.ylabel("F1-score medio (aggregato sui modelli AI)", fontsize=12)
     plt.xlabel("Metodo / Strategia di pre-processing", fontsize=12)
     plt.ylim(0, 1.15)  # Spazio extra per annotazioni
     plt.legend(loc="upper right")
@@ -806,7 +888,7 @@ else:
         "⚠️ Nessun dato sui token trovato nel JSON. Salto il grafico del consumo token."
     )
 
-# --- GRAFICO 8: PERFORMANCE (F1-SCORE) PER SOURCE (AZIENDA) ---
+# --- GRAFICO 8: PERFORMANCE (F1-sCORE) PER SOURCE (AZIENDA) ---
 details_data = []
 
 for d in data.get("details", []):
@@ -830,14 +912,14 @@ for d in data.get("details", []):
             "Source": d.get("source", "Sconosciuta"),
             "Modello": model_part,
             "Strategia": strategy_part,
-            "F1-Score": d.get("f1", 0),
+            "F1-score": d.get("f1", 0),
         }
     )
 
 if details_data:
     df_details = pd.DataFrame(details_data)
 
-    # Raggruppiamo per calcolare la media dell'F1-Score per Source e Modello
+    # Raggruppiamo per calcolare la media dell'F1-score per Source e Modello
     # In questo grafico ignoriamo la separazione per strategia (usiamo la media generale del modello)
     # oppure puoi filtrare per la tua strategia "vincente", ad esempio:
     # df_details = df_details[df_details["Strategia"] == "html-to-markdown"]
@@ -846,35 +928,35 @@ if details_data:
     ax = sns.barplot(
         data=df_details,
         x="Source",
-        y="F1-Score",
+        y="F1-score",
         hue="Modello",
         palette="viridis",
         errorbar=None,  # Nascondiamo le barre di errore per maggiore pulizia visiva
     )
 
     plt.title(
-        "F1-Score medio per modello su ciascun dataset",
+        "F1-score medio per modello su ciascun dataset",
         fontsize=16,
         fontweight="bold",
     )
-    plt.ylabel("F1-Score (0.0 - 1.0)", fontsize=12)
+    plt.ylabel("F1-score (0.0 - 1.0)", fontsize=12)
     plt.xlabel("Sorgente dati (azienda)", fontsize=12)
     plt.ylim(0, 1.15)
     plt.legend(title="Modello AI", bbox_to_anchor=(1.05, 1), loc="upper left")
 
     # Aggiunta dei valori sopra le barre
-    for p in ax.patches:
-        height = p.get_height()
-        if height > 0:
-            ax.annotate(
-                format(height, ".2f"),
-                (p.get_x() + p.get_width() / 2.0, height),
-                ha="center",
-                va="bottom",
-                xytext=(0, 5),
-                textcoords="offset points",
-                fontsize=8,
-            )
+    # for p in ax.patches:
+    #     height = p.get_height()
+    #     if height > 0:
+    #         ax.annotate(
+    #             format(height, ".2f"),
+    #             (p.get_x() + p.get_width() / 2.0, height),
+    #             ha="center",
+    #             va="bottom",
+    #             xytext=(0, 5),
+    #             textcoords="offset points",
+    #             fontsize=8,
+    #         )
 
     plt.tight_layout()
     if args.save:
@@ -1116,7 +1198,7 @@ def export_all_csv_tables(data, base_dir="tables"):
             {
                 "Model": model_part,
                 "Strategy": strategy_part,
-                "F1-Score": metrics.get("avgF1", 0),
+                "F1-score": metrics.get("avgF1", 0),
                 "Precision": metrics.get("avgPrecision", 0),
                 "Recall": metrics.get("avgRecall", 0),
                 "Latency (s)": metrics.get("avgDuration", 0) / 1000,
@@ -1134,7 +1216,7 @@ def export_all_csv_tables(data, base_dir="tables"):
 
     if perf_rows:
         df_perf = pd.DataFrame(perf_rows)
-        df_perf_sorted = df_perf.sort_values("F1-Score", ascending=False)
+        df_perf_sorted = df_perf.sort_values("F1-score", ascending=False)
         out_path = tables_dir / "01_model_performance_summary.csv"
         df_perf_sorted.to_csv(out_path, index=False, float_format="%.4f")
         print(f"✅ Generated: {out_path}")
@@ -1164,8 +1246,8 @@ def export_all_csv_tables(data, base_dir="tables"):
                     {
                         "Model": model_part,
                         "Strategy": strategy_part,
-                        "Standard F1-Score": base_f1,
-                        "Chaos F1-Score": chaos_f1,
+                        "Standard F1-score": base_f1,
+                        "Chaos F1-score": chaos_f1,
                         "Absolute Drop": abs_drop,
                         "Relative Drop (%)": rel_drop,
                     }
@@ -1206,7 +1288,7 @@ def export_all_csv_tables(data, base_dir="tables"):
             {
                 "Filename": filename,
                 "Source": stats["Source"],
-                "Average F1-Score": avg_f1,
+                "Average F1-score": avg_f1,
                 "Total Errors Aggregated": stats["total_differences"],
                 "Times Evaluated": stats["count"],
             }
@@ -1214,7 +1296,7 @@ def export_all_csv_tables(data, base_dir="tables"):
 
     if worst_rows:
         df_worst = pd.DataFrame(worst_rows).sort_values(
-            by=["Average F1-Score", "Total Errors Aggregated"], ascending=[True, False]
+            by=["Average F1-score", "Total Errors Aggregated"], ascending=[True, False]
         )
         out_path = tables_dir / "03_worst_parsed_files.csv"
         df_worst.to_csv(out_path, index=False, float_format="%.4f")
