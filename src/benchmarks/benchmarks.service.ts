@@ -87,7 +87,7 @@ export class BenchmarksService implements OnModuleInit, OnModuleDestroy {
   private readonly includeManualInSuite = false;
   private readonly generateChaosDatasetFlag = false;
 
-  private readonly customReportName = 'strict_with_SLM_all';
+  private readonly customReportName = 'change_me';
   // private readonly disabledChecks: string[] = ['locationType', 'locationCodes'];
   private readonly disabledChecks: string[] = [];
 
@@ -292,10 +292,10 @@ export class BenchmarksService implements OnModuleInit, OnModuleDestroy {
     ];
 
     const models = [
-      'gpt-5-nano',
-      'meta-llama/llama-4-scout-17b-16e-instruct',
+      // 'gpt-5-nano',
+      // 'meta-llama/llama-4-scout-17b-16e-instruct',
       'gemini-3.1-flash-lite-preview',
-      'deepseek-chat',
+      // 'deepseek-chat',
     ] satisfies SupportedModel[];
 
     // Log which models we are testing
