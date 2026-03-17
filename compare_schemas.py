@@ -93,7 +93,7 @@ def load_data(file_path: str, schema_label: str) -> list:
                 "Strategia": strategy_part,
                 "Schema": schema_label,
                 "F1-score": metrics["avgF1"],
-                "Hallucination rate (%)": (1 - metrics["avgPrecision"]) * 100,
+                "Hallucination rate": (1 - metrics["avgPrecision"]),
             }
         )
     return df_list
@@ -194,24 +194,24 @@ create_comparison_plot(
 create_comparison_plot(
     data=df,
     x_col="Modello",
-    y_col="Hallucination rate (%)",
+    y_col="Hallucination rate",
     title="Confronto hallucination rate per modello",
-    ylabel="Tasso di allucinazione medio (%)",
+    ylabel="Tasso di allucinazione medio (0.0 - 1.0)",
     xlabel="Modello AI",
     filename="comp_02a_hallucination_per_modello.png",
-    is_percentage=True,
+    is_percentage=False,
 )
 
 # 2b. Raggruppato per Strategia
 create_comparison_plot(
     data=df,
     x_col="Strategia",
-    y_col="Hallucination rate (%)",
+    y_col="Hallucination rate",
     title="Confronto hallucination rate per strategia di pre-processing",
-    ylabel="Tasso di allucinazione medio (%)",
+    ylabel="Tasso di allucinazione medio (0.0 - 1.0)",
     xlabel="Strategia di pre-processing",
     filename="comp_02b_hallucination_per_strategia.png",
-    is_percentage=True,
+    is_percentage=False,
 )
 
 

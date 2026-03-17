@@ -122,8 +122,7 @@ for name, metrics in summary.items():
 
 df = pd.DataFrame(df_list)
 
-# --- GRAFICO 1: CONFRONTO METRICHE DI ACCURATEZZA ---
-# Trasformiamo il dataframe in formato "long" per seaborn
+# --- GRAFICO 1: CONFRONTO METRICHE DI ACCURATEZZA (CON ASSE SPEZZATO) ---
 df_metrics = df.melt(
     id_vars=["Modello", "Strategia"],
     value_vars=["Precision", "Recall", "F1-Score"],
@@ -131,69 +130,84 @@ df_metrics = df.melt(
     value_name="Punteggio",
 )
 
-plt.figure(figsize=(14, 8))
-ax = sns.barplot(
-    data=df_metrics, x="Modello", y="Punteggio", hue="Metrica", palette="viridis"
+# Creiamo due assi con altezze diverse (ratio 3:1)
+fig, (ax1, ax2) = plt.subplots(
+    2, 1, sharex=True, figsize=(14, 8), gridspec_kw={"height_ratios": [3, 1]}
+)
+fig.subplots_adjust(hspace=0.05)  # Spazio ridotto tra i due assi
+
+# Disegniamo gli stessi dati su entrambi gli assi
+sns.barplot(
+    data=df_metrics,
+    x="Modello",
+    y="Punteggio",
+    hue="Metrica",
+    palette="viridis",
+    ax=ax1,
+)
+sns.barplot(
+    data=df_metrics,
+    x="Modello",
+    y="Punteggio",
+    hue="Metrica",
+    palette="viridis",
+    ax=ax2,
 )
 
-# Style the error bars (delta lines) - red and thicker
-for line in ax.lines:
-    line.set_color("red")
-    line.set_linewidth(2.5)
+# Impostiamo i limiti (zoom in alto, base in basso)
+ax1.set_ylim(0.85, 1)  # Parte alta (zoom aggressivo: 0.85 - 1.05)
+ax2.set_ylim(0, 0.1)  # Base ancorata allo zero
 
-# plt.title(
-#     "Accuratezza per modello",
-#     fontsize=16,
-#     fontweight="bold",
-# )
-plt.ylabel("Punteggio (0.0 - 1.0)", fontsize=12)
-plt.xlabel("Modello AI", fontsize=12)
-plt.ylim(0, 1.1)  # Spazio per le etichette
-# plt.legend(title="Metrica", bbox_to_anchor=(1.05, 1), loc="upper left")
+# Nascondiamo i bordi tra i due grafici
+ax1.spines["bottom"].set_visible(False)
+ax2.spines["top"].set_visible(False)
+ax1.xaxis.tick_top()
+ax1.tick_params(labeltop=False)
+ax2.xaxis.tick_bottom()
 
-# Legenda DENTRO il grafico (no bbox_to_anchor), metti in alto in mezzo, fai che siano orizzontali
-plt.legend(
-    title="Metrica",
-    loc="upper center",
-    ncol=3,
-    fontsize=10,
-)
+# --- 1. PRIMA formattiamo le error bars (così non tocchiamo il "fulmine") ---
+for ax in [ax1, ax2]:
+    for line in ax.lines:
+        line.set_color("red")
+        line.set_linewidth(2.0)
 
-# Aggiunta dei valori sopra le barre
-for p in ax.patches:
+# --- 2. DOPO disegniamo i "fulmini" (linee di interruzione dell'asse) ---
+d = 0.012  # dimensione delle linee
+kwargs = dict(transform=ax1.transAxes, color="#444444", clip_on=False, lw=1.5)
+ax1.plot((-d, +d), (-d, +d), **kwargs)  # top-left
+ax1.plot((1 - d, 1 + d), (-d, +d), **kwargs)  # top-right
+kwargs.update(transform=ax2.transAxes)
+ax2.plot((-d, +d), (1 - d, 1 + d), **kwargs)  # bottom-left
+ax2.plot((1 - d, 1 + d), (1 - d, 1 + d), **kwargs)  # bottom-right
+
+ax1.set_ylabel("Punteggio (0.0 - 1.0)", fontsize=12)
+ax2.set_ylabel("")
+ax2.set_xlabel("Modello AI", fontsize=12)
+ax1.legend(title="Metrica", loc="upper center", ncol=3, fontsize=10)
+ax2.get_legend().remove()
+
+# Aggiunta valori sopra le barre (solo nell'asse superiore)
+for p in ax1.patches:
     if p.get_height() > 0:
-        ax.annotate(
-            format(p.get_height(), ".2f"),
+        ax1.annotate(
+            format(p.get_height(), ".3f"),
             (p.get_x() + p.get_width() / 2.0, p.get_height()),
             ha="center",
             va="bottom",
-            xytext=(0, 12),
+            xytext=(0, 5),
             textcoords="offset points",
             fontsize=9,
         )
 
-plt.tight_layout()
 if args.save:
-    plt.savefig(charts_dir / "01_accuratezza_modelli.png", dpi=300)
-    print("Generato: charts/01_accuratezza_modelli.png")
-if args.view:
-    plt.show()
+    plt.savefig(charts_dir / "01_accuratezza_modelli.png", dpi=300, bbox_inches="tight")
 
-# --- GRAFICO 1.1: ACCURATEZZA PER STRATEGIA DI PRE-PROCESSING ---
-# Raggruppiamo i dati per strategia e calcoliamo la media delle metriche
+# --- GRAFICO 1.1: ACCURATEZZA PER STRATEGIA (CON ASSE SPEZZATO) ---
 df_strategy_grouped = (
     df.groupby("Strategia")
-    .agg(
-        {
-            "Precision": "mean",
-            "Recall": "mean",
-            "F1-Score": "mean",
-        }
-    )
+    .agg({"Precision": "mean", "Recall": "mean", "F1-Score": "mean"})
     .reset_index()
 )
-
-# Trasformiamo in formato "long" per seaborn
 df_strategy_metrics = df_strategy_grouped.melt(
     id_vars=["Strategia"],
     value_vars=["Precision", "Recall", "F1-Score"],
@@ -201,56 +215,75 @@ df_strategy_metrics = df_strategy_grouped.melt(
     value_name="Punteggio",
 )
 
-plt.figure(figsize=(12, 7))
-ax = sns.barplot(
+fig, (ax1, ax2) = plt.subplots(
+    2, 1, sharex=True, figsize=(12, 8), gridspec_kw={"height_ratios": [3, 1]}
+)
+fig.subplots_adjust(hspace=0.05)
+
+sns.barplot(
     data=df_strategy_metrics,
     x="Strategia",
     y="Punteggio",
     hue="Metrica",
     palette="viridis",
+    ax=ax1,
+)
+sns.barplot(
+    data=df_strategy_metrics,
+    x="Strategia",
+    y="Punteggio",
+    hue="Metrica",
+    palette="viridis",
+    ax=ax2,
 )
 
-# Style the error bars (delta lines) - red and thicker
-for line in ax.lines:
-    line.set_color("red")
-    line.set_linewidth(2.5)
+ax1.set_ylim(0.75, 1.05)
+ax2.set_ylim(0, 0.1)
 
-# plt.title(
-#     "Accuratezza per strategia di pre-processing",
-#     fontsize=16,
-#     fontweight="bold",
-# )
-plt.ylabel("Punteggio medio (0.0 - 1.0)", fontsize=12)
-plt.xlabel("Strategia di pre-processing", fontsize=12)
-plt.ylim(0, 1.1)  # Spazio per le etichette
-# plt.legend(title="Metrica", bbox_to_anchor=(1.05, 1), loc="upper left")
-plt.legend(
-    title="Metrica",
-    loc="upper right",
-    ncol=3,
-    fontsize=10,
-)
-plt.xticks(rotation=15, ha="right")
+ax1.spines["bottom"].set_visible(False)
+ax2.spines["top"].set_visible(False)
+ax1.xaxis.tick_top()
+ax1.tick_params(labeltop=False)
+ax2.xaxis.tick_bottom()
 
-# Aggiunta dei valori sopra le barre
-for p in ax.patches:
+# --- 1. PRIMA formattiamo le error bars (così non tocchiamo il "fulmine") ---
+for ax in [ax1, ax2]:
+    for line in ax.lines:
+        line.set_color("red")
+        line.set_linewidth(2.0)
+
+# --- 2. DOPO disegniamo i "fulmini" (linee di interruzione dell'asse) ---
+d = 0.012  # dimensione delle linee
+kwargs = dict(transform=ax1.transAxes, color="#444444", clip_on=False, lw=1.5)
+ax1.plot((-d, +d), (-d, +d), **kwargs)
+ax1.plot((1 - d, 1 + d), (-d, +d), **kwargs)
+kwargs.update(transform=ax2.transAxes)
+ax2.plot((-d, +d), (1 - d, 1 + d), **kwargs)
+ax2.plot((1 - d, 1 + d), (1 - d, 1 + d), **kwargs)
+
+ax1.set_ylabel("Punteggio medio (0.0 - 1.0)", fontsize=12)
+ax2.set_ylabel("")
+ax2.set_xlabel("Strategia di pre-processing", fontsize=12)
+ax2.tick_params(axis="x", rotation=15)
+ax1.legend(title="Metrica", loc="upper center", ncol=3, fontsize=10)
+ax2.get_legend().remove()
+
+for p in ax1.patches:
     if p.get_height() > 0:
-        ax.annotate(
+        ax1.annotate(
             format(p.get_height(), ".3f"),
             (p.get_x() + p.get_width() / 2.0, p.get_height()),
             ha="center",
             va="bottom",
-            xytext=(0, 12),
+            xytext=(0, 5),
             textcoords="offset points",
             fontsize=9,
         )
 
-plt.tight_layout()
 if args.save:
-    plt.savefig(charts_dir / "01.1_accuratezza_strategie.png", dpi=300)
-    print("Generato: charts/01.1_accuratezza_strategie.png")
-if args.view:
-    plt.show()
+    plt.savefig(
+        charts_dir / "01.1_accuratezza_strategie.png", dpi=300, bbox_inches="tight"
+    )
 
 # --- GRAFICO 1.2: IMPATTO DELLE STRATEGIE PER MODELLO ---
 # Raggruppiamo per Modello le diverse strategie
@@ -385,164 +418,124 @@ if args.save:
 if args.view:
     plt.show()
 
-# --- GRAFICO 4: HALLUCINATION RATE ---
-# Calcolo Hallucination Rate dalla Summary (1 - Precision)
-hallucination_rows = []
-for name, metrics in summary.items():
-    model_part = normalize_model_name(name.split(" [")[0])
-    strategy_part = normalize_strategy_name(name.split("[")[-1].replace("]", ""))
+# --- GRAFICO 4: HALLUCINATION RATE (MEDIO PER MODELLO) ---
+# Calcoliamo l'hallucination rate direttamente nel DataFrame principale
+df["Hallucination Rate"] = 1 - df["Precision"]
 
-    # Ignora modelli con 'Manual' e 'CHAOS'
-    if "Manual" in model_part or "CHAOS" in name:
-        continue
-
-    hallucination_rate = (1 - metrics["avgPrecision"]) * 100
-
-    hallucination_rows.append(
-        {
-            "Model": f"{model_part} [{strategy_part}]",
-            "Modello": model_part,
-            "Strategia": strategy_part,
-            "Hallucination rate (%)": hallucination_rate,
-            "Avg Precision": metrics["avgPrecision"],
-        }
-    )
-
-df_hallucination = pd.DataFrame(hallucination_rows).sort_values(
-    "Hallucination rate (%)"
-)
-
-plt.figure(figsize=(14, 8))
+plt.figure(figsize=(10, 6))
+# Passando x="Modello", Seaborn calcola automaticamente la media tra tutte le strategie
 ax = sns.barplot(
-    data=df_hallucination,
-    y="Model",
-    x="Hallucination rate (%)",
-    hue="Strategia",
-    palette="RdYlGn_r",  # Rosso per male, giallo neutro, verde per bene
-    orient="h",
+    data=df, x="Modello", y="Hallucination Rate", palette="viridis", errorbar=None
 )
 
-plt.title(
-    "Hallucination rate per modello",
-    fontsize=16,
-    fontweight="bold",
-)
-plt.xlabel("Hallucination rate (%)", fontsize=12)
-plt.ylabel("Modello [strategia]", fontsize=12)
+# Titolo commentato per LaTeX
+# plt.title("Tasso di allucinazione medio per modello (Minore è meglio)", fontsize=16, fontweight="bold")
+plt.ylabel("Tasso di allucinazione (0.0 - 1.0)", fontsize=12)
+plt.xlabel("Modello AI", fontsize=12)
+plt.xticks(rotation=15, ha="right")
+plt.ylim(
+    0, max(df["Hallucination Rate"].max() * 1.2, 0.1)
+)  # Lascia spazio per il testo in alto
 
-# Aggiunta dei valori sopra le barre
-for i, p in enumerate(ax.patches):
-    if p.get_width() > 0:
+for p in ax.patches:
+    height = p.get_height()
+    if height > 0:
         ax.annotate(
-            format(p.get_width(), ".2f") + "%",
-            (p.get_width(), p.get_y() + p.get_height() / 2.0),
-            ha="left",
-            va="center",
-            xytext=(5, 0),
+            format(height, ".3f"),
+            (p.get_x() + p.get_width() / 2.0, height),
+            ha="center",
+            va="bottom",
+            xytext=(0, 5),
             textcoords="offset points",
-            fontsize=9,
+            fontsize=10,
             fontweight="bold",
         )
 
-plt.legend(title="Strategia", bbox_to_anchor=(1.05, 1), loc="upper left")
 plt.tight_layout()
 if args.save:
     plt.savefig(charts_dir / "04_hallucination_rate.png", dpi=300)
-    print("Generato: charts/04_hallucination_rate.png")
-if args.view:
-    plt.show()
 
-# --- GRAFICO 5: PHANTOM strike rATE ---
-# Analisi specifiche delle allucinazioni "Phantom Strikes"
-phantom_counts = {}
+# --- GRAFICO 5: PHANTOM STRIKE RATE (MEDIO PER MODELLO) ---
+phantom_counts_model = {}
+
+# Raggruppiamo esplicitamente per Modello, ignorando le differenze di strategia
 for detail in data.get("details", []):
-    model = detail["parser"]
-    if model not in phantom_counts:
-        phantom_counts[model] = {"total": 0, "phantoms": 0}
-
-    phantom_counts[model]["total"] += 1
-    for diff in detail.get("differences", []):
-        if "isStrike: Expected false, got true" in diff:
-            phantom_counts[model]["phantoms"] += 1
-
-phantom_rows = []
-for model, counts in phantom_counts.items():
-    model_part = normalize_model_name(model.split(" [")[0])
-
-    # Ignora modelli con 'Manual' e 'CHAOS'
-    if "Manual" in model_part or "CHAOS" in model:
+    parser_name = detail.get("parser", "")
+    if "Manual" in parser_name or "CHAOS" in parser_name:
         continue
 
-    rate = (counts["phantoms"] / counts["total"]) * 100 if counts["total"] > 0 else 0
-    strategy_part = normalize_strategy_name(model.split("[")[-1].replace("]", ""))
+    # Estraiamo solo il nome del modello (es. "gpt-5-nano")
+    model_part = normalize_model_name(parser_name.split(" [")[0])
 
+    if model_part not in phantom_counts_model:
+        phantom_counts_model[model_part] = {"total": 0, "phantoms": 0}
+
+    phantom_counts_model[model_part]["total"] += 1
+    for diff in detail.get("differences", []):
+        if "isStrike: Expected false, got true" in diff:
+            phantom_counts_model[model_part]["phantoms"] += 1
+
+phantom_rows = []
+for model_part, counts in phantom_counts_model.items():
+    rate = (counts["phantoms"] / counts["total"]) if counts["total"] > 0 else 0
     phantom_rows.append(
         {
-            "Model": f"{model_part} [{strategy_part}]",
             "Modello": model_part,
-            "Strategia": strategy_part,
-            "Phantom strike rate (%)": rate,
+            "Phantom Strike Rate": rate,
             "Phantom Count": counts["phantoms"],
             "Total Tests": counts["total"],
         }
     )
 
 df_phantoms = pd.DataFrame(phantom_rows).sort_values(
-    "Phantom strike rate (%)", ascending=False
+    "Phantom Strike Rate", ascending=False
 )
 
-fig, ax = plt.subplots(figsize=(14, 8))
-bars = ax.barh(
-    df_phantoms["Model"],
-    df_phantoms["Phantom strike rate (%)"],
-    color=df_phantoms["Phantom strike rate (%)"].apply(
-        lambda x: "#2ecc71" if x == 0 else "#e74c3c" if x >= 50 else "#f39c12"
+plt.figure(figsize=(10, 6))
+bars = plt.bar(
+    df_phantoms["Modello"],
+    df_phantoms["Phantom Strike Rate"],
+    color=df_phantoms["Phantom Strike Rate"].apply(
+        lambda x: "#2ecc71" if x == 0 else "#e74c3c" if x >= 0.5 else "#f39c12"
     ),
 )
 
-plt.title(
-    "Phantom strike rate per modello",
-    fontsize=16,
-    fontweight="bold",
-)
-plt.xlabel("Phantom strike rate (%)", fontsize=12)
-plt.ylabel("Modello [strategia]", fontsize=12)
+# Titolo commentato per LaTeX
+# plt.title("Phantom strike rate medio per modello (Minore è meglio)", fontsize=16, fontweight="bold")
+plt.ylabel("Phantom strike rate", fontsize=12)
+plt.xlabel("Modello AI", fontsize=12)
+plt.xticks(rotation=15, ha="right")
 
-# Aggiunta dei valori sopra le barre
-for i, (bar, rate, count, total) in enumerate(
-    zip(
-        bars,
-        df_phantoms["Phantom strike rate (%)"],
-        df_phantoms["Phantom Count"],
-        df_phantoms["Total Tests"],
-    )
+# TODO rm Zoom estremo richiesto (massimo 0.009)
+# plt.ylim(0, 0.009)
+
+for bar, rate, count, total in zip(
+    bars,
+    df_phantoms["Phantom Strike Rate"],
+    df_phantoms["Phantom Count"],
+    df_phantoms["Total Tests"],
 ):
-    label = f"{rate:.1f}% ({int(count)}/{int(total)})"
-    ax.annotate(
+    height = bar.get_height()
+    label = f"{rate:.3f}\n({int(count)}/{int(total)})"
+
+    # Se per caso un valore supera il limite del grafico (0.009),
+    # blocchiamo il testo appena sotto il bordo (0.008) affinché non venga tagliato via.
+    y_pos = height if height < 0.0085 else 0.008
+
+    plt.annotate(
         label,
-        xy=(bar.get_width(), bar.get_y() + bar.get_height() / 2.0),
-        xytext=(5, 0),
+        (bar.get_x() + bar.get_width() / 2.0, y_pos),
+        ha="center",
+        va="bottom",
+        xytext=(0, 5),
         textcoords="offset points",
-        ha="left",
-        va="center",
         fontsize=10,
         fontweight="bold",
     )
 
-# Legenda colori
-# legend_elements = [
-#     Patch(facecolor="#2ecc71", label="OK (0%)"),
-#     Patch(facecolor="#f39c12", label="Attenzione (1-99%)"),
-#     Patch(facecolor="#e74c3c", label="Critico (≥50%)"),
-# ]
-# ax.legend(handles=legend_elements, loc="lower right", fontsize=10)
-
 plt.tight_layout()
 if args.save:
     plt.savefig(charts_dir / "05_phantom_strike_rate.png", dpi=300)
-    print("Generato: charts/05_phantom_strike_rate.png")
-if args.view:
-    plt.show()
 
 # --- GRAFICO 6: RESILIENZA AL DOM CHAOS ---
 resilience_data_raw = {}
