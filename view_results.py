@@ -215,15 +215,21 @@ for line in ax.lines:
     line.set_color("red")
     line.set_linewidth(2.5)
 
-plt.title(
-    "Accuratezza per strategia di pre-processing",
-    fontsize=16,
-    fontweight="bold",
-)
+# plt.title(
+#     "Accuratezza per strategia di pre-processing",
+#     fontsize=16,
+#     fontweight="bold",
+# )
 plt.ylabel("Punteggio medio (0.0 - 1.0)", fontsize=12)
 plt.xlabel("Strategia di pre-processing", fontsize=12)
 plt.ylim(0, 1.1)  # Spazio per le etichette
-plt.legend(title="Metrica", bbox_to_anchor=(1.05, 1), loc="upper left")
+# plt.legend(title="Metrica", bbox_to_anchor=(1.05, 1), loc="upper left")
+plt.legend(
+    title="Metrica",
+    loc="upper right",
+    ncol=3,
+    fontsize=10,
+)
 plt.xticks(rotation=15, ha="right")
 
 # Aggiunta dei valori sopra le barre
@@ -368,7 +374,7 @@ sns.barplot(
     data=df_sorted_time, x="Latenza", y="Modello", hue="Strategia", palette="magma"
 )
 
-plt.title("Velocità media (secondi/file)", fontsize=16, fontweight="bold")
+# plt.title("Velocità media (secondi/file)", fontsize=16, fontweight="bold")
 plt.xlabel("Tempo in secondi", fontsize=12)
 plt.ylabel("Modello", fontsize=12)
 
@@ -1049,6 +1055,19 @@ if file_stats:
 else:
     print("⚠️ Nessun dato trovato per generare la classifica dei file peggiori.")
 
+# --- PRINT TO CONSOLE: AVERAGE LATENCY PER MODEL ---
+print("\n" + "=" * 80)
+print(f"{'AVERAGE LATENCY PER MODEL (aggregating all strategies)':<80}")
+print("=" * 80)
+print(f"{'Model':<40} | {'Avg Latency (s)':>15}")
+print("-" * 80)
+
+avg_latency_per_model = df.groupby("Modello")["Latenza"].mean().sort_values()
+for model, avg_time in avg_latency_per_model.items():
+    print(f"{model:<40} | {avg_time:>15.2f}")
+
+print("=" * 80 + "\n")
+
 # --- EXPORT TO CSV TABLES ---
 
 
@@ -1262,6 +1281,7 @@ def export_all_csv_tables(data, base_dir="tables"):
         out_path_6 = tables_dir / "06_latency_per_model_aggregated.csv"
         df_latency_model.to_csv(out_path_6, index=False, float_format="%.3f")
         print(f"✅ Generated: {out_path_6}")
+
 
 # Call the function if saving is enabled
 if args.save:

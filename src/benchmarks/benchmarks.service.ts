@@ -87,13 +87,13 @@ export class BenchmarksService implements OnModuleInit, OnModuleDestroy {
   private readonly includeManualInSuite = true;
   private readonly generateChaosDatasetFlag = false;
 
-  private readonly customReportName = 'run_all_maybe_last';
+  private readonly customReportName = 'run_all_maybe_last_actual_all';
   // private readonly disabledChecks: string[] = ['locationType', 'locationCodes'];
   private readonly disabledChecks: string[] = [];
 
   private readonly enableResilienceSuite = false; // Toggle Resilience Suite
   private readonly enableAiSuites = true; // Toggle AI Suites
-  private readonly enableSlmSuites = false; // Toggle SLM Suites (MinerU and Jina)
+  private readonly enableSlmSuites = true; // Toggle SLM Suites (MinerU and Jina)
 
   // -----------------
   private readonly baseDir = path.join(process.cwd(), 'data');
