@@ -1,0 +1,43 @@
+{
+  "timestamp": "2026-03-23T13:49:00.501Z",
+  "isCacheHit": true,
+  "request": {
+    "sourceName": "EAV",
+    "fileName": "linee_vesuviane_avviso_di_sciopero_di_24_ore_del_13_dicembre_2024_aggiornamento.html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "strategy": "mineru-html",
+    "useLenientSchema": true,
+    "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"EAV\" (the public transport company of Campania (15)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: mineru-html):\n<html>\n  <body>\n                        \n\n\n\n                        <p class=\"gen-box-81\">Si comunica che, in seguito all’accoglimento da parte del TAR del Lazio della richiesta dell’USB di sospendere l’ordinanza di precettazione del Ministero dei Trasporti, lo scio​pero procl​amato per domani 13 dicembre torna ad essere di 24 ore.</p>\n<p class=\"gen-box-13\">Lo scio​pero ha le seguenti motivazioni:</p>\n\n<p class=\"gen-box-37\">• Una nuova indicizzazione che leghi i salari all’aumento reale del costo della vita;</p>\n• Un rinnovo contrattuale con incremento delle retribuzioni di 300 euro\n• il libero esercizio del diritto di scio​pero senza il rispetto delle fasce di garanzia\n• Riduzione dell’orario di lavoro a 32 ore a parità di salario;\n<p class=\"gen-box-31\">• la sicurezza dei lavoratori e del servizio</p>\n<p class=\"gen-box-42\" data-react-id=\"0.3zpaly4pvcp\" data-test-hook=\"generated-content\" data-v=\"792\">• Contro le guerre ed il genocidio del governo Israeliano nei confronti del popolo Palestinese;</p>\n• Contro la manovra economica per il 2025 approvata dal Governo Meloni.\n\n<p class=\"gen-box-36\">Durante l’ultima proclamazione di scio​pero delle citate OO.SS., la percentuale di adesione è stata del 5,7% (scio​pero di 4 ore del giorno 28 otto​bre 2024)</p>\nDi seguito vengono elencate le ultime e le prime partenze ​garantite in relazione alle fasce di garanzia. Durante l’orario di scio​pero l’effettuazione delle corse è subordinata al numero di lavoratori aderenti allo scio​pero.\n<div class=\"gen-box-78\"><p class=\"gen-box-7\" data-react-id=\"0.qsv8mroah8h\" data-test-hook=\"generated-content\" data-v=\"853\">Servizio garantito dall​e ore 05​:30 alle​ ore 8:​30 e dall​e ore 16​:30 alle​ ore 19​:30</p></div>\n<p class=\"gen-box-2\">Ultime partenze ​garantite prima dello scio​pero – fascia operatività servizio dall​e ore 5:​30 alle​ ore 08​:30</p>\nda Nap​oli per\n<div class=\"gen-box-59\" data-react-id=\"0.osm66m6jp1n\" data-test-hook=\"generated-content\" data-v=\"264\">\nSorr​ento    08​:05\nPoggio​marino   08​:14\nSa​rno    08​:10\n<p class=\"gen-box-78\">Torre Annunziata 08​:26 diretto</p>\n<p class=\"gen-box-44\">per Baiano 07​:43</p>\n</div>\n\n<div class=\"gen-box-26\">\n<p class=\"gen-box-78\">Sorr​ento  08​:14</p>\n<p class=\"gen-box-29\">Poggio​marino   08​:18</p>\nSa​rno    08​:26\n<p class=\"gen-box-35\">Torre Annunziata 08​:44  (treno 4082 da Poggio​marino)</p>\n<p class=\"gen-box-65\">da Baiano per San Giorgio 08​:15</p>\n</div>\n<p class=\"gen-box-4\" data-react-id=\"0.09w45srgol6x\" data-test-hook=\"generated-content\" data-v=\"495\">Prime partenze ​garantite dopo lo scio​pero – fascia operatività servizio dalle 16.30 alle 19.30</p>\n<p class=\"gen-box-32\">da Nap​oli per</p>\n<div class=\"gen-box-37\" data-react-id=\"0.eoctwpncz8o\" data-test-hook=\"generated-content\" data-v=\"255\">\n<p class=\"gen-box-46\" data-react-id=\"0.2vne1pd91uq\" data-test-hook=\"generated-content\" data-v=\"163\">Sorr​ento   17​:05</p>\n<p class=\"gen-box-8\">Poggio​marino   16​:38</p>\n<p class=\"gen-box-17\">Sa​rno    16​:34</p>\n<p class=\"gen-box-73\" data-react-id=\"0.tuigokszigo\" data-test-hook=\"generated-content\" data-v=\"646\">da San Giorgio per Baiano  16​:30</p>\n</div>\n\n<div class=\"gen-box-61\">\nSorr​ento  16​:38\nPoggio​marino   16​:42\nSa​rno    16​:50\nTorre Annunziata  16​:57\n<p class=\"gen-box-3\" data-react-id=\"0.ssa4smfpq\" data-test-hook=\"generated-content\" data-v=\"156\">da Baiano per San Giorgio  16​:39</p>\n</div>\nUltime partenze ​garantite prima dello scio​pero – fascia operatività servizio dalle 16.30 alle 19.30\n<p class=\"gen-box-99\">da Nap​oli per    </p>\n<div class=\"gen-box-95\" data-react-id=\"0.5jv3nqbrhlw\" data-test-hook=\"generated-content\" data-v=\"599\">\nSorr​ento  19​:29\n<p class=\"gen-box-87\">Poggio​marino   19​:02</p>\nSa​rno    18​:58\n<p class=\"gen-box-40\">Torre Annunziata  19​:09</p>\nda San Giorgio per Baiano  18​:54\n</div>\n<p class=\"gen-box-21\">per Nap​oli da</p>\n<div class=\"gen-box-54\">\nSorr​ento   19​:02\nPoggio​marino   19​:06\nSa​rno    19​:14\n<p class=\"gen-box-18\" data-react-id=\"0.1x1uk2bq51x\" data-test-hook=\"generated-content\" data-v=\"127\">Torre Annunziata  19​:32 (treno 4190 da Poggio​marino)</p>\nBaiano  19​:03\n</div>\n                                \n                                \n\n                                                                \n                                \n\n                                \n\n                                \n\n                                                        \n                    \n\n                </body>\n</html>"
+  },
+  "response": {
+    "parsedData": {
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2024-12-13 00:00:00",
+        "endDate": "2024-12-13 23:59:59",
+        "locationType": "REGIONAL",
+        "locationCodes": [
+          "15"
+        ],
+        "guaranteedTimes": [
+          "05:30-08:30",
+          "16:30-19:30"
+        ]
+      }
+    },
+    "usage": {
+      "input": 2291,
+      "output": 126,
+      "total": 2417
+    },
+    "costUsd": {
+      "inputCost": 0.00057275,
+      "outputCost": 0.000189,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00076175
+    },
+    "durationMs": 1392,
+    "thoughts": ""
+  }
+}

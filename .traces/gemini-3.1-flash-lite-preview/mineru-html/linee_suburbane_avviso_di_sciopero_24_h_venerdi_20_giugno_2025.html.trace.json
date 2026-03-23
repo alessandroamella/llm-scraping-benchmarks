@@ -1,0 +1,43 @@
+{
+  "timestamp": "2026-03-23T13:49:01.674Z",
+  "isCacheHit": true,
+  "request": {
+    "sourceName": "EAV",
+    "fileName": "linee_suburbane_avviso_di_sciopero_24_h_venerdi_20_giugno_2025.html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "strategy": "mineru-html",
+    "useLenientSchema": true,
+    "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"EAV\" (the public transport company of Campania (15)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: mineru-html):\n<html data-react-id=\"0.wwhulfmeknc\" data-test-hook=\"generated-content\" data-v=\"262\" lang=\"it-IT\" xmlns=\"https://www.w3.org/1999/xhtml\" xmlns:fb=\"http://www.facebook.com/2008/fbml\" xmlns:og=\"https://ogp.me/ns#\"><body class=\"wp-singular post-template post-template-single-di-noside post-template-single-di-noside-php single single-post postid-26815 single-format-standard custom-background wp-theme-design-italia wp-child-theme-design-italia-child\" ontouchstart=\"\">\n<div class=\"hfeed\" data-react-id=\"0.hpy81srq7mq\" data-test-hook=\"generated-content\" data-v=\"734\">\n<div>\n<div class=\"gen-box-92\">\n<div class=\"gen-box-88\">\n<div class=\"row\">\n<div class=\"offset-lg-1 col-lg-6 col-md-7\">\n<div class=\"css-8dn14\" _item_id=\"2\">\n<span class=\"gen-box-84\">\n\t\t\t\t\t\t\t\t\t\tLinee Suburbane – Avviso di scio​pero 24 h venerdì 20 giugno 2025\t\t\t\t</span>\n</div>\n</div>\n</div>\n</div>\n<div class=\"gen-box-33\">\n<div class=\"css-jdenau\">\n<div class=\"row\">\n<div class=\"offset-md-1 col-md-10\">\n<section class=\"css-8l2ib5 css-p2d5dl\" data-react-id=\"0.q39jyipqlds\" data-test-hook=\"generated-content\" data-v=\"833\"><span class=\"gen-box-63\" data-react-id=\"0.zmbo6ld0m4f\" data-test-hook=\"generated-content\" data-v=\"72\">Per il giorno 20 giugno 2025 la O.​S. U​SB ha procl​amato azione di scio​pero per adesione a scio​pero nazionale di 24 ore avente le seguenti motivazioni: per una maggiore sicurezza dei lavoratori e del servizio ed un incremento delle retribuzioni mensili.</span>\n<div class=\"gen-box-97\" _item_id=\"6\"><span class=\"wrapper-z\">Durante l’ultima proclamazione di scio​pero della O.​S. U​SB, la percentuale di adesione è stata del 7,02% (scio​pero generale nazionale di 24 ore del 24 febbr​aio 2025)</span></div>\n<span class=\"gen-box-94\">Di seguito vengono elencate le ultime e le prime partenze ​garantite in relazione alle fasce di garanzia. Durante l’orario di scio​pero l’effettuazione delle corse è subordinata al numero di lavoratori aderenti allo scio​pero.</span>\n<span class=\"gen-box-49\" data-react-id=\"0.sz0qv93eeof\" data-test-hook=\"generated-content\" data-v=\"621\"><span class=\"gen-box-99\"><span class=\"gen-box-11\">Servizio garantito dall​e ore 05​:30 alle​ ore 8:​30 e dall​e ore 16​:30 alle​ ore 19​:30</span></span></span>\n<div class=\"gen-box-36\" _item_id=\"8\"><span class=\"gen-box-60\" data-react-id=\"0.xtap7cciy8p\" data-test-hook=\"generated-content\" data-v=\"619\"><u>Corse garantite</u></span></div>\n<span class=\"gen-box-83\"><span class=\"gen-box-21\">da Cancello per</span></span>\n<span class=\"gen-box-98\" data-react-id=\"0.p6ai08pxqa\" data-test-hook=\"generated-content\" data-v=\"220\">Piedimonte 06​:03</span>\n<div class=\"gen-box-6\"><div class=\"gen-box-66\" _item_id=\"10\"><span class=\"wrapper-z\">da Nap​oli per                                                                                 </span></div></div>\n<span class=\"gen-box-36\">Piedimonte       07​:47</span>\n<div class=\"gen-box-58\" data-react-id=\"0.uy4iegv345f\" data-test-hook=\"generated-content\" data-v=\"349\" _item_id=\"12\"><span class=\"wrapper-z\">Piedimonte       17​:27</span></div>\n<div class=\"gen-box-10\" data-react-id=\"0.txz60b2mv2\" data-test-hook=\"generated-content\" data-v=\"59\" _item_id=\"13\"><span class=\"wrapper-z\">Piedimonte       20​:30</span></div>\n<span class=\"gen-box-36\"><div class=\"gen-box-77\"><span class=\"wrapper-z\">per Nap​oli da</span></div></span>\n<div class=\"gen-box-65\" _item_id=\"15\"><span class=\"wrapper-z\">Piedimonte        05​:10</span></div>\n<span class=\"gen-box-28\">Piedimonte        06​:21</span>\n<div class=\"gen-box-38\" _item_id=\"17\"><span class=\"wrapper-z\">Piedimonte        13​:13</span></div>\n<div class=\"gen-box-47\" data-react-id=\"0.g9xke03x2pf\" data-test-hook=\"generated-content\" data-v=\"136\" _item_id=\"18\"><span class=\"wrapper-z\">Piedimonte         17​:21</span></div>\n<span class=\"gen-box-11\">Sulla Linea <u>NAPOLI- BENEVENTO</u> sarà garantito il servizio automobilistico sostitutivo come da programma feriale.</span>\n</section></div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</body></html>"
+  },
+  "response": {
+    "parsedData": {
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2025-06-20 00:00:00",
+        "endDate": "2025-06-20 23:59:59",
+        "locationType": "REGIONAL",
+        "locationCodes": [
+          "15"
+        ],
+        "guaranteedTimes": [
+          "05:30-08:30",
+          "16:30-19:30"
+        ]
+      }
+    },
+    "usage": {
+      "input": 2175,
+      "output": 140,
+      "total": 2315
+    },
+    "costUsd": {
+      "inputCost": 0.00054375,
+      "outputCost": 0.00021,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00075375
+    },
+    "durationMs": 1172,
+    "thoughts": ""
+  }
+}

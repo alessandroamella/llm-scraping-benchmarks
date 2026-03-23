@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-09T19:15:38.990Z",
+  "timestamp": "2026-03-23T13:49:00.006Z",
   "isCacheHit": true,
   "request": {
     "sourceName": "Trenord",
@@ -7,25 +7,25 @@
     "model": "gemini-3.1-flash-lite-preview",
     "strategy": "mineru-html",
     "useLenientSchema": true,
-    "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"Trenord\" (the public transport company of Lombardia (03)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: mineru-html):\n<html class=\"no-js\" dir=\"ltr\" lang=\"it\"><body> <div id=\"main\"> <div class=\"container-fluid grid-margin container-foglia-news\"> <div class=\"container\"> <div class=\"container-fluid containers\"> <div class=\"container-sticky stickem-container\"> <div class=\"content\"> <div class=\"container-content grid-margin\"> <div class=\"col-l\"> <div class=\"text align-middle\"> <h1 class=\"uppercase\" _item_id=\"101\"> <b> Venerdì 29 novembre revocato sciopero FERROVIENORD </b> </h1> </div> <div class=\"frame frame-default frame-type-trenordtheme_simpletextmedia frame-layout-0\" id=\"c15985\"> <div class=\"container-fluid container-text-image\"> <div class=\"row grid-margin\"> <div class=\"container-content col-l\"> <div class=\"text align-middle\"> <p _item_id=\"103\">È stato revocato lo sciopero previsto per venerdì 29 novembre dalle 9 alle 13, che interessava il personale del gestore dell'infrastruttura FERROVIENORD. </p> <p _item_id=\"104\">La circolazione dei treni in Lombardia sarà pertanto regolare anche su rete FERROVIENORD. Dallo sciopero erano già escluse le linee su rete RFI.</p> </div> </div> </div> </div> </div> </div> </div> </div> </div> </div> </div> </div> </div> </body></html>"
+    "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"Trenord\" (the public transport company of Lombardia (03)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: mineru-html):\n<html class=\"no-js\" dir=\"ltr\" lang=\"it\"><body data-react-id=\"0.bni8ys15yy7\" data-test-hook=\"generated-content\"> <div id=\"main\"> <div class=\"container-fluid grid-margin container-foglia-news\" data-react-id=\"0.1ewggzyzox3\" data-test-hook=\"generated-content\"> <div class=\"container\"> <div class=\"container-fluid containers\" data-react-id=\"0.pxyrl0vj3ob\" data-test-hook=\"generated-content\"> <div class=\"container-sticky stickem-container\"> <div class=\"content\"> <div class=\"container-content grid-margin\"> <div class=\"col-l\"> <div class=\"frame frame-default frame-layout-0 css-38zeal\" id=\"c15985\"> <div class=\"container-fluid container-text-image\"> <div class=\"row grid-margin\"> <div class=\"container-content col-l\" data-react-id=\"0.ty8y8jbvjc\" data-test-hook=\"generated-content\"> <div class=\"text align-middle\" _item_id=\"139\"> <span class=\"gen-box-10\">È stato revocato lo sciopero previsto per venerdì 29 novembre dalle 9 alle 13, che interessava il personale del gestore dell'infrastruttura FERROVIENORD. </span> <span class=\"gen-box-57\"> </span> <span class=\"gen-box-5\">La circolazione dei treni in Lombardia sarà pertanto regolare anche su rete FERROVIENORD. Dallo sciopero erano già escluse le linee su rete RFI.</span> </div> </div> </div> </div> </div> </div> </div> </div> </div> </div> </div> </div> </div> </body></html>"
   },
   "response": {
     "parsedData": {
       "isStrike": false
     },
     "usage": {
-      "input": 814,
-      "output": 6,
-      "total": 997
+      "input": 884,
+      "output": 10,
+      "total": 894
     },
     "costUsd": {
-      "inputCost": 0.0002035,
-      "outputCost": 0.000009,
-      "thinkingCost": 0.0002655,
+      "inputCost": 0.000221,
+      "outputCost": 0.000015,
+      "thinkingCost": 0,
       "cachedCost": 0,
-      "totalCost": 0.000478
+      "totalCost": 0.000236
     },
-    "durationMs": 3356,
-    "thoughts": "**Analyzing the Strike Announcement**\n\nOkay, here's the deal. My task is to figure out if this HTML content signals a strike. I've got some Italian text: \"Venerdì 29 novembre revocato sciopero FERROVIENORD\" and \"È stato revocato lo sciopero previsto per venerdì 29 novembre.\" Clearly, it's a revocation of a strike planned for November 29th. The instructions are crystal clear: if it's a revocation, `isStrike` needs to be `false`. No ambiguity there. I'll set `isStrike` to `false`, and I'll return the result as a JSON object, just as requested.\n\nSo, the final output is:\n\n`{\"isStrike\": false}`.\n\n\n"
+    "durationMs": 2425,
+    "thoughts": ""
   }
 }

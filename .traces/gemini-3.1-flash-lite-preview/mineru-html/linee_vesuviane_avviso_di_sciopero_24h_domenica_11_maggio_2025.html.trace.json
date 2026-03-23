@@ -1,0 +1,43 @@
+{
+  "timestamp": "2026-03-23T13:49:01.480Z",
+  "isCacheHit": true,
+  "request": {
+    "sourceName": "EAV",
+    "fileName": "linee_vesuviane_avviso_di_sciopero_24h_domenica_11_maggio_2025.html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "strategy": "mineru-html",
+    "useLenientSchema": true,
+    "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"EAV\" (the public transport company of Campania (15)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: mineru-html):\n<html>\n  <body><div class=\"gen-box-26\"><p>Per il giorno 11 maggio 2025 la O.S. Or.S.A. ha proclamato azione di sciopero aziendale di 24 ore avente le seguenti motivazioni: problematiche organizzazione aziendale.</p>\n<p class=\"gen-box-29\">Durante l’ultima proclamazione di sciopero della O.S. Or.S.A., la percentuale di adesione è stata del 40,31% (sciopero aziendale di 4 ore del 22 marzo 2025)<br/>\n</p><p>Di seguito vengono elencate le ultime e le prime partenze garantite in relazione alle fasce di garanzia.\n</p><p class=\"gen-box-53\">Durante l’orario di sciopero l’effettuazione delle corse è subordinata al numero di lavoratori aderenti allo sciopero.<br/>\n</p><p class=\"gen-box-22\">Servizio garantito dall​e ore 05​:30 alle​ ore 8:​30 e dall​e ore 16​:30 alle​ ore 19​:30</p></div>\n<div class=\"gen-box-57\"><p class=\"gen-box-89\" data-react-id=\"0.de2fzwaakq\" data-test-hook=\"generated-content\" data-v=\"18\">Prime partenze ​garantite dopo lo scio​pero – fascia operatività servizio dalle 16.30 alle 19.30</p>\n<p class=\"gen-box-43\" data-react-id=\"0.p07kvpb7nfc\" data-test-hook=\"generated-content\" data-v=\"450\">da Nap​oli per</p><p>\nSorrento 17:05</p><p>\nPoggiomarino 16:38</p><p>\nTorre Annunziata 16:45</p><p>\nSarno 16:34</p><p>\nda San Giorgio per Baiano 16:30</p></div>\n</body>\n</html>"
+  },
+  "response": {
+    "parsedData": {
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2025-05-11 00:00:00",
+        "endDate": "2025-05-11 23:59:59",
+        "locationType": "REGIONAL",
+        "locationCodes": [
+          "15"
+        ],
+        "guaranteedTimes": [
+          "05:30-08:30",
+          "16:30-19:30"
+        ]
+      }
+    },
+    "usage": {
+      "input": 968,
+      "output": 140,
+      "total": 1108
+    },
+    "costUsd": {
+      "inputCost": 0.000242,
+      "outputCost": 0.00021,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.000452
+    },
+    "durationMs": 1586,
+    "thoughts": ""
+  }
+}

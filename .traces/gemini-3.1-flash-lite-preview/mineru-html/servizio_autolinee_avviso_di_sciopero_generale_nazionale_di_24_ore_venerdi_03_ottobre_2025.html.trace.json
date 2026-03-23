@@ -1,0 +1,40 @@
+{
+  "timestamp": "2026-03-23T13:49:02.044Z",
+  "isCacheHit": true,
+  "request": {
+    "sourceName": "EAV",
+    "fileName": "servizio_autolinee_avviso_di_sciopero_generale_nazionale_di_24_ore_venerdi_03_ottobre_2025.html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "strategy": "mineru-html",
+    "useLenientSchema": true,
+    "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"EAV\" (the public transport company of Campania (15)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: mineru-html):\n<html>\n  <body>\n    <p>Come riferito ieri dagli organi di stampa, per il giorno 03 otto​bre 2025 è stato procl​amato uno scio​pero generale nazionale di 24 ore da parte delle OO.SS. CG​IL e U​SB per le note vicende legate alla guerra a Gaza.</p>\n    <p>Lo scio​pero, che interesserà sia i servizi ferroviari che su gomma, prevede comunque il rispetto delle fasce di garanzia. Sul sito www.eavsrl.it è possibile consultare gli orari delle corse garantite per le diverse linee ferroviarie.</p>\n    <p>Il servizio si svolge regolarmente nelle seguenti fasce di garanzia: dall​e ore 05​:30 alle​ ore 8:​30 e dall​e ore 16​:30 alle​ ore 19​:30</p>\n    <p>Durante l’orario di scio​pero l’effettuazione delle corse è subordinata al numero di lavoratori aderenti allo scio​pero.</p>\n    <p>Quanto sono chiare le informazioni su questa pagina?</p>\n    <p>Cookie Policy</p>\n    <p>✕</p>\n    <p>Questo sito genera cookie. Alcuni di essi sono cookie tecnici, necessari al suo funzionamento. Potrebbero essere presenti cookie di profilazione, generati da terze parti per la creazione di annunci pubblicitari personalizzati: sono facoltativi e possono essere disabilitati .\nEsamina gli elenchi dei cookie, scegli quali cookie di profilazione abilitare (se presenti), quindi clicca su 'Accetta'. Cliccando su 'Rifiuta' neghi il consenso all'abilitazione di qualsiasi cookie di profilazione.\nLeggi la nostra cookie policy</p>\n    <p>Cookie TecniciSession cookies\n\"Cookie utili al funzionamento del sito.\" Web Analytics Italia\n\"Cookie per statistiche anonime sul comportamento degli utenti sul sito.\"</p>\n    <p>Cookie Profilanti di terze parti</p>\n    <p>Scegli i cookie da abilitare:</p>\n    <p>OpenStreetMap</p>\n    <p>Cookie contestuali alla visualizzazione di mappe tramite OpenStreetMap</p>\n  </body>\n</html>"
+  },
+  "response": {
+    "parsedData": {
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2025-10-03 00:00:00",
+        "endDate": "2025-10-03 23:59:59",
+        "locationType": "NATIONAL",
+        "guaranteedTimes": [
+          "05:30-08:30",
+          "16:30-19:30"
+        ]
+      }
+    },
+    "usage": {
+      "input": 966,
+      "output": 131,
+      "total": 1097
+    },
+    "costUsd": {
+      "inputCost": 0.0002415,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.000438
+    },
+    "durationMs": 1144,
+    "thoughts": ""
+  }
+}

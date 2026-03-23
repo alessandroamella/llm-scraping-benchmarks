@@ -1,0 +1,40 @@
+{
+  "timestamp": "2026-03-23T13:49:01.106Z",
+  "isCacheHit": true,
+  "request": {
+    "sourceName": "EAV",
+    "fileName": "linee_flegree_avviso_di_sciopero_24h_lunedi_24_febbraio_2025.html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "strategy": "mineru-html",
+    "useLenientSchema": true,
+    "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"EAV\" (the public transport company of Campania (15)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: mineru-html):\n<html>\n  <body>\n                        \n\n\n\n                        <p class=\"gen-box-67\">Per il giorno 24 febbr​aio 2025 la O.​S. U​SB ha procl​amato azione di scio​pero per adesione a scio​pero nazionale di 24 ore avente le seguenti motivazioni: per una maggiore sicurezza dei lavoratori e del servizio ed un incremento delle retribuzioni mensili.</p>\nDurante l’ultima proclamazione di scio​pero della O.​S. U​SB, la percentuale di adesione è stata del 9,2% (scio​pero generale nazionale di 24 ore del 13 dicembre 2024)\n<p class=\"gen-box-50\" data-react-id=\"0.7poau6mb86u\" data-test-hook=\"generated-content\" data-v=\"835\">Di seguito vengono elencate le ultime e le prime partenze ​garantite in relazione alle diverse fasce di garanzia. Durante l’orario di scio​pero l’effettuazione delle corse è subordinata al numero di lavoratori aderenti allo scio​pero.</p>\nServizio garantito dall​e ore 05​:30 alle​ ore 8:​30 e dall​e ore 16​:30 alle​ ore 19​:30\n<p class=\"gen-box-76\" data-react-id=\"0.5caaxdhihjt\" data-test-hook=\"generated-content\" data-v=\"99\">Prime partenze ​garantite dopo lo scio​pero – fascia operatività servizio dalle 5:​30 alle 8:​30</p>\n<div class=\"gen-box-50\" data-react-id=\"0.fth24j3ymfc\" data-test-hook=\"generated-content\" data-v=\"977\">\nda Montesanto per Torregaveta     05​:45\nda Fuorigrotta per Bagnoli             05​:38\n<p class=\"gen-box-41\" data-react-id=\"0.4rblecfzxzs\" data-test-hook=\"generated-content\" data-v=\"405\">da Quarto per Licola                        05​:42</p>\n<p class=\"gen-box-12\" data-react-id=\"0.5xcl06fj2a\" data-test-hook=\"generated-content\" data-v=\"696\">da Montesanto per Licola               05​:36</p>\n\nda Fuorigrotta per Montesanto     05​:30\nda Torregaveta per Montesanto    05​:38\n<p class=\"gen-box-89\">da Quarto per Montesanto             05​:45</p>\nda Licola per Montesanto               05​:56\n</div>\n<p class=\"gen-box-61\" data-react-id=\"0.ggp1ym0i5m\" data-test-hook=\"generated-content\" data-v=\"385\">Ultime partenze ​garantite prima dello scio​pero – fascia operatività servizio dalle 5:​30 alle 8:​30</p>\n\nda Montesanto per Torregaveta    08​:15\n<p class=\"gen-box-87\">da Montesanto per Bagnoli            08​:30</p>\n<p class=\"gen-box-15\">da Montesanto per Licola                08​:24</p>\n\n<p class=\"gen-box-48\">per Montesanto da Torregaveta    08​:08</p>\nper Montesanto da Licola                08​:20\n\nPrime partenze ​garantite dopo lo scio​pero – fascia operatività servizio dalle 16.30 alle 19.30\n\n<p class=\"gen-box-69\" data-react-id=\"0.tv9cyjbdjm\" data-test-hook=\"generated-content\" data-v=\"353\">da Montesanto per Bagnoli            16​:30</p>\nda Montesanto per Torregaveta   16​:45\n<p class=\"gen-box-94\">da Montesanto per Licola              16​:48</p>\n\n<p class=\"gen-box-99\">per Montesanto da Torregaveta   16​:38</p>\n<p class=\"gen-box-55\" data-react-id=\"0.u1rybo1j3o\" data-test-hook=\"generated-content\" data-v=\"92\">per Montesanto da Bagnoli           16​:47</p>\n<p class=\"gen-box-1\">per Montesanto da Licola              16​:44</p>\n\n \n<p class=\"gen-box-90\">Ultime partenze ​garantite prima dello scio​pero – fascia operatività servizio dalle 16.30 alle 19.30</p>\n\nda Montesanto per Torregaveta   19​:15\nda Montesanto per Bagnoli           19​:30\n<p class=\"gen-box-81\">da Montesanto per Licola              19​:12</p>\n\nper Montesanto da Torregaveta   19​:08\n<p class=\"gen-box-64\">per Montesanto da Bagnoli           19​:17</p>\nper Montesanto da Licola              19​:08\n\n<p class=\"gen-box-24\">Il servizio sostitutivo Gerolomini-Pozzuoli-Arco Felice non è interessato dallo scio​pero.</p>\n                                \n                                \n\n                                                                    \n                                                                \n                                \n\n                                \n\n                                \n\n                                                        \n                    \n\n                </body>\n</html>"
+  },
+  "response": {
+    "parsedData": {
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2025-02-24 00:00:00",
+        "endDate": "2025-02-24 23:59:59",
+        "locationType": "NATIONAL",
+        "guaranteedTimes": [
+          "05:30-08:30",
+          "16:30-19:30"
+        ]
+      }
+    },
+    "usage": {
+      "input": 2214,
+      "output": 131,
+      "total": 2345
+    },
+    "costUsd": {
+      "inputCost": 0.0005535,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00075
+    },
+    "durationMs": 1345,
+    "thoughts": ""
+  }
+}

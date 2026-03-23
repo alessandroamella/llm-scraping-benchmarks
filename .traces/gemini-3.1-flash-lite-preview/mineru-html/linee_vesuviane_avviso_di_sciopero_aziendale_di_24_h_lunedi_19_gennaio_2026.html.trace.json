@@ -1,0 +1,43 @@
+{
+  "timestamp": "2026-03-23T13:49:02.410Z",
+  "isCacheHit": true,
+  "request": {
+    "sourceName": "EAV",
+    "fileName": "linee_vesuviane_avviso_di_sciopero_aziendale_di_24_h_lunedi_19_gennaio_2026.html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "strategy": "mineru-html",
+    "useLenientSchema": true,
+    "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"EAV\" (the public transport company of Campania (15)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: mineru-html):\n<html>\n  <body>\n                        \n\n\n\n                        Si comunica che per il giorno 19 gennaio 2026 è stato procl​amato uno scio​pero aziendale di 24 ore da parte della O.​S. CONFAIL che interesserà il solo personale viaggiante delle linee Vesuviane avente come motivazione: problematiche organizzazione aziendale.\n<p class=\"gen-box-85\">Durante l’ultima proclamazione di scio​pero della O.​S. Confail, la percentuale di adesione è stata del 47% (scio​pero del 12 novembre 2025)</p>\nDi seguito vengono elencate le ultime e le prime partenze garantite in relazione alle fasce di garanzia.<br/>\nDurante l’orario di sciopero l’effettuazione delle corse è subordinata al numero di lavoratori aderenti allo sciopero.\n<p class=\"gen-box-67\">Servizio garantito dall​e ore 05​:30 alle​ ore 8:​30 e dall​e ore 16​:30 alle​ ore 19​:30</p>\n<div class=\"gen-box-42\" data-react-id=\"0.9aaiecs58oa\" data-test-hook=\"generated-content\" data-v=\"28\"><p class=\"gen-box-88\">Ultime partenze ​garantite prima dello scio​pero – fascia operatività servizio dall​e ore 5:​30 alle​ ore 08​:30</p></div>\n\n<p class=\"gen-box-67\">Sorr​ento:                       08​:05</p>\n<p class=\"gen-box-40\">Poggio​marino:              08​:14</p>\n<p class=\"gen-box-14\">Sa​rno:                             08​:10</p>\nTorre Annunziata:       08​:26 diretto\n<p class=\"gen-box-55\">Da Volla per Baiano:    8:​09</p>\n<p class=\"gen-box-87\"> </p>\nper Nap​oli da\n<p class=\"gen-box-78\" data-react-id=\"0.yxwuzt5maz\" data-test-hook=\"generated-content\" data-v=\"279\">Sorr​ento:                      08​:14</p>\n<p class=\"gen-box-44\" data-react-id=\"0.frdjuwzabyq\" data-test-hook=\"generated-content\" data-v=\"753\">Poggio​marino:           08​:18</p>\nSa​rno:                          08​:26\n<p class=\"gen-box-10\" data-react-id=\"0.wuix94667jk\" data-test-hook=\"generated-content\" data-v=\"921\">Torre Annunziata:     08​:44 treno 4082 da Poggio​marino</p>\nDa Baiano per Volla:  8:​00\n<p class=\"gen-box-90\" data-react-id=\"0.z8l0zdxlsm\" data-test-hook=\"generated-content\" data-v=\"601\"> </p>\nPrime partenze ​garantite dopo lo scio​pero – fascia operatività servizio dalle 16.30 alle 19.30\n\n<p class=\"gen-box-57\">Sorr​ento:                    17​:05</p>\n<p class=\"gen-box-58\">Poggio​marino:          16​:38</p>\n<p class=\"gen-box-51\">Torre Annunziata:    16​:45</p>\n<p class=\"gen-box-10\" data-react-id=\"0.s1mvpnx1bbe\" data-test-hook=\"generated-content\" data-v=\"797\">Sa​rno:                          16​:34</p>\nDa Volla per Baiano: 17​:05\n<p class=\"gen-box-62\"> </p>\n<p class=\"gen-box-35\" data-react-id=\"0.i5vx22qi96h\" data-test-hook=\"generated-content\" data-v=\"109\">per Nap​oli da</p>\n<p class=\"gen-box-77\">Sorr​ento:                     16​:38</p>\nPoggio​marino:           16​:42\nSa​rno:                         16​:50\n<p class=\"gen-box-82\">Torre Annunziata:    16​:57</p>\nDa Baiano per Volla: 17​:00\n<p class=\"gen-box-30\"> </p>\n<p class=\"gen-box-81\">Ultime partenze ​garantite prima dello scio​pero – fascia operatività servizio dalle 16.30 alle 19.30</p>\n\n<p class=\"gen-box-93\" data-react-id=\"0.qhjgfvm1dd\" data-test-hook=\"generated-content\" data-v=\"774\">Sorr​ento:                    19​:29</p>\n<p class=\"gen-box-5\" data-react-id=\"0.la9hkvujrk\" data-test-hook=\"generated-content\" data-v=\"581\">Poggio​marino:           19​:02</p>\nSa​rno:                          18​:58\nTorre Annunziata:    19​:09\n<p class=\"gen-box-94\" data-react-id=\"0.8fcwvqb5zfb\" data-test-hook=\"generated-content\" data-v=\"767\">Da Volla per Baiano: 19​:05</p>\n \n\n<p class=\"gen-box-56\">Sorr​ento:                    19​:02</p>\nPoggio​marino:           18​:30\n<p class=\"gen-box-74\">Sa​rno:                         19​:14</p>\n<p class=\"gen-box-94\" data-react-id=\"0.fu5q4pbkn86\" data-test-hook=\"generated-content\" data-v=\"886\">Torre Annunziata:    19​:21</p>\nDa Baiano per Volla: 19​:00\n<p class=\"gen-box-65\"> </p>\n                                \n                                \n\n                                                                    \n                                                                \n                                \n\n                                \n\n                                \n\n                                                        \n                    \n\n                </body>\n</html>"
+  },
+  "response": {
+    "parsedData": {
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2026-01-19 00:00:00",
+        "endDate": "2026-01-19 23:59:59",
+        "locationType": "REGIONAL",
+        "locationCodes": [
+          "15"
+        ],
+        "guaranteedTimes": [
+          "05:30-08:30",
+          "16:30-19:30"
+        ]
+      }
+    },
+    "usage": {
+      "input": 2636,
+      "output": 140,
+      "total": 2776
+    },
+    "costUsd": {
+      "inputCost": 0.000659,
+      "outputCost": 0.00021,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.000869
+    },
+    "durationMs": 1022,
+    "thoughts": ""
+  }
+}

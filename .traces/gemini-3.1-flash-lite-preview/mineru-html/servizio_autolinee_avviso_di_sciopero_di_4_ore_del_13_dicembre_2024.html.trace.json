@@ -1,0 +1,39 @@
+{
+  "timestamp": "2026-03-23T13:49:00.861Z",
+  "isCacheHit": true,
+  "request": {
+    "sourceName": "EAV",
+    "fileName": "servizio_autolinee_avviso_di_sciopero_di_4_ore_del_13_dicembre_2024.html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "strategy": "mineru-html",
+    "useLenientSchema": true,
+    "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"EAV\" (the public transport company of Campania (15)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: mineru-html):\n<html lang=\"it-IT\" xmlns=\"https://www.w3.org/1999/xhtml\" xmlns:fb=\"http://www.facebook.com/2008/fbml\" xmlns:og=\"https://ogp.me/ns#\"><body class=\"wp-singular post-template post-template-single-di-noside post-template-single-di-noside-php single single-post postid-15216 single-format-standard custom-background wp-theme-design-italia wp-child-theme-design-italia-child\" data-react-id=\"0.l0s9gwaouz\" data-test-hook=\"generated-content\" data-v=\"560\" ontouchstart=\"\">\n<div class=\"hfeed\">\n<div>\n<div class=\"gen-box-51\">\n<div class=\"gen-box-58\" data-react-id=\"0.39oa4adh98b\" data-test-hook=\"generated-content\" data-v=\"4\">\n<div class=\"row\">\n<div class=\"offset-lg-1 col-lg-6 col-md-7\">\n<div class=\"css-fnb19h\" _item_id=\"2\">\n<span class=\"gen-box-49\" data-react-id=\"0.kifytse5jsi\" data-test-hook=\"generated-content\" data-v=\"919\">\n\t\t\t\t\t\t\t\t\t\tServizio Autolinee: Avviso di scio​pero di 4 ore del 13 dicembre 2024\t\t\t\t</span>\n</div>\n</div>\n</div>\n</div>\n<div class=\"gen-box-15\">\n<div class=\"css-a7y9b\">\n<div class=\"row\" data-react-id=\"0.va22u6t919\" data-test-hook=\"generated-content\" data-v=\"539\">\n<div class=\"offset-md-1 col-md-10\">\n<section class=\"css-itolr4 css-07awzn\"><div class=\"gen-box-61\" data-react-id=\"0.6m74vbeds0w\" data-test-hook=\"generated-content\" data-v=\"444\" _item_id=\"10\">Si comunica che, a seguito dell’ordinanza di precettazione da parte del Ministro delle infrastrutture e dei trasporti, lo sciopero generale nazionale di 24 ore proclamato per il giorno 13 dicembre 2024 dalla O.S. USB, <span class=\"gen-box-59\">è stato ridotto a 4 ore, dall​e ore 09​:00 alle​ ore 13​:00.</span>\n</div>\n<div class=\"gen-box-40\" data-react-id=\"0.etj5o5pzmpb\" data-test-hook=\"generated-content\" data-v=\"476\" _item_id=\"11\"><span class=\"wrapper-z\">Le motivazioni dello scio​pero sono le seguenti:</span></div>\n<span class=\"gen-box-78\" data-react-id=\"0.sh1oe4u71q\" data-test-hook=\"generated-content\" data-v=\"0\">\n<span class=\"gen-box-10\" data-react-id=\"0.iljlz29ju\" data-test-hook=\"generated-content\" data-v=\"179\">• Una nuova indicizzazione che leghi i salari all’aumento reale del costo della vita;</span>\n<div class=\"gen-box-8\"><span class=\"wrapper-z\">• Un rinnovo contrattuale con incremento delle retribuzioni di 300 euro;</span></div>\n<span class=\"gen-box-81\">• Il libero esercizio del diritto di scio​pero senza il rispetto delle fasce di garanzia;</span>\n<span class=\"gen-box-83\">• Riduzione dell’orario di lavoro a 32 ore a parità di salario;</span>\n<span class=\"gen-box-96\" data-react-id=\"0.6jptquhckis\" data-test-hook=\"generated-content\" data-v=\"415\">• La sicurezza dei lavoratori e del servizio;</span>\n<div class=\"gen-box-18\"><span class=\"wrapper-z\">• Contro le guerre ed il genocidio del governo Israeliano nei confronti del popolo Palestinese;</span></div>\n<div class=\"gen-box-36\"><span class=\"wrapper-z\">• Contro la manovra economica per il 2025 approvata dal Governo Meloni.</span></div>\n</span>\n<span class=\"gen-box-65\" data-react-id=\"0.m5xzs9eagvh\" data-test-hook=\"generated-content\" data-v=\"276\">Durante l’ultima proclamazione di scio​pero della citata O.​S., la percentuale di adesione è stata del 5,7% (scio​pero di 4 ore del giorno 28 otto​bre 2024)</span>\n<span class=\"gen-box-54\"><span class=\"gen-box-36\">Non sarà garantito il servizio durante l’orario di scio​pero.</span></span>\n<span class=\"gen-box-99\">Durante l’orario di scio​pero l’effettuazione delle corse è subordinata al numero di lavoratori aderenti allo scio​pero.</span>\n</section></div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</body></html>"
+  },
+  "response": {
+    "parsedData": {
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2024-12-13 09:00:00",
+        "endDate": "2024-12-13 13:00:00",
+        "locationType": "REGIONAL",
+        "locationCodes": [
+          "15"
+        ]
+      }
+    },
+    "usage": {
+      "input": 1721,
+      "output": 99,
+      "total": 1820
+    },
+    "costUsd": {
+      "inputCost": 0.00043025,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00057875
+    },
+    "durationMs": 1112,
+    "thoughts": ""
+  }
+}

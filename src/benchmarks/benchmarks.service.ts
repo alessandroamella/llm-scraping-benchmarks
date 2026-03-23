@@ -84,14 +84,14 @@ export class BenchmarksService implements OnModuleInit, OnModuleDestroy {
 
   // Toggle this to run benchmarks
   private readonly useLenientSchema = true;
-  private readonly includeManualInSuite = false;
+  private readonly includeManualInSuite = true;
   private readonly generateChaosDatasetFlag = false;
 
-  private readonly customReportName = 'change_me';
+  private readonly customReportName = 'resilience_suite_full_with_mineru';
   // private readonly disabledChecks: string[] = ['locationType', 'locationCodes'];
   private readonly disabledChecks: string[] = [];
 
-  private readonly enableResilienceSuite = false; // Toggle Resilience Suite
+  private readonly enableResilienceSuite = true; // Toggle Resilience Suite
   private readonly enableAiSuites = true; // Toggle AI Suites
   private readonly enableSlmSuites = true; // Toggle SLM Suites (MinerU and Jina)
 
@@ -484,6 +484,26 @@ export class BenchmarksService implements OnModuleInit, OnModuleDestroy {
         }
       }
 
+      for (const model of models) {
+        const mineruMessedDir = path.join(this.trenordMessedDir, 'mineru-html');
+        if (fs.existsSync(mineruMessedDir)) {
+          trenordResilienceParsers.push(
+            new PreComputedFileParser(
+              this.aiRunner,
+              'mineru-html',
+              'Trenord',
+              model,
+              mineruMessedDir,
+              (f) => f, // Keeps the original filename mapping
+            ),
+          );
+        } else {
+          this.logger.warn(
+            `⚠️ MinerU Chaos directory not found: ${mineruMessedDir}`,
+          );
+        }
+      }
+
       // Nota: Passiamo 'Trenord-Messed' come nome della "company" per farlo cercare nella cartella giusta
       // Ma dobbiamo "ingannare" il runSuite perché groundTruth ha le chiavi basate sui file originali.
       // Il trucco è che i nomi dei file sono identici, cambia solo la cartella.
@@ -529,6 +549,26 @@ export class BenchmarksService implements OnModuleInit, OnModuleDestroy {
               model,
               this.useLenientSchema,
             ),
+          );
+        }
+      }
+
+      for (const model of models) {
+        const mineruMessedDir = path.join(this.eavMessedDir, 'mineru-html');
+        if (fs.existsSync(mineruMessedDir)) {
+          eavResilienceParsers.push(
+            new PreComputedFileParser(
+              this.aiRunner,
+              'mineru-html',
+              'EAV',
+              model,
+              mineruMessedDir,
+              (f) => f,
+            ),
+          );
+        } else {
+          this.logger.warn(
+            `⚠️ MinerU Chaos directory not found: ${mineruMessedDir}`,
           );
         }
       }

@@ -1,0 +1,43 @@
+{
+  "timestamp": "2026-03-23T13:49:00.678Z",
+  "isCacheHit": true,
+  "request": {
+    "sourceName": "EAV",
+    "fileName": "linea_metropolitana_avviso_di_sciopero_di_24_ore_venerdi_13_dicembre_2024_aggiornamento.html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "strategy": "mineru-html",
+    "useLenientSchema": true,
+    "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"EAV\" (the public transport company of Campania (15)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: mineru-html):\n<html>\n  <body>\n                        \n\n\n\n                        Si comunica che, in seguito all’accoglimento da parte del TAR del Lazio della richiesta dell’USB di sospendere l’ordinanza di precettazione del Ministero dei Trasporti, <p class=\"gen-box-34\">lo scio​pero procl​amato per domani 13 dicembre torna ad essere di 24 ore.</p>\n<p class=\"gen-box-71\" data-react-id=\"0.pzwl3n4ucbm\" data-test-hook=\"generated-content\" data-v=\"943\">Lo scio​pero ha le seguenti motivazioni:</p>\n\n• Una nuova indicizzazione che leghi i salari all’aumento reale del costo della vita;\n<p class=\"gen-box-82\">• Un rinnovo contrattuale con incremento delle retribuzioni di 300 euro</p>\n• il libero esercizio del diritto di scio​pero senza il rispetto delle fasce di garanzia\n• Riduzione dell’orario di lavoro a 32 ore a parità di salario;\n<p class=\"gen-box-59\">• la sicurezza dei lavoratori e del servizio</p>\n• Contro le guerre ed il genocidio del governo Israeliano nei confronti del popolo Palestinese;\n<p class=\"gen-box-10\">• Contro la manovra economica per il 2025 approvata dal Governo Meloni.</p>\n\nDurante l’ultima proclamazione di scio​pero delle citate OO.SS., la percentuale di adesione è stata del 5,7% (scio​pero di 4 ore del giorno 28 otto​bre 2024)\nDi seguito vengono elencate le ultime e le prime partenze ​garantite in relazione alle fasce di garanzia. Durante l’orario di scio​pero l’effettuazione delle corse è subordinata al numero di lavoratori aderenti allo scio​pero.\n<div class=\"gen-box-12\"><p class=\"gen-box-42\">Servizio garantito dall​e ore 05​:30 alle​ ore 8:​30 e dall​e ore 16​:30 alle​ ore 19​:30</p></div>\n<p class=\"gen-box-59\">Ultime partenze ​garantite prima dello scio​pero</p>\n<div class=\"gen-box-4\">\n<p class=\"gen-box-93\">da Ave​rsa per Pisc​inola  08.15</p>\nda Pisc​inola per Ave​rsa 08.15\n</div>\n<p class=\"gen-box-99\">Prime partenze ​garantite dopo lo scio​pero – (fascia operatività servizio dalle 16.30 alle 19.30)</p>\n<div class=\"gen-box-30\" data-react-id=\"0.s6brm6xczb\" data-test-hook=\"generated-content\" data-v=\"290\">\n<p class=\"gen-box-64\" data-react-id=\"0.nzfkcj67ump\" data-test-hook=\"generated-content\" data-v=\"433\">da Ave​rsa per    Pisc​inola             16.30</p>\nda Pisc​inola        per Ave​rsa          16.45\n</div>\n<p class=\"gen-box-2\">Ultime partenze ​garantite prima dello scio​pero </p>\n<div class=\"gen-box-98\">\nda Ave​rsa per Pisc​inola  19.00\n<p class=\"gen-box-62\">da Pisc​inola per Ave​rsa  19.15</p>\n</div>\n                                \n                                \n\n                                                                \n                                \n\n                                \n\n                                \n\n                                                        \n                    \n\n                </body>\n</html>"
+  },
+  "response": {
+    "parsedData": {
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2024-12-13 00:00:00",
+        "endDate": "2024-12-13 23:59:59",
+        "locationType": "REGIONAL",
+        "locationCodes": [
+          "15"
+        ],
+        "guaranteedTimes": [
+          "05:30-08:30",
+          "16:30-19:30"
+        ]
+      }
+    },
+    "usage": {
+      "input": 1414,
+      "output": 140,
+      "total": 1554
+    },
+    "costUsd": {
+      "inputCost": 0.0003535,
+      "outputCost": 0.00021,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0005635
+    },
+    "durationMs": 1302,
+    "thoughts": ""
+  }
+}

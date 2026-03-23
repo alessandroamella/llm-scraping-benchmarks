@@ -1,0 +1,40 @@
+{
+  "timestamp": "2026-03-23T13:49:02.254Z",
+  "isCacheHit": true,
+  "request": {
+    "sourceName": "EAV",
+    "fileName": "linee_flegree_avviso_di_sciopero_generale_nazionale_di_24_ore_di_venerdi_28_novembre_2025.html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "strategy": "mineru-html",
+    "useLenientSchema": true,
+    "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"EAV\" (the public transport company of Campania (15)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: mineru-html):\n<html>\n  <body>\n                        \n\n\n\n                        Si comunica che per il giorno 28 novembre 2025 è stato procl​amato uno scio​pero generale nazionale di 24 ore da parte della O.​S. U​SB per tutte le categorie pubbliche e private avente come motivazioni: contro le azioni proposte dal Governo riguardo il finanziamento della guerra; in favore dell’abolizione delle limitazioni al diritto allo scio​pero e per costruire un nuovo modello di rappresentanza per favorire la contrattazione, per l’aumento delle pensioni minime e la riduzione dell’orario di lavoro a parità di salario. Lo scio​pero, che interesserà sia i servizi ferroviari che su gomma, prevede comunque il rispetto delle fasce di garanzia.\n<p class=\"gen-box-32\" data-react-id=\"0.1ipb3tpjz94\" data-test-hook=\"generated-content\" data-v=\"663\">Durante l’ultima proclamazione di scio​pero della O.​S. U​SB, la percentuale di adesione è stata del 14,5% scio​pero generale di 24 ore del 03 otto​bre 2025</p>\n<p class=\"gen-box-69\">Di seguito vengono elencate le ultime e le prime partenze garantite in relazione alle fasce di garanzia.<br/>\nDurante l’orario di sciopero l’effettuazione delle corse è subordinata al numero di lavoratori aderenti allo sciopero.</p>\n<p class=\"gen-box-4\">Servizio garantito dall​e ore 05​:30 alle​ ore 8:​30 e dall​e ore 16​:30 alle​ ore 19​:30</p>\n<p class=\"gen-box-16\" data-react-id=\"0.56yq9gq4b3d\" data-test-hook=\"generated-content\" data-v=\"118\">Prime partenze ​garantite dopo lo scio​pero – operatività servizio dalle 5.30 alle 8.30</p>\n<div class=\"gen-box-33\" data-react-id=\"0.gojoqjoqu2d\" data-test-hook=\"generated-content\" data-v=\"377\">\n<p class=\"gen-box-34\" data-react-id=\"0.y1vk71fk3ut\" data-test-hook=\"generated-content\" data-v=\"551\">da Montesanto per Bagnoli            05​:45</p>\nda Fuorigrotta per Bagnoli             05​:38\nda Gerolomini per Torregaveta      06​:01\n<p class=\"gen-box-84\">da Montesanto per Licola               05​:36</p>\nda Quarto per Licola                       05​:44\n<p class=\"gen-box-86\">da Soccavo per Monte S.Angelo    07​:26</p>\nda Monte S.Angelo per Soccavo    07​:34\n<p class=\"gen-box-21\">da Fuorigrotta per Montesanto        05​:30</p>\nda Bagnoli per Montesanto             05​:47\nda Torregaveta per Gerolomini       05​:38\nda Licola  per Montesanto               05​:56\nda Quarto per Montesanto               05​:45\n</div>\n<p class=\"gen-box-75\" data-react-id=\"0.pci6oe14app\" data-test-hook=\"generated-content\" data-v=\"897\">Ultime partenze ​garantite prima dello scio​pero – operatività servizio dalle 5.30 alle 8.30</p>\n\nda Montesanto per Bagnoli              08​:30\n<p class=\"gen-box-76\" data-react-id=\"0.4hp7mrrsuyn\" data-test-hook=\"generated-content\" data-v=\"710\">da Gerolomini per Torregaveta        08​:16</p>\n<p class=\"gen-box-1\">da Montesanto per Licola                   8:​24</p>\n\n<p class=\"gen-box-0\" data-react-id=\"0.ir2nzfnj19\" data-test-hook=\"generated-content\" data-v=\"602\">Da Bagnoli per Montesanto               08​:17</p>\nda Torregaveta per Gerolomini         07​:53\n<p class=\"gen-box-87\">da Licola  per Montesanto                 08​:20</p>\n<p class=\"gen-box-57\">da Soccavo per Monte S.Angelo       08​:14</p>\nda Monte S.Angelo per Soccavo       08​:22\n\n<p class=\"gen-box-79\">Prime partenze ​garantite dopo lo scio​pero – operatività servizio dalle 16.30 alle 19.30</p>\n<div class=\"gen-box-75\">\n<p class=\"gen-box-78\" data-react-id=\"0.aozxkrm5zdt\" data-test-hook=\"generated-content\" data-v=\"276\">da Montesanto per Bagnoli               16​:30</p>\nda Gerolomini per Torregaveta        16​:31\n<p class=\"gen-box-88\">da Montesanto per Licola                  16​:48</p>\n<p class=\"gen-box-11\">Da Bagnoli per Montesanto               16​:32</p>\n<p class=\"gen-box-49\">da Torregaveta per Gerolomini         16​:53</p>\nda Licola  per Montesanto                16​:44\nda Soccavo per Monte S.Angelo       16​:38\nda Monte S.Angelo per Soccavo       16​:46\n</div>\nUltime partenze ​garantite prima dello scio​pero – operatività servizio dalle 16.30 alle 19.30\n\nda Montesanto per Bagnoli                 19​:30\nda Gerolomini per Torregaveta          18​:46\n<p class=\"gen-box-90\">da Montesanto per Licola                   19​:12</p>\n<p class=\"gen-box-55\">Da Bagnoli per Montesanto                19​:17</p>\nda Torregaveta per Gerolomini           19​:08\nda Licola  per Montesanto                   19​:08\n<p class=\"gen-box-62\">da Soccavo per Monte S.Angelo         19​:26</p>\n<p class=\"gen-box-91\">da Monte S.Angelo per Soccavo         19​:10</p>\n\n                                \n                                \n\n                                                                    \n                                                                \n                                \n\n                                \n\n                                \n\n                                                        \n                    \n\n                </body>\n</html>"
+  },
+  "response": {
+    "parsedData": {
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2025-11-28 00:00:00",
+        "endDate": "2025-11-28 23:59:59",
+        "locationType": "NATIONAL",
+        "guaranteedTimes": [
+          "05:30-08:30",
+          "16:30-19:30"
+        ]
+      }
+    },
+    "usage": {
+      "input": 2922,
+      "output": 131,
+      "total": 3053
+    },
+    "costUsd": {
+      "inputCost": 0.0007305,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.000927
+    },
+    "durationMs": 1228,
+    "thoughts": ""
+  }
+}

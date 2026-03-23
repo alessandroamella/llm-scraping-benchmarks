@@ -1,0 +1,40 @@
+{
+  "timestamp": "2026-03-23T13:49:02.102Z",
+  "isCacheHit": true,
+  "request": {
+    "sourceName": "EAV",
+    "fileName": "linea_metropolitana_avviso_di_sciopero_generale_nazionale_di_venerdi_03_ottobre_2025.html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "strategy": "mineru-html",
+    "useLenientSchema": true,
+    "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"EAV\" (the public transport company of Campania (15)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: mineru-html):\n<html>\n  <body>\n                        \n\n\n\n                        Come riferito ieri dagli organi di stampa, per il giorno 03 otto​bre 2025 è stato procl​amato uno scio​pero generale nazionale di 24 ore da parte delle OO.SS. CG​IL e U​SB per le note vicende legate alla guerra a Gaza.\n<p class=\"gen-box-92\">Lo scio​pero, che interesserà sia i servizi ferroviari che su gomma, prevede comunque il rispetto delle fasce di garanzia. Sul sito www.eavsrl.it è possibile consultare gli orari delle corse garantite per le diverse linee ferroviarie.</p>\n<p class=\"gen-box-64\" data-react-id=\"0.d15qfqn3fzn\" data-test-hook=\"generated-content\" data-v=\"976\">Di seguito vengono elencate le ultime e le prime partenze garantite in relazione alle fasce di garanzia.<br/>\nDurante l’orario di sciopero l’effettuazione delle corse è subordinata al numero di lavoratori aderenti allo sciopero.</p>\n<div class=\"gen-box-6\" data-react-id=\"0.pg59fg1r6g\" data-test-hook=\"generated-content\" data-v=\"795\"><p class=\"gen-box-27\">Servizio garantito dall​e ore 05​:30 alle​ ore 8:​30 e dall​e ore 16​:30 alle​ ore 19​:30</p></div>\n<p class=\"gen-box-27\">Ultime partenze ​garantite prima dello scio​pero</p>\n\nda Ave​rsa per Pisc​inola     08.15\n<p class=\"gen-box-37\" data-react-id=\"0.afz2m8pkqt\" data-test-hook=\"generated-content\" data-v=\"543\">da Pisc​inola per Ave​rsa    08.15</p>\n\n<p class=\"gen-box-77\">Prime partenze ​garantite dopo lo scio​pero – (fascia operatività servizio dalle 16.30 alle 19.30)</p>\n<p class=\"gen-box-91\" data-react-id=\"0.35uc5d2oh6z\" data-test-hook=\"generated-content\" data-v=\"953\">\nda Ave​rsa per Pisc​inola     16.30\nda Pisc​inola  per Ave​rsa   16.45\n</p>\nUltime partenze ​garantite prima dello scio​pero\n<p class=\"gen-box-90\">\nda Ave​rsa per Pisc​inola     19.15\nda Pisc​inola per Ave​rsa     19.15\n</p>\n                                \n                                \n\n                                                                \n                                \n\n                                \n\n                                \n\n                                                        \n                    \n\n                </body>\n</html>"
+  },
+  "response": {
+    "parsedData": {
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2025-10-03 00:00:00",
+        "endDate": "2025-10-03 23:59:59",
+        "locationType": "NATIONAL",
+        "guaranteedTimes": [
+          "05:30-08:30",
+          "16:30-19:30"
+        ]
+      }
+    },
+    "usage": {
+      "input": 1196,
+      "output": 131,
+      "total": 1327
+    },
+    "costUsd": {
+      "inputCost": 0.000299,
+      "outputCost": 0.0001965,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.0004955
+    },
+    "durationMs": 1332,
+    "thoughts": ""
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "timestamp": "2026-03-23T13:49:02.151Z",
+  "isCacheHit": true,
+  "request": {
+    "sourceName": "EAV",
+    "fileName": "linee_vesuviane_avviso_di_sciopero_di_4_ore_del_13_ottobre_2025.html",
+    "model": "gemini-3.1-flash-lite-preview",
+    "strategy": "mineru-html",
+    "useLenientSchema": true,
+    "prompt": "You are a precise data extraction algorithm.\nAnalyze the following content regarding a possible strike from \"EAV\" (the public transport company of Campania (15)).\n\nIMPORTANT INSTRUCTIONS:\n1. Decide if this document is actually announcing a new/upcoming strike.\n   - If it is a cancellation/revocation of a strike, set isStrike to false.\n   - If it is just providing information about participation (adesione) of a strike that already happened, set isStrike to false.\n   - If it is providing real-time updates about an ongoing strike (e.g., \"the metro is currently closed due to a strike\"), set isStrike to false.\n   - If it is providing real-time service updates (e.g., metro is open/closed during the strike), set isStrike to false.\n   - ONLY set isStrike to true if it is an announcement of an upcoming strike.\n\n2. If isStrike is true, extract the strike details:\n   - Dates must be in 'yyyy-MM-dd HH:mm:ss' format.\n   - Guaranteed times must be arrays of 'HH:mm-HH:mm' (omitted if not specified).\n   - Location codes should be: 2-digit ISTAT for regions (e.g., \"03\" for Lombardia), or omitted for national strikes.\n\nExample Output if NOT a strike:\n{\n  \"isStrike\": false\n}\n\nExample Output if IS a strike:\n{\n  \"isStrike\": true,\n  \"strikeData\": {\n    \"startDate\": \"2024-12-31 08:30:00\",\n    \"endDate\": \"2024-12-31 12:30:00\",\n    \"locationType\": \"REGIONAL\",\n    \"locationCodes\": [\"12\"],\n    \"guaranteedTimes\": [\"06:00-09:00\", \"18:00-21:00\"]\n  }\n}\n\nInput Content (Pre-processing: mineru-html):\n<html>\n  <body>\n                        \n\n\n\n                        <p class=\"gen-box-80\">Si comunica che per lunedì 13 ottobre 2025 le O.S. Faisa Confail ha proclamato uno sciopero aziendale di 4 ore per il solo personale viaggiante delle linee vesuviane, dalle ore 08:30 alle ore 12:30, avente le seguenti motivazioni: problematiche organizzazione aziendale.</p>\n<p class=\"gen-box-6\">Durante l’ultima proclamazione di scio​pero delle citata O.​S., la percentuale di adesione è stata del 3,39% (scio​pero del 23/07/2025).</p>\nDi seguito vengono elencate le ultime e le prime partenze ​garantite in relazione alle diverse fasce di garanzia.\nDurante l’orario di scio​pero l’effettuazione delle corse è subordinata al numero di lavoratori aderenti allo scio​pero\nUltime partenze ​garantite prima dello scio​pero\n<p class=\"gen-box-93\">Da Nap​oli per</p>\n<div class=\"gen-box-76\">\nSorr​ento                    8:​05\nSa​rno                         8:​10\n<p class=\"gen-box-49\">Torre Annunziata  8:​26</p>\nPoggio​marino        8:​14\n</div>\nPer Nap​oli da\n<div class=\"gen-box-83\" data-react-id=\"0.ug0nm6poveo\" data-test-hook=\"generated-content\" data-v=\"58\">\nSorr​ento                      8:​14\nSa​rno                           8:​26\n<p class=\"gen-box-78\">Poggio​marino            8:​18</p>\nTorre Annunziata*   8:​44  *treno 4082 proveniente da Poggio​marino\n</div>\n<p class=\"gen-box-15\">Prime partenze ​garantite dopo lo scio​pero</p>\nDa Nap​oli per\n\n<p class=\"gen-box-36\">Sorr​ento                      12​:53</p>\n<p class=\"gen-box-39\">Sa​rno                           13​:34</p>\nPoggio​marino            13​:02\n<p class=\"gen-box-42\">Torre Annunziata     12​:33</p>\n\n<p class=\"gen-box-19\">Per Nap​oli da</p>\n\nSorr​ento                    13​:02\nSa​rno                          13​:14\n<p class=\"gen-box-65\">Poggio​marino           12​:30</p>\nTorre Annunziata     12​:45\n\n<p class=\"gen-box-1\">Lo scio​pero non riguarderà i servizi sostitutivi che, pertanto, circoleranno regolarmente.</p>\n                                \n                                \n\n                                                                \n                                \n\n                                \n\n                                \n\n                                                        \n                    \n\n                </body>\n</html>"
+  },
+  "response": {
+    "parsedData": {
+      "isStrike": true,
+      "strikeData": {
+        "startDate": "2025-10-13 08:30:00",
+        "endDate": "2025-10-13 12:30:00",
+        "locationType": "REGIONAL",
+        "locationCodes": [
+          "15"
+        ]
+      }
+    },
+    "usage": {
+      "input": 1589,
+      "output": 99,
+      "total": 1688
+    },
+    "costUsd": {
+      "inputCost": 0.00039725,
+      "outputCost": 0.0001485,
+      "thinkingCost": 0,
+      "cachedCost": 0,
+      "totalCost": 0.00054575
+    },
+    "durationMs": 1000,
+    "thoughts": ""
+  }
+}
