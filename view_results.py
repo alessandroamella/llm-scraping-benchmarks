@@ -1361,3 +1361,86 @@ def export_all_csv_tables(data, base_dir="tables"):
 # Call the function if saving is enabled
 if args.save:
     export_all_csv_tables(data)
+
+
+# Grafici per presentazione!
+
+# --- GRAFICO 10 (SPECIALE PRESENTAZIONE): QUADRANTE MAGICO STRATEGIE ---
+print("\nGenerazione grafico speciale per la presentazione...")
+
+# Escludiamo la strategia non desiderata dal grafico di presentazione
+df_pres_source = df[df["Strategia"] != "dom-distillation-markdown"]
+
+# 1. Aggreghiamo i dati per Strategia (calcolando la media di F1 e Costo tra tutti i modelli)
+# Usiamo df_plot che contiene già i dati filtrati (senza Manual/CHAOS)
+df_pres = (
+    df_pres_source.groupby("Strategia")
+    .agg({"F1-score": "mean", "Costo": "mean"})
+    .reset_index()
+)
+
+# 2. Calcoliamo l'efficienza economica (File per 1 Dollaro)
+df_pres["File_per_Dollaro"] = df_pres["Costo"].apply(lambda x: 1 / x if x > 0 else 0)
+
+# 3. Creiamo la figura con dimensioni ampie e font giganti per il proiettore
+plt.figure(figsize=(14, 8))
+
+# Disegniamo i punti GIGANTI
+sns.scatterplot(
+    data=df_pres,
+    x="File_per_Dollaro",
+    y="F1-score",
+    s=500,  # Punti piu piccoli per ridurre l'effetto affollamento
+    color="#bb2e29ff",  # Tono neutro per una resa piu sobria
+    legend=False,  # NIENTE LEGENDA, usiamo le etichette dirette
+    alpha=0.9,
+    edgecolor="white",
+    linewidth=1.2,
+)
+
+# Impostiamo font enormi per gli assi
+plt.xlabel("File processati per 1$", fontsize=22, fontweight="bold")
+plt.ylabel("F1-score medio", fontsize=22, fontweight="bold")
+plt.xticks(fontsize=17)
+plt.yticks(fontsize=17)
+
+# 4. Etichette con posizionamento manuale per la presentazione
+labels_above = {"basic-cleanup", "html-to-markdown", "mineru-html"}
+custom_offsets = {
+    "basic-cleanup": (-35, 16, "left", "bottom"),
+    "html-to-markdown": (20, 0, "left", "bottom"),
+    "mineru-html": (-10, 14, "right", "bottom"),
+    "dom-distillation": (-2, -16, "right", "top"),
+}
+
+for _, row in df_pres.iterrows():
+    strategy_name = row["Strategia"]
+    x = row["File_per_Dollaro"]
+    y = row["F1-score"]
+
+    if strategy_name in custom_offsets:
+        dx, dy, ha, va = custom_offsets[strategy_name]
+    elif strategy_name in labels_above:
+        dx, dy, ha, va = (0, 16, "center", "bottom")
+    else:
+        dx, dy, ha, va = (0, -16, "center", "top")
+
+    plt.annotate(
+        strategy_name,
+        xy=(x, y),
+        xytext=(dx, dy),
+        textcoords="offset points",
+        fontsize=18,
+        fontweight="bold",
+        ha=ha,
+        va=va,
+    )
+
+# Griglia leggera per aiutare l'occhio
+plt.grid(True, linestyle="--", alpha=0.6)
+
+plt.tight_layout()
+if args.save:
+    out_path_pres = charts_dir / "10_presentazione_quadrante.png"
+    plt.savefig(out_path_pres, dpi=300)
+    print(f"✅ Generato grafico per presentazione: {out_path_pres}")

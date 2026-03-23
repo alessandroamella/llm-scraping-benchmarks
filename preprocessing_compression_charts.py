@@ -8,11 +8,16 @@ from pathlib import Path
 # --- CONFIGURAZIONE STILE (Ereditata dai tuoi script) ---
 plt.rcParams["font.family"] = "serif"
 plt.rcParams["font.serif"] = ["Computer Modern"]
-plt.rcParams["font.size"] = 10
-plt.rcParams["axes.labelsize"] = 10
-plt.rcParams["xtick.labelsize"] = 9
-plt.rcParams["ytick.labelsize"] = 9
-plt.rcParams["legend.fontsize"] = 9
+plt.rcParams["font.size"] = 14
+plt.rcParams["axes.labelsize"] = 16
+plt.rcParams["xtick.labelsize"] = 13
+plt.rcParams["ytick.labelsize"] = 13
+plt.rcParams["legend.fontsize"] = 12
+plt.rcParams["axes.edgecolor"] = "black"
+plt.rcParams["axes.linewidth"] = 1.4
+plt.rcParams["xtick.color"] = "black"
+plt.rcParams["ytick.color"] = "black"
+plt.rcParams["text.color"] = "black"
 sns.set_theme(style="whitegrid")
 
 charts_dir = Path("charts")
@@ -65,12 +70,12 @@ BASELINE_KB = 271.65  # media
 # Calcoliamo il peso processato scalato rispetto alla baseline
 df["Processato_Norm_KB"] = df["Processato_KB"] * (BASELINE_KB / df["Originale_KB"])
 
-# Converti percentuale (0-100) a frazione (0-1)
-df["Riduzione"] = df["Riduzione_%"] / 100
-
 # Ordiniamo per riduzione (dal peggiore al migliore) per una lettura visiva più pulita
-df = df.sort_values("Riduzione")
+# df = df.sort_values("Riduzione_%")
 
+# Stampa CSV in console con la riduzione percentuale per strategia
+print("\n--- Riduzione per strategia (CSV) ---")
+print(df[["Strategia", "Riduzione_%"]].to_csv(index=False))
 # --- CREAZIONE GRAFICO CON BROKEN AXIS ---
 fig, (ax1, ax2) = plt.subplots(
     2, 1, sharex=True, figsize=(12, 8), gridspec_kw={"height_ratios": [3, 1]}
@@ -81,25 +86,23 @@ fig.subplots_adjust(hspace=-0.03)
 sns.barplot(
     data=df,
     x="Strategia",
-    y="Riduzione",
-    hue="Strategia",
-    palette="crest",
-    legend=False,
+    y="Riduzione_%",
+    color="black",
+    edgecolor="black",
     ax=ax1,
 )
 sns.barplot(
     data=df,
     x="Strategia",
-    y="Riduzione",
-    hue="Strategia",
-    palette="crest",
-    legend=False,
+    y="Riduzione_%",
+    color="black",
+    edgecolor="black",
     ax=ax2,
 )
 
 # Impostiamo i limiti (zoom in alto, base in basso)
-ax1.set_ylim(0.825, 1)  # Zoom sulla zona di interesse
-ax2.set_ylim(0, 0.1)  # Base vuota
+ax1.set_ylim(82.5, 100)  # Zoom sulla zona di interesse (in %)
+ax2.set_ylim(0, 10)  # Base vuota (in %)
 
 # Nascondiamo i bordi tra i due grafici
 ax1.spines["bottom"].set_visible(False)
@@ -111,7 +114,7 @@ ax2.xaxis.tick_bottom()
 # --- 1. PRIMA formattiamo le error bars ---
 for ax in [ax1, ax2]:
     for line in ax.lines:
-        line.set_color("red")
+        line.set_color("black")
         line.set_linewidth(2.0)
 
 # --- 2. Bisciolina bianca sui bordi di taglio (intervallo omesso) ---
@@ -164,10 +167,12 @@ ax1.plot(x_points, y_wave_top, **wave_style_top)
 ax2.plot(x_points, y_wave_bottom, **wave_style_bottom)
 
 # Etichette
-ax1.set_ylabel("Riduzione della dimensione (0.0 - 1.0)", fontsize=12)
+ax1.set_ylabel("Riduzione (%)", fontsize=16)
 ax2.set_ylabel("")
-ax2.set_xlabel("Strategia di pre-processing", fontsize=12)
+ax2.set_xlabel("Strategia di preprocessing", fontsize=16)
 ax2.tick_params(axis="x", rotation=25)
+fig.suptitle("Riduzione token % per strategia", fontsize=20, fontweight="bold", y=0.99)
+
 
 # --- ANNOTAZIONI ---
 # Annotazioni solo sull'asse superiore
@@ -195,21 +200,21 @@ for i, p in enumerate(ax2.patches):
     token_rounded = round(token_estimate / 10) * 10
 
     # Annotiamo al centro di ciascuna barra dell'asse inferiore
-    ax2.annotate(
-        f"Consumo medio\ntoken: {int(token_rounded)}",
-        (p.get_x() + p.get_width() / 2.0, 0.05),
-        ha="center",
-        va="center",
-        color="white",
-        fontsize=9,
-        fontweight="bold",
-        bbox=dict(
-            boxstyle="round,pad=0.4", facecolor="#333333", alpha=0.75, edgecolor="none"
-        ),
-    )
+    # ax2.annotate(
+    #     f"Consumo medio\ntoken: {int(token_rounded)}",
+    #     (p.get_x() + p.get_width() / 2.0, 0.05),
+    #     ha="center",
+    #     va="center",
+    #     color="white",
+    #     fontsize=9,
+    #     fontweight="bold",
+    #     bbox=dict(
+    #         boxstyle="round,pad=0.4", facecolor="#333333", alpha=0.75, edgecolor="none"
+    #     ),
+    # )
 
 # Layout esplicito: evita che tight_layout riapra il gap tra i due pannelli
-fig.subplots_adjust(left=0.09, right=0.985, top=0.97, bottom=0.20, hspace=-0.03)
+fig.subplots_adjust(left=0.09, right=0.985, top=0.92, bottom=0.20, hspace=-0.03)
 
 # Salvataggio e visualizzazione
 output_file = charts_dir / "10_compressione_strategie_normalizzata.png"
